@@ -1,0 +1,236 @@
+###################
+# COST
+###################
+@cost4s = 31
+@cost4m = 0
+@cost4l = 0
+
+@cost5s = 39
+@cost5m = 0
+@cost5l = 0
+
+###################
+# POWER
+###################
+@power4s = -21
+@power4m = -0
+@power4l = -0
+
+@power5s = -27
+@power5m = -0
+@power5l = -0
+
+# ####################
+#  Autocannons
+# ####################
+
+# ## Autocannons 4
+weapon_component_template = {
+	type = instant
+	
+	key = "C_SMALL_AUTOCANNON_4"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	
+	damage = { min = 18 max = 34 } #-1 -2
+	windup = { min = 2 max = 14 }
+	total_fire_time = 15
+	range = 30.0
+	accuracy = 0.85
+	tracking = 0.75
+	hull_damage = 1.25
+	shield_damage = 1.50
+	armor_damage = 0.25
+	power = @power4s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t6_cost
+			volatile_motes = @s_t6_rare
+		}		
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_autocannon_4"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_autocannons_4" }
+	component_set = "C_AUTOCANNON_4"
+	projectile_gfx = "c_stormfire_auto_cannons_4_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	upgrades_to = "C_SMALL_AUTOCANNON_5"
+}
+
+# weapon_component_template = {
+	# type = instant
+	
+	# key = "C_MEDIUM_AUTOCANNON_4"
+	# size = medium
+	# entity = "medium_kinetic_gun_entity"
+	
+	# damage = { min = 22 max = 80 } #-2 -4
+	# windup = { min = 2 max = 15 }
+	# total_fire_time = 30
+	# range = 40.0
+	# accuracy = 0.82
+	# tracking = 0.35
+	# armor_penetration = 0.10
+	# shield_damage = 1.00
+	# power = @power4m
+	# cost = @cost4m
+	
+	# icon = "GFX_C_ship_part_autocannon_4"
+	# icon_frame = 1
+	
+	# prerequisites = { "tech_c_autocannons_4" }
+	# component_set = "C_AUTOCANNON_4"
+	# projectile_gfx = "c_stormfire_auto_cannons_4_m"
+	# tags = { weapon_type_kinetic }
+	# ai_tags = { weapon_role_anti_shield }
+	
+	# upgrades_to = "C_MEDIUM_AUTOCANNON_5"
+# }
+
+# weapon_component_template = {
+	# type = instant
+	
+	# key = "C_LARGE_AUTOCANNON_4"
+	# size = large
+	# entity = "large_kinetic_gun_entity"
+	
+	# damage = { min = 58.4 max = 160 } #-4 -8
+	# windup = { min = 2 max = 15 }
+	# total_fire_time = 30
+	# range = 60.0
+	# accuracy = 0.77
+	# tracking = 0.10
+	# armor_penetration = 0.20
+	# shield_damage = 1.00
+	# power = @power4l
+	# cost = @cost4l
+	
+	# icon = "GFX_C_ship_part_autocannon_4"
+	# icon_frame = 1
+	
+	# prerequisites = { "tech_c_autocannons_4" }
+	# component_set = "C_AUTOCANNON_4"
+	# projectile_gfx = "c_stormfire_auto_cannons_4_l"
+	# tags = { weapon_type_kinetic }
+	# ai_tags = { weapon_role_anti_shield }
+	
+	# upgrades_to = "C_LARGE_AUTOCANNON_5"
+# }
+
+# ## Autocannons 5
+weapon_component_template = {
+	type = instant
+	
+	key = "C_SMALL_AUTOCANNON_5"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	
+	damage = { min = 22 max = 42 } #-1 -2
+	windup = { min = 2 max = 14 }
+	total_fire_time = 15
+	range = 30.0
+	accuracy = 0.85
+	tracking = 0.75
+	hull_damage = 1.50
+	shield_damage = 2.00
+	armor_damage = 0.25
+	power = @power5s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			volatile_motes = @s_t7_rare
+		}		
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_autocannon_5"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_autocannons_5" }
+	component_set = "C_AUTOCANNON_5"
+	projectile_gfx = "c_stormfire_auto_cannons_5_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+}
+
+# weapon_component_template = {
+	# type = instant
+	
+	# key = "C_MEDIUM_AUTOCANNON_5"
+	# size = medium
+	# entity = "medium_kinetic_gun_entity"
+	
+	# damage = { min = 26.8 max = 96.8 } #-2 -4
+	# windup = { min = 2 max = 15 }
+	# total_fire_time = 30
+	# range = 40.0
+	# accuracy = 0.82
+	# tracking = 0.35
+	# armor_penetration = 0.10
+	# shield_damage = 1.00
+	# power = @power5m
+	# cost = @cost5m
+	
+	# icon = "GFX_C_ship_part_autocannon_5"
+	# icon_frame = 1
+	
+	# prerequisites = { "tech_c_autocannons_5" }
+	# component_set = "C_AUTOCANNON_5"
+	# projectile_gfx = "c_stormfire_auto_cannons_5_m"
+	# tags = { weapon_type_kinetic }
+	# ai_tags = { weapon_role_anti_shield }	
+# }
+
+# weapon_component_template = {
+	# type = instant
+	
+	# key = "C_LARGE_AUTOCANNON_5"
+	# size = large
+	# entity = "large_kinetic_gun_entity"
+	
+	# damage = { min = 70.8 max = 193.6 } #-4 -8
+	# windup = { min = 2 max = 15 }
+	# total_fire_time = 30
+	# range = 60.0
+	# accuracy = 0.77
+	# tracking = 0.10
+	# armor_penetration = 0.20
+	# shield_damage = 1.00
+	# power = @power5l
+	# cost = @cost5l
+	
+	# icon = "GFX_C_ship_part_autocannon_5"
+	# icon_frame = 1
+	
+	# prerequisites = { "tech_c_autocannons_5" }
+	# component_set = "C_AUTOCANNON_5"
+	# projectile_gfx = "c_stormfire_auto_cannons_5_l"
+	# tags = { weapon_type_kinetic }
+	# ai_tags = { weapon_role_anti_shield }
+# }

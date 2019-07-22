@@ -1,0 +1,110 @@
+###################
+# COST
+###################
+@cost3l = 194
+
+@cost4l = 242
+
+###################
+# POWER
+###################
+@power3l = -113
+
+@power4l = -141
+
+# ####################
+#  Kinetic Artillery
+# ####################
+
+# ## Kinetic Artillery 3
+weapon_component_template = {
+	type = instant
+	
+	key = "C_LARGE_KINETIC_ARTILLERY_3"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	
+	icon = "GFX_C_ship_part_kinetic_artillery_3"
+	icon_frame = 1
+	
+	damage = { min = 244 max = 731 }
+	windup = { min = 3 max = 25 }
+	total_fire_time = 50
+	range = 120.0
+	accuracy = 0.75
+	hull_damage = 1.25
+	shield_damage = 2.00
+	armor_damage = 0.50
+	power = @power3l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t8_cost
+			volatile_motes = @l_t8_rare
+		}		
+		upkeep = {
+			energy = @l_t8_upkeep_energy
+			alloys = @l_t8_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_kinetic_artillery_3" }
+	component_set = "C_KINETIC_ARTILLERY_3"
+	projectile_gfx = "kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	upgrades_to = "C_LARGE_KINETIC_ARTILLERY_4"
+}
+
+# ## Kinetic Artillery 4
+weapon_component_template = {
+	type = instant
+	
+	key = "C_LARGE_KINETIC_ARTILLERY_4"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	
+	icon = "GFX_C_ship_part_kinetic_artillery_4"
+	icon_frame = 1
+	
+	damage = { min = 305 max = 914 }
+	windup = { min = 3 max = 25 }
+	total_fire_time = 50
+	range = 120.0
+	accuracy = 0.75
+	hull_damage = 1.25
+	shield_damage = 2.00
+	armor_damage = 0.50
+	power = @power4l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t10_cost
+			volatile_motes = @l_t10_rare
+		}		
+		upkeep = {
+			energy = @l_t10_upkeep_energy
+			alloys = @l_t10_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_kinetic_artillery_4" }
+	component_set = "C_KINETIC_ARTILLERY_4"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+}

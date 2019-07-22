@@ -1,0 +1,185 @@
+namespace = waste
+
+# Hull Breach
+planet_event = {
+	id = waste.100
+	title = waste.100
+	desc = waste.100.desc
+	picture = GFX_evt_sabotaged_ship
+	show_sound = event_ship_explosion
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+		}
+		num_pops > 9
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = TERRIBLE
+		add_planet_devastation = 10
+		add_deposit = d_eco_breach
+	}
+}
+
+planet_event = {
+	id = waste.200
+	title = waste.200
+	desc = waste.200.desc
+	picture = GFX_evt_derelict_interior
+	show_sound = event_yellow_alert
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WORRYING
+		add_deposit = d_eco_outage
+	}
+}
+
+planet_event = {
+	id = waste.300
+	title = waste.300
+	desc = waste.300.desc
+	picture = GFX_evt_space_station
+	show_sound = event_ancient_drone
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		add_deposit = d_eco_storage
+	}
+}
+
+planet_event = {
+	id = waste.400
+	title = waste.400
+	desc = waste.400.desc
+	picture = GFX_evt_microscopic_life
+	show_sound = event_yellow_alert
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT = { has_modifier = eco_contamination }
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		num_pops > 9
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_waste_low }
+		add_modifier = { modifier = eco_contamination days = 360 }
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_waste_mod }
+		add_modifier = { modifier = eco_contamination days = 360 }
+		add_modifier = { modifier = eco_contamination days = 720 }
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_waste_high }
+		add_modifier = { modifier = eco_contamination days = 360 }
+		add_modifier = { modifier = eco_contamination days = 720 }
+		add_modifier = { modifier = eco_contamination days = 1080 }
+	}
+}
+
+planet_event = {
+	id = waste.500
+	title = waste.500
+	desc = waste.500.desc
+	picture = GFX_evt_smugglers_in_bar
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT = { has_modifier = eco_smugglers }
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+			NOT = { has_authority = auth_hive_mind }
+		}
+		num_pops > 9
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_waste_low }
+		add_modifier = { modifier = eco_smugglers days = 360 }
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_waste_mod }
+		add_modifier = { modifier = eco_smugglers days = 720 }
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_waste_high }
+		add_modifier = { modifier = eco_smugglers days = 1080 }
+	}
+}
+
+planet_event = {
+	id = waste.600
+	title = waste.600
+	desc = waste.600.desc
+	picture = GFX_evt_emergency_workers
+	show_sound = event_life_support_fail
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+		}
+		num_pops > 4
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		random_pop = { kill_pop = yes }
+	}
+}

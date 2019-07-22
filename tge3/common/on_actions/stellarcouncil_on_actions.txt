@@ -1,0 +1,6 @@
+on_monthly_pulse_country = {
+	events = {
+		sc_on_actions.1
+		sc_on_actions.2
+	}
+}

@@ -1,0 +1,1020 @@
+#############
+#	POWER	#
+#############
+
+@corvette_power_1 = 75
+@corvette_power_2 = 100
+@corvette_power_3 = 130
+@corvette_power_4 = 170
+@corvette_power_5 = 220
+@corvette_power_6 = 250
+@corvette_power_7 = 290
+@corvette_power_8 = 320
+@corvette_power_9 = 360
+@corvette_power_10 = 400
+
+
+@destroyer_power_1 = 140
+@destroyer_power_2 = 180
+@destroyer_power_3 = 240
+@destroyer_power_4 = 320
+@destroyer_power_5 = 430
+@destroyer_power_6 = 480
+@destroyer_power_7 = 550
+@destroyer_power_8 = 630
+@destroyer_power_9 = 700
+@destroyer_power_10 = 770
+
+@cruiser_power_1 = 280
+@cruiser_power_2 = 360
+@cruiser_power_3 = 480
+@cruiser_power_4 = 620
+@cruiser_power_5 = 800
+@cruiser_power_6 = 900
+@cruiser_power_7 = 1030
+@cruiser_power_8 = 1160
+@cruiser_power_9 = 1290
+@cruiser_power_10 = 1420
+
+@battleship_power_1 = 550
+@battleship_power_2 = 720
+@battleship_power_3 = 950
+@battleship_power_4 = 1250
+@battleship_power_5 = 1550
+@battleship_power_6 = 1770
+@battleship_power_7 = 2020
+@battleship_power_8 = 2270
+@battleship_power_9 = 2530
+@battleship_power_10 = 2780
+
+@titan_power_1 = 1100
+@titan_power_2 = 1450
+@titan_power_3 = 1900
+@titan_power_4 = 2500
+@titan_power_5 = 3200
+@titan_power_6 = 3700
+@titan_power_7 = 4200
+@titan_power_8 = 4700
+@titan_power_9 = 5200
+@titan_power_10 = 5800
+
+@colossus_power = 10000
+@colossus_power_x = 20000
+
+@starbase_power = 10000
+@starbase_power_x = 20000
+
+@platform_power_1 = 200
+@platform_power_2 = 260
+@platform_power_3 = 340
+@platform_power_4 = 440
+@platform_power_5 = 575
+@platform_power_6 = 750
+@platform_power_7 = 1000
+@platform_power_8 = 1500
+@platform_power_9 = 2750
+@platform_power_10 = 3500
+
+#############
+#	COST	#
+#############
+
+@corvette_cost_1 = 20
+@corvette_cost_2 = 25
+@corvette_cost_3 = 30
+@corvette_cost_4 = 35
+@corvette_cost_5 = 40
+@corvette_cost_6 = 45
+@corvette_cost_7 = 50
+@corvette_cost_8 = 55
+@corvette_cost_9 = 60
+@corvette_cost_10 = 65
+
+@destroyer_cost_1 = 40
+@destroyer_cost_2 = 50
+@destroyer_cost_3 = 60
+@destroyer_cost_4 = 70
+@destroyer_cost_5 = 80
+@destroyer_cost_6 = 90
+@destroyer_cost_7 = 100
+@destroyer_cost_8 = 110
+@destroyer_cost_9 = 120
+@destroyer_cost_10 = 130
+
+@cruiser_cost_1 = 100
+@cruiser_cost_2 = 130
+@cruiser_cost_3 = 160
+@cruiser_cost_4 = 190
+@cruiser_cost_5 = 220
+@cruiser_cost_6 = 250
+@cruiser_cost_7 = 280
+@cruiser_cost_8 = 310
+@cruiser_cost_9 = 340
+@cruiser_cost_10 = 370
+
+@battleship_cost_1 = 200
+@battleship_cost_2 = 260
+@battleship_cost_3 = 320
+@battleship_cost_4 = 380
+@battleship_cost_5 = 440
+@battleship_cost_6 = 500
+@battleship_cost_7 = 560
+@battleship_cost_8 = 720
+@battleship_cost_9 = 780
+@battleship_cost_10 = 840
+
+@titan_cost_1 = 400
+@titan_cost_2 = 450
+@titan_cost_3 = 500
+@titan_cost_4 = 550
+@titan_cost_5 = 1054
+@titan_cost_6 = 1200
+@titan_cost_7 = 1400
+@titan_cost_8 = 1600
+@titan_cost_9 = 1800
+@titan_cost_10 = 2000
+
+@colossus_cost_1 = 0
+@colossus_cost_x = 0
+
+@platform_cost_1 = 40
+@platform_cost_2 = 50
+@platform_cost_3 = 60
+@platform_cost_4 = 70
+@platform_cost_5 = 80
+@platform_cost_6 = 90
+@platform_cost_7 = 100
+@platform_cost_8 = 110
+@platform_cost_9 = 120
+@platform_cost_10 = 130
+
+
+# +0.02
+@corvette_energy_reactor_upkeep_6 = 0.30
+@corvette_energy_reactor_upkeep_7 = 0.32
+@corvette_energy_reactor_upkeep_8 = 0.34
+@corvette_energy_reactor_upkeep_9 = 0.36
+@corvette_energy_reactor_upkeep_10 = 0.38
+
+@destroyer_energy_reactor_upkeep_6 = 0.59
+@destroyer_energy_reactor_upkeep_8 = 0.61
+@destroyer_energy_reactor_upkeep_7 = 0.63
+@destroyer_energy_reactor_upkeep_9 = 0.65
+@destroyer_energy_reactor_upkeep_10 = 0.67
+
+@cruiser_energy_reactor_upkeep_6 = 1.14
+@cruiser_energy_reactor_upkeep_7 = 1.16
+@cruiser_energy_reactor_upkeep_8 = 1.18
+@cruiser_energy_reactor_upkeep_9 = 1.20
+@cruiser_energy_reactor_upkeep_10 = 1.22
+
+@battleship_energy_reactor_upkeep_6 = 2.29
+@battleship_energy_reactor_upkeep_7 = 2.31
+@battleship_energy_reactor_upkeep_8 = 2.33
+@battleship_energy_reactor_upkeep_9 = 2.35
+@battleship_energy_reactor_upkeep_10 = 2.37
+
+@titan_energy_reactor_upkeep_6 = 4.56
+@titan_energy_reactor_upkeep_7 = 4.58
+@titan_energy_reactor_upkeep_8 = 4.60
+@titan_energy_reactor_upkeep_9 = 4.62
+@titan_energy_reactor_upkeep_10 = 4.64
+
+
+
+@corvette_alloys_reactor_upkeep_6 = 0.030
+@corvette_alloys_reactor_upkeep_7 = 0.032
+@corvette_alloys_reactor_upkeep_8 = 0.034
+@corvette_alloys_reactor_upkeep_9 = 0.036
+@corvette_alloys_reactor_upkeep_10 = 0.038
+
+@destroyer_alloys_reactor_upkeep_6 = 0.059
+@destroyer_alloys_reactor_upkeep_7 = 0.061
+@destroyer_alloys_reactor_upkeep_8 = 0.063
+@destroyer_alloys_reactor_upkeep_9 = 0.065
+@destroyer_alloys_reactor_upkeep_10 = 0.067
+
+@cruiser_alloys_reactor_upkeep_6 = 0.114
+@cruiser_alloys_reactor_upkeep_7 = 0.116
+@cruiser_alloys_reactor_upkeep_8 = 0.118
+@cruiser_alloys_reactor_upkeep_9 = 0.120
+@cruiser_alloys_reactor_upkeep_10 = 0.122
+
+@battleship_alloys_reactor_upkeep_6 = 0.229
+@battleship_alloys_reactor_upkeep_7 = 0.231
+@battleship_alloys_reactor_upkeep_8 = 0.233
+@battleship_alloys_reactor_upkeep_9 = 0.235
+@battleship_alloys_reactor_upkeep_10 = 0.237
+
+@titan_alloys_reactor_upkeep_6 = 0.456
+@titan_alloys_reactor_upkeep_7 = 0.458
+@titan_alloys_reactor_upkeep_8 = 0.460
+@titan_alloys_reactor_upkeep_9 = 0.462
+@titan_alloys_reactor_upkeep_10 = 0.464
+
+########################
+## TIER 6
+########################
+
+utility_component_template = {
+	key = "C_CORVETTE_ZERO_POINT_REACTOR_6"
+	size = small
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1
+	power = @corvette_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvette_cost_6
+		}
+		upkeep = {
+			energy = @corvette_energy_reactor_upkeep_6
+			alloys = @corvette_alloys_reactor_upkeep_6
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_6" }
+	component_set = "power_core"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	upgrades_to = "C_CORVETTE_ZERO_POINT_REACTOR_7"
+	
+	ai_weight = {
+		weight = 60
+	}
+}
+
+utility_component_template = {
+	key = "C_DESTROYER_ZERO_POINT_REACTOR_6"
+	size = small
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1
+	power = @destroyer_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost_6
+		}
+		upkeep = {
+			energy = @destroyer_energy_reactor_upkeep_6
+			alloys = @destroyer_alloys_reactor_upkeep_6
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_6" }
+	component_set = "power_core"
+	size_restriction = { destroyer }
+	
+	upgrades_to = "C_DESTROYER_ZERO_POINT_REACTOR_7"
+	
+	ai_weight = {
+		weight = 60
+	}
+}
+
+utility_component_template = {
+	key = "C_CRUISER_ZERO_POINT_REACTOR_6"
+	size = small
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1
+	power = @cruiser_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost_6
+		}
+		upkeep = {
+			energy = @cruiser_energy_reactor_upkeep_6
+			alloys = @cruiser_alloys_reactor_upkeep_6
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_6" }
+	component_set = "power_core"
+	size_restriction = { cruiser }
+	
+	upgrades_to = "C_CRUISER_ZERO_POINT_REACTOR_7"
+	
+	ai_weight = {
+		weight = 60
+	}
+}
+
+utility_component_template = {
+	key = "C_BATTLESHIP_ZERO_POINT_REACTOR_6"
+	size = small
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1
+	power = @battleship_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost_6
+		}
+		upkeep = {
+			energy = @battleship_energy_reactor_upkeep_6
+			alloys = @battleship_alloys_reactor_upkeep_6
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_6" }
+	component_set = "power_core"
+	size_restriction = { battleship }
+	
+	upgrades_to = "C_BATTLESHIP_ZERO_POINT_REACTOR_7"
+	
+	ai_weight = {
+		weight = 60
+	}
+}
+
+utility_component_template = {
+	key = "C_TITAN_ZERO_POINT_REACTOR_6"
+	size = small
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1
+	power = @titan_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost_6
+		}
+		upkeep = {
+			energy = @titan_energy_reactor_upkeep_6
+			alloys = @titan_alloys_reactor_upkeep_6
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_6" }
+	component_set = "power_core"
+	size_restriction = { titan }
+	
+	
+	upgrades_to = "C_TITAN_ZERO_POINT_REACTOR_7"
+	
+	ai_weight = {
+		weight = 60
+	}
+}
+
+
+########################
+## TIER 7
+########################
+
+utility_component_template = {
+	key = "C_CORVETTE_ZERO_POINT_REACTOR_7"
+	size = small
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1
+	power = @corvette_power_7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvette_cost_7
+		}
+		upkeep = {
+			energy = @corvette_energy_reactor_upkeep_7
+			alloys = @corvette_alloys_reactor_upkeep_7
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_7" }
+	component_set = "power_core"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	upgrades_to = "C_CORVETTE_ZERO_POINT_REACTOR_8"
+	
+	ai_weight = {
+		weight = 70
+	}
+}
+
+utility_component_template = {
+	key = "C_DESTROYER_ZERO_POINT_REACTOR_7"
+	size = small
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1
+	power = @destroyer_power_7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost_7
+		}
+		upkeep = {
+			energy = @destroyer_energy_reactor_upkeep_7
+			alloys = @destroyer_alloys_reactor_upkeep_7
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_7" }
+	component_set = "power_core"
+	size_restriction = { destroyer }
+	
+	upgrades_to = "C_DESTROYER_ZERO_POINT_REACTOR_8"
+	
+	ai_weight = {
+		weight = 70
+	}
+}
+
+utility_component_template = {
+	key = "C_CRUISER_ZERO_POINT_REACTOR_7"
+	size = small
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1
+	power = @cruiser_power_7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost_7
+		}
+		upkeep = {
+			energy = @cruiser_energy_reactor_upkeep_7
+			alloys = @cruiser_alloys_reactor_upkeep_7
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_7" }
+	component_set = "power_core"
+	size_restriction = { cruiser }
+	
+	upgrades_to = "C_CRUISER_ZERO_POINT_REACTOR_8"
+	
+	ai_weight = {
+		weight = 70
+	}
+}
+
+utility_component_template = {
+	key = "C_BATTLESHIP_ZERO_POINT_REACTOR_7"
+	size = small
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1
+	power = @battleship_power_7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost_7
+		}
+		upkeep = {
+			energy = @battleship_energy_reactor_upkeep_7
+			alloys = @battleship_alloys_reactor_upkeep_7
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_7" }
+	component_set = "power_core"
+	size_restriction = { battleship }
+	
+	upgrades_to = "C_BATTLESHIP_ZERO_POINT_REACTOR_8"
+	
+	ai_weight = {
+		weight = 70
+	}
+}
+
+utility_component_template = {
+	key = "C_TITAN_ZERO_POINT_REACTOR_7"
+	size = small
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1
+	power = @titan_power_7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost_7
+		}
+		upkeep = {
+			energy = @titan_energy_reactor_upkeep_7
+			alloys = @titan_alloys_reactor_upkeep_7
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_7" }
+	component_set = "power_core"
+	size_restriction = { titan }
+	
+		
+	upgrades_to = "C_TITAN_ZERO_POINT_REACTOR_8"
+	
+	ai_weight = {
+		weight = 70
+	}
+}
+
+
+########################
+## TIER 8
+########################
+
+utility_component_template = {
+	key = "C_CORVETTE_ZERO_POINT_REACTOR_8"
+	size = small
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1
+	power = @corvette_power_8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvette_cost_8
+		}
+		upkeep = {
+			energy = @corvette_energy_reactor_upkeep_8
+			alloys = @corvette_alloys_reactor_upkeep_8
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_8" }
+	component_set = "power_core"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	upgrades_to = "C_CORVETTE_ZERO_POINT_REACTOR_9"
+	
+	ai_weight = {
+		weight = 80
+	}
+}
+
+utility_component_template = {
+	key = "C_DESTROYER_ZERO_POINT_REACTOR_8"
+	size = small
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1
+	power = @destroyer_power_8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost_8
+		}
+		upkeep = {
+			energy = @destroyer_energy_reactor_upkeep_8
+			alloys = @destroyer_alloys_reactor_upkeep_8
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_8" }
+	component_set = "power_core"
+	size_restriction = { destroyer }
+	
+	upgrades_to = "C_DESTROYER_ZERO_POINT_REACTOR_9"
+	
+	ai_weight = {
+		weight = 80
+	}
+}
+
+utility_component_template = {
+	key = "C_CRUISER_ZERO_POINT_REACTOR_8"
+	size = small
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1
+	power = @cruiser_power_8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost_8
+		}
+		upkeep = {
+			energy = @cruiser_energy_reactor_upkeep_8
+			alloys = @cruiser_alloys_reactor_upkeep_8
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_8" }
+	component_set = "power_core"
+	size_restriction = { cruiser }
+	
+	upgrades_to = "C_CRUISER_ZERO_POINT_REACTOR_9"
+	
+	ai_weight = {
+		weight = 80
+	}
+}
+
+utility_component_template = {
+	key = "C_BATTLESHIP_ZERO_POINT_REACTOR_8"
+	size = small
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1
+	power = @battleship_power_8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost_8
+		}
+		upkeep = {
+			energy = @battleship_energy_reactor_upkeep_8
+			alloys = @battleship_alloys_reactor_upkeep_8
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_8" }
+	component_set = "power_core"
+	size_restriction = { battleship }
+	
+	upgrades_to = "C_BATTLESHIP_ZERO_POINT_REACTOR_9"
+	
+	ai_weight = {
+		weight = 80
+	}
+}
+
+utility_component_template = {
+	key = "C_TITAN_ZERO_POINT_REACTOR_8"
+	size = small
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1
+	power = @titan_power_8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost_8
+		}
+		upkeep = {
+			energy = @titan_energy_reactor_upkeep_8
+			alloys = @titan_alloys_reactor_upkeep_8
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_8" }
+	component_set = "power_core"
+	size_restriction = { titan }
+	
+		
+	upgrades_to = "C_TITAN_ZERO_POINT_REACTOR_9"
+	
+	ai_weight = {
+		weight = 80
+	}
+}
+
+
+########################
+## TIER 9
+########################
+
+utility_component_template = {
+	key = "C_CORVETTE_ZERO_POINT_REACTOR_9"
+	size = small
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1
+	power = @corvette_power_9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvette_cost_9
+		}
+		upkeep = {
+			energy = @corvette_energy_reactor_upkeep_9
+			alloys = @corvette_alloys_reactor_upkeep_9
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_9" }
+	component_set = "power_core"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	upgrades_to = "C_CORVETTE_ZERO_POINT_REACTOR_10"
+	
+	ai_weight = {
+		weight = 90
+	}
+}
+
+utility_component_template = {
+	key = "C_DESTROYER_ZERO_POINT_REACTOR_9"
+	size = small
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1
+	power = @destroyer_power_9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost_9
+		}
+		upkeep = {
+			energy = @destroyer_energy_reactor_upkeep_9
+			alloys = @destroyer_alloys_reactor_upkeep_9
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_9" }
+	component_set = "power_core"
+	size_restriction = { destroyer }
+	
+	upgrades_to = "C_DESTROYER_ZERO_POINT_REACTOR_10"
+	
+	ai_weight = {
+		weight = 90
+	}
+}
+
+utility_component_template = {
+	key = "C_CRUISER_ZERO_POINT_REACTOR_9"
+	size = small
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1
+	power = @cruiser_power_9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost_9
+		}
+		upkeep = {
+			energy = @cruiser_energy_reactor_upkeep_9
+			alloys = @cruiser_alloys_reactor_upkeep_9
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_9" }
+	component_set = "power_core"
+	size_restriction = { cruiser }
+	
+	upgrades_to = "C_CRUISER_ZERO_POINT_REACTOR_10"
+	
+	ai_weight = {
+		weight = 90
+	}
+}
+
+utility_component_template = {
+	key = "C_BATTLESHIP_ZERO_POINT_REACTOR_9"
+	size = small
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1
+	power = @battleship_power_9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost_9
+		}
+		upkeep = {
+			energy = @battleship_energy_reactor_upkeep_9
+			alloys = @battleship_alloys_reactor_upkeep_9
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_9" }
+	component_set = "power_core"
+	size_restriction = { battleship }
+	
+	upgrades_to = "C_BATTLESHIP_ZERO_POINT_REACTOR_10"
+	
+	ai_weight = {
+		weight = 90
+	}
+}
+
+utility_component_template = {
+	key = "C_TITAN_ZERO_POINT_REACTOR_9"
+	size = small
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1
+	power = @titan_power_9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost_9
+		}
+		upkeep = {
+			energy = @titan_energy_reactor_upkeep_9
+			alloys = @titan_alloys_reactor_upkeep_9
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_9" }
+	component_set = "power_core"
+	size_restriction = { titan }
+	
+		
+	upgrades_to = "C_TITAN_ZERO_POINT_REACTOR_10"
+	
+	ai_weight = {
+		weight = 90
+	}
+}
+
+########################
+## TIER 10
+########################
+
+utility_component_template = {
+	key = "C_CORVETTE_ZERO_POINT_REACTOR_10"
+	size = small
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1
+	power = @corvette_power_10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvette_cost_10
+		}
+		upkeep = {
+			energy = @corvette_energy_reactor_upkeep_10
+			alloys = @corvette_alloys_reactor_upkeep_10
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+utility_component_template = {
+	key = "C_DESTROYER_ZERO_POINT_REACTOR_10"
+	size = small
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1
+	power = @destroyer_power_10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost_10
+		}
+		upkeep = {
+			energy = @destroyer_energy_reactor_upkeep_10
+			alloys = @destroyer_alloys_reactor_upkeep_10
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+utility_component_template = {
+	key = "C_CRUISER_ZERO_POINT_REACTOR_10"
+	size = small
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1
+	power = @cruiser_power_10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost_10
+		}
+		upkeep = {
+			energy = @cruiser_energy_reactor_upkeep_10
+			alloys = @cruiser_alloys_reactor_upkeep_10
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+utility_component_template = {
+	key = "C_BATTLESHIP_ZERO_POINT_REACTOR_10"
+	size = small
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1
+	power = @battleship_power_10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost_10
+		}
+		upkeep = {
+			energy = @battleship_energy_reactor_upkeep_10
+			alloys = @battleship_alloys_reactor_upkeep_10
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+utility_component_template = {
+	key = "C_TITAN_ZERO_POINT_REACTOR_10"
+	size = small
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1
+	power = @titan_power_10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost_10
+		}
+		upkeep = {
+			energy = @titan_energy_reactor_upkeep_10
+			alloys = @titan_alloys_reactor_upkeep_10
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	size_restriction = { titan }
+	
+		
+	ai_weight = {
+		weight = 100
+	}
+}
+
+########################
+## STARBASE
+########################
+
+utility_component_template = {
+	key = "C_STARBASE_FISSION_REACTOR_X"
+	size = large
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @starbase_power_x
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 0
+		}
+		upkeep = {
+			energy = @titan_energy_reactor_upkeep_10
+			alloys = @titan_alloys_reactor_upkeep_10
+		}
+	}
+
+	prerequisites = { "tech_c_reactor_10" }
+	class_restriction = { shipclass_starbase }
+	component_set = "power_core"
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+utility_component_template = {
+	key = "C_ION_CANNON_DARK_MATTER_REACTOR_X"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @cruiser_power_10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost_10
+		}
+		upkeep = {
+			energy = @cruiser_energy_reactor_upkeep_10
+			alloys = @cruiser_alloys_reactor_upkeep_10
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	size_restriction = { ion_cannon }
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+utility_component_template = {
+	key = "C_COLOSSUS_ZERO_POINT_REACTOR_X"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @colossus_power_x
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 0
+		}
+		upkeep = {
+			energy = @titan_energy_reactor_upkeep_10
+			alloys = @titan_alloys_reactor_upkeep_10
+		}
+	}
+
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	size_restriction = { colossus }
+
+	ai_weight = {
+		weight = 100
+	}
+}

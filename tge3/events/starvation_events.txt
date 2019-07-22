@@ -1,0 +1,71 @@
+namespace = starvation
+
+@starvation_mtth = 6.0 #6
+
+country_event = {
+	id = starvation.1
+	hide_window = yes
+	location = ROOT
+		
+	trigger = {
+		OR = { 
+			is_mechanical_empire = no
+			has_valid_civic = civic_machine_servitor
+		}
+		is_primitive = no
+		has_monthly_income = {
+			resource = food
+			value < 0
+		}
+		has_resource = {
+			type = food
+			amount = 0
+		}
+	}
+	mean_time_to_happen = { months = @starvation_mtth }
+	
+	immediate = {
+		if = { 
+			limit = {
+				has_country_flag = starvation_flag
+			}
+			every_owned_planet = {
+				random_pop = {
+					limit = {
+						NOR = {
+							has_trait = trait_mechanical
+							has_trait = trait_machine_unit 
+						}
+					}
+					kill_pop = yes
+				}
+			}
+		}
+		set_country_flag = starvation_flag
+	}
+}
+
+country_event = {
+	id = starvation.2
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		has_country_flag = starvation_flag
+		OR = {
+			has_monthly_income = {
+				resource = food
+				value > 0
+			}	
+			has_resource = {
+				type = food
+				amount > 0
+			}
+		}		
+	}
+	mean_time_to_happen = { months = @starvation_mtth }
+	
+	immediate = {
+		remove_country_flag = starvation_flag
+	}
+}	

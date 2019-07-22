@@ -1,0 +1,56 @@
+eco_trait_clean = {
+	cost = 1
+	potential_crossbreeding_chance = 1
+	opposites = { "eco_trait_dirty" }
+	allowed_archetypes = { BIOLOGICAL }
+		custom_tooltip = ECO_TRAIT_CLEAN_EFFECT
+
+	slave_cost = {
+		energy = 50
+	}
+}
+
+eco_trait_dirty = {
+	cost = -1
+	potential_crossbreeding_chance = 1
+	opposites = { "eco_trait_clean" }
+	allowed_archetypes = { BIOLOGICAL }
+	custom_tooltip = ECO_TRAIT_DIRTY_EFFECT
+	slave_cost = {
+		energy = -50
+	}
+}
+
+eco_leader_trait_ecologist = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/eco_leader_trait_ecologist.dds"
+	modifier = {
+		planet_jobs_upkeep_mult = -0.10
+	}
+	leader_potential_add = {
+		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+}
+
+eco_trait_self_repairing = {
+	cost = 1
+	allowed_archetypes = { ROBOT MACHINE }
+	custom_tooltip = eco_trait_self_repairing_effect
+}
+
+eco_trait_ruler_environmentalist = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/eco_leader_trait_ecologist.dds"
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	modifier = {
+		planet_waste_produces_mult = 0.25
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+}

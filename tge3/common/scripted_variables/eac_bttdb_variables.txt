@@ -1,0 +1,10 @@
+@rerollTechCost1 = 50 # 20
+@rerollTechCost2 = 100 # 40
+@rerollTechCost3 = 200 # 80
+@rerollTechCost4 = 400 # 160
+@rerollTechCost5 = 700 # 320
+@rerollTechCost6 = 1000 # 640
+@rerollTechCost7 = 3000 # 1280
+@rerollTechCost8 = 6000 # 2560
+@rerollTechCost9 = 10000 # 5120
+@rerollTechCost10 = 15000 # 10240

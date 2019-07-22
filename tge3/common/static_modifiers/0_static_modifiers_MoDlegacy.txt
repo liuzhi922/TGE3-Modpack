@@ -1,0 +1,120 @@
+
+#mastery_of_nature = { #08_static_modifiers_megacorp.txt
+#	icon = "gfx/interface/icons/planet_modifiers/pm_mastery_of_nature.dds"
+#	icon_frame = 1
+#	planet_max_districts_add = 2 # 2 is default
+#}
+mastery_of_nature_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_mastery_of_nature.dds"
+	icon_frame = 1
+	planet_max_districts_add = 3 #1
+}
+mastery_of_nature_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_mastery_of_nature.dds"
+	icon_frame = 1
+	planet_max_districts_add = 4 #2
+}
+low_orbit_urbanisation_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_low_orbit_urbanisation.dds"
+	icon_frame = 1
+	planet_max_districts_add = 1
+	pop_happiness = 0.05
+	trade_value_mult = 0.10
+	planet_orbital_bombardment_damage = 0.1
+}
+low_orbit_urbanisation_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_low_orbit_urbanisation.dds"
+	icon_frame = 1
+	planet_max_districts_add = 2
+	pop_happiness = 0.05
+	trade_value_mult = 0.10
+	planet_orbital_bombardment_damage = 0.1
+}
+low_orbit_urbanisation_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_low_orbit_urbanisation.dds"
+	icon_frame = 1
+	planet_max_districts_add = 3
+	pop_happiness = 0.05
+	trade_value_mult = 0.10
+	planet_orbital_bombardment_damage = 0.1
+}
+subterranean_urbanisation_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_subterranean_urbanisation.dds"
+	icon_frame = 1
+	planet_max_districts_add = 1
+	pop_happiness = -0.10
+	planet_crime_mult = 0.15
+	planet_orbital_bombardment_damage = -0.1
+}
+subterranean_urbanisation_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_subterranean_urbanisation.dds"
+	icon_frame = 1
+	planet_max_districts_add = 2
+	pop_happiness = -0.10
+	planet_crime_mult = 0.15
+	planet_orbital_bombardment_damage = -0.1
+}
+subterranean_urbanisation_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_subterranean_urbanisation.dds"
+	icon_frame = 1
+	planet_max_districts_add = 3
+	pop_happiness = -0.10
+	planet_crime_mult = 0.15
+	planet_orbital_bombardment_damage = -0.1
+}
+subterranean_urbanisation_4 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_subterranean_urbanisation.dds"
+	icon_frame = 1
+	planet_max_districts_add = 4
+	pop_happiness = -0.10
+	planet_crime_mult = 0.15
+	planet_orbital_bombardment_damage = -0.1
+}
+autonomous_ptn_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+	planet_max_districts_add = 1
+	pop_happiness = 0.05
+	planet_pops_consumer_goods_upkeep_mult = -0.1
+	planet_pops_unemployed_consumer_goods_upkeep_add = -0.02
+}
+autonomous_ptn_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+	planet_max_districts_add = 2
+	pop_happiness = 0.05
+	planet_pops_consumer_goods_upkeep_mult = -0.1
+	planet_pops_unemployed_consumer_goods_upkeep_add = -0.02
+}
+autonomous_ptn_tmp = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+	pop_happiness = -0.15
+}
+vertical_fm_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+	planet_max_districts_add = 1
+}
+vertical_fm_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+	planet_max_districts_add = 2
+}
+vertical_fm_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+	planet_max_districts_add = 3
+}
+
+
+
+
+	#planet_stability_add = -2
+	#planet_crime_add = 1
+#biological_pop_happiness 
+
+#planet_pops_consumer_goods_upkeep_mult = 2.0
+#planet_pops_unemployed_consumer_goods_upkeep_add = 2
+
+

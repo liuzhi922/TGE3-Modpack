@@ -1,0 +1,448 @@
+building_vfcaw_armory = {
+
+	category = government
+	
+	base_cap_amount = 1
+	base_buildtime = 180
+	
+	icon = building_military_contractors
+	
+	potential = {
+		NOR = {
+			has_building = building_vfcaw_armory
+			has_building = building_vfcaw_plaza
+		}
+		owner = { 
+			has_technology = tech_planetary_government
+			is_regular_empire = yes
+			is_machine_empire = no
+			is_hive_empire = no
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+	
+	planet_modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.1
+	}
+	
+	triggered_planet_modifier = {
+		potential = { 
+			exists = owner
+		}
+		job_healthcare_add = 1
+		job_enforcer_add = 1
+		job_colonist_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			minerals = 1
+			energy = 1
+			food = 1
+		}
+	}
+	
+	upgrades = {
+		building_vfcaw_plaza
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}	
+}
+
+building_vfcaw_plaza = {
+
+	category = government
+	
+	base_buildtime = 360
+	can_build = no
+	
+	icon = building_commercial_forum
+	
+	potential = {
+		NOT = {
+			has_building = building_vfcaw_plaza
+		}
+		owner = { 
+			has_technology = tech_planetary_government
+			is_regular_empire = yes
+			is_machine_empire = no
+			is_hive_empire = no
+		}
+		planet = {
+			num_pops > 10 
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+	
+	planet_modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.1
+	}
+	
+	triggered_planet_modifier = {
+		potential = { 
+			exists = owner
+		}
+		job_healthcare_add = 2
+		job_enforcer_add = 1
+		job_culture_worker_add = 1
+		job_entertainer_add = 1
+		job_researcher_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			minerals = 2
+			energy = 2
+			food = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 5000
+	}	
+}
+
+building_vfcaw_workshop = {
+
+	category = government
+	
+	base_buildtime = 180
+	base_cap_amount = 1
+	
+	icon = building_deployment_post
+	
+	potential = {
+		NOR	= {
+			has_building = building_vfcaw_workshop
+			has_building = building_vfcaw_factory
+		}
+		owner = { 
+			has_technology = tech_planetary_government
+			is_regular_empire = yes
+			is_machine_empire = no
+			is_hive_empire = no
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+	
+	planet_modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.1
+	}
+	
+	triggered_planet_modifier = {
+		potential = { 
+			exists = owner
+		}
+		job_artisan_add = 1
+		job_foundry_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			minerals = 1
+			energy = 1
+			food = 1
+		}
+	}
+	
+	upgrades = {
+		building_vfcaw_factory
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}	
+}
+
+building_vfcaw_factory = {
+
+	category = government
+	
+	base_buildtime = 360
+	can_build = no
+	
+	icon = building_public_relations_office
+	
+	potential = {
+		NOT = {
+			has_building = building_vfcaw_factory
+		}
+		owner = { 
+			has_technology = tech_planetary_government
+			is_regular_empire = yes
+			is_machine_empire = no
+			is_hive_empire = no
+		}
+		planet = {
+			num_pops > 10
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+	
+	planet_modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.1
+	}
+	
+	triggered_planet_modifier = {
+		potential = { 
+			exists = owner
+		}
+		job_artisan_add = 2
+		job_foundry_add = 2
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			minerals = 2
+			energy = 2
+			food = 2
+		}
+	}
+	
+	ai_weight = {
+		weight = 5000
+	}	
+}
+
+building_vfcaw_logistichub = {
+
+	category = government
+	
+	base_buildtime = 360
+	base_cap_amount = 1
+	
+	icon = building_bio_reprocessing_facilities
+	
+	potential = {
+		NOT = {
+			has_building = building_vfcaw_logistichub
+		}
+		owner = { 
+			has_technology = tech_planetary_government
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+	
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOR = {
+				is_machine_empire = yes
+				is_hive_empire = yes
+				is_fallen_empire = yes
+				is_machine_empire = yes
+			}
+		}
+		job_administrator_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 100
+		}
+		upkeep = {
+			alloys = 1
+		}
+		produces = {
+			energy = 10
+			minerals = 10
+			food = 10
+		}
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}	
+}
+
+building_vfcaw_orbitalresidence = {
+
+	category = government
+	
+	base_buildtime = 180
+	base_cap_amount = 2
+	
+	icon = building_residence
+	
+	potential = {
+		is_planet_class = pc_habitat
+		owner = { 
+			has_technology = tech_planetary_government
+			is_regular_empire = yes
+			is_machine_empire = no
+			is_hive_empire = no
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 12
+		planet_amenities_add = 2
+		planet_stability_add = 2
+	}
+	
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		exists = owner
+	#	}
+	#}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 100
+		}
+		upkeep = {
+			alloys = 1
+		}
+	}
+	
+	ai_weight = {
+		weight = 5000
+	}	
+}
+
+building_vfcaw_refinerystation = {
+
+	category = government
+	
+	base_buildtime = 180
+	base_cap_amount = 1
+	
+	icon = building_underground_chemists
+	
+	potential = {
+		NOR	= {
+			has_building = building_vfcaw_refinerystation
+		}
+		owner = { 
+			has_technology = tech_planetary_government
+			is_regular_empire = yes
+			is_machine_empire = no
+			is_hive_empire = no
+		}
+		planet = {
+			num_pops > 10
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = { 
+			exists = owner
+		}
+		job_translucer_add = 1
+		job_gas_refiner_add = 1
+		job_chemist_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			minerals = 6
+			energy = 6
+		}
+	}
+	
+	ai_weight = {
+		weight = 5000
+		modifier = {
+			weight = 0
+			owner = { 
+				OR = {
+					has_monthly_income = {
+						resource = rare_crystals
+						value > 8
+					}
+					has_monthly_income = {
+						resource = volatile_motes
+						value > 8
+					}
+					has_monthly_income = {
+						resource = exotic_gases
+						value > 8
+					}
+				}
+			}
+		}
+		modifier = {
+			weight = 0
+			owner = { 
+				NOR = {
+					has_technology = tech_exotic_gases
+					has_technology = tech_rare_crystals
+					has_technology = tech_volatile_motes
+				}
+			}
+		}
+	}
+}
+

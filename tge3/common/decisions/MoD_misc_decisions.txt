@@ -1,0 +1,257 @@
+
+decision_SaHR_ATN = {
+	owned_planets_only = yes
+	prerequisites = { "tech_MoD_S" "tech_administrative_ai" } 
+	enactment_time = @d_S_time 
+	icon = decision_MoD_ATN
+	resources = {
+		category = decisions
+		cost = {
+			#trigger = { owner = { is_ai = no } }
+			influence = @d_S_influence 
+			energy = @d_S_energy 
+			minerals = @d_S_minerals 
+			#rare_crystals = @d_S_strat 
+			#volatile_motes = @d_S_strat 
+		}
+		#cost = {
+		#	trigger = { owner = { is_ai = yes } }
+		#	influence = @d_S_influence 
+		#	energy = @d_S_energy 
+		#	minerals = @d_S_minerals 
+		#}
+	}
+	potential = {
+		#habitable_structure = no 
+		NOT = { owner = { has_country_flag = cf_hide_mod } }
+		NOT = { has_planet_flag = pf_SaHR_ATN_1 }
+	}
+	effect = {
+		add_deposit = d_SaHR_ATN_deposit 
+		set_planet_flag = pf_SaHR_ATN_1 
+	}
+	ai_weight = {
+		weight = 1 # low
+		modifier = { # capital planet modifier, a particular decision may be particularly wanted in the capital
+			weight = 6
+			is_capital = yes
+		}
+		modifier = { # better investment if planet is fully developed
+			weight = 1
+			free_district_slots = 0
+		}
+		modifier = { # must have a stockpile
+			factor = 0
+			from = { resource_stockpile_compare = { resource = energy value < @d_AI_S_energy } }
+		}
+		modifier = { # must have a stockpile
+			factor = 0
+			from = { resource_stockpile_compare = { resource = minerals value < @d_AI_S_minerals } }
+		}
+		modifier = { # must have a stockpile
+			factor = 0
+			from = { resource_stockpile_compare = { resource = influence value < @d_AI_influence } }
+		}
+		modifier = { # must be at peace # this could be an AI enabling condition instead, for performance
+			factor = 0
+			from = { is_at_war = yes }
+		}
+		modifier = { # not to be wasted on undeveloped places
+			factor = 0
+			num_pops < 25
+		}
+	}
+}
+
+##################################
+# Spiritualist only
+
+decision_U_SC = {
+	owned_planets_only = yes
+	prerequisites = { "tech_MoD_U" } 
+	enactment_time = @d_U_time
+	icon = decision_MoD_U_SC
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				NOT = { owner = { has_ascension_perk = ap_mastery_of_nature } }
+				owner = { is_ai = no }
+				NOT = { has_planet_flag = seismic_disturbance }
+			}
+			influence = @d_U_influence 
+			energy = @d_U_energy 
+			minerals = @d_U_minerals 
+			exotic_gases = @d_U_strat 
+			volatile_motes = @d_U_strat 
+		}
+		cost = {
+			trigger = {
+				#OR = {
+					owner = { has_ascension_perk = ap_mastery_of_nature }
+				#	owner = { has_ethic =  ethic_fanatic_spiritualist }
+				#	owner = { has_ethic =  ethic_spiritualist }
+				#}
+				owner = { is_ai = no }
+				NOT = { has_planet_flag = seismic_disturbance }
+			}
+			influence = @d_U_influence_AP 
+			energy = @d_U_energy_AP 
+			minerals = @d_U_minerals_AP 
+			exotic_gases = @d_U_strat_AP 
+			volatile_motes = @d_U_strat_AP 
+		}
+		cost = {
+			trigger = { owner = { is_ai = yes } } # HERESY
+			influence = @d_U_influence_AP 
+			energy = @d_U_energy_AP 
+			minerals = @d_U_minerals_AP 
+		}
+		cost = {
+			trigger = { has_planet_flag = seismic_disturbance }
+			influence = @d_U_influence_AP 
+			food = @d_Usd_food 
+			energy = @d_Usd_energy 
+			minerals = @d_Usd_minerals 
+			exotic_gases = @d_Usd_strat 
+			volatile_motes = @d_Usd_strat 
+		}
+	}
+	potential = {
+		habitable_structure = no
+		OR = {
+			owner = { has_ethic =  ethic_fanatic_spiritualist }
+			owner = { has_ethic =  ethic_spiritualist }
+		}
+		NOT = { has_planet_flag = pf_U_SC_1 } # max 1
+		NOT = { owner = { has_country_flag = cf_hide_mod } }
+		NOT = { has_modifier = modifier_U_max_AP }
+	}
+	allow = {
+		OR = {
+			NOT = { has_modifier = modifier_U_max }
+			owner = { has_ascension_perk = ap_mastery_of_nature }
+		}
+	}
+	effect = {
+		add_deposit = d_U_SC_deposit 
+		set_planet_flag = pf_U_SC_1
+		if = { # +1 = 1
+			limit = { 
+				NOR = {
+					has_planet_flag = pf_U_1 
+					has_planet_flag = pf_U_2 
+					has_planet_flag = pf_U_3 
+					has_planet_flag = pf_U_4 
+					has_planet_flag = pf_U_5 
+				}
+			} 
+			if = {
+				limit = { planet_size < 11 } # 1 O +1
+				add_modifier = { modifier = modifier_U_max days = -1 }
+				#break = yes
+			}
+			set_planet_flag = pf_U_1
+			break = yes
+		}
+		else_if = { # +1 = 5
+			limit = { 
+				has_planet_flag = pf_U_4 
+			}
+			if = {
+				limit = { planet_size > 20 } # 4 O +1
+				add_modifier = { modifier = modifier_U_max_AP days = -1 }
+				remove_modifier = modifier_U_max
+				#break = yes
+			}
+			remove_planet_flag = pf_U_4 
+			set_planet_flag = pf_U_5
+			break = yes
+		}
+		else_if = { # +1 = 4
+			limit = { 
+				has_planet_flag = pf_U_3 
+			}
+			if = {
+				limit = { planet_size > 15 planet_size < 21 } # 3 U +1
+				add_modifier = { modifier = modifier_U_max_AP days = -1 }
+				remove_modifier = modifier_U_max
+				break = yes
+			}
+			else_if = {
+				limit = { planet_size > 20 } # 4 O +1
+				add_modifier = { modifier = modifier_U_max days = -1 }
+			}
+			remove_planet_flag = pf_U_3 
+			set_planet_flag = pf_U_4
+			break = yes
+		}
+		else_if = { # +1 = 3
+			limit = { 
+				has_planet_flag = pf_U_2 
+			}
+			if = {
+				limit = { planet_size > 10 planet_size < 16 } # 2 U +1
+				add_modifier = { modifier = modifier_U_max_AP days = -1 }
+				remove_modifier = modifier_U_max
+				break = yes
+			}
+			else_if = {
+				limit = { planet_size > 15 planet_size < 21 } # 3 U +1
+				add_modifier = { modifier = modifier_U_max days = -1 }
+			}
+			remove_planet_flag = pf_U_2 
+			set_planet_flag = pf_U_3
+			break = yes
+		}
+		else_if = { # +1 = 2
+			limit = { 
+				has_planet_flag = pf_U_1 
+			}
+			if = {
+				limit = { planet_size < 11 } # 1 U +1
+				add_modifier = { modifier = modifier_U_max_AP days = -1 }
+				remove_modifier = modifier_U_max
+				break = yes
+			}
+			else_if = {
+				limit = { planet_size > 10 planet_size < 16 } # 2 U +1
+				add_modifier = { modifier = modifier_U_max days = -1 }
+			}
+			remove_planet_flag = pf_U_1 
+			set_planet_flag = pf_U_2
+			break = yes
+		}
+	}	
+	ai_weight = {
+		weight = 2 # normal
+		modifier = { # capital planet modifier, a particular decision may be particularly wanted in the capital
+			weight = 6
+			is_capital = yes
+		}
+		modifier = { # better investment if planet is fully developed
+			weight = 1
+			free_district_slots = 0
+		}
+		modifier = { # energy stockpile # @d_AI_S_energy @d_AI_U_energy 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = energy value < @d_AI_U_energy } }
+		}
+		modifier = { # minerals stockpile # @d_AI_S_minerals @d_AI_U_minerals 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = minerals value < @d_AI_U_minerals } }
+		}
+		modifier = { # influence stockpile # @d_AI_influence 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = influence value < @d_AI_influence } }
+		}
+		modifier = { # must be at peace # this could be an AI enabling condition instead, for performance
+			factor = 0
+			from = { is_at_war = yes }
+		}
+		modifier = { # not to be wasted on undeveloped places
+			factor = 0
+			num_pops < 25
+		}
+	}
+}

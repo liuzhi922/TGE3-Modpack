@@ -1,0 +1,333 @@
+#Visual Pollution
+special_project = {
+	key = "ECO_VISUAL_POLLUTION_PROJECT"
+	cost = {
+		base = 0
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 20
+			calc = pop_count
+		}
+	}
+	tech_department = engineering_technology
+	timelimit = -1
+	picture = GFX_evt_ship_offloading_cargo
+	
+	event_scope = planet_event
+
+	on_success = {
+		from = {
+			random_list = {
+				50 = { planet_event = { id = degrade.231 } }
+				50 = { planet_event = { id = degrade.232 } }
+			}
+		}
+	}
+}
+
+# Noise Pollution
+special_project = {
+	key = "ECO_NOISE_POLLUTION_PROJECT"
+	cost = {
+		base = 0
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 20
+			calc = pop_count
+		}
+	}
+	tech_department = engineering_technology
+	timelimit = -1
+	picture = GFX_evt_metropolis
+	
+	event_scope = planet_event
+
+
+	on_success = {
+		from = {
+			random_list = {
+				50 = { planet_event = { id = degrade.181 } }
+				50 = { planet_event = { id = degrade.182 } }
+			}
+		}
+	}
+}
+
+# Light Pollution
+special_project = {
+	key = "ECO_LIGHT_POLLUTION_PROJECT"
+	cost = {
+		base = 0
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 20
+			calc = pop_count
+		}
+	}
+	tech_department = engineering_technology
+	timelimit = -1
+	picture = GFX_evt_tradestation_interior
+	
+	event_scope = planet_event
+
+	on_success = {
+		from = {
+			random_list = {
+				50 = { planet_event = { id = degrade.191 } }
+				50 = { planet_event = { id = degrade.192 } }
+			}
+		}
+	}
+}
+
+# Air Pollution
+special_project = {
+	key = "ECO_AIR_POLLUTION_PROJECT"
+	cost = {
+		base = 400
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 40
+			calc = pop_count
+		}
+	}
+	tech_department = society_technology
+	timelimit = 480
+	picture = GFX_evt_drilling_for_gas
+	
+	event_scope = planet_event
+
+
+	on_success = {
+		from = {
+			random_list = {
+				50 = { planet_event = { id = degrade.201 } }
+				50 = { planet_event = { id = degrade.202 } }
+			}
+		}
+	}
+	
+	on_fail = {
+		from = { planet_event = { id = degrade.203 } }
+	}
+}
+
+# Soil Pollution
+special_project = {
+	key = "ECO_SOIL_POLLUTION_PROJECT"
+	cost = {
+		base = 400
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 40
+			calc = pop_count
+		}
+	}
+	tech_department = society_technology
+	timelimit = 480
+	picture = GFX_evt_warm_barren_planet
+	
+	event_scope = planet_event
+
+	on_success = {
+		from = {
+			random_list = {
+				50 = { planet_event = { id = degrade.211 } }
+				50 = { planet_event = { id = degrade.212 } }
+			}
+		}
+	}
+	
+	on_fail = {
+		from = { planet_event = { id = degrade.213 } }
+	}
+}
+
+# Soil Pollution
+special_project = {
+	key = "ECO_WATER_POLLUTION_PROJECT"
+	cost = {
+		base = 400
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 40
+			calc = pop_count
+		}
+	}
+	tech_department = society_technology
+	timelimit = 480
+	picture = GFX_evt_microscopic_life
+	
+	event_scope = planet_event
+
+	on_success = {
+		from = {
+			random_list = {
+				50 = { planet_event = { id = degrade.221 } }
+				50 = { planet_event = { id = degrade.222 } }
+			}
+		}
+	}
+	
+	on_fail = {
+		from = { planet_event = { id = degrade.223 } }
+	}
+}
+
+# Climate Correction
+special_project = {
+	key = "ECO_CLIMATE_CORRECT_PROJECT"
+	cost = {
+		base = 800
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 80
+			calc = pop_count
+		}
+	}
+	tech_department = society_technology
+	timelimit = 640
+	picture = GFX_evt_alien_nature
+	
+	event_scope = planet_event
+
+	on_success = {
+		from = {
+			random_list = {
+				50 = { planet_event = { id = climate.101 } }
+				50 = { planet_event = { id = climate.103 } }
+			}
+		}
+	}
+	
+	on_fail = {
+		from = { planet_event = { id = climate.104 } }
+	}
+}
+
+# Climate Engineering
+special_project = {
+	key = "ECO_CLIMATE_ENGINEER_PROJECT"
+	cost = {
+		base = 800
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 80
+			calc = pop_count
+		}
+	}
+	tech_department = engineering_technology
+	timelimit = 640
+	picture = GFX_evt_alien_nature
+	
+	event_scope = planet_event
+
+	on_success = {
+		from = {
+			random_list = {
+				75 = { planet_event = { id = climate.101 } }
+				25 = { planet_event = { id = climate.104 } }
+			}
+		}
+	}
+	
+	on_fail = {
+		from = { planet_event = { id = climate.104 } }
+	}
+}
+
+# Collapse Minimizing
+special_project = {
+	key = "ECO_COLLAPSE_MINIMIZE_PROJECT"
+	cost = {
+		base = 1200
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 120
+			calc = pop_count
+		}
+	}
+	tech_department = society_technology
+	timelimit = 640
+	picture = GFX_evt_alien_nature
+	
+	event_scope = planet_event
+
+	on_success = {
+		from = {
+			planet_event = { id = collapse.101 }
+		}
+	}
+	
+	on_fail = {
+		from = { planet_event = { id = collapse.103 } }
+	}
+}
+
+# Collapse Prevention
+special_project = {
+	key = "ECO_COLLAPSE_PREVENT_PROJECT"
+	cost = {
+		base = 1200
+		scaled_modifier = {
+			limit = {
+			}
+			scope = this
+			add = 120
+			calc = pop_count
+		}
+	}
+	tech_department = society_technology
+	timelimit = 640
+	picture = GFX_evt_alien_nature
+	
+	event_scope = planet_event
+
+	on_success = {
+		from = {
+			random_list = {
+				50 = { planet_event = { id = collapse.102 } }
+				40 = { planet_event = { id = collapse.103 } }
+				10 = { planet_event = { id = collapse.105 } }
+			}
+		}
+	}
+	
+	on_fail = {
+		from = { planet_event = { id = climate.103 } }
+	}
+}
+
+# Environmental Ethic
+special_project = {
+	key = "ECO_ENVIRONMENTAL_ETHIC"
+	cost = {
+		base = 40000
+	}
+	tech_department = society_technology
+	picture = GFX_evt_eco_ecology
+	
+	event_scope = planet_event
+
+	on_success = {
+		owner = { country_event = { id = environmentalism.210 } }
+	}
+}

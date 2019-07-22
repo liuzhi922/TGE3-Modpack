@@ -1,0 +1,73 @@
+
+namespace = sc_maintenance
+
+### Maintenance Events ###
+
+
+### Law Synchronize
+
+country_event = {
+	id = sc_maintenance.1
+	hide_window = yes
+	
+	trigger = {
+		has_federation = yes
+		is_federation_leader = yes
+		sc_trigger_diff_laws = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		sc_effect_sync_laws = yes
+	}
+}
+
+#### Override any shenanigans the base game is doing (messing with who the fed leader is)
+
+country_event = {
+	id = sc_maintenance.2
+	hide_window = yes
+	
+	trigger = {
+		has_federation = yes
+		is_federation_leader = yes
+		NOT = { has_country_flag = sc_is_president }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		random_country = {
+			limit = { 
+				NOT = { is_country = ROOT }
+				has_country_flag = sc_is_president
+				is_in_federation_with = ROOT
+				has_federation = yes
+			}
+			set_federation_leader = THIS
+		}
+	}
+}
+
+country_event = {
+	id = sc_maintenance.3
+	hide_window = yes
+	
+	trigger = {
+		has_federation = no
+		has_country_flag = sc_is_president
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		remove_country_flag = sc_is_president
+	}
+}

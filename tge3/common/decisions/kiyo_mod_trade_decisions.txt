@@ -1,0 +1,212 @@
+# Set up trade route
+decision_kiyo_mod_trade_setup_trade_route = {
+	owned_planets_only = yes
+	
+	potential = { owner = { is_gestalt = no is_country_type = default has_technology = tech_space_trading } }
+	
+	allow = {
+		custom_tooltip = {
+			# Has enough trade routes
+			fail_text = decision_kiyo_mod_trade_setup_trade_route_max_trade_routes
+			if = { limit = { owner = { check_variable = { which = kiyo_trade_num_trade_routes value > 0 } } }
+				owner = { check_variable = { which = kiyo_trade_num_trade_routes value < kiyo_trade_max_trade_routes } }
+			}
+			else = { always = yes }
+		}
+		num_buildings = { type = any value >= 5 }
+		count_pops = { limit = { has_job = yes } count >= 20 }
+	}
+	
+	resources = {
+		category = campaigns
+		cost = {
+			energy = 250
+			alloys = 150
+			consumer_goods = 600
+		}
+	}
+	
+	effect = {
+		custom_tooltip = decision_kiyo_mod_trade_setup_trade_route_effects
+		hidden_effect = {
+			save_event_target_as = kiyo_trade_orbit
+			create_fleet = {
+				name = "Cargo from [Prev.GetName]"
+				effect = {
+					set_owner = prev.owner
+					set_location = {
+						target = prev
+						distance = 5
+						angle = random
+					}
+					set_fleet_stance = passive
+					
+					create_ship = {
+						name = "Cargo Ship"
+						random_existing_design = kiyo_trade
+						prefix = yes
+						upgradable = yes
+					}
+					set_fleet_flag = kiyo_trade_start@PREV
+					set_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
+					fleet_event = { id = kiyo_event_trade.0 }
+					# TODO
+					if = { limit = { owner = { is_ai = yes } }
+						random_country = {
+							limit = {
+								is_country_type = default
+								has_commercial_pact = prev.owner
+								NOT = {
+									is_country = prev.owner
+									has_closed_borders = root.owner
+									is_at_war_with = root.owner
+								}
+							}
+							weights = {
+								base = 1
+								modifier = {
+									add = 1
+									is_in_federation_with = prev.owner
+								}
+								modifier = {
+									mult = 5
+									is_neighbor_of = prev.owner
+								}
+							}
+							random_owned_planet = {
+								weights = {
+									base = 1
+									modifier = {
+										add = 1
+										num_pops < 20
+									}
+									modifier = {
+										add = 1
+										num_pops >= 20
+									}
+									modifier = {
+										add = 1
+										num_pops >= 30
+									}
+									modifier = {
+										add = 1
+										num_pops >= 50
+									}
+									modifier = {
+										add = 1
+										num_pops >= 70
+									}
+									modifier = {
+										add = 2
+										num_pops >= 100
+									}
+									modifier = {
+										add = 2
+										num_pops >= 150
+									}
+									modifier = {
+										mult = 3
+										is_capital = yes
+									}
+									modifier = {
+										mult = 3
+										distance = { source = root type = hyperlane use_bypasses = no min_jumps = 0 max_jumps = 5 }
+									}
+									modifier = {
+										mult = 2
+										distance = { source = root type = hyperlane use_bypasses = no min_jumps = 0 max_jumps = 10 }
+									}
+									modifier = {
+										mult = 0
+										prev.owner = {
+											has_monthly_income = { resource = food value < 0 }
+											prev.owner = { any_owned_planet = { has_designation = col_farming } }
+										}
+										NOT = { has_designation = col_farming }
+									}
+								}
+								save_event_target_as = kiyo_trade_partner
+							}
+						}
+					}
+					if = { limit = { owner = { is_ai = yes } } queue_actions = { orbit_planet = event_target:kiyo_trade_partner } }
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = yes
+					can_change_composition = no
+					can_change_leader = no
+					spawn_debris = yes
+				}
+			}
+		
+			# Add 1 to number of current trade routes
+			owner = { change_variable = { which = kiyo_trade_num_trade_routes value = 1 } }
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				any_country = {
+					is_country_type = default
+					has_commercial_pact = prev.owner
+					NOT = {
+						is_country = prev.owner
+						has_closed_borders = root.owner
+						is_at_war_with = root.owner
+					}
+				}
+			}
+		}
+	}
+}
+
+# Add more cargo ships to trade route
+decision_kiyo_mod_trade_add_ships_to_trade_route = {
+	owned_planets_only = yes
+	
+	potential = {
+		# Owner has a fleet with a trade route
+		owner = { any_owned_fleet = { has_fleet_flag = kiyo_trade_has_trade_route } has_technology = tech_space_trading }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_kiyo_mod_trade_add_ships_to_trade_route_any_fleet_has_room
+			owner = { any_owned_fleet = { check_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value < prev } } }
+		}
+		custom_tooltip = {
+			fail_text = decision_kiyo_mod_trade_add_ships_to_trade_route_has_window
+			owner = { NOT = { has_country_flag = kiyo_trade_add_cargo_window } }
+		}
+		
+	}
+	
+	resources = {
+		category = campaigns
+		cost = {
+			energy = 250
+			alloys = 150
+			consumer_goods = 600
+		}
+	}
+	
+	effect = {
+		custom_tooltip = decision_kiyo_mod_trade_add_ships_to_trade_route_effects
+		hidden_effect = {
+			owner = { set_country_flag = kiyo_trade_add_cargo_window }
+			planet_event = { id = kiyo_event_trade.32 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			owner = { is_at_war = yes }
+		}
+	}
+}

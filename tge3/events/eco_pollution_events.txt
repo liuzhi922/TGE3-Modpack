@@ -1,0 +1,3008 @@
+namespace = pollute
+
+								#########################################
+								#	JOB WASTE PRODUCTION CALCULATION	#
+								#########################################
+								#	Resource			Waste			#
+								#										#
+								#	Mineral			=		5			#
+								#	Energy			=		5			#
+								#	Food			=		4			#
+								#	Mote (mine)		=		5			#
+								#	Gas (mine)		=		5			#
+								#	Crystal (mine)	=		5			#
+								#	Alloy			=		2			#
+								#	Consumer Good	=		2			#
+								# 	Research		=		2			#
+								#	Mote (manu)		=		2			#
+								#	Gas (manu)		=		2			#
+								#	Crystal (manu)	=		2			#
+								#	Trade			=		1			#
+								#	Amenities		=		1			#
+								#	Society			=		0			#
+								#	Unity			=		0			#
+								#	Robot Build		=		4			#
+								#	5% Pop Growth	=		1			#
+								#	Criminal Pops	=		20			#
+								#	Purged Pops		=		10			#
+								#########################################
+
+# Yearly Pollution Check
+event = {
+	id = pollute.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			every_owned_planet = {
+				set_variable = { which = waste value = 0 }
+				every_owned_pop = {
+					switch = {
+						trigger = has_job
+							clerk = { prev = { change_variable = { which = waste value = 4 } } }
+							technician = { prev = { change_variable = { which = waste value = 20 } } }
+							miner = { prev = { change_variable = { which = waste value = 20 } } }
+							farmer = { prev = { change_variable = { which = waste value = 24 } } }
+							crystal_miner = { prev = { change_variable = { which = waste value = 10 } } }
+							gas_extractor = { prev = { change_variable = { which = waste value = 10 } } }
+							mote_harvester = { prev = { change_variable = { which = waste value = 10 } } }
+							administrator = { prev = { change_variable = { which = waste value = 8 } } }
+							colonist = { prev = { change_variable = { which = waste value = 9 } } }
+							foundry = { prev = { change_variable = { which = waste value = 6 } } }
+							artisan = { prev = { change_variable = { which = waste value = 12 } } }
+							entertainer = { prev = { change_variable = { which = waste value = 10 } } }
+							culture_worker = { prev = { change_variable = { which = waste value = 0 } } }
+							chemist = { prev = { change_variable = { which = waste value = 4 } } }
+							translucer = { prev = { change_variable = { which = waste value = 4 } } }
+							gas_refiner = { prev = { change_variable = { which = waste value = 4 } } }
+							roboticist = { prev = { change_variable = { which = waste value = 8 } } }
+							healthcare = { prev = { change_variable = { which = waste value = 6 } } }
+							soldier = { prev = { change_variable = { which = waste value = 0 } } }
+							spawning_drone = { prev = { change_variable = { which = waste value = 10 } } }
+							replicator = { prev = { change_variable = { which = waste value = 7 } } }
+							coordinator = { prev = { change_variable = { which = waste value = 2 } } }
+							synapse_drone = { prev = { change_variable = { which = waste value = 0 } } }
+							brain_drone = { prev = { change_variable = { which = waste value = 8 } } }
+							calculator = { prev = { change_variable = { which = waste value = 8 } } }
+							artisan_drone = { prev = { change_variable = { which = waste value = 16 } } }
+							fabricator = { prev = { change_variable = { which = waste value = 8 } } }
+							alloy_drone = { prev = { change_variable = { which = waste value = 6 } } }
+							chemist_drone = { prev = { change_variable = { which = waste value = 4 } } }
+							translucor_drone = { prev = { change_variable = { which = waste value = 4 } } }
+							gas_refiner_drone = { prev = { change_variable = { which = waste value = 4 } } }
+							patrol_drone = { prev = { change_variable = { which = waste value = 0 } } }
+							crystal_mining_drone = { prev = { change_variable = { which = waste value = 5 } } }
+							mote_harvesting_drone = { prev = { change_variable = { which = waste value = 5 } } }
+							gas_extraction_drone = { prev = { change_variable = { which = waste value = 5 } } }
+							mining_drone = { prev = { change_variable = { which = waste value = 20 } } }
+							warrior_drone = { prev = { change_variable = { which = waste value = 0 } } }
+							servant = { prev = { change_variable = { which = waste value = 4 } } }
+							slave_overseer = { prev = { change_variable = { which = waste value = 0 } } }
+							slave_toiler = { prev = { change_variable = { which = waste value = 2 } } }
+							organic_battery = { prev = { change_variable = { which = waste value = 20 } } }
+							livestock = { prev = { change_variable = { which = waste value = 16 } } }
+							biotrophy = { prev = { change_variable = { which = waste value = 0 } } }
+							purge = { prev = { change_variable = { which = waste value = 10 } } }
+							criminal = { prev = { change_variable = { which = waste value = 20 } } }
+							deviant_drone = { prev = { change_variable = { which = waste value = 20 } } }
+							corrupt_drone = { prev = { change_variable = { which = waste value = 20 } } }
+							odd_factory_worker = { prev = { change_variable = { which = waste value = 8 } } }
+							underground_trade_worker = { prev = { change_variable = { which = waste value = 13 } } }
+							underground_contact_drone = { prev = { change_variable = { which = waste value = 18 } } }
+							dimensional_portal_researcher = { prev = { change_variable = { which = waste value = 6 } } }
+							dimensional_portal_researcher_gestalt = { prev = { change_variable = { which = waste value = 6 } } }
+							
+							maintenance_drone = { 
+								prev = { change_variable = { which = waste value = 0 } }
+								
+								if = {
+									limit = { 
+										OR = { 
+											owner = { has_modifier = eco_hive_environmentalism }
+											owner = { has_modifier = eco_machine_environmentalism }
+										}
+									}
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+							}
+							
+							merchant = {
+								prev = { change_variable = { which = waste value = 13 } }
+							
+								if = {
+									limit = { owner = { has_modifier = eco_corporate_environmentalism } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+							}
+							
+							manager = { 
+								prev = { change_variable = { which = waste value = 2 } }
+								
+								if = {
+									limit = { owner = { has_modifier = eco_corporate_environmentalism } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+							}
+							
+							executive = {
+								prev = { change_variable = { which = waste value = 9 } }
+									
+								if = {
+									limit = { owner = { has_modifier = eco_corporate_environmentalism } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+							
+							priest = { 
+								prev = { change_variable = { which = waste value = 0 } }
+								
+								if = {
+									limit = { owner = { has_modifier = eco_spiritualist_environmentalism } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+							
+							high_priest = { 
+								prev = { change_variable = { which = waste value = 15 } }
+							
+								if = {
+									limit = { owner = { has_modifier = eco_spiritualist_environmentalism } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+							
+							preacher = { 
+								prev = { change_variable = { which = waste value = 6 } }
+							
+								if = {
+									limit = { owner = { has_modifier = eco_spiritualist_environmentalism } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+							}
+							
+							researcher = { 
+								prev = { change_variable = { which = waste value = 8 } } 
+							
+								if = {
+									limit = { owner = { has_modifier = eco_materialist_environmentalism } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+							
+							head_researcher = { 
+								prev = { change_variable = { which = waste value = 15 } }
+								
+								if = {
+									limit = { owner = { has_modifier = eco_materialist_environmentalism } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+							
+							enforcer = { 
+								prev = { change_variable = { which = waste value = 0 } }
+								
+								if = {
+									limit = { owner = { has_modifier = eco_authoritarian_environmentalism } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+							telepath = { 
+								prev = { change_variable = { which = waste value = 0 } }
+								
+								if = {
+									limit = { owner = { has_modifier = eco_authoritarian_environmentalism } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+							noble = { 
+								prev = { change_variable = { which = waste value = 5 } }
+								
+								if = {
+									limit = { owner = { has_modifier = eco_authoritarian_environmentalism } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+							
+							agri_drone = {
+								prev = { change_variable = { which = waste value = 24 } }
+								
+								if = { 
+									limit = { owner = { is_robot_empire = yes } }
+									prev = { change_variable = { which = waste value = -4 } }
+								}
+							}
+							
+							technician_drone = { 
+								prev = { change_variable = { which = waste value = 20 } }
+								
+								if = { 
+									limit = { owner = { is_robot_empire = yes } }
+									prev = { change_variable = { which = waste value = 10 } }
+								}
+							}
+							
+							park_ranger = { 
+								prev = { change_variable = { which = waste value = -10 } }
+								if = { 
+									limit = { owner = { has_modifier = eco_pacifist_environmentalism } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_modifier = eco_artificial_3 } }
+									prev = { change_variable = { which = waste value = -5 } }
+								}
+								if = {
+									limit = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+							}
+							
+							ranger_drone = { 
+								prev = { change_variable = { which = waste value = -10 } }
+								if = {
+									limit = { prev = { has_modifier = eco_artificial_3 } }
+									prev = { change_variable = { which = waste value = -5 } }
+								}
+								if = {
+									limit = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_col_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_habitat_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ring_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ecu_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+							}
+							
+							waste_handler = {
+								if = {
+									limit = { owner = { has_technology = eco_tech_waste_recycling_2 } }
+									prev = { change_variable = { which = waste value = -40 } }
+								} else_if = {
+									limit = { owner = { has_technology = eco_tech_waste_recycling } }
+									prev = { change_variable = { which = waste value = -30 } }
+								} else = {
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_modifier = eco_trash_colony } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_modifier = eco_artificial_3 } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_planet_flag = eco_built_zero_waste } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { owner = { has_policy_flag = eco_policy_disposal } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = { 
+									limit = { owner = { has_modifier = eco_pacifist_environmentalism } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { owner = { leader = { has_trait = eco_trait_ruler_environmentalist } } }
+									prev = { change_variable = { which = waste value = -5 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_col_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_habitat_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ring_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ecu_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+							}
+							waste_drone = {
+								if = {
+									limit = { owner = { has_technology = eco_tech_waste_recycling_2 } }
+									prev = { change_variable = { which = waste value = -40 } }
+								} else_if = {
+									limit = { owner = { has_technology = eco_tech_waste_recycling } }
+									prev = { change_variable = { which = waste value = -30 } }
+								} else = {
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_modifier = eco_trash_colony } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_planet_flag = eco_built_zero_waste } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { owner = { has_policy_flag = eco_policy_disposal } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_col_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_habitat_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ring_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ecu_nature } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+							}
+							waste_manager = {
+								if = {
+									limit = { owner = { has_technology = eco_tech_waste_recycling_2 } }
+									prev = { change_variable = { which = waste value = -80 } }
+								} else_if = {
+									limit = { owner = { has_technology = eco_tech_waste_recycling } }
+									prev = { change_variable = { which = waste value = -60 } }
+								} else = {
+									prev = { change_variable = { which = waste value = -40 } }
+								}
+								if = {
+									limit = { prev = { has_modifier = eco_trash_colony } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_planet_flag = eco_built_zero_waste } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = { 
+									limit = { owner = { has_modifier = eco_pacifist_environmentalism } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { owner = { leader = { has_trait = eco_trait_ruler_environmentalist } } }
+									prev = { change_variable = { which = waste value = -10 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_col_nature } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_habitat_nature } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ring_nature } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ecu_nature } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+							waste_overseer = {
+								if = {
+									limit = { owner = { has_technology = eco_tech_waste_recycling_2 } }
+									prev = { change_variable = { which = waste value = -80 } }
+								} else_if = {
+									limit = { owner = { has_technology = eco_tech_waste_recycling } }
+									prev = { change_variable = { which = waste value = -60 } }
+								} else = {
+									prev = { change_variable = { which = waste value = -40 } }
+								}
+								if = {
+									limit = { prev = { has_modifier = eco_trash_colony } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_planet_flag = eco_built_zero_waste } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_col_nature } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_habitat_nature } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ring_nature } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+								if = {
+									limit = { prev = { has_designation = eco_ecu_nature } }
+									prev = { change_variable = { which = waste value = -20 } }
+								}
+							}
+						}
+					
+					if = {
+						limit = { OR = { has_trait = eco_trait_clean } }
+						prev = { change_variable = { which = waste value = -2 } }
+					} else_if = {
+						limit = { OR = {has_trait = eco_trait_dirty } }
+						prev = { change_variable = { which = waste value = 2 } }
+					}
+					if = {
+						limit = { is_robot_pop = yes }
+						prev = { change_variable = { which = waste value = 1 } }
+					} else_if = {
+						limit = { owner = { is_hive_empire = yes } }
+						prev = { change_variable = { which = waste value = -1 } }
+					}
+					
+					if = {
+						limit = {
+							owner = { has_policy_flag = eco_policy_environmental_regulation }
+							OR = {
+								has_job = mining_drone
+								has_job = technician_drone
+								has_job = miner
+								has_job = technician
+								has_job = colonist
+								has_job = researcher
+								has_job = foundry
+								has_job = artisan
+								has_job = brain_drone
+								has_job = artisan_drone
+								has_job = alloy_drone
+							}
+						}
+						prev = { change_variable = { which = waste value = -2 } }
+					} else_if = {
+						limit = {
+							owner = { has_policy_flag = eco_policy_environmental_regulation }
+							OR = {
+								has_job = agri_drone
+								has_job = farmer
+								has_job = head_researcher
+								has_job = calculator
+							}
+						}
+						prev = { change_variable = { which = waste value = -3 } }
+					} else_if = {
+						limit = { 
+							owner = { has_policy_flag = eco_policy_environmental_deregulation }
+							OR = {
+								has_job = mining_drone
+								has_job = technician_drone
+								has_job = miner
+								has_job = technician
+								has_job = colonist
+								has_job = researcher
+								has_job = foundry
+								has_job = artisan
+								has_job = brain_drone
+								has_job = artisan_drone
+								has_job = alloy_drone
+							}
+						}
+						prev = { change_variable = { which = waste value = 2 } }
+					} else_if = {
+						limit = { 
+							owner = { has_policy_flag = eco_policy_environmental_deregulation }
+							OR = {
+								has_job = agri_drone
+								has_job = farmer
+								has_job = head_researcher
+								has_job = calculator
+							}
+						}
+						prev = { change_variable = { which = waste value = 3 } }
+					} else_if = {
+						limit = {
+							owner = { has_policy_flag = eco_policy_sustainable_development }
+							OR = {
+								has_job = mining_drone
+								has_job = technician_drone
+								has_job = miner
+								has_job = technician
+								has_job = colonist
+								has_job = researcher
+								has_job = foundry
+								has_job = artisan
+								has_job = brain_drone
+								has_job = artisan_drone
+								has_job = alloy_drone
+							}
+						}
+						prev = { change_variable = { which = waste value = -4 } }
+					} else_if = {
+						limit = {
+							owner = { has_policy_flag = eco_policy_sustainable_development }
+							OR = {
+								has_job = agri_drone
+								has_job = farmer
+								has_job = head_researcher
+								has_job = calculator
+							}
+						}
+						prev = { change_variable = { which = waste value = -6 } }
+					} else_if = {
+						limit = { 
+							owner = { has_policy_flag = eco_policy_environmental_selfregulation }
+							OR = {
+								has_job = mining_drone
+								has_job = technician_drone
+								has_job = miner
+								has_job = technician
+								has_job = colonist
+								has_job = researcher
+								has_job = foundry
+								has_job = artisan
+								has_job = brain_drone
+								has_job = artisan_drone
+								has_job = alloy_drone
+							}
+						}
+						prev = { change_variable = { which = waste value = 4 } }
+					} else_if = {
+						limit = { 
+							owner = { has_policy_flag = eco_policy_environmental_selfregulation }
+							OR = {
+								has_job = agri_drone
+								has_job = farmer
+								has_job = head_researcher
+								has_job = calculator
+							}
+						}
+						prev = { change_variable = { which = waste value = 6 } }
+					}
+					
+					if = {
+						limit = { owner = { has_modifier = eco_egalitarian_environmentalism } }
+						if = {
+							limit = { has_normal_living_standard_type = yes }
+							prev = { change_variable = { which = waste value = -1 } }
+						} else_if = {
+							limit = { has_academic_living_standard_type = yes }
+							prev = { change_variable = { which = waste value = -1 } }
+						} else_if = {
+							limit = { has_shared_burden_living_standard_type = yes }
+							prev = { change_variable = { which = waste value = -2 } }
+						} else_if = {
+							limit = { has_very_high_living_standard_type = yes }
+							prev = { change_variable = { which = waste value = -2 } }
+						} else_if = {
+							limit = { has_utopian_living_standard_type = yes }
+							prev = { change_variable = { which = waste value = -2 } }
+						}
+					}
+					
+					if = {
+						limit = { owner = { has_modifier = eco_xenophobe_environmentalism }	}
+						if = {
+							limit = { is_same_species = owner }
+							prev = { change_variable = { which = waste value = -2 } }
+						} else_if = {
+							limit = {
+								NOT = { is_same_species = owner }
+								is_enslaved = yes
+							}
+							prev = { change_variable = { which = waste value = -4 } }
+						} else_if = {
+							limit = { NOT = { is_same_species = owner } }
+							prev = { change_variable = { which = waste value = 4 } }
+						}
+					}
+					
+					if = {
+						limit = {
+							owner = { has_modifier = eco_xenophile_environmentalism }
+							NOT = { is_same_species = owner }
+						}
+						
+						prev = { change_variable = { which = waste value = -4 } }
+					}
+				}
+				
+				if = { 
+					limit = { owner = { has_modifier = eco_militarist_environmentalism } }
+					owner = {
+						every_owned_army = {
+							limit = { army_type = defensive_army }
+							prev = { change_variable = { which = waste value = -10 } }
+						}
+					}
+				}
+				
+				# Biodiversity Loss
+				if = { 
+					limit = { has_deposit = d_eco_graveyard } 
+					change_variable = { which = waste value = 100 }
+				}
+				
+				# Biodiversity Loss (Titan)
+				if = { 
+					limit = { has_deposit = d_eco_graveyard_2 } 
+					change_variable = { which = waste value = 150 }
+				}
+				
+				# Soil Erosion
+				if = { 
+					limit = { has_deposit = d_eco_wasteland } 
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Heat Wave
+				if = { 
+					limit = { has_modifier = eco_heat_wave } 
+					change_variable = { which = waste value = 100 }
+				}
+				
+				# Water Contamination
+				if = { 
+					limit = { has_deposit = d_eco_sludge } 
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# City Park
+				if = { 
+					limit = { has_deposit = d_eco_city_park } 
+					change_variable = { which = waste value = -20 }
+				}
+				if = { 
+					limit = { has_deposit = d_eco_city_park_hive } 
+					change_variable = { which = waste value = -20 }
+				}
+				
+				# National Park
+				if = { 
+					limit = { has_deposit = d_eco_park } 
+					change_variable = { which = waste value = -20 }
+				}
+				if = { 
+					limit = { has_deposit = d_eco_park_hive } 
+					change_variable = { which = waste value = -20 }
+				}
+				
+				# Wildlife Preserve
+				if = { 
+					limit = { has_deposit = d_eco_preserve } 
+					change_variable = { which = waste value = -20 }
+				}
+				if = { 
+					limit = { has_deposit = d_eco_preserve_hive } 
+					change_variable = { which = waste value = -20 }
+				}
+				
+				# Wildlife Habitat
+				if = { 
+					limit = { has_deposit = d_eco_wildlife_habitat }
+					change_variable = { which = waste value = -100 }
+				}
+				if = { 
+					limit = { has_deposit = d_eco_wildlife_habitat_hive }
+					change_variable = { which = waste value = -100 }
+				}
+				
+				# Urban Sprawl
+				if = { 
+					limit = { has_deposit = d_eco_sprawl } 
+					change_variable = { which = waste value = 100 }
+				}
+				
+				# Extreme Sprawl
+				if = { 
+					limit = { has_deposit = d_eco_sprawl_2 } 
+					change_variable = { which = waste value = 200 }
+				}
+				
+				
+				# Climate Change
+				if = { 
+					limit = { has_modifier = eco_climate_change } 
+					change_variable = { which = waste value = 100 }
+				}
+				
+				# Waste Building
+				if = { 
+					limit = {  has_planet_flag = eco_built_waste_building } 
+					change_variable = { which = waste value = -50 }
+				}
+				
+				# Garbage World
+				if = { 
+					limit = { 
+						has_modifier = eco_trash_colony
+						NOT = { owner = { has_policy_flag = eco_policy_disposal } }
+					} 
+					change_variable = { which = waste value = 1000 }
+				}
+				
+				# Planets Near Garbage World
+				if = { 
+					limit = { 
+						has_modifier = eco_trash_colony_other_planets
+						NOT = { owner = { has_policy_flag = eco_policy_disposal } }
+					} 
+					change_variable = { which = waste value = -200 }
+				}
+				
+				# Unstable Climate
+				if = {
+					limit = { has_deposit = d_eco_unstable_climate }
+					change_variable = { which = waste value = 100 }
+					add_planet_devastation = 10
+				}
+				
+				# Displaced Titans
+				if = {
+					limit = { has_modifier = eco_displaced_wildlife_3 }
+					add_planet_devastation = 5
+				}
+				
+				# Earth Pollution 1
+				if = {
+					limit = { has_deposit = d_great_pacific_garbage_patch }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Earth Pollution 2
+				if = {
+					limit = { has_deposit = d_failing_infrastructure_earth }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Starting Pollution Tomb 1
+				if = {
+					limit = { has_deposit = d_radioactive_wasteland }
+					change_variable = { which = waste value = 100 }
+				}
+				
+				# Starting Pollution Ruins
+				if = {
+					limit = { has_deposit = d_city_ruins }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Starting Pollution Capital 1
+				if = {
+					limit = { has_deposit = d_failing_infrastructure }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Starting Pollution Capital 2
+				if = {
+					limit = { has_deposit = d_eco_urban_waste }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Starting Pollution Capital 3
+				if = {
+					limit = { has_deposit = d_decrepit_dwellings }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Starting Pollution Machine 1
+				if = {
+					limit = { has_deposit = d_tomb_world_ruins }
+					change_variable = { which = waste value = 100 }
+				}
+				
+				# Starting Pollution Machine 2
+				if = {
+					limit = { has_deposit = d_tomb_world_wasteland }
+					change_variable = { which = waste value = 100 }
+				}
+				
+				# Starting Pollution Machine 3
+				if = {
+					limit = { has_deposit = d_former_battlefield }
+					change_variable = { which = waste value = 200 }
+				}
+				
+				# Starting Pollution Machine 4
+				if = {
+					limit = { has_deposit = d_strip_mine }
+					change_variable = { which = waste value = 100 }
+				}
+				
+				# Starting Pollution Machine 5
+				if = {
+					limit = { has_deposit = d_unsupervised_settlement }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Starting Pollution Machine 5
+				if = {
+					limit = { has_deposit = d_assimilators_ruins }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Starting Pollution Machine 5
+				if = {
+					limit = { has_deposit = d_exterminators_ruins }
+					change_variable = { which = waste value = 100 }
+				}
+				
+				# Starting Hive Mind 5
+				if = {
+					limit = { has_deposit = d_collapsed_burrows }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Overpopulation (Hive)
+				if = {
+					limit = { has_deposit = d_eco_collapsed_burrows }
+					change_variable = { which = waste value = 50 }
+				}
+				
+				# Overpopulation (Regular)
+				if = {
+					limit = { has_deposit = d_eco_slum_town }
+					change_variable = { which = waste value = 40 }
+				} else_if = {
+					limit = { has_deposit = d_eco_slum_city }
+					change_variable = { which = waste value = 60 }
+				}
+				
+				
+				# Run Pollution Events
+				if = {
+					limit = { years_passed > 0 }
+					planet_event = { id = pollute.2 days = 10 }
+				} else = {
+					planet_event = { id = pollute.2 }
+				}
+				if = {
+					limit = { years_passed > 9 }
+					planet_event = { id = pollute.4 days = 30 }
+				}
+			}
+		}
+	}
+}
+
+# Pollution Events
+planet_event = {
+	id = pollute.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { is_planet_class = pc_habitat }
+				NOT = { is_planet_class = pc_gas_giant }
+				NOT = { is_planet_class = pc_asteroid }
+				NOT = { is_planet_class = pc_ice_asteroid }
+				NOT = { is_planet_class = pc_rare_crystal_asteroid }
+				NOT = { is_planet_class = pc_molten }
+				NOT = { is_planet_class = pc_barren }
+				NOT = { is_planet_class = pc_barren_cold }
+				NOT = { is_planet_class = pc_toxic }
+				NOT = { is_planet_class = pc_frozen }
+				NOT = { is_planet_class = pc_machine }
+				NOT = { is_planet_class = pc_cybrex }
+				NOT = { is_planet_class = pc_ringworld_habitable }
+				NOT = { has_planet_flag = eco_no_pollution }
+			}
+			# Clear Pollution
+			if = { 
+				limit = { has_modifier = "eco_catastrophic" }
+				remove_modifier = "eco_catastrophic"
+			} else_if = { 
+				limit = { has_modifier = "eco_extreme" }
+				remove_modifier = "eco_extreme"
+			} else_if = {
+				limit = { has_modifier = "eco_heavy" }
+				remove_modifier = "eco_heavy"
+			} else_if = {
+				limit = { has_modifier = "eco_moderate" }
+				remove_modifier = "eco_moderate"
+			} else_if = {
+				limit = { has_modifier = "eco_minimal" }
+				remove_modifier = "eco_minimal"
+			} else_if = {
+				limit = { has_modifier = "eco_clean" }
+				remove_modifier = "eco_clean"
+			} else_if = {
+				limit = { has_modifier = "eco_pristine" }
+				remove_modifier = "eco_pristine"
+			}
+			# Environmental Ethics Trigger
+			if = {
+				limit = {
+					owner = { has_ethic = ethic_authoritarian }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					9 = { }
+					1 = { planet_event = { id = environmentalism.100 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_fanatic_authoritarian }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					8 = { }
+					2 = { planet_event = { id = environmentalism.100 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_egalitarian }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					9 = { }
+					1 = { planet_event = { id = environmentalism.110 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_fanatic_egalitarian }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					8 = { }
+					2 = { planet_event = { id = environmentalism.110 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_xenophobe }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					9 = { }
+					1 = { planet_event = { id = environmentalism.120 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_fanatic_xenophobe }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					8 = { }
+					2 = { planet_event = { id = environmentalism.120 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_xenophile }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					9 = { }
+					1 = { planet_event = { id = environmentalism.130 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_fanatic_xenophile }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					8 = { }
+					2 = { planet_event = { id = environmentalism.130 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_militarist }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					9 = { }
+					1 = { planet_event = { id = environmentalism.140 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_fanatic_militarist }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					8 = { }
+					2 = { planet_event = { id = environmentalism.140 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_pacifist }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					9 = { }
+					1 = { planet_event = { id = environmentalism.150 } }
+				}
+			}  else_if = {
+				limit = {
+					owner = { has_ethic = ethic_fanatic_pacifist }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					8 = { }
+					2 = { planet_event = { id = environmentalism.150 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_materialist }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					9 = { }
+					1 = { planet_event = { id = environmentalism.160 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_fanatic_materialist }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					8 = { }
+					2 = { planet_event = { id = environmentalism.160 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_spiritualist }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					9 = { }
+					1 = { planet_event = { id = environmentalism.170 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_ethic = ethic_fanatic_spiritualist }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					8 = { }
+					2 = { planet_event = { id = environmentalism.170 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { has_authority = auth_corporate }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					8 = { }
+					2 = { planet_event = { id = environmentalism.180 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { is_hive_empire = yes }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					7 = { }
+					3 = { planet_event = { id = environmentalism.190 } }
+				}
+			} else_if = {
+				limit = {
+					owner = { is_machine_empire = yes }
+					NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+					end_game_years_passed > 0
+				}
+				random_list = {
+					7 = { }
+					3 = { planet_event = { id = environmentalism.200 } }
+				}
+			}
+
+			# Add Pollution and Trigger Events	
+			if = { # Catastrophic Pollution
+				limit = { check_variable = { which = waste value > 1000 } }
+				add_modifier = { modifier = "eco_catastrophic" }
+				# Event Generation
+				random_list = {
+					# Nothing Happens
+					132 = { }
+					## Drought
+					2 = { planet_event = { id = disaster.100 days = 60 random = 300} }
+					# Drought (Resilient)
+					2 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.100 days = 60 random = 300}
+						}
+					}
+					# Drought (Fragile)
+					2 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.100 days = 60 random = 300}
+						}
+					}
+					# Flooding
+					2 = { planet_event = { id = disaster.110 days = 60 random = 300} }
+					# Flooding (Resilient)
+					2 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.110 days = 60 random = 300}
+						}
+					}
+					# Flooding (Fragile)
+					2 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.110 days = 60 random = 300}
+						}
+					}
+					# Heat Wave
+					2 = { planet_event = { id = disaster.120 days = 60 random = 300} }
+					# Heat Wave (Resilient)
+					2 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.120 days = 60 random = 300}
+						}
+					}
+					# Heat Wave (Fragile)
+					2 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.120 days = 60 random = 300}
+						}
+					}
+					# Outbreak
+					2 = { planet_event = { id = disaster.130 days = 60 random = 300} }
+					# Outbreak (Resilient)
+					2 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Fragile)
+					2 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Overpopulated)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_overpopulated }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Climate Change
+					6 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+									planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Climate Change (Fragile)
+					4 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+							planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Climate Change (Resilient)
+					4 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+							planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Air Pollution
+					2 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_air_event_complete }
+							}
+							planet_event = { id = degrade.200 days = 60 random = 300}
+						}
+					}
+					# Air Pollution (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_air_event_complete }
+							}
+							planet_event = { id = degrade.200 days = 60 random = 300}
+						}
+					}
+					# Air Pollution (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_air_event_complete }
+							}
+							planet_event = { id = degrade.200 days = 60 random = 300}
+						}
+					}
+					# Water Pollution
+					2 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_water_event_complete }
+							}
+							planet_event = { id = degrade.220 days = 60 random = 300}
+						}
+					}
+					# Water Pollution (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_water_event_complete }
+							}
+							planet_event = { id = degrade.220 days = 60 random = 300}
+						}
+					}
+					# Water Pollution (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_water_event_complete }
+							}
+							planet_event = { id = degrade.220 days = 60 random = 300}
+						}
+					}
+					# Soil Pollution
+					2 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_soil_event_complete }
+							}
+							planet_event = { id = degrade.210 days = 60 random = 300}
+						}
+					}
+					# Soil Pollution (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_soil_event_complete }
+							}
+							planet_event = { id = degrade.210 days = 60 random = 300}
+						}
+					}
+					# Soil Pollution (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_soil_event_complete }
+							}
+							planet_event = { id = degrade.210 days = 60 random = 300}
+						}
+					}
+					# Soil Erosion
+					4 = {
+						planet_event = { id = degrade.100 days = 60 random = 300}
+					}
+					# Soil Erosion (Fragile)
+					2 = {
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.100 days = 60 random = 300}
+						}
+					}
+					# Soil Erosion (Resilient)
+					2 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.100 days = 60 random = 300}
+						}
+					}
+					# Water Contamination
+					4 = {
+						planet_event = { id = degrade.110 days = 60 random = 300}
+					}
+					# Water Contamination (Fragile)
+					2 = {
+						if = { 
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Water Contamination (Resilient)
+					2 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Ozone Depletion
+					4 = {
+						planet_event = { id = degrade.120 days = 60 random = 300}
+					}
+					# Ozone Depletion (Fragile)
+					2 = {
+						if = { 
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Ozone Depletion (Resilient)
+					2 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Junkheap
+					5 = {
+						if = {
+							limit = { NOT = { has_planet_flag = ecology_junk_event } }
+							planet_event = { id = degrade.130 days = 60 random = 300}
+						}
+					}
+					# Biodiversity Loss
+					4 = {
+						if = {
+							limit = { NOT = { has_planet_flag = eco_diversity_event } }
+							planet_event = { id = degrade.140 days = 60 random = 300}
+						} else = {
+							remove_planet_flag = eco_diversity_event
+						}
+					}
+					# Biodiversity Loss (Rich)
+					1 = {
+						if = {
+							limit = { 
+								NOT = { has_planet_flag = eco_diversity_event } 
+								NOT = { has_modifier = eco_species_rich }
+							}
+							planet_event = { id = degrade.140 days = 60 random = 300}
+						} else = {
+							remove_planet_flag = eco_diversity_event
+						}
+					}
+					# Biodiversity Loss (Poor)
+					1 = {
+						if = {
+							limit = { 
+								has_modifier = eco_species_poor
+								NOT = { has_planet_flag = eco_diversity_event }
+							}
+							planet_event = { id = degrade.140 days = 60 random = 300}
+						} else = {
+							remove_planet_flag = eco_diversity_event
+						}
+					}
+					# Reduced Resilience
+					2 = {
+						planet_event = { id = ecology.130 days = 60 random = 300}
+					}
+				}
+			} else_if = { # Extreme Polution
+				limit = { check_variable = { which = waste value > 800 } }			
+				add_modifier = { modifier = "eco_extreme" }
+				# Event Generation	
+				random_list = {
+					# Nothing Happens
+					144 = { }
+					# Drought
+					2 = { planet_event = { id = disaster.100 days = 60 random = 300} }
+					# Drought (Resilient)
+					2 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.100 days = 60 random = 300}
+						}
+					}
+					# Drought (Fragile)
+					2 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.100 days = 60 random = 300}
+						}
+					}
+					# Flooding
+					2 = { planet_event = { id = disaster.110 days = 60 random = 300} }
+					# Flooding (Resilient)
+					2 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.110 days = 60 random = 300}
+						}
+					}
+					# Flooding (Fragile)
+					2 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.110 days = 60 random = 300}
+						}
+					}
+					# Heat Wave
+					2 = { planet_event = { id = disaster.120 days = 60 random = 300} }
+					# Heat Wave (Resilient)
+					2 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.120 days = 60 random = 300}
+						}
+					}
+					# Heat Wave (Fragile)
+					2 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.120 days = 60 random = 300}
+						}
+					}
+					# Outbreak
+					2 = { planet_event = { id = disaster.130 days = 60 random = 300} }
+					# Outbreak (Resilient)
+					2 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Fragile)
+					2 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Overpopulated)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_overpopulated }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Climate Change
+					3 = {
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+							planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Climate Change (Fragile)
+					2 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+							planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Climate Change (Resilient)
+					2 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+							planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Air Pollution
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_air_event_complete }
+							}
+							planet_event = { id = degrade.200 days = 60 random = 300}
+						}
+					}
+					# Air Pollution (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_air_event_complete }
+							}
+							planet_event = { id = degrade.200 days = 60 random = 300}
+						}
+					}
+					# Air Pollution (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_air_event_complete }
+							}
+							planet_event = { id = degrade.200 days = 60 random = 300}
+						}
+					}
+					# Water Pollution
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_water_event_complete }
+							}
+							planet_event = { id = degrade.220 days = 60 random = 300}
+						}
+					}
+					# Water Pollution (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_water_event_complete }
+							}
+							planet_event = { id = degrade.220 days = 60 random = 300}
+						}
+					}
+					# Water Pollution (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_water_event_complete }
+							}
+							planet_event = { id = degrade.220 days = 60 random = 300}
+						}
+					}
+					# Soil Pollution
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_soil_event_complete }
+							}
+							planet_event = { id = degrade.210 days = 60 random = 300}
+						}
+					}
+					# Soil Pollution (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_soil_event_complete }
+							}
+							planet_event = { id = degrade.210 days = 60 random = 300}
+						}
+					}
+					# Soil Pollution (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_soil_event_complete }
+							}
+							planet_event = { id = degrade.210 days = 60 random = 300}
+						}
+					}
+					# Visual Pollution
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Visual Polluton (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Visual Polluton (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution (Fragile)
+					1 = {
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution (Resilient)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Light Pollution
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Light Pollution (Fragile)
+					1 = {
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Light Pollution (Resilient)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Soil Erosion
+					2 = {
+						planet_event = { id = degrade.100 days = 60 random = 300}
+					}
+					# Soil Erosion (Fragile)
+					2 = {
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.100 days = 60 random = 300}
+						}
+					}
+					# Soil Erosion (Resilient)
+					2 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.100 days = 60 random = 300}
+						}
+					}
+					# Water Contamination
+					2 = {
+						planet_event = { id = degrade.110 days = 60 random = 300}
+					}
+					# Water Contamination (Fragile)
+					2 = {
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Water Contamination (Resilient)
+					2 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Ozone Depletion
+					2 = {
+						planet_event = { id = degrade.110 days = 60 random = 300}
+					}
+					# Ozone Depletion (Fragile)
+					2 = {
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Ozone Depletion (Resilient)
+					2 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Junkheap
+					3 = {
+						if = {
+							limit = { NOT = { has_planet_flag = ecology_junk_event } }
+							planet_event = { id = degrade.130 days = 60 random = 300}
+						}
+					}
+					# Biodiversity Loss
+					2 = {
+						if = {
+							limit = { NOT = { has_planet_flag = eco_diversity_event } }
+							planet_event = { id = degrade.140 days = 60 random = 300}
+						} else = {
+							remove_planet_flag = eco_diversity_event
+						}
+					}
+					# Biodiversity Loss (Rich)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_species_rich }
+								NOT = { has_planet_flag = eco_diversity_event }
+							}
+							planet_event = { id = degrade.140 days = 60 random = 300}
+						} else = {
+							remove_planet_flag = eco_diversity_event
+						}
+					}
+					# Biodiversity Loss (Poor)
+					1 = {
+						if = {
+							limit = { 
+								has_modifier = eco_species_poor
+								NOT = { has_planet_flag = eco_diversity_event }
+							}
+							planet_event = { id = degrade.140 days = 60 random = 300}
+						} else = {
+							remove_planet_flag = eco_diversity_event
+						}
+					}
+					# Reduced Resilience
+					1 = {
+						planet_event = { id = ecology.130 days = 60 random = 300}
+					}
+				}
+			} else_if = { # Heavy Pollution
+				limit = { check_variable = { which = waste value > 600 } }			
+				add_modifier = { modifier = "eco_heavy" }
+				# Event Generation
+				random_list = {
+					# Nothing Happens
+					164 = { }
+					# Drought
+					2 = { planet_event = { id = disaster.100 days = 60 random = 300} }
+					# Drought (Resilient)
+					1 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.100 days = 60 random = 300}
+						}
+					}
+					# Drought (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.100 days = 60 random = 300}
+						}
+					}
+					# Flooding
+					2 = { planet_event = { id = disaster.110 days = 60 random = 300} }
+					# Flooding (Resilient)
+					1 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.110 days = 60 random = 300}
+						}
+					}
+					# Flooding (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.110 days = 60 random = 300}
+						}
+					}
+					# Heat Wave
+					2 = { planet_event = { id = disaster.120 days = 60 random = 300} }
+					# Heat Wave (Resilient)
+					1 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.120 days = 60 random = 300}
+						}
+					}
+					# Heat Wave (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.120 days = 60 random = 300}
+						}
+					}
+					# Outbreak
+					2 = { planet_event = { id = disaster.130 days = 60 random = 300} }
+					# Outbreak (Resilient)
+					1 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Overpopulated)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_overpopulated }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Climate Change
+					2 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+							planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Climate Change (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+							planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Climate Change (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+							planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Air Pollution
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_air_event_complete }
+							}
+							planet_event = { id = degrade.200 days = 60 random = 300}
+						}
+					}
+					# Air Pollution (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_air_event_complete }
+							}
+							planet_event = { id = degrade.200 days = 60 random = 300}
+						}
+					}
+					# Air Pollution (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_air_event_complete }
+							}
+							planet_event = { id = degrade.200 days = 60 random = 300}
+						}
+					}
+					# Water Pollution
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_water_event_complete }
+							}
+							planet_event = { id = degrade.220 days = 60 random = 300}
+						}
+					}
+					# Water Pollution (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_water_event_complete }
+							}
+							planet_event = { id = degrade.220 days = 60 random = 300}
+						}
+					}
+					# Water Pollution (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_water_event_complete }
+							}
+							planet_event = { id = degrade.220 days = 60 random = 300}
+						}
+					}
+					# Soil Pollution
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_soil_event_complete }
+							}
+							planet_event = { id = degrade.210 days = 60 random = 300}
+						}
+					}
+					# Soil Pollution (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_soil_event_complete }
+							}
+							planet_event = { id = degrade.210 days = 60 random = 300}
+						}
+					}
+					# Soil Pollution (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_mod_event }
+								NOT = { has_planet_flag = eco_soil_event_complete }
+							}
+							planet_event = { id = degrade.210 days = 60 random = 300}
+						}
+					}
+					# Visual Pollution
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Visual Polluton (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Visual Polluton (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution (Fragile)
+					1 = {
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution (Resilient)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Light Pollution
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Light Pollution (Fragile)
+					1 = {
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Light Pollution (Resilient)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Soil Erosion
+					2 = {
+						planet_event = { id = degrade.100 days = 60 random = 300}
+					}
+					# Soil Erosion (Fragile)
+					1 = {
+						if = { 
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.100 days = 60 random = 300}
+						}
+					}
+					# Soil Erosion (Resilient)
+					1 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.100 days = 60 random = 300}
+						}
+					}
+					# Water Contamination
+					2 = {
+						planet_event = { id = degrade.110 days = 60 random = 300}
+					}
+					# Water Contamination (Fragile)
+					1 = {
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Water Contamination (Resilient)
+					1 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Ozone Depletion
+					2 = {
+						planet_event = { id = degrade.110 days = 60 random = 300}
+					}
+					# Ozone Depletion (Fragile)
+					1 = {
+						if = { 
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Ozone Depletion (Resilient)
+					1 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Junkheap
+					2 = {
+						if = {
+							limit = { NOT = { has_planet_flag = ecology_junk_event } }
+							planet_event = { id = degrade.130 days = 60 random = 300}
+						}
+					}
+					# Biodiversity Loss
+					1 = {
+						if = {
+							limit = { NOT = { has_planet_flag = eco_diversity_event } }
+							planet_event = { id = degrade.140 days = 60 random = 300}
+						} else = {
+							remove_planet_flag = eco_diversity_event
+						}
+					}
+					# Biodiversity Loss (Rich)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_species_rich }
+								NOT = { has_planet_flag = eco_diversity_event }
+							}
+							planet_event = { id = degrade.140 days = 60 random = 300}
+						} else = {
+							remove_planet_flag = eco_diversity_event
+						}
+					}
+					# Biodiversity Loss (Poor)
+					1 = {
+						if = {
+							limit = {
+								has_modifier = eco_species_poor
+								NOT = { has_planet_flag = eco_diversity_event }
+							}
+							planet_event = { id = degrade.140 days = 60 random = 300}
+						} else = {
+							remove_planet_flag = eco_diversity_event
+						}
+					}
+				}
+			} else_if = { # Moderate Pollution
+				limit = { check_variable = { which = waste value > 400 } }			
+				add_modifier = { modifier = "eco_moderate" }
+				# Event Generation
+				random_list = {
+					# Nothing Happens
+					189 = { }
+					# Drought (Resilient)
+					1 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.100 days = 60 random = 300}
+						}
+					}
+					# Drought (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.100 days = 60 random = 300}
+						}
+					}
+					# Flooding (Resilient)
+					1 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.110 days = 60 random = 300}
+						}
+					}
+					# Flooding (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.110 days = 60 random = 300}
+						}
+					}
+					# Heat Wave (Resilient)
+					1 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.120 days = 60 random = 300}
+						}
+					}
+					# Heat Wave (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.120 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Resilient)
+					1 = { 
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Overpopulated)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_overpopulated }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Climate Change
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								NOT = { has_planet_flag = ecology_collapse_event }
+							}
+							planet_event = { id = climate.100 days = 60 random = 300}
+						} else_if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_max_event }
+								has_planet_flag = ecology_collapse_event
+							}
+							planet_event = { id = collapse.100 days = 60 random = 300}
+						}
+					}
+					# Visual Pollution
+					2 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Visual Polluton (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Visual Polluton (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution
+					2 = {
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution (Fragile)
+					1 = {
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution (Resilient)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Light Pollution
+					2 = {
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Light Pollution (Fragile)
+					1 = {
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Light Pollution (Resilient)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_modifier = eco_resilient_ecosystem }
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Soil Erosion
+					1 = {
+						planet_event = { id = degrade.100 days = 60 random = 300}
+					}
+					# Soil Erosion (Fragile)
+					1 = {
+						if = { 
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.100 days = 60 random = 300}
+						}
+					}
+					# Soil Erosion (Resilient)
+					1 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.100 days = 60 random = 300}
+						}
+					}
+					# Water Contamination
+					1 = {
+						planet_event = { id = degrade.110 days = 60 random = 300}
+					}
+					# Water Contamination (Fragile)
+					1 = {
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Water Contamination (Resilient)
+					1 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Ozone Depletion
+					1 = {
+						planet_event = { id = degrade.110 days = 60 random = 300}
+					}
+					# Ozone Depletion (Fragile)
+					1 = {
+						if = { 
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Ozone Depletion (Resilient)
+					1 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+				}
+			} else_if = { # Minimal Pollution
+				limit = { check_variable = { which = waste value > 200 } }
+				add_modifier = { modifier = "eco_minimal" }
+				# Event Generation
+				random_list = {
+					# Nothing Happens
+					201 = { }
+					# Drought (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.100 days = 60 random = 300}
+						}
+					}
+					# Flooding (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.110 days = 60 random = 300}
+						}
+					}
+					# Heat Wave (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.120 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Fragile)
+					1 = { 
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Outbreak (Overpopulated / Resilient)
+					1 = { 
+						if = {
+							limit = { 
+								has_modifier = eco_overpopulated
+								NOT = { has_modifier = eco_resilient_ecosystem }
+							}
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Visual Polluton (Resilient)
+					1 = { 	
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+								NOT = { has_modifier = eco_resilient_ecosystem }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Visual Polluton (Fragile)
+					1 = { 	
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_visual_event_complete }
+							}
+							planet_event = { id = degrade.230 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution (Resilient)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+								NOT = { has_modifier = eco_resilient_ecosystem }
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Noise Pollution (Fragile)
+					1 = {
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_noise_event_complete }
+								
+							}
+							planet_event = { id = degrade.180 days = 60 random = 300}
+						}
+					}
+					# Light Pollution (Resilient)
+					1 = {
+						if = {
+							limit = {
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+								NOT = { has_modifier = eco_resilient_ecosystem }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Light Pollution (Fragile)
+					1 = {
+						if = {
+							limit = {
+								has_modifier = eco_fragile_ecosystem
+								NOT = { has_planet_flag = ecology_min_event }
+								NOT = { has_planet_flag = eco_light_event_complete }
+							}
+							planet_event = { id = degrade.190 days = 60 random = 300}
+						}
+					}
+					# Junkheap Removal
+					5 = { 	
+						if = {
+							limit = { has_planet_flag = eco_trash_event }
+							planet_event = { id = ecology.110 days = 60 random = 300}
+						}
+					}
+					# Soil Erosion (Resilient)
+					1 = {
+						if = {
+							limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+							planet_event = { id = degrade.100 days = 60 random = 300}
+						}
+					}
+					# Water Contamination (Fragile)
+					1 = {
+						if = {
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+					# Ozone Depletion (Fragile)
+					1 = {
+						if = { 
+							limit = { has_modifier = eco_fragile_ecosystem }
+							planet_event = { id = degrade.110 days = 60 random = 300}
+						}
+					}
+				}
+			} else_if = { # Clean
+				limit = { check_variable = { which = waste value > 0 } }
+				add_modifier = { modifier = "eco_clean" }
+				# Event Generation
+				random_list = {
+					# Nothing Happens
+					108 = { }
+					# Outbreak (Overpopulated / Fragile)
+					1 = { 
+						if = {
+							limit = { 
+								has_modifier = eco_overpopulated
+								has_modifier = eco_fragile_ecosystem
+							}
+							planet_event = { id = disaster.130 days = 60 random = 300}
+						}
+					}
+					# Junkheap Removal
+					10 = { 	
+						if = {
+							limit = { has_planet_flag = eco_trash_event }
+							planet_event = { id = ecology.110 days = 60 random = 300}
+						}
+					}
+					# Improved Resilience
+					1 = {
+						planet_event = { id = ecology.120 days = 60 random = 300}
+					}
+				}
+			} else_if = { # Pristine
+				limit = { check_variable = { which = waste value <= 0 } }
+				add_modifier = { modifier = "eco_pristine" }
+				# Event Generation
+				random_list = {
+					# Nothing Happens
+					98 = { }
+					# Junkheap Removal
+					20 = { 	
+						if = {
+							limit = { has_planet_flag = eco_trash_event }
+							planet_event = { id = ecology.110 days = 60 random = 300}
+						}
+					}
+					# Improved Resilience
+					2 = {
+						planet_event = { id = ecology.120 days = 60 random = 300}
+					}
+				}
+			}
+		} else_if = {
+			# Habitat Waste
+			limit = {
+				OR = {
+					is_planet_class = pc_habitat
+					is_planet_class = pc_machine
+					is_planet_class = pc_cybrex
+					is_planet_class = pc_ringworld_habitable
+					has_planet_flag = eco_no_pollution
+				}
+			}
+			# Clear Waste
+			if = { 
+				limit = { has_modifier = "eco_waste_clean" }
+				remove_modifier = "eco_waste_clean"
+			} else_if = { 
+				limit = { has_modifier = "eco_waste_low" }
+				remove_modifier = "eco_waste_low"
+
+			} else_if = {
+				limit = { has_modifier = "eco_waste_mod" }
+				remove_modifier = "eco_waste_mod"
+			} else_if = {
+				limit = { has_modifier = "eco_waste_high" }
+				remove_modifier = "eco_waste_high"
+			}
+			# Waste Generation
+			if = { # High Waste
+				limit = { check_variable = { which = waste value > 400 } }
+				add_modifier = { modifier = "eco_waste_high" }
+				random_list = {
+					# Nothing Happens
+					185 = { }
+					# Hull Breach
+					1 = { planet_event = { id = waste.100 days = 60 random = 300} }
+					# Power Outage
+					2 = { planet_event = { id = waste.200 days = 60 random = 300} }
+					# Storage Full
+					4 = { planet_event = { id = waste.300 days = 60 random = 300} }
+					# Contamination
+					3 = { planet_event = { id = waste.400 days = 60 random = 300} }
+					# Smugglers
+					3 = { planet_event = { id = waste.500 days = 60 random = 300} }
+					# Accident
+					2 = { planet_event = { id = waste.600 days = 60 random = 300} }
+				}
+			} else_if = { # Mod Waste
+				limit = { check_variable = { which = waste value > 200 } }
+				add_modifier = { modifier = "eco_waste_mod" }
+				random_list = {
+					# Nothing Happens
+					192 = { }
+					# Power Outage
+					1 = { planet_event = { id = waste.200 days = 60 random = 300} }
+					# Storage Full
+					2 = { planet_event = { id = waste.300 days = 60 random = 300} }
+					# Contamination
+					2 = { planet_event = { id = waste.400 days = 60 random = 300} }
+					# Smugglers
+					2 = { planet_event = { id = waste.500 days = 60 random = 300} }
+					# Accident
+					1 = { planet_event = { id = waste.600 days = 60 random = 300} }
+				}
+			} else_if = { # Low Waste
+				limit = { check_variable = { which = waste value > 0 } }
+				add_modifier = { modifier = "eco_waste_low" }
+				random_list = {
+					# Nothing Happens
+					197 = { }
+					# Storage Full
+					1 = { planet_event = { id = waste.300 days = 60 random = 300} }
+					# Contamination
+					1 = { planet_event = { id = waste.400 days = 60 random = 300} }
+					# Smugglers
+					1 = { planet_event = { id = waste.500 days = 60 random = 300} }
+				}
+			} else_if = { # No Waste
+				limit = { check_variable = { which = waste value < 1 } }
+				add_modifier = { modifier = "eco_waste_clean" }
+			}
+		}
+	}
+}
+
+# Overpopulation Event
+event = {
+	id = pollute.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			every_owned_planet = {
+				# Remove Last Year's Modifier
+				if = {
+					limit = { has_modifier = eco_overpopulated }
+					remove_modifier = eco_overpopulated
+				}
+	
+				# Apply This Year's Modifier
+				if = {
+					limit = { 
+						free_housing < 0
+						owner = { is_machine_empire = no }
+					}
+					add_modifier = { modifier = "eco_overpopulated" }
+				}
+		
+				# Generate Slums
+				if = {
+					limit = { free_housing < -10 }
+					if = { 
+						limit = { owner = { is_regular_empire = yes } }
+						random_list = {
+							299 = { }
+							1 = { planet_event = { id = disaster.140 days = 2 random = 28} }
+						}
+					} else_if = {
+						limit = { owner = { is_hive_empire = yes } }
+						random_list = {
+							299 = { }
+							1 = { planet_event = { id = disaster.150 days = 2 random = 28 } }
+						}
+					}
+				} else_if = {
+					limit = { free_housing < -5 }
+					if = { 
+						limit = { owner = { is_regular_empire = yes } }
+						random_list = {
+							399 = { }
+							1 = { planet_event = { id = disaster.140 days = 2 random = 28 } }
+						}
+					} else_if = {
+						limit = { owner = { is_hive_empire = yes } }
+						random_list = {
+							399 = { }
+							1 = { planet_event = { id = disaster.150 days = 2 random = 28 } }
+						}
+					}
+				} else_if = {
+					limit = { free_housing < 0 }
+					if = { 
+						limit = { owner = { is_regular_empire = yes } }
+						random_list = {
+							499 = { }
+							1 = { planet_event = { id = disaster.140 days = 2 random = 28 } }
+						}
+					} else_if = {
+						limit = { owner = { is_hive_empire = yes } }
+						random_list = {
+							499 = { }
+							1 = { planet_event = { id = disaster.150 days = 2 random = 28 } }
+						}
+					}
+				}
+			}	
+		}
+	}
+}
+
+# Resource Depletion Events
+planet_event = {
+	id = pollute.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# Power Depletion
+		if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_generator value > 0 }
+				num_free_districts = { type = district_generator value = 0 }
+			}
+			random_list = {
+				99 = { }
+				1 = { planet_event = { id = depletion.100 days = 30 random = 300 } }
+			}
+		} else_if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_generator value > 0 }
+				num_free_districts = { type = district_generator value = 1 }
+			}
+			random_list = {
+				499 = { }
+				1 = { planet_event = { id = depletion.100 days = 30 random = 300 } }
+			}
+		} else_if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_generator value > 0 }
+				num_free_districts = { type = district_generator value = 2 }
+			}
+			random_list = {
+				999 = { }
+				1 = { planet_event = { id = depletion.100 days = 30 random = 300 } }
+			}
+		} else_if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_generator value > 0 }
+				num_free_districts = { type = district_generator value > 2 }
+			}
+			random_list = {
+				1999 = { }
+				1 = { planet_event = { id = depletion.100 days = 30 random = 300 } }
+			}
+		}
+		# Mineral Depletion
+		if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_mining value > 0 }
+				num_free_districts = { type = district_mining value = 0 }
+			}
+			random_list = {
+				99 = { }
+				1 = { planet_event = { id = depletion.110 days = 30 random = 300 } }
+			}
+		} else_if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_mining value > 0 }
+				num_free_districts = { type = district_mining value = 1 }
+			}
+			random_list = {
+				499 = { }
+				1 = { planet_event = { id = depletion.110 days = 30 random = 300 } }
+			}
+		} else_if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_mining value > 0 }
+				num_free_districts = { type = district_mining value = 2 }
+			}
+			random_list = {
+				999 = { }
+				1 = { planet_event = { id = depletion.110 days = 30 random = 300 } }
+			}
+		} else_if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_mining value > 0 }
+				num_free_districts = { type = district_mining value > 2 }
+			}
+			random_list = {
+				1999 = { }
+				1 = { planet_event = { id = depletion.110 days = 30 random = 300 } }
+			}
+		}
+		# Food Depletion
+		if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_farming value > 0 }
+				num_free_districts = { type = district_farming value = 0 }
+			}
+			random_list = {
+				99 = { }
+				1 = { planet_event = { id = depletion.120 days = 30 random = 300 } }
+			}
+		} else_if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_farming value > 0 }
+				num_free_districts = { type = district_farming value = 1 }
+			}
+			random_list = {
+				499 = { }
+				1 = { planet_event = { id = depletion.120 days = 30 random = 300 } }
+			}
+		} else_if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_farming value > 0 }
+				num_free_districts = { type = district_farming value = 2 }
+			}
+			random_list = {
+				999 = { }
+				1 = { planet_event = { id = depletion.110 days = 30 random = 300 } }
+			}
+		} else_if = {
+			limit = {
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic } }
+				NOT = { owner = { has_ascension_perk = eco_ap_land_ethic_gestalt } }
+				num_districts = { type = district_farming value > 0 }
+				num_free_districts = { type = district_farming value > 2 }
+			}
+			random_list = {
+				1999 = { }
+				1 = { planet_event = { id = depletion.120 days = 30 random = 300 } }
+			}
+		}
+	}
+}

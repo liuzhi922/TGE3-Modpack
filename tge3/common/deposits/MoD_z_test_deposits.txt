@@ -1,0 +1,96 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# constant_modifier - applied to planet always
+# station = station class in orbit to gather
+# blocker_swap_types = {}
+# all_blocker_swap_types = yes/no
+# use_weights_for_blocker_swap_types = yes/no
+# terraforming_swap_types = { }
+# should_swap_deposit_on_terraforming = yes/no
+# all_terraforming_swap_types = yes/no
+# use_weights_for_terraforming_swap_types = yes/no
+
+d_test1_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no # does "no" mean it's lost? #####
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 111
+		}
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = 0.05
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_test2_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = yes #####
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 222
+		}
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = 0.05
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+d_test3_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = yes #####
+	
+	terraforming_swap_types = { #####
+		d_test4_deposit 
+	}
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 555
+		}
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = 0.05
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_test4_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = yes #####
+	
+	terraforming_swap_types = { #####
+		d_test3_deposit 
+	}
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 444
+		}
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = 0.05
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

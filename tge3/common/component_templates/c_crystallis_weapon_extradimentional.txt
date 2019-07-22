@@ -1,0 +1,297 @@
+###################
+# COST
+###################
+@cost4s = 50
+@cost4m = 100
+@cost4l = 200
+
+@cost5s = 63
+@cost5m = 125
+@cost5l = 250
+
+###################
+# POWER
+###################
+@power4s = -31
+@power4m = -63
+@power4l = -125
+
+@power5s = -39
+@power5m = -78
+@power5l = -156
+
+# ####################
+#  Critter Weapons - Extradimensional Weapons
+# ####################
+
+@critter_cost_value = 35
+
+weapon_component_template = {
+	key = "C_SMALL_ED_WEAPON_2"
+
+	size = small
+	entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_C_ship_part_extradimensional_weapon_2"
+	icon_frame = 1
+	projectile_gfx = "c_ED_2_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	damage = { min = 25 max = 61 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 30.0
+	accuracy = 0.90
+	tracking = 0.60
+	hull_damage = 2.00
+	shield_damage = 0.50
+	armor_damage = 1.50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t8_cost
+			rare_crystals = @s_t8_rare
+		}		
+		upkeep = {
+			energy = @s_t8_upkeep_energy
+			alloys = @s_t8_upkeep_alloys
+		}
+	}
+	power = @power4s
+	
+	component_set = "C_EXTRADIMENSIONAL_2"
+	prerequisites = { "tech_c_extradimensional_weapon_2" }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	upgrades_to = "C_SMALL_ED_WEAPON_3"
+}
+
+weapon_component_template = {
+	key = "C_MEDIUM_ED_WEAPON_2"
+
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_C_ship_part_extradimensional_weapon_2"
+	icon_frame = 1
+	projectile_gfx = "c_ED_2_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	damage = { min = 63 max = 154 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 50.0
+	accuracy = 0.90
+	tracking = 0.30
+	hull_damage = 2.00
+	shield_damage = 0.50
+	armor_damage = 1.50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t8_cost
+			rare_crystals = @m_t8_rare
+		}		
+		upkeep = {
+			energy = @m_t8_upkeep_energy
+			alloys = @m_t8_upkeep_alloys
+		}
+	}
+	power = @power4m
+	
+	component_set = "C_EXTRADIMENSIONAL_2"
+	prerequisites = { "tech_c_extradimensional_weapon_2" }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	upgrades_to = "C_MEDIUM_ED_WEAPON_3"
+}
+
+weapon_component_template = {
+	key = "C_LARGE_ED_WEAPON_2"
+
+	size = large
+	entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_C_ship_part_extradimensional_weapon_2"
+	icon_frame = 1
+	projectile_gfx = "c_ED_2_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	damage = { min = 150 max = 368 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 70.0
+	accuracy = 0.90
+	tracking = 0.05
+	hull_damage = 2.00
+	shield_damage = 0.50
+	armor_damage = 1.50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t8_cost
+			rare_crystals = @l_t8_rare
+		}		
+		upkeep = {
+			energy = @l_t8_upkeep_energy
+			alloys = @l_t8_upkeep_alloys
+		}
+	}
+	power = @power4l
+	
+	component_set = "C_EXTRADIMENSIONAL_2"
+	prerequisites = { "tech_c_extradimensional_weapon_2" }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	upgrades_to = "C_LARGE_ED_WEAPON_3"
+}
+
+weapon_component_template = {
+	key = "C_SMALL_ED_WEAPON_3"
+
+	size = small
+	entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_C_ship_part_extradimensional_weapon_3"
+	icon_frame = 1
+	projectile_gfx = "c_ED_3_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	damage = { min = 31 max = 77 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 30.0
+	accuracy = 0.90
+	tracking = 0.60
+	hull_damage = 2.00
+	shield_damage = 0.50
+	armor_damage = 1.50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t10_cost
+			rare_crystals = @s_t10_rare
+		}		
+		upkeep = {
+			energy = @s_t10_upkeep_energy
+			alloys = @s_t10_upkeep_alloys
+		}
+	}
+	power = @power5s
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	component_set = "C_EXTRADIMENSIONAL_3"
+	prerequisites = { "tech_c_extradimensional_weapon_3" }
+}
+
+weapon_component_template = {
+	key = "C_MEDIUM_ED_WEAPON_3"
+
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_C_ship_part_extradimensional_weapon_3"
+	icon_frame = 1
+	projectile_gfx = "c_ED_3_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	damage = { min = 78 max = 192 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 50.0
+	accuracy = 0.90
+	tracking = 0.30
+	hull_damage = 2.00
+	shield_damage = 0.50
+	armor_damage = 1.50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t10_cost
+			rare_crystals = @m_t10_rare
+		}		
+		upkeep = {
+			energy = @m_t10_upkeep_energy
+			alloys = @m_t10_upkeep_alloys
+		}
+	}
+	power = @power5m
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	component_set = "C_EXTRADIMENSIONAL_3"
+	prerequisites = { "tech_c_extradimensional_weapon_3" }
+}
+
+weapon_component_template = {
+	key = "C_LARGE_ED_WEAPON_3"
+
+	size = large
+	entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_C_ship_part_extradimensional_weapon_3"
+	icon_frame = 1
+	projectile_gfx = "c_ED_3_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	damage = { min = 188 max = 459 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 70.0
+	accuracy = 0.90
+	tracking = 0.05
+	hull_damage = 2.00
+	shield_damage = 0.50
+	armor_damage = 1.50
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t10_cost
+			rare_crystals = @l_t10_rare
+		}		
+		upkeep = {
+			energy = @l_t10_upkeep_energy
+			alloys = @l_t10_upkeep_alloys
+		}
+	}
+	power = @power5l
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	component_set = "C_EXTRADIMENSIONAL_3"
+	prerequisites = { "tech_c_extradimensional_weapon_3" }
+}

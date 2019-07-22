@@ -1,0 +1,78 @@
+@missile_speed = 5
+### Advanced Heavy Missile Launcher
+weapon_component_template = {
+	key = "MISSILE_5"
+	size = torpedo
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_missile_5"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+	
+	prerequisites = { "tech_missiles_5" }
+	component_set = "MISSILE_5"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+			volatile_motes = @m_t5_rare
+		}		
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	upgrades_to = "C_SMALL_MISSILE_6"
+}
+
+### Advanced Swarmer Missile Launcher
+weapon_component_template = {
+	key = "SWARMER_MISSILE_2"
+	size = torpedo
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_swarmer_missile_2"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+	
+	prerequisites = { "tech_swarmer_missiles_2" }
+	component_set = "SWARMER_MISSILE_2"
+	projectile_gfx = "swarmer_missiles_02"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+			volatile_motes = @m_t5_rare
+		}		
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	upgrades_to = "C_SWARMER_MISSILE_3"
+}

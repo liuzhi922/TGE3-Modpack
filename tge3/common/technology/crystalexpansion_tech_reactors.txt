@@ -1,0 +1,322 @@
+
+#Crystallis Zero-Point Reactor VI
+tech_c_reactor_6 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_zero_point_power" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_reactors }
+	}
+	
+	gateway = power_generation
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_C_REACTOR_6_TITLE"
+			desc = "TECH_UNLOCK_C_REACTOR_6_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = has_nsc_active
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+#Crystallis Zero-Point Reactor VII
+tech_c_reactor_7 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_c_reactor_6" }
+	weight = @tier4weight3
+	
+	gateway = power_generation
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_C_REACTOR_7_TITLE"
+			desc = "TECH_UNLOCK_C_REACTOR_7_DESC"
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = has_nsc_active
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+#Crystallis Zero-Point Reactor VIII
+tech_c_reactor_8 = {
+	area = physics
+	cost = @tier5cost1
+	tier = 5
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_c_reactor_7" }
+	weight = @tier5weight1
+	
+	gateway = power_generation
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_C_REACTOR_8_TITLE"
+			desc = "TECH_UNLOCK_C_REACTOR_8_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = has_nsc_active
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+#Crystallis Zero-Point Reactor IX
+tech_c_reactor_9 = {
+	area = physics
+	cost = @tier5cost2
+	tier = 5
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_c_reactor_8" }
+	weight = @tier5weight2
+	
+	gateway = power_generation
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_C_REACTOR_9_TITLE"
+			desc = "TECH_UNLOCK_C_REACTOR_9_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = has_nsc_active
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+#Crystallis Zero-Point Reactor X
+tech_c_reactor_10 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_c_reactor_9" }
+	weight = @tier5weight3
+	
+	gateway = power_generation
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_C_REACTOR_10_TITLE"
+			desc = "TECH_UNLOCK_C_REACTOR_10_DESC"
+		}
+	}
+	
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = has_nsc_active
+		}
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}

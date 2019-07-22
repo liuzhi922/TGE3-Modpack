@@ -1,0 +1,645 @@
+
+#############
+#	COST	#
+#############
+
+@cost_S6 = 17
+@cost_M6 = 34
+@cost_L6 = 51
+
+@cost_S7 = 19
+@cost_M7 = 38
+@cost_L7 = 57
+
+@cost_S8 = 21
+@cost_M8 = 42
+@cost_L8 = 63
+
+@cost_S9 = 23
+@cost_M9 = 46
+@cost_L9 = 69
+
+@cost_S10 = 25
+@cost_M10 = 50
+@cost_L10 = 75
+
+#############
+#	POWER	#
+#############
+
+@power_S6 = -40
+@power_M6 = -95
+@power_L6 = -240
+             
+@power_S7 = -45
+@power_M7 = -105
+@power_L7 = -270
+             
+@power_S8 = -50
+@power_M8 = -115
+@power_L8 = -305
+             
+@power_S9 = -55
+@power_M9 = -125
+@power_L9 = -340
+             
+@power_S10 = -60
+@power_M10 = -135
+@power_L10 = -380
+
+#############
+#	SHIELD	#
+#############
+
+@shield_S6 = 175
+@shield_M6 = 440
+@shield_L6 = 1095
+
+@shield_S7 = 215
+@shield_M7 = 545
+@shield_L7 = 1345
+
+@shield_S8 = 260
+@shield_M8 = 665
+@shield_L8 = 1625
+
+@shield_S9 = 310
+@shield_M9 = 800
+@shield_L9 = 1935
+
+@shield_S10 = 365
+@shield_M10 = 950
+@shield_L10 = 2275
+
+#############
+#	REGEN	#
+#############
+
+@regen_S6 = 3.4
+@regen_M6 = 8.8
+@regen_L6 = 21.8
+
+@regen_S7 = 4.2
+@regen_M7 = 10.8
+@regen_L7 = 26.8
+
+@regen_S8 = 5.2
+@regen_M8 = 13.2
+@regen_L8 = 32.4
+
+@regen_S9 = 6.2
+@regen_M9 = 16.0
+@regen_L9 = 38.6
+
+@regen_S10 = 7.2
+@regen_M10 = 19.0
+@regen_L10 = 45.4
+
+
+@exotic_gas_s6 = 0.400
+@exotic_gas_m6 = 0.800
+@exotic_gas_l6 = 1.600
+
+@exotic_gas_s7 = 0.500
+@exotic_gas_m7 = 1.000
+@exotic_gas_l7 = 2.000
+
+@exotic_gas_s8 = 0.600
+@exotic_gas_m8 = 1.200
+@exotic_gas_l8 = 2.400
+
+@exotic_gas_s9 = 0.700
+@exotic_gas_m9 = 1.400
+@exotic_gas_l9 = 2.800
+
+@exotic_gas_s10 = 0.800
+@exotic_gas_m10 = 1.600
+@exotic_gas_l10 = 3.200
+
+# Crystal-Lenzing Shield Array VI
+utility_component_template = {
+
+	key = "C_SMALL_SHIELD_SYNTH_6"
+	size = small
+	icon = "GFX_C_ship_part_shield_synth_6"
+	icon_frame = 1
+	power = @power_S6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_s_t6_cost
+			exotic_gases = @exotic_gas_s6
+		}
+		upkeep = {
+			energy = @shield_s_t6_upkeep_energy
+			alloys = @shield_s_t6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_S6
+		ship_shield_regen_add_static = @regen_S6
+	}
+	prerequisites = { "tech_c_shields_synth_6" }
+	component_set = "C_SHIELD_SYNTH_6"
+	upgrades_to = "C_SMALL_SHIELD_SYNTH_7"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_MEDIUM_SHIELD_SYNTH_6"
+	size = medium
+	icon = "GFX_C_ship_part_shield_synth_6"
+	icon_frame = 1
+	power = @power_M6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_m_t6_cost
+			exotic_gases = @exotic_gas_m6
+		}
+		upkeep = {
+			energy = @shield_s_t6_upkeep_energy
+			alloys = @shield_s_t6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_M6
+		ship_shield_regen_add_static = @regen_M6
+	}
+	prerequisites = { "tech_c_shields_synth_6" }
+	component_set = "C_SHIELD_SYNTH_6"
+	upgrades_to = "C_MEDIUM_SHIELD_SYNTH_7"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_LARGE_SHIELD_SYNTH_6"
+	size = large
+	icon = "GFX_C_ship_part_shield_synth_6"
+	icon_frame = 1
+	power = @power_L6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_l_t6_cost
+			exotic_gases = @exotic_gas_l6
+		}
+		upkeep = {
+			energy = @shield_l_t6_upkeep_energy
+			alloys = @shield_l_t6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_L6
+		ship_shield_regen_add_static = @regen_L6
+	}
+	prerequisites = { "tech_c_shields_synth_6" }
+	component_set = "C_SHIELD_SYNTH_6"
+	upgrades_to = "C_LARGE_SHIELD_SYNTH_7"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+# Crystal-Lenzing Shield Array VII
+utility_component_template = {
+
+	key = "C_SMALL_SHIELD_SYNTH_7"
+	size = small
+	icon = "GFX_C_ship_part_shield_synth_7"
+	icon_frame = 1
+	power = @power_S7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_s_t7_cost
+			exotic_gases = @exotic_gas_s7
+		}
+		upkeep = {
+			energy = @shield_s_t7_upkeep_energy
+			alloys = @shield_s_t7_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_S7
+		ship_shield_regen_add_static = @regen_S7
+	}
+	prerequisites = { "tech_c_shields_synth_7" }
+	component_set = "C_SHIELD_SYNTH_7"
+	upgrades_to = "C_SMALL_SHIELD_SYNTH_8"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_MEDIUM_SHIELD_SYNTH_7"
+	size = medium
+	icon = "GFX_C_ship_part_shield_synth_7"
+	icon_frame = 1
+	power = @power_M7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_m_t7_cost
+			exotic_gases = @exotic_gas_m7
+		}
+		upkeep = {
+			energy = @shield_m_t7_upkeep_energy
+			alloys = @shield_m_t7_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_M7
+		ship_shield_regen_add_static = @regen_M7
+	}
+	prerequisites = { "tech_c_shields_synth_7" }
+	component_set = "C_SHIELD_SYNTH_7"
+	upgrades_to = "C_MEDIUM_SHIELD_SYNTH_8"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_LARGE_SHIELD_SYNTH_7"
+	size = large
+	icon = "GFX_C_ship_part_shield_synth_7"
+	icon_frame = 1
+	power = @power_L7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_l_t7_cost
+			exotic_gases = @exotic_gas_l7
+		}
+		upkeep = {
+			energy = @shield_l_t7_upkeep_energy
+			alloys = @shield_l_t7_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_L7
+		ship_shield_regen_add_static = @regen_L7
+	}
+	prerequisites = { "tech_c_shields_synth_7" }
+	component_set = "C_SHIELD_SYNTH_7"
+	upgrades_to = "C_LARGE_SHIELD_SYNTH_8"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+# Crystal-Lenzing Shield Array VIII
+utility_component_template = {
+
+	key = "C_SMALL_SHIELD_SYNTH_8"
+	size = small
+	icon = "GFX_C_ship_part_shield_synth_8"
+	icon_frame = 1
+	power = @power_S8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_s_t8_cost
+			exotic_gases = @exotic_gas_s8
+		}
+		upkeep = {
+			energy = @shield_s_t8_upkeep_energy
+			alloys = @shield_s_t8_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_S8
+		ship_shield_regen_add_static = @regen_S8
+	}
+	prerequisites = { "tech_c_shields_synth_8" }
+	component_set = "C_SHIELD_SYNTH_8"
+	upgrades_to = "C_SMALL_SHIELD_SYNTH_9"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_MEDIUM_SHIELD_SYNTH_8"
+	size = medium
+	icon = "GFX_C_ship_part_shield_synth_8"
+	icon_frame = 1
+	power = @power_M8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_m_t8_cost
+			exotic_gases = @exotic_gas_m8
+		}
+		upkeep = {
+			energy = @shield_m_t8_upkeep_energy
+			alloys = @shield_m_t8_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_M8
+		ship_shield_regen_add_static = @regen_M8
+	}
+	prerequisites = { "tech_c_shields_synth_8" }
+	component_set = "C_SHIELD_SYNTH_8"
+	upgrades_to = "C_MEDIUM_SHIELD_SYNTH_9"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_LARGE_SHIELD_SYNTH_8"
+	size = large
+	icon = "GFX_C_ship_part_shield_synth_8"
+	icon_frame = 1
+	power = @power_L8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_l_t8_cost
+			exotic_gases = @exotic_gas_l8
+		}
+		upkeep = {
+			energy = @shield_l_t8_upkeep_energy
+			alloys = @shield_l_t8_upkeep_alloys
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = @shield_L8
+		ship_shield_regen_add_static = @regen_L8
+	}
+	prerequisites = { "tech_c_shields_synth_8" }
+	component_set = "C_SHIELD_SYNTH_8"
+	upgrades_to = "C_LARGE_SHIELD_SYNTH_9"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+# Crystal-Lenzing Shield Array IX
+utility_component_template = {
+
+	key = "C_SMALL_SHIELD_SYNTH_9"
+	size = small
+	icon = "GFX_C_ship_part_shield_synth_9"
+	icon_frame = 1
+	power = @power_S9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_s_t9_cost
+			exotic_gases = @exotic_gas_s9
+		}
+		upkeep = {
+			energy = @shield_s_t9_upkeep_energy
+			alloys = @shield_s_t9_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_S9
+		ship_shield_regen_add_static = @regen_S9
+	}
+	prerequisites = { "tech_c_shields_synth_9" }
+	component_set = "C_SHIELD_SYNTH_9"
+	upgrades_to = "C_SMALL_SHIELD_SYNTH_10"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_MEDIUM_SHIELD_SYNTH_9"
+	size = medium
+	icon = "GFX_C_ship_part_shield_synth_9"
+	icon_frame = 1
+	power = @power_M9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_m_t9_cost
+			exotic_gases = @exotic_gas_m9
+		}
+		upkeep = {
+			energy = @shield_s_t9_upkeep_energy
+			alloys = @shield_s_t9_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_M9
+		ship_shield_regen_add_static = @regen_M9
+	}
+	prerequisites = { "tech_c_shields_synth_9" }
+	component_set = "C_SHIELD_SYNTH_9"
+	upgrades_to = "C_MEDIUM_SHIELD_SYNTH_10"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_LARGE_SHIELD_SYNTH_9"
+	size = large
+	icon = "GFX_C_ship_part_shield_synth_9"
+	icon_frame = 1
+	power = @power_L9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_l_t9_cost
+			exotic_gases = @exotic_gas_l9
+		}
+		upkeep = {
+			energy = @shield_l_t9_upkeep_energy
+			alloys = @shield_l_t9_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_L9
+		ship_shield_regen_add_static = @regen_L9
+	}
+	prerequisites = { "tech_c_shields_synth_9" }
+	component_set = "C_SHIELD_SYNTH_9"
+	upgrades_to = "C_LARGE_SHIELD_SYNTH_10"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+# Crystal-Lenzing Shield Array X
+utility_component_template = {
+
+	key = "C_SMALL_SHIELD_SYNTH_10"
+	size = small
+	icon = "GFX_C_ship_part_shield_synth_10"
+	icon_frame = 1
+	power = @power_S10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_s_t10_cost
+			exotic_gases = @exotic_gas_s10
+		}
+		upkeep = {
+			energy = @shield_s_t10_upkeep_energy
+			alloys = @shield_s_t10_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_S10
+		ship_shield_regen_add_static = @regen_S10
+	}
+	prerequisites = { "tech_c_shields_synth_10" }
+	component_set = "C_SHIELD_SYNTH_10"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_MEDIUM_SHIELD_SYNTH_10"
+	size = medium
+	icon = "GFX_C_ship_part_shield_synth_10"
+	icon_frame = 1
+	power = @power_M10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_m_t10_cost
+			exotic_gases = @exotic_gas_m10
+		}
+		upkeep = {
+			energy = @shield_m_t10_upkeep_energy
+			alloys = @shield_m_t10_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_M10
+		ship_shield_regen_add_static = @regen_M10
+	}
+	prerequisites = { "tech_c_shields_synth_10" }
+	component_set = "C_SHIELD_SYNTH_10"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+
+	key = "C_LARGE_SHIELD_SYNTH_10"
+	size = large
+	icon = "GFX_C_ship_part_shield_synth_10"
+	icon_frame = 1
+	power = @power_L10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shield_l_t10_cost
+			exotic_gases = @exotic_gas_l10
+		}
+		upkeep = {
+			energy = @shield_l_t10_upkeep_energy
+			alloys = @shield_l_t10_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shield_L10
+		ship_shield_regen_add_static = @regen_L10
+	}
+	prerequisites = { "tech_c_shields_synth_10" }
+	component_set = "C_SHIELD_SYNTH_10"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}

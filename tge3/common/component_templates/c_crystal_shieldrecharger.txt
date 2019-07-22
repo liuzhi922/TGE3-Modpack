@@ -1,0 +1,77 @@
+@shield_hp_multi_1 = 0.10 #vanilla
+@shield_hp_multi_2 = 0.15
+@shield_hp_multi_3 = 0.20
+
+@cost1 = 10 #vanilla
+@cost2 = 30
+@cost3 = 90
+
+@power1 = -20 #vanilla
+@power2 = -60
+@power3 = -120
+
+
+####################
+# Shield Recharger #
+####################
+
+utility_component_template = {
+	key = "C_SHIELD_RECHARGER_2"
+	size = aux
+	icon = "GFX_C_ship_part_shield_recharger_2"
+	icon_frame = 1
+	power = @power2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+			exotic_gases = 2
+		}
+	}
+	
+	prerequisites = { "tech_c_shield_rechargers_2" }
+	component_set = "C_SHIELD_RECHARGER_2"
+	
+	modifier = {
+		ship_shield_mult = @shield_hp_multi_2
+	}
+	
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+	upgrades_to = "C_SHIELD_RECHARGER_3"
+}
+
+utility_component_template = {
+	key = "C_SHIELD_RECHARGER_3"
+	size = aux
+	icon = "GFX_C_ship_part_shield_recharger_3"
+	icon_frame = 1
+	power = @power3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			exotic_gases = 3
+		}
+	}
+	
+	prerequisites = { "tech_c_shield_rechargers_3" }
+	component_set = "C_SHIELD_RECHARGER_3"
+	
+	modifier = {
+		ship_shield_mult = @shield_hp_multi_3
+	}
+	
+	ai_weight = {
+		weight = 70
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}

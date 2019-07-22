@@ -1,0 +1,82 @@
+
+tech_gsc_perdition_beam_02 = {
+	cost = @tier5cost2
+	area = physics
+	tier = 5
+	category = { particles }	
+	prerequisites = { "tech_titans" }
+	weight = @tier5weight2
+	ai_update_type = military
+
+	potential = {	
+		AND = {
+			host_has_dlc = "Apocalypse"
+			not = { has_global_flag = gsc_disable_perdition_beam }
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 200 #higher factor due to titan hull
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_gsc_perdition_beam_03 = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	is_rare = yes
+	category = { particles }	
+	prerequisites = { "tech_gsc_perdition_beam_02" }
+	weight = @tier5weight3
+	ai_update_type = military
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 200 #higher factor due to titan hull
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}

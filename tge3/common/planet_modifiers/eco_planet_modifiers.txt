@@ -1,0 +1,315 @@
+pm_eco_species_rich = {
+	spawn_chance = {
+		modifier = {
+			add = 4
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 4
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 7
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 7
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 7
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 4
+			is_planet_class = "pc_savannah"
+		}		
+		modifier = {
+			add = 10
+			is_planet_class = "pc_gaia"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_tidal_locked"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_lush"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_bleak"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_species_poor"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_species_rich"
+		}
+		modifier = {
+			factor = 2
+			num_modifiers < 2
+		}
+		modifier = {
+			factor = 2
+			num_modifiers < 1
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 2
+		}
+	}
+	
+	modifier = "eco_species_rich"
+}
+
+pm_eco_species_poor = {
+	spawn_chance = {
+		modifier = {
+			add = 10
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 4
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 4
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 4
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 7
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 7
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 7
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_lush"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_bleak"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_tidal_locked"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_species_poor"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_species_rich"
+		}
+		modifier = {
+			factor = 2
+			num_modifiers < 2
+		}
+		modifier = {
+			factor = 2
+			num_modifiers < 1
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 2
+		}
+	}
+	
+	modifier = "eco_species_poor"
+}
+
+pm_eco_resilient_ecosystem = {
+	spawn_chance = {
+		modifier = {
+			add = 20
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_savannah"
+		}		
+		modifier = {
+			add = 20
+			is_planet_class = "pc_gaia"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_strong_magnetic_field"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_weak_magnetic_field"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_species_poor"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_eco_species_rich"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_fragile_ecosystem"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_resilient_ecosystem"
+		}
+		modifier = {
+			factor = 2
+			num_modifiers < 2
+		}
+		modifier = {
+			factor = 2
+			num_modifiers < 1
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 2
+		}
+	}
+	
+	modifier = "eco_resilient_ecosystem"
+}
+
+pm_eco_fragile_ecosystem = {
+	spawn_chance = {
+		modifier = {
+			add = 20
+			is_planet_class = "pc_desert"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_tropical"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_arid"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_continental"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_ocean"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_tundra"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_arctic"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 20
+			is_planet_class = "pc_savannah"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_strong_magnetic_field"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_weak_magnetic_field"
+		}
+		modifier = {
+			factor = 2
+			has_planet_modifier = "pm_eco_species_poor"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_species_rich"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_fragile_ecosystem"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_eco_resilient_ecosystem"
+		}
+		modifier = {
+			factor = 2
+			num_modifiers < 2
+		}
+		modifier = {
+			factor = 2
+			num_modifiers < 1
+		}
+		modifier = {
+			factor = 0.5
+			num_modifiers > 2
+		}
+	}
+	
+	modifier = "eco_fragile_ecosystem"
+}

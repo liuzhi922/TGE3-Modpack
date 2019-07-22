@@ -1,0 +1,298 @@
+###################
+# COST
+###################
+@cost6s = 35
+@cost6m = 70
+@cost6l = 140
+
+@cost7s = 44
+@cost7m = 88
+@cost7l = 175
+
+###################
+# POWER
+###################
+@power6s = -21
+@power6m = -38
+@power6l = -74
+
+@power7s = -27
+@power7m = -47
+@power7l = -92
+
+
+# ####################
+#  Laser
+# ####################
+
+### Laser 6
+weapon_component_template = {
+	key = "C_SMALL_LASER_6"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 21 max = 58 } #+4 +8
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 40.0
+	accuracy = 0.90
+	tracking = 0.50
+	shield_damage = 0.50
+	armor_damage = 1.50
+	power = @power6s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t6_cost
+			rare_crystals = @s_t6_rare
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_laser_6"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_lasers_6" }
+	component_set = "C_LASER_6"
+	projectile_gfx = "c_laser_6_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SMALL_LASER_7"
+}
+
+weapon_component_template = {
+	key = "C_MEDIUM_LASER_6"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 54 max = 144 } #+8 +16
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 60.0
+	accuracy = 0.90
+	tracking = 0.30
+	shield_damage = 0.50
+	armor_damage = 1.50
+	power = @power6m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t6_cost
+			rare_crystals = @m_t6_rare
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_laser_6"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_lasers_6" }
+	component_set = "C_LASER_6"
+	projectile_gfx = "c_laser_6_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_MEDIUM_LASER_7"
+}
+
+weapon_component_template = {
+	key = "C_LARGE_LASER_6"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 128	max = 345 } #+16 +32
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 80.0
+	accuracy = 0.90
+	tracking = 0.05
+	shield_damage = 0.50
+	armor_damage = 1.50
+	power = @power6l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+			rare_crystals = @l_t6_rare
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_laser_6"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_lasers_6" }
+	component_set = "C_LASER_6"
+	projectile_gfx = "c_laser_6_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_LARGE_LASER_7"
+}
+
+### Laser 7
+weapon_component_template = {
+	key = "C_SMALL_LASER_7"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 27 max = 72 } #+4 +8
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 40.0
+	accuracy = 0.90
+	tracking = 0.50
+	shield_damage = 0.50
+	armor_damage = 1.50
+	power = @power7s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			rare_crystals = @s_t7_rare
+		}		
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_laser_7"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_lasers_7" }
+	component_set = "C_LASER_7"
+	projectile_gfx = "c_laser_7_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "C_MEDIUM_LASER_7"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 67 max = 180 } #+8 +16
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 60.0
+	accuracy = 0.90
+	tracking = 0.30
+	shield_damage = 0.50
+	armor_damage = 1.50
+	power = @power7m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			rare_crystals = @m_t7_rare
+		}		
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_laser_7"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_lasers_7" }
+	component_set = "C_LASER_7"
+	projectile_gfx = "c_laser_7_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "C_LARGE_LASER_7"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 159 max = 431 } #+16 +32
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 80.0
+	accuracy = 0.90
+	tracking = 0.05
+	shield_damage = 0.50
+	armor_damage = 1.50
+	power = @power7l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			rare_crystals = @l_t7_rare
+		}		
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_laser_7"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_lasers_7" }
+	component_set = "C_LASER_7"
+	projectile_gfx = "c_laser_7_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+}

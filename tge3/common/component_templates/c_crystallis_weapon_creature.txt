@@ -1,0 +1,83 @@
+	
+# ####################
+#  Critter Weapons - Space Cloud
+# ####################
+
+@critter_cost_value = 35
+
+
+### Standard Cloud Weapon
+
+weapon_component_template = {
+	key = "C_SPACE_CLOUD_LIGHTNING_2"
+
+	size = large
+	entity = "large_space_cloud_weapon_entity"
+	type = instant
+	icon = "GFX_C_ship_part_space_cloud_weapon_2"
+	icon_frame = 1
+	projectile_gfx = "c_cloud_2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	damage = { min = 25 max = 135 } # +- 18% increased DPS
+	windup = { min = 1 max = 19 }
+	total_fire_time = 50
+	range = 60
+	accuracy = 1
+	tracking = 0.30
+	armor_penetration = 1.0
+	shield_penetration = 1.0
+	power = -60
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+		}		
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+	
+	component_set = "C_SPACE_CLOUD_WEAPON_2"
+	prerequisites = { "tech_c_space_cloud_weapon_2" }
+	
+	upgrades_to = "C_SPACE_CLOUD_LIGHTNING_3"
+}
+
+weapon_component_template = {
+	key = "C_SPACE_CLOUD_LIGHTNING_3"
+
+	size = large
+	entity = "large_space_cloud_weapon_entity"
+	type = instant
+	icon = "GFX_C_ship_part_space_cloud_weapon_3"
+	icon_frame = 1
+	projectile_gfx = "c_cloud_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	damage = { min = 50 max = 135 } # +- 18% increased DPS
+	windup = { min = 1 max = 19 }
+	total_fire_time = 50
+	range = 60
+	accuracy = 1
+	tracking = 0.30
+	armor_penetration = 1.0
+	shield_penetration = 1.0
+	power = -80
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+		}		
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+	
+	component_set = "C_SPACE_CLOUD_WEAPON_3"
+	prerequisites = { "tech_c_space_cloud_weapon_3" }
+}

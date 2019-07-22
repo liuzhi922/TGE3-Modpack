@@ -1,0 +1,6 @@
+﻿l_polish:
+ ####################################
+ # Misc
+ ####################################
+  bombardment_indiscriminate_desc:0 "$bombardment_indiscriminate$ Bombardowanie obejmuje cele wojskowe i infrastrukturę planetarną bez względu na straty wśród ludności cywilnej.\n- §HCiężkie§! uszkodzenia zadawane §Yarmiom§!\n- §HCiężkie§! uszkodzenia zadawane §Yplanecie§!\n- §YŚrednie§! uszkodzenia zadawane §Ypopulacjom§!\n- Zbombarduje niebronione planety\n"
+  bombardment_raiding_desc:1 "$bombardment_raiding$ Celami bombardowania są centra populacji wroga, specjalne okręty uderzeniowe porywają tamtejszych mieszkańców i zabierają ich do pracy na naszych światach.\n- §ELekkie§! uszkodzenia zadawane §Yarmiom§!\n- §ELekkie§! uszkodzenia zadawane §Yplanecie§!\n- §YŚrednie§! uszkodzenia zadawane §Ypopulacjom§!\n- Będzie §Yporywać§! populacje, gdy zaistnieje taka możliwość, a nie zabijać je\n"

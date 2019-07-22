@@ -1,0 +1,889 @@
+
+namespace = viscyb
+
+event = {				# On game start. To make all the human rulers have appropriate portraits
+	id = viscyb.100
+	hide_window = yes
+	is_triggered_only = yes
+ 
+	trigger = {
+		any_country = {
+			OR = {
+				has_country_flag = human_2
+				has_country_flag = human_1
+				has_country_flag = leader_phenotype_01
+				has_country_flag = leader_phenotype_02
+				has_country_flag = leader_phenotype_03
+				has_country_flag = leader_phenotype_04
+				has_country_flag = leader_phenotype_05
+				has_country_flag = leader_phenotype_06
+				has_country_flag = leader_phenotype_07
+				has_country_flag = leader_phenotype_08
+				has_country_flag = leader_phenotype_09
+				has_country_flag = leader_phenotype_10
+				has_country_flag = leader_phenotype_11
+				has_country_flag = leader_phenotype_12
+			}	
+		}
+	}
+
+	immediate = {
+		every_country = {
+			limit = { has_country_flag = human_2 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_04
+			}	
+		}
+		every_country = {
+			limit = { has_country_flag = human_1 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_05
+			}	
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_01 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_01
+			}
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_02 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_02
+			}	
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_03 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_03
+			}	
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_04 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_04
+			}
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_05 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_05
+			}	
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_016 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_06
+			}
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_07 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_07
+			}	
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_08 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_08
+			}	
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_09 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_09
+			}
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_010 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_010
+			}	
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_11 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_11
+			}
+		}
+		every_country = {
+			limit = { has_country_flag = leader_phenotype_012 }
+			every_owned_leader = {
+				limit = { leader_class = ruler }
+				set_leader_flag = sub_012
+			}	
+		}
+	}
+}
+
+country_event = {		# twelve events to change portraits of human rulers during the game
+	id = viscyb.1001
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_01
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+	country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1002
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_02
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+	country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1003
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_03
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+		country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1004
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_04
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+		country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1005
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_05
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+		country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1006
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_06
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+		country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1007
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_07
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+		country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1008
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_08
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+		country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1009
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_09
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+		country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1010
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_10
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+		country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1011
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_11
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+			if = {
+				limit = { has_leader_flag = sub_12 }
+				remove_leader_flag = sub_12
+			}
+		}	
+	}
+		country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {	
+	id = viscyb.1012
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				leader_class = ruler 
+			}
+			set_leader_flag = sub_12
+			if = {
+				limit = { has_leader_flag = sub_01 }
+				remove_leader_flag = sub_01
+			}
+			if = {
+				limit = { has_leader_flag = sub_03 }
+				remove_leader_flag = sub_03
+			}
+			if = {
+				limit = { has_leader_flag = sub_04 }
+				remove_leader_flag = sub_04
+			}
+			if = {
+				limit = { has_leader_flag = sub_05 }
+				remove_leader_flag = sub_05
+			}
+			if = {
+				limit = { has_leader_flag = sub_06 }
+				remove_leader_flag = sub_06
+			}
+			if = {
+				limit = { has_leader_flag = sub_07 }
+				remove_leader_flag = sub_07
+			}
+			if = {
+				limit = { has_leader_flag = sub_08 }
+				remove_leader_flag = sub_08
+			}
+			if = {
+				limit = { has_leader_flag = sub_09 }
+				remove_leader_flag = sub_09
+			}
+			if = {
+				limit = { has_leader_flag = sub_10 }
+				remove_leader_flag = sub_10
+			}
+			if = {
+				limit = { has_leader_flag = sub_11 }
+				remove_leader_flag = sub_11
+			}
+			if = {
+				limit = { has_leader_flag = sub_02 }
+				remove_leader_flag = sub_02
+			}
+		}	
+	}
+	country_event = { id = viscyb.110 }
+	country_event = { id = viscyb.111 }
+}
+
+country_event = {			# reboot portraits
+	id = viscyb.110
+	is_triggered_only = yes
+	hide_window = yes
+	
+	
+	immediate = {
+		every_owned_leader = {
+			change_leader_portrait = default_robot
+		}
+	}
+}
+
+country_event = {
+	id = viscyb.111
+	is_triggered_only = yes
+	hide_window = yes
+	
+	
+	immediate = {
+		every_owned_leader = {
+			change_leader_portrait = this
+		}	
+	}
+}
+

@@ -1,0 +1,8 @@
+component_set = {
+	key = "c_ship_crew"
+
+	required_component_set = yes
+	icon = "GFX_C_ship_part_crew_1"
+	icon_frame = 1
+}
+

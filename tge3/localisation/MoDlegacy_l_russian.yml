@@ -1,0 +1,52 @@
+﻿   l_russian:
+    
+    # ###################################
+    # Decisions
+    # ###################################
+    
+    decision_mastery_of_nature_ii:0 "Господство над природой"
+    decision_mastery_of_nature_ii_desc:0 "$decision_mastery_of_nature_desc$"
+    decision_low_orbit_urbanisation:0 "Низкоорбитальная урбанизация"
+    decision_low_orbit_urbanisation_desc:0 "Построение планетарных низкоорбитальных кластеров жилых станций требует масштабной переделки низкоорбитальных спутниковых сетей планеты и инфраструктуры управления движением, а также высококачественных сплавов с низким весом. Часть третичного сектора экономики планет может быть перемещена без потери эффективности, поскольку коммерческая деятельность даже извлечёт из этого выгоду, при этом освобождая пространство для более приземленной деятельности на поверхности планеты" 
+    decision_subterranean_urbanisation:0 "Подземная урбанизация"
+    decision_subterranean_urbanisation_desc:0 "Места всегда не хватает. Ни на поверхности, ни в воздухе, ни в космосе, ни где-либо ещё. Простая концепция, но полезная. Если примитивы могут построить пирамидальную стопку камней, мы уверены, что мы можем вырыть большую нору и жить в ней. Конечно, в итоге это будет не самое лучшее место для жизни, но я получил свои деньги, так что мне все равно."
+    decision_autonomous_ptn:0 "Автономная транспортная сеть"
+    decision_autonomous_ptn_desc:0 "Galaxy News Radio сообщает: [В любое время дня 67% транспортных средств на городских 3D-дорогах имеют только одного пассажира.] [Космическое Монако имеет больше ракет, чем людей.] [Ксекрон заявляет об отказе от повышения налогов на топливо в Франксении.] \nЕсть много места, которое нужно получить, загрязнение, которое нужно уменьшить, и богатство, которое нужно переместить, избавившись от такой чрезмерной неэффективности потребления. Нелегко будет убедить людей, у которых есть машина, самолет и ракета в том, что это не показатель качества жизни и убедить корпорации перестать говорить людям, что им нужна новая ракета каждые 3 года, но в конце концов все изменится к лучшему. Мы должны быть готовы возместить стоимость нескольких триллионов транспортных средств, которые затем могут быть переработаны для адаптации инфраструктуры или проданы некоторым примитивам ранней космической эры. Мы еще не спрашивали чье-либо мнение по этому поводу, но Партия Космических Ксенофилов уже устраивает вечеринки."
+    decision_verticalised_farming:0 "Вертикальное сельское хозяйство"
+    decision_verticalised_farming_desc:0 "Сэр, согласно последнему отчету, древние смотрители вертикализировали свои фермы. \n Что, роботы, фермы? П'шёл вон отсюда! \nВы не так поняли это, сэр, фермы караванкоинов, я имею в виду криптовалюту. \nНу, знаешь что, сынок? Это блестящая идея! Позволь-ка мне позвать мой указо-генерирующий ИИ. \nСэр, я знал, что вы увидите гениальность этой идеи, мы сможем потратить меньше места ради какой-то примитивной грязи и построить больше центров отдыха для мозговых слизней или, ... сэр? \nО да, конечно, фермы, верно, но да, конечно, вертикальные, да, это то, о чем я говорил."
+    
+    # ###################################
+    # Modifiers
+    # ###################################
+    
+    mastery_of_nature_1:0 "$decision_mastery_of_nature_ii$"
+    mastery_of_nature_1_desc:0 "$decision_mastery_of_nature_desc$"
+    mastery_of_nature_2:0 "$decision_mastery_of_nature_ii$"
+    mastery_of_nature_2_desc:0 "$decision_mastery_of_nature_desc$"
+    low_orbit_urbanisation_1:0 "$decision_low_orbit_urbanisation$"
+    low_orbit_urbanisation_1_desc:0 "$decision_low_orbit_urbanisation_desc$"
+    low_orbit_urbanisation_2:0 "$decision_low_orbit_urbanisation$"
+    low_orbit_urbanisation_2_desc:0 "$decision_low_orbit_urbanisation_desc$"
+    low_orbit_urbanisation_3:0 "$decision_low_orbit_urbanisation$"
+    low_orbit_urbanisation_3_desc:0 "$decision_low_orbit_urbanisation_desc$"
+    subterranean_urbanisation_1:0 "$decision_subterranean_urbanisation$"
+    subterranean_urbanisation_1_desc:0 "$decision_subterranean_urbanisation_desc$"
+    subterranean_urbanisation_2:0 "$decision_subterranean_urbanisation$"
+    subterranean_urbanisation_2_desc:0 "$decision_subterranean_urbanisation_desc$"
+    subterranean_urbanisation_3:0 "$decision_subterranean_urbanisation$"
+    subterranean_urbanisation_3_desc:0 "$decision_subterranean_urbanisation_desc$"
+    subterranean_urbanisation_4:0 "$decision_subterranean_urbanisation$"
+    subterranean_urbanisation_4_desc:0 "$decision_subterranean_urbanisation_desc$"
+    autonomous_ptn_1:0 "$decision_autonomous_ptn$"
+    autonomous_ptn_1_desc:0 "$decision_autonomous_ptn_desc$"
+    autonomous_ptn_2:0 "$decision_autonomous_ptn$"
+    autonomous_ptn_2_desc:0 "$decision_autonomous_ptn_desc$"
+    autonomous_ptn_tmp:0 "ВЫ МОЖЕТЕ ЗАБРАТЬ НАШИ ПРАВА, НО ВЫ НЕ ЗАБЕРЁТЕ НАШИ РАКЕТЫ"
+    autonomous_ptn_tmp_desc:0 "Не все рады тому, что им приходится пользоваться общественными космическими лифтами, как будто-бы это конец света. Но со временем они поймут что так проще."
+    vertical_fm_1:0 "$decision_verticalised_farming$"
+    vertical_fm_1_desc:0 "$decision_verticalised_farming_desc$"
+    vertical_fm_2:0 "$decision_verticalised_farming$"
+    vertical_fm_2_desc:0 "$decision_verticalised_farming_desc$"
+    vertical_fm_3:0 "$decision_verticalised_farming$"
+    vertical_fm_3_desc:0 "$decision_verticalised_farming_desc$"
+    

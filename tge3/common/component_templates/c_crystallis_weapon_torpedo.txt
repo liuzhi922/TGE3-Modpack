@@ -1,0 +1,116 @@
+###################
+# COST
+###################
+@cost4s = 85
+
+@cost5s = 106
+
+###################
+# POWER
+###################
+@power4s = -33
+
+@power5s = -41
+
+### Armored Torpedoes
+weapon_component_template = {
+	key = "C_TORPEDO_4"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	
+	icon = "GFX_C_ship_part_torpedo_4"
+	icon_frame = 1
+	type = missile
+	
+	prerequisites = { "tech_c_torpedoes_4" }
+	component_set = "C_TORPEDO_4"
+	projectile_gfx = "large_torpedo_03"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "C_TORPEDO_5"
+	
+	damage = { min = 344 max = 556 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 160
+	range = 80.0
+	accuracy = 1.00
+	tracking = 0.10
+	missile_speed = 15
+	missile_health = 30.00
+	shield_penetration = 1.00
+	armor_damage = 1.50
+	missile_retarget_range = 100
+	
+	power = @power4s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			volatile_motes = @m_t7_rare
+		}		
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_TORPEDO_5"
+}
+
+### Devastator Torpedoes
+weapon_component_template = {
+	key = "C_TORPEDO_5"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	
+	icon = "GFX_C_ship_part_torpedo_5"
+	icon_frame = 1
+	type = missile
+	
+	prerequisites = { "tech_c_torpedoes_5" }
+	component_set = "C_TORPEDO_5"
+	projectile_gfx = "large_torpedo_03"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+	
+	damage = { min = 430 max = 695 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 160
+	range = 80.0
+	accuracy = 1.00
+	tracking = 0.10
+	missile_speed = 15
+	missile_health = 30.00
+	shield_damage = 1.00
+	shield_penetration = 1.00
+	armor_damage = 1.50
+	missile_retarget_range = 100
+	
+	power = @power5s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			volatile_motes = @m_t7_rare
+		}		
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	
+}

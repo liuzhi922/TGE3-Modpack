@@ -1,0 +1,188 @@
+
+#############
+#	COST	#
+#############
+
+@cost_1S = 15
+@cost_2S = 20
+@cost_3S = 25
+@cost_4S = 30
+@cost_5S = 35
+
+
+#############
+# ACCURACY	#
+#############
+
+@acc_1S = 1
+@acc_2S = 2
+@acc_3S = 3
+@acc_4S = 4
+@acc_5S = 5
+
+#############
+# TRACKING	#
+#############
+
+@track_1S = 1
+@track_2S = 2
+@track_3S = 3
+@track_4S = 4
+@track_5S = 5
+
+#############
+# DAMAGE	#
+#############
+
+@damage_1S = 0.02
+@damage_2S = 0.04
+@damage_3S = 0.06
+@damage_4S = 0.08
+@damage_5S = 0.10
+
+#############
+#	POWER	#
+#############
+
+@power_S1 = -20
+@power_S2 = -40
+@power_S3 = -60
+@power_S4 = -80
+@power_S5 = -100
+
+
+@range1 = 0.01
+@range2 = 0.02
+@range3 = 0.03
+@range4 = 0.04
+@range5 = 0.05
+
+# ####################
+#  acc mods
+# ####################
+
+
+# +Targeting Matrix I
+
+utility_component_template = {
+	key = "C_SMALL_TARGETING_COMPUTER_1"
+	size = aux
+	icon = "GFX_C_ship_part_targeting_computer_1"
+	icon_frame = 1
+	power = @power_S1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+	ship_modifier = {
+		ship_armor_penetration_mult = @damage_1S
+		ship_shield_penetration_mult = @damage_1S
+	}
+	prerequisites = { tech_c_crystalis_targeting_matrix_1 }
+	component_set = "C_TARGETTING_COMPUTER_1"
+	upgrades_to = "C_SMALL_TARGETING_COMPUTER_2"
+	
+	ai_weight = { weight = 30 }
+}
+
+# +Targeting Matrix II
+
+utility_component_template = {
+	key = "C_SMALL_TARGETING_COMPUTER_2"
+	size = aux
+	icon = "GFX_C_ship_part_targeting_computer_2"
+	icon_frame = 1
+	power = @power_S2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+		}
+	}
+	ship_modifier = {
+		ship_armor_penetration_mult = @damage_2S
+		ship_shield_penetration_mult = @damage_2S
+	}
+	prerequisites = { tech_c_crystalis_targeting_matrix_2 }
+	component_set = "C_TARGETTING_COMPUTER_2"
+	upgrades_to = "C_SMALL_TARGETING_COMPUTER_3"
+	
+	ai_weight = { weight = 40 }
+}
+
+# +Targeting Matrix III
+
+utility_component_template = {
+	key = "C_SMALL_TARGETING_COMPUTER_3"
+	size = aux
+	icon = "GFX_C_ship_part_targeting_computer_3"
+	icon_frame = 1
+	power = @power_S3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 40
+		}
+	}
+	ship_modifier = {
+		ship_armor_penetration_mult = @damage_3S
+		ship_shield_penetration_mult = @damage_3S
+	}
+	prerequisites = { tech_c_crystalis_targeting_matrix_3 }
+	component_set = "C_TARGETTING_COMPUTER_3"
+	upgrades_to = "C_SMALL_TARGETING_COMPUTER_4"
+	
+	ai_weight = { weight = 50 }
+}
+
+# +Targeting Matrix IV
+
+utility_component_template = {
+	key = "C_SMALL_TARGETING_COMPUTER_4"
+	size = aux
+	icon = "GFX_C_ship_part_targeting_computer_4"
+	icon_frame = 1
+	power = @power_S4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+		}
+	}
+	ship_modifier = {
+		ship_armor_penetration_mult = @damage_4S
+		ship_shield_penetration_mult = @damage_4S
+	}
+	prerequisites = { tech_c_crystalis_targeting_matrix_4 }
+	component_set = "C_TARGETTING_COMPUTER_4"
+	upgrades_to = "C_SMALL_TARGETING_COMPUTER_5"
+	
+	ai_weight = { weight = 60 }
+}
+
+# +Targeting Matrix V
+
+utility_component_template = {
+	key = "C_SMALL_TARGETING_COMPUTER_5"
+	size = aux
+	icon = "GFX_C_ship_part_targeting_computer_5"
+	icon_frame = 1
+	power = @power_S5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 60
+		}
+	}
+	
+	ship_modifier = {
+		ship_armor_penetration_mult = @damage_5S
+		ship_shield_penetration_mult = @damage_5S
+	}
+	prerequisites = { tech_c_crystalis_targeting_matrix_5 }
+	component_set = "C_TARGETTING_COMPUTER_5"
+	
+	ai_weight = { weight = 70 }
+}

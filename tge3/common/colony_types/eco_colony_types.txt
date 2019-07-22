@@ -1,0 +1,161 @@
+
+# Garbage World
+eco_col_trash = {
+	icon = 18
+
+	potential = {
+		exists = owner
+		has_modifier = eco_trash_colony
+	}
+	
+	planet_modifier = {
+		planet_waste_produces_mult = 1
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+# Nature World
+eco_col_nature = {
+	icon = 18
+	
+	potential = {
+		exists = owner
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+			is_planet_class = pc_relic
+			has_planet_flag = eco_no_pollution
+		}
+		is_special_colony_type = no
+	}
+	
+	planet_modifier = {
+		planet_waste_produces_mult = 0.5
+		planet_ranger_produces_mult = 1
+	}
+	
+	weight_modifier = {
+		modifier = {
+			add = 1
+			has_modifier = eco_moderate
+		}
+		modifier = {
+			add = 3
+			has_modifier = eco_heavy
+		}
+		modifier = {
+			add = 5
+			has_modifier = eco_extreme
+		}
+		modifier = {
+			add = 7
+			has_modifier = eco_catastrophic
+		}
+	}
+}
+
+# Park Habitat
+eco_habitat_nature = {
+	icon = 18
+	
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_habitat
+			has_planet_flag = eco_no_pollution
+		}
+	}
+	
+	planet_modifier = {
+		planet_waste_produces_mult = 0.5
+		planet_ranger_produces_mult = 1
+	}
+	
+	weight_modifier = {
+		modifier = {
+			add = 1
+			has_modifier = eco_waste_low
+		}
+		modifier = {
+			add = 3
+			has_modifier = eco_waste_mod
+		}
+		modifier = {
+			add = 5
+			has_modifier = eco_waste_high
+		}
+	}
+}
+
+# Wildlife Ringworld
+eco_ring_nature = {
+	icon = 18
+	
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+		}
+	}
+	
+	planet_modifier = {
+		planet_waste_produces_mult = 0.5
+		planet_ranger_produces_mult = 1
+	}
+	
+	weight_modifier = {
+		modifier = {
+			add = 1
+			has_modifier = eco_waste_low
+		}
+		modifier = {
+			add = 3
+			has_modifier = eco_waste_mod
+		}
+		modifier = {
+			add = 5
+			has_modifier = eco_waste_high
+		}
+	}
+}
+
+# Junk City
+eco_ecu_nature = {
+	icon = 18
+	
+	potential = {
+		exists = owner
+		OR = { 
+			is_planet_class = pc_city
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+			is_planet_class = pc_relic
+		}
+	}
+	
+	planet_modifier = {
+		planet_waste_produces_mult = 0.5
+		planet_ranger_produces_mult = 1
+	}
+	
+	weight_modifier = {
+		modifier = {
+			add = 1
+			has_modifier = eco_heavy
+		}
+		modifier = {
+			add = 3
+			has_modifier = eco_extreme
+		}
+		modifier = {
+			add = 5
+			has_modifier = eco_catastrophic
+		}
+	}
+}

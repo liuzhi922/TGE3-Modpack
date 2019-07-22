@@ -1,0 +1,218 @@
+
+d_U_SCI_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_U_SIC
+
+	planet_modifier = {
+		planet_housing_add = 13
+		planet_orbital_bombardment_damage = -0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_clerk_add = 3
+			job_miner_add = 10
+			job_foundry_add = 2
+			job_artisan_add = 2
+
+			planet_crime_mult = 0.05
+			pop_happiness = -0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 3
+			job_mining_drone_add = 10
+			job_alloy_drone_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 3
+			job_mining_drone_add = 10
+			job_fabricator_add = 4
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_U_SER_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_U_SER
+
+	planet_modifier = {
+		planet_housing_add = 13
+		planet_orbital_bombardment_damage = -0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_clerk_add = 3
+			job_miner_add = 10
+			job_subterranean_prospector_add = 4 #5
+
+			planet_crime_mult = 0.05
+			pop_happiness = -0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 3
+			job_mining_drone_add = 10
+			job_subterranean_prospector_gestalt_add = 4 #5
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_R_RTPAF_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = default
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				NOT = { has_authority = auth_corporate }
+				is_regular_empire = yes 
+			}
+		}
+		modifier = {
+			job_administrator_add = 1
+			job_researcher_add = 1
+			job_miner_add = 3
+			job_ringworld_prospector_add = 2
+
+			#planet_crime_mult = 0.05
+			pop_happiness = -0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_corporate }
+		}
+		modifier = {
+			job_executive_add = 1
+			job_researcher_add = 1
+			job_miner_add = 3
+			job_ringworld_prospector_add = 2
+
+			pop_happiness = -0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_synapse_drone_add = 2
+			job_brain_drone_add = 1
+			job_mining_drone_add = 3
+			job_ringworld_prospector_gestalt_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_coordinator_add = 2
+			job_calculator_add = 1
+			job_mining_drone_add = 3
+			job_ringworld_prospector_gestalt_add = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_H_ACMH_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = default
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_clerk_add = 1
+			job_researcher_add = 1
+			job_miner_add = 3
+			job_asteroid_prospector_add = 2
+
+			planet_crime_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 1
+			job_brain_drone_add = 1
+			job_mining_drone_add = 3
+			job_asteroid_prospector_gestalt_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 1
+			job_calculator_add = 1
+			job_mining_drone_add = 3
+			job_asteroid_prospector_gestalt_add = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+

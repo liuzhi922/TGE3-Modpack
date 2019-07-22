@@ -1,0 +1,515 @@
+@movable_editors = no
+@sub_window_pos_x = -515
+@sub_window_pos_y = -150
+@sub_window_height = 650
+@sub_window_pos_y_1440p = -250
+@sub_window_height_1440p = 850
+
+guiTypes = {
+	#######################
+	# ethics and government
+	#######################
+	containerWindowType = {
+		name = "empire_ethics_and_government_editor"
+		moveable = @movable_editors
+		position = { x = @sub_window_pos_x y = @sub_window_pos_y }
+		size = { width = 1030 height = @sub_window_height }
+		if_resolution = {
+			min_height = 1440
+			position = { x = @sub_window_pos_x y = @sub_window_pos_y_1440p }
+			size = { width = 1030 height = @sub_window_height_1440p }
+		}
+		orientation = center
+
+		background = {
+			name = "background"
+			spriteType = "GFX_subwindow_tile_plain_solid"
+		}
+
+		### ETHICS ###
+		containerWindowType = {
+			name = "ethics_header"
+			position = { x = 0 y = 265 }
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = -10 y = -8 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "header_line"
+				spriteType = "GFX_line"
+				position = { x = 6 y = 26 }
+			}
+
+			instantTextBoxType = {
+				name = "label"
+				font = "malgun_goth_24"
+				position = { x = 16 y = 7 }
+				maxWidth = 400
+				text =	 "empire_ethics_editor"
+				format = left
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "ethics"
+			size = { width = 230 height = 230 }
+			position = { x = 20 y = 240 }
+
+			instantTextBoxType = {
+				name = "ethic_points_left"
+				position = { x = -130 y = 95 }
+				font = "malgun_goth_24"
+				maxWidth = 310
+				maxHeight = 20
+				text = "POINTS_LEFT_ETHICS"
+				orientation = center_down
+				format = center
+				#alwaysTransparent = yes
+			}
+
+			### NON-FANATIC ETHICS ###
+
+			####mod ethic rebuild####
+			#########################
+
+		    buttonType = {
+				name = "ethic_capitalism"
+				spriteType = "GFX_ethics_capitalism"
+				position = { x = 199 y = 164 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_socialism"
+				spriteType = "GFX_ethics_socialism"
+				position = { x = 51 y = 196 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_authoritarian"
+				spriteType = "GFX_ethics_authoritarian"
+				position = { x = 125 y = 253 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_egalitarian"
+				spriteType = "GFX_ethics_egalitarian"
+				position = { x = 125 y = 107 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_green"
+				spriteType = "GFX_ethics_green"
+				position = { x = 94 y = 112 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_industrial"
+				spriteType = "GFX_ethics_industrial"
+				position = { x = 157 y = 248 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_elitist"
+				spriteType = "GFX_ethics_elitist"
+				position = { x = 199 y = 196 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_xenophobe"
+				spriteType = "GFX_ethics_xenophobe"
+				position = { x = 182 y = 135 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_militarist"
+				spriteType = "GFX_ethics_militarist"
+				position = { x = 157 y = 112 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_materialist"
+				spriteType = "GFX_ethics_materialist"
+				position = { x = 182 y = 225 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_pluralist"
+				spriteType = "GFX_ethics_pluralist"
+				position = { x = 51 y = 164 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_xenophile"
+				spriteType = "GFX_ethics_xenophile"
+				position = { x = 68 y = 225 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_pacifist"
+				spriteType = "GFX_ethics_pacifist"
+				position = { x = 94 y = 248 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_spiritualist"
+				spriteType = "GFX_ethics_spiritualist"
+				position = { x = 68 y = 135 }
+				clicksound = interface
+			}
+
+
+			### FANATIC ETHICS ###
+			buttonType = {
+				name = "ethic_fanatic_elitist"
+				spriteType = "GFX_ethics_fanatic_elitist"
+				position = { x = 231 y = 200 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_fanatic_xenophobe"
+				spriteType = "GFX_ethics_fanatic_xenophobe"
+				position = { x = 212 y = 117 }
+				clicksound = interface
+			}
+
+			buttonType = {
+			name = "ethic_fanatic_militarist"
+				spriteType = "GFX_ethics_fanatic_militarist"
+				position = { x = 178 y = 83 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_fanatic_materialist"
+				spriteType = "GFX_ethics_fanatic_materialist"
+				position = { x = 212 y = 243 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_fanatic_pluralist"
+				spriteType = "GFX_ethics_fanatic_pluralist"
+				position = { x = 19 y = 160 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_fanatic_xenophile"
+				spriteType = "GFX_ethics_fanatic_xenophile"
+				position = { x = 38 y = 243 }
+				clicksound = interface
+			}
+
+			buttonType = {
+			name = "ethic_fanatic_pacifist"
+				spriteType = "GFX_ethics_fanatic_pacifist"
+		        position = { x = 72 y = 277 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_fanatic_spiritualist"
+				spriteType = "GFX_ethics_fanatic_spiritualist"
+				position = { x = 38 y = 117 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_fanatic_capitalism"
+				spriteType = "GFX_ethics_fanatic_capitalism"
+				position = { x = 231 y = 160 }
+				clicksound = interface
+			}
+
+            buttonType = {
+				name = "ethic_fanatic_socialism"
+				spriteType = "GFX_ethics_fanatic_socialism"
+				position = { x = 19 y = 200 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_fanatic_authoritarian"
+				spriteType = "GFX_ethics_fanatic_authoritarian"
+				position = { x = 125 y = 285 }
+				clicksound = interface
+			}
+
+            buttonType = {
+				name = "ethic_fanatic_egalitarian"
+				spriteType = "GFX_ethics_fanatic_egalitarian"
+				position = { x = 125 y = 75 }
+				clicksound = interface
+			}
+
+            buttonType = {
+				name = "ethic_fanatic_green"
+				spriteType = "GFX_ethics_fanatic_green"
+				position = { x = 72 y = 83 }
+				clicksound = interface
+			}
+
+            buttonType = {
+				name = "ethic_fanatic_industrial"
+				spriteType = "GFX_ethics_fanatic_industrial"
+				position = { x = 178 y = 277 }
+				clicksound = interface
+			}
+
+			buttonType = {
+				name = "ethic_gestalt_consciousness"
+				spriteType = "GFX_ethics_gestalt_consciousness"
+				position = { x = 125 y = 180 }
+				clicksound = interface
+			}
+
+			### SELECTED ETHICS ###
+			iconType = {
+				name = "ethic_col_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+
+			iconType = {
+				name = "ethic_xen_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+
+			iconType = {
+				name = "ethic_mil_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+
+			iconType = {
+				name = "ethic_spi_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+
+			iconType = {
+				name = "ethic_soc_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+
+			iconType = {
+				name = "ethic_grn_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+
+			iconType = {
+				name = "ethic_elt_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+
+			iconType = {
+				name = "ethic_hive_selected"
+				spriteType = "GFX_ethic_selected"
+			}
+		}
+
+		### GOVERNMENT AUTHORITY ###
+		containerWindowType = {
+			name = "government_authority_header"
+			position = { x = 0 y = 0 }
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = -10 y = -8 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "header_line"
+				spriteType = "GFX_line"
+				position = { x = 6 y = 26 }
+			}
+
+			instantTextBoxType = {
+				name = "label"
+				font = "malgun_goth_24"
+				position = { x = 16 y = 7 }
+				maxWidth = 400
+				text =	 "GOVERNMENT_AUTHORITY"
+				format = left
+				alwaysTransparent = yes
+			}
+		}
+
+		gridBoxType = {
+			name = "authority_grid"
+			position = { x = 12 y = 50 }
+			size = { width = 300 height = 50 }
+			slotSize = { width = 50 height = 50 }
+			max_slots_horizontal = 6
+			max_slots_vertical = 4
+			format = CENTERED_UP
+			add_horizontal = yes
+		}
+
+		containerWindowType = {
+			name = "authority_description"
+			size = { width = 310 height = 543 }
+			if_resolution = {
+				min_height = 1440
+				size = { width = 310 height = 743 }
+			}
+			position = { x = 360 y = 60 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "desc"
+				font = "cg_16b"
+				position = { x = 10 y = 10 }
+				maxWidth = 290
+				maxHeight = 523
+				if_resolution = {
+					min_height = 1440
+					maxHeight = 723
+				}
+				text = ""
+				scrollbartype = "standardtext_slider"
+			}
+		}
+
+		instantTextBoxType = {
+			name = "government_type"
+			font = "malgun_goth_24"
+			position = { x = 360 y = 25 }
+			maxWidth = 310
+			maxHeight = 20
+			text =	""
+			format = center
+		}
+
+		### GOVERNMENT CIVICS ###
+		containerWindowType = {
+			name = "civics_header"
+			position = { x = 700 y = 0 }
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = -10 y = -8 }
+				alwaysTransparent = yes
+			}
+
+			iconType = {
+				name = "header_line"
+				spriteType = "GFX_line"
+				position = { x = 6 y = 26 }
+			}
+
+			instantTextBoxType = {
+				name = "label"
+				font = "malgun_goth_24"
+				position = { x = 16 y = 7 }
+				maxWidth = 400
+				text =	 "GOVERNMENT_CIVICS"
+				format = left
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "civics"
+			size = { width = 310 height = 523 }
+			if_resolution = {
+				min_height = 1440
+				size = { width = 310 height = 723 }
+			}
+			position = { x = 710 y = 80 }
+
+			background = {
+				name = "dark_area_bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+
+			smoothListboxType = {
+				name = "selected_entries"
+				position = { x = 8 y = 8 }
+				size = { x = 294 y = 507 }
+				scrollbarType = "standardlistbox_slider_thick"
+				borderSize = { x = 0 y = 0 }
+				spacing = 1
+			}
+
+			smoothListboxType = {
+				name = "available_entries"
+				position = { x = 8 y = 15 }
+				size = { x = 290 y = 507 }
+				if_resolution = {
+					min_height = 1440
+					size = { x = 294 y = 707 }
+				}
+				scrollbarType = "standardlistbox_slider_thick"
+				borderSize = { x = 0 y = 0 }
+				spacing = 0
+			}
+		}
+
+		instantTextBoxType = {
+			name = "civic_points_left"
+			position = { x = 710 y = 50 }
+			font = "malgun_goth_24"
+			maxWidth = 310
+			maxHeight = 20
+			text = "POINTS_LEFT_CIVICS"
+			format = center
+		}
+
+		### APPLY / CANCEL BUTTONS ###
+		buttonType = {
+			name = "cancel"
+			quadTextureSprite = "GFX_close"
+			position = { x = -45 y = 8 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "back_click"
+		}
+		buttonType={
+			name = "back"
+			font = "cg_16b"
+			spriteType = "GFX_galactic_object_button"
+			buttonText = "BACK"
+			position = { x = 0 y = -40 }
+			orientation = LOWER_LEFT
+			shortcut = "BACKSPACE"
+			clicksound = back_click
+		}
+		buttonType={
+			name = "apply_and_close"
+			font = "cg_16b"
+			spriteType = "GFX_galactic_object_button"
+			buttonText = "NEXT"
+			position = { x = -290 y = -40 }
+			orientation = LOWER_RIGHT
+			#shortcut = "RETURN"
+			clicksound = confirm_click
+		}
+	}
+}

@@ -1,0 +1,122 @@
+objectTypes = {
+
+# Perdition beam 2 #
+####################
+#	WINDUP
+####################
+	pdxparticle = {
+		name = "gsc_perdition_beam_2_muzzle_windup_effect"
+		type = "gsc_perdition_beam_2_windup"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "gsc_perdition_beam_2_windup_effect"
+		type = "gsc_perdition_beam_2_muzzle_windup"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "mammalian_01_perdition_beam_2_windup_effect"
+		type = "gsc_perdition_beam_2_muzzle_windup"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "humanoid_01_perdition_beam_2_windup_effect"
+		type = "gsc_perdition_beam_2_muzzle_windup"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "molluscoid_01_perdition_beam_2_windup_effect"
+		type = "gsc_perdition_beam_2_muzzle_windup"
+		
+		scale = 1.0
+	}
+
+####################
+#	MUZZLE FLASHES
+####################
+	pdxparticle = {
+		name = "gsc_perdition_beam_2_muzzle_effect"
+		type = "gsc_perdition_beam_2_muzzle"
+		
+		scale = 1.0
+	}
+
+
+####################
+#	HIT EFFECTS
+####################
+	pdxparticle = {
+		name = "gsc_perdition_beam_2_hit_effect"
+		type = "gsc_perdition_beam_2_hit"
+		
+		scale = 1.0
+	}
+	
+# Perdition beam 2 #
+####################
+#	WINDUP
+####################
+	pdxparticle = {
+		name = "gsc_perdition_beam_3_muzzle_windup_effect"
+		type = "gsc_perdition_beam_3_windup"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "gsc_perdition_beam_3_windup_effect"
+		type = "gsc_perdition_beam_3_muzzle_windup"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "mammalian_01_perdition_beam_3_windup_effect"
+		type = "gsc_perdition_beam_3_muzzle_windup"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "humanoid_01_perdition_beam_3_windup_effect"
+		type = "gsc_perdition_beam_3_muzzle_windup"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "molluscoid_01_perdition_beam_3_windup_effect"
+		type = "gsc_perdition_beam_3_muzzle_windup"
+		
+		scale = 1.0
+	}
+
+####################
+#	MUZZLE FLASHES
+####################
+	pdxparticle = {
+		name = "gsc_perdition_beam_3_muzzle_effect"
+		type = "gsc_perdition_beam_3_muzzle"
+		
+		scale = 1.0
+	}
+
+
+####################
+#	HIT EFFECTS
+####################
+	pdxparticle = {
+		name = "gsc_perdition_beam_3_hit_effect"
+		type = "gsc_perdition_beam_3_hit"
+		
+		scale = 1.0
+	}
+}

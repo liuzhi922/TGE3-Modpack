@@ -1,0 +1,34 @@
+# debug and test stuff
+
+#decision_0_LSLODI_pc_flag_fix = {
+#	owned_planets_only = yes
+#	#prerequisites = { "tech_MoD_S" } 
+#	enactment_time = 0 
+#	icon = default
+#
+#	potential = {
+#		#NOT = { owner = { has_country_flag = cf_hide_mod } }
+#		
+#		#OR = {
+#			has_deposit = d_O_LSLODI_deposit 
+#		#}
+#	}
+#
+#	effect = {
+#		if = {
+#			limit = { has_deposit = d_O_LSLODI_deposit }
+#			set_planet_flag = pf_d_O_LSDI_1 
+#			#break = yes
+#		}
+#		#else_if = {
+#		#}
+#	}
+#	ai_weight = {
+#		weight = 0
+#	}
+#}
+
+# fix queue exploit
+# make each decision into 2: click to pick -> click to build
+#
+#

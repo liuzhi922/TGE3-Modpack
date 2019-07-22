@@ -1,0 +1,3 @@
+	NGameplay = {
+		FEDERATION_LEADER_POWER_THRESHOLD	= 10000	# Must have this much more power than current Federation leader to become new leader, should never happen, only works with mod mechs now
+	}

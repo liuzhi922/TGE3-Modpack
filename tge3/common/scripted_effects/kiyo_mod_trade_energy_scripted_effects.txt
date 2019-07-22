@@ -1,0 +1,83 @@
+# THIS = PLANET
+kiyo_trade_add_energy_modifier = {
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 524288 } }
+		subtract_variable = { which = kiyo_trade_energy value = 524288 }
+		set_planet_flag = kiyo_trade_energy_524288
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 262144 } }
+		subtract_variable = { which = kiyo_trade_energy value = 262144 }
+		set_planet_flag = kiyo_trade_energy_262144
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 131072 } }
+		subtract_variable = { which = kiyo_trade_energy value = 131072 }
+		set_planet_flag = kiyo_trade_energy_131072
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 65536 } }
+		subtract_variable = { which = kiyo_trade_energy value = 65536 }
+		set_planet_flag = kiyo_trade_energy_65536
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 32768 } }
+		subtract_variable = { which = kiyo_trade_energy value = 32768 }
+		set_planet_flag = kiyo_trade_energy_32768
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 16384 } }
+		subtract_variable = { which = kiyo_trade_energy value = 16384 }
+		set_planet_flag = kiyo_trade_energy_16384
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 8192 } }
+		subtract_variable = { which = kiyo_trade_energy value = 8192 }
+		set_planet_flag = kiyo_trade_energy_8192
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 4096 } }
+		subtract_variable = { which = kiyo_trade_energy value = 4096 }
+		set_planet_flag = kiyo_trade_energy_4096
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 2048 } }
+		subtract_variable = { which = kiyo_trade_energy value = 2048 }
+		set_planet_flag = kiyo_trade_energy_2048
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 1024 } }
+		subtract_variable = { which = kiyo_trade_energy value = 1024 }
+		set_planet_flag = kiyo_trade_energy_1024
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 512 } }
+		subtract_variable = { which = kiyo_trade_energy value = 512 }
+		set_planet_flag = kiyo_trade_energy_512
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 256 } }
+		subtract_variable = { which = kiyo_trade_energy value = 256 }
+		set_planet_flag = kiyo_trade_energy_256
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 128 } }
+		subtract_variable = { which = kiyo_trade_energy value = 128 }
+		set_planet_flag = kiyo_trade_energy_128
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 64 } }
+		subtract_variable = { which = kiyo_trade_energy value = 64 }
+		set_planet_flag = kiyo_trade_energy_64
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 32 } }
+		subtract_variable = { which = kiyo_trade_energy value = 32 }
+		set_planet_flag = kiyo_trade_energy_32
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 16 } }
+		subtract_variable = { which = kiyo_trade_energy value = 16 }
+		set_planet_flag = kiyo_trade_energy_16
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 8 } }
+		subtract_variable = { which = kiyo_trade_energy value = 8 }
+		set_planet_flag = kiyo_trade_energy_8
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 4 } }
+		subtract_variable = { which = kiyo_trade_energy value = 4 }
+		set_planet_flag = kiyo_trade_energy_4
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 2 } }
+		subtract_variable = { which = kiyo_trade_energy value = 2 }
+		set_planet_flag = kiyo_trade_energy_2
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_energy value >= 1 } }
+		subtract_variable = { which = kiyo_trade_energy value = 1 }
+		set_planet_flag = kiyo_trade_energy_1
+	}
+}

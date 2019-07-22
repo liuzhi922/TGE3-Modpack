@@ -1,0 +1,303 @@
+###################
+# COST
+###################
+@cost4s = 35
+@cost4m = 70
+@cost4l = 140
+
+@cost5s = 44
+@cost5m = 88
+@cost5l = 175
+
+###################
+# POWER
+###################
+@power4s = -21
+@power4m = -38
+@power4l = -74
+
+@power5s = -27
+@power5m = -47
+@power5l = -92
+
+# ####################
+#  Plasma
+# ####################
+
+# ## Plasma 4
+weapon_component_template = {
+	key = "C_SMALL_PLASMA_4"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 25 max = 53 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 30.0
+	accuracy = 0.80
+	tracking = 0.40
+	hull_damage = 1.5
+	shield_damage = 0.25
+	armor_damage = 2.0
+	power = @power4s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			exotic_gases = @s_t7_rare
+		}		
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_plasma_4"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_plasma_4" }
+	component_set = "C_PLASMA_4"
+	projectile_gfx = "c_plasma_4_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SMALL_PLASMA_5"
+}
+
+weapon_component_template = {
+	key = "C_MEDIUM_PLASMA_4"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 63 max = 131 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 50.0
+	accuracy = 0.80
+	tracking = 0.20
+	hull_damage = 1.5
+	shield_damage = 0.25
+	armor_damage = 2.0
+	power = @power4m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			exotic_gases = @m_t7_rare
+		}		
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_plasma_4"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_plasma_4" }
+	component_set = "C_PLASMA_4"
+	projectile_gfx = "c_plasma_4_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_MEDIUM_PLASMA_5"
+}
+
+weapon_component_template = {
+	key = "C_LARGE_PLASMA_4"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 150 max = 315 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 70.0
+	accuracy = 0.80
+	tracking = 0.05
+	hull_damage = 1.5
+	shield_damage = 0.25
+	armor_damage = 2.0
+	power = @power4l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			exotic_gases = @l_t7_rare
+		}		
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_plasma_4"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_plasma_4" }
+	component_set = "C_PLASMA_4"
+	projectile_gfx = "c_plasma_4_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_LARGE_PLASMA_5"
+}
+
+# ## Plasma 5
+weapon_component_template = {
+	key = "C_SMALL_PLASMA_5"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 31 max = 66 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 30.0
+	accuracy = 0.80
+	tracking = 0.40
+	hull_damage = 1.5
+	shield_damage = 0.25
+	armor_damage = 2.0
+	power = @power5s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t10_cost
+			exotic_gases = @s_t10_rare
+		}		
+		upkeep = {
+			energy = @s_t10_upkeep_energy
+			alloys = @s_t10_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_plasma_5"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_plasma_5" }
+	component_set = "C_PLASMA_5"
+	projectile_gfx = "c_plasma_5_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "C_MEDIUM_PLASMA_5"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 78 max = 164 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 50.0
+	accuracy = 0.80
+	tracking = 0.20
+	hull_damage = 1.5
+	shield_damage = 0.25
+	armor_damage = 2.0
+	power = @power5m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t10_cost
+			exotic_gases = @m_t10_rare
+		}		
+		upkeep = {
+			energy = @m_t10_upkeep_energy
+			alloys = @m_t10_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_plasma_5"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_plasma_5" }
+	component_set = "C_PLASMA_5"
+	projectile_gfx = "c_plasma_5_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "C_LARGE_PLASMA_5"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+	
+	damage = { min = 188 max = 394 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 70.0
+	accuracy = 0.80
+	tracking = 0.05
+	hull_damage = 1.5
+	shield_damage = 0.25
+	armor_damage = 2.0
+	power = @power5l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t10_cost
+			exotic_gases = @l_t10_rare
+		}		
+		upkeep = {
+			energy = @l_t10_upkeep_energy
+			alloys = @l_t10_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_plasma_5"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_plasma_5" }
+	component_set = "C_PLASMA_5"
+	projectile_gfx = "c_plasma_5_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}

@@ -1,0 +1,219 @@
+spriteTypes = {
+	# backgrounds
+	corneredTileSpriteType = {
+		name = "GFX_ui_plain_bg_tile"
+		textureFile = "gfx/interface/tiles/plain_bg_tile.dds"
+		borderSize = { x = 0 y = 0 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ui_tile_large_bg_plain"
+		textureFile = "gfx/interface/tiles/tile_large_bg_plain.dds"
+		borderSize = { x = 0 y = 0 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	# empire_view, expansion_planner_view, galaxy_view, topbar_factions_view, topbar_leaders_view, topbar_species_view
+	corneredTileSpriteType = {
+		name = "GFX_ui_button_frame_tile"
+		textureFile = "gfx/ui_overhaul_qhd/buttons/ui_button_frame_tile.dds"
+		borderSize = { x = 4 y = 4 }
+		effectFile = "gfx/FX/buttonstate.lua"
+		noOfFrames = 3
+	}
+
+	# expansion_plannet_view.gui
+	spriteType = {
+		name = "GFX_ui_button_121_24"
+		texturefile = "gfx/ui_overhaul_qhd/buttons/ui_button_121_24_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/ui_overhaul_qhd/buttons/ui_button_121_24_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_268_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x = 11 y = 4 }
+	}
+	spriteType = {
+		name = "GFX_ui_button_250_24"
+		texturefile = "gfx/ui_overhaul_qhd/buttons/ui_button_250_24_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/ui_overhaul_qhd/buttons/ui_button_250_24_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_268_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x = 11 y = 4 }
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ui_button_tile_50"
+		texturefile = "gfx/interface/buttons/button_1134_50_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+	}
+
+	# expansion_plannet_view.gui, topbar_species_view.gui
+	spriteType = {
+		name = "GFX_ui_button_350_24"
+		texturefile = "gfx/ui_overhaul_qhd/buttons/ui_button_350_24_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/ui_overhaul_qhd/buttons/ui_button_350_24_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_268_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x = 11 y = 4 }
+	}
+
+	# customize_species_editors.gui
+	spriteType = {
+		name = "GFX_ui_gamesetup_colorpicker"
+		texturefile = "gfx/ui_overhaul_qhd/colorpicker/ui_gamesetup_colorpicker.dds"
+	}
+	spriteType = {
+		name = "GFX_ui_gamesetup_colorpicker_highlight"
+		texturefile = "gfx/ui_overhaul_qhd/colorpicker/ui_gamesetup_colorpicker_highlight.dds"
+	}
+
+	# outliner.gui
+	spriteType = {
+		name = "GFX_ui_outliner_member_bg"
+		textureFile = "gfx/ui_overhaul_qhd/outliner/ui_outliner_entry_custom.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_ui_outliner_member_bg_selected"
+		textureFile = "gfx/ui_overhaul_qhd/outliner/ui_outliner_selected_entry_custom.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	# planet_view.gui
+	spriteType = {
+		name = "GFX_ui_job_background"
+		texturefile = "gfx/ui_overhaul_qhd/planetview/ui_job_background.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	spriteType = {
+		name = "GFX_ui_planet_building_slot"
+		textureFile = "gfx/ui_overhaul_qhd/planetview/ui_planet_building_slot.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_ui_planet_locked_slot"
+		textureFile = "gfx/ui_overhaul_qhd/planetview/ui_planet_locked_slot.dds"
+	}
+	progressbartype = {
+		name = "GFX_ui_building_progressbar_62_10"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/progressbars/queue_progressbar.dds"
+		textureFile2 = "gfx/interface/progressbars/queue_progressbar_empty.dds"
+		size = { x = 62 y = 10 }
+		effectFile = "gfx/FX/progress_startend.lua"
+	}
+	progressbartype = {
+		name = "GFX_ui_building_progressbar_71_10"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/progressbars/queue_progressbar.dds"
+		textureFile2 = "gfx/interface/progressbars/queue_progressbar_empty.dds"
+		size = { x = 71 y = 10 }
+		effectFile = "gfx/FX/progress_startend.lua"
+	}
+	portraitType = {
+		name = "GFX_ui_planet_governor_mask"
+		masking_texture = "gfx/ui_overhaul_qhd/masks/planet_governor_mask.tga"
+		effectFile = "gfx/FX/buttonstate_rendertarget.lua"
+		type = character
+		character = yes
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tiles_frame_notrans"
+		textureFile = "gfx/ui_overhaul_qhd/tiles/black_bg_green_frame_no_trans_tile.dds"
+		borderSize = { x = 4 y = 4 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	# ship_view.gui
+	spriteType = {
+		name = "GFX_dummy_3d_design_entry"
+		texturefile = "gfx/interface/tiles/tiled_window_transparent.dds"
+		effectFile = "gfx/FX/buttonstate_rendertarget.lua"
+		alwaystransparent = yes
+		transparencecheck = no
+	}
+	spriteType = {
+		name = "GFX_dummy_3d_ship_details"
+		texturefile = "gfx/interface/tiles/tiled_window_transparent.dds"
+		effectFile = "gfx/FX/buttonstate_rendertarget.lua"
+		alwaystransparent = yes
+		transparencecheck = no
+	}
+
+	# technology_view.gui
+	spriteType = {
+		name = "GFX_ui_physics_button"
+		texturefile = "gfx/ui_overhaul_qhd/research/physics_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_ui_society_button"
+		texturefile = "gfx/ui_overhaul_qhd/research/society_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_ui_engineering_button"
+		texturefile = "gfx/ui_overhaul_qhd/research/engineering_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		noOfFrames = 2
+	}
+
+	# topbar_species_view.gui
+	portraitType = {
+		name = "GFX_ui_species_mask"
+		masking_texture = "gfx/ui_overhaul_qhd/masks/species_mask.tga"
+		texturefile = "gfx/interface/main/unselected_portrait.dds"
+		effectFile = "gfx/FX/buttonstate_rendertarget.lua"
+		type = character
+		character = yes
+	}
+
+	# start_screen.gui
+	spriteType = {
+		name = "GFX_ui_start_screen_bg"
+		texturefile = "gfx/ui_overhaul_qhd/load/start_screen.dds"
+	}
+}

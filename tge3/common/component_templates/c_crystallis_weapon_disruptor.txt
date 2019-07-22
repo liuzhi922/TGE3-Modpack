@@ -1,0 +1,263 @@
+###################
+# COST
+###################
+@cost4s = 31
+@cost4m = 44
+@cost4l = 00
+
+@cost5s = 39
+@cost5m = 55
+@cost5l = 00
+
+###################
+# POWER
+###################
+@power4s = -21
+@power4m = -38
+@power4l = -00
+
+@power5s = -27
+@power5m = -47
+@power5l = -00
+
+# ####################
+#  Disruptors
+# ####################
+
+# ## Disruptor 4
+weapon_component_template = {
+	key = "C_SMALL_DISRUPTOR_4"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+	
+	icon = "GFX_C_ship_part_disruptor_4"
+	icon_frame = 1
+	
+	damage = { min = 1.3 max = 38 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 50
+	range = 20.0
+	accuracy = 1.00
+	tracking = 0.60
+	shield_penetration = 1.00
+	armor_penetration = 1.00
+	power = @power4s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t6_cost
+			rare_crystals = @s_t6_rare
+		}		
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_disruptors_4" }
+	component_set = "C_DISRUPTOR_4"
+	projectile_gfx = "c_disruptor_4_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SMALL_DISRUPTOR_5"
+}
+
+weapon_component_template = {
+	key = "C_MEDIUM_DISRUPTOR_4"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+	
+	icon = "GFX_C_ship_part_disruptor_4"
+	icon_frame = 1
+	
+	damage = { min = 1.3 max = 94 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 50
+	range = 40.0
+	accuracy = 1.00
+	tracking = 0.35
+	shield_penetration = 1.00
+	armor_penetration = 1.00
+	power = @power4m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t6_cost
+			rare_crystals = @m_t6_rare
+		}		
+		upkeep = {
+			energy = @m_t4_upkeep_energy
+			alloys = @m_t4_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_disruptors_4" }
+	component_set = "C_DISRUPTOR_4"
+	projectile_gfx = "c_disruptor_4_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_MEDIUM_DISRUPTOR_5"
+}
+
+# weapon_component_template = {
+	# key = "C_LARGE_DISRUPTOR_4"
+	# size = large
+	# entity = "large_laser_gun_entity"
+	# type = instant
+	
+	# icon = "GFX_C_ship_part_disruptor_4"
+	# icon_frame = 1
+	
+	# damage = { min = 64.8 max = 129.6 }
+	# windup = { min = 2 max = 20 }
+	# total_fire_time = 50
+	# range = 80.0
+	# accuracy = 0.80
+	# tracking = 0.05
+	# shield_damage = 3
+	# power = @power4l
+	# cost = @cost4l
+	
+	# prerequisites = { "tech_c_disruptors_4" }
+	# component_set = "C_DISRUPTOR_4"
+	# projectile_gfx = "c_disruptor_4_large"
+	# tags = { weapon_type_energy }
+	# ai_tags = { weapon_role_anti_hull }
+	# ai_tag_weight = 5
+	
+	# upgrades_to = "C_LARGE_DISRUPTOR_5"
+# }
+
+# ## Disruptor 5
+weapon_component_template = {
+	key = "C_SMALL_DISRUPTOR_5"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+	
+	icon = "GFX_C_ship_part_disruptor_5"
+	icon_frame = 1
+	
+	damage = { min = 1.6 max = 47 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 50
+	range = 20.0
+	accuracy = 1.00
+	tracking = 0.60
+	shield_penetration = 1.00
+	armor_penetration = 1.00
+	power = @power5s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			rare_crystals = @s_t7_rare
+		}		
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_disruptors_5" }
+	component_set = "C_DISRUPTOR_5"
+	projectile_gfx = "c_disruptor_5_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "C_MEDIUM_DISRUPTOR_5"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+	
+	icon = "GFX_C_ship_part_disruptor_5"
+	icon_frame = 1
+	
+	damage = { min = 1.6 max = 117 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 50
+	range = 40.0
+	accuracy = 1.00
+	tracking = 0.35
+	shield_penetration = 1.00
+	armor_penetration = 1.00
+	power = @power5m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			rare_crystals = @m_t7_rare
+		}		
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_disruptors_5" }
+	component_set = "C_DISRUPTOR_5"
+	projectile_gfx = "c_disruptor_5_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+}
+
+# weapon_component_template = {
+	# key = "C_LARGE_DISRUPTOR_5"
+	# size = large
+	# entity = "large_laser_gun_entity"
+	# type = instant
+	
+	# icon = "GFX_C_ship_part_disruptor_5"
+	# icon_frame = 1
+	
+	# damage = { min = 77.8 max = 155.6 }
+	# windup = { min = 2 max = 20 }
+	# total_fire_time = 50
+	# range = 80.0
+	# accuracy = 0.80
+	# tracking = 0.05
+	# shield_damage = 3
+	# power = @power5l
+	# cost = @cost5l
+	
+	# prerequisites = { "tech_c_disruptors_5" }
+	# component_set = "C_DISRUPTOR_5"
+	# projectile_gfx = "c_disruptor_5_large"
+	# tags = { weapon_type_energy }
+	# ai_tags = { weapon_role_anti_hull }
+	# ai_tag_weight = 5
+# }

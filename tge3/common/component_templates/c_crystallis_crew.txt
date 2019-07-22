@@ -1,0 +1,300 @@
+#############
+#	COST	#
+#############
+@power_cost = 0
+@mineral_cost = 15
+@mineral_cost_t2 = 30
+@slave_mineral_cost = 5
+
+
+
+# Synth crew
+utility_component_template = {
+	key = "C_LARGE_CREW_3"
+	size = aux
+	icon = "GFX_C_ship_part_crew_3"
+	icon_frame = 1
+	power = @power_cost
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+		upkeep = {
+			alloys = 0.03
+		}
+	}
+	modifier = {
+		ship_armor_penetration_mult = 0.10
+		ship_shield_penetration_mult = 0.10
+	}
+	
+	prerequisites = { "tech_c_synth_crew" }
+	component_set = "c_ship_crew"
+	
+	ai_weight = {
+		weight = 35
+	}
+}
+
+# PSI crew
+utility_component_template = {
+	key = "C_LARGE_CREW_4"
+	size = aux
+	icon = "GFX_C_ship_part_crew_4"
+	icon_frame = 1
+	power = @power_cost
+	resources = {
+		category = ship_components
+		cost = {
+			food = 3
+		}
+		upkeep = {
+			food = 0.10
+		}
+	}
+	modifier = {
+		ship_tracking_add = 10
+		ship_piracy_suppression_mult = 10.00
+	}
+	
+	prerequisites = { "tech_c_psionic_crew_1" }
+	component_set = "c_ship_crew"
+	
+	ai_weight = {
+		weight = 35
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = food value < 0 }
+		}
+	}
+}
+
+# Clone crew
+utility_component_template = {
+	key = "C_LARGE_CREW_7"
+	size = aux
+	icon = "GFX_C_ship_part_crew_7"
+	icon_frame = 1
+	power = @power_cost
+	resources = {
+		category = ship_components
+		cost = {
+			food = 3
+		}
+		upkeep = {
+			food = 0.10
+		}
+	}
+	modifier = {
+		ships_upkeep_mult = -0.05
+		ship_hull_regen_add_static = 4
+	}
+	
+	prerequisites = { "tech_c_clone_crew_1" }
+	component_set = "c_ship_crew"
+	
+	ai_weight = {
+		weight = 35
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = food value < 0 }
+		}
+	}
+}
+
+# Purifier crew
+utility_component_template = {
+	key = "C_LARGE_CREW_10"
+	size = aux
+	icon = "GFX_C_ship_part_crew_10"
+	icon_frame = 1
+	power = @power_cost
+	resources = {
+		category = ship_components
+		cost = {
+			food = 3
+		}
+		upkeep = {
+			food = 0.10
+		}
+	}
+	modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_orbital_bombardment_mult = 0.15
+		ship_disengage_chance_reduction = 0.30
+	}
+	
+	prerequisites = { "tech_c_purifier_crew_1" }
+	component_set = "c_ship_crew"
+	
+	ai_weight = {
+		weight = 35
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = food value < 0 }
+		}
+	}
+}
+
+# Alien crew
+utility_component_template = {
+	key = "C_LARGE_CREW_13"
+	size = aux
+	icon = "GFX_C_ship_part_crew_13"
+	icon_frame = 1
+	power = @power_cost
+	resources = {
+		category = ship_components
+		cost = {
+			food = 3
+		}
+		upkeep = {
+			food = 0.10
+		}
+	}
+	modifier = {
+		ship_home_territory_fire_rate_mult = 0.10
+		ship_disengage_chance_mult = 0.10
+	}
+	
+	prerequisites = { "tech_c_alien_crew_1" }
+	component_set = "c_ship_crew"
+	
+	ai_weight = {
+		weight = 35
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = food value < 0 }
+		}
+	}
+}
+
+# Standard crew
+utility_component_template = {
+	key = "C_LARGE_CREW_16"
+	size = aux
+	icon = "GFX_C_ship_part_crew_16"
+	icon_frame = 1
+	power = @power_cost
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3
+		}
+		upkeep = {
+			alloys = 0.03
+		}
+	}
+	modifier = {
+	}
+	
+	component_set = "c_ship_crew"
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = food value < 0 }
+		}
+	}
+}
+
+# Slave crew
+utility_component_template = {
+	key = "C_LARGE_CREW_22"
+	size = aux
+	icon = "GFX_C_ship_part_crew_22"
+	icon_frame = 1
+	power = @power_cost
+	resources = {
+		category = ship_components
+		cost = {
+			food = 3
+		}
+		upkeep = {
+			food = 0.10
+		}
+	}
+	modifier = {
+		ship_fire_rate_mult = -0.05
+		ships_upkeep_mult = -0.10
+	}
+	
+	prerequisites = { "tech_c_slave_crew_1" }
+	component_set = "c_ship_crew"
+	
+	ai_weight = {
+		weight = 35
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = food value < 0 }
+		}
+	}
+}
+
+# Experienced Crew
+utility_component_template = {
+	key = "C_EXPERIENCED_CREW"
+	size = aux
+	icon = "GFX_C_ship_part_experienced_crew"
+	icon_frame = 1
+	power = @power_cost
+	resources = {
+		category = ship_components
+		cost = {
+			food = 3
+		}
+		upkeep = {
+			food = 0.10
+		}
+	}
+	modifier = {
+		ship_experience_gain_mult = 0.25
+		ship_fire_rate_mult = 0.05
+	}
+	
+	prerequisites = { "tech_c_experienced_crew" }
+	component_set = "c_ship_crew"
+	
+	ai_weight = {
+		weight = 35
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = food value < 0 }
+		}
+	}
+}
+
+# Elite Crew
+utility_component_template = {
+	key = "C_ELITE_CREW"
+	size = aux
+	icon = "GFX_C_ship_part_elite_crew"
+	icon_frame = 1
+	power = @power_cost
+	resources = {
+		category = ship_components
+		cost = {
+			food = 5
+		}
+		upkeep = {
+			food = 0.15
+		}
+	}
+	modifier = {
+		ship_experience_gain_mult = 0.50
+		ship_fire_rate_mult = 0.10
+	}
+	
+	prerequisites = { "tech_c_elite_crew" }
+	component_set = "c_ship_crew"
+	
+	ai_weight = {
+		weight = 35
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = food value < 0 }
+		}
+	}
+}

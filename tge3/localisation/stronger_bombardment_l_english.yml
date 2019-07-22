@@ -1,0 +1,6 @@
+﻿l_english:
+ ####################################
+ # Misc
+ ####################################
+  bombardment_indiscriminate_desc:0 "$bombardment_indiscriminate$ Bombardment targets military and planetary infrastructure with no regard for civilian casualties.\n- §HHeavy§! damage to §YArmies§!\n- §HHeavy§! damage to §YPlanet§!\n- §YModerate§! damage to §YPops§!\n- Will bombard undefended planets\n"
+  bombardment_raiding_desc:1 "$bombardment_raiding$ Bombardment targets enemy population centers with specialized raiding craft that scoop up their people and bring them back to our worlds to put them to work.\n- §ELight§! damage to §YArmies§!\n- §ELight§! damage to §YPlanet§!\n- §YModerate§! damage to §YPops§!\n- Will §Yabduct§! Pops when possible instead of killing them\n"

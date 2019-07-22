@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = { Name = "GFX_text_me_mineral"  textureFile = "gfx/interface/icons/eutab_m_mineral_focus.dds" }
+	spriteType = { Name = "GFX_text_me_energy"  textureFile = "gfx/interface/icons/eutab_m_energy_focus.dds" }
+	spriteType = { Name = "GFX_text_me_build"  textureFile = "gfx/interface/icons/eutab_m_build_focus.dds" }
+	spriteType = { Name = "GFX_text_me_war"  textureFile = "gfx/interface/icons/eutab_m_war_focus.dds" }
+	spriteType = { Name = "GFX_text_me_tech"  textureFile = "gfx/interface/icons/eutab_m_tech_focus.dds" }
+	spriteType = { Name = "GFX_text_h_mineral"  textureFile = "gfx/interface/icons/eutab_h_mineral_focus.dds" }
+	spriteType = { Name = "GFX_text_h_energy"  textureFile = "gfx/interface/icons/eutab_h_energy_focus.dds" }
+	spriteType = { Name = "GFX_text_h_food"  textureFile = "gfx/interface/icons/eutab_h_food_focus.dds" }
+	spriteType = { Name = "GFX_text_h_unity"  textureFile = "gfx/interface/icons/eutab_h_unity_focus.dds" }
+	spriteType = { Name = "GFX_text_h_pop"  textureFile = "gfx/interface/icons/eutab_h_pop_focus.dds" }
+	spriteType = { Name = "GFX_text_h_arm"  textureFile = "gfx/interface/icons/eutab_h_arm_focus.dds" }
+	spriteType = { Name = "GFX_text_h_tech"  textureFile = "gfx/interface/icons/eutab_h_tech_focus.dds" }
+}        

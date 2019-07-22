@@ -1,0 +1,1355 @@
+﻿l_russian:
+l_english:
+
+ # Crystallis-Infused Tissue
+
+ tech_c_regenerative_hull_tissue_1:0 "Crystallis-Infused Tissue I"
+ tech_c_regenerative_hull_tissue_1_desc:0 "Improve the genetically altered version of the silicon-based bacteria used to regenerate non-organic materials by infusing them with crystaline.\n\n"
+
+ tech_c_regenerative_hull_tissue_2:0 "Crystallis-Layered Tissue II"
+ tech_c_regenerative_hull_tissue_2_desc:0 "Improve the genetically altered version of the silicon-based bacteria used to regenerate non-organic materials by infusing them with crystaline.\n\n"
+
+ tech_c_regenerative_hull_tissue_3:0 "Crystallis-Woven Tissue III"
+ tech_c_regenerative_hull_tissue_3_desc:0 "Improve the genetically altered version of the silicon-based bacteria used to regenerate non-organic materials by infusing them with crystaline.\n\n"
+ 
+ tech_c_regenerative_hull_tissue_4:0 "Crystallis-Fused Tissue IV"
+ tech_c_regenerative_hull_tissue_4_desc:0 "Improve the genetically altered version of the silicon-based bacteria used to regenerate non-organic materials by infusing them with crystaline.\n\n"
+ 
+ tech_c_regenerative_hull_tissue_5:0 "Crystallis-Grown Tissue V"
+ tech_c_regenerative_hull_tissue_5_desc:0 "Improve the genetically altered version of the silicon-based bacteria used to regenerate non-organic materials by infusing them with crystaline.\n\n"
+ 
+ C_AUTO_REPAIR_1:0 "Crystallis-Infused Tissue"
+ C_AUTO_REPAIR_1_DESC:0 "These crystaline-infused bacteria are imprinted with the ship's structural design and will attempt to restore hull integrity should it be compromised at greater speeds."
+ 
+ C_AUTO_REPAIR_2:0 "Crystallis-Layered Tissue"
+ C_AUTO_REPAIR_2_DESC:0 "These crystaline-infused bacteria are imprinted with the ship's structural design and will attempt to restore hull integrity should it be compromised at greater speeds."
+ 
+ C_AUTO_REPAIR_3:0 "Crystallis-Woven Tissue"
+ C_AUTO_REPAIR_3_DESC:0 "These crystaline-infused bacteria are imprinted with the ship's structural design and will attempt to restore hull integrity should it be compromised at greater speeds."
+ 
+ C_AUTO_REPAIR_4:0 "Crystallis-Fused Tissue"
+ C_AUTO_REPAIR_4_DESC:0 "These crystaline-infused bacteria are imprinted with the ship's structural design and will attempt to restore hull integrity should it be compromised at greater speeds."
+ 
+ C_AUTO_REPAIR_5:0 "Crystallis-Grown Tissue"
+ C_AUTO_REPAIR_5_DESC:0 "These crystaline-infused bacteria are imprinted with the ship's structural design and will attempt to restore hull integrity should it be compromised at greater speeds."
+ 
+ C_SMALL_AUTO_REPAIR_1:0 "Small Crystallis-Infused Tissue"
+ C_MEDIUM_AUTO_REPAIR_1:0 "Medium Crystallis-Infused Tissue"
+ C_LARGE_AUTO_REPAIR_1:0 "Large Crystallis-Infused Tissue"
+ 
+ C_SMALL_AUTO_REPAIR_2:0 "Small Crystallis-Layered Tissue"
+ C_MEDIUM_AUTO_REPAIR_2:0 "Medium Crystallis-Layered Tissue"
+ C_LARGE_AUTO_REPAIR_2:0 "Large Crystallis-Layered Tissue"
+ 
+ C_SMALL_AUTO_REPAIR_3:0 "Small Crystallis-Woven Tissue"
+ C_MEDIUM_AUTO_REPAIR_3:0 "Medium Crystallis-Woven Tissue"
+ C_LARGE_AUTO_REPAIR_3:0 "Large Crystallis-Woven Tissue"
+ 
+ C_SMALL_AUTO_REPAIR_4:0 "Small Crystallis-Fused Tissue"
+ C_MEDIUM_AUTO_REPAIR_4:0 "Medium Crystallis-Fused Tissue"
+ C_LARGE_AUTO_REPAIR_4:0 "Large Crystallis-Fused Tissue"
+ 
+ C_SMALL_AUTO_REPAIR_5:0 "Small Crystallis-Grown Tissue"
+ C_MEDIUM_AUTO_REPAIR_5:0 "Medium Crystallis-Grown Tissue"
+ C_LARGE_AUTO_REPAIR_5:0 "Large Crystallis-Grown Tissue"
+ 
+# Crystallis-Laced Targeting Matrix
+ 
+ tech_c_crystalis_targeting_matrix_1:0 "Crystal-Laced Targeting Matrix I"
+ tech_c_crystalis_targeting_matrix_1_desc:0 "Improves ship accuracy by using special crystalis wafers in the targeting systems.\n\n"
+ 
+ tech_c_crystalis_targeting_matrix_2:0 "Crystal-Focused Targeting Matrix II"
+ tech_c_crystalis_targeting_matrix_2_desc:0 "Improves ship accuracy by using special crystalis wafers in the targeting systems.\n\n"
+ 
+ tech_c_crystalis_targeting_matrix_3:0 "Crystal-Isotropic Targeting Matrix III"
+ tech_c_crystalis_targeting_matrix_3_desc:0 "Improves ship accuracy by using special crystalis wafers in the targeting systems.\n\n"
+ 
+ tech_c_crystalis_targeting_matrix_4:0 "Crystal-Anisotropic Targeting Matrix IV"
+ tech_c_crystalis_targeting_matrix_4_desc:0 "Improves ship accuracy by using special crystalis wafers in the targeting systems.\n\n"
+ 
+ tech_c_crystalis_targeting_matrix_5:0 "Crystal-Refractive Targeting Matrix V"
+ tech_c_crystalis_targeting_matrix_5_desc:0 "Improves ship accuracy by using special crystalis wafers in the targeting systems.\n\n"
+ 
+ C_TARGETTING_COMPUTER_1:0 "Crystal-Laced Matrix"
+ C_TARGETTING_COMPUTER_1_DESC:0 "This targeting computer has been enhanced with Crystallis-infused wafers allowing the ship to fire more accurately at targets."
+ 
+ C_TARGETTING_COMPUTER_2:0 "Crystal-Focused Matrix"
+ C_TARGETTING_COMPUTER_2_DESC:0 "This targeting computer has been enhanced with Crystallis-infused wafers allowing the ship to fire more accurately at targets."
+ 
+ C_TARGETTING_COMPUTER_3:0 "Crystal-Isotropic Matrix"
+ C_TARGETTING_COMPUTER_3_DESC:0 "This targeting computer has been enhanced with Crystallis-infused wafers allowing the ship to fire more accurately at targets."
+ 
+ C_TARGETTING_COMPUTER_4:0 "Crystal-Anisotropic Matrix"
+ C_TARGETTING_COMPUTER_4_DESC:0 "This targeting computer has been enhanced with Crystallis-infused wafers allowing the ship to fire more accurately at targets."
+ 
+ C_TARGETTING_COMPUTER_5:0 "Crystal-Refractive Matrix"
+ C_TARGETTING_COMPUTER_5_DESC:0 "This targeting computer has been enhanced with Crystallis-infused wafers allowing the ship to fire more accurately at targets."
+
+ C_SMALL_TARGETING_COMPUTER_1:0 "Small Crystal-Laced Matrix"
+ C_MEDIUM_TARGETING_COMPUTER_1:0 "Medium Crystal-Laced Matrix"
+ C_LARGE_TARGETING_COMPUTER_1:0 "Large Crystal-Laced Matrix"
+ 
+ C_SMALL_TARGETING_COMPUTER_2:0 "Small Crystal-Focused Matrix"
+ C_MEDIUM_TARGETING_COMPUTER_2:0 "Medium Crystal-Focused Matrix"
+ C_LARGE_TARGETING_COMPUTER_2:0 "Large Crystal-Focused Matrix"
+ 
+ C_SMALL_TARGETING_COMPUTER_3:0 "Small Crystal-Isotropic Matrix"
+ C_MEDIUM_TARGETING_COMPUTER_3:0 "Medium Crystal-Isotropic Matrix"
+ C_LARGE_TARGETING_COMPUTER_3:0 "Large Crystal-Isotropic Matrix"
+ 
+ C_SMALL_TARGETING_COMPUTER_4:0 "Small Crystal-Anisotropic Matrix"
+ C_MEDIUM_TARGETING_COMPUTER_4:0 "Medium Crystal-Anisotropic Matrix"
+ C_LARGE_TARGETING_COMPUTER_4:0 "Large Crystal-Anisotropic Matrix"
+ 
+ C_SMALL_TARGETING_COMPUTER_5:0 "Small Crystal-Refractive Matrix"
+ C_MEDIUM_TARGETING_COMPUTER_5:0 "Medium Crystal-Refractive Matrix"
+ C_LARGE_TARGETING_COMPUTER_5:0 "Large Crystal-Refractive Matrix"
+ 
+# Crystallis-Forged Plating
+ 
+ tech_c_crystal_armor_3:0 "Crystal-Forged Plating II"
+ tech_c_crystal_armor_3_desc:0 "Introducing even more Crystalline matter into the forging process further improves the ultra-hard qualities of Crystallis-infused metals.\n\n"
+ 
+ tech_c_crystal_armor_4:0 "Crystal-Alloy Plating III"
+ tech_c_crystal_armor_4_desc:0 "Introducing even more Crystalline matter into the forging process further improves the ultra-hard qualities of Crystallis-infused metals.\n\n"
+ 
+ tech_c_crystal_armor_5:0 "Crystal-Extrusion Plating IV"
+ tech_c_crystal_armor_5_desc:0 "Introducing even more Crystalline matter into the forging process further improves the ultra-hard qualities of Crystallis-infused metals.\n\n"
+ 
+ tech_c_crystal_armor_6:0 "Crystal-Network Plating V"
+ tech_c_crystal_armor_6_desc:0 "Introducing even more Crystalline matter into the forging process further improves the ultra-hard qualities of Crystallis-infused metals.\n\n"
+ 
+ C_CRYSTAL_ARMOR_3:0 "Crystal-Forged Plating"
+ C_CRYSTAL_ARMOR_3_DESC:0 "Further modifications to the process of forging the crystalline alloy further improves its durability."
+ 
+ C_CRYSTAL_ARMOR_4:0 "Crystal-Alloy Plating"
+ C_CRYSTAL_ARMOR_4_DESC:0 "Further modifications to the process of forging the crystalline alloy further improves its durability."
+ 
+ C_CRYSTAL_ARMOR_5:0 "Crystal-Extrusion Plating"
+ C_CRYSTAL_ARMOR_5_DESC:0 "Further modifications to the process of forging the crystalline alloy further improves its durability."
+ 
+ C_CRYSTAL_ARMOR_6:0 "Crystal-Network Plating"
+ C_CRYSTAL_ARMOR_6_DESC:0 "Further modifications to the process of forging the crystalline alloy further improves its durability."
+ 
+ C_SMALL_CRYSTAL_ARMOR_3:0 "Small Crystal-Forged Plating"
+ C_MEDIUM_CRYSTAL_ARMOR_3:0 "Medium Crystal-Forged Plating"
+ C_LARGE_CRYSTAL_ARMOR_3:0 "Large Crystal-Forged Plating"
+ 
+ C_SMALL_CRYSTAL_ARMOR_4:0 "Small Crystal-Alloy Plating"
+ C_MEDIUM_CRYSTAL_ARMOR_4:0 "Medium Crystal-Alloy Plating"
+ C_LARGE_CRYSTAL_ARMOR_4:0 "Large Crystal-Alloy Plating"
+ 
+ C_SMALL_CRYSTAL_ARMOR_5:0 "Small Crystal-Extrusion Plating"
+ C_MEDIUM_CRYSTAL_ARMOR_5:0 "Medium Crystal-Extrusion Plating"
+ C_LARGE_CRYSTAL_ARMOR_5:0 "Large Crystal-Extrusion Plating"
+ 
+ C_SMALL_CRYSTAL_ARMOR_6:0 "Small Crystal-Network Plating"
+ C_MEDIUM_CRYSTAL_ARMOR_6:0 "Medium Crystal-Network Plating"
+ C_LARGE_CRYSTAL_ARMOR_6:0 "Large Crystal-Network Plating"
+ 
+# Crystal-Reinforced Armor
+ tech_c_ship_armor_6:0 "Crystal-Neutronium Armor VI"
+ tech_c_ship_armor_6_desc:0 "By infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour.\n\n"
+ 
+ tech_c_ship_armor_7:0 "Crystal-Reinforced Armor VII"
+ tech_c_ship_armor_7_desc:0 "By further infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour.\n\n"
+ 
+ tech_c_ship_armor_8:0 "Crystal-Reactive Armor VIII"
+ tech_c_ship_armor_8_desc:0 "By further infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour.\n\n"
+ 
+ tech_c_ship_armor_9:0 "Crystal-Ablative Armor IX"
+ tech_c_ship_armor_9_desc:0 "By further infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour.\n\n"
+ 
+ tech_c_ship_armor_10:0 "Crystal-Garanthium Armor X"
+ tech_c_ship_armor_10_desc:0 "By further infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour.\n\n"
+ 
+ C_ARMOR_6:0 "Crystal-Neutronium Armor"
+ C_ARMOR_6_DESC:0 "By infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour."
+ 
+ C_ARMOR_7:0 "Crystal-Reinforced Armor"
+ C_ARMOR_7_DESC:0 "By further infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour."
+ 
+ C_ARMOR_8:0 "Crystal-Reactive Armor"
+ C_ARMOR_8_DESC:0 "By further infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour."
+ 
+ C_ARMOR_9:0 "Crystal-Ablative Armor"
+ C_ARMOR_9_DESC:0 "By further infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour."
+ 
+ C_ARMOR_10:0 "Crystal-Garanthium Armor"
+ C_ARMOR_10_DESC:0 "By further infusing crystalline into the molecular structure of neutronium it was possible to make even stronger and more durable armour."
+ 
+ C_SMALL_ARMOR_6:0 "Small Crystal-Neutronium Armor"
+ C_MEDIUM_ARMOR_6:0 "Medium Crystal-Neutronium Armor"
+ C_LARGE_ARMOR_6:0 "Large Crystal-Neutronium Armor"
+
+ C_SMALL_ARMOR_7:0 "Small Crystal-Reinforced Armor"
+ C_MEDIUM_ARMOR_7:0 "Medium Crystal-Reinforced Armor"
+ C_LARGE_ARMOR_7:0 "Large Crystal-Reinforced Armor"
+
+ C_SMALL_ARMOR_8:0 "Small Crystal-Reactive Armor"
+ C_MEDIUM_ARMOR_8:0 "Medium Crystal-Reactive Armor"
+ C_LARGE_ARMOR_8:0 "Large Crystal-Reactive Armor"
+
+ C_SMALL_ARMOR_9:0 "Small Crystal-Ablative Armor"
+ C_MEDIUM_ARMOR_9:0 "Medium Crystal-Ablative Armor"
+ C_LARGE_ARMOR_9:0 "Large Crystal-Ablative Armor"
+
+ C_SMALL_ARMOR_10:0 "Small Crystal-Garanthium Armor"
+ C_MEDIUM_ARMOR_10:0 "Medium Crystal-Garanthium Armor"
+ C_LARGE_ARMOR_10:0 "Large Crystal-Garanthium Armor"
+ 
+ #######################################
+ ### REACTORS
+ #######################################
+ 
+ tech_c_reactor_6:0 "Crystallis Zero-Point Reactor VI"
+ tech_c_reactor_6_desc:0 "Through quantum entangling crystallis elements into the zero-point reactor these reactors extract vacuum energy at a much greater speed, providing an almost limitless supply of power.\n\n"
+ 
+ tech_c_reactor_7:0 "Crystallis Dimentional Reactor VII"
+ tech_c_reactor_7_desc:0 "Crystallis induced dimentional tearing allows this reactor to channel energies from multiple dimentions. \n\n"
+ 
+ tech_c_reactor_8:0 "Crystallis Naquadria Reactor VIII"
+ tech_c_reactor_8_desc:0 "A fusion of Crystallis and the newly discovered synthetic element Naquadria allows for power generation far above what was previously possible!.\n\n"
+ 
+ tech_c_reactor_9:0 "Crystallis Gravity-Wave Reactor IX"
+ tech_c_reactor_9_desc:0 "By collapsing a Crystallis core we've have managed to create a gravity hole in space-time. The waves emanating from this minuscule hole can be collected as raw energy.\n\n"
+ 
+ tech_c_reactor_10:0 "Crystallis Singularity Reactor X"
+ tech_c_reactor_10_desc:0 "A breakthrough in blackhole theory has allowed us to collapse a much denser crystallis core. Using powerful magnetic systems we've managed to stabilise this collapsing core into a micro-singularity, providing us with near unlimited power!\n\n"
+ 
+ C_CORVETTE_ZERO_POINT_REACTOR_6:0 "Crystallis Zero-Point Reactor"
+ C_DESTROYER_ZERO_POINT_REACTOR_6:0 "Crystallis Zero-Point Reactor"
+ C_CRUISER_ZERO_POINT_REACTOR_6:0 "Crystallis Zero-Point Reactor"
+ C_BATTLESHIP_ZERO_POINT_REACTOR_6:0 "Crystallis Zero-Point Reactor"
+ C_TITAN_ZERO_POINT_REACTOR_6:0 "Crystallis Zero-Point Reactor"
+ 
+ TECH_UNLOCK_C_REACTOR_6_TITLE:0 "§HUnlocks Component:§! Crystallis Zero-Point Reactor"
+ TECH_UNLOCK_C_REACTOR_6_DESC:0 "Through quantum entangling crystallis elements into the zero-point reactor these reactors extract vacuum energy at a much greater speed, providing an almost limitless supply of power."
+ 
+ C_CORVETTE_ZERO_POINT_REACTOR_7:0 "Crystallis Dimentional Reactor"
+ C_DESTROYER_ZERO_POINT_REACTOR_7:0 "Crystallis Dimentional Reactor"
+ C_CRUISER_ZERO_POINT_REACTOR_7:0 "Crystallis Dimentional Reactor"
+ C_BATTLESHIP_ZERO_POINT_REACTOR_7:0 "Crystallis Dimentional Reactor"
+ C_TITAN_ZERO_POINT_REACTOR_7:0 "Crystallis Dimentional Reactor"
+ 
+ TECH_UNLOCK_C_REACTOR_7_TITLE:0 "§HUnlocks Component:§! Dimentional Reactor"
+ TECH_UNLOCK_C_REACTOR_7_DESC:0 "Crystallis induced dimentional tearing allows this reactor to channel energies from multiple dimentions."
+ 
+ C_CORVETTE_ZERO_POINT_REACTOR_8:0 "Crystallis Naquadria Reactor"
+ C_DESTROYER_ZERO_POINT_REACTOR_8:0 "Crystallis Naquadria Reactor"
+ C_CRUISER_ZERO_POINT_REACTOR_8:0 "Crystallis Naquadria Reactor"
+ C_BATTLESHIP_ZERO_POINT_REACTOR_8:0 "Crystallis Naquadria Reactor"
+ C_TITAN_ZERO_POINT_REACTOR_8:0 "Crystallis Naquadria Reactor"
+ 
+ TECH_UNLOCK_C_REACTOR_8_TITLE:0 "§HUnlocks Component:§! Naquadria Reactor"
+ TECH_UNLOCK_C_REACTOR_8_DESC:0 "A fusion of Crystallis and the newly discovered synthetic element Naquadria allows for power generation far above what was previously possible!."
+ 
+ C_CORVETTE_ZERO_POINT_REACTOR_9:0 "Crystallis Gravity-Wave Reactor"
+ C_DESTROYER_ZERO_POINT_REACTOR_9:0 "Crystallis Gravity-Wave Reactor"
+ C_CRUISER_ZERO_POINT_REACTOR_9:0 "Crystallis Gravity-Wave Reactor"
+ C_BATTLESHIP_ZERO_POINT_REACTOR_9:0 "Crystallis Gravity-Wave Reactor"
+ C_TITAN_ZERO_POINT_REACTOR_9:0 "Crystallis Gravity-Wave Reactor"
+ 
+ TECH_UNLOCK_C_REACTOR_9_TITLE:0 "§HUnlocks Component:§! Gravity-Wave Reactor"
+ TECH_UNLOCK_C_REACTOR_9_DESC:0 "By collapsing a Crystallis core we've have managed to create a gravity hole in space-time. The waves emanating from this minuscule hole can be collected as raw energy."
+ 
+ C_CORVETTE_ZERO_POINT_REACTOR_10:0 "Crystallis Singularity Reactor"
+ C_DESTROYER_ZERO_POINT_REACTOR_10:0 "Crystallis Singularity Reactor"
+ C_CRUISER_ZERO_POINT_REACTOR_10:0 "Crystallis Singularity Reactor"
+ C_BATTLESHIP_ZERO_POINT_REACTOR_10:0 "Crystallis Singularity Reactor"
+ C_TITAN_ZERO_POINT_REACTOR_10:0 "Crystallis Singularity Reactor"
+ 
+ TECH_UNLOCK_C_REACTOR_10_TITLE:0 "§HUnlocks Component:§! Singularity Reactor"
+ TECH_UNLOCK_C_REACTOR_10_DESC:0 "A breakthrough in blackhole theory has allowed us to collapse a much denser crystallis core. Using powerful magnetic systems we've managed to stabilise this collapsing core into a micro-singularity, providing us with near unlimited power!"
+ 
+ C_STARBASE_FISSION_REACTOR_X:0 "Crystallis Singularity Reactor"
+ C_ION_CANNON_DARK_MATTER_REACTOR_X:0 "Crystallis Singularity Reactor"
+ C_COLOSSUS_ZERO_POINT_REACTOR_X:0 "Crystallis Singularity Reactor"
+ 
+ PLATFORM_MEDIUM_DARK_MATTER_REACTOR:0 "Station Dark Matter Reactor"
+ PLATFORM_LARGE_DARK_MATTER_REACTOR:0 "Fortress Dark Matter Reactor"
+ 
+ PLATFORM_FISSION_REACTOR:0 "Platform Fission Reactor"
+ PLATFORM_MEDIUM_FISSION_REACTOR:0 "Station Fission Reactor"
+ PLATFORM_LARGE_FISSION_REACTOR:0 "Fortress Fission Reactor"
+ 
+ PLATFORM_FUSION_REACTOR:0 "Platform Fusion Reactor"
+ PLATFORM_MEDIUM_FUSION_REACTOR:0 "Station Fusion Reactor"
+ PLATFORM_LARGE_FUSION_REACTOR:0 "Fortress Fusion Reactor"
+ 
+ PLATFORM_COLD_FUSION_REACTOR:0 "Platform Cold Fusion Reactor"
+ PLATFORM_MEDIUM_COLD_FUSION_REACTOR:0 "Station Cold Fusion Reactor"
+ PLATFORM_LARGE_COLD_FUSION_REACTOR:0 "Fortress Cold Fusion Reactor"
+ 
+ PLATFORM_ZERO_POINT_REACTOR:0 "Platform Zero Point Reactor"
+ PLATFORM_MEDIUM_ZERO_POINT_REACTOR:0 "Station Zero Point Reactor"
+ PLATFORM_LARGE_ZERO_POINT_REACTOR:0 "Fortress Zero Point Reactor"
+ 
+ PLATFORM_ANTIMATTER_REACTOR:0 "Platform Antimatter Reactor"
+ PLATFORM_MEDIUM_ANTIMATTER_REACTOR:0 "Station Antimatter Reactor"
+ PLATFORM_LARGE_ANTIMATTER_REACTOR:0 "Fortress Antimatter Reactor"
+
+
+ C_PLATFORM_SMALL_ZERO_POINT_REACTOR_6:0 "Platform Zero-Point Reactor"
+ C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_6:0 "Station Zero-Point Reactor"
+ C_PLATFORM_LARGE_ZERO_POINT_REACTOR_6:0 "Fortress Zero-Point Reactor"
+ 
+ C_PLATFORM_SMALL_ZERO_POINT_REACTOR_7:0 "Platform Dimentional Reactor"
+ C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_7:0 "Station Dimentional Reactor"
+ C_PLATFORM_LARGE_ZERO_POINT_REACTOR_7:0 "Fortress Dimentional Reactor"
+ 
+ C_PLATFORM_SMALL_ZERO_POINT_REACTOR_8:0 "Platform Naquadria Reactor"
+ C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_8:0 "Station Naquadria Reactor"
+ C_PLATFORM_LARGE_ZERO_POINT_REACTOR_8:0 "Fortress Naquadria Reactor"
+ 
+ C_PLATFORM_SMALL_ZERO_POINT_REACTOR_9:0 "Platform Gravity-Wave Reactor"
+ C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_9:0 "Station Gravity-Wave Reactor"
+ C_PLATFORM_LARGE_ZERO_POINT_REACTOR_9:0 "Fortress Gravity-Wave Reactor"
+ 
+ C_PLATFORM_SMALL_ZERO_POINT_REACTOR_10:0 "Platform Singularity Reactor"
+ C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_10:0 "Station Singularity Reactor"
+ C_PLATFORM_LARGE_ZERO_POINT_REACTOR_10:0 "Fortress Singularity Reactor"
+ 
+# Crystallis-Lenzing Shield Array VI
+
+ tech_c_shields_6:0 "Experimental Phase-Shields VI"
+ tech_c_shields_6_desc:0 "New phase-shield technology makes it possible to make even stronger shields.\n\n"
+ 
+ tech_c_shields_7:0 "Improved Phase-Shields VII"
+ tech_c_shields_7_desc:0 "Further advancements in phase-shield technology allows us to make even tougher shields.\n\n"
+ 
+ tech_c_shields_8:0 "Advanced Phase-Shields VIII"
+ tech_c_shields_8_desc:0 "Further advancements in phase-shield technology allows us to make even tougher shields.\n\n"
+ 
+ tech_c_shields_9:0 "Lensing Phase-Shields IX"
+ tech_c_shields_9_desc:0 "Applying lensing techniques to phase-shield emitters allows us to make even tougher shields.\n\n"
+ 
+ tech_c_shields_10:0 "Energized Phase-Shields X"
+ tech_c_shields_10_desc:0 "Applying energized frames to phase-shield emitters allows us to make even tougher shields.\n\n"
+ 
+ 
+ tech_c_shields_11:0 "Experimental Psionic Barrier VI"
+ tech_c_shields_11_desc:0 "New psionic barrier technology makes it possible to make even stronger shields.\n\n"
+ 
+ tech_c_shields_12:0 "Improved Psionic Barrier VII"
+ tech_c_shields_12_desc:0 "Further advancements in psionic barrier technology allows us to make even tougher shields.\n\n"
+ 
+ tech_c_shields_13:0 "Advanced Psionic Barrier VIII"
+ tech_c_shields_13_desc:0 "Further advancements in psionic barrier technology allows us to make even tougher shields.\n\n"
+ 
+ tech_c_shields_14:0 "Living Psionic Barrier IX"
+ tech_c_shields_14_desc:0 "By further interfacing with the psionic barrier enhancers we can improve the toughness of our psionic shields.\n\n"
+ 
+ tech_c_shields_15:0 "Omni Psionic Barrier X"
+ tech_c_shields_15_desc:0 "Further interfacing with the barrier enhancers has allowed the enhancers to have a will of their own, shielding us and it from any potential threat.\n\n"
+ 
+ 
+ tech_c_shields_16:0 "Experimental Force-Field VI"
+ tech_c_shields_16_desc:0 "New force-field technology makes it possible to make even stronger shields.\n\n"
+ 
+ tech_c_shields_17:0 "Improved Force-Field VII"
+ tech_c_shields_17_desc:0 "Further advancements in force-field technology allows us to make even tougher shields.\n\n"
+ 
+ tech_c_shields_18:0 "Advanced Force-Field VIII"
+ tech_c_shields_18_desc:0 "Further advancements in force-field technology allows us to make even tougher shields.\n\n"
+ 
+ tech_c_shields_19:0 "Stasis Force-Field IX"
+ tech_c_shields_19_desc:0 "Applying stasis technology to force-field arrays allows us to make even tougher shields that suspend enemy fire in space.\n\n"
+ 
+ tech_c_shields_20:0 "Gravimetric Force-Field X"
+ tech_c_shields_20_desc:0 "Applying gravimetric manipulators to force-field arrays allows us to make even tougher shields that act as a solid wall of gravity.\n\n"
+ 
+ 
+ C_SHIELD_6:0 "Experimental Phase-Shields"
+ C_SHIELD_6_DESC:0 "New phase-shield technology makes it possible to make even stronger shields."
+ 
+ C_SHIELD_7:0 "Improved Phase-Shields"
+ C_SHIELD_7_DESC:0 "Further advancements in phase-shield technology allows us to make even tougher shields."
+ 
+ C_SHIELD_8:0 "Advanced Phase-Shields"
+ C_SHIELD_8_DESC:0 "Further advancements in phase-shield technology allows us to make even tougher shields."
+ 
+ C_SHIELD_9:0 "Lensing Phase-Shields"
+ C_SHIELD_9_DESC:0 "Applying lensing techniques to phase-shield emitters allows us to make even tougher shields."
+ 
+ C_SHIELD_10:0 "Energized Phase-Shields"
+ C_SHIELD_10_DESC:0 "Applying energized frames to phase-shield emitters allows us to make even tougher shields."
+ 
+ 
+ C_SHIELD_11:0 "Experimental Psionic Barrier"
+ C_SHIELD_11_DESC:0 "New psionic barrier technology makes it possible to make even stronger shields."
+ 
+ C_SHIELD_12:0 "Improved Psionic Barrier"
+ C_SHIELD_12_DESC:0 "Further advancements in psionic barrier technology allows us to make even tougher shields."
+ 
+ C_SHIELD_13:0 "Advanced Psionic Barrier"
+ C_SHIELD_13_DESC:0 "Further advancements in psionic barrier technology allows us to make even tougher shields."
+ 
+ C_SHIELD_14:0 "Living Psionic Barrier"
+ C_SHIELD_14_DESC:0 "By further interfacing with the psionic barrier enhancers we can improve the toughness of our psionic shields."
+ 
+ C_SHIELD_15:0 "Omni Psionic Barrier"
+ C_SHIELD_15_DESC:0 "Further interfacing with the barrier enhancers has allowed the enhancers to have a will of their own, shielding us and it from any potential threat."
+ 
+ 
+ C_SHIELD_16:0 "Experimental Force-Field"
+ C_SHIELD_16_DESC:0 "New force-field technology makes it possible to make even stronger shields."
+ 
+ C_SHIELD_17:0 "Improved Force-Field"
+ C_SHIELD_17_DESC:0 "Further advancements in force-field technology allow us to make even tougher shields."
+ 
+ C_SHIELD_18:0 "Advanced Force-Field"
+ C_SHIELD_18_DESC:0 "Further advancements in force-field technology allow us to make even tougher shields."
+ 
+ C_SHIELD_19:0 "Stasis Force-Field"
+ C_SHIELD_19_DESC:0 "Applying stasis technology to force-field arrays allows us to make even tougher shields that suspend enemy fire in space."
+ 
+ C_SHIELD_20:0 "Gravimetric Force-Field"
+ C_SHIELD_20_DESC:0 "Applying gravimetric manipulators to force-field arrays allows us to make even tougher shields that act as a solid wall of gravity."
+ 
+ C_SMALL_SHIELD_6:0 "Small Experimental Phase-Shields"
+ C_MEDIUM_SHIELD_6:0 "Medium Experimental Phase-Shields"
+ C_LARGE_SHIELD_6:0 "Large Experimental Phase-Shields"
+
+ C_SMALL_SHIELD_7:0 "Small Improved Phase-Shields"
+ C_MEDIUM_SHIELD_7:0 "Medium Improved Phase-Shields"
+ C_LARGE_SHIELD_7:0 "Large Improved Phase-Shields"
+
+ C_SMALL_SHIELD_8:0 "Small Advanced Phase-Shields"
+ C_MEDIUM_SHIELD_8:0 "Medium Advanced Phase-Shields"
+ C_LARGE_SHIELD_8:0 "Large Advanced Phase-Shields"
+
+ C_SMALL_SHIELD_9:0 "Small Lensing Phase-Shields"
+ C_MEDIUM_SHIELD_9:0 "Medium Lensing Phase-Shields"
+ C_LARGE_SHIELD_9:0 "Large Lensing Phase-Shields"
+
+ C_SMALL_SHIELD_10:0 "Small Energized Phase-Shields"
+ C_MEDIUM_SHIELD_10:0 "Medium Energized Phase-Shields"
+ C_LARGE_SHIELD_10:0 "Large Energized Phase-Shields"
+ 
+ C_SMALL_SHIELD_11:0 "Small Experimental Psionic Barrier"
+ C_MEDIUM_SHIELD_11:0 "Medium Experimental Psionic Barrier"
+ C_LARGE_SHIELD_11:0 "Large Experimental Psionic Barrier"
+
+ C_SMALL_SHIELD_12:0 "Small Improved Psionic Barrier"
+ C_MEDIUM_SHIELD_12:0 "Medium Improved Psionic Barrier"
+ C_LARGE_SHIELD_12:0 "Large Improved Psionic Barrier"
+
+ C_SMALL_SHIELD_13:0 "Small Advanced Psionic Barrier"
+ C_MEDIUM_SHIELD_13:0 "Medium Advanced Psionic Barrier"
+ C_LARGE_SHIELD_13:0 "Large Advanced Psionic Barrier"
+
+ C_SMALL_SHIELD_14:0 "Small Living Psionic Barrier"
+ C_MEDIUM_SHIELD_14:0 "Medium Living Psionic Barrier"
+ C_LARGE_SHIELD_14:0 "Large Living Psionic Barrier"
+
+ C_SMALL_SHIELD_15:0 "Small Omni Psionic Barrier"
+ C_MEDIUM_SHIELD_15:0 "Medium Omni Psionic Barrier"
+ C_LARGE_SHIELD_15:0 "Large Omni Psionic Barrier"
+ 
+ C_SMALL_SHIELD_16:0 "Small Experimental Force-Field"
+ C_MEDIUM_SHIELD_16:0 "Medium Experimental Force-Field"
+ C_LARGE_SHIELD_16:0 "Large Experimental Force-Field"
+
+ C_SMALL_SHIELD_17:0 "Small Improved Force-Field"
+ C_MEDIUM_SHIELD_17:0 "Medium Improved Force-Field"
+ C_LARGE_SHIELD_17:0 "Large Improved Force-Field"
+
+ C_SMALL_SHIELD_18:0 "Small Advanced Force-Field"
+ C_MEDIUM_SHIELD_18:0 "Medium Advanced Force-Field"
+ C_LARGE_SHIELD_18:0 "Large Advanced Force-Field"
+
+ C_SMALL_SHIELD_19:0 "Small Stasis Force-Field"
+ C_MEDIUM_SHIELD_19:0 "Medium Stasis Force-Field"
+ C_LARGE_SHIELD_19:0 "Large Stasis Force-Field"
+
+ C_SMALL_SHIELD_20:0 "Small Omni Psionic Barrier"
+ C_MEDIUM_SHIELD_20:0 "Medium Omni Psionic Barrier"
+ C_LARGE_SHIELD_20:0 "Large Omni Psionic Barrier"
+ 
+ # science Lab
+ tech_c_deep_space_lab_1:0 "Deep Space Science Lab I"
+ tech_c_deep_space_lab_1_desc:0 "Improving the science labs on our science vessels would allow us to go boldly where no man has gone before!\n\n"
+ 
+ tech_c_deep_space_lab_2:0 "Deep Space Science Lab II"
+ tech_c_deep_space_lab_2_desc:0 "Improving the science labs on our science vessels would allow us to go boldly where no man has gone before!\n\n"
+ 
+ tech_c_deep_space_lab_3:0 "Deep Space Science Lab III"
+ tech_c_deep_space_lab_3_desc:0 "Improving the science labs on our science vessels would allow us to go boldly where no man has gone before!\n\n"
+ 
+ tech_c_deep_space_lab_4:0 "Deep Space Science Lab IV"
+ tech_c_deep_space_lab_4_desc:0 "Improving the science labs on our science vessels would allow us to go boldly where no man has gone before!\n\n"
+ 
+ tech_c_deep_space_lab_5:0 "Deep Space Science Lab V"
+ tech_c_deep_space_lab_5_desc:0 "Improving the science labs on our science vessels would allow us to go boldly where no man has gone before!\n\n"
+  
+ # SHIP CREW
+ tech_c_robot_crew:0 "Robotic Crew"
+ tech_c_robot_crew_desc:0 "This robotic crew allows for ships to function a lot more efficiently, reducing the maintenance cost. They also do not suffer from extreme g-forces allowing ships to move more harshly."
+ tech_c_droid_crew:0 "Droid Crew"
+ tech_c_droid_crew_desc:0 "This droid crew allows for ships to function a lot more efficiently, reducing the maintenance cost. They also do not suffer from extreme g-forces allowing ships to move more harshly. They are much more efficient than robotic crews"
+ tech_c_synth_crew:0 "AI Crew"
+ tech_c_synth_crew_desc:0 "This AI crew allows for ships to function a lot more efficiently. They also do not suffer from extreme g-forces allowing ships to move more harshly. They are much more efficient than droid crews"
+ 
+ tech_c_psionic_crew_1:0 "Psionic Crew"
+ tech_c_psionic_crew_1_desc:0 "Psionic crews are able to minutely influence the battle using their innate psionic abilities. They can 'feel' the flow of combat and, at times, predict the best course of action."
+ tech_c_psionic_crew_2:0 "Proven Psionic Crew"
+ tech_c_psionic_crew_2_desc:0 "Proven psionic crews have undergone live training to further their abilities in combat. This results in a greater capability to influence the battle using their innate psionic abilities."
+ tech_c_psionic_crew_3:0 "Master Psionic Crew"
+ tech_c_psionic_crew_3_desc:0 "Master psionic crews have nothing left to learn when it comes to feeling the flow of space and time. Their superior psionic abilities allows them to win any battle without fail by predicting every move the enemy makes."
+ 
+ tech_c_clone_crew_1:0 "Clone Crew"
+ tech_c_clone_crew_1_desc:0 "Clone crews are genetically engineered with only one function: fleet operations. This allows them to function without fear, pain and uncertainty. They will function at peak efficiency until the end."
+ tech_c_clone_crew_2:0 "2nd Generation Clone Crew"
+ tech_c_clone_crew_2_desc:0 "2nd Generation clone crews are direct improvements over the older 1st generations. They have more refined senses and situational awareness without them requiring free will."
+ tech_c_clone_crew_3:0 "3rd Generation Clone Crew"
+ tech_c_clone_crew_3_desc:0 "3rd Generation clone crews have almost all their brain functions custom designed for absolute loyalty and performance. They are the pinnacle of cloning and some say this is the best our species can ever achieve."
+ 
+ tech_c_purifier_crew_1:0 "Purifier Crew"
+ tech_c_purifier_crew_1_desc:0 "A specialized crew dedicated to the extermination of xenos across the galaxy."
+ tech_c_purifier_crew_2:0 "Driven Purifier Crew"
+ tech_c_purifier_crew_2_desc:0 "A specialized and highly driven crew dedicated to the extermination of xenos across the galaxy."
+ tech_c_purifier_crew_3:0 "Fanatic Purifier Crew"
+ tech_c_purifier_crew_3_desc:0 "A fanatic xenophobic crew dedicated to the extermination of xenos across the galaxy. They will stop at nothing until everything is dead."
+ 
+ tech_c_alien_crew_1:0 "Alien Crew"
+ tech_c_alien_crew_1_desc:0 "A contingent of aliens working together allowing multiple specialities to increase ship performance."
+ tech_c_alien_crew_2:0 "Medium Alien Crew"
+ tech_c_alien_crew_2_desc:0 "A larger contingent of aliens working together allowing multiple specialities to increase ship performance."
+ tech_c_alien_crew_3:0 "Large Alien Crew"
+ tech_c_alien_crew_3_desc:0 "A large crew contingent of aliens working together allowing multiple specialities to increase ship performance."
+ 
+ tech_c_civilian_crew_1:0 "Trained Crew"
+ tech_c_civilian_crew_1_desc:0 "A highly trained crew of qualified candidates from our academies."
+ tech_c_civilian_crew_2:0 "Experienced Ship Crew"
+ tech_c_civilian_crew_2_desc:0 "An experienced crew of highly qualified members of your society."
+ tech_c_civilian_crew_3:0 "Elite Ship Crew"
+ tech_c_civilian_crew_3_desc:0 "An elite crew of highly qualified members of your society."
+ 
+ tech_c_volunteer_crew_1:0 "Small Volunteer Crew"
+ tech_c_volunteer_crew_1_desc:0 "A small group of volunteers can work as part of the ships crew and take on minor roles, allowing the rest of the crew to focus on more specialised tasks."
+ tech_c_volunteer_crew_2:0 "Medium Volunteer Crew"
+ tech_c_volunteer_crew_2_desc:0 "A larger group of volunteers can work as part of the ships crew and take on minor roles, allowing the rest of the crew to focus on more specialised tasks."
+ tech_c_volunteer_crew_3:0 "Large Volunteer Crew"
+ tech_c_volunteer_crew_3_desc:0 "A large and well advised group of volunteers can work as part of the ships crew and take on minor roles, allowing the rest of the crew to focus on more specialised tasks."
+ 
+ tech_c_slave_crew_1:0 "Slave Crew"
+ tech_c_slave_crew_1_desc:0 "A group of slaves from your last battle can be used as part of the crew to cheaply do the tasks that no one else wants to do."
+ tech_c_slave_crew_2:0 "Medium Slave Crew"
+ tech_c_slave_crew_2_desc:0 "A medium group of slaves from your last conquest can be used as part of the crew to cheaply do the tasks that no one else wants to do."
+ tech_c_slave_crew_3:0 "Large Slave Crew"
+ tech_c_slave_crew_3_desc:0 "A large group of disposable slaves from your last conquest can be used as part of the crew to cheaply do the tasks that no one else wants to do."
+ 
+ 
+ TECH_UNLOCK_PURIFIER_CREW_TITLE:0 "§HUnlocks Component:§! $C_CREW_10$"
+ TECH_UNLOCK_PURIFIER_CREW_DESC:0 "$C_CREW_10_DESC$\n"
+ 
+ TECH_UNLOCK_ALIEN_CREW_TITLE:0 "§HUnlocks Component:§! $C_CREW_13$"
+ TECH_UNLOCK_ALIEN_CREW_DESC:0 "$C_CREW_13_DESC$\n"
+ 
+ TECH_UNLOCK_AI_CREW_TITLE:0 "§HUnlocks Component:§! $C_CREW_3$"
+ TECH_UNLOCK_AI_CREW_DESC:0 "$C_CREW_3_DESC$\n"
+ 
+ TECH_UNLOCK_PSI_CREW_TITLE:0 "§HUnlocks Component:§! $C_CREW_4$"
+ TECH_UNLOCK_PSI_CREW_DESC:0 "$C_CREW_4_DESC$\n"
+ 
+ TECH_UNLOCK_SLAVE_CREW_TITLE:0 "§HUnlocks Component:§! $C_CREW_22$"
+ TECH_UNLOCK_SLAVE_CREW_DESC:0 "$C_CREW_22_DESC$\n"
+ 
+ TECH_UNLOCK_CLONE_CREW_TITLE:0 "§HUnlocks Component:§! $C_CREW_7$"
+ TECH_UNLOCK_CLONE_CREW_DESC:0 "$C_CREW_7_DESC$\n"
+ 
+ 
+ C_EXPERIENCED_CREW:0 "Experienced Crew"
+ C_EXPERIENCED_CREW_DESC:0 "A highly trained crew of qualified candidates from our academies."
+ tech_c_experienced_crew:0 "$C_EXPERIENCED_CREW$ Doctrines"
+ tech_c_experienced_crew_desc:0 "$C_EXPERIENCED_CREW_DESC$"
+ TECH_UNLOCK_EXPERIENCED_CREW_TITLE:0 "§HUnlocks Component:§! $C_EXPERIENCED_CREW$"
+ TECH_UNLOCK_EXPERIENCED_CREW_DESC:0 "$C_EXPERIENCED_CREW_DESC$\n"
+ 
+ C_ELITE_CREW:0 "Elite Crew"
+ C_ELITE_CREW_DESC:0 "An elite crew of highly qualified members of your society."
+ tech_c_elite_crew:0 "$C_ELITE_CREW$ Doctrines"
+ tech_c_elite_crew_desc:0 "$C_ELITE_CREW_DESC$"
+ TECH_UNLOCK_ELITE_CREW_TITLE:0 "§HUnlocks Component:§! $C_ELITE_CREW$"
+ TECH_UNLOCK_ELITE_CREW_DESC:0 "$C_ELITE_CREW_DESC$\n"
+ 
+ C_CREW_1:0 "Robotic Crew"
+ C_CREW_1_DESC:0 "This robotic crew allows for ships to function a lot more efficiently, reducing the maintanance cost. They also do not suffer from extreme g-forces allowing ships to move more harshly."
+ 
+ C_CREW_2:0 "Droid Crew"
+ C_CREW_2_DESC:0 "This droid crew allows for ships to function a lot more efficiently, reducing the maintanance cost. They also do not suffer from extreme g-forces allowing ships to move more harshly. They are much more efficient than robotic crews"
+ 
+ C_CREW_3:0 "AI Crew"
+ C_CREW_3_DESC:0 "This AI crew allows for ships to function a lot more efficiently, reducing the maintanance cost. They also do not suffer from extreme g-forces allowing ships to move more harshly. They are much more efficient than droid crews"
+
+ C_CREW_4:0 "Psionic Crew"
+ C_CREW_4_DESC:0 "Psionic crews are able to minutely influence the battle using their inate psionic abilities. They can 'feel' the flow of combat and, at times, predict the best course of action."
+ 
+ C_CREW_5:0 "Proven Psionic Crew"
+ C_CREW_5_DESC:0 "Proven psionic crews have undergone live training to further their abilities in combat. This results in a greater capability to influence the battle using their inate psionic abilities."
+ 
+ C_CREW_6:0 "Master Psionic Crew"
+ C_CREW_6_DESC:0 "Master psionic crews have nothing left to learn when it comes to feeling the flow of space and time. Their superior psionic abilities allow them to win any battle without fail by predicting every move the enemy makes."
+ 
+ C_CREW_7:0 "Clone Crew"
+ C_CREW_7_DESC:0 "Clone crews are genetically engineered with only one function: fleet operations. This allows them to function without fear, pain and uncertainty. They will function at peak efficiency until the end."
+ 
+ C_CREW_8:0 "2nd Generation Clone Crew"
+ C_CREW_8_DESC:0 "2nd Generation clone crews are direct improvements over the older 1st generations. They have more refined senses and situational awareness without them requiring free will."
+ 
+ C_CREW_9:0 "3rd Generation Clone Crew"
+ C_CREW_9_DESC:0 "3rd Generation clone crews have almost all their brain functions custom designed for absolute loyalty and performance. They are the pinnacle of cloning and some say this is the best our species can ever achieve."
+ 
+ C_CREW_10:0 "Purifier Crew"
+ C_CREW_10_DESC:0 "A specialized crew dedicated to the extermination of xenos across the galaxy."
+ tech_c_purifier_crew_2:0 "Driven Purifier Crew"
+ 
+ C_CREW_11:0 "Driven Purifier Crew"
+ C_CREW_11_DESC:0 "A specialized and highly driven crew dedicated to the extermination of xenos across the galaxy."
+ 
+ C_CREW_12:0 "Fanatic Purifier Crew"
+ C_CREW_12_DESC:0 "A fanatic xenophobic crew dedicated to the extermination of xenos across the galaxy. They will stop at nothing until everything is dead."
+ 
+ C_CREW_13:0 "Alien Crew"
+ C_CREW_13_DESC:0 "A contingent of aliens working together allowing multiple specialities to increase ship performance."
+ 
+ C_CREW_14:0 "Medium Alien Crew"
+ C_CREW_14_DESC:0  "A larger contingent of aliens working together allowing multiple specialities to increase ship performance."
+ 
+ C_CREW_15:0 "Large Alien Crew"
+ C_CREW_15_DESC:0 "A large crew contingent of aliens working together allowing multiple specialities to increase ship performance."
+ 
+ C_CREW_16:0 "Standard Ship Crew"
+ C_CREW_16_DESC:0 "A standard crew of highly qualified members of your society"
+ 
+ C_CREW_17:0 "Experienced Ship Crew"
+ C_CREW_17_DESC:0 "Contracted civilians with specialised training have been allowed to work as part of the crew."
+ 
+ C_CREW_18:0 "Elite Ship Crew"
+ C_CREW_18_DESC:0 "Highly experienced civilian crew with ample training have been contracted to work as part of the crew."
+ 
+ C_CREW_19:0 "Small Volunteer Crew"
+ C_CREW_19_DESC:0 "A small group of volunteers can work as part of the ship’s crew and take on minor roles, allowing the rest of the crew to focus on more specialised tasks."
+ 
+ C_CREW_20:0 "Medium Volunteer Crew"
+ C_CREW_20_DESC:0 "A larger group of volunteers can work as part of the ship’s crew and take on minor roles, allowing the rest of the crew to focus on more specialised tasks."
+ 
+ C_CREW_21:0 "Large Volunteer Crew"
+ C_CREW_21_DESC:0 "A large and well advised group of volunteers can work as part of the ship’s crew and take on minor roles, allowing the rest of the crew to focus on more specialised tasks."
+ 
+ C_CREW_22:0 "Slave Crew"
+ C_CREW_22_DESC:0 "A group of slaves from your last battle can be used as part of the crew to cheaply do the tasks that no one else wants to do."
+ 
+ C_CREW_23:0 "Medium Slave Crew"
+ C_CREW_23_DESC:0 "A medium group of slaves from your last conquest can be used as part of the crew to cheaply do the tasks that no one else wants to do."
+ 
+ C_CREW_24:0 "Large Slave Crew"
+ C_CREW_24_DESC:0 "A large group of disposable slaves from your last conquest can be used as part of the crew to cheaply do the tasks that no one else wants to do."
+ 
+ C_LARGE_CREW_1:0 "Robotic Crew"
+ C_LARGE_CREW_2:0 "Droid Crew"
+ C_LARGE_CREW_3:0 "AI Crew"
+ C_LARGE_CREW_4:0 "Psionic Crew"
+ C_LARGE_CREW_5:0 "Proven Psionic Crew"
+ C_LARGE_CREW_6:0 "Master Psionic Crew"
+ C_LARGE_CREW_7:0 "Clone Crew"
+ C_LARGE_CREW_8:0 "2nd Generation Clone Crew"
+ C_LARGE_CREW_9:0 "3rd Generation Clone Crew"
+ C_LARGE_CREW_10:0 "Purifier Crew"
+ C_LARGE_CREW_11:0 "Driven Purifier Crew"
+ C_LARGE_CREW_12:0 "Fanatic Purifier Crew"
+ C_LARGE_CREW_13:0 "Alien Crew"
+ C_LARGE_CREW_14:0 "Medium Alien Crew"
+ C_LARGE_CREW_15:0 "Large Alien Crew"
+ C_LARGE_CREW_16:0 "Standard Ship Crew"
+ C_LARGE_CREW_17:0 "Trained Civilian Crew"
+ C_LARGE_CREW_18:0 "Experienced Civilian Crew"
+ C_LARGE_CREW_19:0 "Small Volunteer Crew"
+ C_LARGE_CREW_20:0 "Medium Volunteer Crew"
+ C_LARGE_CREW_21:0 "Large Volunteer Crew"
+ C_LARGE_CREW_22:0 "Slave Crew"
+ C_LARGE_CREW_23:0 "Medium Slave Crew"
+ C_LARGE_CREW_24:0 "Large Slave Crew"
+ 
+ 
+ #######################################
+ ### THRUSTERS
+ #######################################
+ 
+ #Armored Thrusters
+ tech_c_thrusters_armor_1:0 "Armoured Thrusters I"
+ tech_c_thrusters_armor_1_desc:0 "These armoured thrusters sacrifice speed and evasion of normal thrusters in favour of layers of heavy armour around the engine core." 
+ 
+ tech_c_thrusters_armor_2:0 "Armoured Thrusters II"
+ tech_c_thrusters_armor_2_desc:0 "These armoured thrusters sacrifice speed and evasion of normal thrusters in favour of layers of advanced heavy armour around the engine core." 
+ 
+ tech_c_thrusters_armor_3:0 "Armoured Thrusters III"
+ tech_c_thrusters_armor_3_desc:0 "These armoured thrusters sacrifice speed and evasion of normal thrusters in favour of layers of super heavy armour around the engine core." 
+ 
+ tech_c_thrusters_armor_4:0 "Armoured Thrusters IV"
+ tech_c_thrusters_armor_4_desc:0 "These armoured thrusters sacrifice speed and evasion of normal thrusters in favour of layers of crystallis-infused heavy armour around the engine core." 
+
+ TECH_UNLOCK_ARMORED_THRUSTERS_1_TITLE:0 "§HUnlocks Component:§! $C_SHIP_THRUSTER_ARMOR_1$\n"
+ TECH_UNLOCK_ARMORED_THRUSTERS_1_DESC:0 "$tech_c_thrusters_armor_1_desc$\n"
+ TECH_UNLOCK_ARMORED_THRUSTERS_2_TITLE:0 "§HUnlocks Component:§! $C_SHIP_THRUSTER_ARMOR_2$\n"
+ TECH_UNLOCK_ARMORED_THRUSTERS_2_DESC:0 "$tech_c_thrusters_armor_2_desc$\n"
+ TECH_UNLOCK_ARMORED_THRUSTERS_3_TITLE:0 "§HUnlocks Component:§! $C_SHIP_THRUSTER_ARMOR_3$\n"
+ TECH_UNLOCK_ARMORED_THRUSTERS_3_DESC:0 "$tech_c_thrusters_armor_3_desc$\n"
+ TECH_UNLOCK_ARMORED_THRUSTERS_4_TITLE:0 "§HUnlocks Component:§! $C_SHIP_THRUSTER_ARMOR_4$\n"
+ TECH_UNLOCK_ARMORED_THRUSTERS_4_DESC:0 "$tech_c_thrusters_armor_4_desc$\n"
+ 
+ C_SHIP_THRUSTER_ARMOR_1:0 "Armoured Thrusters I"
+ C_DESTROYER_SHIP_THRUSTER_ARMOR_1:0 "Armoured Thrusters I"
+ C_CRUISER_SHIP_THRUSTER_ARMOR_1:0 "Armoured Thrusters I"
+ C_BATTLESHIP_SHIP_THRUSTER_ARMOR_1:0 "Armoured Thrusters I"
+ C_TITAN_SHIP_THRUSTER_ARMOR_1:0 "Armoured Thrusters I"
+ C_COLOSSUS_SHIP_THRUSTER_ARMOR_1:0 "Armoured Thrusters I"
+ 
+ C_SHIP_THRUSTER_ARMOR_2:0 "Armoured Thrusters II"
+ C_DESTROYER_SHIP_THRUSTER_ARMOR_2:0 "Armoured Thrusters II"
+ C_CRUISER_SHIP_THRUSTER_ARMOR_2:0 "Armoured Thrusters II"
+ C_BATTLESHIP_SHIP_THRUSTER_ARMOR_2:0 "Armoured Thrusters II"
+ C_TITAN_SHIP_THRUSTER_ARMOR_2:0 "Armoured Thrusters II"
+ C_COLOSSUS_SHIP_THRUSTER_ARMOR_2:0 "Armoured Thrusters II"
+ 
+ C_SHIP_THRUSTER_ARMOR_3:0 "Armoured Thrusters III"
+ C_DESTROYER_SHIP_THRUSTER_ARMOR_3:0 "Armoured Thrusters II"
+ C_CRUISER_SHIP_THRUSTER_ARMOR_3:0 "Armoured Thrusters II"
+ C_BATTLESHIP_SHIP_THRUSTER_ARMOR_3:0 "Armoured Thrusters II"
+ C_TITAN_SHIP_THRUSTER_ARMOR_3:0 "Armoured Thrusters II"
+ C_COLOSSUS_SHIP_THRUSTER_ARMOR_3:0 "Armoured Thrusters II"
+ 
+ C_SHIP_THRUSTER_ARMOR_4:0 "Armoured Thrusters IV"
+ C_DESTROYER_SHIP_THRUSTER_ARMOR_4:0 "Armoured Thrusters IV"
+ C_CRUISER_SHIP_THRUSTER_ARMOR_4:0 "Armoured Thrusters IV"
+ C_BATTLESHIP_SHIP_THRUSTER_ARMOR_4:0 "Armoured Thrusters IV"
+ C_TITAN_SHIP_THRUSTER_ARMOR_4:0 "Armoured Thrusters IV"
+ C_COLOSSUS_SHIP_THRUSTER_ARMOR_4:0 "Armoured Thrusters IV"
+
+ 
+ #Psionic Thrusters
+ tech_c_thrusters_psi_1:0 "Psionic Thrusters I"
+ tech_c_thrusters_psi_1_desc:0 "By harnassing psionic energy and focusing it through the engines the ship is capable of moving faster. The engine also ends up producing a small energy field around the ship which is capable of stopping some incoming damage." 
+ 
+ tech_c_thrusters_psi_2:0 "Psionic Thrusters II"
+ tech_c_thrusters_psi_2_desc:0 "By harnassing more focused psionic energy and focusing it through the engines the ship is capable of moving faster. The engine also ends up producing a small energy field around the ship which is capable of stopping some incoming damage."  
+ 
+ tech_c_thrusters_psi_3:0 "Psionic Thrusters III"
+ tech_c_thrusters_psi_3_desc:0 "By harnassing very intense psionic energy and focusing it through the engines the ship is capable of moving faster. The engine also ends up producing a small energy field around the ship which is capable of stopping some incoming damage."  
+ 
+ tech_c_thrusters_psi_4:0 "Psionic Thrusters IV"
+ tech_c_thrusters_psi_4_desc:0 "By harnassing our collective psionic energy and focusing it through the engines the ship is capable of moving faster. The engine also ends up producing a small energy field around the ship which is capable of stopping some incoming damage."  
+ 
+ TECH_UNLOCK_PSI_THRUSTERS_1_TITLE:0 "§HUnlocks Component:§! $C_SHIP_THRUSTER_PSI_1$\n"
+ TECH_UNLOCK_PSI_THRUSTERS_1_DESC:0 "$tech_c_thrusters_psi_1_desc$\n"
+ TECH_UNLOCK_PSI_THRUSTERS_2_TITLE:0 "§HUnlocks Component:§! $C_SHIP_THRUSTER_PSI_2$\n"
+ TECH_UNLOCK_PSI_THRUSTERS_2_DESC:0 "$tech_c_thrusters_psi_2_desc$\n"
+ TECH_UNLOCK_PSI_THRUSTERS_3_TITLE:0 "§HUnlocks Component:§! $C_SHIP_THRUSTER_PSI_3$\n"
+ TECH_UNLOCK_PSI_THRUSTERS_3_DESC:0 "$tech_c_thrusters_psi_3_desc$\n"
+ TECH_UNLOCK_PSI_THRUSTERS_4_TITLE:0 "§HUnlocks Component:§! $C_SHIP_THRUSTER_PSI_4$\n"
+ TECH_UNLOCK_PSI_THRUSTERS_4_DESC:0 "$tech_c_thrusters_psi_4_desc$\n"
+
+ C_SHIP_THRUSTER_PSI_1:0 "Psionic Thrusters I"
+ C_DESTROYER_SHIP_THRUSTER_PSI_1:0 "Psionic Thrusters I"
+ C_CRUISER_SHIP_THRUSTER_PSI_1:0 "Psionic Thrusters I"
+ C_BATTLESHIP_SHIP_THRUSTER_PSI_1:0 "Psionic Thrusters I"
+ C_TITAN_SHIP_THRUSTER_PSI_1:0 "Psionic Thrusters I"
+ C_COLOSSUS_SHIP_THRUSTER_PSI_1:0 "Psionic Thrusters I"
+ 
+ C_SHIP_THRUSTER_PSI_2:0 "Psionic Thrusters II"
+ C_DESTROYER_SHIP_THRUSTER_PSI_2:0 "Psionic Thrusters II"
+ C_CRUISER_SHIP_THRUSTER_PSI_2:0 "Psionic Thrusters II"
+ C_BATTLESHIP_SHIP_THRUSTER_PSI_2:0 "Psionic Thrusters II"
+ C_TITAN_SHIP_THRUSTER_PSI_2:0 "Psionic Thrusters II"
+ C_COLOSSUS_SHIP_THRUSTER_PSI_2:0 "Psionic Thrusters II"
+ 
+ C_SHIP_THRUSTER_PSI_3:0 "Psionic Thrusters III"
+ C_DESTROYER_SHIP_THRUSTER_PSI_3:0 "Psionic Thrusters II"
+ C_CRUISER_SHIP_THRUSTER_PSI_3:0 "Psionic Thrusters II"
+ C_BATTLESHIP_SHIP_THRUSTER_PSI_3:0 "Psionic Thrusters II"
+ C_TITAN_SHIP_THRUSTER_PSI_3:0 "Psionic Thrusters II"
+ C_COLOSSUS_SHIP_THRUSTER_PSI_3:0 "Psionic Thrusters II"
+ 
+ C_SHIP_THRUSTER_PSI_4:0 "Psionic Thrusters IV"
+ C_DESTROYER_SHIP_THRUSTER_PSI_4:0 "Psionic Thrusters IV"
+ C_CRUISER_SHIP_THRUSTER_PSI_4:0 "Psionic Thrusters IV"
+ C_BATTLESHIP_SHIP_THRUSTER_PSI_4:0 "Psionic Thrusters IV"
+ C_TITAN_SHIP_THRUSTER_PSI_4:0 "Psionic Thrusters IV"
+ C_COLOSSUS_SHIP_THRUSTER_PSI_4:0 "Psionic Thrusters IV"
+ 
+ 
+ #Crystalline-x Sensors
+ tech_c_sensors_5:0 "Crystalline-Prismatic Sensors V"
+ tech_c_sensors_5_desc:0 "By fitting a crystalline prism into the main sensor array we can increase our sensor output. This new configuration also allows us to better monitor enemy ship movement, giving us a clear range advantage!" 
+ 
+ tech_c_sensors_6:0 "Crystalline-Dipyramidal Sensors VI"
+ tech_c_sensors_6_desc:0 "By fitting a crystalline dipyramid into the main sensor array we can increase our sensor output. This new configuration also allows us to better monitor enemy ship movement, giving us a clear range advantage!" 
+
+ tech_c_sensors_7:0 "Crystalline-Tetrahedral Sensors VII"
+ tech_c_sensors_7_desc:0 "By fitting a crystalline Tetrahedron into the main sensor array we can increase our sensor output. This new configuration also allows us to better monitor enemy ship movement, giving us a clear range advantage!" 
+
+ tech_c_sensors_8:0 "Crystalline-Diploidal Sensors VIII"
+ tech_c_sensors_8_desc:0 "By fitting a crystalline diploid into the main sensor array we can increase our sensor output. This new configuration also allows us to better monitor enemy ship movement, giving us a clear range advantage!" 
+
+ tech_c_sensors_9:0 "Crystalline-Gyroidal Sensors IX"
+ tech_c_sensors_9_desc:0 "By fitting a crystalline gyroid into the main sensor array we can increase our sensor output. This new configuration also allows us to better monitor enemy ship movement, giving us a clear range advantage!" 
+
+ tech_c_sensors_10:0 "Crystalline-Hexoctahedral Sensors X"
+ tech_c_sensors_10_desc:0 "By fitting a crystalline hexoctahedral into the main sensor array we can increase our sensor output. This new configuration also allows us to better monitor enemy ship movement, giving us a clear range advantage!"  
+ 
+ C_SHIP_SENSOR_5:0 "Crystalline-Prismatic Sensors V"
+ C_SHIP_SENSOR_6:0 "Crystalline-Dipyramidal Sensors VI"
+ C_SHIP_SENSOR_7:0 "Crystalline-Tetrahedral Sensors VII"
+ C_SHIP_SENSOR_8:0 "Crystalline-Diploidal Sensors VIII"
+ C_SHIP_SENSOR_9:0 "Crystalline-Gyroidal Sensors IX"
+ C_SHIP_SENSOR_10:0 "Crystalline-Hexoctahedral Sensors X"
+ 
+ C_STATION_SENSOR_5:0 "Crystalline-Prismatic Sensors V"
+ C_STATION_SENSOR_6:0 "Crystalline-Dipyramidal Sensors VI"
+ C_STATION_SENSOR_7:0 "Crystalline-Tetrahedral Sensors VII"
+ C_STATION_SENSOR_8:0 "Crystalline-Diploidal Sensors VIII"
+ C_STATION_SENSOR_9:0 "Crystalline-Gyroidal Sensors IX"
+ C_STATION_SENSOR_10:0 "Crystalline-Hexoctahedral Sensors X"
+ 
+ station_sensor_components:0 "Station Sensors"
+ station_sensor_components_DESC:0 "Sensors will reveal the details of any system and fleets within range."
+
+ TECH_UNLOCK_SENSOR_5_TITLE:0 "§HUnlocks Component:§! $C_SHIP_SENSOR_5$"
+ TECH_UNLOCK_SENSOR_5_DESC:0 "§H$C_SHIP_SENSOR_5$§!\n$tech_c_sensors_5_desc$"
+ TECH_UNLOCK_SENSOR_6_TITLE:0 "§HUnlocks Component:§! $C_SHIP_SENSOR_6$"
+ TECH_UNLOCK_SENSOR_6_DESC:0 "§H$C_SHIP_SENSOR_6$§!\n$tech_c_sensors_6_desc$"
+ TECH_UNLOCK_SENSOR_7_TITLE:0 "§HUnlocks Component:§! $C_SHIP_SENSOR_7$"
+ TECH_UNLOCK_SENSOR_7_DESC:0 "§H$C_SHIP_SENSOR_7$§!\n$tech_c_sensors_7_desc$"
+ TECH_UNLOCK_SENSOR_8_TITLE:0 "§HUnlocks Component:§! $C_SHIP_SENSOR_8$"
+ TECH_UNLOCK_SENSOR_8_DESC:0 "§H$C_SHIP_SENSOR_8$§!\n$tech_c_sensors_8_desc$"
+ TECH_UNLOCK_SENSOR_9_TITLE:0 "§HUnlocks Component:§! $C_SHIP_SENSOR_9$"
+ TECH_UNLOCK_SENSOR_9_DESC:0 "§H$C_SHIP_SENSOR_9$§!\n$tech_c_sensors_9_desc$"
+ TECH_UNLOCK_SENSOR_10_TITLE:0 "§HUnlocks Component:§! $C_SHIP_SENSOR_10$"
+ TECH_UNLOCK_SENSOR_10_DESC:0 "§H$C_SHIP_SENSOR_10$§!\n$tech_c_sensors_10_desc$"
+ 
+ # Hangar Bays
+
+ tech_c_hangar_1:0 "$C_HANGAR_BAY_1$ Mk I"
+ tech_c_hangar_1_desc:0 "$C_HANGAR_1_DESC$\n"
+ 
+ tech_c_hangar_2:0 "$C_HANGAR_BAY_2$ Mk II"
+ tech_c_hangar_2_desc:0 "$C_HANGAR_2_DESC$\n"
+ 
+ tech_c_hangar_3:0 "$C_HANGAR_BAY_3$ Mk III"
+ tech_c_hangar_3_desc:0 "$C_HANGAR_3_DESC$\n"
+ 
+ tech_c_hangar_4:0 "$C_HANGAR_BAY_4$ Mk IV"
+ tech_c_hangar_4_desc:0 "$C_HANGAR_4_DESC$\n"
+ 
+ tech_c_hangar_5:0 "$C_HANGAR_BAY_5$ Mk V"
+ tech_c_hangar_5_desc:0 "$C_HANGAR_5_DESC$\n"
+ 
+ C_HANGAR_1:0 "$C_HANGAR_BAY_1$"
+ C_HANGAR_1_DESC:0 "Improvised maintanance bay allowing faster deployment of strike craft. Improved maintenance protocols allow your strike craft to be more efficient in combat."
+ 
+ C_HANGAR_2:0 "$C_HANGAR_BAY_2$"
+ C_HANGAR_2_DESC:0 "Standard maintanance bay allowing faster deployment of strike craft. Improved maintenance protocols allow your strike craft to be more efficient in combat."
+ 
+ C_HANGAR_3:0 "$C_HANGAR_BAY_3$"
+ C_HANGAR_3_DESC:0 "Modular maintanance bay allowing faster deployment of strike craft. Improved maintenance protocols allow your strike craft to be more efficient in combat."
+ 
+ C_HANGAR_4:0 "$C_HANGAR_BAY_4$"
+ C_HANGAR_4_DESC:0 "Advanced maintanance bay allowing faster deployment of strike craft. Improved maintenance protocols allow your strike craft to be more efficient in combat."
+ 
+ C_HANGAR_5:0 "$C_HANGAR_BAY_5$"
+ C_HANGAR_5_DESC:0 "Autonomous maintanance bay allowing faster deployment of strike craft. Improved maintenance protocols allow your strike craft to be more efficient in combat."
+ 
+ C_HANGAR_BAY_1:0 "Improvised Maintanance Bay"
+ C_HANGAR_BAY_2:0 "Standard Maintanance Bay"
+ C_HANGAR_BAY_3:0 "Modular Maintanance Bay"
+ C_HANGAR_BAY_4:0 "Advanced Maintanance Bay"
+ C_HANGAR_BAY_5:0 "Autonomous Maintanance Bay"
+ 
+ # Ship Sections
+
+ tech_c_corvette_sections:0 "Auxiliary Corvette Ship Sections"
+ tech_c_corvette_sections_desc:0 "Alternative ship section designs for Corvettes to allow fitting of more auxiliary slots.\n\n"
+ 
+ tech_c_destroyer_sections:0 "Auxiliary Destroyer Ship Sections"
+ tech_c_destroyer_sections_desc:0 "Alternative ship section designs for Destroyers to allow fitting of more auxiliary slots.\n\n"
+ 
+ tech_c_cruiser_sections:0 "Auxiliary Cruiser Ship Sections"
+ tech_c_cruiser_sections_desc:0 "Alternative ship section designs for Cruisers to allow fitting of more auxiliary slots.\n\n"
+ 
+ tech_c_battleship_sections:0 "Auxiliary Battleship Ship Sections"
+ tech_c_battleship_sections_desc:0 "Alternative ship section designs for Battleships to allow fitting of more auxiliary slots.\n\n"
+ 
+ C_CORVETTE_MID_M1S1:0 "Auxiliary Missile Boat"
+ C_CORVETTE_MID_S3:0 "Auxiliary Interceptor"
+ TECH_UNLOCK_CORVETTE_AUX_CONSTRUCTION_TITLE:0 "§HUnlocks Shipsection:§! $C_CORVETTE_MID_M1S1$\n§HUnlocks Shipsection:§! $C_CORVETTE_MID_S3$\n"
+ TECH_UNLOCK_CORVETTE_AUX_CONSTRUCTION_DESC:0 "$tech_c_corvette_sections_desc$"
+ 
+ C_DESTROYER_STERN_S2:0 "Auxiliary Ship Stern"
+ C_DESTROYER_STERN_M1:0 "Auxiliary Gunship Stern"
+ TECH_UNLOCK_DESTROYER_AUX_CONSTRUCTION_TITLE:0 "§HUnlocks Shipsection:§! $C_DESTROYER_STERN_S2$\n§HUnlocks Shipsection:§! $C_DESTROYER_STERN_M1$\n"
+ TECH_UNLOCK_DESTROYER_AUX_CONSTRUCTION_DESC:0 "$tech_c_destroyer_sections_desc$"
+ 
+ C_CRUISER_STERN_M1:0 "Auxiliary Broadside Stern"
+ C_CRUISER_STERN_S2:0 "Auxiliary Gunship Stern"
+ TECH_UNLOCK_CRUISER_AUX_CONSTRUCTION_TITLE:0 "§HUnlocks Shipsection:§! $C_CRUISER_STERN_M1$\n§HUnlocks Shipsection:§! $C_CRUISER_STERN_S2$\n"
+ TECH_UNLOCK_CRUISER_AUX_CONSTRUCTION_DESC:0 "$tech_c_cruiser_sections_desc$"
+ 
+ C_BATTLESHIP_STERN_L1:0 "Auxiliary Artillery Stern"
+ C_BATTLESHIP_STERN_M2:0 "Auxillary Broadside Stern"
+ TECH_UNLOCK_BATTLESHIP_AUX_CONSTRUCTION_TITLE:0 "§HUnlocks Shipsection:§! $C_BATTLESHIP_STERN_L1$\n§HUnlocks Shipsection:§! $C_BATTLESHIP_STERN_M2$\n"
+ TECH_UNLOCK_BATTLESHIP_AUX_CONSTRUCTION_DESC:0 "$tech_c_battleship_sections_desc$"
+ 
+ TECH_UNLOCK_SCIENCE_CONSTRUCTION_TITLE:0 "Advanced Science Ship Section"
+ 
+ TECH_UNLOCK_SCIENCE_CONSTRUCTION_DESC:0 "Advanced ship section design for Science Ships to allow fitting of more auxiliary and utility slots.\n\n"
+ 
+ 
+ # Lasers
+ 
+ C_LASER_6:0 "Positron Laser"
+ C_LASER_6_DESC:0 "The electromagnetic radiation emitted by positron lasers is of an extremely high frequency. Their destructive potential is unmatched in the field of laser weapons."
+ 
+ C_LASER_7:0 "Anti-Matter Laser"
+ C_LASER_7_DESC:0 "The anti-electromagnetic properties of the anti-matter lasers is extremely volatile. Their destructive potential is unmatched in the field of laser weapons."
+ 
+ tech_c_lasers_6:0 "Positron Lasers"
+ tech_c_lasers_6_desc:0 "The electromagnetic radiation emitted by positron lasers is of an extremely high frequency. Their destructive potential is unmatched in the field of laser weapons.\n\n"
+ 
+ tech_c_lasers_7:0 "Anti-Matter Lasers"
+ tech_c_lasers_7_desc:0 "The anti-electromagnetic properties of the anti-matter lasers is extremely volatile. Their destructive potential is unmatched in the field of laser weapons.\n\n"
+ 
+ C_SMALL_LASER_6:0 "Small Positron Laser VI"
+ C_MEDIUM_LASER_6:0 "Medium Positron Laser VI"
+ C_LARGE_LASER_6:0 "Large Positron Laser VI"
+ 
+ C_SMALL_LASER_7:0 "Small Anti-Matter Laser VII"
+ C_MEDIUM_LASER_7:0 "Medium Anti-Matter Laser VII"
+ C_LARGE_LASER_7:0 "Large Anti-Matter Laser VII"
+ 
+ 
+ # Plasma
+ 
+ C_PLASMA_4:0 "Phased-Plasma Cannon"
+ C_PLASMA_4_DESC:0 "The latest in plasma weaponry, these cannons are fully militarized versions of the older, somewhat improvised plasma cannons. Their plasma projectiles are even deadlier."
+ 
+ C_PLASMA_5:0 "Chrono-Plasma Cannon"
+ C_PLASMA_5_DESC:0 "The latest in plasma weaponry, these cannons are fully militarized versions of the older, somewhat improvised phased-plasma cannons. Their plasma projectiles are even deadlier."
+ 
+ tech_c_plasma_4:0 "Phased-Plasma Cannons"
+ tech_c_plasma_4_desc:0 "The latest in plasma weaponry, these cannons are fully militarized versions of the older, somewhat improvised plasma cannons. Their plasma projectiles are even deadlier.\n\n"
+ 
+ tech_c_plasma_5:0 "Chrono-Plasma Cannons"
+ tech_c_plasma_5_desc:0 "The latest in plasma weaponry, these cannons are fully militarized versions of the older, somewhat improvised phased-plasma cannons. Their plasma projectiles are even deadlier.\n\n"
+ 
+ C_SMALL_PLASMA_4:0 "Small Phased-Plasma Cannon IV"
+ C_MEDIUM_PLASMA_4:0 "Medium Phased-Plasma Cannon IV"
+ C_LARGE_PLASMA_4:0 "Large Phased-Plasma Cannon IV"
+ 
+ C_SMALL_PLASMA_5:0 "Small Chrono-Plasma Cannon V"
+ C_MEDIUM_PLASMA_5:0 "Medium Chrono-Plasma Cannon V"
+ C_LARGE_PLASMA_5:0 "Large Chrono-Plasma Cannon V"
+ 
+ 
+ # Missiles
+ 
+ C_MISSILE_6:0 "Isokinetic Missiles"
+ C_MISSILE_6_DESC:0 "These highly advanced missiles are equipped with limited on-board AI pilots that substantially improve their performance and ability to track targets."
+ 
+ C_MISSILE_7:0 "Chroniton Missiles"
+ C_MISSILE_7_DESC:0 "These highly advanced missiles are equipped with limited on board AI pilots that substantially improve their performance and ability to track targets."
+ 
+ tech_c_missiles_6:0 "Isokinetic Missiles"
+ tech_c_missiles_6_desc:0 "These highly advanced missiles are equipped with limited on board AI pilots that substantially improve their performance and ability to track targets.\n\n"
+ 
+ tech_c_missiles_7:0 "Chroniton Missiles"
+ tech_c_missiles_7_desc:0 "These highly advanced missiles are equipped with limited onboard AI pilots that substantially improve their performance and ability to track targets.\n\n"
+ 
+ C_SMALL_MISSILE_6:0 "Small Isokinetic Missiles VI"
+ C_MEDIUM_MISSILE_6:0 "Medium Isokinetic Missiles VI"
+ C_LARGE_MISSILE_6:0 "Large Isokinetic Missiles VI"
+ 
+ C_SMALL_MISSILE_7:0 "Small Chroniton Missiles VII"
+ C_MEDIUM_MISSILE_7:0 "Medium Chroniton Missiles VII"
+ C_LARGE_MISSILE_7:0 "Large Chroniton Missiles VII"
+ 
+ # Mass Drivers
+ 
+ C_MASS_DRIVER_6:0 "Tri-Gauss Cannons"
+ C_MASS_DRIVER_6_DESC:0 "This updated version of the old gauss cannon design is even more destructive than the latest railgun designs. It is capable of launching projectiles with incredible accuracy and speed."
+ 
+ C_MASS_DRIVER_7:0 "XV-88 Rail Cannons"
+ C_MASS_DRIVER_7_DESC:0 "This updated version of the old XV-88 rail cannon design is even more destructive than the latest railgun designs. It is capable of launching projectiles with incredible accuracy and speed."
+ 
+ tech_c_mass_drivers_6:0 "Tri-Gauss Cannons"
+ tech_c_mass_drivers_6_desc:0 "This updated version of the old gauss cannon design is even more destructive than the latest railgun designs. It is capable of launching projectiles with incredible accuracy and speed.\n\n"
+ 
+ tech_c_mass_drivers_7:0 "XV-88 Rail Cannons"
+ tech_c_mass_drivers_7_desc:0 "This updated version of the old XV-88 rail cannon design is even more destructive than the latest railgun designs. It is capable of launching projectiles with incredible accuracy and speed.\n\n"
+ 
+ C_SMALL_MASS_DRIVER_6:0 "Small Tri-Gauss Cannon VI"
+ C_MEDIUM_MASS_DRIVER_6:0 "Medium Tri-Gauss Cannon VI"
+ C_LARGE_MASS_DRIVER_6:0 "Large Tri-Gauss Cannon VI"
+ 
+ C_SMALL_MASS_DRIVER_7:0 "Small XV-88 Rail Cannon VII"
+ C_MEDIUM_MASS_DRIVER_7:0 "Medium XV-88 Rail Cannon VII"
+ C_LARGE_MASS_DRIVER_7:0 "Large XV-88 Rail Cannon VII"
+ 
+ 
+ # Autocannons
+
+ C_AUTOCANNON_4:0 "Thunder Autocannon"
+ C_AUTOCANNON_4_DESC:0 "Advanced rotary autocannons capable of spewing a cloud of armor-piercing and high-explosive shells at a target."
+ 
+ C_AUTOCANNON_5:0 "Thor Autocannon"
+ C_AUTOCANNON_5_DESC:0 "Advanced rotary autocannons capable of spewing a cloud of armor-piercing and high-explosive shells at a target."
+ 
+ tech_c_autocannons_4:0 "Thunder Cannons"
+ tech_c_autocannons_4_desc:0 "Advanced rotary autocannons capable of spewing a cloud of armor-piercing and high-explosive shells at a target.\n\n"
+ 
+ tech_c_autocannons_5:0 "Thor Cannons"
+ tech_c_autocannons_5_desc:0 "Advanced rotary autocannons capable of spewing a cloud of armor-piercing and high-explosive shells at a target.\n\n"
+ 
+ C_SMALL_AUTOCANNON_4:0 "Small Thunder Autocannon IV"
+ C_MEDIUM_AUTOCANNON_4:0 "Medium Thunder Autocannon IV"
+ C_LARGE_AUTOCANNON_4:0 "Large Thunder Autocannon IV"
+ 
+ C_SMALL_AUTOCANNON_5:0 "Small Thor Autocannon V"
+ C_MEDIUM_AUTOCANNON_5:0 "Medium Thor Autocannon V"
+ C_LARGE_AUTOCANNON_5:0 "Large Thor Autocannon V"
+ 
+ 
+ # Crystallis Research Techs
+ 
+ tech_c_eng_research_1:0 "Super-Solid Shaping Theory"
+ tech_c_eng_research_1_desc:0 "An alternative theory on making super-solids has lead us to better understand the strange properties of super-solids. \n\n"
+ 
+ tech_c_eng_research_2:0 "Zero-Gravity Construction Simulation"
+ tech_c_eng_research_2_desc:0 "By simulating zero-g construction we can increase the speed at which we develop new engineering techniques. \n\n"
+ 
+ tech_c_eng_research_3:0 "Nano-Fabrication Methodologies"
+ tech_c_eng_research_3_desc:0 "Mass production of nano-materials into parts has finally reach profitability!\n\n"
+ 
+ tech_c_phy_research_1:0 "9-Dimentional Theory"
+ tech_c_phy_research_1_desc:0 "The nine dimentional theory foundations seem to help explain a lot of things we previously didn't understand. Nine though.. \n\n"
+ 
+ tech_c_phy_research_2:0 "Quantum-Associative Properties"
+ tech_c_phy_research_2_desc:0 "Further understanding of the properties of particles on quantum level makes it possible to do measurements without observational interference.\n\n"
+ 
+ tech_c_phy_research_3:0 "SAI-Super Artificial Intelligence"
+ tech_c_phy_research_3_desc:0 "SAI allows us to finally bridge the gap between conventional theory research with AI and quantum-mechanical research. Finally the universe and all its secrets are open to us.\n\n"
+ 
+ 
+ 
+ C_ENERGY_LANCE_3:0 "Tetryon Lance"
+ C_ENERGY_LANCE_3_DESC:0 "A more powerful version of the tachyon lance, this weapon fires a tetryon beam of immense power."
+ C_ENERGY_LANCE_4:0 "Polaron Lance"
+ C_ENERGY_LANCE_4_DESC:0 "A more powerful version of the tetryon lance, this weapon fires a polaron beam of immense power."
+
+ tech_c_energy_lance_3:0 "Tetryon Lances"
+ tech_c_energy_lance_3_desc:0 "A more powerful version of the tachyon lance, this weapon fires a tetryon beam of immense power. Like its predecessor, its use is limited to large turrets.\n\n"
+ tech_c_energy_lance_4:0 "Polaron Lances"
+ tech_c_energy_lance_4_desc:0 "A more powerful version of the tetryon lance, this weapon fires a polaron beam of immense power. Like its predecessor, its use is limited to large turrets.\n\n"
+
+ C_LARGE_ENERGY_LANCE_3:0 "Tetryon Lance"
+ C_LARGE_ENERGY_LANCE_4:0 "Polaron Lance"
+ ########################################################################
+
+ C_ARC_EMITTER_3:0 "Vexed Arc Emitter"
+ C_ARC_EMITTER_3_DESC:0 "These upgraded emitters are equipped with better focusing lenses, resulting in a more powerful energy discharge."
+ C_ARC_EMITTER_4:0 "Concerted Arc Emitter"
+ C_ARC_EMITTER_4_DESC:0 "These upgraded emitters are equipped with better focusing lenses, resulting in a more powerful energy discharge."
+
+ tech_c_arc_emitter_3:0 "Vexed Arc Emitters"
+ tech_c_arc_emitter_3_desc:0 "These upgraded emitters are equipped with better focusing lenses, resulting in a more powerful energy discharge.\n\n"
+ tech_c_arc_emitter_4:0 "Concerted Arc Emitters"
+ tech_c_arc_emitter_4_desc:0 "These upgraded emitters are equipped with better focusing lenses, resulting in a more powerful energy discharge.\n\n"
+
+ C_LARGE_ARC_EMITTER_3:0 "Vexed Arc Emitter"
+ C_LARGE_ARC_EMITTER_4:0 "Concerted Arc Emitter"
+ ########################################################################
+
+ C_DISRUPTOR_4:0 "Resonant Disruptor"
+ C_DISRUPTOR_4_DESC:0 "Extremely high-yield disruptors that fire quantum energy charges causing incredible damage to those unfortunate enough to get in their way."
+ C_DISRUPTOR_5:0 "Muon Disruptor"
+ C_DISRUPTOR_5_DESC:0 "Extremely high-yield disruptors that fire quantum energy charges causing incredible damage to those unfortunate enough to get in their way."
+
+ tech_c_disruptors_4:0 "Resonant Disruptors"
+ tech_c_disruptors_4_desc:0 "Extremely high-yield disruptors that fire quantum energy charges causing incredible damage to those unfortunate enough to get in their way.\n\n"
+ tech_c_disruptors_5:0 "Muon Disruptors"
+ tech_c_disruptors_5_desc:0 "Extremely high-yield disruptors that fire quantum energy charges causing incredible damage to those unfortunate enough to get in their way.\n\n"
+
+ C_SMALL_DISRUPTOR_4:0 "Small Resonant Disruptor"
+ C_MEDIUM_DISRUPTOR_4:0 "Medium Resonant Disruptor"
+ C_LARGE_DISRUPTOR_4:0 "Large Resonant Disruptor"
+
+ C_SMALL_DISRUPTOR_5:0 "Small Muon Disruptor"
+ C_MEDIUM_DISRUPTOR_5:0 "Medium Muon Disruptor"
+ C_LARGE_DISRUPTOR_5:0 "Large Muon Disruptor"
+ ########################################################################
+
+ C_ENERGY_TORPEDO_3:0 "Anti-Proton Launchers"
+ C_ENERGY_TORPEDO_3_DESC:0 "Upgraded energy torpedoes that rely on anti-protons instead of neutrons for their destructive power. Like their predecessors, they are extremely effective against energy shields. Since these torpedoes lack a solid form, they cannot be targeted by point-defence weapons."
+ C_ENERGY_TORPEDO_4:0 "Quantum Launchers"
+ C_ENERGY_TORPEDO_4_DESC:0 "Upgraded energy torpedoes that rely on quantum interactions instead of anti-protons for their destructive power. Like their predecessors, they are extremely effective against energy shields. Since these torpedoes lack a solid form, they cannot be targeted by point-defence weapons."
+
+ tech_c_energy_torpedoes_3:0 "Anti-Proton Launchers"
+ tech_c_energy_torpedoes_3_desc:0 "Upgraded energy torpedoes that rely on anti-protons instead of neutrons for their destructive power. Like their predecessors, they cannot be stopped by energy shields.\n\n"
+ tech_c_energy_torpedoes_4:0 "Quantum Launchers"
+ tech_c_energy_torpedoes_4_desc:0 "Upgraded energy torpedoes that rely on quantum interactions instead of anti-protons for their destructive power. Like their predecessors, they cannot be stopped by energy shields.\n\n"
+
+ C_TORP_ENERGY_TORPEDO_3:0 "Anti-Proton Launchers"
+ C_TORP_ENERGY_TORPEDO_4:0 "Quantum Launchers"
+ ########################################################################
+
+ C_EXTRADIMENSIONAL_2:0 "Improved Matter Disintegrator"
+ C_EXTRADIMENSIONAL_2_DESC:0 "Hailing from another dimension, the core technologies of the Matter Disintegrator bends several physical laws for destructive results."
+ C_EXTRADIMENSIONAL_3:0 "Matter-Energy Disintegrator"
+ C_EXTRADIMENSIONAL_3_DESC:0 "Hailing from another dimension, the core technologies of the Matter Disintegrator bends several physical laws for destructive results."
+
+ tech_c_extradimensional_weapon_2:0 "Extradimensional Weaponry II"
+ tech_c_extradimensional_weapon_2_desc:0 "Applying 5th-dimensional energy manipulation principles on lower dimensional planes allows for the creation of powerful energy weapons.\n\n"
+ tech_c_extradimensional_weapon_3:0 "Extradimensional Weaponry III"
+ tech_c_extradimensional_weapon_3_desc:0 "Applying 5th-dimensional energy manipulation principles on lower dimensional planes allows for the creation of powerful energy weapons.\n\n"
+
+ C_SMALL_ED_WEAPON_2:0 "Small Improved Matter Disintegrator"
+ C_MEDIUM_ED_WEAPON_2:0 "Medium Improved Matter Disintegrator"
+ C_LARGE_ED_WEAPON_2:0 "Large Improved Matter Disintegrator"
+
+ C_SMALL_ED_WEAPON_3:0 "Small Matter-Energy Disintegrator"
+ C_MEDIUM_ED_WEAPON_3:0 "Medium Matter-Energy Disintegrator"
+ C_LARGE_ED_WEAPON_3:0 "Large Matter-Energy Disintegrator"
+ ########################################################################
+
+ C_SPACE_CLOUD_WEAPON_2:0 "Resonating Cloud Lightning"
+ C_SPACE_CLOUD_WEAPON_2_DESC:0 "Utilizing our understanding of the fundamental forces involved in generating the Void Clouds' considerable internal charge to the fullest, the Cloud Lightning weapon system is a potent damage-dealer."
+ C_SPACE_CLOUD_WEAPON_3:0 "Luminous Cloud Lightning"
+ C_SPACE_CLOUD_WEAPON_3_DESC:0 "Utilizing our understanding of the fundamental forces involved in generating the Void Clouds' considerable internal charge to the fullest, the Cloud Lightning weapon system is a potent damage-dealer."
+
+ tech_c_space_cloud_weapon_2:0 "Resonating Cloud Lightning Conduits"
+ tech_c_space_cloud_weapon_2_desc:0 "Void Clouds use the electrical charges generated by the dense gases that make up most of their core to release bolts of burning plasma. Using the same gas composition together with a specialized conduit allows for powerful lightning weaponry.\n\n"
+ tech_c_space_cloud_weapon_3:0 "Luminous Cloud Lightning Conduits"
+ tech_c_space_cloud_weapon_3_desc:0 "Void Clouds use the electrical charges generated by the dense gases that make up most of their core to release bolts of burning plasma. Using the same gas composition together with a specialized conduit allows for powerful lightning weaponry.\n\n"
+
+ C_SPACE_CLOUD_LIGHTNING_2:0 "Resonating Cloud Lightning"
+ C_SPACE_CLOUD_LIGHTNING_3:0 "Luminous Cloud Lightning"
+ ########################################################################
+
+ C_SWARMER_MISSILE_3:0 "Typhoon Missiles"
+ C_SWARMER_MISSILE_3_DESC:0 "New miniaturization techniques will allow us to equip swarmer missiles with more powerful warheads and improved flight performance."
+ C_SWARMER_MISSILE_4:0 "Hurricane Missiles"
+ C_SWARMER_MISSILE_4_DESC:0 "New miniaturization techniques will allow us to equip swarmer missiles with more powerful warheads and improved flight performance."
+
+ tech_c_swarmer_missiles_3:0 "Typhoon Missiles"
+ tech_c_swarmer_missiles_3_desc:0 "New miniaturization techniques will allow us to equip swarmer missiles with more powerful warheads and improved flight performance.\n\n"
+ tech_c_swarmer_missiles_4:0 "Hurricane Missiles"
+ tech_c_swarmer_missiles_4_desc:0 "New miniaturization techniques will allow us to equip swarmer missiles with more powerful warheads and improved flight performance.\n\n"
+
+ # C_SWARMER_MISSILE_3:0 "Typhoon Missiles"
+ # C_SWARMER_MISSILE_4:0 "Hurricane Missiles"
+ ########################################################################
+
+ C_TORPEDO_4:0 "Cobalt Torpedoes"
+ C_TORPEDO_4_DESC:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens."
+ C_TORPEDO_5:0 "Tricobalt Torpedoes"
+ C_TORPEDO_5_DESC:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens."
+
+ tech_c_torpedoes_4:0 "Cobalt Torpedoes"
+ tech_c_torpedoes_4_desc:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens.\n\n"
+ tech_c_torpedoes_5:0 "Tricobalt Torpedoes"
+ tech_c_torpedoes_5_desc:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens.\n\n"
+
+ # C_TORPEDO_4:0 "Cobalt Torpedoes"
+ # C_TORPEDO_5:0 "Tricobalt Torpedoes"
+ ########################################################################
+
+ C_POINT_DEFENCE_4:0 "Mercy Point-Defense"
+ C_POINT_DEFENCE_4_DESC:0 "A wider range of available ammunition types vastly improves the effective interception rate of incoming threats."
+ C_POINT_DEFENCE_5:0 "Emperor Point-Defense"
+ C_POINT_DEFENCE_5_DESC:0 "A wider range of available ammunition types vastly improves the effective interception rate of incoming threats."
+
+ tech_c_pd_tracking_4:0 "Advanced Predictive Algorithms"
+ tech_c_pd_tracking_4_desc:0 "Advanced prediction greatly increases the accuracy of active countermeasure systems.\n\n"
+ tech_c_pd_tracking_5:0 "AI-Predictive Algorithms"
+ tech_c_pd_tracking_5_desc:0 "Advanced prediction greatly increases the accuracy of active countermeasure systems.\n\n"
+
+ C_PD_POINT_DEFENCE_4:0 "Mercy Point-Defense"
+ C_PD_POINT_DEFENCE_5:0 "Emperor Point-Defense"
+ ########################################################################
+
+ C_KINETIC_ARTILLERY_3:0 "Kinetic Cannon"
+ C_KINETIC_ARTILLERY_3_DESC:0 "An even more powerful long-range, ship-based kinetic artillery, equipped with a new barrel and an upgraded fire control computer."
+ C_KINETIC_ARTILLERY_4:0 "Kinetic Howitzer"
+ C_KINETIC_ARTILLERY_4_DESC:0 "An even more powerful long-range, ship-based kinetic cannon, equipped with a new barrel and an upgraded fire control computer."
+
+ tech_c_kinetic_artillery_3:0 "Kinetic Cannon"
+ tech_c_kinetic_artillery_3_desc:0 "An even more powerful long-range, ship-based kinetic artillery, equipped with a new barrel and an upgraded fire control computer.\n\n"
+ tech_c_kinetic_artillery_4:0 "Kinetic Howitzer"
+ tech_c_kinetic_artillery_4_desc:0 "An even more powerful long-range, ship-based kinetic cannon, equipped with a new barrel and an upgraded fire control computer.\n\n"
+
+ C_LARGE_KINETIC_ARTILLERY_3:0 "Kinetic Cannon"
+ C_LARGE_KINETIC_ARTILLERY_4:0 "Kinetic Howitzer"
+ ########################################################################
+
+ C_MASS_ACCELERATOR_3:0 "Ultra Cannon"
+ C_MASS_ACCELERATOR_3_DESC:0 "An even more powerful variant of spinal-mounted kinetic artillery."
+ C_MASS_ACCELERATOR_4:0 "Omega Cannon"
+ C_MASS_ACCELERATOR_4_DESC:0 "An even more powerful variant of spinal-mounted kinetic artillery."
+
+ tech_c_mass_accelerator_3:0 "Ultra Cannon"
+ tech_c_mass_accelerator_3_desc:0 "An even more powerful mass accelerator cannon that can rip through even the toughest shields.\n\n"
+ tech_c_mass_accelerator_4:0 "Omega Cannon"
+ tech_c_mass_accelerator_4_desc:0 "An even more powerful mass accelerator cannon that can rip through even the toughest shields.\n\n"
+
+ C_LARGE_MASS_ACCELERATOR_3:0 "Ultra Cannon"
+ C_LARGE_MASS_ACCELERATOR_4:0 "Omega Cannon"
+ ########################################################################
+
+ C_FLAK_BATTERY_3:0 "Flak Array"
+ C_FLAK_BATTERY_3_DESC:0 "Upgraded flak arrays with new, more powerful shrapnel rounds. They offer excellent defence against both strike craft and missiles."
+ C_FLAK_BATTERY_4:0 "Flak Barrier"
+ C_FLAK_BATTERY_4_DESC:0 "Upgraded flak arrays to project a barrier of explosions with new, more powerful shrapnel rounds. They offer excellent defence against both strike craft and missiles."
+
+ tech_c_flak_batteries_3:0 "Flak Array"
+ tech_c_flak_batteries_3_desc:0 "Upgraded flak arrays with new, more powerful shrapnel rounds. They offer excellent defence against both strike craft and missiles.\n\n"
+ tech_c_flak_batteries_4:0 "Flak barrier"
+ tech_c_flak_batteries_4_desc:0 "Upgraded flak arrays to project a barrier of explosions with new, more powerful shrapnel rounds. They offer excellent defence against both strike craft and missiles.\n\n"
+
+ # C_FLAK_BATTERY_3:0 "Flak Array"
+ # C_FLAK_BATTERY_4:0 "Flak Barrier"
+ ########################################################################
+ 
+ # Shield Rechargers
+ 
+ tech_c_shield_rechargers_2:0 "Advanced Shield Capacitors"
+ tech_c_shield_rechargers_2_desc:0 "Larger more advanced capacitors allowing for better and in combat shield regeneration.\n\n"
+ 
+ tech_c_shield_rechargers_3:0 "Hyper Shield Capacitors"
+ tech_c_shield_rechargers_3_desc:0 "Hyper efficient capacitors allowing for better and in combat shield regeneration.\n\n"
+ 
+ C_SHIELD_RECHARGER_2:0 "Advanced Shield Capacitors"
+ C_SHIELD_RECHARGER_2_DESC:0 "Larger more advanced capacitors allowing for better and in combat shield regeneration."
+ 
+ C_SHIELD_RECHARGER_3:0 "Hyper Shield Capacitors"
+ C_SHIELD_RECHARGER_3_DESC:0 "Hyper efficient capacitors allowing for better and in combat shield regeneration."
+ 
+ # Strike Crafts
+ 
+ tech_c_strike_craft_4:0 "Hyper Advanced Strike Craft Designs"
+ tech_c_strike_craft_4_desc:0 "Further developments into fighter and inter-space combat lead to newer strike craft designs.\n\n"
+ 
+ C_LARGE_FIGHTERS_HANGAR_4:0 "Shifting Strike Craft"
+ C_LARGE_FIGHTERS_HANGAR_4_DESC:0 "Strike craft capable of quickly traversing space."
+ 
+ C_LARGE_BOMBERS_HANGAR_4:0 "Shifting Strike Craft"
+ C_LARGE_BOMBERS_HANGAR_4_DESC:0 "Strike craft capable of quickly traversing space."
+ 
+ C_LARGE_BOMBERS_HANGAR_DIM:0 "Dimensional Strike Craft"
+ C_LARGE_BOMBERS_HANGAR_DIM_DESC:0 "Strike craft carrying experimental weapons capable of delivering extreme damage."
+ 
+ C_FIGHTERS_HANGAR_4:0 "Shifting Strike Craft"
+ C_FIGHTERS_HANGAR_4_DESC:0 "Strike craft capable of quickly traversing space."
+ 
+ C_BOMBERS_HANGAR_4:0 "Shifting Strike Craft"
+ C_BOMBERS_HANGAR_4_DESC:0 "Strike craft capable of quickly traversing space."
+ 
+ C_BOMBERS_HANGAR_DIM:0 "Dimensional Strike Craft"
+ C_BOMBERS_HANGAR_DIM_DESC:0 "Strike craft carrying experimental weapons capable of delivering extreme damage."
+ 
+ # Synth Shields
+ 
+ tech_c_shields_synth_6:0 "Experimental Adaptive Shields VI"
+ tech_c_shields_synth_6_desc:0 "New AI-Adaptation shield technology makes it possible to make even stronger shields by adapting the shield frequency to incoming energy levels or matter-frequencies.\nThese shields regenetare in combat.\n\n"
+ 
+ tech_c_shields_synth_7:0 "Improved Adaptive Shields VII"
+ tech_c_shields_synth_7_desc:0 "Further advancements in AI-Adaptation shield technology allows us to make even tougher shields by adapting the shield frequency to incoming energy levels or matter-frequencies.\nThese shields regenetare in combat.\n\n"
+ 
+ tech_c_shields_synth_8:0 "Advanced Adaptive Shields VIII"
+ tech_c_shields_synth_8_desc:0 "Further advancements in AI-Adaptation shield technology allows us to make even tougher shields by adapting the shield frequency to incoming energy levels or matter-frequencies.\nThese shields regenetare in combat.\n\n"
+ 
+ tech_c_shields_synth_9:0 "Rapid Adaptive Shields IX"
+ tech_c_shields_synth_9_desc:0 "Applying rapid calculation techniques to AI-Adaptation shield emitters allows us to make even tougher shields by adapting the shield frequency to incoming energy levels or matter-frequencies.\nThese shields regenetare in combat.\n\n"
+ 
+ tech_c_shields_synth_10:0 "Energized Adaptive Shields X"
+ tech_c_shields_synth_10_desc:0 "Applying energized frames to AI-Adaptation shield emitters allows us to make even tougher shields by adapting the shield frequency to incoming energy levels or matter-frequencies.\nThese shields regenetare in combat.\n\n"
+ 
+ C_SHIELD_SYNTH_6:0 "Experimental Adaptive Shields"
+ C_SHIELD_SYNTH_6_DESC:0 "New AI-Adaptation shield technology makes it possible to make even stronger shields.\nThese shields regenetare in combat."
+ 
+ C_SHIELD_SYNTH_7:0 "Improved Adaptive Shields"
+ C_SHIELD_SYNTH_7_DESC:0 "Further advancements in AI-Adaptation shield technology allows us to make even tougher shields.\nThese shields regenetare in combat."
+ 
+ C_SHIELD_SYNTH_8:0 "Advanced Adaptive Shields"
+ C_SHIELD_SYNTH_8_DESC:0 "Further advancements in AI-Adaptation shield technology allows us to make even tougher shields.\nThese shields regenetare in combat."
+ 
+ C_SHIELD_SYNTH_9:0 "Rapid Adaptive Shields"
+ C_SHIELD_SYNTH_9_DESC:0 "Applying rapid calculation techniques to AI-Adaptation shield emitters allows us to make even tougher shields.\nThese shields regenetare in combat."
+ 
+ C_SHIELD_SYNTH_10:0 "Energized Adaptive Shields"
+ C_SHIELD_SYNTH_10_DESC:0 "Applying energized frames to AI-Adaptation shield emitters allows us to make even tougher shields."
+ 
+ C_SMALL_SHIELD_SYNTH_6:0 "Small Experimental Adaptive Shields"
+ C_MEDIUM_SHIELD_SYNTH_6:0 "Medium Experimental Adaptive Shields"
+ C_LARGE_SHIELD_SYNTH_6:0 "Large Experimental Adaptive Shields"
+
+ C_SMALL_SHIELD_SYNTH_7:0 "Small Improved Adaptive Shields"
+ C_MEDIUM_SHIELD_SYNTH_7:0 "Medium Improved Adaptive Shields"
+ C_LARGE_SHIELD_SYNTH_7:0 "Large Improved Adaptive Shields"
+
+ C_SMALL_SHIELD_SYNTH_8:0 "Small Advanced Adaptive Shields"
+ C_MEDIUM_SHIELD_SYNTH_8:0 "Medium Advanced Adaptive Shields"
+ C_LARGE_SHIELD_SYNTH_8:0 "Large Advanced Adaptive Shields"
+
+ C_SMALL_SHIELD_SYNTH_9:0 "Small Rapid Adaptive Shields"
+ C_MEDIUM_SHIELD_SYNTH_9:0 "Medium Rapid Adaptive Shields"
+ C_LARGE_SHIELD_SYNTH_9:0 "Large Rapid Adaptive Shields"
+
+ C_SMALL_SHIELD_SYNTH_10:0 "Small Energized Adaptive Shields"
+ C_MEDIUM_SHIELD_SYNTH_10:0 "Medium Energized Adaptive Shields"
+ C_LARGE_SHIELD_SYNTH_10:0 "Large Energized Adaptive Shields"
+ 
+ # LIGHT_MILITARY_STATION_SECTION:0 "$LIGHT_MILITARY_STATION_SECTION$"
+ # PD_MILITARY_STATION_SECTION:0 "$PD_MILITARY_STATION_SECTION$"
+ # MEDIUM_MILITARY_STATION_SECTION:0 "$MEDIUM_MILITARY_STATION_SECTION$"
+ # MISSILE_MILITARY_STATION_SECTION:0 "$MISSILE_MILITARY_STATION_SECTION$"
+ # HEAVY_MILITARY_STATION_SECTION:0 "$HEAVY_MILITARY_STATION_SECTION$"
+ # HANGAR_MILITARY_STATION_SECTION:0 "$HANGAR_MILITARY_STATION_SECTION$"
+ # LIGHT_LARGE_MILITARY_STATION_SECTION:0 "$MEDIUM_LARGE_MILITARY_STATION_SECTION$"
+ MEDIUM_LARGE_MILITARY_STATION_SECTION:0 "Torpedo Station Section"
+ # HEAVY_LARGE_MILITARY_STATION_SECTION:0 "$HEAVY_LARGE_MILITARY_STATION_SECTION$"
+ # HANGAR_LARGE_MILITARY_STATION_SECTION:0 "$HANGAR_LARGE_MILITARY_STATION_SECTION$"
+ 
+ GSC_TITAN_HANGAR_MID:0 "Titan Hangars Section"
+ GSC_TITAN_HANGAR_STERN:0 "Titan Hangars Section"
+ 
+ 
+ # Perdition beams
+ 
+ GSC_PERDITION_BEAM_2:0 "Resonating Perdition Beam"
+ GSC_PERDITION_BEAM_2_DESC:0 "A massive array of linked energy amplification conduits that fires a beam of unprecedented firepower."
+ GSC_PERDITION_BEAM_2_TITAN:0 "$GSC_PERDITION_BEAM_2$"
+ GSC_PERDITION_BEAM_3_TITAN_DESC:0 "$GSC_PERDITION_BEAM_2_DESC$"
+ GSC_PERDITION_BEAM_2_ION:0 "Resonating Ion Cannon"
+ GSC_PERDITION_BEAM_3_ION_DESC:0 "$GSC_PERDITION_BEAM_2_DESC$"
+ 
+ 
+ GSC_PERDITION_BEAM_3:0 "Shifting Perdition Beam"
+ GSC_PERDITION_BEAM_3_DESC:0 "A massive array of linked energy amplification conduits that fires a beam of unprecedented firepower."
+ GSC_PERDITION_BEAM_3_TITAN:0 "$GSC_PERDITION_BEAM_3$"
+ GSC_PERDITION_BEAM_3_TITAN_DESC:0 "$GSC_PERDITION_BEAM_3_DESC$"
+ GSC_PERDITION_BEAM_3_ION:0 "Shifting Ion Cannon"
+ GSC_PERDITION_BEAM_3_ION_DESC:0 "$GSC_PERDITION_BEAM_3_DESC$"
+ 
+ tech_gsc_perdition_beam_02:0 "Resonating Perdition Beams"
+ tech_gsc_perdition_beam_02_desc:0 "A massive array of linked energy amplification conduits that fires a beam of unprecedented firepower."
+ 
+ tech_gsc_perdition_beam_03:0 "Shifting Perdition Beams"
+ tech_gsc_perdition_beam_03_desc:0 "A massive array of linked energy amplification conduits that fires a beam of unprecedented firepower."
+ 
+
+
+ 
+ 
+ 
+ 
+ 

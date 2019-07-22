@@ -1,0 +1,432 @@
+
+# ##################
+# Thruster Components
+# ##################
+
+#Armoured thrusters I
+tech_c_thrusters_armor_1 = {
+	area = engineering
+	cost = @tier2cost2
+	tier = 2
+	category = { propulsion }
+	ai_update_type = all	
+	prerequisites = { "tech_thrusters_2" "tech_ship_armor_2" }
+	weight = @tier2weight2
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_thrusters }
+	}
+
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_ARMORED_THRUSTERS_1_TITLE"
+			desc = "TECH_UNLOCK_ARMORED_THRUSTERS_1_DESC"
+		}
+	}
+}
+
+#Armoured thrusters II
+tech_c_thrusters_armor_2 = {
+	area = engineering
+	cost = @tier3cost2
+	tier = 3
+	category = { propulsion }
+	ai_update_type = all	
+	prerequisites = { "tech_thrusters_3" "tech_c_thrusters_armor_1" "tech_ship_armor_3" }
+	weight = @tier3weight2
+
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_ARMORED_THRUSTERS_2_TITLE"
+			desc = "TECH_UNLOCK_ARMORED_THRUSTERS_2_DESC"
+		}
+	}
+}
+
+#Armoured thrusters III
+tech_c_thrusters_armor_3 = {
+	area = engineering
+	cost = @tier4cost2
+	tier = 4
+	category = { propulsion }
+	ai_update_type = all	
+	prerequisites = { "tech_thrusters_4" "tech_c_thrusters_armor_2" "tech_ship_armor_4" }
+	weight = @tier4weight2
+
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_ARMORED_THRUSTERS_3_TITLE"
+			desc = "TECH_UNLOCK_ARMORED_THRUSTERS_3_DESC"
+		}
+	}
+}
+
+#Armoured thrusters IV
+tech_c_thrusters_armor_4 = {
+	area = engineering
+	cost = @tier5cost1
+	tier = 5
+	category = { propulsion }
+	ai_update_type = all	
+	prerequisites = { "tech_c_thrusters_armor_3" "tech_ship_armor_5" }
+	weight = @tier5weight1
+
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_ARMORED_THRUSTERS_4_TITLE"
+			desc = "TECH_UNLOCK_ARMORED_THRUSTERS_4_DESC"
+		}
+	}
+}
+
+#Psionic thrusters I
+tech_c_thrusters_psi_1 = {
+	area = engineering
+	cost = @tier2cost2
+	tier = 2
+	category = { propulsion }
+	ai_update_type = all	
+	prerequisites = { "tech_thrusters_2" "tech_psionic_theory" }
+	weight = @tier2weight2
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_thrusters }
+	}
+
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 #very rare tech
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_PSI_THRUSTERS_1_TITLE"
+			desc = "TECH_UNLOCK_PSI_THRUSTERS_1_DESC"
+		}
+	}
+}
+
+#Psionic thrusters II
+tech_c_thrusters_psi_2 = {
+	area = engineering
+	cost = @tier3cost2
+	tier = 3
+	category = { propulsion }
+	ai_update_type = all	
+	prerequisites = { "tech_thrusters_3" "tech_c_thrusters_psi_1" "tech_shields_2" }
+	weight = @tier3weight2
+
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 #very rare tech
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_PSI_THRUSTERS_2_TITLE"
+			desc = "TECH_UNLOCK_PSI_THRUSTERS_2_DESC"
+		}
+	}
+}
+
+#Psionic thrusters III
+tech_c_thrusters_psi_3 = {
+	area = engineering
+	cost = @tier4cost2
+	tier = 4
+	category = { propulsion }
+	ai_update_type = all	
+	prerequisites = { "tech_thrusters_4" "tech_c_thrusters_psi_2" "tech_shields_3" }
+	weight = @tier4weight2
+
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 #very rare tech
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_PSI_THRUSTERS_3_TITLE"
+			desc = "TECH_UNLOCK_PSI_THRUSTERS_3_DESC"
+		}
+	}
+}
+
+#Psionic thrusters IV
+tech_c_thrusters_psi_4 = {
+	area = engineering
+	cost = @tier5cost1
+	tier = 5
+	category = { propulsion }
+	ai_update_type = all	
+	prerequisites = { "tech_c_thrusters_psi_3" "tech_shields_4" }
+	weight = @tier5weight1
+
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 #very rare tech
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_PSI_THRUSTERS_4_TITLE"
+			desc = "TECH_UNLOCK_PSI_THRUSTERS_4_DESC"
+		}
+	}
+}

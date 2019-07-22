@@ -1,0 +1,169 @@
+eac_tech_society_reshuffle_1 = {
+    area = society
+	cost = @rerollTechCost1
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_1_desc"
+			desc = ""
+		}
+	}
+}		
+
+eac_tech_society_reshuffle_2 = {
+    area = society
+	cost = @rerollTechCost2
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_2_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_society_reshuffle_3 = {
+    area = society
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_3_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_society_reshuffle_4 = {
+    area = society
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_4_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_society_reshuffle_5 = {
+    area = society
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_5_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_society_reshuffle_6 = {
+    area = society
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_6_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_society_reshuffle_7 = {
+    area = society
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_7_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_society_reshuffle_8 = {
+    area = society
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_8_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_society_reshuffle_9 = {
+    area = society
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_9_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_society_reshuffle_10 = {
+    area = society
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_society_reshuffle_10_desc"
+			desc = ""
+		}
+	}
+}

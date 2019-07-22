@@ -1,0 +1,168 @@
+namespace = sc_on_actions
+
+### Election/Set President Check Event
+country_event = {
+	id = sc_on_actions.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_federation = yes
+		is_federation_leader = yes
+		OR = {
+			has_policy_flag = sc_federal_election
+			has_policy_flag = sc_federal_representation
+			has_policy_flag = sc_federal_might
+			has_policy_flag = sc_federal_permanent
+		}
+		NOR = {
+			has_country_flag = sc_election_in_progress
+			has_country_flag = sc_president_election
+			has_country_flag = sc_president_representation
+			has_country_flag = sc_president_permanent
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_policy_flag = sc_federal_election
+					has_policy_flag = sc_federal_permanent
+				}
+			}
+			every_country = {
+				limit = {
+					has_federation = yes
+					OR = {
+						is_in_federation_with = ROOT
+						is_country = ROOT
+					}
+				}
+				set_country_flag = sc_election_in_progress
+				set_country_flag = sc_electing
+				set_variable = {
+					which = sc_votes
+					value = 0
+				}
+			}
+			every_country = {
+				limit = {
+					has_federation = yes
+					has_country_flag = sc_electing
+					OR = {
+						is_in_federation_with = ROOT
+						is_country = ROOT
+					}
+				}
+				country_event = {
+					id = sc_election.10
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_policy_flag = sc_federal_representation
+			}
+			every_country = {
+				limit = {
+					has_federation = yes
+					OR = {
+						is_in_federation_with = ROOT
+						is_country = ROOT
+					}
+				}
+				set_country_flag = sc_election_in_progress
+				set_country_flag = sc_electing
+				set_variable = {
+					which = sc_votes
+					value = 0
+				}
+			}
+			every_country = {
+				limit = {
+					has_federation = yes
+					has_country_flag = sc_electing
+					OR = {
+						is_in_federation_with = ROOT
+						is_country = ROOT
+					}
+				}
+				country_event = {
+					id = sc_election.100
+				}
+			}
+		}
+		else_if = {
+			### if policy is federal might, choose the next president
+			limit = {
+				has_policy_flag = sc_federal_might
+			}
+
+			### Start Power Comparison
+			save_event_target_as = sc_candidate_compare ###Compare starts as ROOT
+			every_country = {
+				limit = {
+					has_federation = yes
+					is_in_federation_with = ROOT
+					NOT = { is_country = ROOT }
+				}
+
+				if = {
+					limit = {
+						relative_power = { 
+							who = event_target:sc_candidate_compare
+							category = fleet
+							value <= inferior
+						}
+					}
+					save_event_target_as = sc_candidate_compare
+				}
+			}
+
+			### Set the Greatest Compare Country as Leader
+			sc_reset_president = yes
+			event_target:sc_candidate_compare = { 
+				set_country_flag = sc_is_president
+				set_federation_leader = THIS
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sc_on_actions.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			has_country_flag = sc_proposal_ongoing
+			has_country_flag = sc_proposal_made_timer
+			has_country_flag = sc_proposal_message_sent
+		}
+		has_federation = yes 
+		OR = {
+			is_federation_leader = yes
+			NOT = {
+				has_policy_flag = sc_federal_discretionary
+			}
+		}
+	}
+
+	immediate = {
+		set_timed_country_flag = {
+			flag = sc_proposal_message_sent
+			years = 1
+		}
+
+		create_message = {
+			type = EVENT_MESSAGE_TYPE
+			localization = MESSAGE_FED_PROPOSAL_AVAILABLE
+			days = 15
+		}
+	}
+}
+
+
+

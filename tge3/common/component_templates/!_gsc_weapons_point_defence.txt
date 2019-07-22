@@ -1,0 +1,56 @@
+### Point Defence 3
+weapon_component_template = {
+	key = "POINT_DEFENCE_3"
+	size = point_defence
+	entity = "turret_point_defence_entity"
+	
+	icon = "GFX_ship_part_point_defense_3"
+	icon_frame = 1
+	
+	prerequisites = { "tech_pd_tracking_3" }
+	component_set = "POINT_DEFENCE_3"
+	type = point_defence
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 13
+		}
+		upkeep = {
+			energy = 0.13
+			alloys = 0.013
+		}
+	}
+	upgrades_to = "C_PD_POINT_DEFENCE_4"
+}
+
+### Flak Battery 3
+weapon_component_template = {
+	type = point_defence
+	
+	key = "FLAK_BATTERY_3"
+	size = point_defence
+	entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_flak_batteries_3"
+	icon_frame = 1
+	
+	prerequisites = { "tech_flak_batteries_3" }
+	component_set = "FLAK_BATTERY_3"
+	projectile_gfx = "flak_pd_3"
+	tags = { weapon_type_point_defense weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 13
+		}
+		upkeep = {
+			energy = 0.13
+			alloys = 0.013
+		}
+	}
+	upgrades_to = "C_FLAK_BATTERY_3"
+}

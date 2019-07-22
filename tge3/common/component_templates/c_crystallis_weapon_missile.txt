@@ -1,0 +1,124 @@
+###################
+# COST
+###################
+@cost6s = 73
+
+@cost7s = 91
+
+###################
+# POWER
+###################
+@power6s = -33
+
+@power7s = -41
+
+
+# ####################
+#  Missiles
+# ####################
+
+
+### Missile Launcher 6
+weapon_component_template = {
+	key = "C_SMALL_MISSILE_6"
+	size = torpedo
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_C_ship_part_missiles_6"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+	
+	damage = { min = 108 max = 143 }
+	windup = { min = 1 max = 15 }
+	total_fire_time = 42
+	range = 100.0
+	accuracy = 1.00
+	tracking = 0.25
+	missile_speed = 18
+	missile_evasion = 0.40
+	missile_health = 18.00
+	hull_damage = 1.25
+	shield_penetration = 1.00
+	missile_retarget_range = 100
+	
+	power = @power6s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t6_cost
+			volatile_motes = @s_t6_rare
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_missiles_6" }
+	component_set = "C_MISSILE_6"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SMALL_MISSILE_7"
+}
+
+### Missile Launcher 7
+weapon_component_template = {
+	key = "C_SMALL_MISSILE_7"
+	size = torpedo
+	entity = "turret_missile_small_entity"
+	
+	icon = "GFX_C_ship_part_missiles_7"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+	
+	damage = { min = 134 max = 178 }
+	windup = { min = 1 max = 15 }
+	total_fire_time = 42
+	range = 100.0
+	accuracy = 1.00
+	tracking = 0.25
+	missile_speed = 18
+	missile_evasion = 0.40
+	missile_health = 18.00
+	hull_damage = 1.25
+	shield_penetration = 1.00
+	missile_retarget_range = 100
+	
+	power = @power7s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			volatile_motes = @s_t7_rare
+		}		
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_missiles_7" }
+	component_set = "C_MISSILE_7"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+}
+

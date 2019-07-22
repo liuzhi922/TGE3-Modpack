@@ -1,0 +1,1875 @@
+
+# ##################
+# Critter Weapons
+# ##################
+
+tech_c_extradimensional_weapon_2 = {
+	area = physics
+	cost = @tier5cost1
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_extradimensional_weapon_1" }
+	weight = @tier5weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_c_extradimensional_weapon_3 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_extradimensional_weapon_2" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+tech_c_space_cloud_weapon_2 = {
+	area = physics
+	cost = @tier3cost2
+	tier = 3
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_space_cloud_weapon_1" }
+	weight = @tier3weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_c_space_cloud_weapon_3 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_space_cloud_weapon_2" }
+	weight = @tier4weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+# ##################
+# Point-Defense
+# ##################
+
+tech_c_pd_tracking_4 = {
+	area = physics
+	tier = 4
+	cost = @tier4cost3
+	category = { computing }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_pd_tracking_3" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_point_defenses }
+	}
+	
+	# unlocks point defence 2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+tech_c_pd_tracking_5 = {
+	area = physics
+	tier = 5
+	is_rare = yes
+	cost = @tier5cost3
+	category = { computing }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_pd_tracking_4" }
+	weight = @tier5weight3
+	
+	# unlocks point defence 3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+# ##################
+# Energy Torpedo Weapons
+# ##################
+
+tech_c_energy_torpedoes_3 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_energy_torpedoes_2" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_torpedos }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_c_energy_torpedoes_4 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_c_energy_torpedoes_3" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+# ##################
+# Disruptor Weapons
+# ##################
+
+tech_c_disruptors_4 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_disruptors_3" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_disruptors }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_c_disruptors_5 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_disruptors_4" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+# ##################
+# Arc Emitter
+# ##################
+
+tech_c_arc_emitter_3 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_arc_emitter_2" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_arc_emitter }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_c_arc_emitter_4 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_c_arc_emitter_3" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+# ##################
+# Energy Lance
+# ##################
+
+tech_c_energy_lance_3 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_energy_lance_2" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_energy_lance }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_c_energy_lance_4 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_energy_lance_3" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+# ##################
+# Torpedo Weapons
+# ##################
+
+tech_c_torpedoes_4 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { propulsion }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_torpedoes_3" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_torpedos }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_c_torpedoes_5 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { propulsion }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_torpedoes_4" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+# ##################
+# Swarmer Missiles
+# ##################
+
+#Swarmer Missiles
+tech_c_swarmer_missiles_3 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { propulsion }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_swarmer_missiles_2" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_swarm_missiles }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+#Whirlwind Missiles
+tech_c_swarmer_missiles_4 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { propulsion }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_swarmer_missiles_3" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+# ##################
+# Flak Batteries
+# ##################
+
+tech_c_flak_batteries_3 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { materials }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_flak_batteries_3" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_point_defenses }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_c_flak_batteries_4 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { materials }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_c_flak_batteries_3" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# ##################
+# Mass Drivers
+# ##################
+
+tech_c_kinetic_artillery_3 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { materials }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_kinetic_artillery_2" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_kinetic_battery }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_c_kinetic_artillery_4 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { materials }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_c_kinetic_artillery_3" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_c_mass_accelerator_3 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_mass_accelerator_2" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_kinetic_cannon }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_c_mass_accelerator_4 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_mass_accelerator_3" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_c_mass_drivers_6 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_mass_drivers_5" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_mass_drivers }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_c_mass_drivers_7 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_mass_drivers_6" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# ##################
+# Auto-Cannons
+# ##################
+
+tech_c_autocannons_4 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_autocannons_3" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_autocannnons }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_c_autocannons_5 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_autocannons_4" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# ##################
+# Missiles
+# ##################
+
+tech_c_missiles_6 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { propulsion }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_missiles_5" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_missiles }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_c_missiles_7 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { propulsion }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_missiles_6" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+# ##################
+# Laser Weapons
+# ##################
+
+tech_c_lasers_6 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_lasers_5" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_lasers }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_c_lasers_7 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+	prerequisites = { "tech_zero_point_power" "tech_c_lasers_6" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+# ##################
+# Plasma Weapons
+# ##################
+
+tech_c_plasma_4 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_plasma_3" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_plasma }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_c_plasma_5 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military	
+	prerequisites = { "tech_zero_point_power" "tech_c_plasma_4" }
+	weight = @tier5weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_c_strike_craft_4 = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	ai_update_type = military
+	category = { voidcraft }	
+	prerequisites = { "tech_zero_point_power" "tech_strike_craft_3" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_strike_craft }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+		
+	## unlock strike craft 4
+}

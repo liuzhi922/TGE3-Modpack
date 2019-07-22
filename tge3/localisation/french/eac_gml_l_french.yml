@@ -1,0 +1,10 @@
+﻿l_french:
+
+ ###################
+ # Event Chains
+ ###################
+ eac_market_location_chain_title:0 "Location of the Galactic Market"
+ eac_market_location_chain_desc:0 "The Galactic Market has been established, and whoever controls the centralized exchange station stands to benefit.\n\nShould we desire the location of the market, the $galactic_market_station$ is controlled by the §H[eac_galactic_market_system.owner.GetName]§! and is in the §H[eac_galactic_market_system.GetName]§! system."
+
+ eac_galactic_market_location_name:0 "Galactic Market Location"
+ eac_galactic_market_location_desc:0 "The $galactic_market_station$ is orbiting the star in the §H[eac_galactic_market_system.GetName]§! system."

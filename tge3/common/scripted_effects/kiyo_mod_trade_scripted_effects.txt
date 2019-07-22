@@ -1,0 +1,505 @@
+# Calculates resources to all trade ships in trade fleet by vanilla jobs
+# THIS = FLEET
+kiyo_trade_calculate_resources = {
+	orbit = { kiyo_mod_trade_clear_trade_modifiers = yes }
+	switch = { trigger = has_fleet_flag
+		kiyo_trade_starting = {
+			if = { limit = { NOT = { has_fleet_flag = kiyo_trade_end_expired } }
+				orbit = {
+					set_variable = { which = kiyo_trade_minerals_end value = prev }
+					set_variable = { which = kiyo_trade_energy_end value = prev }
+					set_variable = { which = kiyo_trade_food_end value = prev }
+					set_variable = { which = kiyo_trade_unity_end value = prev }
+					set_variable = { which = kiyo_trade_consumer_goods_end value = prev }
+					set_variable = { which = kiyo_trade_alloys_end value = prev }
+					set_variable = { which = kiyo_trade_physics_research_end value = prev }
+					set_variable = { which = kiyo_trade_society_research_end value = prev }
+					set_variable = { which = kiyo_trade_engineering_research_end value = prev }
+					set_variable = { which = kiyo_trade_other_end value = prev }
+					
+					# Subtract old value from total
+					subtract_variable = { which = kiyo_trade_minerals value = kiyo_trade_minerals_end }
+					subtract_variable = { which = kiyo_trade_energy value = kiyo_trade_energy_end }
+					subtract_variable = { which = kiyo_trade_food value = kiyo_trade_food_end }
+					subtract_variable = { which = kiyo_trade_unity value = kiyo_trade_unity_end }
+					subtract_variable = { which = kiyo_trade_consumer_goods value = kiyo_trade_consumer_goods_end }
+					subtract_variable = { which = kiyo_trade_alloys value = kiyo_trade_alloys_end }
+					subtract_variable = { which = kiyo_trade_physics_research value = kiyo_trade_physics_research_end }
+					subtract_variable = { which = kiyo_trade_society_research value = kiyo_trade_society_research_end }
+					subtract_variable = { which = kiyo_trade_engineering_research value = kiyo_trade_engineering_research_end }
+					subtract_variable = { which = kiyo_trade_other value = kiyo_trade_other_end }
+				}
+			}
+			orbit = {
+				# Add new cargo value to total
+				change_variable = { which = kiyo_trade_minerals value = prev }
+				change_variable = { which = kiyo_trade_energy value = prev }
+				change_variable = { which = kiyo_trade_food value = prev }
+				change_variable = { which = kiyo_trade_unity value = prev }
+				change_variable = { which = kiyo_trade_consumer_goods value = prev }
+				change_variable = { which = kiyo_trade_alloys value = prev }
+				change_variable = { which = kiyo_trade_physics_research value = prev }
+				change_variable = { which = kiyo_trade_society_research value = prev }
+				change_variable = { which = kiyo_trade_engineering_research value = prev }
+				change_variable = { which = kiyo_trade_other value = prev }
+			}
+			set_variable = { which = kiyo_trade_minerals_end value = kiyo_trade_minerals }
+			set_variable = { which = kiyo_trade_energy_end value = kiyo_trade_energy }
+			set_variable = { which = kiyo_trade_food_end value = kiyo_trade_food }
+			set_variable = { which = kiyo_trade_unity_end value = kiyo_trade_unity }
+			set_variable = { which = kiyo_trade_consumer_goods_end value = kiyo_trade_consumer_goods }
+			set_variable = { which = kiyo_trade_alloys_end value = kiyo_trade_alloys }
+			set_variable = { which = kiyo_trade_physics_research_end value = kiyo_trade_physics_research }
+			set_variable = { which = kiyo_trade_society_research_end value = kiyo_trade_society_research }
+			set_variable = { which = kiyo_trade_engineering_research_end value = kiyo_trade_engineering_research }
+			set_variable = { which = kiyo_trade_other_end value = kiyo_trade_other }
+		}
+		kiyo_trade_ending = {
+			if = { limit = { NOT = { has_fleet_flag = kiyo_trade_start_expired } }
+				orbit = {
+					set_variable = { which = kiyo_trade_minerals_start value = prev }
+					set_variable = { which = kiyo_trade_energy_start value = prev }
+					set_variable = { which = kiyo_trade_food_start value = prev }
+					set_variable = { which = kiyo_trade_unity_start value = prev }
+					set_variable = { which = kiyo_trade_consumer_goods_start value = prev }
+					set_variable = { which = kiyo_trade_alloys_start value = prev }
+					set_variable = { which = kiyo_trade_physics_research_start value = prev }
+					set_variable = { which = kiyo_trade_society_research_start value = prev }
+					set_variable = { which = kiyo_trade_engineering_research_start value = prev }
+					set_variable = { which = kiyo_trade_other_start value = prev }
+					
+					# Subtract old value from total
+					subtract_variable = { which = kiyo_trade_minerals value = kiyo_trade_minerals_start }
+					subtract_variable = { which = kiyo_trade_energy value = kiyo_trade_energy_start }
+					subtract_variable = { which = kiyo_trade_food value = kiyo_trade_food_start }
+					subtract_variable = { which = kiyo_trade_unity value = kiyo_trade_unity_start }
+					subtract_variable = { which = kiyo_trade_consumer_goods value = kiyo_trade_consumer_goods_start }
+					subtract_variable = { which = kiyo_trade_alloys value = kiyo_trade_alloys_start }
+					subtract_variable = { which = kiyo_trade_physics_research value = kiyo_trade_physics_research_start }
+					subtract_variable = { which = kiyo_trade_society_research value = kiyo_trade_society_research_start }
+					subtract_variable = { which = kiyo_trade_engineering_research value = kiyo_trade_engineering_research_start }
+					subtract_variable = { which = kiyo_trade_other value = kiyo_trade_other_start }
+				}
+			}
+			orbit = {
+				# Add new cargo value to total
+				change_variable = { which = kiyo_trade_minerals value = prev }
+				change_variable = { which = kiyo_trade_energy value = prev }
+				change_variable = { which = kiyo_trade_food value = prev }
+				change_variable = { which = kiyo_trade_unity value = prev }
+				change_variable = { which = kiyo_trade_consumer_goods value = prev }
+				change_variable = { which = kiyo_trade_alloys value = prev }
+				change_variable = { which = kiyo_trade_physics_research value = prev }
+				change_variable = { which = kiyo_trade_society_research value = prev }
+				change_variable = { which = kiyo_trade_engineering_research value = prev }
+				change_variable = { which = kiyo_trade_other value = prev }
+			}
+			set_variable = { which = kiyo_trade_minerals_start value = kiyo_trade_minerals }
+			set_variable = { which = kiyo_trade_energy_start value = kiyo_trade_energy }
+			set_variable = { which = kiyo_trade_food_start value = kiyo_trade_food }
+			set_variable = { which = kiyo_trade_unity_start value = kiyo_trade_unity }
+			set_variable = { which = kiyo_trade_consumer_goods_start value = kiyo_trade_consumer_goods }
+			set_variable = { which = kiyo_trade_alloys_start value = kiyo_trade_alloys }
+			set_variable = { which = kiyo_trade_physics_research_start value = kiyo_trade_physics_research }
+			set_variable = { which = kiyo_trade_society_research_start value = kiyo_trade_society_research }
+			set_variable = { which = kiyo_trade_engineering_research_start value = kiyo_trade_engineering_research }
+			set_variable = { which = kiyo_trade_other_start value = kiyo_trade_other }
+		}
+		default = { log = "HOW DID THIS HAPPEN?! (scripted_effect kiyo_trade_calculate_resources)" }
+	}
+	orbit = {
+		if = { limit = { NOT = { has_deposit = d_kiyo_mod_trade } } add_deposit = d_kiyo_mod_trade }
+		
+		# Check for Hive Mind/Machine Intelligence
+		if = { limit = { exists = owner }
+			owner = {
+				switch = { trigger = has_authority
+					auth_hive_mind = {
+						prev = {
+							divide_variable = { which = kiyo_trade_other value = 2 }
+							change_variable = { which = kiyo_trade_minerals value = kiyo_trade_other }
+							change_variable = { which = kiyo_trade_food value = kiyo_trade_other }
+							set_variable = { which = kiyo_trade_other value = 0 }
+							
+							divide_variable = { which = kiyo_trade_consumer_goods value = 2 }
+							change_variable = { which = kiyo_trade_minerals value = kiyo_trade_consumer_goods }
+							change_variable = { which = kiyo_trade_food value = kiyo_trade_consumer_goods }
+							set_variable = { which = kiyo_trade_consumer_goods value = 0 }
+						}
+					}
+					auth_machine_intelligence = {
+						prev = {
+							divide_variable = { which = kiyo_trade_other value = 2 }
+							change_variable = { which = kiyo_trade_minerals value = kiyo_trade_other }
+							change_variable = { which = kiyo_trade_energy value = kiyo_trade_other }
+							set_variable = { which = kiyo_trade_other value = 0 }
+							
+							divide_variable = { which = kiyo_trade_consumer_goods value = 2 }
+							change_variable = { which = kiyo_trade_minerals value = kiyo_trade_consumer_goods }
+							change_variable = { which = kiyo_trade_energy value = kiyo_trade_consumer_goods }
+							set_variable = { which = kiyo_trade_consumer_goods value = 0 }
+						}
+					}
+				}
+			}
+		}
+		
+		kiyo_mod_trade_set_resource_modifiers = yes
+	
+		# Unload Cargo (Reset to 0)
+		prev = {
+			set_variable = { which = kiyo_trade_minerals value = 0 }
+			set_variable = { which = kiyo_trade_energy value = 0 }
+			set_variable = { which = kiyo_trade_food value = 0 }
+			set_variable = { which = kiyo_trade_unity value = 0 }
+			set_variable = { which = kiyo_trade_consumer_goods value = 0 }
+			set_variable = { which = kiyo_trade_alloys value = 0 }
+			set_variable = { which = kiyo_trade_physics_research value = 0 }
+			set_variable = { which = kiyo_trade_society_research value = 0 }
+			set_variable = { which = kiyo_trade_engineering_research value = 0 }
+			set_variable = { which = kiyo_trade_other value = 0 }
+		}
+		
+		### LOAD NEW CARGO (LOOP TRADE SHIP RESOURCES) ###
+		
+		# LOOP minerals
+		while = {
+			limit = {
+				any_pop = {
+					OR = {
+						has_job = miner
+						has_job = mining_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+			}
+			prev.owner = {
+				every_owned_ship = {
+					limit = {
+						is_ship_size = kiyo_trade
+						fleet = { is_same_value = root }
+					}
+					fleet = { change_variable = { which = kiyo_trade_minerals value = 1 } }
+				}
+			}
+			random_pop = {
+				limit = {
+					OR = {
+						has_job = miner
+						has_job = mining_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+				set_pop_flag = kiyo_trade_calculated
+			}
+		}
+		
+		# LOOP energy
+		while = {
+			limit = {
+				any_pop = {
+					OR = {
+						has_job = technician
+						has_job = technician_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+			}
+			prev.owner = {
+				every_owned_ship = {
+					limit = {
+						is_ship_size = kiyo_trade
+						fleet = { is_same_value = root }
+					}
+					fleet = { change_variable = { which = kiyo_trade_energy value = 1 } }
+				}
+			}
+			random_pop = {
+				limit = {
+					OR = {
+						has_job = technician
+						has_job = technician_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+				set_pop_flag = kiyo_trade_calculated
+			}
+		}
+		
+		# LOOP food
+		while = {
+			limit = {
+				any_pop = {
+					OR = {
+						has_job = farmer
+						has_job = agri_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+			}
+			prev.owner = {
+				every_owned_ship = {
+					limit = {
+						is_ship_size = kiyo_trade
+						fleet = { is_same_value = root }
+					}
+					fleet = { change_variable = { which = kiyo_trade_food value = 1 } }
+				}
+			}
+			random_pop = {
+				limit = {
+					OR = {
+						has_job = farmer
+						has_job = agri_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+				set_pop_flag = kiyo_trade_calculated
+			}
+		}
+		
+		# LOOP unity
+		while = {
+			limit = {
+				any_pop = {
+					OR = {
+						has_job = culture_worker
+						has_job = priest
+						has_job = high_priest
+						has_job = manager
+						has_job = synapse_drone
+						has_job = coordinator
+						has_job = bio_trophy
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+			}
+			prev.owner = {
+				every_owned_ship = {
+					limit = {
+						is_ship_size = kiyo_trade
+						fleet = { is_same_value = root }
+					}
+					fleet = { change_variable = { which = kiyo_trade_unity value = 1 } }
+				}
+			}
+			random_pop = {
+				limit = {
+					OR = {
+						has_job = culture_worker
+						has_job = priest
+						has_job = high_priest
+						has_job = manager
+						has_job = synapse_drone
+						has_job = coordinator
+						has_job = bio_trophy
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+				set_pop_flag = kiyo_trade_calculated
+			}
+		}
+		
+		# LOOP consumer goods
+		while = {
+			limit = {
+				any_pop = {
+					OR = {
+						has_job = artisan
+						has_job = artisan_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+			}
+			prev.owner = {
+				every_owned_ship = {
+					limit = {
+						is_ship_size = kiyo_trade
+						fleet = { is_same_value = root }
+					}
+					fleet = { change_variable = { which = kiyo_trade_consumer_goods value = 1 } }
+				}
+			}
+			random_pop = {
+				limit = {
+					OR = {
+						has_job = artisan
+						has_job = artisan_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+				set_pop_flag = kiyo_trade_calculated
+			}
+		}
+		
+		# LOOP alloys
+		while = {
+			limit = {
+				any_pop = {
+					OR = {
+						has_job = foundry
+						has_job = fabricator
+						has_job = alloy_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+			}
+			prev.owner = {
+				every_owned_ship = {
+					limit = {
+						is_ship_size = kiyo_trade
+						fleet = { is_same_value = root }
+					}
+					fleet = { change_variable = { which = kiyo_trade_alloys value = 1 } }
+				}
+			}
+			random_pop = {
+				limit = {
+					OR = {
+						has_job = foundry
+						has_job = fabricator
+						has_job = alloy_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+				set_pop_flag = kiyo_trade_calculated
+			}
+		}
+		
+		# LOOP research
+		while = {
+			limit = {
+				any_pop = {
+					OR = {
+						has_job = researcher
+						has_job = head_researcher
+						has_job = brain_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+			}
+			prev.owner = {
+				every_owned_ship = {
+					limit = {
+						is_ship_size = kiyo_trade
+						fleet = { is_same_value = root }
+					}
+					fleet = { change_variable = { which = kiyo_trade_physics_research value = 1 } }
+					fleet = { change_variable = { which = kiyo_trade_society_research value = 1 } }
+					fleet = { change_variable = { which = kiyo_trade_engineering_research value = 1 } }
+				}
+			}
+			random_pop = {
+				limit = {
+					OR = {
+						has_job = researcher
+						has_job = head_researcher
+						has_job = brain_drone
+					}
+					NOT = { has_pop_flag = kiyo_trade_calculated }
+				}
+				set_pop_flag = kiyo_trade_calculated
+			}
+		}
+		
+		# LOOP other
+		while = {
+			limit = {
+				any_pop = {
+					is_unemployed = no
+					is_sapient = yes
+					NOT = {
+						has_pop_flag = kiyo_trade_calculated
+						has_job = criminal
+						has_job = deviant_drone
+						has_job = corrupt_drone
+					}
+				}
+			}
+			prev.owner = {
+				every_owned_ship = {
+					limit = {
+						is_ship_size = kiyo_trade
+						fleet = { is_same_value = root }
+					}
+					fleet = { change_variable = { which = kiyo_trade_other value = 1 } }
+				}
+			}
+			random_pop = {
+				limit = {
+					is_unemployed = no
+					is_sapient = yes
+					NOT = {
+						has_pop_flag = kiyo_trade_calculated
+						has_job = criminal
+						has_job = deviant_drone
+						has_job = corrupt_drone
+					}
+				}
+				set_pop_flag = kiyo_trade_calculated
+			}
+		}
+		
+		### SHIP RESOURCE LOOP END ###
+		every_pop = { limit = { has_pop_flag = kiyo_trade_calculated } remove_pop_flag = kiyo_trade_calculated }
+	}
+	
+	# Half Cargo if getting cargo from origin to destination
+	if = { limit = { has_fleet_flag = kiyo_trade_ending }
+		divide_variable = { which = kiyo_trade_minerals value = 2 }
+		divide_variable = { which = kiyo_trade_energy value = 2 }
+		divide_variable = { which = kiyo_trade_food value = 2 }
+		divide_variable = { which = kiyo_trade_unity value = 2 }
+		divide_variable = { which = kiyo_trade_consumer_goods value = 2 }
+		divide_variable = { which = kiyo_trade_alloys value = 2 }
+		divide_variable = { which = kiyo_trade_physics_research value = 2 }
+		divide_variable = { which = kiyo_trade_society_research value = 2 }
+		divide_variable = { which = kiyo_trade_engineering_research value = 2 }
+		divide_variable = { which = kiyo_trade_other value = 2 }
+	}
+	
+	# 1.5x Cargo if owner is corporate authority
+	if = { limit = { owner = { has_authority = auth_corporate } }
+		multiply_variable = { which = kiyo_trade_minerals value = 3 }
+		multiply_variable = { which = kiyo_trade_energy value = 3 }
+		multiply_variable = { which = kiyo_trade_food value = 3 }
+		multiply_variable = { which = kiyo_trade_unity value = 3 }
+		multiply_variable = { which = kiyo_trade_consumer_goods value = 3 }
+		multiply_variable = { which = kiyo_trade_alloys value = 3 }
+		multiply_variable = { which = kiyo_trade_physics_research value = 3 }
+		multiply_variable = { which = kiyo_trade_society_research value = 3 }
+		multiply_variable = { which = kiyo_trade_engineering_research value = 3 }
+		multiply_variable = { which = kiyo_trade_other value = 3 }
+		
+		divide_variable = { which = kiyo_trade_minerals value = 2 }
+		divide_variable = { which = kiyo_trade_energy value = 2 }
+		divide_variable = { which = kiyo_trade_food value = 2 }
+		divide_variable = { which = kiyo_trade_unity value = 2 }
+		divide_variable = { which = kiyo_trade_consumer_goods value = 2 }
+		divide_variable = { which = kiyo_trade_alloys value = 2 }
+		divide_variable = { which = kiyo_trade_physics_research value = 2 }
+		divide_variable = { which = kiyo_trade_society_research value = 2 }
+		divide_variable = { which = kiyo_trade_engineering_research value = 2 }
+		divide_variable = { which = kiyo_trade_other value = 2 }
+	}
+	
+}
+
+# THIS = PLANET
+kiyo_mod_trade_set_resource_modifiers = {
+	kiyo_trade_add_minerals_modifier = yes
+	kiyo_trade_add_energy_modifier = yes
+	kiyo_trade_add_food_modifier = yes
+	kiyo_trade_add_unity_modifier = yes
+	kiyo_trade_add_consumer_goods_modifier = yes
+	kiyo_trade_add_alloys_modifier = yes
+	kiyo_trade_add_physics_research_modifier = yes
+	kiyo_trade_add_society_research_modifier = yes
+	kiyo_trade_add_engineering_research_modifier = yes
+	kiyo_trade_add_other_modifier = yes
+}
+
+# THIS = PLANET
+kiyo_mod_trade_check_trade_route_exist = {
+	if = { limit = { NOT = { any_country = { any_owned_fleet = { OR = { has_fleet_flag = kiyo_trade_start@PREVPREV has_fleet_flag = kiyo_trade_end@PREVPREV } } } } } remove_deposit = d_kiyo_mod_trade }
+}

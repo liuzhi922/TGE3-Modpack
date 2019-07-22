@@ -1,0 +1,104 @@
+
+# ##################
+# Shield Rechargers(caps)
+# ##################
+
+tech_c_shield_rechargers_2 = {
+	area = physics
+	cost = @tier3cost3
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all	
+	prerequisites = { "tech_shield_rechargers_1" "tech_cruisers" }
+	weight = @tier3weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_c_shield_rechargers_3 = {
+	area = physics
+	cost = @tier5cost1
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }
+	ai_update_type = all	
+	prerequisites = { "tech_c_shield_rechargers_2" "tech_battleships" }
+	weight = @tier5weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}

@@ -1,0 +1,62 @@
+
+############
+# Decisions
+
+# 360 720 1080 1440 1800 2160
+
+@d_O_time = 1440
+@d_O_influence = 30
+@d_O_influence_AP = 20
+@d_O_energy = 1500
+@d_O_energy_AP = 1200
+@d_O_alloys = 1000
+@d_O_alloys_AP = 800
+@d_O_strat = 25 #80
+@d_O_strat_AP = 15 #60
+# gases crystals
+
+@d_U_time = 2160
+@d_U_influence = 60
+@d_U_influence_AP = 40
+@d_U_energy = 2000
+@d_U_energy_AP = 1600
+@d_U_minerals = 5000
+@d_U_minerals_AP = 4000
+@d_U_strat = 100
+@d_U_strat_AP = 80
+# motes gases
+
+@d_S_time = 1080
+@d_S_influence = 50
+@d_S_influence_AP = 35
+@d_S_energy = 1000
+@d_S_energy_AP = 800
+@d_S_minerals = 3000
+@d_S_minerals_AP = 2400
+#@d_S_strat = 25
+#@d_S_strat_AP = 15
+# motes crystals
+
+# H_E & R_E in decision file
+@d_H_E_time = 240
+@d_R_E_time = 600
+
+# Subterranean civilisation colony chain (seismic_disturbance planet flag)
+@d_Usd_food = 500
+@d_Usd_energy = 1000
+@d_Usd_minerals = 2500
+@d_Usd_strat = 40
+
+############
+# AI weights (stockpile threshold) 
+#(AI usually pays _AP costs)
+
+@d_AI_influence = 100 #250
+@d_AI_S_energy = 3000 #5000
+@d_AI_S_minerals = 6000 #9000
+@d_AI_U_energy = 4000 #8000
+@d_AI_U_minerals = 8000 #10000
+@d_AI_O_energy = 3000 #6000
+@d_AI_O_alloys = 2500 #5000
+
+# H_E & R_E in decision file

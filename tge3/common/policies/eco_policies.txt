@@ -1,0 +1,327 @@
+# Environmental Regulation Policies
+eco_environmental_policy = {
+
+	option = {
+		name = "eco_environmental_policy_default"
+		
+		AI_weight = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "eco_policy_sustainable_development"
+		
+		potential = {
+			OR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				is_regular_empire = no
+			}				
+		}
+		
+		policy_flags = {
+			eco_policy_sustainable_development
+		}
+		
+		modifier = {
+			planet_jobs_energy_produces_mult = -0.20
+			planet_jobs_minerals_produces_mult = -0.20
+			planet_jobs_food_produces_mult = -0.20
+			planet_jobs_alloys_produces_mult = -0.20
+			planet_jobs_consumer_goods_produces_mult = -0.20
+			planet_jobs_physics_research_produces_mult = -0.20
+			planet_jobs_society_research_produces_mult = -0.20
+			planet_jobs_engineering_research_produces_mult = -0.20
+		}
+		
+		on_disabled = {
+			custom_tooltip = eco_policy_sustainable_development_tooltip
+		}
+		
+		AI_weight = {
+			factor = 0	
+		}
+	}
+
+	option = {
+		name = "eco_policy_environmental_regulation"
+		
+		potential = {
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				is_regular_empire = no
+			}	
+		}
+		
+		policy_flags = {
+			eco_policy_environmental_regulation
+		}
+		
+		modifier = {
+			planet_jobs_energy_produces_mult = -0.10
+			planet_jobs_minerals_produces_mult = -0.10
+			planet_jobs_food_produces_mult = -0.10
+			planet_jobs_alloys_produces_mult = -0.10
+			planet_jobs_consumer_goods_produces_mult = -0.10
+			planet_jobs_physics_research_produces_mult = -0.10
+			planet_jobs_society_research_produces_mult = -0.10
+			planet_jobs_engineering_research_produces_mult = -0.10
+		}
+
+		on_disabled = {
+			custom_tooltip = eco_policy_environmental_regulation_tooltip
+		}
+		
+		AI_weight = {
+			factor = 0	
+		}
+	}	
+	
+	option = {
+		name = "eco_policy_environmental_deregulation"
+		
+		potential = {
+			NOR = {
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_fanatic_militarist"
+				is_regular_empire = no
+			}
+		}
+		
+		policy_flags = {
+			eco_policy_environmental_deregulation
+		}
+
+		modifier = {
+			planet_jobs_energy_produces_mult = 0.10
+			planet_jobs_minerals_produces_mult = 0.10
+			planet_jobs_food_produces_mult = 0.10
+			planet_jobs_alloys_produces_mult = 0.10
+			planet_jobs_consumer_goods_produces_mult = 0.10
+			planet_jobs_physics_research_produces_mult = 0.10
+			planet_jobs_society_research_produces_mult = 0.10
+			planet_jobs_engineering_research_produces_mult = 0.10
+		}
+
+		on_disabled = {
+			custom_tooltip = eco_policy_environmental_deregulation_tooltip
+		}		
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "eco_policy_environmental_selfregulation"
+		
+		potential = {
+			OR = {
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_fanatic_militarist"
+				is_regular_empire = no
+			}
+		}
+		
+		policy_flags = {
+			eco_policy_environmental_selfregulation
+		}
+
+		modifier = {
+			planet_jobs_energy_produces_mult = 0.20
+			planet_jobs_minerals_produces_mult = 0.20
+			planet_jobs_food_produces_mult = 0.20
+			planet_jobs_alloys_produces_mult = 0.20
+			planet_jobs_consumer_goods_produces_mult = 0.20
+			planet_jobs_physics_research_produces_mult = 0.20
+			planet_jobs_society_research_produces_mult = 0.20
+			planet_jobs_engineering_research_produces_mult = 0.20
+		}
+
+		on_disabled = {
+			custom_tooltip = eco_policy_environmental_selfregulation_tooltip
+		}		
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
+eco_recycling_policy = {
+	option = {
+		name = "eco_recycling_policy_default"
+		
+		policy_flags = {
+			eco_policy_default
+		}
+		
+		AI_weight = {
+			factor = 1
+			
+			modifier = { 
+				factor = 10
+				is_machine_empire = yes
+			}
+		}
+	}
+
+	option = {
+		name = "eco_recycling_policy_material"
+		
+		policy_flags = {
+			eco_policy_material
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "eco_recycling_policy_food"
+		
+		potential = { is_hive_empire = yes }
+		
+		policy_flags = {
+			eco_policy_food
+		}
+		
+		AI_weight = {
+			factor = 0
+			modifier = { 
+				factor = 10
+				is_hive_empire = yes
+			}	
+		}
+	}
+	
+	option = {
+		name = "eco_recycling_policy_reuse"
+		
+		policy_flags = {
+			eco_policy_reuse
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "eco_recycling_policy_disposal"
+		
+		valid = {
+			NOT = { has_global_flag = eco_has_garbage_world }
+		}
+		
+		policy_flags = {
+			eco_policy_disposal
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+}
+
+eco_reproductive_policy = {
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness" }
+	}
+
+	option = {
+		name = "eco_reproductive_policy_minimal"
+		
+		potential = {
+			is_regular_empire = yes
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+			NOT = { has_ethic = "ethic_fanatic_authoritarian" }
+		}
+		
+		on_disabled = {
+			custom_tooltip = eco_reproductive_policy_minimal_tooltip
+		}
+		
+		AI_weight = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "eco_reproductive_policy_none"
+		
+		potential = {
+			is_regular_empire = yes
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_egalitarian" }
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+		}
+		
+		modifier = {
+			pop_cat_ruler_happiness = -0.05
+			pop_cat_specialist_happiness = -0.10
+			pop_cat_worker_happiness = -0.20
+			pop_cat_slave_happiness = -0.10
+			pop_growth_speed = 0.20
+		}
+		
+		on_disabled = {
+			custom_tooltip = eco_reproductive_policy_none_tooltip
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = "eco_reproductive_policy_full"
+		
+		potential = {
+			OR = { 
+				is_regular_empire = yes
+			}
+		}
+		
+		policy_flags = {
+			eco_reproductive_policy_full
+		}
+		
+		valid = {
+			NOT = { has_ethic = "ethic_authoritarian" }
+			NOT = { has_ethic = "ethic_fanatic_authoritarian" }
+		}
+		
+		modifier = {
+			pop_cat_ruler_happiness = 0.05
+			pop_cat_specialist_happiness = 0.10
+			pop_cat_worker_happiness = 0.20
+			pop_cat_slave_happiness = 0.10
+			pop_growth_speed = -0.20
+		}
+		
+		on_disabled = {
+			custom_tooltip = eco_reproductive_policy_full_tooltip
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,260 @@
+eco_civic_consumerist = {
+	description = "eco_civic_consumerist_effects"
+	playable = { host_has_dlc = "Megacorp" }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_merchant_guilds
+				value = civic_aristocratic_elite
+				value = civic_technocracy
+				value = civic_byzantine_bureaucracy
+				value = civic_environmentalist
+				value = civic_shared_burden
+			}
+		}
+	}
+	random_weight = {
+		base = 3
+		modifier = {
+			factor = 0
+			not = { host_has_dlc = "Megacorp" }
+		}
+	}
+}
+
+eco_civic_recycler = {
+	potential = { authority = { value = auth_machine_intelligence } }
+	description = "eco_civic_recycler_effects"
+	random_weight = { base = 5 }
+}
+
+eco_civic_scavenger = {
+	potential = { authority = { value = auth_hive_mind } }
+	description = "eco_civic_scavenger_effects"
+	random_weight = { base = 5 }
+}
+
+eco_civic_scrapper = {
+	potential = { authority = { value = auth_corporate } }
+	description = "eco_civic_scrapper_effects"
+	random_weight = { base = 5 }
+}
+
+eco_civic_caretaker = {
+	potential = { authority = { value = auth_machine_intelligence } always = no }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_machine_servitor
+				value = civic_machine_terminator
+				value = civic_machine_assimilator
+			}
+		}
+	}
+	description = "eco_civic_caretaker_effects"
+	random_weight = { base = 5 }
+	modification = no
+}
+
+eco_civic_world_mind = {
+	potential = { authority = { value = auth_hive_mind }  always = no }
+	possible = { civics = { not = { value = civic_hive_devouring_swarm } } }
+	description = "eco_civic_world_mind_effects"
+	random_weight = { base = 5 }
+	modification = no
+}
+
+# Civic Overrides
+civic_exalted_priesthood = {
+	description = "civic_tooltip_exalted_priesthood_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_merchant_guilds
+				value = civic_aristocratic_elite
+				value = civic_technocracy
+				value = civic_byzantine_bureaucracy
+				value = civic_environmentalist
+			}
+		}	
+	}
+	random_weight = { base = 5 }
+}
+
+civic_technocracy = {
+	description = civic_tooltip_technocracy_effects
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_merchant_guilds
+				value = civic_exalted_priesthood
+				value = civic_aristocratic_elite
+				value = civic_byzantine_bureaucracy
+				value = civic_environmentalist
+				value = eco_civic_consumerist
+			}
+		}		
+	}
+	random_weight = { base = 5 }
+	
+}
+
+civic_environmentalist = {
+	description = "civic_tooltip_environmentalist_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_merchant_guilds
+				value = civic_exalted_priesthood
+				value = civic_aristocratic_elite
+				value = civic_byzantine_bureaucracy
+				value = eco_civic_consumerist
+			}
+		}		
+	}
+	
+	random_weight = { base = 5 }
+}
+
+civic_aristocratic_elite = {
+	description = "civic_tooltip_aristocratic_elite_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	modifier = {
+		governor_skill_levels = 1
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}			
+		}
+		authority = {
+			OR = {
+				text = civic_tooltip_oli_imp
+				value = auth_oligarchic
+				value = auth_imperial
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_merchant_guilds
+				value = civic_exalted_priesthood
+				value = civic_technocracy
+				value = civic_byzantine_bureaucracy
+				value = civic_environmentalist
+				value = eco_civic_consumerist
+			}
+		}		
+	}
+	random_weight = { base = 5 }
+}
+
+civic_byzantine_bureaucracy = {
+	playable = { host_has_dlc = "Megacorp" }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		always = yes
+	}
+	modifier = {
+		pop_amenities_usage_mult = -0.10
+		pop_housing_usage_mult = -0.10
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_exalted_priesthood
+				value = civic_aristocratic_elite
+				value = civic_technocracy
+				value = civic_merchant_guilds
+				value = civic_environmentalist
+				value = eco_civic_consumerist
+			}
+		}		
+	}	
+	random_weight = {
+		base = 2
+	}
+	description = "civic_tooltip_byzantine_bureaucracy_effects"
+}
+
+civic_merchant_guilds = {
+	description = "civic_tooltip_merchant_guilds_effects"
+	playable = { host_has_dlc = "Megacorp" }
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_exalted_priesthood
+				value = civic_aristocratic_elite
+				value = civic_technocracy
+				value = civic_byzantine_bureaucracy
+				value = civic_environmentalist
+				value = eco_civic_consumerist
+			}
+		}		
+	}
+	random_weight = {
+		base = 2
+	}	
+}

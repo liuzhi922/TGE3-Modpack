@@ -1,0 +1,254 @@
+objectTypes = {
+
+
+####################
+#	MUZZLE FLASHES
+####################
+
+	pdxparticle = {
+		name = "c_plasma_4_large_muzzle_particle"
+		type = "c_plasma_4_file"
+		
+		scale = 0.80
+	}
+	
+	pdxparticle = {
+		name = "c_plasma_4_medium_muzzle_particle"
+		type = "c_plasma_4_file"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "c_plasma_4_small_muzzle_particle"
+		type = "c_plasma_4_file"
+		
+		scale = 0.25
+	}
+	
+	pdxparticle = {
+		name = "c_plasma_5_large_muzzle_particle"
+		type = "c_plasma_5_file"
+		
+		scale = 0.80
+	}
+	
+	pdxparticle = {
+		name = "c_plasma_5_medium_muzzle_particle"
+		type = "c_plasma_5_file"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "c_plasma_5_small_muzzle_particle"
+		type = "c_plasma_5_file"
+		
+		scale = 0.25
+	}
+	
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_4_small_muzzle_particle"
+		type = "c_stormfire_auto_cannons_4_muzzle"
+		
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_4_medium_muzzle_particle"
+		type = "c_stormfire_auto_cannons_4_muzzle"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_4_large_muzzle_particle"
+		type = "c_stormfire_auto_cannons_4_muzzle"
+		
+		scale = 1.25
+	}
+	
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_5_small_muzzle_particle"
+		type = "c_stormfire_auto_cannons_5_muzzle"
+		
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_5_medium_muzzle_particle"
+		type = "c_stormfire_auto_cannons_5_muzzle"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_5_large_muzzle_particle"
+		type = "c_stormfire_auto_cannons_5_muzzle"
+		
+		scale = 1.25
+	}
+	
+#################
+#	FLYING EFFECTS
+#################
+
+	pdxparticle = {
+		name = "c_large_plasma_4_idle_particle"
+		type = "c_plasma_4_idle_file"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "c_large_plasma_4_idle_drops_particle"
+		type = "c_plasma_4_idle_drops_file"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_medium_plasma_4_idle_particle"
+		type = "c_plasma_4_idle_file"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "c_medium_plasma_4_idle_drops_particle"
+		type = "c_plasma_4_idle_drops_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "c_small_plasma_4_idle_particle"
+		type = "c_plasma_4_idle_file"
+		
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "c_small_plasma_4_idle_drops_particle"
+		type = "c_plasma_4_idle_drops_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "c_large_plasma_5_idle_particle"
+		type = "c_plasma_5_idle_file"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "c_large_plasma_5_idle_drops_particle"
+		type = "c_plasma_5_idle_drops_file"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_medium_plasma_5_idle_particle"
+		type = "c_plasma_5_idle_file"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "c_medium_plasma_5_idle_drops_particle"
+		type = "c_plasma_5_idle_drops_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "c_small_plasma_5_idle_particle"
+		type = "c_plasma_5_idle_file"
+		
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "c_small_plasma_5_idle_drops_particle"
+		type = "c_plasma_5_idle_drops_file"
+		
+		scale = 1.0
+	}
+	
+#####
+# HIT EFFECTS
+#####
+
+	pdxparticle = {
+		name = "c_plasma_4_small_hit_effect"
+		type = "c_plasma_4_hit_effect"
+		
+		scale = 0.35
+	}
+	
+	pdxparticle = {
+		name = "c_plasma_4_medium_hit_effect"
+		type = "c_plasma_4_hit_effect"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "c_plasma_4_large_hit_effect"
+		type = "c_plasma_4_hit_effect"
+		
+		scale = 0.8
+	}
+	
+	
+	pdxparticle = {
+		name = "c_plasma_5_small_hit_effect"
+		type = "c_plasma_5_hit_effect"
+		
+		scale = 0.35
+	}
+	
+	pdxparticle = {
+		name = "c_plasma_5_medium_hit_effect"
+		type = "c_plasma_5_hit_effect"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "c_plasma_5_large_hit_effect"
+		type = "c_plasma_5_hit_effect"
+		
+		scale = 0.8
+	}
+	
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_4_small_hit_effect"
+		type = "c_stormfire_auto_cannons_4_hit_effect"
+		
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_4_medium_hit_effect"
+		type = "c_stormfire_auto_cannons_4_hit_effect"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_4_large_hit_effect"
+		type = "c_stormfire_auto_cannons_4_hit_effect"
+		
+		scale = 1.25
+	}
+	
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_5_small_hit_effect"
+		type = "c_stormfire_auto_cannons_5_hit_effect"
+		
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_5_medium_hit_effect"
+		type = "c_stormfire_auto_cannons_5_hit_effect"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "c_stormfire_auto_cannons_5_large_hit_effect"
+		type = "c_stormfire_auto_cannons_5_hit_effect"
+		
+		scale = 1.25
+	}
+}

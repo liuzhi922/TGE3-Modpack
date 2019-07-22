@@ -1,0 +1,7 @@
+﻿l_french:
+ ####################################
+ # Misc
+ ####################################
+  bombardment_indiscriminate_desc:0 "Le protocole de bombardement $bombardment_indiscriminate$ vise les infrastructures militaires et planétaires sans se soucier des pertes civiles :\n- dommages §Himportants§! pour les §Yarmées§! ;\n- dommages §Himportants§! pour le §Ymonde§! ;\n- dommages §Ymodérés§! pour les §Ypops§! ;\n- permet de bombarder les mondes non défendus ;\n"
+  bombardment_raiding_desc:1 "Le protocole de bombardement $bombardment_raiding$ vise les foyers de population ennemis avec des vaisseaux spécialisés dans la capture et collectant les xénos pour les ramener sur nos mondes afin de les mettre au travail :\n- dommages §Elégers§! pour les §Yarmées§! ;\n- dommages §Elégers§! pour le §Ymonde§! ;\n- dommages §Ymodérés§! pour les §Ypops§! ;\n- permet d'§Yenlever§! des pops lorsque cela est possible, au lieu de les tuer ;\n"
+ 

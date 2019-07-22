@@ -1,0 +1,444 @@
+namespace = disaster
+
+# Drought
+planet_event = {
+	id = disaster.100
+	title = disaster.100.name
+	
+	desc = {
+		trigger = { has_modifier = eco_moderate }
+		text = disaster.100.desc
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_heavy }
+		text = disaster.100.desc.heavy
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_extreme }
+		text = disaster.100.desc.extreme
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_catastrophic }
+		text = disaster.100.desc.cata
+	}
+	
+	picture = GFX_evt_relic_world_street
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		NOT = { has_modifier = eco_drought }
+		owner = {
+			is_ai = no
+		}
+		num_pops > 19
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_moderate }
+		add_modifier = { modifier = eco_drought days = 90 }
+		add_planet_devastation = 1
+		random_list = {
+			75 = { }
+			25 = { add_deposit = d_eco_wasteland }
+		}
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_heavy }
+		add_modifier = { modifier = eco_drought days = 180 }
+		add_planet_devastation = 2
+		random_list = {
+			50 = { }
+			50 = { add_deposit = d_eco_wasteland }
+		}
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_extreme }
+		add_modifier = { modifier = eco_drought days = 270 }
+		add_planet_devastation = 3
+		random_list = {
+			25 = { }
+			75 = { add_deposit = d_eco_wasteland }
+		}
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_catastrophic }
+		add_modifier = { modifier = eco_drought days = 360 }
+		add_planet_devastation = 4
+		add_deposit = d_eco_wasteland
+	}
+}
+
+# Flooding
+planet_event = {
+	id = disaster.110
+	title = disaster.110.name
+	
+	desc = {
+		trigger = { has_modifier = eco_moderate }
+		text = disaster.110.desc
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_heavy }
+		text = disaster.110.desc.heavy
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_extreme }
+		text = disaster.110.desc.extreme
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_catastrophic }
+		text = disaster.110.desc.cata
+	}
+	
+	picture = GFX_evt_satellite_in_orbit
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		NOT  = { is_planet_class = pc_nuked }
+		NOT = { has_modifier = eco_flooding }
+		owner = {
+			is_ai = no
+		}
+		num_pops > 19
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_moderate }
+		add_modifier = { modifier = eco_flooding days = 90 }
+		add_planet_devastation = 4
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_heavy }
+		add_modifier = { modifier = eco_flooding days = 180 }
+		add_planet_devastation = 8
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_extreme }
+		add_modifier = { modifier = eco_flooding days = 270 }
+		add_planet_devastation = 12
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_catastrophic }
+		add_modifier = { modifier = eco_flooding days = 360 }
+		add_planet_devastation = 16
+	}
+}
+
+# Heat Wave
+planet_event = {
+	id = disaster.120
+	title = disaster.120.name
+	
+	desc = {
+		trigger = { has_modifier = eco_moderate }
+		text = disaster.120.desc
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_heavy }
+		text = disaster.120.desc.heavy
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_extreme }
+		text = disaster.120.desc.extreme
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_catastrophic }
+		text = disaster.120.desc.cata
+	}
+	
+	picture = GFX_evt_star_yellow
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT  = { is_planet_class = pc_nuked }
+		NOT = { has_modifier = eco_heat_wave }
+		owner = {
+			is_ai = no
+		}
+		num_pops > 19
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_moderate }
+		add_modifier = { modifier = eco_drought days = 90 }
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_heavy }
+		add_modifier = { modifier = eco_drought days = 180 }
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_extreme }
+		add_modifier = { modifier = eco_drought days = 270 }
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_catastrophic }
+		add_modifier = { modifier = eco_drought days = 360 }
+	}
+}
+
+# Outbreak
+planet_event = {
+	id = disaster.130
+	title = disaster.130.name
+	
+	desc = {
+		trigger = { has_modifier = eco_moderate }
+		text = disaster.130.desc
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_heavy }
+		text = disaster.130.desc.heavy
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_extreme }
+		text = disaster.130.desc.extreme
+	}
+	
+	desc = {
+		trigger = { has_modifier = eco_catastrophic }
+		text = disaster.130.desc.cata
+	}
+	
+	picture = GFX_evt_emergency_workers
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT = { has_modifier = eco_outbreak }
+		
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		num_pops > 19
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_moderate }
+		add_modifier = { modifier = eco_outbreak days = 90 }
+		random_list = {
+			75 = { }
+			25 = {
+				random_pop = { 
+					limit = {
+						NOT = { has_trait = "trait_mechanical" }
+					}
+					kill_pop = yes 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_heavy }
+		add_modifier = { modifier = eco_outbreak days = 180 }
+		random_list = {
+			50 = { }
+			50 = {
+				random_pop = { 
+					limit = {
+						NOT = { has_trait = "trait_mechanical" }
+					}
+					kill_pop = yes 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_extreme }
+		add_modifier = { modifier = eco_outbreak days = 270 }
+		random_list = {
+			25 = { }
+			75 = {
+				random_pop = { 
+					limit = {
+						NOT = { has_trait = "trait_mechanical" }
+					}
+					kill_pop = yes 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_modifier = eco_catastrophic }
+		add_modifier = { modifier = eco_outbreak days = 360 }
+		random_pop = { 
+			limit = {
+				NOT = { has_trait = "trait_mechanical" }
+			}
+			kill_pop = yes 
+		}
+	}
+}
+
+# Slums (Regular Empire)
+planet_event = {
+	id = disaster.140
+	title = disaster.140.name
+	desc = disaster.140.desc
+	picture = GFX_evt_eco_slums
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+			NOT = { has_authority = auth_hive_mind }
+		}
+		NOT = { has_deposit = d_eco_slum_city }
+		NOT = { has_deposit = d_eco_collapsed_burrows }
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_gas_giant }
+		NOT = { is_planet_class = pc_asteroid }
+		NOT = { is_planet_class = pc_ice_asteroid }
+		NOT = { is_planet_class = pc_rare_crystal_asteroid }
+		NOT = { is_planet_class = pc_molten }
+		NOT = { is_planet_class = pc_barren }
+		NOT = { is_planet_class = pc_barren_cold }
+		NOT = { is_planet_class = pc_toxic }
+		NOT = { is_planet_class = pc_frozen }
+		NOT = { is_planet_class = pc_machine }
+		NOT = { has_planet_flag = eco_no_pollution }
+		num_pops > 9
+		years_passed > 49
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = UNFORTUNATE
+		if = {
+			limit = { NOT = { has_deposit = d_eco_slum_town } }
+			add_deposit = d_eco_slum_town
+		} else_if = {
+			limit = { has_deposit = d_eco_slum_town }
+			remove_deposit = d_eco_slum_town
+			add_deposit = d_eco_slum_city
+		}
+	}
+}
+
+# Collapsed Burrow (Hive Empire)
+planet_event = {
+	id = disaster.150
+	title = disaster.150.name
+	desc = disaster.150.desc
+	picture = GFX_evt_underground_civilization
+	show_sound = event_structural_collapse
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = { is_ai = no }
+		NOT = { has_deposit = d_eco_collapsed_burrows }
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_gas_giant }
+		NOT = { is_planet_class = pc_asteroid }
+		NOT = { is_planet_class = pc_ice_asteroid }
+		NOT = { is_planet_class = pc_rare_crystal_asteroid }
+		NOT = { is_planet_class = pc_molten }
+		NOT = { is_planet_class = pc_barren }
+		NOT = { is_planet_class = pc_barren_cold }
+		NOT = { is_planet_class = pc_toxic }
+		NOT = { is_planet_class = pc_frozen }
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_cybrex }
+		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { has_planet_flag = eco_no_pollution }
+		num_pops > 9
+		years_passed > 49
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = UNFORTUNATE
+		add_deposit = d_eco_collapsed_burrows
+		random_owned_pop = {
+			limit = {
+				OR = {
+					has_job = unemployed
+					is_pop_category = simple_drone
+					is_pop_category = complex_drone
+				}
+			}
+			weights = {
+				base = 1
+				modifier = {
+					mult = 20
+					has_job = unemployed
+				}
+				modifier = {
+					mult = 10
+					has_job = simple_drone
+				}
+			}
+			kill_pop = yes
+		}
+	}
+}

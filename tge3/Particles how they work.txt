@@ -1,0 +1,45 @@
+1) common/component_templates/..
+	projectile_gfx = "XXX"
+	
+2) gfx/projectiles/.. 
+	"XXX"
+		hit_entity = "_HIT_"
+		shield_hit_entity = "_SHIELD_HIT_"  # same as vanilla
+		muzzle_flash_entity = "_MUZZLE_"
+		windup_entity = "_WINDUP_"
+	
+3) gfx/models/combat_items/..
+	entity = {
+		name = "_WINDUP_"
+			particle = "_windup_effect"
+			particle = "_muzzle_windup_effect"
+	entity = {
+		name = "_MUZZLE_"
+			particle = "_muzzle_particle"
+	entity = {
+		name = "_HIT_"
+			particle = "_hit_effect"
+	
+4) gfx/particles/..
+	pdxparticle = {
+		name = "_windup_effect"
+		type = "particle_windup_effect"
+	pdxparticle = {
+		name = "_muzzle_windup_effect"
+		type = "particle_muzzle_windup_effect"
+	pdxparticle = {
+		name = "_muzzle_particle"
+		type = "particle_muzzle_particle"
+	pdxparticle = {
+		name = "_hit_effect"
+		type = "particle_hit_effect"
+	
+5) gfx/particles/combat/..
+	particle={
+		name="particle_windup_effect"
+	particle={
+		name="particle_muzzle_windup_effect"
+	particle={
+		name="particle_muzzle_particle"
+	particle={
+		name="particle_hit_effect"

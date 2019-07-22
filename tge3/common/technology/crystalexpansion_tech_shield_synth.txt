@@ -1,0 +1,353 @@
+
+#Synth Shield Array VI
+tech_c_shields_synth_6 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_5" "tech_battleships" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_shields }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Synth Shield Array VII
+tech_c_shields_synth_7 = {
+	area = physics
+	cost = @tier5cost1
+	tier = 5
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_c_shields_synth_6" "tech_battleship_hull_1" }
+	weight = @tier5weight1
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Synth Shield Array VIII
+tech_c_shields_synth_8 = {
+	area = physics
+	cost = @tier5cost2
+	tier = 5
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_c_shields_synth_7" "tech_battleship_hull_2" }
+	weight = @tier5weight2
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Synth Shield Array IX
+tech_c_shields_synth_9 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_c_shields_synth_8" }
+	weight = @tier5weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Synth Shield Array X
+tech_c_shields_synth_10 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_c_shields_synth_9" }
+	weight = @tier3weight3
+	
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_authority = auth_machine_intelligence
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+

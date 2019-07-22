@@ -1,0 +1,3 @@
+has_galactic_market = {
+    has_ambient_object_flag = galactic_market_station_flag
+}

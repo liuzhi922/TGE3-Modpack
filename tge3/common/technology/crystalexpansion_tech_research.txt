@@ -1,0 +1,206 @@
+
+tech_c_eng_research_1 = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { industry }	
+	prerequisites = { "tech_engineering_2" }
+	weight = @tier3weight2
+	
+	modifier = {
+		country_engineering_tech_research_speed = 0.05
+	}
+		
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_c_eng_research_2 = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	is_rare = no
+	category = { industry }	
+	prerequisites = { "tech_c_eng_research_1" "tech_engineering_3" }
+	weight = @tier3weight3
+	
+	modifier = {
+		country_engineering_tech_research_speed = 0.05
+	}
+		
+		
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_c_eng_research_3 = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	is_rare = yes
+	category = { industry }	
+	prerequisites = { "tech_c_eng_research_2" "tech_engineering_3" }
+	weight = @tier4weight1
+	
+	modifier = {
+		country_engineering_tech_research_speed = 0.05
+	}
+		
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+
+tech_c_phy_research_1 = {
+	area = physics
+	tier = 3
+	cost = @tier3cost2
+	category = { computing }	
+	prerequisites = { "tech_physics_2" }
+	weight = @tier3weight2
+	
+	modifier = {
+		country_physics_tech_research_speed = 0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+tech_c_phy_research_2 = {
+	area = physics
+	tier = 3
+	is_rare = no
+	cost = @tier3cost3
+	category = { computing }	
+	prerequisites = { "tech_c_phy_research_1" "tech_physics_3" }
+	weight = @tier3weight3
+	
+	modifier = {
+		country_physics_tech_research_speed = 0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+tech_c_phy_research_3 = {
+	area = physics
+	tier = 4
+	is_rare = yes
+	cost = @tier4cost1
+	category = { computing }	
+	prerequisites = { "tech_c_phy_research_2" "tech_physics_3" }
+	weight = @tier4weight1
+	
+	modifier = {
+		country_physics_tech_research_speed = 0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}

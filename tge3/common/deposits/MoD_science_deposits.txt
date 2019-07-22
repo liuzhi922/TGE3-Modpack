@@ -1,0 +1,49 @@
+
+d_U_USC_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = default
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_housing_add = 2
+			job_head_researcher_add = 1
+			job_researcher_add = 15
+			job_clerk_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			planet_housing_add = 12
+			job_brain_drone_add = 10
+			job_maintenance_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			planet_housing_add = 12
+			job_calculator_add = 10
+			job_maintenance_drone_add = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

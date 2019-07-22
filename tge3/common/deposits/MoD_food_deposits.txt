@@ -1,0 +1,132 @@
+
+d_Sv_VFD_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_S_VFD
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_farmer_add = 12
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 12
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_O_LOSBF_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_LO_SBF
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			food = 24
+		}
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_farmer_add = 6
+			job_researcher_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 6
+			job_brain_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 6
+			job_calculator_add = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_H_SBF_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_S_VFD
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			food = 24
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_farmer_add = 6
+			job_researcher_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 6
+			job_brain_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 6
+			job_calculator_add = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+

@@ -1,0 +1,303 @@
+###################
+# COST
+###################
+@cost6s = 35
+@cost6m = 70
+@cost6l = 140
+
+@cost7s = 44
+@cost7m = 88
+@cost7l = 175
+
+###################
+# POWER
+###################
+@power6s = -21
+@power6m = -38
+@power6l = -74
+
+@power7s = -27
+@power7m = -47
+@power7l = -92
+
+# ####################
+#  Mass Driver
+# ####################
+
+# ## Mass Driver 6
+weapon_component_template = {
+	type = instant
+	
+	key = "C_SMALL_MASS_DRIVER_6"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	
+	damage = { min = 18 max = 58 }
+	windup = { min = 1 max = 18 }
+	total_fire_time = 25  # was 25
+	range = 50.0
+	accuracy = 0.75
+	tracking = 0.50
+	shield_damage = 1.50
+	armor_damage = 0.50
+	power = @power6s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t6_cost
+			volatile_motes = @s_t6_rare
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_mass_driver_6"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_mass_drivers_6" }
+	component_set = "C_MASS_DRIVER_6"
+	projectile_gfx = "gauss_cannon_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SMALL_MASS_DRIVER_7"
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "C_MEDIUM_MASS_DRIVER_6"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	
+	damage = { min = 44 max = 144 }
+	windup = { min = 1 max = 18 }
+	total_fire_time = 25  # was 25
+	range = 75.0
+	accuracy = 0.75
+	tracking = 0.30
+	shield_damage = 1.50
+	armor_damage = 0.50
+	power = @power6m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t6_cost
+			volatile_motes = @m_t6_rare
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_mass_driver_6"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_mass_drivers_6" }
+	component_set = "C_MASS_DRIVER_6"
+	projectile_gfx = "gauss_cannon_m"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_MEDIUM_MASS_DRIVER_7"
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "C_LARGE_MASS_DRIVER_6"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	
+	damage = { min = 105 max = 345 }
+	windup = { min = 1 max = 18 }
+	total_fire_time = 25  # was 25
+	range = 100.0
+	accuracy = 0.75
+	tracking = 0.05
+	shield_damage = 1.50
+	armor_damage = 0.50
+	power = @power6l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+			volatile_motes = @l_t6_rare
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_mass_driver_6"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_mass_drivers_6" }
+	component_set = "C_MASS_DRIVER_6"
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_LARGE_MASS_DRIVER_7"
+}
+
+# ## Mass Driver 7
+weapon_component_template = {
+	type = instant
+	
+	key = "C_SMALL_MASS_DRIVER_7"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	
+	damage = { min = 22 max = 72 }
+	windup = { min = 1 max = 18 }
+	total_fire_time = 25  # was 25
+	range = 50.0
+	accuracy = 0.75
+	tracking = 0.50
+	shield_damage = 1.50
+	armor_damage = 0.50
+	power = @power7s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t7_cost
+			volatile_motes = @s_t7_rare
+		}		
+		upkeep = {
+			energy = @s_t7_upkeep_energy
+			alloys = @s_t7_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_mass_driver_7"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_mass_drivers_7" }
+	component_set = "C_MASS_DRIVER_7"
+	projectile_gfx = "gauss_cannon_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "C_MEDIUM_MASS_DRIVER_7"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	
+	damage = { min = 55 max = 180 }
+	windup = { min = 1 max = 18 }
+	total_fire_time = 25  # was 25
+	range = 75.0
+	accuracy = 0.75
+	tracking = 0.30
+	shield_damage = 1.50
+	armor_damage = 0.50
+	power = @power7m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			volatile_motes = @m_t7_rare
+		}		
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_mass_driver_7"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_mass_drivers_7" }
+	component_set = "C_MASS_DRIVER_7"
+	projectile_gfx = "gauss_cannon_m"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "C_LARGE_MASS_DRIVER_7"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	
+	damage = { min = 131 max = 431 }
+	windup = { min = 1 max = 18 }
+	total_fire_time = 25  # was 25
+	range = 100.0
+	accuracy = 0.75
+	tracking = 0.05
+	shield_damage = 1.50
+	armor_damage = 0.50
+	power = @power7l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t7_cost
+			volatile_motes = @l_t7_rare
+		}		
+		upkeep = {
+			energy = @l_t7_upkeep_energy
+			alloys = @l_t7_upkeep_alloys
+		}
+	}
+	
+	icon = "GFX_C_ship_part_mass_driver_7"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_mass_drivers_7" }
+	component_set = "C_MASS_DRIVER_7"
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+}

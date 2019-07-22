@@ -1,0 +1,31 @@
+
+# hangars
+component_set = {
+	key = "C_HANGAR_1"
+	icon = "GFX_C_ship_part_hangar_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_HANGAR_2"
+	icon = "GFX_C_ship_part_hangar_2"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_HANGAR_3"
+	icon = "GFX_C_ship_part_hangar_3"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_HANGAR_4"
+	icon = "GFX_C_ship_part_hangar_4"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_HANGAR_5"
+	icon = "GFX_C_ship_part_hangar_5"
+	icon_frame = 1	
+}

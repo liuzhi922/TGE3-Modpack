@@ -1,0 +1,1361 @@
+namespace = degrade
+
+# Soil Erosion
+planet_event = {
+	id = degrade.100
+	title = degrade.100.name
+	desc = degrade.100.desc
+	picture = GFX_evt_eco_ecology
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		num_pops > 9
+		years_passed > 19
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		add_deposit = d_eco_wasteland
+	}
+}
+
+# Water Contamination
+planet_event = {
+	id = degrade.110
+	title = degrade.110.name
+	desc = degrade.110.desc
+	picture = GFX_evt_eco_ecology
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		num_pops > 14
+		years_passed > 19
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		add_deposit = d_eco_sludge
+	}
+}
+
+# Ozone Depletion
+planet_event = {
+	id = degrade.120
+	title = degrade.120.name
+	desc = degrade.120.desc
+	picture = GFX_evt_eco_climate
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+		}
+		num_pops > 4
+		years_passed > 19
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		add_modifier = { modifier = "eco_ozone" days = 360 }
+	}
+}
+
+# Junkheap
+planet_event = {
+	id = degrade.130
+	title = degrade.130.name
+	desc = degrade.130.desc
+	picture = GFX_evt_junkheap
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+		}
+		num_pops > 19
+		years_passed > 49
+	}
+
+	is_triggered_only = yes
+	
+	immediate = { set_planet_flag = ecology_junk_event }
+
+	option = {
+		name = TERRIBLE
+		add_deposit = d_eco_junkheap
+	}
+}
+
+# Biodiversity Loss
+planet_event = {
+	id = degrade.140
+	title = degrade.140.name
+	desc = degrade.140.desc
+	picture = GFX_evt_alien_nature
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_hive }
+		NOT  = { is_planet_class = pc_nuked }
+		NOT  = { is_planet_class = pc_relic }
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_ascension_perk = eco_ap_land_ethic }
+			NOT = { has_ascension_perk = eco_ap_land_ethic_gestalt }
+		}
+		NOT = { has_planet_flag = eco_diversity_event }
+		num_pops > 9
+		years_passed > 49
+	}
+
+	is_triggered_only = yes
+	
+	immediate = { set_planet_flag = eco_diversity_event }
+
+	option = {
+		name = TERRIBLE
+		trigger = { 
+			owner = { 
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+		}
+		if = {
+			limit = { has_modifier = titanic_life }
+			add_deposit = d_eco_graveyard_2
+		} else = {
+			add_deposit = d_eco_graveyard
+		}
+	}
+	
+	option = {
+		name = INTERESTING
+			trigger = {
+				owner = { 
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+				}
+			}	
+		if = {
+			limit = { has_modifier = titanic_life }
+			add_deposit = d_eco_graveyard_2
+		} else = {
+			add_deposit = d_eco_graveyard
+		}
+	}
+}
+
+# Urban Sprawl
+planet_event = {
+	id = degrade.150
+	title = degrade.150.name
+	desc = degrade.150.desc
+	picture = GFX_evt_eco_sprawl
+	show_sound = event_construction
+	location = from
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		NOT  = { is_planet_class = pc_hive }
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_cybrex }
+		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { has_planet_flag = eco_exploit_event }
+		NOT = { has_planet_flag = eco_no_pollution }
+		owner = {
+			is_ai = no
+			NOT = { has_ascension_perk = eco_ap_land_ethic }
+			NOT = { has_ascension_perk = eco_ap_land_ethic_gestalt }
+		}
+		free_district_slots = 0
+	}
+
+	option = {
+		name = degrade.150.a
+		add_deposit = d_eco_sprawl
+		if = {
+			limit = { has_modifier = dangerous_wildlife }
+			add_modifier = { modifier = "eco_displaced_wildlife_2" days = 1800 }
+		} else_if = {
+			limit = { has_modifier = titanic_life }
+			add_modifier = { modifier = "eco_displaced_wildlife_3" days = 1800 }
+		} else = {
+			add_modifier = { modifier = "eco_displaced_wildlife" days = 1800 }
+		}
+		set_planet_flag = eco_exploit_event
+	}
+	
+	option = {
+		name = degrade.150.b
+		set_planet_flag = eco_exploit_event
+	}
+}
+
+# Urban Sprawl 2
+planet_event = {
+	id = degrade.160
+	title = degrade.160.name
+	desc = degrade.160.desc
+	picture = GFX_evt_eco_sprawl
+	show_sound = event_construction
+	location = from
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		NOT  = { is_planet_class = pc_hive }
+		NOT = { has_planet_flag = eco_exploit_2_event }
+		NOT = { has_planet_flag = eco_no_pollution }
+		has_deposit = d_eco_sprawl
+		owner = {
+			is_ai = no
+			NOT = { has_ascension_perk = eco_ap_land_ethic }
+			NOT = { has_ascension_perk = eco_ap_land_ethic_gestalt }
+		}
+		free_district_slots = 0
+	}
+
+	option = {
+		name = degrade.160.a
+		remove_deposit = d_eco_sprawl
+		add_deposit = d_eco_sprawl_2
+		if = {
+			limit = { has_modifier = titanic_life }
+			add_deposit = d_eco_graveyard_2
+		} else = {
+			add_deposit = d_eco_graveyard
+		}
+		set_planet_flag = eco_exploit_2_event
+	}
+	
+	option = {
+		name = degrade.160.b
+		set_planet_flag = eco_exploit_2_event
+	}
+}
+
+# Displaced Wildlife
+planet_event { 
+	id = degrade.170
+	title = degrade.170.name
+	desc = degrade.170.desc
+	picture = GFX_evt_alien_nature
+	show_sound = event_alien_nature
+	location = from
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_cybrex }
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		NOT  = { is_planet_class = pc_hive }
+		NOT  = { is_planet_class = pc_nuked }
+		NOT = { has_planet_flag = eco_no_pollution }
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+			NOT = { has_ascension_perk = eco_ap_land_ethic }
+			NOT = { has_ascension_perk = eco_ap_land_ethic_gestalt }
+		}
+		years_passed > 10
+	}
+	
+	option = {
+		name = WORRYING
+		hidden_effect = {
+			if = {
+				limit = { has_modifier = dangerous_wildlife }
+				random_list = {
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife_2" days = 720 } }
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife_2" days = 1080 } }
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife_2" days = 1440 } }
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife_2" days = 1800 } }
+				}
+			} else_if = {
+				limit = { has_modifier = titanic_life }
+				random_list = {
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife_3" days = 720 } }
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife_3" days = 1080 } }
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife_3" days = 1440 } }
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife_3" days = 1800 } }
+				}
+			} else = {
+				random_list = {
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife" days = 720 } }
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife" days = 1080 } }
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife" days = 1440 } }
+					25 = { add_modifier = { modifier = "eco_displaced_wildlife" days = 1800 } }
+				}
+			}
+		}
+	}
+}
+
+# Visual Pollution
+planet_event = {
+	id = degrade.230	
+	title = "degrade.230.name"
+	desc = "degrade.230.desc"
+	picture = GFX_evt_generator_powerup
+	show_sound = event_cityscape
+	location = ROOT
+	trackable = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+			NOT = { has_authority = auth_hive_mind }
+		}
+		num_pops > 4
+		years_passed > 19
+	}
+	
+	immediate = {
+		add_modifier = { modifier = "eco_visual" days = -1 }
+		set_planet_flag = ecology_min_event
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = degrade.230.auth
+		trigger = {
+			owner = { 
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
+		}
+		allow = {
+			owner = {
+				resource_stockpile_compare = { resource = influence value >= 50 }
+			}
+		}
+		owner = {
+			add_resource = { influence = -50 }
+		}
+		remove_modifier = "eco_visual"
+		add_modifier = { modifier = "eco_visual_success" days = -1 }
+	}
+	
+	option = {
+		name = degrade.230.egal
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+		}
+		allow = {
+			owner = { 
+				resource_stockpile_compare = { resource = minerals value >= 200 }
+			}
+		}
+		owner = {
+			add_resource = { minerals = -200 }
+		}
+		remove_modifier = "eco_visual"
+		add_modifier = { modifier = "eco_visual_success" days = -1 }
+	}
+	
+	option = {
+		name = degrade.230.a
+		trigger = {
+			owner = { 
+				NOR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+		}
+		allow = {
+			owner = {
+				resource_stockpile_compare = { resource = energy value >= 500 }
+			}
+		}
+		owner = {
+			add_resource = { energy = -500 }
+		}
+		remove_planet_flag = ecology_min_event
+		remove_modifier = "eco_visual"
+	}
+	
+	option = {
+		name = degrade.230.b
+		enable_special_project = {
+			name = "ECO_VISUAL_POLLUTION_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = degrade.230.c
+		remove_modifier = "eco_visual"
+		add_modifier = { modifier = "eco_visual_fail" days = -1 }
+	}
+}
+
+# Visual Pollution Success
+planet_event = {
+	id = degrade.231
+	title = degrade.231.name
+	desc = degrade.231.desc
+	picture = GFX_evt_eco_pollution
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		fromfrom = {
+			remove_modifier = "eco_visual"
+			add_modifier = { modifier = "eco_visual_success" days = -1 }
+			set_planet_flag = eco_visual_event_complete
+		}
+	}
+}
+
+# Visual Pollution Failure
+planet_event = {
+	id = degrade.232
+	title = degrade.232.name
+	desc = degrade.232.desc
+	picture = GFX_evt_eco_pollution
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		fromfrom = {
+			remove_modifier = "eco_visual"
+			add_modifier = { modifier = "eco_visual_fail" days = -1 }
+			set_planet_flag = eco_visual_event_complete
+		}
+	}
+}
+
+# Noise Pollution
+planet_event = {
+	id = degrade.180	
+	title = "degrade.180.name"
+	desc = "degrade.180.desc"
+	picture = GFX_evt_eco_pollution
+	show_sound = event_cityscape
+	location = ROOT
+	trackable = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+			NOT = { has_authority = auth_hive_mind }
+		}
+		num_pops > 4
+		years_passed > 19
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = { modifier = "eco_noise" days = -1 }
+		set_planet_flag = ecology_min_event
+	}
+	
+	option = {
+		name = degrade.180.mat
+		trigger = {
+			owner = { 
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		allow = {
+			owner = { 
+				resource_stockpile_compare = { resource = alloys value >= 100 }
+			}
+		}
+		owner = {
+			add_resource = { alloys = -100 }
+		}
+		remove_modifier = "eco_noise"
+		add_modifier = { modifier = "eco_noise_success" days = -1 }
+	}
+	
+	option = {
+		name = degrade.180.spirit
+		trigger = {
+			owner = { 
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		allow = {
+			owner = { 
+				resource_stockpile_compare = { resource = unity value >= 100 }
+			}
+		}
+		owner = {
+			add_resource = { unity = -100 }
+		}
+		remove_modifier = "eco_noise"
+		add_modifier = { modifier = "eco_noise_success" days = -1 }
+	}
+	
+	option = {
+		name = degrade.180.a
+		trigger = {
+			owner = { 
+				NOR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		allow = {
+			owner = {
+				resource_stockpile_compare = { resource = energy value >= 500 }
+			}
+		}
+		owner = {
+			add_resource = { energy = -500 }
+		}
+		remove_modifier = "eco_noise"
+		remove_planet_flag = ecology_min_event
+	}
+	
+	option = {
+		name = degrade.180.b
+		enable_special_project = {
+			name = "ECO_NOISE_POLLUTION_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = degrade.180.c
+		remove_modifier = "eco_noise"
+		add_modifier = { modifier = "eco_noise_fail" days = -1 }
+	}
+}
+
+# Noise Pollution Success
+planet_event = {
+	id = degrade.181
+	title = degrade.181.name
+	desc = degrade.181.desc
+	picture = GFX_evt_eco_pollution
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		fromfrom = {
+			remove_modifier = "eco_noise"
+			add_modifier = { modifier = "eco_noise_success" days = -1 }
+			set_planet_flag = eco_noise_event_complete
+		}
+	}
+}
+
+# Noise Pollution Failure
+planet_event = {
+	id = degrade.182
+	title = degrade.182.name
+	desc = degrade.182.desc
+	picture = GFX_evt_eco_pollution
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		fromfrom = {
+			remove_modifier = "eco_noise"
+			add_modifier = { modifier = "eco_noise_fail" days = -1 }
+			set_planet_flag = eco_noise_event_complete
+		}
+	}
+}
+
+# Light Pollution
+planet_event = {
+	id = degrade.190	
+	title = "degrade.190.name"
+	desc = "degrade.190.desc"
+	picture = GFX_evt_eco_pollution
+	show_sound = event_cityscape
+	location = ROOT
+	trackable = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+			NOT = { has_authority = auth_hive_mind }
+		}
+		num_pops > 4
+		years_passed > 19
+	}
+	
+		is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = { modifier = "eco_light" days = -1 }
+		set_planet_flag = ecology_min_event
+	}
+	
+	option = {
+		name = degrade.190.phobe
+		trigger = {
+			owner = { 
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		allow = {
+			owner = { 
+				resource_stockpile_compare = { resource = influence value >= 50 }
+			}
+		}
+		owner = {
+			add_resource = { influence = -50 }
+		}
+		remove_modifier = "eco_light"
+		add_modifier = { modifier = "eco_light_success" days = -1 }
+	}
+	
+	option = {
+		name = degrade.190.phile
+		trigger = {
+			owner = { 
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		allow = {
+			owner = { 
+				resource_stockpile_compare = { resource = consumer_goods value >= 100 }
+			}
+		}
+		owner = {
+			add_resource = { consumer_goods = -100 }
+		}
+		remove_modifier = "eco_light"
+		add_modifier = { modifier = "eco_light_success" days = -1 }
+	}
+	
+	option = {
+		name = degrade.190.a
+		trigger = {
+			owner = { 
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		allow = {
+			owner = {
+				resource_stockpile_compare = { resource = energy value >= 500 }
+			}
+		}
+		owner = {
+			add_resource = { energy = -500 }
+		}
+		remove_modifier = "eco_light"
+		remove_planet_flag = ecology_min_event
+	}
+	
+	option = {
+		name = degrade.190.b
+		enable_special_project = {
+			name = "ECO_LIGHT_POLLUTION_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = degrade.230.c
+		remove_modifier = "eco_light"
+		add_modifier = { modifier = "eco_light_fail" days = -1 }
+	}
+}
+
+# Light Pollution Success
+planet_event = {
+	id = degrade.191
+	title = degrade.191.name
+	desc = degrade.191.desc
+	picture = GFX_evt_eco_pollution
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		fromfrom = {
+			remove_modifier = "eco_light"
+			add_modifier = { modifier = "eco_light_success" days = -1 }
+			set_planet_flag = eco_light_event_complete
+		}
+	}
+}
+
+# Light Pollution Failure
+planet_event = {
+	id = degrade.192
+	title = degrade.192.name
+	desc = degrade.192.desc
+	picture = GFX_evt_eco_pollution
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		fromfrom = {
+			remove_modifier = "eco_light"
+			add_modifier = { modifier = "eco_light_fail" days = -1 }
+			set_planet_flag = eco_light_event_complete
+		}
+	}
+}
+
+# Air Pollution
+planet_event = {
+	id = degrade.200	
+	title = "degrade.200.name"
+	desc = "degrade.200.desc"
+	picture = GFX_evt_eco_ecology
+	show_sound = event_planetary_riot
+	location = ROOT
+	trackable = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_nuked }
+		num_pops > 9
+		years_passed > 49
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = { modifier = "eco_air" days = -1 }
+		set_planet_flag = ecology_mod_event
+	}
+	
+	option = {
+		name = degrade.200.spirit
+		trigger = {
+			owner = { 
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		allow = {
+			owner = { 
+				resource_stockpile_compare = { resource = exotic_gases value >= 50 }
+			}
+		}
+		owner = {
+			add_resource = { exotic_gases = -50 }
+		}
+		remove_modifier = "eco_air"
+		add_modifier = { modifier = "eco_air_success" days = -1 }
+	}
+	
+	option = {
+		name = degrade.200.a
+		trigger = {
+			owner = { 
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		allow = {
+			owner = { resource_stockpile_compare = { resource = energy value >= 1000 } }
+		}
+		owner = {
+			add_resource = { energy = -1000 }
+		}
+		remove_modifier = "eco_air"
+		remove_planet_flag = ecology_mod_event
+	}
+	
+	option = {
+		name = degrade.200.b
+		enable_special_project = {
+			name = "ECO_AIR_POLLUTION_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = degrade.200.c
+		planet_event = { id = degrade.203 days = 480}
+	}
+}
+
+# Air Pollution Success
+planet_event = {
+	id = degrade.201
+	title = degrade.201.name
+	desc = degrade.201.desc
+	picture = GFX_evt_eco_climate
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		fromfrom = {
+			remove_modifier = "eco_air"
+			add_modifier = { modifier = "eco_air_success" days = -1 }
+			set_planet_flag = eco_air_event_complete
+		}
+	}
+}
+
+# Air Pollution Failure
+planet_event = {
+	id = degrade.202
+	title = degrade.202.name
+	desc = degrade.202.desc
+	picture = GFX_evt_eco_climate
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		fromfrom = {
+			remove_modifier = "eco_air"
+			add_modifier = { modifier = "eco_air_fail" days = -1 }
+			set_planet_flag = eco_air_event_complete
+		}
+	}
+}
+
+# Air Pollution Failure Loop
+planet_event = {
+	id = degrade.203	
+	title = "degrade.203.name"
+	desc = "degrade.203.desc"
+	picture = GFX_evt_eco_climate
+	show_sound = event_planetary_riot
+	location = from
+	trackable = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		num_pops > 9
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		name = degrade.203.a
+		allow = {
+			owner = { resource_stockpile_compare = { resource = energy value >= 1000 } }
+		}
+		owner = {
+			add_resource = { energy = -1000 }
+		}
+		remove_modifier = "eco_air"
+		remove_planet_flag = ecology_mod_event
+	}
+	
+	option = {
+		name = degrade.203.b
+		enable_special_project = {
+			name = "ECO_AIR_POLLUTION_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = degrade.203.c
+		planet_event = { id = degrade.203 days = 480}
+	}
+}
+
+# Soil Pollution
+planet_event = {
+	id = degrade.210	
+	title = "degrade.210.name"
+	desc = "degrade.210.desc"
+	picture = GFX_evt_eco_ecology
+	show_sound = event_planetary_riot
+	location = ROOT
+	trackable = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		NOT  = { is_planet_class = pc_nuked }
+		num_pops > 9
+		years_passed > 49
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = { modifier = "eco_soil" days = -1 }
+		set_planet_flag = ecology_mod_event
+	}
+	
+	option = {
+		name = degrade.210.pac
+		trigger = {
+			owner = { 
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+		allow = {
+			owner = { 
+				resource_stockpile_compare = { resource = volatile_motes value >= 50 }
+			}
+		}
+		owner = {
+			add_resource = { volatile_motes = -50 }
+		}
+		remove_modifier = "eco_soil"
+		add_modifier = { modifier = "eco_soil_success" days = -1 }
+	}
+	
+	option = {
+		name = degrade.210.a
+		trigger = {
+			owner = { 
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+		allow = {
+			owner = { resource_stockpile_compare = { resource = energy value >= 1000 } }
+		}
+		owner = {
+			add_resource = { energy = -1000 }
+		}
+		remove_modifier = "eco_soil"
+		remove_planet_flag = ecology_mod_event
+	}
+	
+	option = {
+		name = degrade.210.b
+		enable_special_project = {
+			name = "ECO_SOIL_POLLUTION_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = degrade.210.c
+		planet_event = { id = degrade.213 days = 480}
+	}
+}
+
+# Soil Pollution Success
+planet_event = {
+	id = degrade.211
+	title = degrade.211.name
+	desc = degrade.211.desc
+	picture = GFX_evt_eco_ecology
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		fromfrom = {
+			remove_modifier = "eco_soil"
+			add_modifier = { modifier = "eco_soil_success" days = -1 }
+			set_planet_flag = eco_soil_event_complete
+		}
+	}
+}
+
+# Soil Pollution Failure
+planet_event = {
+	id = degrade.212
+	title = degrade.212.name
+	desc = degrade.212.desc
+	picture = GFX_evt_eco_ecology
+	show_sound = event_construction
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		fromfrom = {
+			remove_modifier = "eco_soil"
+			add_modifier = { modifier = "eco_soil_fail" days = -1 }
+			set_planet_flag = eco_soil_event_complete
+		}
+	}
+}
+
+# Soil Pollution Failure Loop
+planet_event = {
+	id = degrade.213	
+	title = "degrade.213.name"
+	desc = "degrade.213.desc"
+	picture = GFX_evt_eco_ecology
+	show_sound = event_planetary_riot
+	location = from
+	trackable = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		num_pops > 0
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = degrade.213.a
+		allow = {
+			owner = { resource_stockpile_compare = { resource = energy value >= 1000 } }
+		}
+		owner = {
+			add_resource = { energy = -1000 }
+		}
+		remove_modifier = "eco_soil"
+		remove_planet_flag = ecology_mod_event
+		add_deposit = d_eco_wasteland
+	}
+	
+	option = {
+		name = degrade.213.b
+		add_deposit = d_eco_wasteland
+		enable_special_project = {
+			name = "ECO_SOIL_POLLUTION_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = degrade.213.c
+		add_deposit = d_eco_wasteland
+		planet_event = { id = degrade.213 days = 480}
+	}
+}
+
+# Water Pollution
+planet_event = {
+	id = degrade.220	
+	title = "degrade.220.name"
+	desc = "degrade.220.desc"
+	picture = GFX_evt_eco_ecology
+	show_sound = event_planetary_riot
+	location = ROOT
+	trackable = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_relic }
+		NOT  = { is_planet_class = pc_nuked }
+		num_pops > 9
+		years_passed > 49
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = { modifier = "eco_water" days = -1 }
+		set_planet_flag = ecology_mod_event
+	}
+	
+	option = {
+		name = degrade.220.phile
+		trigger = {
+			owner = { 
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		allow = {
+			owner = { 
+				resource_stockpile_compare = { resource = rare_crystals value >= 50 }
+			}
+		}
+		owner = {
+			add_resource = { rare_crystals = -50 }
+		}
+		remove_modifier = "eco_water"
+		add_modifier = { modifier = "eco_water_success" days = -1 }
+	}
+	
+	option = {
+		name = degrade.220.a
+		trigger = {
+			owner = { 
+				NOR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		allow = {
+			owner = { resource_stockpile_compare = { resource = energy value >= 1000 } }
+		}
+		owner = {
+			add_resource = { energy = -1000 }
+		}
+		remove_modifier = "eco_water"
+		remove_planet_flag = ecology_mod_event
+	}
+	
+	option = {
+		name = degrade.220.b
+		enable_special_project = {
+			name = "ECO_WATER_POLLUTION_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = degrade.220.c
+		planet_event = { id = degrade.223 days = 480}
+	}
+}
+
+# Water Pollution Success
+planet_event = {
+	id = degrade.221
+	title = degrade.221.name
+	desc = degrade.221.desc
+	picture = GFX_evt_eco_ecology
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		fromfrom = {
+			remove_modifier = "eco_water"
+			add_modifier = { modifier = "eco_water_success" days = -1 }
+			set_planet_flag = eco_water_event_complete
+		}
+	}
+}
+
+# Water Pollution Failure
+planet_event = {
+	id = degrade.222
+	title = degrade.222.name
+	desc = degrade.222.desc
+	picture = GFX_evt_eco_ecology
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		fromfrom = {
+			remove_modifier = "eco_water"
+			add_modifier = { modifier = "eco_water_fail" days = -1 }
+			set_planet_flag = eco_water_event_complete
+		}
+	}
+}
+
+# Water Pollution Failure Loop
+planet_event = {
+	id = degrade.223	
+	title = "degrade.223.name"
+	desc = "degrade.223.desc"
+	picture = GFX_evt_eco_ecology
+	show_sound = event_planetary_riot
+	location = from
+	trackable = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+		num_pops > 9
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = degrade.223.a
+		allow = {
+			owner = { if = { limit = { has_technology = tech_terrestrial_sculpting } } }
+			owner = { resource_stockpile_compare = { resource = energy value >= 1000 } }
+		}
+		owner = {
+			add_resource = { energy = -1000 }
+		}
+		remove_modifier = "eco_water"
+		remove_planet_flag = ecology_mod_event
+		add_deposit = d_eco_sludge
+	}
+	
+	option = {
+		name = degrade.223.b
+		add_deposit = d_eco_sludge
+		enable_special_project = {
+			name = "ECO_WATER_POLLUTION_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = degrade.223.c
+		add_deposit = d_eco_sludge
+		planet_event = { id = degrade.223 days = 480}
+	}
+}

@@ -1,0 +1,8 @@
+
+deposit_cat_mod = { 
+
+	#blocker = 
+
+	important = yes	# Shows up as rare deposits in planetview
+
+}

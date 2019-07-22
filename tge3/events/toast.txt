@@ -1,0 +1,14 @@
+namespace = toasty
+
+event = {
+	id = toasty.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_planet = {
+			limit = { has_deposit = d_kiyo_mod_trade }
+			log = "[This.GetName] toasty.0"
+		}
+	}
+}

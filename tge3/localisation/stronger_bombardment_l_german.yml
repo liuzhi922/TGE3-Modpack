@@ -1,0 +1,7 @@
+﻿l_german:
+ ####################################
+ # Misc
+ ####################################
+  bombardment_indiscriminate_desc:0 "$bombardment_indiscriminate$ Die Bombardierung zielt auf militärische und planetare Infrastruktur ohne Rücksicht auf Zivilopfer.\n- §HHoher§! Schaden an §YArmeen§!\n- §HHoher§! Schaden an §YPlaneten§!\n- §YModerater§! Schaden an §YBewohnern§!\n- Wird unverteidigte Planeten bombardieren\n"
+  bombardment_raiding_desc:1 "$bombardment_raiding$ Die Bombardierung richtet sich gegen feindliche Bevölkerungszentren und setzt dabei spezialisierten Überfallkommandos ein, die das ansässige Volk entführen und zurück zu unseren Welten bringt, um sie dort arbeiten zu lassen.\n- §ELeichter§! Schaden an §YArmeen§!\n- §ELeichter§! Schaden an §YPlaneten§!\n- §YModerater§! Schaden an §YBewohnern§!\n- Wird Bewohner wenn möglich §Yentführen§!, anstatt sie zu töten\n"
+ 

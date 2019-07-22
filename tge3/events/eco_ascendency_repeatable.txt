@@ -1,0 +1,28 @@
+# Waste Worker Repeatable Counter for Technological Ascendancy
+namespace = repeatable
+
+country_event = {
+    id = repeatable.100
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        last_increased_tech = tech_repeatable_waste_worker_production
+    }
+    immediate = {
+        change_variable = { which = repeatable_waste_worker_production value = 1 }
+    }
+}
+
+country_event = {
+    id = repeatable.101
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        last_increased_tech = tech_repeatable_waste_drone_production
+    }
+    immediate = {
+        change_variable = { which = repeatable_waste_drone_production value = 1 }
+    }
+}

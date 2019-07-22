@@ -1,0 +1,75 @@
+
+d_O_LOSBSP_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_LO_SBSP
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 32
+		}
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_technician_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_HR_SBSP_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_LO_SBSP
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 32
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_technician_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+

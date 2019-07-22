@@ -1,0 +1,741 @@
+#######
+# LASERS 6
+#######
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_laser_6_large_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "c_laser_6_large_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+
+entity = {
+	name = "c_laser_6_medium_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "c_laser_6_medium_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+
+entity = {
+	name = "c_laser_6_small_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "c_laser_6_small_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_laser_6_small_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_6_small_hit_effect sound = { soundeffect = laser_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_laser_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_6_medium_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_6_medium_hit_effect sound = { soundeffect = laser_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_laser_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_6_large_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_6_large_hit_effect sound = { soundeffect = laser_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_laser_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_6_small_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_6_small_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = laser_small_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_6_medium_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_6_medium_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = laser_medium_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_6_large_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_6_large_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = laser_large_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+
+
+#######
+# LASERS 7
+#######
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_laser_7_large_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "c_laser_7_large_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+
+entity = {
+	name = "c_laser_7_medium_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "c_laser_7_medium_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+
+entity = {
+	name = "c_laser_7_small_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "c_laser_7_small_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_laser_7_small_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_7_small_hit_effect sound = { soundeffect = laser_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_laser_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_7_medium_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_7_medium_hit_effect sound = { soundeffect = laser_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_laser_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_7_large_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_7_large_hit_effect sound = { soundeffect = laser_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_laser_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_7_small_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_7_small_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = laser_small_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_7_medium_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_7_medium_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = laser_medium_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_laser_7_large_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = c_laser_7_large_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = laser_large_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#######
+# ARC EMITTER
+#######
+
+# WINDUP
+
+entity = {
+	name = "c_cloud_2_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "arc_emitter_small_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "c_cloud_2_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "c_cloud_2_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "c_cloud_2_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "c_cloud_2_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "c_cloud_2_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "c_cloud_2_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "c_cloud_2_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "c_cloud_2_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "c_cloud_2_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "c_cloud_3_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "arc_emitter_small_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "c_cloud_3_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "c_cloud_3_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "c_cloud_3_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "c_cloud_3_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "c_cloud_3_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "c_cloud_3_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "c_cloud_3_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "c_cloud_3_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "c_cloud_3_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_cloud_2_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "c_cloud_2_hit_effect" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_cloud_3_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "c_cloud_3_hit_effect" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_cloud_2_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "c_cloud_2_muzzle_particle" keep_particle = yes sound = { soundeffect = arc_emitter_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_arc_emitter_fire" } }
+	}
+}
+
+entity = {
+	name = "c_cloud_3_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "c_cloud_3_muzzle_particle" keep_particle = yes sound = { soundeffect = arc_emitter_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_arc_emitter_fire" } }
+	}
+}
+
+#######
+# ENERGY LANCE 3
+#######
+
+# WINDUP
+
+entity = {
+	name = "c_tachyon_lance_3_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "tachyon_lance_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "c_tachyon_lance_3_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "c_tachyon_lance_3_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "c_tachyon_lance_3_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "c_tachyon_lance_3_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "c_tachyon_lance_3_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "c_tachyon_lance_3_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "c_tachyon_lance_3_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "c_tachyon_lance_3_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "c_tachyon_lance_3_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_tachyon_lance_3_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "c_tachyon_lance_3_muzzle_particle" keep_particle = yes sound = { soundeffect = tachyon_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_tachyon_lance_3_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "c_tachyon_lance_3_hit_effect" keep_particle = yes sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#######
+# ENERGY LANCE 4
+#######
+
+# WINDUP
+
+entity = {
+	name = "c_tachyon_lance_4_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "tachyon_lance_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "c_tachyon_lance_4_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "c_tachyon_lance_4_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "c_tachyon_lance_4_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "c_tachyon_lance_4_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "c_tachyon_lance_4_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "c_tachyon_lance_4_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "c_tachyon_lance_4_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "c_tachyon_lance_4_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "c_tachyon_lance_4_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_tachyon_lance_4_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "c_tachyon_lance_4_muzzle_particle" keep_particle = yes sound = { soundeffect = tachyon_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_tachyon_lance_4_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "c_tachyon_lance_4_hit_effect" keep_particle = yes sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#######
+# ARC EMITTER 3
+#######
+
+# WINDUP
+entity = {
+	name = "c_focused_arc_emitter_3_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { trigger_once = yes sound = { soundeffect = "arc_emitter_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "c_focused_arc_emitter_3_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "c_focused_arc_emitter_3_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "c_focused_arc_emitter_3_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "c_focused_arc_emitter_3_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "c_focused_arc_emitter_3_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "c_focused_arc_emitter_3_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "c_focused_arc_emitter_3_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "c_focused_arc_emitter_3_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "c_focused_arc_emitter_3_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_focused_arc_emitter_3_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "c_focused_arc_emitter_3_muzzle_particle" keep_particle = yes sound = { soundeffect = xl_arc_emitter_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_xl_arc_emitter_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_focused_arc_emitter_3_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "c_focused_arc_emitter_3_hit_effect" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#######
+# ARC EMITTER 4
+#######
+
+# WINDUP
+entity = {
+	name = "c_focused_arc_emitter_4_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { trigger_once = yes sound = { soundeffect = "arc_emitter_windup" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "c_focused_arc_emitter_4_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "c_focused_arc_emitter_4_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "c_focused_arc_emitter_4_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "c_focused_arc_emitter_4_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "c_focused_arc_emitter_4_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "c_focused_arc_emitter_4_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "c_focused_arc_emitter_4_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "c_focused_arc_emitter_4_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "c_focused_arc_emitter_4_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_focused_arc_emitter_4_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "c_focused_arc_emitter_4_muzzle_particle" keep_particle = yes sound = { soundeffect = xl_arc_emitter_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_xl_arc_emitter_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_focused_arc_emitter_4_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "c_focused_arc_emitter_4_hit_effect" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#######
+# DISRUPTOR 4
+#######
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_disruptor_4_small_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "c_disruptor_4_small_muzzle_particle" keep_particle = yes sound = { soundeffect = disruptor_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_fire" } }
+	}
+}
+
+entity = {
+	name = "c_disruptor_4_medium_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "c_disruptor_4_medium_muzzle_particle" keep_particle = yes sound = { soundeffect = disruptor_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_fire" } }
+	}
+}
+
+entity = {
+	name = "c_disruptor_4_large_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "c_disruptor_4_large_muzzle_particle" keep_particle = yes sound = { soundeffect = disruptor_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_disruptor_4_small_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = c_disruptor_4_small_hit_effect sound = { soundeffect = disruptor_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_disruptor_4_medium_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = c_disruptor_4_medium_hit_effect sound = { soundeffect = disruptor_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_disruptor_4_large_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = c_disruptor_4_large_hit_effect sound = { soundeffect = disruptor_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#######
+# DISRUPTOR 5
+#######
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_disruptor_5_small_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "c_disruptor_5_small_muzzle_particle" keep_particle = yes sound = { soundeffect = disruptor_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_fire" } }
+	}
+}
+
+entity = {
+	name = "c_disruptor_5_medium_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "c_disruptor_5_medium_muzzle_particle" keep_particle = yes sound = { soundeffect = disruptor_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_fire" } }
+	}
+}
+
+entity = {
+	name = "c_disruptor_5_large_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "c_disruptor_5_large_muzzle_particle" keep_particle = yes sound = { soundeffect = disruptor_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_disruptor_5_small_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = c_disruptor_5_small_hit_effect sound = { soundeffect = disruptor_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_disruptor_5_medium_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = c_disruptor_5_medium_hit_effect sound = { soundeffect = disruptor_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "c_disruptor_5_large_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = c_disruptor_5_large_hit_effect sound = { soundeffect = disruptor_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_disruptor_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#######
+# SPACE WHALE WEAPON 2  Extradimentional 2
+#######
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_space_whale_weapon_2_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "c_space_whale_weapon_2_muzzle_particle" keep_particle = yes sound = { soundeffect = space_whale_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_space_whale_weapon_2_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = c_space_whale_weapon_2_hit_effect sound = { soundeffect = space_whale_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#######
+# SPACE WHALE WEAPON 3  Extradimentional 3
+#######
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "c_space_whale_weapon_3_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "c_space_whale_weapon_3_muzzle_particle" keep_particle = yes sound = { soundeffect = space_whale_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_fire" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "c_space_whale_weapon_3_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = c_space_whale_weapon_3_hit_effect sound = { soundeffect = space_whale_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}

@@ -1,0 +1,76 @@
+####################
+# Shield Recharger #
+####################
+
+
+utility_component_template = {
+	key = "SHIELD_BOOSTER"
+	size = aux
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+	power = -20
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+			exotic_gases = 1
+		}
+	}
+	
+	prerequisites = { "tech_shield_rechargers_1" }
+	component_set = "SHIELD_BOOSTER"
+	
+	modifier = {
+		ship_shield_mult = 0.1
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_energy
+			has_monthly_income = { resource = exotic_gases value > 0 }
+		}
+
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+	upgrades_to = "C_SHIELD_RECHARGER_2"
+}
+
+#############################
+# Regenerative Hull Tissue  #
+#############################
+
+utility_component_template = {
+	key = "AUTO_REPAIR"
+	size = aux
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+
+	modifier = {
+		ship_hull_regen_add_static = 1
+		ship_armor_regen_add_static = 2
+	}
+	
+	prerequisites = { tech_regenerative_hull_tissue }
+	component_set = "AUTO_REPAIR"
+	
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+	upgrades_to = "C_SMALL_AUTO_REPAIR_1"
+}

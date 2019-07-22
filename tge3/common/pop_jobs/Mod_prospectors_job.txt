@@ -1,0 +1,266 @@
+
+subterranean_prospector = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_monolith #placeholder
+	clothes_texture_index = 3
+
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_miners
+		produces = {
+			volatile_motes = 0.7 #1
+			exotic_gases = 0.7 #1
+			rare_crystals = 0.7 #1
+		}
+		upkeep = {
+			energy = 4 #minerals = 5 #7.5
+		}		
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}	
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = subterranean_prospector 
+		}		
+	}
+}
+subterranean_prospector_gestalt = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_monolith #placeholder
+	
+	possible = {
+		drone_job_check_trigger = yes
+	}
+
+		produces = {
+			volatile_motes = 0.7 #1
+			exotic_gases = 0.7 #1
+			rare_crystals = 0.7 #1
+		}
+		upkeep = {
+			energy = 4 #minerals = 5 #7.5
+		}		
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 0.9
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}		
+	}
+}
+
+ringworld_prospector = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_monolith #placeholder
+	clothes_texture_index = 3
+
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 4
+			volatile_motes = 0.25
+			exotic_gases = 0.25
+			rare_crystals = 0.25
+		}
+		upkeep = {
+			energy = 4
+		}		
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}	
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = subterranean_prospector 
+		}		
+	}
+}
+ringworld_prospector_gestalt = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_monolith #placeholder
+	
+	possible = {
+		drone_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 4
+			volatile_motes = 0.25
+			exotic_gases = 0.25
+			rare_crystals = 0.25
+		}
+		upkeep = {
+			energy = 4
+		}			
+	}
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 0.9
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}		
+	}
+}
+
+asteroid_prospector = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_monolith #placeholder
+	clothes_texture_index = 3
+
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	resources = {
+		category = planet_miners
+		produces = {
+			alloys = 2
+			volatile_motes = 0.25
+			exotic_gases = 0.25
+			rare_crystals = 0.25
+		}
+		upkeep = {
+			energy = 4
+		}	
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}	
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}	
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = subterranean_prospector 
+		}		
+	}
+}
+asteroid_prospector_gestalt = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_monolith #placeholder
+	
+	possible = {
+		drone_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_miners
+		produces = {
+			alloys = 2
+			volatile_motes = 0.25
+			exotic_gases = 0.25
+			rare_crystals = 0.25
+		}
+		upkeep = {
+			energy = 4
+		}	
+	}
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 0.9
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}		
+	}
+}
+

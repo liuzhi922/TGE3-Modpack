@@ -1,0 +1,91 @@
+###################
+# COST
+###################
+@cost4s = 16
+
+@cost5s = 20
+
+###################
+# POWER
+###################
+@power4s = -13
+
+@power5s = -16
+
+# ####################
+#  Point Defence
+# ####################
+
+### Point Defence 4
+weapon_component_template = {
+	key = "C_PD_POINT_DEFENCE_4"
+	size = point_defence
+	entity = "turret_point_defence_entity"
+	
+	icon = "GFX_C_ship_part_point_defense_4"
+	icon_frame = 1
+	
+	damage = { min = 2.5 max = 10 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 5
+	range = 30.0
+	accuracy = 0.75
+	tracking = 0.35
+	armor_damage = 0.25
+	power = @power4s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t4_cost
+		}		
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_pd_tracking_4" }
+	component_set = "C_POINT_DEFENCE_4"
+	type = point_defence
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense }
+	
+	upgrades_to = "C_PD_POINT_DEFENCE_5"
+}
+
+### Point Defence 5
+weapon_component_template = {
+	key = "C_PD_POINT_DEFENCE_5"
+	size = point_defence
+	entity = "turret_point_defence_entity"
+	
+	icon = "GFX_C_ship_part_point_defense_5"
+	icon_frame = 1
+	
+	damage = { min = 3.1 max = 13 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 5
+	range = 30.0
+	accuracy = 0.75
+	tracking = 0.40
+	armor_damage = 0.25
+	power = @power5s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+		}		
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_pd_tracking_5" }
+	component_set = "C_POINT_DEFENCE_5"
+	type = point_defence
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense }
+}

@@ -1,0 +1,148 @@
+namespace = ecology
+
+# City Worlds Fix
+planet_event = {
+	id = ecology.100
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = { is_planet_class = pc_city }
+			remove_modifier = "natural_beauty"
+			remove_modifier = "atmospheric_aphrodisiac"
+			remove_modifier = "atmospheric_hallucinogen"
+			remove_modifier = "lush_planet"
+			remove_modifier = dangerous_wildlife
+			remove_modifier = bleak_planet
+			remove_modifier = predatory_plants
+			remove_modifier = eco_resilient_ecosystem
+			remove_modifier = eco_fragile_ecosystem
+			remove_modifier = eco_species_rich
+			remove_modifier = eco_species_poor
+			remove_modifier = eco_climate_change
+			remove_modifier = eco_collapse
+			remove_modifier = eco_air_success
+			remove_modifier = eco_air_fail
+			remove_modifier = eco_soil_success
+			remove_modifier = eco_soil_fail
+			remove_modifier = eco_water_success
+			remove_modifier = eco_water_fail		
+		} else_if = {
+			limit = { 
+				OR = {
+					is_planet_class = pc_machine 
+					is_planet_class = pc_hive
+				}
+			}
+			remove_modifier = dangerous_wildlife
+			remove_modifier = bleak_planet
+			remove_modifier = predatory_plants
+			remove_modifier = eco_resilient_ecosystem
+			remove_modifier = eco_fragile_ecosystem
+			remove_modifier = eco_species_rich
+			remove_modifier = eco_species_poor
+			remove_modifier = eco_climate_change
+			remove_modifier = eco_collapse
+			remove_modifier = eco_air_success
+			remove_modifier = eco_air_fail
+			remove_modifier = eco_soil_success
+			remove_modifier = eco_soil_fail
+			remove_modifier = eco_water_success
+			remove_modifier = eco_water_fail
+		}
+	}
+}
+
+# Junkheap Removal
+planet_event = {
+	id = ecology.110
+	title = ecology.110.name
+	desc = ecology.110.desc
+	picture = GFX_evt_animal_wildlife
+	show_sound = event_celebration
+	location = from
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+		}
+		num_pops > 4
+	}
+
+	
+	immediate = { remove_planet_flag = eco_trash_event }
+
+	option = {
+		name = EXCELLENT
+		remove_deposit = d_eco_junkheap
+	}
+}
+
+# Improved Resilience
+planet_event = {
+	id = ecology.120
+	title = ecology.120.name
+	desc = ecology.120.desc
+	picture = GFX_evt_animal_wildlife
+	show_sound = event_celebration
+	location = from
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT = { has_modifier = eco_resilient_ecosystem }
+		owner = {
+			is_ai = no
+		}
+		num_pops > 19
+	}
+	
+	option = {
+		name = EXCELLENT
+		if = {
+			limit = { has_modifier = eco_fragile_ecosystem }
+			remove_modifier = eco_fragile_ecosystem
+		} else = {
+			add_modifier = { modifier = eco_resilient_ecosystem days = -1 }
+		}
+	}
+}
+
+# Reduced Resilience
+planet_event = {
+	id = ecology.130
+	title = ecology.130.name
+	desc = ecology.130.desc
+	picture = GFX_evt_alien_nature
+	show_sound = event_planetary_riot
+	location = from
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT = { has_modifier = eco_fragile_ecosystem }
+		owner = {
+			is_ai = no
+		}
+		num_pops > 19
+	}
+	
+	option = {
+		name = WORRYING
+		if = {
+			limit = { has_modifier = eco_resilient_ecosystem }
+			remove_modifier = eco_resilient_ecosystem
+		} else = {
+			add_modifier = { modifier = eco_fragile_ecosystem days = -1 }
+		}
+	}
+}

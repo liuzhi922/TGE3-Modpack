@@ -1,0 +1,456 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_C_ship_part_auto_repair_1"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_auto_repair_1.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_auto_repair_2"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_auto_repair_2.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_auto_repair_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_auto_repair_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_auto_repair_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_auto_repair_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_auto_repair_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_auto_repair_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_targeting_computer_1"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_targeting_computer_1.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_targeting_computer_2"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_targeting_computer_2.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_targeting_computer_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_targeting_computer_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_targeting_computer_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_targeting_computer_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_targeting_computer_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_targeting_computer_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crystal_armor_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crystal_armor_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crystal_armor_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crystal_armor_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crystal_armor_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crystal_armor_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crystal_armor_6"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crystal_armor_6.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_armor_6"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_armor_6.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_armor_7"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_armor_7.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_armor_8"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_armor_8.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_armor_9"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_armor_9.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_armor_10"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_armor_10.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_reactor_6"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_reactor_6.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_reactor_7"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_reactor_7.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_reactor_8"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_reactor_8.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_reactor_9"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_reactor_9.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_reactor_10"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_reactor_10.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_6"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_6.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_7"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_7.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_8"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_8.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_9"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_9.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_10"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_10.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_11"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_11.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_12"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_12.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_13"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_13.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_14"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_14.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_15"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_15.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_16"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_16.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_17"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_17.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_18"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_18.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_19"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_19.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_20"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_20.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_synth_6"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_synth_6.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_synth_7"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_synth_7.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_synth_8"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_synth_8.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_synth_9"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_synth_9.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_synth_10"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_synth_10.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crew_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crew_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crew_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crew_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crew_7"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crew_7.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crew_10"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crew_10.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crew_13"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crew_13.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crew_16"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crew_16.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_crew_22"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_crew_22.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_experienced_crew"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_experienced_crew.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_elite_crew"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_elite_crew.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_thruster_armor_1"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_thruster_armor_1.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_thruster_armor_2"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_thruster_armor_2.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_thruster_armor_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_thruster_armor_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_thruster_armor_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_thruster_armor_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_thruster_psi_1"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_thruster_psi_1.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_thruster_psi_2"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_thruster_psi_2.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_thruster_psi_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_thruster_psi_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_thruster_psi_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_thruster_psi_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_sensor_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_sensor_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_sensor_6"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_sensor_6.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_sensor_7"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_sensor_7.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_sensor_8"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_sensor_8.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_sensor_9"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_sensor_9.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_sensor_10"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_sensor_10.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_hangar_1"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_hangar_1.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_hangar_2"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_hangar_2.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_hangar_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_hangar_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_hangar_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_hangar_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_hangar_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_hangar_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_plasma_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_plasma_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_plasma_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_plasma_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_autocannon_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_autocannon_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_autocannon_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_autocannon_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_mass_driver_6"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_mass_driver_6.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_mass_driver_7"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_mass_driver_7.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_missiles_6"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_missiles_6.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_missiles_7"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_missiles_7.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_laser_6"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_laser_6.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_laser_7"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_laser_7.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_C_ship_part_energy_lance_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_energy_lance_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_energy_lance_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_energy_lance_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_arc_emitter_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_arc_emitter_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_arc_emitter_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_arc_emitter_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_disruptor_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_disruptor_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_disruptor_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_disruptor_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_energy_torpedo_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_energy_torpedo_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_energy_torpedo_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_energy_torpedo_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_extradimensional_weapon_2"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_extradimensional_weapon_2.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_extradimensional_weapon_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_extradimensional_weapon_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_space_cloud_weapon_2"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_space_cloud_weapon_2.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_space_cloud_weapon_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_space_cloud_weapon_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_swarmer_missile_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_swarmer_missile_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_swarmer_missile_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_swarmer_missile_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_torpedo_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_torpedo_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_torpedo_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_torpedo_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_point_defense_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_point_defense_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_point_defense_5"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_point_defense_5.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_kinetic_artillery_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_kinetic_artillery_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_kinetic_artillery_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_kinetic_artillery_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_mass_accelerator_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_mass_accelerator_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_mass_accelerator_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_mass_accelerator_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_flak_batteries_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_flak_batteries_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_flak_batteries_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_flak_batteries_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_recharger_2"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_recharger_2.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_shield_recharger_3"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_shield_recharger_3.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_strike_craft_fighter_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_strike_craft_fighter_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_strike_craft_bomber_4"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_strike_craft_bomber_4.dds"
+	}
+	spriteType = {
+		name = "GFX_C_ship_part_strike_craft_bomber_DIM"
+		texturefile = "gfx/interface/icons/ship_parts/C_ship_part_strike_craft_bomber_DIM.dds"
+	}
+	spriteType = {
+		name = "GFX_gsc_ship_part_perdition_beam_2"
+		texturefile = "gfx/interface/icons/ship_parts/gsc_ship_part_perdition_beam_2.dds"
+	}
+	spriteType = {
+		name = "GFX_gsc_ship_part_perdition_beam_3"
+		texturefile = "gfx/interface/icons/ship_parts/gsc_ship_part_perdition_beam_3.dds"
+	}
+}

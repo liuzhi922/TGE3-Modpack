@@ -1,0 +1,432 @@
+ ##################
+ # Component_sets #
+ ##################
+ 
+ 
+ 
+ ################
+ # Energy Lance #
+ ################
+
+ C_ENERGY_LANCE_3:0 "Tachyon Lance"
+ C_ENERGY_LANCE_3_DESC:0 "A more powerful version of the particle lance, this weapon fires a tachyon beam of immense power."
+ C_ENERGY_LANCE_4:0 "Tachyon Lance"
+ C_ENERGY_LANCE_4_DESC:0 "A more powerful version of the particle lance, this weapon fires a tachyon beam of immense power."
+
+ GFX_C_ship_part_energy_lance_3
+ GFX_C_ship_part_energy_lance_4
+
+ tech_c_energy_lance_3:0 "Tachyon Lances"
+ tech_c_energy_lance_3_desc:0 "A more powerful version of the particle lance, this weapon fires a tachyon beam of immense power. Like its predecessor, its use is limited to large turrets.\n\n"
+ tech_c_energy_lance_4:0 "Tachyon Lances"
+ tech_c_energy_lance_4_desc:0 "A more powerful version of the particle lance, this weapon fires a tachyon beam of immense power. Like its predecessor, its use is limited to large turrets.\n\n"
+
+ C_LARGE_ENERGY_LANCE_3:0 "Tachyon Lance"
+ C_LARGE_ENERGY_LANCE_4:0 "Tachyon Lance"
+ 
+ #######
+ # GFX #
+ #######
+ 
+ common\component_sets
+	projectile_gfx = "c_tachyon_lance_3"
+	projectile_gfx = "c_tachyon_lance_4"
+		->
+ gfx\projectiles
+	hit_entity = "000000000000000"
+	hit_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+ 		->
+ gfx\models\combat_items
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+		->
+ gfx\particles
+ gfx\particles\combat
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+ 
+ ###############
+ # Arc Emitter #
+ ###############
+
+ C_ARC_EMITTER_3:0 "Focused Arc Emitter"
+ C_ARC_EMITTER_3_DESC:0 "These upgraded emitters are equipped with better focusing lenses, resulting in a more powerful energy discharge."
+ C_ARC_EMITTER_4:0 "Focused Arc Emitter"
+ C_ARC_EMITTER_4_DESC:0 "These upgraded emitters are equipped with better focusing lenses, resulting in a more powerful energy discharge."
+
+ GFX_C_ship_part_arc_emitter_3
+ GFX_C_ship_part_arc_emitter_4
+
+ tech_c_arc_emitter_3:0 "Focused Arc Emitters"
+ tech_c_arc_emitter_3_desc:0 "These upgraded emitters are equipped with better focusing lenses, resulting in a more powerful energy discharge.\n\n"
+ tech_c_arc_emitter_4:0 "Focused Arc Emitters"
+ tech_c_arc_emitter_4_desc:0 "These upgraded emitters are equipped with better focusing lenses, resulting in a more powerful energy discharge.\n\n"
+
+ C_LARGE_ARC_EMITTER_3:0 "Focused Arc Emitter"
+ C_LARGE_ARC_EMITTER_4:0 "Focused Arc Emitter"
+ 
+ # GFX # 
+ common\component_sets
+	projectile_gfx = "c_focused_arc_emitter_3"
+	projectile_gfx = "c_focused_arc_emitter_4"
+		->
+ gfx\projectiles
+	hit_entity = "000000000000000"
+	hit_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+ 		->
+ gfx\models\combat_items
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+		->
+ gfx\particles
+ gfx\particles\combat
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+ 
+ #############
+ # Disruptor #
+ #############
+
+ C_DISRUPTOR_4:0 "Phase Disruptor"
+ C_DISRUPTOR_4_DESC:0 "Extremely high-yield disruptors that fire quantum energy charges causing incredible damage to those unfortunate enough to get in their way."
+ C_DISRUPTOR_5:0 "Phase Disruptor"
+ C_DISRUPTOR_5_DESC:0 "Extremely high-yield disruptors that fire quantum energy charges causing incredible damage to those unfortunate enough to get in their way."
+
+ GFX_C_ship_part_disruptor_4
+ GFX_C_ship_part_disruptor_5
+
+ tech_c_disruptors_4:0 "Phase Disruptors"
+ tech_c_disruptors_4_desc:0 "Extremely high-yield disruptors that fire quantum energy charges causing incredible damage to those unfortunate enough to get in their way.\n\n"
+ tech_c_disruptors_5:0 "Phase Disruptors"
+ tech_c_disruptors_5_desc:0 "Extremely high-yield disruptors that fire quantum energy charges causing incredible damage to those unfortunate enough to get in their way.\n\n"
+
+ C_SMALL_DISRUPTOR_4:0 "Small Phase Disruptor"
+ C_MEDIUM_DISRUPTOR_4:0 "Medium Phase Disruptor"
+ C_LARGE_DISRUPTOR_4:0 "Large Phase Disruptor"
+
+ C_SMALL_DISRUPTOR_5:0 "Small Phase Disruptor"
+ C_MEDIUM_DISRUPTOR_5:0 "Medium Phase Disruptor"
+ C_LARGE_DISRUPTOR_5:0 "Large Phase Disruptor"
+ 
+ # GFX # 
+ common\component_sets
+	projectile_gfx = "c_disruptor_4_small"
+	projectile_gfx = "c_disruptor_4_medium"
+	projectile_gfx = "c_disruptor_4_large"
+	projectile_gfx = "c_disruptor_5_small"
+	projectile_gfx = "c_disruptor_5_medium"
+	projectile_gfx = "c_disruptor_5_large"
+		->
+ gfx\projectiles
+	hit_entity = "000000000000000"
+	hit_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+ 		->
+ gfx\models\combat_items
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+		->
+ gfx\particles
+ gfx\particles\combat
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+ 
+ ##################
+ # Energy Torpedo #
+ ##################
+
+ C_ENERGY_TORPEDO_3:0 "Neutron Torpedoes"
+ C_ENERGY_TORPEDO_3_DESC:0 "Upgraded energy torpedoes that rely on neutrons instead of protons for their destructive power. Like their predecessors, they are extremely effective against energy shields. Since these torpedoes lack a solid form, they cannot be targeted by point-defense weapons."
+ C_ENERGY_TORPEDO_4:0 "Neutron Torpedoes"
+ C_ENERGY_TORPEDO_4_DESC:0 "Upgraded energy torpedoes that rely on neutrons instead of protons for their destructive power. Like their predecessors, they are extremely effective against energy shields. Since these torpedoes lack a solid form, they cannot be targeted by point-defense weapons."
+
+ GFX_C_ship_part_energy_torpedo_3
+ GFX_C_ship_part_energy_torpedo_4
+
+ tech_c_energy_torpedoes_3:0 "Neutron Torpedoes"
+ tech_c_energy_torpedoes_3_desc:0 "Upgraded energy torpedoes that rely on neutrons instead of protons for their destructive power. Like their predecessors, they cannot be stopped by energy shields.\n\n"
+ tech_c_energy_torpedoes_4:0 "Neutron Torpedoes"
+ tech_c_energy_torpedoes_4_desc:0 "Upgraded energy torpedoes that rely on neutrons instead of protons for their destructive power. Like their predecessors, they cannot be stopped by energy shields.\n\n"
+
+ C_TORP_ENERGY_TORPEDO_3:0 "Neutron Torpedoes"
+ C_TORP_ENERGY_TORPEDO_4:0 "Neutron Torpedoes"
+ 
+ # GFX #
+  common\component_sets
+	projectile_gfx = "000000000000000"
+	projectile_gfx = "000000000000000"
+		->
+ gfx\projectiles
+	hit_entity = "000000000000000"
+	hit_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+ 		->
+ gfx\models\combat_items
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+		->
+ gfx\particles
+ gfx\particles\combat
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+ 
+ ####################
+ # Extradimentional #
+ ####################
+
+ C_EXTRADIMENSIONAL_2:0 "Matter Disintegrator"
+ C_EXTRADIMENSIONAL_2_DESC:0 "Hailing from another dimension, the core technologies of the Matter Disintegrator bends several physical laws for destructive results."
+ C_EXTRADIMENSIONAL_3:0 "Matter Disintegrator"
+ C_EXTRADIMENSIONAL_3_DESC:0 "Hailing from another dimension, the core technologies of the Matter Disintegrator bends several physical laws for destructive results."
+
+ GFX_C_ship_part_extradimensional_weapon_2
+ GFX_C_ship_part_extradimensional_weapon_3
+
+ tech_c_extradimensional_weapon_2:0 "Extradimensional Weaponry"
+ tech_c_extradimensional_weapon_2_desc:0 "Applying 5th-dimensional energy manipulation principles on lower dimensional planes allows for the creation of powerful energy weapons.\n\n"
+ tech_c_extradimensional_weapon_3:0 "Extradimensional Weaponry"
+ tech_c_extradimensional_weapon_3_desc:0 "Applying 5th-dimensional energy manipulation principles on lower dimensional planes allows for the creation of powerful energy weapons.\n\n"
+
+ C_SMALL_ED_WEAPON_2:0 "Small Matter Disintegrator"
+ C_MEDIUM_ED_WEAPON_2:0 "Medium Matter Disintegrator"
+ C_LARGE_ED_WEAPON_2:0 "Large Matter Disintegrator"
+
+ C_SMALL_ED_WEAPON_3:0 "Small Matter Disintegrator"
+ C_MEDIUM_ED_WEAPON_3:0 "Medium Matter Disintegrator"
+ C_LARGE_ED_WEAPON_3:0 "Large Matter Disintegrator"
+ 
+ # GFX #
+  common\component_sets
+	projectile_gfx = "c_space_whale_weapon_2"
+	projectile_gfx = "c_space_whale_weapon_3"
+		->
+ gfx\projectiles
+	hit_entity = "000000000000000"
+	hit_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+	muzzle_flash_entity = "000000000000000"
+ 		->
+ gfx\models\combat_items
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+		->
+ gfx\particles
+ gfx\particles\combat
+	000000000000000
+	000000000000000
+	000000000000000
+	000000000000000
+ 
+ ###############
+ # Space Cloud #
+ ###############
+
+ C_SPACE_CLOUD_WEAPON_2:0 "Cloud Lightning"
+ C_SPACE_CLOUD_WEAPON_2_DESC:0 "Utilizing our understanding of the fundamental forces involved in generating the Void Clouds' considerable internal charge to the fullest, the Cloud Lightning weapon system is a potent damage-dealer."
+ C_SPACE_CLOUD_WEAPON_3:0 "Cloud Lightning"
+ C_SPACE_CLOUD_WEAPON_3_DESC:0 "Utilizing our understanding of the fundamental forces involved in generating the Void Clouds' considerable internal charge to the fullest, the Cloud Lightning weapon system is a potent damage-dealer."
+
+ GFX_C_ship_part_space_cloud_weapon_2
+ GFX_C_ship_part_space_cloud_weapon_3
+
+ tech_c_space_cloud_weapon_2:0 "Cloud Lightning Conduits"
+ tech_c_space_cloud_weapon_2_desc:0 "Void Clouds use the electrical charges generated by the dense gases that make up most of their core to release bolts of burning plasma. Using the same gas composition together with a specialized conduit allows for powerful lightning weaponry.\n\n"
+ tech_c_space_cloud_weapon_3:0 "Cloud Lightning Conduits"
+ tech_c_space_cloud_weapon_3_desc:0 "Void Clouds use the electrical charges generated by the dense gases that make up most of their core to release bolts of burning plasma. Using the same gas composition together with a specialized conduit allows for powerful lightning weaponry.\n\n"
+
+ # C_SPACE_CLOUD_LIGHTNING_2:0 "Cloud Lightning"
+ # C_SPACE_CLOUD_LIGHTNING_3:0 "Cloud Lightning"
+ 
+ 
+ # GFX # 
+ common\component_sets
+	projectile_gfx = "c_cloud_2"
+	projectile_gfx = "c_cloud_3"
+		->
+ gfx\projectiles
+	hit_entity = "c_cloud_2_hit_entity"
+	hit_entity = "c_cloud_3_hit_entity"
+	muzzle_flash_entity = "c_cloud_2_muzzle_entity"
+	muzzle_flash_entity = "c_cloud_3_muzzle_entity"
+ 		->
+ gfx\models\combat_items
+	c_cloud_2_muzzle_particle
+	c_cloud_3_muzzle_particle
+	c_cloud_2_hit_effect
+	c_cloud_3_hit_effect
+		->
+ gfx\particles
+ gfx\particles\combat
+	c_cloud_2_muzzle
+	c_cloud_3_muzzle
+	c_cloud_2_hit_effect
+	c_cloud_3_hit_effect
+	
+ 
+ ##################
+ # Swarm missiles #
+ ##################
+
+ C_SWARMER_MISSILE_3:0 "Whirlwind Missiles"
+ C_SWARMER_MISSILE_3_DESC:0 "New miniaturization techniques will allow us to equip swarmer missiles with more powerful warheads and improved flight performance."
+ C_SWARMER_MISSILE_4:0 "Whirlwind Missiles"
+ C_SWARMER_MISSILE_4_DESC:0 "New miniaturization techniques will allow us to equip swarmer missiles with more powerful warheads and improved flight performance."
+
+ GFX_C_ship_part_swarmer_missile_3
+ GFX_C_ship_part_swarmer_missile_4
+
+ tech_c_swarmer_missiles_3:0 "Whirlwind Missiles"
+ tech_c_swarmer_missiles_3_desc:0 "New miniaturization techniques will allow us to equip swarmer missiles with more powerful warheads and improved flight performance.\n\n"
+ tech_c_swarmer_missiles_4:0 "Whirlwind Missiles"
+ tech_c_swarmer_missiles_4_desc:0 "New miniaturization techniques will allow us to equip swarmer missiles with more powerful warheads and improved flight performance.\n\n"
+
+ # C_SWARMER_MISSILE_3:0 "Whirlwind Missiles"
+ # C_SWARMER_MISSILE_4:0 "Whirlwind Missiles"
+ 
+ ###########
+ # Torpedo #
+ ###########
+ 
+ C_TORPEDO_4:0 "Devastator Torpedoes"
+ C_TORPEDO_4_DESC:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens."
+ C_TORPEDO_5:0 "Devastator Torpedoes"
+ C_TORPEDO_5_DESC:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens."
+
+ GFX_C_ship_part_torpedo_4
+ GFX_C_ship_part_torpedo_5
+
+ tech_c_torpedoes_4:0 "Devastator Torpedoes"
+ tech_c_torpedoes_4_desc:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens.\n\n"
+ tech_c_torpedoes_5:0 "Devastator Torpedoes"
+ tech_c_torpedoes_5_desc:0 "Advanced torpedoes with very powerful warheads. They have a sleeker design, faster engines and upgraded shield modulators for slipping through energy screens.\n\n"
+
+ # C_TORPEDO_4:0 "Devastator Torpedoes"
+ # C_TORPEDO_5:0 "Devastator Torpedoes"
+ 
+ #################
+ # Point Defense #
+ #################
+ 
+ C_POINT_DEFENCE_4:0 "Guardian Point-Defense"
+ C_POINT_DEFENCE_4_DESC:0 "A wider range of available ammunition types vastly improves the effective interception rate of incoming threats."
+ C_POINT_DEFENCE_5:0 "Guardian Point-Defense"
+ C_POINT_DEFENCE_5_DESC:0 "A wider range of available ammunition types vastly improves the effective interception rate of incoming threats."
+
+ GFX_C_ship_part_point_defense_4
+ GFX_C_ship_part_point_defense_5
+
+ tech_c_pd_tracking_4:0 "Predictive Algorithms"
+ tech_c_pd_tracking_4_desc:0 "Advanced prediction greatly increases the accuracy of active countermeasure systems.\n\n"
+ tech_c_pd_tracking_5:0 "Predictive Algorithms"
+ tech_c_pd_tracking_5_desc:0 "Advanced prediction greatly increases the accuracy of active countermeasure systems.\n\n"
+
+ C_PD_POINT_DEFENCE_4:0 "Guardian Point-Defense"
+ C_PD_POINT_DEFENCE_5:0 "Guardian Point-Defense"
+ 
+ #####################
+ # Kinetic Artillery #
+ #####################
+
+ C_KINETIC_ARTILLERY_3:0 "Kinetic Artillery"
+ C_KINETIC_ARTILLERY_3_DESC:0 "An even more powerful long-range, ship-based artillery cannon, equipped with a new barrel and an upgraded fire control computer."
+ C_KINETIC_ARTILLERY_4:0 "Kinetic Artillery"
+ C_KINETIC_ARTILLERY_4_DESC:0 "An even more powerful long-range, ship-based artillery cannon, equipped with a new barrel and an upgraded fire control computer."
+
+ GFX_C_ship_part_kinetic_artillery_3
+ GFX_C_ship_part_kinetic_artillery_4
+
+ tech_c_kinetic_artillery_3:0 "Kinetic Artillery"
+ tech_c_kinetic_artillery_3_desc:0 "An even more powerful long-range, ship-based artillery cannon, equipped with a new barrel and an upgraded fire control computer.\n\n"
+ tech_c_kinetic_artillery_4:0 "Kinetic Artillery"
+ tech_c_kinetic_artillery_4_desc:0 "An even more powerful long-range, ship-based artillery cannon, equipped with a new barrel and an upgraded fire control computer.\n\n"
+
+ C_LARGE_KINETIC_ARTILLERY_3:0 "Kinetic Artillery"
+ C_LARGE_KINETIC_ARTILLERY_4:0 "Kinetic Artillery"
+ 
+ ####################
+ # Mass Accelerator #
+ ####################
+
+ C_MASS_ACCELERATOR_3:0 "Ultra Cannon"
+ C_MASS_ACCELERATOR_3_DESC:0 "An even more powerful variant of spinal-mounted kinetic artillery."
+ C_MASS_ACCELERATOR_4:0 "Omega Cannon"
+ C_MASS_ACCELERATOR_4_DESC:0 "An even more powerful variant of spinal-mounted kinetic artillery."
+
+ GFX_C_ship_part_mass_accelerator_3
+ GFX_C_ship_part_mass_accelerator_4
+
+ tech_c_mass_accelerator_3:0 "Ultra Cannon"
+ tech_c_mass_accelerator_3_desc:0 "An even more powerful mass accelerator cannon that can rip through even the toughest shields.\n\n"
+ tech_c_mass_accelerator_4:0 "Omega Cannon"
+ tech_c_mass_accelerator_4_desc:0 "An even more powerful mass accelerator cannon that can rip through even the toughest shields.\n\n"
+
+ C_LARGE_MASS_ACCELERATOR_3:0 "Ultra Cannon"
+ C_LARGE_MASS_ACCELERATOR_4:0 "Omega Cannon"
+ 
+ ################
+ # Flak Battery #
+ ################
+
+ C_FLAK_BATTERY_3:0 "Flak Artillery"
+ C_FLAK_BATTERY_3_DESC:0 "Upgraded flak batteries with new, more powerful shrapnel rounds. They offer excellent defense against both strike craft and missiles."
+ C_FLAK_BATTERY_4:0 "Flak Artillery"
+ C_FLAK_BATTERY_4_DESC:0 "Upgraded flak batteries with new, more powerful shrapnel rounds. They offer excellent defense against both strike craft and missiles."
+
+ GFX_C_ship_part_flak_batteries_3
+ GFX_C_ship_part_flak_batteries_4
+
+ tech_c_flak_batteries_3:0 "Flak Artillery"
+ tech_c_flak_batteries_3_desc:0 "Upgraded flak batteries with new, more powerful shrapnel rounds. They offer excellent defense against both strike craft and missiles.\n\n"
+ tech_c_flak_batteries_4:0 "Flak Artillery"
+ tech_c_flak_batteries_4_desc:0 "Upgraded flak batteries with new, more powerful shrapnel rounds. They offer excellent defense against both strike craft and missiles.\n\n"
+
+ # C_FLAK_BATTERY_3:0 "Flak Artillery"
+ # C_FLAK_BATTERY_4:0 "Flak Artillery"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

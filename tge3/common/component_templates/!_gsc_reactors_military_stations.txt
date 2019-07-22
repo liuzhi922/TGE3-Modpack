@@ -1,0 +1,1171 @@
+#############
+#	POWER	#
+#############
+
+# no exponent used, simple addition
+@platform_power_1s = 200
+@platform_power_2s = 260
+@platform_power_3s = 340
+@platform_power_4s = 440
+@platform_power_5s = 575
+@platform_power_6s = 750
+@platform_power_7s = 800
+@platform_power_8s = 850
+@platform_power_9s = 900
+@platform_power_10s = 1000  # MAX 1000
+
+
+# Exponent 1.02725 & rounded
+@platform_power_1m = 360
+@platform_power_2m = 420
+@platform_power_3m = 500
+@platform_power_4m = 590
+@platform_power_5m = 700
+@platform_power_6m = 840
+@platform_power_7m = 1010
+@platform_power_8m = 1220
+@platform_power_9m = 1480
+@platform_power_10m = 1800 # MAX 1800
+
+# Exponent 1.023 & rounded
+@platform_power_1l = 1240
+@platform_power_2l = 1460
+@platform_power_3l = 1730
+@platform_power_4l = 2050
+@platform_power_5l = 2440
+@platform_power_6l = 2920
+@platform_power_7l = 3510
+@platform_power_8l = 4240
+@platform_power_9l = 5140
+@platform_power_10l = 6250 # MAX 6200 
+
+#############
+#	COST	#
+#############
+
+@platform_cost_1s = 40
+@platform_cost_2s = 50
+@platform_cost_3s = 60
+@platform_cost_4s = 70
+@platform_cost_5s = 80
+@platform_cost_6s = 90
+@platform_cost_7s = 100
+@platform_cost_8s = 110
+@platform_cost_9s = 120
+@platform_cost_10s = 130
+
+# +10% base
+@platform_cost_1m = 60
+@platform_cost_2m = 80
+@platform_cost_3m = 100
+@platform_cost_4m = 120
+@platform_cost_5m = 140
+@platform_cost_6m = 160
+@platform_cost_7m = 180
+@platform_cost_8m = 200
+@platform_cost_9m = 220
+@platform_cost_10m = 240
+
+# +25% base
+@platform_cost_1l = 80
+@platform_cost_2l = 120
+@platform_cost_3l = 160
+@platform_cost_4l = 200
+@platform_cost_5l = 240
+@platform_cost_6l = 280
+@platform_cost_7l = 320
+@platform_cost_8l = 360
+@platform_cost_9l = 400
+@platform_cost_10l = 440
+
+#############
+#	Energy Upkeep	#
+#############
+
+@platform_energy_upkeep_1s = 0.20
+@platform_energy_upkeep_2s = 0.26
+@platform_energy_upkeep_3s = 0.36
+@platform_energy_upkeep_4s = 0.44
+@platform_energy_upkeep_5s = 0.57
+@platform_energy_upkeep_6s = 0.74
+@platform_energy_upkeep_7s = 0.79
+@platform_energy_upkeep_8s = 0.90
+@platform_energy_upkeep_9s = 1.01
+@platform_energy_upkeep_10s = 1.11
+
+# +10% base
+@platform_energy_upkeep_1m = 0.220
+@platform_energy_upkeep_2m = 0.286
+@platform_energy_upkeep_3m = 0.396
+@platform_energy_upkeep_4m = 0.484
+@platform_energy_upkeep_5m = 0.627
+@platform_energy_upkeep_6m = 0.814
+@platform_energy_upkeep_7m = 0.869
+@platform_energy_upkeep_8m = 0.990
+@platform_energy_upkeep_9m = 1.111
+@platform_energy_upkeep_10m = 1.221
+
+# +25% base
+@platform_energy_upkeep_1l = 0.250
+@platform_energy_upkeep_2l = 0.325
+@platform_energy_upkeep_3l = 0.450
+@platform_energy_upkeep_4l = 0.550
+@platform_energy_upkeep_5l = 0.713
+@platform_energy_upkeep_6l = 0.925
+@platform_energy_upkeep_7l = 0.988
+@platform_energy_upkeep_8l = 1.125
+@platform_energy_upkeep_9l = 1.263
+@platform_energy_upkeep_10l = 1.388
+
+#############
+#	Energy Upkeep	#
+#############
+
+@platform_alloy_upkeep_1s = 0.020
+@platform_alloy_upkeep_2s = 0.026
+@platform_alloy_upkeep_3s = 0.036
+@platform_alloy_upkeep_4s = 0.044
+@platform_alloy_upkeep_5s = 0.057
+@platform_alloy_upkeep_6s = 0.074
+@platform_alloy_upkeep_7s = 0.079
+@platform_alloy_upkeep_8s = 0.090
+@platform_alloy_upkeep_9s = 0.101
+@platform_alloy_upkeep_10s = 0.111
+
+@platform_alloy_upkeep_1m = 0.022
+@platform_alloy_upkeep_2m = 0.029
+@platform_alloy_upkeep_3m = 0.040
+@platform_alloy_upkeep_4m = 0.048
+@platform_alloy_upkeep_5m = 0.063
+@platform_alloy_upkeep_6m = 0.081
+@platform_alloy_upkeep_7m = 0.087
+@platform_alloy_upkeep_8m = 0.099
+@platform_alloy_upkeep_9m = 0.111
+@platform_alloy_upkeep_10m = 0.122
+
+@platform_alloy_upkeep_1l = 0.025
+@platform_alloy_upkeep_2l = 0.033
+@platform_alloy_upkeep_3l = 0.045
+@platform_alloy_upkeep_4l = 0.055
+@platform_alloy_upkeep_5l = 0.071
+@platform_alloy_upkeep_6l = 0.093
+@platform_alloy_upkeep_7l = 0.099
+@platform_alloy_upkeep_8l = 0.113
+@platform_alloy_upkeep_9l = 0.126
+@platform_alloy_upkeep_10l = 0.139
+
+
+utility_component_template = {
+	key = "PLATFORM_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @platform_power_6s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_6s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_6s
+			alloys = @platform_alloy_upkeep_6s
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+	upgrades_to = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_7"
+}
+utility_component_template = {
+	key = "PLATFORM_MEDIUM_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @platform_power_6m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_6m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_6m
+			alloys = @platform_alloy_upkeep_6m
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+	upgrades_to = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_7"
+}
+utility_component_template = {
+	key = "PLATFORM_LARGE_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @platform_power_6l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_6l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_6l
+			alloys = @platform_alloy_upkeep_6l
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+	upgrades_to = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_7"
+}
+
+
+########################
+## TIER 1
+########################
+utility_component_template = {
+	key = "PLATFORM_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @platform_power_1s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_1s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_1s
+			alloys = @platform_alloy_upkeep_1s
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+utility_component_template = {
+	key = "PLATFORM_MEDIUM_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @platform_power_1m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_1m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_1m
+			alloys = @platform_alloy_upkeep_1m
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_MEDIUM_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+utility_component_template = {
+	key = "PLATFORM_LARGE_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @platform_power_1l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_1l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_1l
+			alloys = @platform_alloy_upkeep_1l
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_LARGE_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+########################
+## TIER 2
+########################
+utility_component_template = {
+	key = "PLATFORM_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @platform_power_2s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_2s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_2s
+			alloys = @platform_alloy_upkeep_2s
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+utility_component_template = {
+	key = "PLATFORM_MEDIUM_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @platform_power_2m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_2m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_2m
+			alloys = @platform_alloy_upkeep_2m
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_MEDIUM_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+utility_component_template = {
+	key = "PLATFORM_LARGE_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @platform_power_2l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_2l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_2l
+			alloys = @platform_alloy_upkeep_2l
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_LARGE_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+########################
+## TIER 3
+########################
+utility_component_template = {
+	key = "PLATFORM_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @platform_power_3s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_3s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_3s
+			alloys = @platform_alloy_upkeep_3s
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	upgrades_to = "PLATFORM_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+utility_component_template = {
+	key = "PLATFORM_MEDIUM_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @platform_power_3m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_3m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_3m
+			alloys = @platform_alloy_upkeep_3m
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	upgrades_to = "PLATFORM_MEDIUM_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+utility_component_template = {
+	key = "PLATFORM_LARGE_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @platform_power_3l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_3l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_3l
+			alloys = @platform_alloy_upkeep_3l
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	upgrades_to = "PLATFORM_LARGE_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+########################
+## TIER 4
+########################
+utility_component_template = {
+	key = "PLATFORM_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @platform_power_4s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_4s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_4s
+			alloys = @platform_alloy_upkeep_4s
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	upgrades_to = "PLATFORM_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_MEDIUM_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @platform_power_4m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_4m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_4m
+			alloys = @platform_alloy_upkeep_4m
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	upgrades_to = "PLATFORM_MEDIUM_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_LARGE_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @platform_power_4l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_4l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_4l
+			alloys = @platform_alloy_upkeep_4l
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	upgrades_to = "PLATFORM_LARGE_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+########################
+## TIER 5
+########################
+utility_component_template = {
+	key = "PLATFORM_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @platform_power_5s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_5s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_5s
+			alloys = @platform_alloy_upkeep_5s
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	upgrades_to = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+utility_component_template = {
+	key = "PLATFORM_MEDIUM_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @platform_power_5m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_5m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_5m
+			alloys = @platform_alloy_upkeep_5m
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	upgrades_to = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+utility_component_template = {
+	key = "PLATFORM_LARGE_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @platform_power_5l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_5l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_5l
+			alloys = @platform_alloy_upkeep_5l
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	upgrades_to = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_7"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+
+########################
+## TIER 6
+########################
+
+utility_component_template = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_6"
+	size = small
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1
+	power = @platform_power_6s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_6s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_6s
+			alloys = @platform_alloy_upkeep_6s
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_6" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	
+	upgrades_to = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_7"
+	
+	ai_weight = {
+		weight = 60
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_6"
+	size = small
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1
+	power = @platform_power_6m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_6m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_6m
+			alloys = @platform_alloy_upkeep_6m
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_6" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	
+	upgrades_to = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_7"
+	
+	ai_weight = {
+		weight = 60
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_6"
+	size = small
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1
+	power = @platform_power_6l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_6l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_6l
+			alloys = @platform_alloy_upkeep_6l
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_6" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	
+	upgrades_to = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_7"
+	
+	ai_weight = {
+		weight = 60
+	}
+}
+
+########################
+## TIER 7
+########################
+
+utility_component_template = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_7"
+	size = small
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1
+	power = @platform_power_7s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_7s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_7s
+			alloys = @platform_alloy_upkeep_7s
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_7" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	
+	upgrades_to = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_8"
+	
+	ai_weight = {
+		weight = 70
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_7"
+	size = small
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1
+	power = @platform_power_7m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_7m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_7m
+			alloys = @platform_alloy_upkeep_7m
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_7" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	
+	upgrades_to = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_8"
+	
+	ai_weight = {
+		weight = 70
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_7"
+	size = small
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1
+	power = @platform_power_7l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_7l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_7l
+			alloys = @platform_alloy_upkeep_7l
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_7" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	
+	upgrades_to = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_8"
+	
+	ai_weight = {
+		weight = 70
+	}
+}
+
+########################
+## TIER 8
+########################
+
+utility_component_template = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_8"
+	size = small
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1
+	power = @platform_power_8s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_8s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_8s
+			alloys = @platform_alloy_upkeep_8s
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_8" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	
+	upgrades_to = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_9"
+	
+	ai_weight = {
+		weight = 80
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_8"
+	size = small
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1
+	power = @platform_power_8m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_8m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_8m
+			alloys = @platform_alloy_upkeep_8m
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_8" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	
+	upgrades_to = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_9"
+	
+	ai_weight = {
+		weight = 80
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_8"
+	size = small
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1
+	power = @platform_power_8l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_8l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_8l
+			alloys = @platform_alloy_upkeep_8l
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_8" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	
+	upgrades_to = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_9"
+	
+	ai_weight = {
+		weight = 80
+	}
+}
+
+########################
+## TIER 9
+########################
+
+utility_component_template = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_9"
+	size = small
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1
+	power = @platform_power_9s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_9s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_9s
+			alloys = @platform_alloy_upkeep_9s
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_9" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	
+	upgrades_to = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_10"
+	
+	ai_weight = {
+		weight = 90
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_9"
+	size = small
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1
+	power = @platform_power_9m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_9m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_9m
+			alloys = @platform_alloy_upkeep_9m
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_9" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	
+	upgrades_to = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_10"
+	
+	ai_weight = {
+		weight = 90
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_9"
+	size = small
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1
+	power = @platform_power_9l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_9l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_9l
+			alloys = @platform_alloy_upkeep_9l
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_9" }
+	component_set = "power_core"
+	size_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	
+	upgrades_to = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_10"
+	
+	ai_weight = {
+		weight = 90
+	}
+}
+
+########################
+## TIER 10
+########################
+
+utility_component_template = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_10"
+	size = small
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1
+	power = @platform_power_10s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_10s
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_10s
+			alloys = @platform_alloy_upkeep_10s
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_10"
+	size = small
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1
+	power = @platform_power_10m
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_10m
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_10m
+			alloys = @platform_alloy_upkeep_10m
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_medium
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+utility_component_template = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_10"
+	size = small
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1
+	power = @platform_power_10l
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_10l
+		}	
+		upkeep = {
+			energy = @platform_energy_upkeep_10l
+			alloys = @platform_alloy_upkeep_10l
+		}
+	}
+	
+	prerequisites = { "tech_c_reactor_10" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_large
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}

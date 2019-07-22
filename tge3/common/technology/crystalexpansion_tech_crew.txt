@@ -1,0 +1,911 @@
+
+# SYNTH CREW
+tech_c_synth_crew = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { military_theory }	
+	prerequisites = { "tech_starbase_3" }
+	weight = @tier2weight3
+	
+	is_reverse_engineerable = no
+
+	potential = {
+		NOR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		OR = {
+			has_authority = auth_machine_intelligence
+			has_technology = tech_droid_workers
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 2 # important for AI
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_AI_CREW_TITLE"
+			desc = "TECH_UNLOCK_AI_CREW_DESC"
+		}
+	}
+}
+# PSIONIC CREW
+tech_c_psionic_crew_1 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { psionics }
+	is_rare = yes
+	prerequisites = { "tech_starbase_3" "tech_psionic_theory" }
+	weight = @tier2weight3
+	
+	is_reverse_engineerable = no
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}	
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 2 # important for AI
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}			
+		}
+
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_PSI_CREW_TITLE"
+			desc = "TECH_UNLOCK_PSI_CREW_DESC"
+		}
+	}
+}
+# CLONE CREW
+tech_c_clone_crew_1 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { military_theory }	
+	prerequisites = { "tech_starbase_3" "tech_cloning"}
+	weight = @tier2weight3
+	
+	is_reverse_engineerable = no
+
+	potential = {
+		NOR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		has_technology = tech_gene_banks
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 2 # important for AI
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_CLONE_CREW_TITLE"
+			desc = "TECH_UNLOCK_CLONE_CREW_DESC"
+		}
+	}
+}
+# PURIFIER CREW
+tech_c_purifier_crew_1 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { military_theory }
+	is_rare = no
+	prerequisites = { "tech_starbase_3" }
+	weight = @tier2weight3
+	
+	is_reverse_engineerable = no
+	
+	potential = {
+		OR = {
+			has_civic = civic_fanatic_purifiers
+			has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_xenophobe
+			has_authority = auth_hive_mind
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 3
+			has_civic = civic_fanatic_purifiers
+		}
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 2 # important for AI
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_PURIFIER_CREW_TITLE"
+			desc = "TECH_UNLOCK_PURIFIER_CREW_DESC"
+		}
+	}
+
+}
+# ALIEN CREW
+tech_c_alien_crew_1 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { military_theory }
+	is_rare = no
+	prerequisites = { "tech_starbase_3" }
+	weight = @tier2weight3
+	
+	is_reverse_engineerable = no
+	
+	potential = {
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 2 # important for AI
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_ALIEN_CREW_TITLE"
+			desc = "TECH_UNLOCK_ALIEN_CREW_DESC"
+		}
+	}
+}
+# SLAVE CREW
+tech_c_slave_crew_1 = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { military_theory }
+	is_rare = no
+	prerequisites = { "tech_starbase_3" }
+	weight = @tier2weight3
+	
+	potential = {
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		NOR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 2 # important for AI
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_SLAVE_CREW_TITLE"
+			desc = "TECH_UNLOCK_SLAVE_CREW_DESC"
+		}
+	}
+}
+
+# EXPERIENCED CREW
+tech_c_experienced_crew = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { military_theory }
+	prerequisites = { "tech_starbase_3" }
+	weight = @tier2weight2
+	
+	is_reverse_engineerable = no
+
+	potential = {
+		NOR = {
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 2 # important for AI
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_EXPERIENCED_CREW_TITLE"
+			desc = "TECH_UNLOCK_EXPERIENCED_CREW_DESC"
+		}
+	}
+}
+# ELITE CREW
+tech_c_elite_crew = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_starbase_5" }
+	weight = @tier3weight3
+	
+	is_reverse_engineerable = no
+	
+	potential = {
+		NOR = {
+			has_authority = auth_hive_mind
+			has_authority = auth_machine_intelligence
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+	
+	ai_weight = {
+		factor = 2 # important for AI
+		modifier = {
+			factor = 2.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}			
+		}
+	}
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_ELITE_CREW_TITLE"
+			desc = "TECH_UNLOCK_ELITE_CREW_DESC"
+		}
+	}
+}
+
+# tech_c_robot_crew = {
+	# cost = @tier1cost4
+	# area = engineering
+	# tier = 1
+	# category = { industry }	
+	# prerequisites = { "tech_robotic_workers" }
+	# weight = @tier1weight4
+	
+	# is_reverse_engineerable = no
+
+	# weight_modifier = {
+		# modifier = {
+			# factor = 0
+			# OR = {
+				# has_ethic = ethic_spiritualist
+				# has_ethic = ethic_fanatic_spiritualist
+			# }
+		# }
+		# modifier = {
+			# factor = 2
+			# has_ethic = ethic_materialist
+		# }
+		# modifier = {
+			# factor = 3
+			# has_ethic = ethic_fanatic_materialist
+		# }
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = engineering
+				# has_trait = "leader_trait_expertise_industry"
+			# }			
+		# }
+	# }
+	
+	# ai_weight = {
+		# weight = 6
+		# modifier = {
+			# factor = 0.05
+			# NOT = { has_ai_personality_behaviour = robot_exploiter }
+			# NOT = { has_ai_personality_behaviour = robot_liberator }
+		# }
+	# }
+# }
+
+# tech_c_droid_crew = {
+	# cost = @tier2cost1
+	# area = engineering
+	# tier = 2
+	# category = { industry }	
+	# prerequisites = { "tech_droid_workers" "tech_c_robot_crew" }
+	# weight = @tier2weight1
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 0
+			# OR = {
+				# has_ethic = ethic_spiritualist
+				# has_ethic = ethic_fanatic_spiritualist
+			# }
+		# }
+		# modifier = {
+			# factor = 2
+			# has_ethic = ethic_materialist
+		# }
+		# modifier = {
+			# factor = 3
+			# has_ethic = ethic_fanatic_materialist
+		# }
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = engineering
+				# has_trait = "leader_trait_expertise_industry"
+			# }			
+		# }
+	# }
+	
+	# ai_weight = {
+		# weight = 6
+		# modifier = {
+			# factor = 0.05
+			# NOT = { has_ai_personality_behaviour = robot_exploiter }
+			# NOT = { has_ai_personality_behaviour = robot_liberator }
+		# }
+	# }
+# }
+
+
+
+
+# tech_c_psionic_crew_2 = {
+	# cost = @tier2cost3
+	# area = society
+	# tier = 2
+	# category = { psionics }
+	# is_rare = no
+	# prerequisites = { "tech_c_psionic_crew_1" }
+	# weight = @tier2weight3
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 0
+			# NOT = {
+				# OR = {
+					# has_ethic = ethic_spiritualist
+					# has_ethic = ethic_fanatic_spiritualist
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = 2
+			# has_ethic = ethic_spiritualist
+		# }
+		# modifier = {
+			# factor = 3
+			# has_ethic = ethic_fanatic_spiritualist
+		# }
+		# modifier = {
+			# factor = 5
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_maniacal"
+			# }
+		# }
+		# modifier = {
+			# factor = 1.5
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_psionics"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+# tech_c_psionic_crew_3 = {
+	# cost = @tier2cost4
+	# area = society
+	# tier = 2
+	# category = { psionics }
+	# is_rare = no
+	# prerequisites = { "tech_c_psionic_crew_2" }
+	# weight = @tier2weight4
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 0
+			# NOT = {
+				# OR = {
+					# has_ethic = ethic_spiritualist
+					# has_ethic = ethic_fanatic_spiritualist
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = 2
+			# has_ethic = ethic_spiritualist
+		# }
+		# modifier = {
+			# factor = 3
+			# has_ethic = ethic_fanatic_spiritualist
+		# }
+		# modifier = {
+			# factor = 5
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_maniacal"
+			# }
+		# }
+		# modifier = {
+			# factor = 1.5
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_psionics"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+
+# tech_c_clone_crew_2 = {
+	# cost = @tier2cost2
+	# area = society
+	# tier = 2
+	# category = { biology }	
+	# prerequisites = { "tech_c_clone_crew_1" }
+	# weight = @tier2weight2
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_biology"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+# tech_c_clone_crew_3 = {
+	# cost = @tier2cost3
+	# area = society
+	# tier = 2
+	# category = { biology }	
+	# prerequisites = { "tech_c_clone_crew_2" }
+	# weight = @tier2weight3
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_biology"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+
+
+# tech_c_purifier_crew_2 = {
+	# cost = @tier2cost3
+	# area = society
+	# tier = 2
+	# category = { military_theory }
+	# is_rare = no
+	# prerequisites = { "tech_c_purifier_crew_1" }
+	# weight = @tier2weight3
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_military_theory"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+# tech_c_purifier_crew_3 = {
+	# cost = @tier2cost4
+	# area = society
+	# tier = 2
+	# category = { military_theory }
+	# is_rare = no
+	# prerequisites = { "tech_c_purifier_crew_2" }
+	# weight = @tier2weight4
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_military_theory"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+
+
+# tech_c_alien_crew_2 = {
+	# cost = @tier2cost3
+	# area = society
+	# tier = 2
+	# category = { new_worlds }
+	# is_rare = no
+	# prerequisites = { "tech_c_alien_crew_1" }
+	# weight = @tier2weight3
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_new_worlds"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+# tech_c_alien_crew_3 = {
+	# cost = @tier2cost4
+	# area = society
+	# tier = 2
+	# category = { new_worlds }
+	# is_rare = no
+	# prerequisites = { "tech_c_alien_crew_2" }
+	# weight = @tier2weight4
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_new_worlds"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+
+
+# tech_c_civilian_crew_2 = {
+	# cost = @tier2cost3
+	# area = society
+	# tier = 2
+	# category = { statecraft }
+	# is_rare = no
+	# prerequisites = { "tech_c_civilian_crew_1" }
+	# weight = @tier2weight3
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_statecraft"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+# tech_c_civilian_crew_3 = {
+	# cost = @tier2cost4
+	# area = society
+	# tier = 2
+	# category = { statecraft }
+	# is_rare = no
+	# prerequisites = { "tech_c_civilian_crew_2" }
+	# weight = @tier2weight4
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_statecraft"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+
+
+# tech_c_volunteer_crew_2 = {
+	# cost = @tier2cost3
+	# area = society
+	# tier = 2
+	# category = { statecraft }
+	# is_rare = no
+	# prerequisites = { "tech_c_volunteer_crew_1" }
+	# weight = @tier2weight3
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_statecraft"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+# tech_c_volunteer_crew_3 = {
+	# cost = @tier2cost4
+	# area = society
+	# tier = 2
+	# category = { statecraft }
+	# is_rare = no
+	# prerequisites = { "tech_c_volunteer_crew_2" }
+	# weight = @tier2weight4
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_statecraft"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+
+
+# tech_c_slave_crew_2 = {
+	# cost = @tier2cost3
+	# area = society
+	# tier = 2
+	# category = { statecraft }
+	# is_rare = no
+	# prerequisites = { "tech_c_slave_crew_1" }
+	# weight = @tier2weight3
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_statecraft"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }
+
+# tech_c_slave_crew_3 = {
+	# cost = @tier2cost4
+	# area = society
+	# tier = 2
+	# category = { statecraft }
+	# is_rare = no
+	# prerequisites = { "tech_c_slave_crew_2" }
+	# weight = @tier2weight4
+	
+	# is_reverse_engineerable = no
+	
+	# weight_modifier = {
+		# modifier = {
+			# factor = 1.25
+			# research_leader = {
+				# area = society
+				# has_trait = "leader_trait_expertise_statecraft"
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# factor = 6 #very rare tech
+	# }
+# }

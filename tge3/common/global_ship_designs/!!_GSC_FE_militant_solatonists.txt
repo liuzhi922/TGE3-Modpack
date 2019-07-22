@@ -1,0 +1,575 @@
+#############################
+### Militant Isolatonists ###
+#############################
+
+# Planet Destroyer
+ship_design = {
+	name = "NAME_Reaper"
+	ship_size = colossus
+	section = {
+		template = "SHIP_COLOSSUS_SECTION"
+		slot = "ship"
+		
+		component = {
+			slot = "PLANET_KILLER_GUN_01"
+			template = "PLANET_KILLER_CRACKER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "C_LARGE_ARMOR_10"
+		}		
+	}
+	required_component="C_SHIP_SENSOR_10"
+	required_component="JUMP_DRIVE_1"
+	required_component="C_TITAN_ZERO_POINT_REACTOR_10"
+	required_component="C_COLOSSUS_SHIP_THRUSTER_ARMOR_4"
+	
+	# For special buildable
+	is_special_buildable = yes
+	allow_buildable_trigger = is_fallen_empire_xenophobe
+}
+
+# Massive Ship
+ship_design = {
+	name = "NAME_Imperium"
+	ship_size = massive_ship_fallen_empire
+	section = {
+		template = "fallen_empire_massive_warship_key"
+		slot = "mid"
+		
+		component = {
+			slot = "TITANIC_01"
+			template = "GSC_PERDITION_BEAM_3_TITAN"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+		}
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+		}	
+		component = {
+			slot = "STRIKE_CRAFT_03"
+			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+		}	
+		component = {
+			slot = "STRIKE_CRAFT_04"
+			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}		
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}		
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}	
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}		
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}	
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}	
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}			
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "C_LARGE_SHIELD_20"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "C_LARGE_ARMOR_10"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "C_LARGE_SHIELD_20"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "C_LARGE_CRYSTAL_ARMOR_6"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "C_LARGE_CRYSTAL_ARMOR_6"
+		}
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "C_LARGE_CRYSTAL_ARMOR_6"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "C_SHIELD_RECHARGER_3"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "C_SMALL_AUTO_REPAIR_5"
+		}	
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "C_HANGAR_BAY_5"
+		}
+		component = {
+			slot = "AUX_UTILITY_4"
+			template = "C_SMALL_TARGETING_COMPUTER_5"
+		}
+	}
+	required_component="C_SHIP_SENSOR_10"
+	required_component="JUMP_DRIVE_1"
+	required_component="COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	required_component="C_TITAN_ZERO_POINT_REACTOR_10"
+	required_component="C_TITAN_SHIP_THRUSTER_ARMOR_4"
+	required_component="C_ELITE_CREW"
+	
+	# For special buildable
+	is_special_buildable = yes
+	allow_buildable_trigger = is_fallen_empire_xenophobe
+}
+
+
+# Large Ship
+ship_design = {
+	name = "NAME_Supremacy"
+	ship_size = large_ship_fallen_empire
+	section = {
+		template = "fallen_empire_large_warship_key"
+		slot = "mid"
+		
+		
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+		}		
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+		}		
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "C_LARGE_MASS_ACCELERATOR_4"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}		
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}		
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "C_LARGE_CRYSTAL_ARMOR_6"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "C_SHIELD_RECHARGER_3"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "C_SMALL_AUTO_REPAIR_5"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "C_SMALL_TARGETING_COMPUTER_5"
+		}
+	}
+	required_component="C_SHIP_SENSOR_10"
+	required_component="JUMP_DRIVE_1"
+	required_component="COMBAT_COMPUTER_LINE_ADVANCED"
+	required_component="C_BATTLESHIP_ZERO_POINT_REACTOR_10"
+	required_component="C_BATTLESHIP_SHIP_THRUSTER_ARMOR_4"
+	required_component="C_ELITE_CREW"
+	
+	# For special buildable
+	is_special_buildable = yes
+	allow_buildable_trigger = is_fallen_empire_xenophobe
+}
+
+# Small Ship
+ship_design = {
+	name = "NAME_Glory"
+	ship_size = small_ship_fallen_empire
+	section = {
+		template = "fallen_empire_warship_small_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}	
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "C_SMALL_AUTOCANNON_5"
+		}		
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "C_SMALL_AUTOCANNON_5"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "C_SMALL_AUTOCANNON_5"
+		}	
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "C_SMALL_AUTOCANNON_5"
+		}			
+		component = {
+			slot = "PD_01"
+			template = "C_FLAK_BATTERY_4"
+		}	
+		component = {
+			slot = "PD_02"
+			template = "C_FLAK_BATTERY_4"
+		}	
+		component = {
+			slot = "PD_03"
+			template = "C_FLAK_BATTERY_4"
+		}	
+		component = {
+			slot = "PD_04"
+			template = "C_FLAK_BATTERY_4"
+		}			
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "C_MEDIUM_SHIELD_20"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "C_MEDIUM_SHIELD_20"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "C_MEDIUM_SHIELD_20"
+		}	
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "C_MEDIUM_ARMOR_10"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_5"
+			template = "C_MEDIUM_ARMOR_10"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_6"
+			template = "C_LARGE_CRYSTAL_ARMOR_6"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "C_SHIELD_RECHARGER_3"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "C_SMALL_TARGETING_COMPUTER_5"
+		}
+	}
+	required_component="C_SHIP_SENSOR_10"
+	required_component="JUMP_DRIVE_1"
+	required_component="COMBAT_COMPUTER_PICKET_ADVANCED"
+	required_component="SHIP_THRUSTER_5"
+	required_component="C_ELITE_CREW"
+	
+	# For special buildable
+	is_special_buildable = yes
+	allow_buildable_trigger = is_fallen_empire_xenophobe
+}
+
+# Defense Platform
+ship_design = {
+	name = "NAME_Devastator"
+	ship_size = military_station_small_fallen_empire
+	section = {
+		template = "fallen_empire_station_small_key"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "C_LARGE_KINETIC_ARTILLERY_4"
+		}			
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "C_MEDIUM_MASS_DRIVER_7"
+		}		
+		component = {
+			slot = "PD_01"
+			template = "C_FLAK_BATTERY_4"
+		}
+		component = {
+			slot = "PD_02"
+			template = "C_FLAK_BATTERY_4"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "C_LARGE_SHIELD_20"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "C_LARGE_SHIELD_20"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "C_LARGE_ARMOR_10"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "C_LARGE_ARMOR_10"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "C_SHIELD_RECHARGER_3"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "C_SHIELD_RECHARGER_3"
+		}			
+	}
+	required_component="C_SHIP_SENSOR_10"
+	required_component="COMBAT_COMPUTER_PLATFORM_ADVANCED"
+	required_component="C_STARBASE_FISSION_REACTOR_X"
+	
+	# For special buildable
+	is_special_buildable = yes
+	allow_buildable_trigger = is_fallen_empire_xenophobe
+}
+
+# Construction Ship
+ship_design = {
+	name = "NAME_Servitor"
+	ship_size = constructor
+	section = {
+		template = "DEFAULT_CONSTRUCTION_SECTION"
+		slot = "mid"
+	
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "C_SMALL_SHIELD_20"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "C_SMALL_SHIELD_20"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "C_SMALL_SHIELD_20"
+		}	
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="SHIP_THRUSTER_5"
+	required_component="C_SHIP_SENSOR_10"
+	required_component="C_DESTROYER_ZERO_POINT_REACTOR_10"
+	
+	# For special buildable
+	is_special_buildable = yes
+	allow_buildable_trigger = is_fallen_empire_xenophobe
+}
+
+
+# Colony Ship
+ship_design = {
+	name = "NAME_Destiny"
+	ship_size = colonizer
+	section = {
+		template = "DEFAULT_COLONIZATION_SECTION"
+		slot = "mid"
+	
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "C_SMALL_SHIELD_20"
+		}	
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "C_SMALL_SHIELD_20"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "C_SMALL_SHIELD_20"
+		}	
+	}
+	required_component="JUMP_DRIVE_1"
+	required_component="SHIP_THRUSTER_5"
+	required_component="C_SHIP_SENSOR_10"
+	required_component="C_DESTROYER_ZERO_POINT_REACTOR_10"
+	
+	# For special buildable
+	is_special_buildable = yes
+	allow_buildable_trigger = is_fallen_empire_xenophobe
+}

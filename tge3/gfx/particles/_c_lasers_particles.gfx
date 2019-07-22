@@ -1,0 +1,376 @@
+objectTypes = {
+
+####################
+#	WINDUP
+####################
+
+	pdxparticle = {
+		name = "c_cloud_2_windup_effect"
+		type = "c_cloud_2_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_cloud_2_muzzle_windup_effect"
+		type = "c_cloud_2_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "c_cloud_3_windup_effect"
+		type = "c_cloud_3_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_cloud_3_muzzle_windup_effect"
+		type = "c_cloud_3_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_focused_arc_emitter_3_windup_effect"
+		type = "c_focused_arc_emitter_3_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_focused_arc_emitter_3_muzzle_windup_effect"
+		type = "c_focused_arc_emitter_3_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_focused_arc_emitter_4_windup_effect"
+		type = "c_focused_arc_emitter_4_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_focused_arc_emitter_4_muzzle_windup_effect"
+		type = "c_focused_arc_emitter_4_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_tachyon_lance_3_windup_effect"
+		type = "c_tachyon_lance_3_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_tachyon_lance_3_muzzle_windup_effect"
+		type = "c_tachyon_lance_3_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_tachyon_lance_4_windup_effect"
+		type = "c_tachyon_lance_4_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_tachyon_lance_4_muzzle_windup_effect"
+		type = "c_tachyon_lance_4_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+
+####################
+#	MUZZLE FLASHES
+####################
+
+	pdxparticle = {
+		name = "c_laser_6_large_muzzle_particle"
+		type = "c_laser_6_file"
+		
+		scale = 3.0
+	}
+	
+	pdxparticle = {
+		name = "c_laser_6_medium_muzzle_particle"
+		type = "c_laser_6_file"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "c_laser_6_small_muzzle_particle"
+		type = "c_laser_6_file"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_laser_7_large_muzzle_particle"
+		type = "c_laser_7_file"
+		
+		scale = 3.0
+	}
+	
+	pdxparticle = {
+		name = "c_laser_7_medium_muzzle_particle"
+		type = "c_laser_7_file"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "c_laser_7_small_muzzle_particle"
+		type = "c_laser_7_file"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_cloud_2_muzzle_particle"
+		type = "c_cloud_2_file"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "c_cloud_3_muzzle_particle"
+		type = "c_cloud_3_file"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_focused_arc_emitter_3_muzzle_particle"
+		type = "c_focused_arc_emitter_3_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_focused_arc_emitter_4_muzzle_particle"
+		type = "c_focused_arc_emitter_4_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_tachyon_lance_3_muzzle_particle"
+		type = "c_tachyon_lance_3_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_tachyon_lance_4_muzzle_particle"
+		type = "c_tachyon_lance_4_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_4_small_muzzle_particle"
+		type = "c_disruptor_4_muzzle_file"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_4_medium_muzzle_particle"
+		type = "c_disruptor_4_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_4_large_muzzle_particle"
+		type = "c_disruptor_4_muzzle_file"
+		
+		scale = 1.25
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_5_small_muzzle_particle"
+		type = "c_disruptor_5_muzzle_file"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_5_medium_muzzle_particle"
+		type = "c_disruptor_5_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_5_large_muzzle_particle"
+		type = "c_disruptor_5_muzzle_file"
+		
+		scale = 1.25
+	}
+	
+	pdxparticle = {
+		name = "c_space_whale_weapon_2_muzzle_particle"
+		type = "c_space_whale_weapon_2_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "c_space_whale_weapon_3_muzzle_particle"
+		type = "c_space_whale_weapon_3_muzzle_file"
+		
+		scale = 1.0
+	}
+		
+####################
+#	HIT EFFECTS
+####################
+
+	pdxparticle = {
+		name = "c_laser_6_small_hit_effect"
+		type = "c_laser_6_hit_effect"
+		
+		scale = 0.9
+	}
+	
+	pdxparticle = {
+		name = "c_laser_6_medium_hit_effect"
+		type = "c_laser_6_hit_effect"
+		
+		scale = 1.3
+	}
+	
+	pdxparticle = {
+		name = "c_laser_6_large_hit_effect"
+		type = "c_laser_6_hit_effect"
+		
+		scale = 1.8
+	}
+	
+	pdxparticle = {
+		name = "c_laser_7_small_hit_effect"
+		type = "c_laser_7_hit_effect"
+		
+		scale = 0.9
+	}
+	
+	pdxparticle = {
+		name = "c_laser_7_medium_hit_effect"
+		type = "c_laser_7_hit_effect"
+		
+		scale = 1.3
+	}
+	
+	pdxparticle = {
+		name = "c_laser_7_large_hit_effect"
+		type = "c_laser_7_hit_effect"
+		
+		scale = 1.8
+	}
+	
+	pdxparticle = {
+		name = "c_cloud_2_hit_effect"
+		type = "c_cloud_2_hit_effect"
+		
+		scale = 1.15
+	}
+	
+	pdxparticle = {
+		name = "c_cloud_3_hit_effect"
+		type = "c_cloud_3_hit_effect"
+		
+		scale = 1.15
+	}
+	
+	pdxparticle = {
+		name = "c_focused_arc_emitter_3_hit_effect"
+		type = "c_focused_arc_emitter_3_hit_effect"
+		
+		scale = 1.15
+	}
+	
+	pdxparticle = {
+		name = "c_focused_arc_emitter_4_hit_effect"
+		type = "c_focused_arc_emitter_4_hit_effect"
+		
+		scale = 1.15
+	}
+	
+	pdxparticle = {
+		name = "c_tachyon_lance_3_hit_effect"
+		type = "c_tachyon_lance_3_hit_effect"
+		
+		scale = 1.15
+	}
+	
+	pdxparticle = {
+		name = "c_tachyon_lance_4_hit_effect"
+		type = "c_tachyon_lance_4_hit_effect"
+		
+		scale = 1.15
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_4_small_hit_effect"
+		type = "c_disruptor_4_hit_effect"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_4_medium_hit_effect"
+		type = "c_disruptor_4_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_4_large_hit_effect"
+		type = "c_disruptor_4_hit_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_5_small_hit_effect"
+		type = "c_disruptor_5_hit_effect"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_5_medium_hit_effect"
+		type = "c_disruptor_5_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "c_disruptor_5_large_hit_effect"
+		type = "c_disruptor_5_hit_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "c_space_whale_weapon_2_hit_effect"
+		type = "c_space_whale_weapon_2_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "c_space_whale_weapon_3_hit_effect"
+		type = "c_space_whale_weapon_3_hit_effect"
+		
+		scale = 1.0
+	}
+}

@@ -1,0 +1,8 @@
+﻿#Abandoned Habitat
+#By ViolentBeetle
+
+l_russian: 
+
+ #Blockers
+ d_ab_hab_ruined_section:0 "Поврежденная Секция"
+ d_ab_hab_ruined_section_desc:0 "Эта секция пала жертвой времени и попадания случайных астероидов. Чтобы снова сделать её пригодной для жизни, потребуется масштабный ремонт и уборка."

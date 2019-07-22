@@ -1,0 +1,234 @@
+d_kiyo_mod_trade = {
+	is_for_colonizeable = yes
+	category = planet_kiyo_mod_trader
+	
+	icon = d_building
+	
+	# other (trade value)
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_1 } modifier = { trade_value_add = 1 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_2 } modifier = { trade_value_add = 2 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_4 } modifier = { trade_value_add = 4 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_8 } modifier = { trade_value_add = 8 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_16 } modifier = { trade_value_add = 16 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_32 } modifier = { trade_value_add = 32 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_64 } modifier = { trade_value_add = 64 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_128 } modifier = { trade_value_add = 128 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_256 } modifier = { trade_value_add = 256 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_512 } modifier = { trade_value_add = 512 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_1024 } modifier = { trade_value_add = 1024 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_2048 } modifier = { trade_value_add = 2048 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_4096 } modifier = { trade_value_add = 4096 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_8192 } modifier = { trade_value_add = 8192 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_16384 } modifier = { trade_value_add = 16384 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_32768 } modifier = { trade_value_add = 32768 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_65536 } modifier = { trade_value_add = 65536 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_131072 } modifier = { trade_value_add = 131072 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_262144 } modifier = { trade_value_add = 262144 } }
+	triggered_planet_modifier = { potential = { exists = owner has_planet_flag = kiyo_trade_other_524288 } modifier = { trade_value_add = 524288 } }
+	
+	# minerals
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_1 } } minerals = 1 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_2 } } minerals = 2 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_4 } } minerals = 4 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_8 } } minerals = 8 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_16 } } minerals = 16 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_32 } } minerals = 32 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_64 } } minerals = 64 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_128 } } minerals = 128 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_256 } } minerals = 256 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_512 } } minerals = 512 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_1024 } } minerals = 1024 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_2048 } } minerals = 2048 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = 4096 } } minerals = 4096 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_8192 } } minerals = 8192 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_16384 } } minerals = 16384 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_32768 } } minerals = 32768 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_65536 } } minerals = 65536 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_131072 } } minerals = 131072 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_262144 } } minerals = 262144 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_minerals_524288 } } minerals = 524288 } }
+	
+	# energy
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_1 } } energy = 1 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_2 } } energy = 2 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_4 } } energy = 4 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_8 } } energy = 8 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_16 } } energy = 16 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_32 } } energy = 32 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_64 } } energy = 64 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_128 } } energy = 128 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_256 } } energy = 256 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_512 } } energy = 512 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_1024 } } energy = 1024 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_2048 } } energy = 2048 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = 4096 } } energy = 4096 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_8192 } } energy = 8192 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_16384 } } energy = 16384 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_32768 } } energy = 32768 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_65536 } } energy = 65536 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_131072 } } energy = 131072 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_262144 } } energy = 262144 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_energy_524288 } } energy = 524288 } }
+	
+	# food
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_1 } } food = 1 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_2 } } food = 2 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_4 } } food = 4 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_8 } } food = 8 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_16 } } food = 16 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_32 } } food = 32 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_64 } } food = 64 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_128 } } food = 128 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_256 } } food = 256 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_512 } } food = 512 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_1024 } } food = 1024 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_2048 } } food = 2048 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = 4096 } } food = 4096 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_8192 } } food = 8192 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_16384 } } food = 16384 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_32768 } } food = 32768 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_65536 } } food = 65536 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_131072 } } food = 131072 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_262144 } } food = 262144 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_food_524288 } } food = 524288 } }
+	
+	# unity
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_1 } } unity = 1 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_2 } } unity = 2 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_4 } } unity = 4 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_8 } } unity = 8 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_16 } } unity = 16 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_32 } } unity = 32 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_64 } } unity = 64 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_128 } } unity = 128 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_256 } } unity = 256 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_512 } } unity = 512 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_1024 } } unity = 1024 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_2048 } } unity = 2048 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = 4096 } } unity = 4096 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_8192 } } unity = 8192 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_16384 } } unity = 16384 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_32768 } } unity = 32768 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_65536 } } unity = 65536 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_131072 } } unity = 131072 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_262144 } } unity = 262144 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_unity_524288 } } unity = 524288 } }
+	
+	# consumer_goods
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_1 } } consumer_goods = 2 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_2 } } consumer_goods = 4 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_4 } } consumer_goods = 8 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_8 } } consumer_goods = 16 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_16 } } consumer_goods = 32 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_32 } } consumer_goods = 64 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_64 } } consumer_goods = 128 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_128 } } consumer_goods = 256 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_256 } } consumer_goods = 512 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_512 } } consumer_goods = 1024 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_1024 } } consumer_goods = 2048 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_2048 } } consumer_goods = 4096 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = 4096 } } consumer_goods = 8192 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_8192 } } consumer_goods = 16384 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_16384 } } consumer_goods = 32768 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_32768 } } consumer_goods = 65536 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_65536 } } consumer_goods = 131072 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_131072 } } consumer_goods = 262144 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_262144 } } consumer_goods = 524288 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_consumer_goods_524288 } } consumer_goods = 1048576 } }
+	
+	# alloys
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_1 } } alloys = 0.5 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_2 } } alloys = 1 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_4 } } alloys = 2 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_8 } } alloys = 4 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_16 } } alloys = 8 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_32 } } alloys = 16 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_64 } } alloys = 32 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_128 } } alloys = 64 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_256 } } alloys = 128 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_512 } } alloys = 256 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_1024 } } alloys = 512 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_2048 } } alloys = 1024 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = 4096 } } alloys = 2048 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_8192 } } alloys = 4096 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_16384 } } alloys = 8192 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_32768 } } alloys = 16384 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_65536 } } alloys = 32768 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_131072 } } alloys = 65536 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_262144 } } alloys = 131072 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_alloys_524288 } } alloys = 262144 } }
+	
+	# physics_research
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_1 } } physics_research = 1 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_2 } } physics_research = 2 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_4 } } physics_research = 4 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_8 } } physics_research = 8 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_16 } } physics_research = 16 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_32 } } physics_research = 32 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_64 } } physics_research = 64 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_128 } } physics_research = 128 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_256 } } physics_research = 256 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_512 } } physics_research = 512 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_1024 } } physics_research = 1024 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_2048 } } physics_research = 2048 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = 4096 } } physics_research = 4096 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_8192 } } physics_research = 8192 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_16384 } } physics_research = 16384 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_32768 } } physics_research = 32768 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_65536 } } physics_research = 65536 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_131072 } } physics_research = 131072 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_262144 } } physics_research = 262144 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_physics_research_524288 } } physics_research = 524288 } }
+	
+	# society_research
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_1 } } society_research = 1 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_2 } } society_research = 2 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_4 } } society_research = 4 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_8 } } society_research = 8 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_16 } } society_research = 16 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_32 } } society_research = 32 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_64 } } society_research = 64 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_128 } } society_research = 128 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_256 } } society_research = 256 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_512 } } society_research = 512 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_1024 } } society_research = 1024 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_2048 } } society_research = 2048 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = 4096 } } society_research = 4096 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_8192 } } society_research = 8192 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_16384 } } society_research = 16384 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_32768 } } society_research = 32768 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_65536 } } society_research = 65536 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_131072 } } society_research = 131072 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_262144 } } society_research = 262144 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_society_research_524288 } } society_research = 524288 } }
+	
+	# engineering_research
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_1 } } engineering_research = 1 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_2 } } engineering_research = 2 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_4 } } engineering_research = 4 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_8 } } engineering_research = 8 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_16 } } engineering_research = 16 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_32 } } engineering_research = 32 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_64 } } engineering_research = 64 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_128 } } engineering_research = 128 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_256 } } engineering_research = 256 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_512 } } engineering_research = 512 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_1024 } } engineering_research = 1024 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_2048 } } engineering_research = 2048 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = 4096 } } engineering_research = 4096 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_8192 } } engineering_research = 8192 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_16384 } } engineering_research = 16384 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_32768 } } engineering_research = 32768 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_65536 } } engineering_research = 65536 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_131072 } } engineering_research = 131072 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_262144 } } engineering_research = 262144 } }
+	resources = { category = planet_kiyo_mod_trader produces = { trigger = { exists = owner planet = { has_planet_flag = kiyo_trade_engineering_research_524288 } } engineering_research = 524288 } }
+	
+	#planet_modifier = { job_kiyo_mod_trader_add = 1 }
+
+	potential = { can_have_habitable_deposits = yes }
+
+	drop_weight = {
+		weight = 0
+	}
+}

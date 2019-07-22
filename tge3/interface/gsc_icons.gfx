@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_text_options_icon"
+		textureFile = "gfx/interface/buttons/outliner_options_button.dds"
+	}
+}

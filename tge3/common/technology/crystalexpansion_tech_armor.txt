@@ -1,0 +1,277 @@
+
+#Crystal-Reinforced Armor VI
+tech_c_ship_armor_6 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 4
+	category = { materials }
+	ai_update_type = all	
+	prerequisites = { "tech_ship_armor_5" }
+	weight = @tier4weight3
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_armor }
+	}
+	
+	modifier = {
+		shipsize_military_station_small_hull_add = 100
+		shipclass_starbase_hull_mult = 0.10
+	}
+		
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Crystal-Reinforced Armor VII
+tech_c_ship_armor_7 = {
+	area = engineering
+	cost = @tier5cost1
+	tier = 5
+	category = { materials }
+	ai_update_type = all	
+	prerequisites = { "tech_c_ship_armor_6" }
+	weight = @tier5weight1
+	
+	modifier = {
+		shipsize_military_station_small_hull_add = 100
+		shipclass_starbase_hull_mult = 0.10
+	}
+		
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Crystal-Reinforced Armor VIII
+tech_c_ship_armor_8 = {
+	area = engineering
+	cost = @tier5cost2
+	tier = 5
+	category = { materials }
+	ai_update_type = all	
+	prerequisites = { "tech_c_ship_armor_7" }
+	weight = @tier5weight2
+	
+	modifier = {
+		shipsize_military_station_small_hull_add = 100
+		shipclass_starbase_hull_mult = 0.10
+	}
+		
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Crystal-Reinforced Armor IX
+tech_c_ship_armor_9 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	category = { materials }
+	ai_update_type = all	
+	prerequisites = { "tech_c_ship_armor_8" }
+	weight = @tier5weight3
+
+	modifier = {
+		shipsize_military_station_small_hull_add = 100
+		shipclass_starbase_hull_mult = 0.10
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Crystal-Reinforced Armor X
+tech_c_ship_armor_10 = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { materials }
+	ai_update_type = all	
+	prerequisites = { "tech_c_ship_armor_9" }
+	weight = @tier5weight3
+	
+	modifier = {
+		shipsize_military_station_small_hull_add = 100
+		shipclass_starbase_hull_mult = 0.10
+	}
+	
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			AND = {
+				host_has_dlc = "Utopia"
+				NOT = {
+					OR = {
+						has_megastructure = think_tank_3
+						has_megastructure = think_tank_4
+						has_megastructure = think_tank_restored
+					}	
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}

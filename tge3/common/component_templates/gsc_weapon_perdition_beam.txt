@@ -1,0 +1,222 @@
+###################
+# COST
+###################
+@cost2 = 750
+@cost3 = 1000
+
+###################
+# POWER
+###################
+@power2 = -750
+@power3 = -1000
+
+# ####################
+#  Perdition beam TITAN
+# ####################
+
+weapon_component_template = {
+	key = "GSC_PERDITION_BEAM_2_TITAN"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+		
+	icon = "GFX_gsc_ship_part_perdition_beam_2"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 7500 max = 15000 }
+	windup = { min = 30 max = 45 }
+	total_fire_time = 180
+	range = 250.0
+	accuracy = 0.85
+	hull_damage = 1.25
+	shield_damage = 0.75
+	armor_damage = 1.50
+	power = @power2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			rare_crystals = @titanic_t7_rare
+		}		
+		upkeep = {
+			energy = @titanic_t7_upkeep_energy
+			alloys = @titanic_t7_upkeep_alloys
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	prerequisites = { "tech_gsc_perdition_beam_02" }
+	component_set = "GSC_PERDITION_BEAM_2"
+	projectile_gfx = "gsc_perdition_beam_2"
+	size_restriction = { titan }
+	upgrades_to = "GSC_PERDITION_BEAM_3_TITAN"
+}
+
+weapon_component_template = {
+	key = "GSC_PERDITION_BEAM_3_TITAN"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+		
+	icon = "GFX_gsc_ship_part_perdition_beam_3"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 10000 max = 20000 }
+	windup = { min = 30 max = 45 }
+	total_fire_time = 180
+	range = 250.0
+	accuracy = 0.85
+	hull_damage = 1.25
+	shield_damage = 0.75
+	armor_damage = 1.50
+	power = @power3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t8_cost
+			rare_crystals = @titanic_t8_rare
+		}		
+		upkeep = {
+			energy = @titanic_t8_upkeep_energy
+			alloys = @titanic_t8_upkeep_alloys
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	prerequisites = { "tech_gsc_perdition_beam_03" }
+	component_set = "GSC_PERDITION_BEAM_3"
+	projectile_gfx = "gsc_perdition_beam_3"
+	size_restriction = { titan }
+}
+
+
+# ####################
+#  Perdition beam ION
+# ####################
+
+weapon_component_template = {
+	key = "GSC_PERDITION_BEAM_2_ION"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+		
+	icon = "GFX_gsc_ship_part_perdition_beam_2"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 7500 max = 15000 }
+	windup = { min = 30 max = 45 }
+	total_fire_time = 180
+	range = 250.0
+	accuracy = 0.85
+	hull_damage = 1.25
+	shield_damage = 0.75
+	armor_damage = 1.50
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t7_cost
+			rare_crystals = @titanic_t7_rare
+		}		
+		upkeep = {
+			energy = @titanic_t7_upkeep_energy
+			alloys = @titanic_t7_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	prerequisites = { "tech_gsc_perdition_beam_02" }
+	component_set = "GSC_PERDITION_BEAM_2"
+	projectile_gfx = "gsc_perdition_beam_2"
+	size_restriction = { ion_cannon }
+	upgrades_to = "GSC_PERDITION_BEAM_3_ION"
+}
+
+weapon_component_template = {
+	key = "GSC_PERDITION_BEAM_3_ION"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+		
+	icon = "GFX_gsc_ship_part_perdition_beam_3"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 10000 max = 20000 }
+	windup = { min = 30 max = 45 }
+	total_fire_time = 180
+	range = 250.0
+	accuracy = 0.85
+	hull_damage = 1.25
+	shield_damage = 0.75
+	armor_damage = 1.50
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t8_cost
+			rare_crystals = @titanic_t8_rare
+		}		
+		upkeep = {
+			energy = @titanic_t8_upkeep_energy
+			alloys = @titanic_t8_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	prerequisites = { "tech_gsc_perdition_beam_03" }
+	component_set = "GSC_PERDITION_BEAM_3"
+	projectile_gfx = "gsc_perdition_beam_3"
+	size_restriction = { ion_cannon }
+}

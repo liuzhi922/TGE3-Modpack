@@ -1,0 +1,562 @@
+namespace = environmentalism
+
+# Authoritarian Environmentalism
+planet_event = {
+	id = environmentalism.100
+	title = environmentalism.100.name
+	desc = environmentalism.100.desc
+	picture = GFX_evt_eco_conference
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.100.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_authoritarian_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.100.no
+	}
+}
+
+# Egalistarian Environmentalism
+planet_event = {
+	id = environmentalism.110
+	title = environmentalism.110.name
+	desc = environmentalism.110.desc
+	picture = GFX_evt_eco_conference
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.110.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_egalitarian_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.100.no
+	}
+}
+
+# Xenophobic Environmentalism
+planet_event = {
+	id = environmentalism.120
+	title = environmentalism.120.name
+	desc = environmentalism.120.desc
+	picture = GFX_evt_eco_conference
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.120.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_xenophobe_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.100.no
+	}
+}
+
+# Xenophilia Environmentalism
+planet_event = {
+	id = environmentalism.130
+	title = environmentalism.130.name
+	desc = environmentalism.130.desc
+	picture = GFX_evt_eco_conference
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.130.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_xenophile_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.100.no
+	}
+}
+
+# Militarist Environmentalism
+planet_event = {
+	id = environmentalism.140
+	title = environmentalism.140.name
+	desc = environmentalism.140.desc
+	picture = GFX_evt_eco_conference
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.140.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_militant_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.100.no
+	}
+}
+
+# Pacifist Environmentalism
+planet_event = {
+	id = environmentalism.150
+	title = environmentalism.150.name
+	desc = environmentalism.150.desc
+	picture = GFX_evt_eco_conference
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.150.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_pacifist_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.100.no
+	}
+}
+
+# Materialist Environmentalism
+planet_event = {
+	id = environmentalism.160
+	title = environmentalism.160.name
+	desc = environmentalism.160.desc
+	picture = GFX_evt_eco_conference
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.160.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_materialist_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.100.no
+	}
+}
+
+# Spiritualist Environmentalism
+planet_event = {
+	id = environmentalism.170
+	title = environmentalism.170.name
+	desc = environmentalism.170.desc
+	picture = GFX_evt_eco_conference
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.170.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_spiritual_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.100.no
+	}
+}
+
+# Corporate Environmentalism
+planet_event = {
+	id = environmentalism.180
+	title = environmentalism.180.name
+	desc = environmentalism.180.desc
+	picture = GFX_evt_board_meeting
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+			has_authority = auth_corporate
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.180.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_corporate_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.100.no
+	}
+}
+
+# Hive Environmentalism
+planet_event = {
+	id = environmentalism.190
+	title = environmentalism.190.name
+	desc = environmentalism.190.desc
+	picture = GFX_evt_hive_mind
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = { has_country_flag = eco_environmentalism_event } }
+			is_hive_empire = yes
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.190.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_hive_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+}
+
+# Machine Environmentalism
+planet_event = {
+	id = environmentalism.200
+	title = environmentalism.200.name
+	desc = environmentalism.200.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_conversation
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { owner = {has_country_flag = eco_environmentalism_event } }
+
+			is_machine_empire = yes
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = environmentalism.200.a
+		owner = { set_country_flag = eco_environmentalism_event }
+		owner = { set_country_flag = eco_machine_ethic_event }
+		enable_special_project = {
+			name = "ECO_ENVIRONMENTAL_ETHIC"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = environmentalism.200.b
+		owner = { set_country_flag = eco_environmentalism_event }
+	}
+}
+
+# Environment Ethic Completion
+country_event = {
+	id = environmentalism.210
+	title = environmentalism.210.name
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_authoritarian_ethic_event } }
+		text = environmentalism.210.auth
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_egalitarian_ethic_event } }
+		text = environmentalism.210.egal
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_xenophobe_ethic_event } }
+		text = environmentalism.210.phobe
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_xenophile_ethic_event } }
+		text = environmentalism.210.phile
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_materialist_ethic_event } }
+		text = environmentalism.210.mil
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_pacifist_ethic_event } }
+		text = environmentalism.210.pac
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_materialist_ethic_event } }
+		text = environmentalism.210.mat
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_spiritual_ethic_event } }
+		text = environmentalism.210.spir
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_corporate_ethic_event } }
+		text = environmentalism.210.corp
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_hive_ethic_event } }
+		text = environmentalism.210.hive
+	}
+	
+	desc = {
+		trigger = { owner = { has_country_flag = eco_machine_ethic_event } }
+		text = environmentalism.210.mach
+	}
+	
+	picture = GFX_evt_eco_environmentalism
+	show_sound = event_celebration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_authoritarian_ethic_event } }
+		add_modifier = { modifier = eco_authoritarian_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_egalitarian_ethic_event } }
+		add_modifier = { modifier = eco_egalitarian_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_xenophobe_ethic_event } }
+		add_modifier = { modifier = eco_xenophobe_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_xenophile_ethic_event } }
+		add_modifier = { modifier = eco_xenophile_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_militant_ethic_event } }
+		add_modifier = { modifier = eco_militarist_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_pacifist_ethic_event } }
+		add_modifier = { modifier = eco_pacifist_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_materialist_ethic_event } }
+		add_modifier = { modifier = eco_materialist_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_spiritual_ethic_event } }
+		add_modifier = { modifier = eco_spiritualist_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_corporate_ethic_event } }
+		add_modifier = { modifier = eco_corporate_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_hive_ethic_event } }
+		add_modifier = { modifier = eco_hive_environmentalism }
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = { owner = { has_country_flag = eco_machine_ethic_event } }
+		add_modifier = { modifier = eco_machine_environmentalism }
+	}
+}

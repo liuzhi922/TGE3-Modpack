@@ -1,0 +1,424 @@
+namespace = depletion
+
+# Power Depletion
+planet_event = {
+	id = depletion.100
+	title = depletion.100.name
+	desc = depletion.100.desc
+	picture = GFX_evt_drilling_for_gas
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_ascension_perk = eco_ap_land_ethic }
+			NOT = { has_ascension_perk = eco_ap_land_ethic_gestalt }
+		}
+		years_passed > 99
+	}
+	
+	immediate = { 
+		if = {
+			limit = { num_districts = { type = district_generator value = 1 } }
+			set_variable = { which = fixyourgame value = 1 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 2 } }
+			set_variable = { which = fixyourgame value = 2 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 3 } }
+			set_variable = { which = fixyourgame value = 3 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 4 } }
+			set_variable = { which = fixyourgame value = 4 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 5 } }
+			set_variable = { which = fixyourgame value = 5 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 6 } }
+			set_variable = { which = fixyourgame value = 6 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 7 } }
+			set_variable = { which = fixyourgame value = 7 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 8 } }
+			set_variable = { which = fixyourgame value = 8 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 9 } }
+			set_variable = { which = fixyourgame value = 9 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 10 } }
+			set_variable = { which = fixyourgame value = 10 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 11 } }
+			set_variable = { which = fixyourgame value = 11 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 12 } }
+			set_variable = { which = fixyourgame value = 12 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 13 } }
+			set_variable = { which = fixyourgame value = 13 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 14 } }
+			set_variable = { which = fixyourgame value = 14 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 15 } }
+			set_variable = { which = fixyourgame value = 15 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 16 } }
+			set_variable = { which = fixyourgame value = 16 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 17 } }
+			set_variable = { which = fixyourgame value = 17 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 18 } }
+			set_variable = { which = fixyourgame value = 18 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 19 } }
+			set_variable = { which = fixyourgame value = 19 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 20 } }
+			set_variable = { which = fixyourgame value = 20 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 21 } }
+			set_variable = { which = fixyourgame value = 21 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 22 } }
+			set_variable = { which = fixyourgame value = 22 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 23 } }
+			set_variable = { which = fixyourgame value = 23 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 24 } }
+			set_variable = { which = fixyourgame value = 24 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 25 } }
+			set_variable = { which = fixyourgame value = 25 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 26 } }
+			set_variable = { which = fixyourgame value = 26 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 27 } }
+			set_variable = { which = fixyourgame value = 27 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 28 } }
+			set_variable = { which = fixyourgame value = 28 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 29 } }
+			set_variable = { which = fixyourgame value = 29 }
+		} else_if = {
+			limit = { num_districts = { type = district_generator value = 30 } }
+			set_variable = { which = fixyourgame value = 30 }
+		}
+		if = { 
+			limit = { num_free_districts  = { type = district_generator value = 0 } }
+			change_variable = { which = fixyourgame value = -1 }
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		add_deposit = d_eco_overgenerating
+		
+		hidden_effect = {
+			if = {
+				limit = { num_free_districts  = { type = district_generator value < 0 } }
+				remove_district = district_generator
+			}
+			if = { 
+				limit = { num_districts = { type = district_generator value = 0 } }
+				while = { 
+					limit = { check_variable = { which = fixyourgame value > 0 } }
+					add_district = district_generator
+					change_variable = { which = fixyourgame value = -1 }
+				}
+			}
+		}
+	}
+}
+
+# Mineral Depletion
+planet_event = {
+	id = depletion.110
+	title = depletion.110.name
+	desc = depletion.110.desc
+	picture = GFX_evt_mining_operations
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_ascension_perk = eco_ap_land_ethic }
+			NOT = { has_ascension_perk = eco_ap_land_ethic_gestalt }
+		}
+		years_passed > 99
+	}
+	
+	immediate = { 
+		if = {
+			limit = { num_districts = { type = district_mining value = 1 } }
+			set_variable = { which = fixyourgame value = 1 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 2 } }
+			set_variable = { which = fixyourgame value = 2 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 3 } }
+			set_variable = { which = fixyourgame value = 3 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 4 } }
+			set_variable = { which = fixyourgame value = 4 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 5 } }
+			set_variable = { which = fixyourgame value = 5 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 6 } }
+			set_variable = { which = fixyourgame value = 6 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 7 } }
+			set_variable = { which = fixyourgame value = 7 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 8 } }
+			set_variable = { which = fixyourgame value = 8 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 9 } }
+			set_variable = { which = fixyourgame value = 9 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 10 } }
+			set_variable = { which = fixyourgame value = 10 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 11 } }
+			set_variable = { which = fixyourgame value = 11 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 12 } }
+			set_variable = { which = fixyourgame value = 12 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 13 } }
+			set_variable = { which = fixyourgame value = 13 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 14 } }
+			set_variable = { which = fixyourgame value = 14 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 15 } }
+			set_variable = { which = fixyourgame value = 15 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 16 } }
+			set_variable = { which = fixyourgame value = 16 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 17 } }
+			set_variable = { which = fixyourgame value = 17 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 18 } }
+			set_variable = { which = fixyourgame value = 18 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 19 } }
+			set_variable = { which = fixyourgame value = 19 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 20 } }
+			set_variable = { which = fixyourgame value = 20 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 21 } }
+			set_variable = { which = fixyourgame value = 21 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 22 } }
+			set_variable = { which = fixyourgame value = 22 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 23 } }
+			set_variable = { which = fixyourgame value = 23 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 24 } }
+			set_variable = { which = fixyourgame value = 24 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 25 } }
+			set_variable = { which = fixyourgame value = 25 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 26 } }
+			set_variable = { which = fixyourgame value = 26 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 27 } }
+			set_variable = { which = fixyourgame value = 27 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 28 } }
+			set_variable = { which = fixyourgame value = 28 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 29 } }
+			set_variable = { which = fixyourgame value = 29 }
+		} else_if = {
+			limit = { num_districts = { type = district_mining value = 30 } }
+			set_variable = { which = fixyourgame value = 30 }
+		}
+		if = { 
+			limit = { num_free_districts  = { type = district_mining value = 0 } }
+			change_variable = { which = fixyourgame value = -1 }
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		add_deposit = d_eco_overmining
+		
+		hidden_effect = {
+			if = {
+				limit = { num_free_districts  = { type = district_mining value < 0 } }
+				remove_district = district_mining
+			}
+			if = { 
+				limit = { num_districts = { type = district_mining value = 0 } }
+				while = { 
+					limit = { check_variable = { which = fixyourgame value > 0 } }
+					add_district = district_mining
+					change_variable = { which = fixyourgame value = -1 }
+				}
+			}
+		}
+	}
+}
+
+# Agricultural Depletion
+planet_event = {
+	id = depletion.120
+	title = depletion.120.name
+	desc = depletion.120.desc
+	picture = GFX_evt_alien_wildlife
+	show_sound = event_planetary_riot
+	location = from
+	
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		owner = {
+			is_ai = no
+			NOT = { has_ascension_perk = eco_ap_land_ethic }
+			NOT = { has_ascension_perk = eco_ap_land_ethic_gestalt }
+		}
+		years_passed > 99
+	}
+	
+	immediate = { 
+		if = {
+			limit = { num_districts = { type = district_farming value = 1 } }
+			set_variable = { which = fixyourgame value = 1 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 2 } }
+			set_variable = { which = fixyourgame value = 2 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 3 } }
+			set_variable = { which = fixyourgame value = 3 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 4 } }
+			set_variable = { which = fixyourgame value = 4 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 5 } }
+			set_variable = { which = fixyourgame value = 5 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 6 } }
+			set_variable = { which = fixyourgame value = 6 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 7 } }
+			set_variable = { which = fixyourgame value = 7 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 8 } }
+			set_variable = { which = fixyourgame value = 8 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 9 } }
+			set_variable = { which = fixyourgame value = 9 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 10 } }
+			set_variable = { which = fixyourgame value = 10 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 11 } }
+			set_variable = { which = fixyourgame value = 11 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 12 } }
+			set_variable = { which = fixyourgame value = 12 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 13 } }
+			set_variable = { which = fixyourgame value = 13 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 14 } }
+			set_variable = { which = fixyourgame value = 14 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 15 } }
+			set_variable = { which = fixyourgame value = 15 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 16 } }
+			set_variable = { which = fixyourgame value = 16 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 17 } }
+			set_variable = { which = fixyourgame value = 17 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 18 } }
+			set_variable = { which = fixyourgame value = 18 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 19 } }
+			set_variable = { which = fixyourgame value = 19 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 20 } }
+			set_variable = { which = fixyourgame value = 20 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 21 } }
+			set_variable = { which = fixyourgame value = 21 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 22 } }
+			set_variable = { which = fixyourgame value = 22 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 23 } }
+			set_variable = { which = fixyourgame value = 23 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 24 } }
+			set_variable = { which = fixyourgame value = 24 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 25 } }
+			set_variable = { which = fixyourgame value = 25 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 26 } }
+			set_variable = { which = fixyourgame value = 26 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 27 } }
+			set_variable = { which = fixyourgame value = 27 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 28 } }
+			set_variable = { which = fixyourgame value = 28 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 29 } }
+			set_variable = { which = fixyourgame value = 29 }
+		} else_if = {
+			limit = { num_districts = { type = district_farming value = 30 } }
+			set_variable = { which = fixyourgame value = 30 }
+		}
+		if = { 
+			limit = { num_free_districts  = { type = district_farming value = 0 } }
+			change_variable = { which = fixyourgame value = -1 }
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = WORRYING
+		add_deposit = d_eco_overfarming
+		
+		hidden_effect = {
+			if = {
+				limit = { num_free_districts  = { type = district_farming value < 0 } }
+				remove_district = district_farming
+			}
+			if = { 
+				limit = { num_districts = { type = district_farming value = 0 } }
+				while = { 
+					limit = { check_variable = { which = fixyourgame value > 0 } }
+					add_district = district_farming
+					change_variable = { which = fixyourgame value = -1 }
+				}
+			}
+		}
+	}
+}

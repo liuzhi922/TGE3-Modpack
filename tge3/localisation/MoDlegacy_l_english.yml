@@ -1,0 +1,53 @@
+﻿l_english:
+ 
+ # ###################################
+ # Decisions
+ # ###################################
+ 
+ decision_mastery_of_nature_ii:0 "Mastery of Nature"
+ decision_mastery_of_nature_ii_desc:0 "$decision_mastery_of_nature_desc$"
+ decision_low_orbit_urbanisation:0 "Low-Orbit Urbanisation"
+ decision_low_orbit_urbanisation_desc:0 "Constructing planetary low-orbit habitat-clusters requires a massive rework of a planet's low-orbit satelite networks and trafic control infrastructure, as well as high-quality low-weight alloys. Part of a planets tertiary sector can be relocated with no loss of efficiency, with commercial activities even benefiting from it, thus freeing up space for more down-to-earth activities on the planet's surface" 
+ decision_subterranean_urbanisation:0 "Subterranean Urbanisation"
+ decision_subterranean_urbanisation_desc:0 "There can't ever be enough space. Nor on the surface, nor in the air, nor in space, nor anywhere. A simple concept but a useful one. If primitives can make a pyramidal stack of stones, we sure as hell can dig a hole to live in. Sure, it'll end up being the least well-off living there, but I got my money so why would I care."
+ decision_autonomous_ptn:0 "Autonomous Planetary Transport Network"
+ decision_autonomous_ptn_desc:0 "Galaxy News Radio reports: [At any time, 67% of vehicles on urban 3DRoads have but a single occupant.][Space Monaco has more rockets than people.][Xracon says Xrance's fuel tax plans scrapped.][Think here to read more] \n There is much space to be gained, polution to be reduced, and wealth to be relocated by getting rid of such overconsumerist inefficiency. Won't be easy convincing people who own a car, a plane and a rocket, of it not being a measure of quality of life, nor convincing corporations to cease telling people why they need a new rocket every 3 years, but at the end of the day it'll all be for the best. We must be prepared to refund a few trillions of vehicles, which can be then recycled for the infrastructure adaption to be undertaken or traded to some early space age primitives. We haven't asked for anyone's opinions on this yet, but the Space Xeno's Party is already, well, partying."
+ decision_verticalised_farming:0 "Verticalised Farming"
+ decision_verticalised_farming_desc:0 "Sir, as per the latest report, the ancient caretakers reportedly have verticalised their farming. \n What, the robots, farming? Get outta' here! \n Not like that sir, caravancoinz farming I mean, the cryptocurrency. \n Well you know what son? That's a brilliant idea, lemme just find my edict generating AI. Alexa! \n I appreciate it sir, I knew you'd see the genius in it, we'd be able to waste less space on some primitive dirt and build more brain slug recreational centers, or, or... sir? \n Oh yes of course, farming, right, but yes, of course, yes that's what I was talking about."
+ 
+ # ###################################
+ # Modifiers
+ # ###################################
+ 
+ mastery_of_nature_1:0 "$decision_mastery_of_nature_ii$"
+ mastery_of_nature_1_desc:0 "$decision_mastery_of_nature_desc$"
+ mastery_of_nature_2:0 "$decision_mastery_of_nature_ii$"
+ mastery_of_nature_2_desc:0 "$decision_mastery_of_nature_desc$"
+ low_orbit_urbanisation_1:0 "$decision_low_orbit_urbanisation$"
+ low_orbit_urbanisation_1_desc:0 "$decision_low_orbit_urbanisation_desc$"
+ low_orbit_urbanisation_2:0 "$decision_low_orbit_urbanisation$"
+ low_orbit_urbanisation_2_desc:0 "$decision_low_orbit_urbanisation_desc$"
+ low_orbit_urbanisation_3:0 "$decision_low_orbit_urbanisation$"
+ low_orbit_urbanisation_3_desc:0 "$decision_low_orbit_urbanisation_desc$"
+ subterranean_urbanisation_1:0 "$decision_subterranean_urbanisation$"
+ subterranean_urbanisation_1_desc:0 "$decision_subterranean_urbanisation_desc$"
+ subterranean_urbanisation_2:0 "$decision_subterranean_urbanisation$"
+ subterranean_urbanisation_2_desc:0 "$decision_subterranean_urbanisation_desc$"
+ subterranean_urbanisation_3:0 "$decision_subterranean_urbanisation$"
+ subterranean_urbanisation_3_desc:0 "$decision_subterranean_urbanisation_desc$"
+ subterranean_urbanisation_4:0 "$decision_subterranean_urbanisation$"
+ subterranean_urbanisation_4_desc:0 "$decision_subterranean_urbanisation_desc$"
+ autonomous_ptn_1:0 "$decision_autonomous_ptn$"
+ autonomous_ptn_1_desc:0 "$decision_autonomous_ptn_desc$"
+ autonomous_ptn_2:0 "$decision_autonomous_ptn$"
+ autonomous_ptn_2_desc:0 "$decision_autonomous_ptn_desc$"
+ autonomous_ptn_tmp:0 "Controversial planetary policy"
+ #"YOU MAY TAKE OUR RIGHTS BUT YOU WON'T TAKE OUR ROCKETS"
+ autonomous_ptn_tmp_desc:0 "Not everyone is happy about having to use public space elevators, as if it was the end of the world, but they'll see the light someday."
+ vertical_fm_1:0 "$decision_verticalised_farming$"
+ vertical_fm_1_desc:0 "$decision_verticalised_farming_desc$"
+ vertical_fm_2:0 "$decision_verticalised_farming$"
+ vertical_fm_2_desc:0 "$decision_verticalised_farming_desc$"
+ vertical_fm_3:0 "$decision_verticalised_farming$"
+ vertical_fm_3_desc:0 "$decision_verticalised_farming_desc$"
+ 

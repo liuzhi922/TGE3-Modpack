@@ -1,0 +1,83 @@
+# THIS = PLANET
+kiyo_trade_add_physics_research_modifier = {
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 524288 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 524288 }
+		set_planet_flag = kiyo_trade_physics_research_524288
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 262144 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 262144 }
+		set_planet_flag = kiyo_trade_physics_research_262144
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 131072 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 131072 }
+		set_planet_flag = kiyo_trade_physics_research_131072
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 65536 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 65536 }
+		set_planet_flag = kiyo_trade_physics_research_65536
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 32768 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 32768 }
+		set_planet_flag = kiyo_trade_physics_research_32768
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 16384 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 16384 }
+		set_planet_flag = kiyo_trade_physics_research_16384
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 8192 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 8192 }
+		set_planet_flag = kiyo_trade_physics_research_8192
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 4096 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 4096 }
+		set_planet_flag = kiyo_trade_physics_research_4096
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 2048 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 2048 }
+		set_planet_flag = kiyo_trade_physics_research_2048
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 1024 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 1024 }
+		set_planet_flag = kiyo_trade_physics_research_1024
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 512 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 512 }
+		set_planet_flag = kiyo_trade_physics_research_512
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 256 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 256 }
+		set_planet_flag = kiyo_trade_physics_research_256
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 128 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 128 }
+		set_planet_flag = kiyo_trade_physics_research_128
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 64 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 64 }
+		set_planet_flag = kiyo_trade_physics_research_64
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 32 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 32 }
+		set_planet_flag = kiyo_trade_physics_research_32
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 16 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 16 }
+		set_planet_flag = kiyo_trade_physics_research_16
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 8 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 8 }
+		set_planet_flag = kiyo_trade_physics_research_8
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 4 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 4 }
+		set_planet_flag = kiyo_trade_physics_research_4
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 2 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 2 }
+		set_planet_flag = kiyo_trade_physics_research_2
+	}
+	if = { limit = { check_variable = { which = kiyo_trade_physics_research value >= 1 } }
+		subtract_variable = { which = kiyo_trade_physics_research value = 1 }
+		set_planet_flag = kiyo_trade_physics_research_1
+	}
+}

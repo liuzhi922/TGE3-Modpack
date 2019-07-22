@@ -1,0 +1,108 @@
+# Icons set here are the ones shown in component editor list.
+
+component_set = {
+	key = "REACTOR_BOOSTER_1"
+	
+	icon = "GFX_ship_part_reactor_booster_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "REACTOR_BOOSTER_2"
+	
+	icon = "GFX_ship_part_reactor_booster_2"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "REACTOR_BOOSTER_3"
+	
+	icon = "GFX_ship_part_reactor_booster_3"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "FIRE_CONTROL_1"
+	
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1	
+}
+component_set = {
+	key = "C_TARGETTING_COMPUTER_1"
+	
+	icon = "GFX_C_ship_part_targeting_computer_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_TARGETTING_COMPUTER_2"
+	
+	icon = "GFX_C_ship_part_targeting_computer_2"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_TARGETTING_COMPUTER_3"
+	
+	icon = "GFX_C_ship_part_targeting_computer_3"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_TARGETTING_COMPUTER_4"
+	
+	icon = "GFX_C_ship_part_targeting_computer_4"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_TARGETTING_COMPUTER_5"
+	
+	icon = "GFX_C_ship_part_targeting_computer_5"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "ENIGMATIC_DECODER"
+	
+	icon = "GFX_ship_part_enigmatic_decoder"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "ENIGMATIC_ENCODER"
+	
+	icon = "GFX_ship_part_enigmatic_encoder"
+	icon_frame = 1
+}
+# hangars
+component_set = {
+	key = "C_HANGAR_1"
+	icon = "GFX_C_ship_part_hangar_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_HANGAR_2"
+	icon = "GFX_C_ship_part_hangar_2"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_HANGAR_3"
+	icon = "GFX_C_ship_part_hangar_3"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_HANGAR_4"
+	icon = "GFX_C_ship_part_hangar_4"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_HANGAR_5"
+	icon = "GFX_C_ship_part_hangar_5"
+	icon_frame = 1	
+}

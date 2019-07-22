@@ -1,0 +1,526 @@
+guiTypes = {
+	containerWindowType = {
+		name = "topbar_leaders_view"
+		size = { width = 1532 height = 940 }
+		show_position = { x = 35 y = 40 }
+		hide_position = { x = -1532 y = 40 }
+		if_resolution = {
+			min_height = 1200
+			size = { width = 1532 height = 1060 }
+		}
+		if_resolution = {
+			min_height = 1440
+			size = { width = 1532 height = 1300 }
+		}
+		if_resolution = {
+			min_width = 2560
+			show_position = { x = 55 y = 40 }
+		}
+		animation_time = 200
+		animation_type = decelerated
+
+		containerWindowType = {
+			name = "leaders_view_background_box"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+
+			background = {
+				name = "leaders_view_background"
+				spriteType = "GFX_tile_large_bg"
+			}
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 30 y = -12 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "leaders_header_line"
+			quadTextureSprite = "GFX_line"
+			position = { x = 5 y = 21 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "leaders_header"
+			font = "malgun_goth_24"
+			text = "topbar_button_leaders_name"
+			position = { x = 65 y = 5 }
+			maxWidth = 300
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -41 y = 13 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+
+		@role_icon_y = 50
+		@role_label_y = 55
+		@recruit_button_y = 45
+		@lists_y = 88
+
+		buttonType = {
+			name = "governor_icon"
+			quadTextureSprite = "GFX_leader_icons"
+			frame = 4
+			position = { x = 25 y = @role_icon_y }
+			orientation = "UPPER_LEFT"
+			#alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "governor_title_lable"
+			font = "malgun_goth_24"
+			text = "GOVERNORS"
+			position = { x = 62 y = @role_label_y }
+			maxWidth = 130
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+			fixedSize = yes
+		}
+
+		buttonType = {
+			name = "hire_new_governor"
+			quadTextureSprite = "GFX_button_95_24"
+			position = { x = 238 y = @recruit_button_y }
+			buttonFont = "cg_16b"
+			buttonText = "RECRUIT"
+			oversound = mouse_over
+			clicksound = confirm_click
+		}
+
+		buttonType = {
+			name = "scientist_icon"
+			quadTextureSprite = "GFX_leader_icons"
+			frame = 3
+			position = { x = 405 y = @role_icon_y }
+			orientation = "UPPER_LEFT"
+			#alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "scientits_title_lable"
+			font = "malgun_goth_24"
+			text = "SCIENTIST"
+			position = { x = 442 y = @role_label_y }
+			maxWidth = 120
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		buttonType = {
+			name = "hire_new_scientist"
+			quadTextureSprite = "GFX_button_95_24"
+			position = { x = 619 y = @recruit_button_y }
+			buttonFont = "cg_16b"
+			buttonText = "RECRUIT"
+			oversound = mouse_over
+			clicksound = confirm_click
+		}
+
+		buttonType = {
+			name = "admiral_icon"
+			quadTextureSprite = "GFX_leader_icons"
+			frame = 1
+			position = { x = 787 y = @role_icon_y }
+			orientation = "UPPER_LEFT"
+			#alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "admirals_title_lable"
+			font = "malgun_goth_24"
+			text = "ADMIRALS"
+			position = { x = 824 y = @role_label_y }
+			maxWidth = 120
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		buttonType = {
+			name = "hire_new_admiral"
+			quadTextureSprite = "GFX_button_95_24"
+			position = { x = 1000 y = @recruit_button_y }
+			buttonFont = "cg_16b"
+			buttonText = "RECRUIT"
+			oversound = mouse_over
+			clicksound = confirm_click
+		}
+
+		buttonType = {
+			name = "general_icon"
+			quadTextureSprite = "GFX_leader_icons"
+			frame = 2
+			position = { x = 1170 y = @role_icon_y }
+			orientation = "UPPER_LEFT"
+			#alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "generals_title_lable"
+			font = "malgun_goth_24"
+			text = "GENERALS"
+			position = { x = 1207 y = @role_label_y }
+			maxWidth = 120
+			maxHeight = 20
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		buttonType = {
+			name = "hire_new_general"
+			quadTextureSprite = "GFX_button_95_24"
+			position = { x = 1383 y = @recruit_button_y }
+			buttonFont = "cg_16b"
+			buttonText = "RECRUIT"
+			oversound = mouse_over
+			clicksound = confirm_click
+		}
+
+		instantTextBoxType = {
+			name = "leader_instructions"
+			font = "cg_16b"
+			text = "SELECT_LEADER_FOR"
+			position = { x = 20 y = 38 }
+			maxWidth = 500
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		@lists_height = 841
+		@lists_height_800 = 961
+		@lists_height_1440 = 1201	
+		@lists_width = 358
+		@frame_width = 363
+		
+
+		containerWindowType = {
+			name = "leader_frame_area_1"
+			position = { x = 16 y = @lists_y }
+			size = { width = @frame_width height = @lists_height }
+			if_resolution = {
+				min_height = 1200
+				size = { width = @frame_width height = @lists_height_800 }
+			}
+			if_resolution = {
+				min_height = 1440
+				size = { width = @frame_width height = @lists_height_1440 }
+			}
+
+			background = {
+				name = "leader_frame2"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "leader_frame_area_2"
+			position = { x = 397 y = @lists_y }
+			size = { width = @frame_width height = @lists_height }
+			if_resolution = {
+				min_height = 1200
+				size = { width = @frame_width height = @lists_height_800 }
+			}
+			if_resolution = {
+				min_height = 1440
+				size = { width = @frame_width height = @lists_height_1440 }
+			}
+
+			background = {
+				name = "leader_frame2"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "leader_frame_area_3"
+			position = { x = 778 y = @lists_y }
+			size = { width = @frame_width height = @lists_height }
+			if_resolution = {
+				min_height = 1200
+				size = { width = @frame_width height = @lists_height_800 }
+			}
+			if_resolution = {
+				min_height = 1440
+				size = { width = @frame_width height = @lists_height_1440 }
+			}
+
+			background = {
+				name = "leader_frame2"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "leader_frame_area_4"
+			position = { x = 1159 y = @lists_y }
+			size = { width = @frame_width height = @lists_height }
+			if_resolution = {
+				min_height = 1200
+				size = { width = @frame_width height = @lists_height_800 }
+			}
+			if_resolution = {
+				min_height = 1440
+				size = { width = @frame_width height = @lists_height_1440 }
+			}
+
+			background = {
+				name = "leader_frame2"
+				spriteType = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+
+		# Governors list
+		smoothListboxType = {
+			name = "governors_list"
+			position = { x = 17 y = @lists_y }
+			size = { x = @lists_width y = @lists_height }
+			if_resolution = {
+				min_height = 1200
+				size = { x = @lists_width y = @lists_height_800 }
+			}
+			if_resolution = {
+				min_height = 1440
+				size = { x = @lists_width y = @lists_height_1440 }
+			}
+			scrollbartype = "standardlistbox_slider_thick"
+			offset = { x = -13 y = 0 }
+			spacing = -7
+			autohide_scrollbar = no
+		}
+
+		# Scientists list
+		smoothListboxType = {
+			name = "scientists_list"
+			position = { x = 398 y = @lists_y }
+			size = { x = @lists_width y = @lists_height }
+			if_resolution = {
+				min_height = 1200
+				size = { x = @lists_width y = @lists_height_800 }
+			}
+			if_resolution = {
+				min_height = 1440
+				size = { x = @lists_width y = @lists_height_1440 }
+			}
+			scrollbartype = "standardlistbox_slider_thick"
+			offset = { x = -13 y = 0 }
+			spacing = -7
+			autohide_scrollbar = no
+		}
+
+		# Admirals list
+		smoothListboxType = {
+			name = "admirals_list"
+			position = { x = 779 y = @lists_y }
+			size = { x = @lists_width y = @lists_height }
+			if_resolution = {
+				min_height = 1200
+				size = { x = @lists_width y = @lists_height_800 }
+			}
+			if_resolution = {
+				min_height = 1440
+				size = { x = @lists_width y = @lists_height_1440 }
+			}
+			scrollbartype = "standardlistbox_slider_thick"
+			offset = { x = -13 y = 0 }
+			spacing = -7
+			autohide_scrollbar = no
+		}
+
+		# Generals list
+		smoothListboxType = {
+			name = "generals_list"
+			position = { x = 1160 y = @lists_y }
+			size = { x = @lists_width y = @lists_height }
+			if_resolution = {
+				min_height = 1200
+				size = { x = @lists_width y = @lists_height_800 }
+			}
+			if_resolution = {
+				min_height = 1440
+				size = { x = @lists_width y = @lists_height_1440 }
+			}
+			scrollbartype = "standardlistbox_slider_thick"
+			offset = { x = -13 y = 0 }
+			spacing = -7
+			autohide_scrollbar = no
+		}
+	}
+
+	# Leader entry
+	containerWindowType = {
+		name = "planet_list_leaders_entry"
+		size = { width = 348 height = 100 }
+		orientation = upper_left
+
+		background = {
+			name = "planet_list_leaders_entry_background"
+			quadTextureSprite = "GFX_tiles_frame_light"
+			clicksound = assign_leader_click
+			position = { x = 0 y = 0 }
+		}
+
+		containerWindowType = {
+			name = "selected"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100% }
+
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange"
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "leader_type_bg"
+			quadTextureSprite = "GFX_leader_bg_admiral"
+			position = { x = 8 y = 12 }
+			scale = 0.20
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 8 y = 12 }
+			size = { width = 64 height = 76 }
+			clipping = yes
+
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_character"
+				frame = 1
+				scale = 0.26
+				alwaysTransparent = yes
+				position = { x = -45 y = -12 }
+			}
+		}
+
+		containerWindowType = {
+			name = "leader_frame_box"
+			size = { width = 74 height = 86 }
+			position = { x = 3 y = 7 }
+
+			background = {
+				name = "leader_frame"
+				spriteType = "GFX_clean_frame_area"
+				alwaysTransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "leader_title"
+			font = "cg_16b"
+			text = "LEADER_TITLE"
+			position = { x = 78 y = 10 }
+			maxWidth = 120
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "rename_button"
+			quadTextureSprite = "gfx_transparency_button"
+			position = { x = 78 y = 30 }
+			size = { x = 278 y = 18 }
+			oversound = no_sound
+		}
+
+		instantTextBoxType = {
+			name = "leader_name"
+			font = "cg_16b"
+			text = "LEADER_NAME"
+			position = { x = 78 y = 26 }
+			maxWidth = 232
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+			text_color_code = "E"
+		}
+
+		instantTextBoxType = {
+			name = "char_age_label"
+			font = "cg_16b"
+			text = "AGE"
+			position = { x = -98 y = 10 }
+			maxWidth = 60
+			maxHeight = 20
+			orientation = "UPPER_RIGHT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "leader_age"
+			font = "cg_16b"
+			text = "?"
+			position = { x = -88 y = 10 }
+			maxWidth = 50
+			maxHeight = 20
+			fixedSize = yes
+			format = right
+			orientation = "UPPER_RIGHT"
+			text_color_code = "H"
+		}
+
+		iconType = {
+			name = "leader_skill"
+			spriteType = "GFX_leader_skill"
+			position = { x = 222 y = 41 }
+		}
+
+		iconType = {
+			name = "experience"
+			spriteType = "GFX_governor_progressbar"
+			position = { x = 79 y = 47 }
+		}
+
+		OverlappingElementsBoxType = {
+			name = "traits"
+			position = { x = 241 y = 63 }
+			size = { x = 100 y = 16 }
+			format = right
+		}
+
+		instantTextBoxType = {
+			name = "leader_status"
+			font = "cg_16b"
+			text = "STATUS"
+			position = { x = 78 y = 60 }
+			maxWidth = 160
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+		}
+
+		buttonType = {
+			name = "dismiss"
+			quadTextureSprite = "GFX_close_button_planet"
+			position = { x = -34 y = 6 }
+			scale = 0.75
+			orientation = "UPPER_RIGHT"
+		}
+	}
+}

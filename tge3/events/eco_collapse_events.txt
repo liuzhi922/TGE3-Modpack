@@ -1,0 +1,189 @@
+namespace = collapse
+
+# Environmental Collapsing
+planet_event = {
+	id = collapse.100	
+	title = collapse.100.name
+	desc = collapse.100.desc
+	picture = GFX_evt_alien_wildlife
+	show_sound = event_air_raid_siren
+	location = ROOT
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = collapse.100.a
+		custom_tooltip = collapse.100.a.tooltip
+		enable_special_project = {
+			name = "ECO_COLLAPSE_MINIMIZE_PROJECT"
+			location = this
+			owner = root
+		}
+		set_planet_flag = ecology_max_event
+	}
+	
+	option = {
+		name = collapse.100.b
+		custom_tooltip = collapse.100.b.tooltip
+		enable_special_project = {
+			name = "ECO_COLLAPSE_PREVENT_PROJECT"
+			location = this
+			owner = root
+		}
+		set_planet_flag = ecology_max_event
+	}
+	
+	option = {
+		name = collapse.100.c
+		custom_tooltip = collapse.100.c.tooltip
+		planet_event = { id = collapse.105 days = 360}
+		set_planet_flag = ecology_max_event
+	}
+}
+
+# Collapse Minimize
+planet_event = {
+	id = collapse.101
+	title = collapse.101.name
+	desc = collapse.101.desc
+	picture = GFX_evt_alien_wildlife
+	show_sound = event_air_raid_siren
+	location = ROOT
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_planet_flag = ecology_max_event
+	}
+	
+	option = {
+		name = WORRYING
+		random_list = {
+				70 = { }
+				30 = { planet_event = { id = climate.104 } }
+		}
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_graveyard
+		add_planet_devastation = 20
+	}
+}
+
+# Collapse Prevented
+planet_event = {
+	id = collapse.102	
+	title = collapse.102.name
+	desc = collapse.102.desc
+	picture = GFX_evt_alien_wildlife
+	show_sound = event_air_raid_siren
+	location = ROOT
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		remove_planet_flag = ecology_max_event
+	}
+}
+
+# Collapse Continues
+planet_event = {
+	id = collapse.103	
+	title = collapse.103.name
+	desc = collapse.103.desc
+	picture = GFX_evt_alien_wildlife
+	show_sound = event_air_raid_siren
+	location = ROOT
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_planet_flag = ecology_max_event
+	}
+	
+	option = {
+		name = collapse.103.a
+		add_deposit = d_eco_graveyard
+		add_planet_devastation = 20
+		add_modifier = { modifier = eco_climate_change days = 360}
+		custom_tooltip = collapse.100.a.tooltip
+		enable_special_project = {
+			name = "ECO_COLLAPSE_MINIMIZE_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = collapse.103.b
+		custom_tooltip = collapse.100.b.tooltip
+		add_deposit = d_eco_graveyard
+		add_planet_devastation = 20
+		add_modifier = { modifier = eco_climate_change days = 360}
+		enable_special_project = {
+			name = "ECO_COLLAPSE_PREVENT_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		name = collapse.103.c
+		add_deposit = d_eco_graveyard
+		add_planet_devastation = 20
+		custom_tooltip = collapse.100.c.tooltip
+		planet_event = { id = collapse.105 days = 360}
+	}
+}
+
+# Total Collapse
+planet_event = {
+	id = collapse.104
+	title = collapse.104.name
+	desc = collapse.104.desc
+	picture = GFX_evt_tomb_world
+	show_sound = event_air_raid_siren
+	location = ROOT
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_modifier = "eco_collapse"
+	}
+	
+	option = {
+		name = GODDAMNIT
+		change_pc = "pc_nuked"
+		remove_planet_flag = ecology_max_event
+		remove_planet_flag = ecology_collapse_event
+	}
+}
+
+# Cataclysm
+planet_event = {
+	id = collapse.105
+	title = collapse.105.name
+	desc = collapse.105.desc
+	picture = GFX_evt_warm_barren_planet
+	show_sound = event_air_raid_siren
+	location = ROOT
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_modifier = "eco_collapse"
+	}
+	
+	option = {
+		name = GODDAMNIT
+		change_pc = "pc_barren"
+		add_modifier = { modifier = terraforming_candidate days = -1 }
+		remove_planet_flag = ecology_max_event
+		remove_planet_flag = ecology_collapse_event
+	}
+}

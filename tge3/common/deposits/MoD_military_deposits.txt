@@ -1,0 +1,126 @@
+
+d_O_LSLODI_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_LO_LSDI
+
+	planet_modifier = {
+		planet_housing_add = 6
+		planet_orbital_bombardment_damage = 0.05
+	}
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		#exists = planet
+	#		planet = { 
+	#			OR = {
+	#				is_planet_class = pc_habitat
+	#				is_planet_class = pc_ringworld_habitable 
+	#			}
+	#		}
+	#	}
+	#	modifier = {
+	#		planet_max_districts_add = -1
+	#	}
+	#}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_spaceship_mechanic_add = 4
+			job_clerk_add = 2
+			trade_value_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_spaceship_mechanic_gestalt_add = 4
+			job_maintenance_drone_add = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_HR_LSDI_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_LO_LSDI
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+		planet_housing_add = 6
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_spaceship_mechanic_add = 4
+			job_clerk_add = 2
+			trade_value_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_spaceship_mechanic_gestalt_add = 4
+			job_maintenance_drone_add = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+d_U_DPBN_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_mod #deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	
+	icon = d_bunker_door
+
+	planet_modifier = {
+		planet_housing_add = 15
+		planet_orbital_bombardment_damage = -0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_soldier_add = 12
+			job_enforcer_add = 1
+			job_clerk_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_add = 12
+			job_patrol_drone_add = 1
+			job_maintenance_drone_add = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

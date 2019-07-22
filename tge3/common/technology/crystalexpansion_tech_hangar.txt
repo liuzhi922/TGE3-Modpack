@@ -1,0 +1,247 @@
+
+#Crystalis hangars I
+tech_c_hangar_1 = {
+	area = engineering
+	cost = @tier3cost1
+	tier = 3
+	category = { voidcraft }
+	ai_update_type = all
+	prerequisites = { "tech_strike_craft_1" }
+	weight = @tier3weight1
+	
+	potential = {
+		not = { has_global_flag = gsc_disable_hangars }
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+#Crystalis hangars 2
+tech_c_hangar_2 = {
+	area = engineering
+	cost = @tier3cost2
+	tier = 3
+	category = { voidcraft }
+	ai_update_type = all
+	prerequisites = { "tech_c_hangar_1" "tech_strike_craft_2" }
+	weight = @tier3weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+#Crystalis hangars 3
+tech_c_hangar_3 = {
+	area = engineering
+	cost = @tier3cost3
+	tier = 3
+	category = { voidcraft }
+	ai_update_type = all
+	prerequisites = { "tech_c_hangar_2" "tech_strike_craft_3" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+#Crystalis hangars 4
+tech_c_hangar_4 = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	category = { voidcraft }
+	ai_update_type = all
+	prerequisites = { "tech_c_hangar_3" "tech_starbase_4" }
+	weight = @tier4weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+#Crystalis hangars 5
+tech_c_hangar_5 = {
+	area = engineering
+	cost = @tier4cost2
+	tier = 4
+	is_rare = yes
+	category = { voidcraft }
+	ai_update_type = all
+	prerequisites = { "tech_c_hangar_4" "tech_starbase_5" }
+	weight = @tier4weight2
+	
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 3 # rush component!
+		modifier = {
+			factor = 5
+			OR = {
+				has_megastructure = think_tank_3
+				has_megastructure = think_tank_4
+				has_megastructure = think_tank_restored
+			}	
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}

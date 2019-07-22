@@ -1,0 +1,54 @@
+namespace = gml_events
+
+event = {
+    id = gml_events.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_global_flag = galactic_market_founded
+        NOT = { has_global_flag = eac_galactic_market_recorded }
+    }
+
+    immediate = {
+        random_country = {
+            limit = {
+                has_modifier = galactic_market_founder
+            }
+            random_system_within_border = {
+                limit = {
+                    any_system_ambient_object = {
+                        has_galactic_market = yes
+                    }
+                }
+               every_system_ambient_object = {
+                    limit = {
+                        has_galactic_market = yes
+                    }
+                    save_event_target_as = eac_galactic_market
+                    solar_system = {
+                        set_star_flag = eac_galactic_market_system
+                        save_global_event_target_as = eac_galactic_market_system        
+                    }
+                }
+                every_country = {
+                    limit = {
+                        is_ai = no
+                    }
+                    begin_event_chain = {
+                        event_chain = eac_market_location_chain
+                        target = this
+                    }
+                    create_point_of_interest = {
+                        id = eac_galactic_market_location
+                        name = eac_galactic_market_location_name
+                        desc = eac_galactic_market_location_desc
+                        event_chain = eac_market_location_chain
+                        location = event_target:eac_galactic_market #PREV
+                    }
+                }
+            }
+        }
+        set_global_flag = eac_galactic_market_recorded
+    }
+}

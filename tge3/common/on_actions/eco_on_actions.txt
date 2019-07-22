@@ -1,0 +1,70 @@
+# Mod Flag
+on_game_start = {
+	events = { generate.2 }
+}
+
+# Capital Modification
+empire_init_capital_planet = {
+	events = { eco_capital.1 }
+}
+
+# Ecology World Generation
+on_press_begin = {
+	events = { 
+		pollute.1
+		generate.1
+	}
+}
+
+# Overpopulation
+on_monthly_pulse = {
+	events = { pollute.3 }
+}
+
+# Pollution Calculation
+on_yearly_pulse = {
+	events = { pollute.1 }
+}
+
+# Displaced Wildlife
+on_district_complete = {
+	random_events = {
+		100 = 0
+		
+		1 = degrade.170
+	}
+	events = {
+		degrade.150
+		degrade.160
+	}
+}
+
+# Ecology Terraforming Results
+on_terraforming_complete = {
+	events = {
+		generate.3
+		ecology.100
+	}
+}
+
+# Remove Modifiers when Colony Destroyed
+on_colony_destroyed = {
+	events = {
+		generate.5
+	}
+}
+
+# Remove Decisions and Deposits on Planet Transfer
+on_planet_transfer = {
+	events = {
+		generate.4
+	}
+}
+
+# Technological Ascendency Check
+on_tech_increased = {
+	events = {
+		repeatable.100
+		repeatable.101
+	}
+}

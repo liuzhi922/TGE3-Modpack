@@ -1,0 +1,571 @@
+
+# expansion types are in expansion file
+
+############
+# H
+# HR
+# R
+
+decision_H_SBSP = {
+	owned_planets_only = yes
+	prerequisites = { "tech_MoD_O" } 
+	enactment_time = @d_O_time 
+	icon = decision_MoD_O
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				NOT = { owner = { has_ascension_perk = ap_master_builders } }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence 
+			energy = @d_O_energy 
+			alloys = @d_O_alloys 
+			exotic_gases = @d_O_strat 
+			rare_crystals = @d_O_strat 
+		}
+		cost = {
+			trigger = {
+				owner = { has_ascension_perk = ap_master_builders }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+			exotic_gases = @d_O_strat_AP 
+			rare_crystals = @d_O_strat_AP 
+		}
+		cost = {
+			trigger = { owner = { is_ai = yes } }
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+		}
+	}
+	potential = {
+		NOT = { owner = { has_country_flag = cf_hide_mod } }
+		is_planet_class = pc_habitat 
+		NOT = { has_planet_flag = pf_H_4 }
+	}
+	allow = {
+		OR = {
+			NOT = { has_planet_flag = pf_H_3 }
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+	}
+	effect = {
+		add_deposit = d_HR_SBSP_deposit 
+		if = { # +1 = 4
+			limit = { 
+				has_planet_flag = pf_H_3 
+			}
+			remove_planet_flag = pf_H_3 
+			set_planet_flag = pf_H_4
+			break = yes
+		}
+		else_if = { # +1 = 3
+			limit = { 
+				has_planet_flag = pf_H_2 
+			}
+			remove_planet_flag = pf_H_2 
+			set_planet_flag = pf_H_3
+			break = yes
+		}
+		else_if = { # +1 = 2
+			limit = { 
+				has_planet_flag = pf_H_1 
+			}
+			remove_planet_flag = pf_H_1 
+			set_planet_flag = pf_H_2
+			break = yes
+		}
+		else = { # +1 = 1
+			set_planet_flag = pf_H_1
+			#break = yes
+		}
+	}
+	ai_weight = {
+		weight = 2 # normal
+		modifier = { # GAI planet quality flag
+			weight = 2
+			gai_good_energy = yes
+		}
+		modifier = { # energy stockpile # @d_AI_S_energy @d_AI_U_energy @d_AI_O_energy 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = energy value < @d_AI_O_energy } }
+		}
+		modifier = { # alloys stockpile # @d_AI_O_alloys 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = alloys value < @d_AI_O_alloys } }
+		}
+		modifier = { # influence stockpile # @d_AI_influence 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = influence value < @d_AI_influence } }
+		}
+		modifier = { # must be at peace # this could be an AI enabling condition instead, for performance
+			factor = 0
+			from = { is_at_war = yes }
+		}
+		modifier = { # AI profit checks # has_monthly_income must be profit or it'd make no sense at all
+			weight = 3
+			from = { 
+				has_monthly_income = {
+					resource = energy
+					value < 50
+				}
+			}
+		}
+		modifier = { # AI profit checks # has_monthly_income must be profit or it'd make no sense at all
+			factor = 0
+			from = { 
+				has_monthly_income = {
+					resource = energy
+					value > 300
+				}
+			}
+		}
+	}
+}
+
+decision_H_SBF = {
+	owned_planets_only = yes
+	prerequisites = { "tech_MoD_O" "tech_hydroponics" } 
+	enactment_time = @d_O_time 
+	icon = decision_MoD_S_VFD
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				NOT = { owner = { has_ascension_perk = ap_master_builders } }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence 
+			energy = @d_O_energy 
+			alloys = @d_O_alloys 
+			exotic_gases = @d_O_strat 
+			rare_crystals = @d_O_strat 
+		}
+		cost = {
+			trigger = {
+				owner = { has_ascension_perk = ap_master_builders }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+			exotic_gases = @d_O_strat_AP 
+			rare_crystals = @d_O_strat_AP 
+		}
+		cost = {
+			trigger = { owner = { is_ai = yes } }
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+		}
+	}
+	potential = {
+		NOT = { owner = { has_country_flag = cf_hide_mod } }
+		is_planet_class = pc_habitat 
+		NOT = { has_planet_flag = pf_H_4 }
+	}
+	allow = {
+		OR = {
+			NOT = { has_planet_flag = pf_H_3 }
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+	}
+	effect = {
+		add_deposit = d_H_SBF_deposit 
+		if = { # +1 = 4
+			limit = { 
+				has_planet_flag = pf_H_3 
+			}
+			remove_planet_flag = pf_H_3 
+			set_planet_flag = pf_H_4
+			break = yes
+		}
+		else_if = { # +1 = 3
+			limit = { 
+				has_planet_flag = pf_H_2 
+			}
+			remove_planet_flag = pf_H_2 
+			set_planet_flag = pf_H_3
+			break = yes
+		}
+		else_if = { # +1 = 2
+			limit = { 
+				has_planet_flag = pf_H_1 
+			}
+			remove_planet_flag = pf_H_1 
+			set_planet_flag = pf_H_2
+			break = yes
+		}
+		else = { # +1 = 1
+			set_planet_flag = pf_H_1
+			#break = yes
+		}
+	}
+	ai_weight = {
+		weight = 1 # low
+		modifier = { # GAI planet quality flag
+			weight = 2
+			gai_good_food = yes
+		}
+		modifier = { # energy stockpile # @d_AI_S_energy @d_AI_U_energy @d_AI_O_energy 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = energy value < @d_AI_O_energy } }
+		}
+		modifier = { # alloys stockpile # @d_AI_O_alloys 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = alloys value < @d_AI_O_alloys } }
+		}
+		modifier = { # influence stockpile # @d_AI_influence 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = influence value < @d_AI_influence } }
+		}
+		modifier = { # must be at peace # this could be an AI enabling condition instead, for performance
+			factor = 0
+			from = { is_at_war = yes }
+		}
+		modifier = { # not to be wasted on undeveloped places # habitats tend to be 25-40 pops
+			factor = 0
+			num_pops < 25
+		}
+		modifier = { # AI profit checks # has_monthly_income must be profit or it'd make no sense at all
+			weight = 3
+			from = { 
+				has_monthly_income = {
+					resource = food
+					value < 50
+				}
+			}
+		}
+		modifier = { # AI profit checks # has_monthly_income must be profit or it'd make no sense at all
+			factor = 0
+			from = { 
+				has_monthly_income = {
+					resource = food
+					value > 150
+				}
+			}
+		}
+	}
+}
+
+decision_H_ACMH = {
+	owned_planets_only = yes
+	prerequisites = { "tech_MoD_O" "tech_space_mining_3" } 
+	enactment_time = @d_O_time 
+	icon = decision_MoD_O
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				NOT = { owner = { has_ascension_perk = ap_master_builders } }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence 
+			energy = @d_O_energy 
+			alloys = @d_O_alloys 
+			exotic_gases = @d_O_strat 
+			rare_crystals = @d_O_strat 
+		}
+		cost = {
+			trigger = {
+				owner = { has_ascension_perk = ap_master_builders }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+			exotic_gases = @d_O_strat_AP 
+			rare_crystals = @d_O_strat_AP 
+		}
+		cost = {
+			trigger = { owner = { is_ai = yes } }
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+		}
+	}
+	potential = {
+		NOT = { owner = { has_country_flag = cf_hide_mod } }
+		is_planet_class = pc_habitat 
+		NOT = { has_planet_flag = pf_H_4 }
+		NOT = { has_planet_flag = pf_H_ACMH_1 }
+	}
+	allow = {
+		free_district_slots > 0
+		OR = {
+			NOT = { has_planet_flag = pf_H_3 }
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+	}
+	effect = {
+		add_deposit = d_H_ACMH_deposit
+		set_planet_flag = pf_H_ACMH_1 
+		if = { # +1 = 4
+			limit = { 
+				has_planet_flag = pf_H_3 
+			}
+			remove_planet_flag = pf_H_3 
+			set_planet_flag = pf_H_4
+			break = yes
+		}
+		else_if = { # +1 = 3
+			limit = { 
+				has_planet_flag = pf_H_2 
+			}
+			remove_planet_flag = pf_H_2 
+			set_planet_flag = pf_H_3
+			break = yes
+		}
+		else_if = { # +1 = 2
+			limit = { 
+				has_planet_flag = pf_H_1 
+			}
+			remove_planet_flag = pf_H_1 
+			set_planet_flag = pf_H_2
+			break = yes
+		}
+		else = { # +1 = 1
+			set_planet_flag = pf_H_1
+			#break = yes
+		}
+	}
+	ai_weight = {
+		weight = 3 # high
+		modifier = { #
+			weight = 1
+			free_district_slots > 0
+		}
+		modifier = { # energy stockpile # @d_AI_S_energy @d_AI_U_energy @d_AI_O_energy 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = energy value < @d_AI_S_energy } }
+		}
+		modifier = { # alloys stockpile # @d_AI_O_alloys 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = alloys value < @d_AI_O_alloys } }
+		}
+		modifier = { # influence stockpile # @d_AI_influence 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = influence value < @d_AI_influence } }
+		}
+		modifier = { # must be at peace # this could be an AI enabling condition instead, for performance
+			factor = 0
+			from = { is_at_war = yes }
+		}
+	}
+}
+
+decision_HR_LSDI = {
+	owned_planets_only = yes
+	prerequisites = { "tech_MoD_O" "tech_starbase_3" "tech_destroyers" } 
+	enactment_time = @d_O_time 
+	icon = decision_MoD_O
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				NOT = { owner = { has_ascension_perk = ap_master_builders } }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence 
+			energy = @d_O_energy 
+			alloys = @d_O_alloys 
+			exotic_gases = @d_O_strat 
+			rare_crystals = @d_O_strat 
+		}
+		cost = {
+			trigger = {
+				owner = { has_ascension_perk = ap_master_builders }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+			exotic_gases = @d_O_strat_AP 
+			rare_crystals = @d_O_strat_AP 
+		}
+		cost = {
+			trigger = { owner = { is_ai = yes } }
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+		}
+	}
+	potential = {
+		NOT = { owner = { has_country_flag = cf_hide_mod } }
+		OR = { 
+			is_planet_class = pc_habitat 
+			is_planet_class = pc_ringworld_habitable 
+		}
+		NOT = { has_planet_flag = pf_d_HR_LSDI_1 }
+		NOT = { has_planet_flag = pf_H_4 }
+	}
+	allow = {
+		free_district_slots > 0
+		OR = {
+			NOT = { has_planet_flag = pf_H_3 }
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+	}
+	effect = {
+		add_deposit = d_HR_LSDI_deposit 
+		set_planet_flag = pf_d_HR_LSDI_1 
+            # worm be praised! I found it! only took a whole hour! it's supposed to be "pf_d_HR_LSDI_deposit_1" and not "pf_d_HR_LSDI_deposit _1", do you see it? ...in fact "deposit" shouldn't even be there
+        
+		if = {
+			limit = { 
+				is_planet_class = pc_ringworld_habitable
+			}
+			break = yes
+		}
+		else_if = { # +1 = 4
+			limit = { 
+				has_planet_flag = pf_H_3 
+			}
+			remove_planet_flag = pf_H_3 
+			set_planet_flag = pf_H_4
+			break = yes
+		}
+		else_if = { # +1 = 3
+			limit = { 
+				has_planet_flag = pf_H_2 
+			}
+			remove_planet_flag = pf_H_2 
+			set_planet_flag = pf_H_3
+			break = yes
+		}
+		else_if = { # +1 = 2
+			limit = { 
+				has_planet_flag = pf_H_1 
+			}
+			remove_planet_flag = pf_H_1 
+			set_planet_flag = pf_H_2
+			break = yes
+		}
+		else = { # +1 = 1
+			set_planet_flag = pf_H_1
+			#break = yes
+		}
+        
+        # nth attempt at doing something equivalent to the bellow # code is cursed, I give up, praise the worm
+        #if = { 
+        #    limit = { is_planet_class = pc_ringworld_habitable }
+		#	 remove_planet_flag = pf_H_1
+        #}
+	}
+	ai_weight = {
+		weight = 2 # normal
+		modifier = { # GAI planet quality flag
+			weight = 1
+			gai_good_research = yes
+		}
+		modifier = { #
+			weight = 1
+			free_district_slots > 0
+		}
+		modifier = { # energy stockpile # @d_AI_S_energy @d_AI_U_energy @d_AI_O_energy 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = energy value < @d_AI_O_energy } }
+		}
+		modifier = { # alloys stockpile # @d_AI_O_alloys 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = alloys value < @d_AI_O_alloys } }
+		}
+		modifier = { # influence stockpile # @d_AI_influence 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = influence value < @d_AI_influence } }
+		}
+		modifier = { # must be at peace # this could be an AI enabling condition instead, for performance
+			factor = 0
+			from = { is_at_war = yes }
+		}
+		modifier = { # might be particularly important on more developed places
+			weight = 1
+			num_pops > 49
+		}
+		modifier = { # if relevant for naval cap
+			factor = 3
+			from = { used_naval_capacity_percent > 0.90 }
+		}
+	}
+}
+
+decision_R_RTPAF = {
+	owned_planets_only = yes
+	prerequisites = { "tech_mine_exotic_gases" "tech_mine_rare_crystals" "tech_mine_volatile_motes" "tech_mineral_purification_2" } 
+	enactment_time = @d_O_time 
+	icon = decision_prospect
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				NOT = { owner = { has_ascension_perk = ap_master_builders } }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence 
+			energy = @d_O_energy 
+			alloys = @d_O_alloys 
+			exotic_gases = @d_O_strat 
+			rare_crystals = @d_O_strat 
+		}
+		cost = {
+			trigger = {
+				owner = { has_ascension_perk = ap_master_builders }
+				owner = { is_ai = no }
+			}
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+			exotic_gases = @d_O_strat_AP 
+			rare_crystals = @d_O_strat_AP 
+		}
+		cost = {
+			trigger = { owner = { is_ai = yes } }
+			influence = @d_O_influence_AP 
+			energy = @d_O_energy_AP 
+			alloys = @d_O_alloys_AP 
+		}
+	}
+	potential = {
+		NOT = { owner = { has_country_flag = cf_hide_mod } }
+		is_planet_class = pc_ringworld_habitable
+		NOT = { has_planet_flag = pf_R_RTPAF_1 }
+	}
+	allow = {
+		free_district_slots > 0
+		OR = {
+			NOT = { has_planet_flag = pf_H_3 }
+			owner = { has_ascension_perk = ap_master_builders }
+		}
+	}
+	effect = {
+		add_deposit = d_R_RTPAF_deposit 
+		set_planet_flag = pf_R_RTPAF_1 
+	}
+	ai_weight = {
+		weight = 3 # high
+		modifier = { #
+			weight = 1
+			free_district_slots > 0
+		}
+		modifier = { # energy stockpile # @d_AI_S_energy @d_AI_U_energy @d_AI_O_energy 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = energy value < @d_AI_S_energy } }
+		}
+		modifier = { # alloys stockpile # @d_AI_O_alloys 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = alloys value < @d_AI_O_alloys } }
+		}
+		modifier = { # influence stockpile # @d_AI_influence 
+			factor = 0
+			from = { resource_stockpile_compare = { resource = influence value < @d_AI_influence } }
+		}
+		modifier = { # must be at peace # this could be an AI enabling condition instead, for performance
+			factor = 0
+			from = { is_at_war = yes }
+		}
+	}
+}

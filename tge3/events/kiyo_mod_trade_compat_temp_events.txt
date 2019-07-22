@@ -1,0 +1,33 @@
+namespace = kiyo_trade_temp_event
+
+# Resets a lot of variables
+event = {
+	id = kiyo_trade_temp_event.1	# Change this number to 2 if there is a new update that would break certain variables (7/15)
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = { NOT = { has_global_flag = kiyo_trade_temp_fix_1 } }	# Change this number to 2 if there is a new update that would break certain variables (7/15)
+	
+	immediate = {
+		every_planet = {
+			limit = {
+				any_ship = {
+					is_ship_size = kiyo_trade
+					fleet = { has_fleet_flag = kiyo_trade_end@PREVPREV }
+				}
+			}
+			every_ship = {
+				limit = {
+					is_ship_size = kiyo_trade
+					fleet = { has_fleet_flag = kiyo_trade_end@PREVPREV }
+				}
+				prev.owner = {
+					add_opinion_modifier = { who = prev.owner modifier = opinion_kiyo_mod_trade_trade_routes }
+				}
+			}
+		}
+		
+		set_global_flag = kiyo_trade_temp_fix_1	# Change this number to 2 if there is a new update that would break certain variables (7/15)
+	}
+}

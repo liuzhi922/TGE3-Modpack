@@ -1,0 +1,122 @@
+###################
+# COST
+###################
+@cost3x = 406
+
+@cost4x = 508
+
+###################
+# POWER
+###################
+@power3x = -313
+
+@power4x = -391
+
+# ####################
+#  Energy Lance
+# ####################
+
+# ## Energy Lance 3
+weapon_component_template = {
+	key = "C_LARGE_ENERGY_LANCE_3"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_C_ship_part_energy_lance_3"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 1000 max = 2500 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 70
+	range = 150.0
+	accuracy = 0.85
+	hull_damage = 1.50
+	shield_damage = 0.50
+	armor_damage = 2.00
+	power = @power3x
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t7_cost
+			rare_crystals = @xl_t7_rare
+		}		
+		upkeep = {
+			energy = @xl_t7_upkeep_energy
+			alloys = @xl_t7_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_energy_lance_3" }
+	component_set = "C_ENERGY_LANCE_3"
+	projectile_gfx = "c_tachyon_lance_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_LARGE_ENERGY_LANCE_4"
+}
+
+# ## Energy Lance 4
+weapon_component_template = {
+	key = "C_LARGE_ENERGY_LANCE_4"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_C_ship_part_energy_lance_4"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	damage = { min = 1250 max = 3125 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 70
+	range = 150.0
+	accuracy = 0.85
+	hull_damage = 1.50
+	shield_damage = 0.50
+	armor_damage = 2.00
+	power = @power4x
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t8_cost
+			rare_crystals = @xl_t8_rare
+		}		
+		upkeep = {
+			energy = @xl_t8_upkeep_energy
+			alloys = @xl_t8_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_energy_lance_4" }
+	component_set = "C_ENERGY_LANCE_4"
+	projectile_gfx = "c_tachyon_lance_4"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+}

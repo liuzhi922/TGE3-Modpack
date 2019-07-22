@@ -1,0 +1,206 @@
+# Icons set here are the ones shown in compnent editor list.
+
+component_set = {
+	key = "SHIELD_1"
+	
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SHIELD_2"
+	
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SHIELD_3"
+	
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SHIELD_4"
+	
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SHIELD_5"
+	
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1	
+}
+component_set = {
+	key = "C_SHIELD_6"
+	
+	icon = "GFX_C_ship_part_shield_6"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_7"
+	
+	icon = "GFX_C_ship_part_shield_7"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_8"
+	
+	icon = "GFX_C_ship_part_shield_8"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_9"
+	
+	icon = "GFX_C_ship_part_shield_9"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_10"
+	
+	icon = "GFX_C_ship_part_shield_10"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PSI_SHIELD"
+	
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1	
+}
+component_set = {
+	key = "C_SHIELD_11"
+	
+	icon = "GFX_C_ship_part_shield_11"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_12"
+	
+	icon = "GFX_C_ship_part_shield_12"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_13"
+	
+	icon = "GFX_C_ship_part_shield_13"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_14"
+	
+	icon = "GFX_C_ship_part_shield_14"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_15"
+	
+	icon = "GFX_C_ship_part_shield_15"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_16"
+	
+	icon = "GFX_C_ship_part_shield_16"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_17"
+	
+	icon = "GFX_C_ship_part_shield_17"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_18"
+	
+	icon = "GFX_C_ship_part_shield_18"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_19"
+	
+	icon = "GFX_C_ship_part_shield_19"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_20"
+	
+	icon = "GFX_C_ship_part_shield_20"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_SYNTH_6"
+	
+	icon = "GFX_C_ship_part_shield_synth_6"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_SYNTH_7"
+	
+	icon = "GFX_C_ship_part_shield_synth_7"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_SYNTH_8"
+	
+	icon = "GFX_C_ship_part_shield_synth_8"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_SYNTH_9"
+	
+	icon = "GFX_C_ship_part_shield_synth_9"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_SHIELD_SYNTH_10"
+	
+	icon = "GFX_C_ship_part_shield_synth_10"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SHIELD_BOOSTER"
+	
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1	
+}
+component_set = {
+	key = "C_SHIELD_RECHARGER_2"
+	
+	icon = "GFX_C_ship_part_shield_recharger_2"
+	icon_frame = 1	
+}
+component_set = {
+	key = "C_SHIELD_RECHARGER_3"
+	
+	icon = "GFX_C_ship_part_shield_recharger_3"
+	icon_frame = 1	
+}
+component_set = {
+	key = "PSI_BARRIER"
+	
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1	
+}

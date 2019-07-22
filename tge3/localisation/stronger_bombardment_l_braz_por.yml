@@ -1,0 +1,7 @@
+﻿l_braz_por:
+ ####################################
+ # Misc
+ ####################################
+  bombardment_indiscriminate_desc:0 "O Bombardeio $bombardment_indiscriminate$ ataca a infraestrutura militar e planetária sem se preocupar com mortes civis.\n- Dano §YPesado§! a §YExércitos§!\n- Dano §YPesado§! a §YPlaneta§!\n- Dano §EModerado§! a §YPops§!\n- Bombardeará planetas indefesos"
+  bombardment_raiding_desc:1 "O Bombardeio $bombardment_selective$ ataca centros populacionais inimigos com naves de invasão especializadas que pegam as pessoas e as trazem para nossos mundos para trabalharem.\n- Dano §ELeve§! a §YExércitos§!\n- Dano §ELeve§! a §YPlaneta§!\n- Dano §YModerado§! a §YPops§!\n- §YAbduzirá§! Pops sempre que possível, em vez de matá-los\n"
+ 

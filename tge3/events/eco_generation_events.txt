@@ -1,0 +1,446 @@
+namespace = generate
+
+# Ecological Generation
+event = {
+	id = generate.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_planet = {
+			if = {
+				limit = { 
+					AND = {
+						is_planet_class = pc_barren
+						planet_size >= 15
+						planet_size <= 25
+					} 
+				}
+				random_list = {
+					90 = { }	
+					10 = { add_modifier = { modifier = "terraforming_candidate" days = -1 } }
+				}
+			} else_if = {
+				limit = { 
+					AND = {
+						is_planet_class = pc_barren_cold
+						planet_size >= 15
+						planet_size <= 25
+					} 
+				}
+				random_list = {
+					90 = { }	
+					10 = { add_modifier = { modifier = "terraforming_candidate" days = -1 } }
+				}
+			} else_if = {
+				limit = { 
+					is_planet_class = pc_arctic
+					is_capital = no
+				}
+				random_list = {
+					90 = { }
+					10 = { add_deposit = d_eco_peatland }
+				}
+			} else_if = {
+				limit = { 
+					is_planet_class = pc_alpine
+					is_capital = no
+				}
+				random_list = {
+					90 = { }
+					10 = { add_deposit = d_eco_peatland }
+				}
+			} else_if = {
+				limit = {
+					is_planet_class = pc_tundra
+					is_capital = no
+				}
+				random_list = {
+					90 = { }	
+					10 = { add_deposit = d_eco_peatland }
+				}
+			} else_if = {
+				limit = {
+					is_planet_class = pc_desert
+					is_capital = no
+				}
+				random_list = {
+					90 = { }	
+					10 = { add_deposit = d_eco_tall_grass_prairie }
+				}
+			} else_if = {
+				limit = {
+					is_planet_class = pc_arid
+					is_capital = no
+				}
+				random_list = {
+					90 = { }	
+					10 = { add_deposit = d_eco_tall_grass_prairie }
+				}
+			} else_if = {
+				limit = {
+					is_planet_class = pc_savannah
+					is_capital = no
+				}
+				random_list = {
+					90 = { }	
+					10 = { add_deposit = d_eco_tall_grass_prairie }
+				}
+			} else_if = {
+				limit = {
+					is_planet_class = pc_ocean
+					is_capital = no
+				}
+				random_list = {
+					90 = { }	
+					10 = { add_deposit = d_eco_old_growth_forest }
+				}
+			} else_if = {
+				limit = {
+					is_planet_class = pc_continental
+					is_capital = no
+				}
+				random_list = {
+					90 = { }	
+					10 = { add_deposit = d_eco_old_growth_forest }
+				}
+			} else_if = {
+				limit = {
+					is_planet_class = pc_tropical
+					is_capital = no
+				}
+				random_list = {
+					90 = { }	
+					10 = { add_deposit = d_eco_old_growth_forest }
+				}
+			}
+		}
+	}
+}
+
+# Mod Flag
+event = {
+	id = generate.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { NOT = { has_global_flag = EcologyMod_active } }
+
+	immediate = { set_global_flag = EcologyMod_active }
+}
+
+# Terraforming Ecosystem
+planet_event = {
+	id = generate.3
+	hide_window = yes
+	is_triggered_only = yes
+	location = from
+	
+	immediate = {
+		if = {
+			limit = { has_modifier = eco_species_rich }
+			remove_modifier = eco_species_rich
+		}
+		if = {
+			limit = { has_modifier = eco_species_poor }
+			remove_modifier = eco_species_poor
+		}
+		if = {
+			limit = { has_modifier = eco_resilient_ecosystem }
+			remove_modifier = eco_resilient_ecosystem
+		}
+		if = {
+			limit = { has_modifier = eco_fragile_ecosystem }
+			remove_modifier = eco_fragile_ecosystem
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_1a }
+			remove_modifier = eco_artificial_1a
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_1b }
+			remove_modifier = eco_artificial_1b
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_1c }
+			remove_modifier = eco_artificial_1c
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_1d }
+			remove_modifier = eco_artificial_1d
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_2a }
+			remove_modifier = eco_artificial_2a
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_2b }
+			remove_modifier = eco_artificial_2b
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_2c }
+			remove_modifier = eco_artificial_2c
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_2d }
+			remove_modifier = eco_artificial_2d
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_3 }
+			remove_modifier = eco_artificial_3
+		}
+		if = {
+			limit = { has_modifier = eco_artificial_4 }
+			remove_modifier = eco_artificial_4
+		}
+		random_list = {
+			70 = { }
+			5 = { 
+				if = {
+					limit = { from = { owner = { NOT = { has_technology = tech_climate_restoration } } } }
+					add_modifier = { modifier = "bleak_planet" days = -1} }
+				}
+			5 = {
+				if = {
+					limit = { NOT = { has_modifier = "lush_planet" } }
+					add_modifier = { modifier = "lush_planet" days = -1}
+				}
+			}
+			5 = { add_modifier = { modifier = "eco_species_rich" days = -1 } }
+			5 = { 
+				if = {
+					limit = { from = { owner = { NOT = { has_technology = tech_ecological_adaptation } } } }
+					add_modifier = { modifier = "eco_species_poor" days = -1 }
+				}
+			}
+			5 = { 
+				if = {
+					limit = { from = { owner = { NOT = { has_technology = tech_climate_restoration } } } }
+					add_modifier = { modifier = "bleak_planet" days = -1 }
+					
+					if = {
+						limit = { from = { owner = { NOT = { has_technology = tech_ecological_adaptation } } } }
+						add_modifier = { modifier = "eco_species_poor" days = -1 }
+					}
+				}
+			}
+			5 = {
+				if = {
+					limit = { NOT = { has_modifier = "lush_planet" } }
+					add_modifier = { modifier = "lush_planet" days = -1 }
+					add_modifier = { modifier = "eco_species_rich" days = -1 }
+				} else = {
+					add_modifier = { modifier = "eco_species_rich" days = -1 }
+				}
+			}
+			
+		}
+		random_list = {
+			60 = { }
+			5 = {
+				if = {
+					limit = { NOT = { has_modifier = "eco_species_rich" } }
+					add_modifier = { modifier = "eco_resilient_ecosystem" days = -1}
+				}
+			}
+			5 = {
+				if = {
+					limit = { 
+						NOT = { has_modifier = "eco_species_poor" }
+						from = { owner = { NOT = { has_technology = tech_climate_restoration } } }
+					}
+					add_modifier = { modifier = "eco_fragile_ecosystem" days = -1}
+				}
+			}
+			5 = {
+				if = {
+					limit = { NOT = { has_modifier = "lush_planet" } }
+					add_modifier = { modifier = "eco_resilient_ecosystem" days = -1}
+				}
+			}
+			5 = {
+				if = {
+					limit = { 
+						NOT = { has_modifier = "bleak_planet" }
+						from = { owner = { NOT = { has_technology = tech_climate_restoration } } }
+					}
+					add_modifier = { modifier = "eco_fragile_ecosystem" days = -1}
+				}
+			}
+			15 = { add_modifier = { modifier = "eco_resilient_ecosystem" days = -1} }
+			5 = { add_modifier = { modifier = "eco_fragile_ecosystem" days = -1} }
+		}
+		random_list = {
+			25 = {
+				if = {
+					limit = { from = { owner = { has_technology = tech_climate_restoration } } }
+					random_list = {
+						1 = { add_modifier = { modifier = "eco_artificial_2a" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2b" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2c" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2d" days = -1 } }
+						8 = { add_modifier = { modifier = "eco_artificial_4" days = -1 } }
+					}
+				} else = {
+					random_list = {
+						1 = { add_modifier = { modifier = "eco_artificial_1a" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_1b" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_1c" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_1d" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2a" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2b" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2c" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2d" days = -1 } }
+					}
+				}
+			}
+			25 = {
+				if = {
+					limit = { from = { owner = { has_technology = tech_ecological_adaptation } } }
+					random_list = {
+						1 = { add_modifier = { modifier = "eco_artificial_2a" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2b" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2c" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2d" days = -1 } }
+						8 = { add_modifier = { modifier = "eco_artificial_3" days = -1 } }
+					}
+				} else = {
+					random_list = {
+						1 = { add_modifier = { modifier = "eco_artificial_1a" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_1b" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_1c" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_1d" days = -1 } }
+					}
+				}
+			}
+			50 = {
+				random_list = {
+						1 = { add_modifier = { modifier = "eco_artificial_2a" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2b" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2c" days = -1 } }
+						1 = { add_modifier = { modifier = "eco_artificial_2d" days = -1 } }
+				}
+			}
+		}
+	}
+}
+
+# Remove Decisions and Parks on Transfer
+planet_event = {
+	id = generate.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_modifier = "eco_overconsumption" }
+			remove_modifier = "eco_overconsumption"
+		}
+		if = {
+			limit = { has_modifier = "eco_suburbanization" }
+			remove_modifier = "eco_suburbanization"
+		}
+		if = {
+			limit = { has_modifier = "eco_overpopulated" }
+			remove_modifier = "eco_overpopulated"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_city_park" }
+			remove_deposit = "d_eco_city_park"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_city_park_hive" }
+			remove_deposit = "d_eco_city_park_hive"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_park" }
+			remove_deposit = "d_eco_park"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_park_hive" }
+			remove_deposit = "d_eco_park_hive"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_preserve" }
+			remove_deposit = "d_eco_preserve"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_preserve_hive" }
+			remove_deposit = "d_eco_preserve_hive"
+		}
+	}
+}
+
+# Remove Modifiers when Colony Destroyed
+planet_event = {
+	id = generate.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_modifier = "eco_overconsumption" }
+			remove_modifier = "eco_overconsumption"
+		}
+		if = {
+			limit = { has_modifier = "eco_suburbanization" }
+			remove_modifier = "eco_suburbanization"
+		}
+		if = {
+			limit = { has_modifier = "eco_pristine" }
+			remove_modifier = "eco_pristine"
+		}
+		if = {
+			limit = { has_modifier = "eco_clean" }
+			remove_modifier = "eco_clean"
+		}
+		if = {
+			limit = { has_modifier = "eco_minimal" }
+			remove_modifier = "eco_minimal"
+		}
+		if = {
+			limit = { has_modifier = "eco_moderate" }
+			remove_modifier = "eco_moderate"
+		}
+		if = {
+			limit = { has_modifier = "eco_heavy" }
+			remove_modifier = "eco_heavy"
+		}
+		if = {
+			limit = { has_modifier = "eco_extreme" }
+			remove_modifier = "eco_extreme"
+		}
+		if = {
+			limit = { has_modifier = "eco_catastrophic" }
+			remove_modifier = "eco_catastrophic"
+		}
+		if = {
+			limit = { has_modifier = "eco_overpopulated" }
+			remove_modifier = "eco_overpopulated"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_city_park" }
+			remove_deposit = "d_eco_city_park"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_city_park_hive" }
+			remove_deposit = "d_eco_city_park_hive"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_park" }
+			remove_deposit = "d_eco_park"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_park_hive" }
+			remove_deposit = "d_eco_park_hive"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_preserve" }
+			remove_deposit = "d_eco_preserve"
+		}
+		if = {
+			limit = { has_deposit = "d_eco_preserve_hive" }
+			remove_deposit = "d_eco_preserve_hive"
+		}
+	}
+}

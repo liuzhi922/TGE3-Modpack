@@ -1,0 +1,442 @@
+@hit2 = 3
+@hit3 = 6
+@hit4 = 9
+@hit5 = 15
+@hit6 = 16
+@hit7 = 17
+@hit8 = 18
+@hit9 = 19
+@hit10 = 20
+
+
+
+@sensor5 = 5
+@sensor6 = 6
+@sensor7 = 6
+@sensor8 = 7
+@sensor9 = 7
+@sensor10 = 8
+
+@hyperlane5 = 9
+@hyperlane6 = 10
+@hyperlane7 = 10
+@hyperlane8 = 12
+@hyperlane9 = 12
+@hyperlane10 = 14
+
+@range5 = 0.05
+@range6 = 0.07
+@range7 = 0.09
+@range8 = 0.11
+@range9 = 0.13
+@range10 = 0.15
+
+@power5 = -25
+@power6 = -30
+@power7 = -35
+@power8 = -40
+@power9 = -45
+@power10 = -50
+
+@cost5 = 10
+@cost6 = 12
+@cost7 = 14
+@cost8 = 16
+@cost9 = 18
+@cost10 = 20
+
+@acc_1 = 1
+@acc_2 = 2
+@acc_3 = 3
+@acc_4 = 4
+@acc_5 = 5
+@acc_6 = 6
+@acc_7 = 7
+@acc_8 = 8
+@acc_9 = 9
+@acc_10 = 10
+
+# ##################
+# Ship Sensors
+# ##################
+
+utility_component_template = {
+	key = "C_SHIP_SENSOR_5"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_5"
+	icon_frame = 1
+	power = @power5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+			rare_crystals = 2
+		}
+	}
+	sensor_range = @sensor5
+	hyperlane_range = @hyperlane5
+	
+	ship_modifier = {
+		ship_tracking_add = @hit5
+		ship_accuracy_add = @acc_1
+		
+	}
+	
+	prerequisites = { "tech_c_sensors_5" }
+	component_set = "sensor_components"
+	
+	ai_weight = {
+		weight = 10000
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	upgrades_to = "C_SHIP_SENSOR_6"
+}
+
+utility_component_template = {
+	key = "C_SHIP_SENSOR_6"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_6"
+	icon_frame = 1
+	power = @power6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+			rare_crystals = 4
+		}
+	}
+	sensor_range = @sensor6
+	hyperlane_range = @hyperlane6
+	
+	ship_modifier = {
+		ship_tracking_add = @hit6
+		ship_accuracy_add = @acc_2
+	}
+	
+	prerequisites = { "tech_c_sensors_6" }
+	component_set = "sensor_components"
+	
+	ai_weight = {
+		weight = 20000
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	upgrades_to = "C_SHIP_SENSOR_7"
+}
+
+utility_component_template = {
+	key = "C_SHIP_SENSOR_7"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_7"
+	icon_frame = 1
+	power = @power7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+			rare_crystals = 6
+		}
+	}
+	sensor_range = @sensor7
+	hyperlane_range = @hyperlane7
+	
+	ship_modifier = {
+		ship_tracking_add = @hit7
+		ship_accuracy_add = @acc_3
+	}
+	
+	prerequisites = { "tech_c_sensors_7" }
+	component_set = "sensor_components"
+	
+	ai_weight = {
+		weight = 30000
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	upgrades_to = "C_SHIP_SENSOR_8"
+}
+
+utility_component_template = {
+	key = "C_SHIP_SENSOR_8"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_8"
+	icon_frame = 1
+	power = @power8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+			rare_crystals = 8
+		}
+	}
+	sensor_range = @sensor8
+	hyperlane_range = @hyperlane8
+	
+	ship_modifier = {
+		ship_tracking_add = @hit8
+		ship_accuracy_add = @acc_4
+	}
+	
+	prerequisites = { "tech_c_sensors_8" }
+	component_set = "sensor_components"
+	
+	ai_weight = {
+		weight = 40000
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	upgrades_to = "C_SHIP_SENSOR_9"
+}
+
+utility_component_template = {
+	key = "C_SHIP_SENSOR_9"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_9"
+	icon_frame = 1
+	power = @power9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+			rare_crystals = 10
+		}
+	}
+	sensor_range = @sensor9
+	hyperlane_range = @hyperlane9
+	
+	ship_modifier = {
+		ship_tracking_add = @hit9
+		ship_accuracy_add = @acc_5
+	}
+	
+	prerequisites = { "tech_c_sensors_9" }
+	component_set = "sensor_components"
+	
+	ai_weight = {
+		weight = 50000
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	upgrades_to = "C_SHIP_SENSOR_10"
+}
+
+utility_component_template = {
+	key = "C_SHIP_SENSOR_10"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_10"
+	icon_frame = 1
+	power = @power10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+			rare_crystals = 12
+		}
+	}
+	sensor_range = @sensor10
+	hyperlane_range = @hyperlane10
+	
+	ship_modifier = {
+		ship_tracking_add = @hit10
+		ship_accuracy_add = @acc_6
+	}
+	
+	prerequisites = { "tech_c_sensors_10" }
+	component_set = "sensor_components"
+	
+	ai_weight = {
+		weight = 60000
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+}
+
+# ##################
+# station Sensors
+# ##################
+
+utility_component_template = {
+	key = "C_STATION_SENSOR_5"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_5"
+	icon_frame = 1
+	power = @power5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	sensor_range = @sensor5
+	hyperlane_range = @hyperlane5
+	
+	ship_modifier = {
+		ship_tracking_add = @hit5
+		ship_accuracy_add = @acc_5
+	}
+	
+	prerequisites = { "tech_c_sensors_5" }
+	component_set = "station_sensor_components"
+	
+	ai_weight = {
+		weight = 10000
+	}
+	upgrades_to = "C_STATION_SENSOR_6"
+}
+
+utility_component_template = {
+	key = "C_STATION_SENSOR_6"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_6"
+	icon_frame = 1
+	power = @power6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	sensor_range = @sensor6
+	hyperlane_range = @hyperlane6
+	
+	ship_modifier = {
+		ship_tracking_add = @hit6
+		ship_accuracy_add = @acc_6
+	}
+	
+	prerequisites = { "tech_c_sensors_6" }
+	component_set = "station_sensor_components"
+	
+	ai_weight = {
+		weight = 20000
+	}
+	upgrades_to = "C_STATION_SENSOR_7"
+}
+
+utility_component_template = {
+	key = "C_STATION_SENSOR_7"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_7"
+	icon_frame = 1
+	power = @power7
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	sensor_range = @sensor7
+	hyperlane_range = @hyperlane7
+	
+	ship_modifier = {
+		ship_tracking_add = @hit7
+		ship_accuracy_add = @acc_7
+	}
+	
+	prerequisites = { "tech_c_sensors_7" }
+	component_set = "station_sensor_components"
+	
+	ai_weight = {
+		weight = 30000
+	}
+	upgrades_to = "C_STATION_SENSOR_8"
+}
+
+utility_component_template = {
+	key = "C_STATION_SENSOR_8"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_8"
+	icon_frame = 1
+	power = @power8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	sensor_range = @sensor8
+	hyperlane_range = @hyperlane8
+	
+	ship_modifier = {
+		ship_tracking_add = @hit8
+		ship_accuracy_add = @acc_8
+	}
+	
+	prerequisites = { "tech_c_sensors_8" }
+	component_set = "station_sensor_components"
+	
+	ai_weight = {
+		weight = 40000
+	}
+	upgrades_to = "C_STATION_SENSOR_9"
+}
+
+utility_component_template = {
+	key = "C_STATION_SENSOR_9"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_9"
+	icon_frame = 1
+	power = @power9
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	sensor_range = @sensor9
+	hyperlane_range = @hyperlane9
+	
+	ship_modifier = {
+		ship_tracking_add = @hit9
+		ship_accuracy_add = @acc_9
+	}
+	
+	prerequisites = { "tech_c_sensors_9" }
+	component_set = "station_sensor_components"
+	
+	ai_weight = {
+		weight = 50000
+	}
+	upgrades_to = "C_STATION_SENSOR_10"
+}
+
+utility_component_template = {
+	key = "C_STATION_SENSOR_10"
+	size = medium
+	icon = "GFX_C_ship_part_sensor_10"
+	icon_frame = 1
+	power = @power10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	sensor_range = @sensor10
+	hyperlane_range = @hyperlane10
+	
+	ship_modifier = {
+		ship_tracking_add = @hit10
+		ship_accuracy_add = @acc_10
+	}
+	
+	prerequisites = { "tech_c_sensors_10" }
+	component_set = "station_sensor_components"
+	
+	ai_weight = {
+		weight = 60000
+	}	
+}

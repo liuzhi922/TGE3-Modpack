@@ -1,0 +1,176 @@
+﻿l_braz_por:
+ 
+ # ###################################
+ # Decisions
+ # ###################################
+ 
+ decision_O_LOSBSP:0 "[O] Low-Orbit Space-Based Solar Power"
+ decision_O_LOSBSP_desc:0 " Produces §G32§! £energy£ §Yenergy§! \n Provides §G2§! §YTechnician§! Jobs \n §RIncreased§! Orbital Bombardment Damage \n"
+ decision_O_LOU:0 "[O] Low-Orbit Urbanisation"
+ decision_O_LOU_desc:0 " Max £district£ §Ydistricts§!: §G+1§! \n Provides §G4§! £housing£ §YHousing§! \n §RIncreased§! Orbital Bombardment Damage \n §GIncreased§! £happiness£ Happiness \n §GIncreased§! £trade_value£ §YTrade Value§! \n Provides §G1§! §YMerchant§!, §G1§! §YCulture Worker§! and §G1§! §YClerk§! Jobs \n Provides §G1§! extra £district£ §Ydistricts§! to §HGestalts§!"
+ decision_U_SU:0 "[U] Subterranean Urbanisation"
+ decision_U_SU_desc:0 " Max £district£ §Ydistricts§!: §G+2§! \n Provides §G24§! £housing£ §YHousing§! \n §GIncreases§! §YHabitability§! by §G5%§! \n §GDecreased§! Orbital Bombardment Damage \n §RIncreased§! £crime£ §YCrime§! \n §RReduced§! £happiness£ Happiness \n Provides §G4§! §YClerk§! Jobs"
+ decision_H_E:0 "[H] Habitat Expansion"
+ decision_H_E_desc:0 " Provides §G1§! extra £district£ §Ydistrict§!."
+ decision_R_E:0 "[R] Ringworld Expansion"
+ decision_R_E_desc:0 " Provides §G5§! extra £district£ §Ydistricts§!."
+ decision_Sv_VFD:0 "[S] Verticalized Farming Districts"
+ decision_Sv_VFD_desc:0 " Max £district£ §Ydistricts§!: §R-1§! \n §YFarmer§! jobs: §G+12§!"
+ decision_O_LOSBF:0 "[O] Low-Orbit Space-Based Farming"
+ decision_O_LOSBF_desc:0 " Produces §G24§! £food£ §Yfood§! \n Provides §G6§! §YFarmer§! and §G1§! §YResearcher§! Jobs \n §RIncreased§! Orbital Bombardment Damage \n"
+ decision_H_SBSP:0 "[H] Space-Based Solar Power"
+ decision_H_SBSP_desc:0 " Produces §G32§! £energy£ §Yenergy§! \n Provides §G2§! §YTechnician§! Jobs"
+ decision_H_SBF:0 "[H] Space-Based Farming"
+ decision_H_SBF_desc:0 " Produces §G24§! £food£ §Yfood§! \n Provides §G6§! §YFarmer§! and §G1§! §YResearcher§! Jobs"
+ decision_H_ACMH:0 "[H] Asteroid & Comet Mining Hub"
+ decision_H_ACMH_desc:0 " Max £district£ §Ydistricts§!: §R-1§! \n Provides §G1§! §YAdministrator§!, §G1§! §YResearcher§!, §G3§! §YMiner§! and §G2§! §YProspector§! Jobs \n §RIncreased§! £crime£ §YCrime§!"  
+ decision_HR_LSDI:0 "[HR] Large-Scale Docking Infrastructure"
+ decision_HR_LSDI_desc:0 " Max £district£ §Ydistricts§!: §R-1§! \n Provides §G4§! §YSpaceship Mechanic§! and §G2§! §YClerk§! Jobs \n Provides §G6§! £housing£ §YHousing§! \n §GIncreased§! £trade_value£ §YTrade Value§!"
+ decision_R_RTPAF:0 "[R] Ringworld Terrain Prospecting and Filtering"
+ decision_R_RTPAF_desc:0 " Provides §G1§! §YAdministrator§!, §G1§! §YResearcher§!, §G3§! §YMiner§! and §G2§! §YProspector§! Jobs \n §RReduced§! £happiness£ Happiness"
+ decision_U_SCI:0 "[U] Subterranean Industrial City" 
+ decision_U_SCI_desc:0 " Provides §G10§! §YMiner§!, §G2§! §YFoundry§!, §G2§! §YArtisan§! and §G3§! §YClerk§! Jobs \n Provides §G13§! £housing£ §YHousing§! \n §GDecreased§! Orbital Bombardment Damage \n §RIncreased§! £crime£ §YCrime§! \n §RReduced§! £happiness£ Happiness"
+ decision_U_SER:0 "[U] Subterranean Extraction & Refinery City"
+ decision_U_SER_desc:0 " Provides §G10§! §YMiner§!, §G4§! §YProspector§! and §G3§! §YClerk§! Jobs \n Provides §G13§! £housing£ §YHousing§! \n §GDecreased§! Orbital Bombardment Damage \n §RIncreased§! £crime£ §YCrime§! \n §RReduced§! £happiness£ Happiness"
+ decision_O_LSLODI:0 "[O] Large-Scale Low-Orbit Docking Infrastructure"
+ decision_O_LSLODI_desc:0 " Provides §G4§! §YSpaceship Mechanic§! and §G2§! §YClerk§! Jobs \n Provides §G6§! £housing£ §YHousing§! \n §RIncreased§! Orbital Bombardment Damage \n §GIncreased§! £trade_value£ §YTrade Value§!"
+ decision_U_DPBN:0 "[U] Deep Planetary Bunker Network"
+ decision_U_DPBN_desc:0 " Provides §G12§! §YSoldier§!, §G1§! §YEnforcer§! and §G2§! §YClerk§! Jobs \n Provides §G15§! £housing£ §YHousing§! \n §GDecreased§! Orbital Bombardment Damage \n FTL inhibitor not included"
+ decision_SaHR_ATN:0 "[SHR] Autonomous Transport Network"
+ decision_SaHR_ATN_desc:0 " Provides between §G1§! and §G2§! extra £district£ §Ydistricts§! on planets. \n Provides §G1§! §YAdministrator§! and §G1§! §YClerk§! Jobs \n §GReduced§! £consumer_goods£ §YConsumer Goods§! Upkeep \n\n Provides £stability£ §YStability§! for §HGestalts§!"
+ decision_U_SC:0 "[U] Subterranean Cathedral"
+ decision_U_SC_desc:0 " \n §GDecreased§! Orbital Bombardment Damage \n §GReduced§! £crime£ §YCrime§! \n §GIncreased§! £happiness£ Happiness \n Provides §G13§! £housing£ §YHousing§! \n Provides §G1§! §YHigh Priest§!, §G10§! §YPriest§! and §G2§! §YClerk§! Jobs"
+ decision_U_USC:0 "[U] Underground Science City"
+ decision_U_USC_desc:0 " Provides §G2§! £housing£ §YHousing§! along with §G1§! §YHead Researcher§!, §G15§! §YResearcher§! and §G2§! §YClerk§! Jobs for §Hnon-Gestalts§! \n Provides §G12§! £housing£ §YHousing§! along with §G10§! §YResearcher§! and §G2§! §YMaintenance§! Jobs for §HGestalts§! \n §GDecreased§! Orbital Bombardment Damage \n"
+ decision_0_show_hide_MoD:0 "[!] §YShow/Hide Mastery of Districts' Decisions§!"
+ decision_0_show_hide_MoD_desc:0 ""
+
+ # §G§! £housing£ §YHousing§! # §Y$PLANET_HOUSING_TITLE$§!
+ # Provides §G§! extra £district£ §Ydistrict§! # Max £district£ §Ydistricts§!: §R-1§!
+ # Provides §G§! §YFarmer§! Jobs
+ # §HGestalts§!
+ 
+ # £stability£ §YStability§!
+ # £happiness£ §YPop Approval Rating§!
+ # £amenities£
+ # £crime£ §YCrime§!
+ # §GIncreased§! £trade_value£ §YTrade Value§!
+ # £energy£ §HEnergy Credits§!
+ # £food£ §HFood§!
+ # red §R orange §H yellow §Y green §G blue? §E | §!
+ 
+ 
+ # ###################################
+ # Modifiers
+ # ###################################
+ 
+ modifier_O_max:0 "Low-Orbit Extensivelly Developed"
+ modifier_O_max_desc:0 ""
+ modifier_O_max_AP:0 "Low-Orbit Fully Developed"
+ modifier_O_max_AP_desc:0 ""
+ modifier_U_max:0 "Subterranean Areas Extensivelly Developped"
+ modifier_U_max_desc:0 ""
+ modifier_U_max_AP:0 "Subterranean Areas Fully Developed"
+ modifier_U_max_AP_desc:0 ""
+ 
+ # ###################################
+ # Deposits
+ # ###################################
+
+ d_O_LOSBSP_deposit:0 "[O] Low-Orbit Space-Based Solar Power"
+ d_O_LOSBSP_deposit_desc:0 ""
+ d_HR_SBSP_deposit:0 "[H] Space-Based Solar Power"
+ d_HR_SBSP_deposit_desc:0 ""
+ d_O_LOU_deposit:0 "[O] Low-Orbit Urbanisation"
+ d_O_LOU_deposit_desc:0 ""
+ d_U_SU_deposit:0 "[U] Subterranean Urbanisation"
+ d_U_SU_deposit_desc:0 ""
+ d_H_E_deposit:0 "[H] Habitat Expansion"
+ d_H_E_deposit_desc:0 ""
+ d_R_E_deposit:0 "[R] Ringworld Expansion"
+ d_R_E_deposit_desc:0 ""
+ d_Sv_VFD_deposit:0 "[S] Verticalized Farming Districts"
+ d_Sv_VFD_deposit_desc:0 "Traditional land is horizontal and boring, a waste of space next to sleek skyscraper jungles. We have long dreamt of stacking farmland in semi-artificial environments while maintaining yield efficiency. The technology to do so is finally available, and even suits arcologies."
+ d_O_LOSBF_deposit:0 "[O] Low-Orbit Space-Based Farming"
+ d_O_LOSBF_deposit_desc:0 "Farming, but beyond heaven."
+ d_H_SBF_deposit:0 "[H] Space-Based Farming"
+ d_H_SBF_deposit_desc:0 ""
+ d_U_SCI_deposit:0 "[U] Subterranean Industrial City" 
+ d_U_SCI_deposit_desc:0 "Whole city-sized areas dedicated to extraction and processing of raw materials found underground more efficiently than surface industries."
+ d_U_SER_deposit:0 "[U] Subterranean Extraction & Refinery City"
+ d_U_SER_deposit_desc:0 "Whole city-sized areas dedicated to extraction and processing of raw materials straight into rare resources more in ways not possible at the surface."
+ d_R_RTPAF_deposit:0 "[R] Ringworld Terrain Prospecting and Filtering"
+ d_R_RTPAF_deposit_desc:0 "Nearly all useful matter in this system has been used to construct this ringworld. Yet a quantity of valuable leftovers were simply added to the constituents of this section's soil. With great effort, these resources can be filtered out and processed."
+ d_H_ACMH_deposit:0 "[H] Asteroid & Comet Mining Hub"
+ d_H_ACMH_deposit_desc:0 "There are more random rocks flying around than there is capacity to catch and process them. With this infrastructure we'll be able to process a few more."
+ d_O_LSLODI_deposit:0 "[O] Large-Scale Low-Orbit Docking Infrastructure"
+ d_O_LSLODI_deposit_desc:0 "Maintenance, refuelling, recycling, retrofitting and bulk cargo handling of both privately owned and state owned vessels, be it military ships or the merchant marine. No need to pass by a system's starbase nor to land on the surface, it can all be done here."
+ d_HR_LSDI_deposit:0 "[HR] Large-Scale Docking Infrastructure"
+ d_HR_LSDI_deposit_desc:0 "Maintenance, refuelling, recycling, retrofitting and bulk cargo handling of both privately owned and state owned vessels, be it military ships or the merchant marine. No need to pass by a system's starbase nor to land on the surface, it can all be done here."
+ d_U_DPBN_deposit:0 "[U] Deep Planetary Bunker Network"
+ d_U_DPBN_deposit_desc:0 "The most well entrenched of bunkers, the planet itself its armour. Unlike traditional defences, it takes a colossus to crack these open. Defence in depth, literally."
+ d_SaHR_ATN_deposit:0 "[SHR] Autonomous Transport Network"
+ d_SaHR_ATN_deposit_desc:0 ""
+ d_U_SC_deposit:0 "[U] Subterranean Cathedral"
+ d_U_SC_deposit_desc:0 "A city-sized monastery complex surrounds a Cathedral with arches of massive proportions. The largest nave, bema and aisles you've ever laid your eyes upon, and the longest pews you've ever prayed on. Worm be praised!"
+ d_U_USC_deposit:0 "[U] Underground Science City"
+ d_U_USC_deposit_desc:0 ""
+ 
+ # ###################################
+ # Jobs
+ # ###################################
+ 
+ #job_foundry:0 "Metallurgist"
+ #job_foundry_plural:0 "Metallurgists"
+ #job_foundry_desc:0 "Highly trained workers are needed to turn raw minerals into the durable alloys that are used in a wide variety of advanced construction."
+ #job_foundry_effect_desc:0 "£job_foundry£ $job_foundry_plural$ turn £minerals£ §Y$minerals$§! into £alloys£ §Y$alloys$§!"
+ #mod_job_foundry_add:0 "$job_foundry$ Jobs"
+ #mod_job_foundry_per_pop:0 "§G+1§! $job_foundry$ Job per $VALUE$ Pops"
+ #mod_job_foundry_per_pop_short:0 "\n§G+1§! £mod_job_foundry_add£ per $VALUE$ £pop£"
+ 
+ job_spaceship_mechanic:0 "Spaceship Mechanic"
+ job_spaceship_mechanic_plural:0 "Spaceship Mechanics"
+ job_spaceship_mechanic_desc:0 "Spaceship Mechanic"
+ mod_job_spaceship_mechanic_add:0 "$job_spaceship_mechanic$ Jobs"
+ job_spaceship_mechanic_gestalt:0 "Spacecraft Maintenance Drone"
+ job_spaceship_mechanic_gestalt_plural:0 "Spacecraft Maintenance Drones"
+ job_spaceship_mechanic_gestalt_desc:0 "Spacecraft Maintenance Drone"
+ mod_job_spaceship_mechanic_gestalt_add:0 "$job_spaceship_mechanic_gestalt$ Jobs"
+ job_subterranean_prospector:0 "Subterranean Prospector"
+ job_subterranean_prospector_plural:0 "Subterranean Prospectors"
+ job_subterranean_prospector_desc:0 "Subterranean Prospector"
+ mod_job_subterranean_prospector_add:0 "$job_subterranean_prospector$ Jobs"
+ job_subterranean_prospector_gestalt:0 "Subterranean Prospection Drone"
+ job_subterranean_prospector_gestalt_plural:0 "Subterranean Prospection Drones"
+ job_subterranean_prospector_gestalt_desc:0 "Subterranean Prospection Drone"
+ mod_job_subterranean_prospector_gestalt_add:0 "$job_subterranean_prospector_gestalt$ Jobs"
+ job_ringworld_prospector:0 "Ringworld Prospector"
+ job_ringworld_prospector_plural:0 "Ringworld Prospectors"
+ job_ringworld_prospector_desc:0 "Ringworld Prospector"
+ mod_job_ringworld_prospector_add:0 "$job_ringworld_prospector$ Jobs"
+ job_ringworld_prospector_gestalt:0 "Ringworld Prospection Drone"
+ job_ringworld_prospector_gestalt_plural:0 "Ringworld Prospection Drones"
+ job_ringworld_prospector_gestalt_desc:0 "Ringworld Prospection Drone"
+ mod_job_ringworld_prospector_gestalt_add:0 "$job_ringworld_prospector_gestalt$ Jobs"
+ job_asteroid_prospector:0 "Asteroid Prospector"
+ job_asteroid_prospector_plural:0 "Asteroid Prospectors"
+ job_asteroid_prospector_desc:0 "Asteroid Prospector"
+ mod_job_asteroid_prospector_add:0 "$job_asteroid_prospector$ Jobs"
+ job_asteroid_prospector_gestalt:0 "Asteroid Prospection Drone"  
+ job_asteroid_prospector_gestalt_plural:0 "Asteroid Prospection Drones"  
+ job_asteroid_prospector_gestalt_desc:0 "Asteroid Prospection Drone"
+ mod_job_asteroid_prospector_gestalt_add:0 "$job_asteroid_prospector_gestalt$ Jobs"  
+ 
+ # ###################################
+ # Tech
+ # ###################################
+ 
+ tech_MoD_S:0 "Planetary Projects"
+ tech_MoD_S_desc:0 ""
+ tech_MoD_O:0 "Orbital Development"
+ tech_MoD_O_desc:0 ""
+ tech_MoD_U:0 "Subterranean Development"
+ tech_MoD_U_desc:0 ""
+ 
+ 
+

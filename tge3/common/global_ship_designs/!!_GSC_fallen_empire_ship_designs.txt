@@ -1,0 +1,35 @@
+# Awakened Fallen Empire Starbase
+ship_design = {
+	name = "NAME_FE_Starbase"
+	ship_size = starbase_fe_outpost
+	section = {
+		template = "station_generic_01_key"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "C_PD_POINT_DEFENCE_5"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "C_SMALL_PLASMA_5"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "C_SMALL_PLASMA_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "C_MEDIUM_PLASMA_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "C_MEDIUM_PLASMA_5"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "C_LARGE_PLASMA_5"
+		}
+	}
+	required_component="C_SHIP_SENSOR_10"
+}

@@ -1,0 +1,6 @@
+﻿l_spanish:
+ ####################################
+ # Misc
+ ####################################
+  bombardment_indiscriminate_desc:0 "$bombardment_indiscriminate$ Se bombardean objetivos militares y la infraestructura planetaria sin importar las bajas civiles.\n- Daño §Hintenso§! a los §Yejércitos§!\n- Daño §Hintenso§! al §Yplaneta§!\n- Daño §Ymoderado§! a las §Ypoblaciones§!\n- Se bombardearán planetas indefensos.\n"
+  bombardment_raiding_desc:1 "$bombardment_raiding$ Apunta a los centros de población enemigos. Naves de asalto intentarán capturar a los habitantes para que trabajen en nuestros mundos.\n- Daño §Eligero§! a los §Yejércitos§!\n- Daño §Eligero§! al §Yplaneta§!\n- Daño §Ymoderado§! a las §Ypoblaciones§!\n- Se §Ysecuestrarán§! poblaciones cuando sea posible en vez de matarlas.\n"

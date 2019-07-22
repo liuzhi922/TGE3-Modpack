@@ -1,0 +1,963 @@
+# Garbage World
+eco_decision_trash_colony = {
+	owned_planets_only = yes
+	
+	prerequisites = {
+		"eco_tech_trash_colonies"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {
+		is_capital = no
+		NOT = { has_modifier = penal_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_modifier = resort_colony }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_relic }
+		NOT = { has_planet_flag = eco_no_pollution }
+		NOT = { 
+			owner = { 
+				any_owned_planet = { has_modifier = eco_trash_colony }
+			}
+		}
+	}
+	
+	allow = {
+		planet_size > 9
+		num_pops > 9
+		NOT = { owner = { has_policy_flag = eco_policy_disposal } }
+		custom_tooltip = { 
+			fail_text = decision_trash_colony_no_districts
+			num_districts = { type = any value < 1 }
+		}
+	}
+	
+	effect = {
+		add_modifier = {
+			modifier = eco_trash_colony
+			days = -1
+		}
+		add_deposit = d_eco_trash_zone
+		hidden_effect = { validate_planet_buildings_and_districts = yes }
+		set_global_flag = eco_has_garbage_world
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Abolish Garbage World
+eco_decision_abolish_trash_colony = {
+	owned_planets_only = yes
+	icon = eco_decision_trash_colony
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {
+		has_modifier = eco_trash_colony
+	}
+	
+	effect = {
+		remove_modifier = eco_trash_colony
+		remove_deposit = d_eco_trash_zone
+		add_deposit = d_eco_trash_pile
+		add_deposit = d_eco_trash_pile
+		add_deposit = d_eco_trash_pile
+		add_deposit = d_eco_trash_pile
+		add_deposit = d_eco_trash_pile
+		hidden_effect = { validate_planet_buildings_and_districts = yes }
+		remove_global_flag = eco_has_garbage_world
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Climate Engineering
+eco_decision_climate_engineering = {
+	owned_planets_only = yes
+
+	enactment_time = 180
+	
+	prerequisites = {
+		"tech_climate_restoration"
+	}
+	
+	potential = {
+		OR = {
+			has_modifier = hazardous_weather
+			has_modifier = wild_storms
+			has_modifier = irradiated_planet
+			has_modifier = abandoned_terraforming
+			has_modifier = eco_artificial_1a
+			has_modifier = eco_artificial_1c
+		}
+	}
+	
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+	
+	effect = {
+		custom_tooltip = eco_decision_climate_engineering_tooltip
+		if = {
+			limit = { has_modifier = irradiated_planet }
+			remove_modifier = irradiated_planet
+			add_modifier = { modifier = "bleak_planet" days = -1 }
+			add_deposit = d_mineral_fields
+			hidden_effect = { validate_planet_buildings_and_districts = yes }
+		} else_if = {
+			limit = { has_modifier = wild_storms }
+			remove_modifier = wild_storms
+		} else_if = {
+			limit = { has_modifier = hazardous_weather }
+			remove_modifier = hazardous_weather
+			add_deposit = d_tempestous_mountain
+			hidden_effect = { validate_planet_buildings_and_districts = yes }
+		} else_if = {
+			limit = { has_modifier = abandoned_terraforming }
+			remove_modifier = abandoned_terraforming
+		} else_if = {
+			limit = { has_modifier = eco_artificial_1a }
+			remove_modifier = eco_artificial_1a
+		} else_if = {
+			limit = { has_modifier = eco_artificial_1c }
+			remove_modifier = eco_artificial_1c
+		}
+	}
+}
+
+# Ecological Engineering
+eco_decision_ecological_engineering = {
+	owned_planets_only = yes
+
+	enactment_time = 180
+	prerequisites = {
+		"tech_ecological_adaptation"
+	}
+	
+	potential = {
+		OR = { 
+			has_modifier = dangerous_wildlife
+			has_modifier = predatory_plants
+			has_modifier = bleak_planet
+			has_modifier = eco_displaced_wildlife
+			has_modifier = eco_displaced_wildlife_2
+			has_modifier = eco_displaced_wildlife_3
+			has_modifier = eco_artificial_1b
+			has_modifier = eco_artificial_1d
+		}
+	}
+	
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+	
+	effect = {
+		custom_tooltip = eco_decision_ecological_engineering_tooltip
+		if = { 
+			limit = { has_modifier = bleak_planet }
+			remove_modifier = bleak_planet
+		} else_if = {
+			limit = { has_modifier = dangerous_wildlife }
+			remove_modifier = dangerous_wildlife
+		} else_if = {
+			limit = { has_modifier = predatory_plants }
+			remove_modifier = predatory_plants
+		} else_if = {
+			limit = { has_modifier = eco_displaced_wildlife_2 }
+			remove_modifier = eco_displaced_wildlife_2
+		} else_if = {
+			limit = { has_modifier = eco_displaced_wildlife_3 }
+			remove_modifier = eco_displaced_wildlife_3
+		} else_if = { 
+			limit = { has_modifier = eco_displaced_wildlife }
+			remove_modifier = eco_displaced_wildlife
+		} else_if = {
+			limit = { has_modifier = eco_artificial_1b }
+			remove_modifier = eco_artificial_1b
+		} else_if = {
+			limit = { has_modifier = eco_artificial_1d }
+			remove_modifier = eco_artificial_1d
+		}
+		
+	}
+}
+
+# Civil Engineering
+eco_decision_civil_engineering = {
+	owned_planets_only = yes
+
+	enactment_time = 180
+	
+	potential = {
+		OR = { 
+			has_modifier = eco_visual_fail
+			has_modifier = eco_noise_fail
+			has_modifier = eco_light_fail
+			has_deposit = d_eco_sprawl
+			has_deposit = d_eco_sprawl_2
+		}
+	}
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+		}
+	}
+	
+	effect = {
+		custom_tooltip = eco_decision_civil_engineering_tooltip
+		if = { 
+			limit = { has_modifier = eco_visual_fail }
+			remove_modifier = eco_visual_fail
+		} else_if = {
+			limit = { has_modifier = eco_noise_fail }
+			remove_modifier = eco_noise_fail
+		} else_if = {
+			limit = { has_modifier = eco_light_fail }
+			remove_modifier = eco_light_fail
+		} else_if = {
+			limit = { has_deposit = d_eco_sprawl }
+			remove_deposit = d_eco_sprawl
+		} else_if = {
+			limit = { has_deposit = d_eco_sprawl_2 }
+			remove_deposit = d_eco_sprawl_2
+			add_deposit = d_eco_sprawl
+			hidden_effect = { validate_planet_buildings_and_districts = yes }
+		}
+	}
+}
+
+# Environmental Engineering
+eco_decision_environmental_engineering = {
+	owned_planets_only = yes
+
+	enactment_time = 180
+	prerequisites = {
+		"tech_terrestrial_sculpting"
+	}
+	
+	potential = {
+		OR = { 
+			has_modifier = eco_air_fail
+			has_modifier = eco_soil_fail
+			has_modifier = eco_water_fail
+		}
+	}
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2000
+		}
+	}
+	
+	effect = {
+		custom_tooltip = eco_decision_environmental_engineering_tooltip
+		if = { 
+			limit = { has_modifier = eco_air_fail }
+			remove_modifier = eco_air_fail
+		} else_if = {
+			limit = { has_modifier = eco_soil_fail }
+			remove_modifier = eco_soil_fail
+		} else_if = {
+			limit = { has_modifier = eco_water_fail }
+			remove_modifier = eco_water_fail
+		}
+	}
+}
+
+# City Park
+eco_decision_city_park = {
+	owned_planets_only = yes
+	
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+		}
+	}
+	
+	potential = {
+		NOT = { is_planet_class = pc_gas_giant }
+		NOT = { is_planet_class = pc_asteroid }
+		NOT = { is_planet_class = pc_ice_asteroid }
+		NOT = { is_planet_class = pc_rare_crystal_asteroid }
+		NOT = { is_planet_class = pc_molten }
+		NOT = { is_planet_class = pc_barren }
+		NOT = { is_planet_class = pc_barren_cold }
+		NOT = { is_planet_class = pc_toxic }
+		NOT = { is_planet_class = pc_frozen }
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_cybrex }
+		NOT = { is_planet_class = pc_ringworld_habitable }
+		owner = {
+			OR = { 
+				NOT = { has_authority = auth_machine_intelligence }
+				has_civic = civic_machine_servitor
+			}
+		}
+		NOT = { has_deposit = d_eco_city_park }
+		NOt = { has_deposit = d_eco_city_park_hive }
+	}
+	
+	allow = {
+		NOR ={
+			has_modifier = eco_heavy
+			has_modifier = eco_extreme
+			has_modifier = eco_catastrophic
+		}
+		free_district_slots > 0
+	}
+	
+	effect = {
+		set_planet_flag = eco_city_park_decision
+		if = {
+			limit = { owner = { is_regular_empire = yes } }
+			add_deposit = d_eco_city_park
+			custom_tooltip = eco_city_park_tooltip
+		} else_if = {
+			limit = {
+				owner = { 
+					OR = { 
+						is_hive_empire = yes
+						has_civic = civic_machine_servitor
+					}
+				}
+			}
+			add_deposit = d_eco_city_park_hive
+			custom_tooltip = eco_city_park_hive_tooltip
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Close City Park
+eco_decision_close_city_park = {
+	owned_planets_only = yes
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 10
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_deposit = d_eco_city_park
+			has_deposit = d_eco_city_park_hive
+		}
+		NOR = {
+			has_deposit = d_eco_park
+			has_deposit = d_eco_park_hive
+		}
+	}
+	
+	effect = {
+		remove_planet_flag = eco_city_park_decision
+		if = {
+			limit = { owner = { is_regular_empire = yes } }
+			remove_deposit = d_eco_city_park
+			custom_tooltip = eco_city_park_tooltip
+		} else_if = {
+			limit = {
+				owner = { 
+					OR = { 
+						is_hive_empire = yes
+						has_civic = civic_machine_servitor
+					}
+				}
+			}
+			remove_deposit = d_eco_city_park_hive
+			custom_tooltip = eco_city_park_hive_tooltip
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# National Park
+eco_decision_national_park = {
+	owned_planets_only = yes
+	
+	enactment_time = 180
+	prerequisites = {
+		"eco_tech_waste_processing_1"
+	}
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = {
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_relic }
+		NOT = { is_planet_class = pc_nuked }
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_gas_giant }
+		NOT = { is_planet_class = pc_asteroid }
+		NOT = { is_planet_class = pc_ice_asteroid }
+		NOT = { is_planet_class = pc_rare_crystal_asteroid }
+		NOT = { is_planet_class = pc_molten }
+		NOT = { is_planet_class = pc_barren }
+		NOT = { is_planet_class = pc_barren_cold }
+		NOT = { is_planet_class = pc_toxic }
+		NOT = { is_planet_class = pc_frozen }
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_cybrex }
+		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { has_planet_flag = eco_no_pollution }
+		NOT = { has_modifier = eco_trash_colony }
+		owner = {
+			OR = { 
+				NOT = { has_authority = auth_machine_intelligence }
+				has_civic = civic_machine_servitor
+			}
+		}
+		NOT = { has_deposit = d_eco_park }
+		NOt = { has_deposit = d_eco_park_hive }
+		OR = {
+			has_deposit = d_eco_city_park
+			has_deposit = d_eco_city_park_hive
+		}
+	}
+	
+	allow = {
+		NOR ={
+			has_modifier = eco_heavy
+			has_modifier = eco_extreme
+			has_modifier = eco_catastrophic
+		}
+		free_district_slots > 0
+	}
+	
+	effect = {
+		set_planet_flag = eco_park_decision
+		if = {
+			limit = { owner = { is_regular_empire = yes } }
+			add_deposit = d_eco_park
+			custom_tooltip = eco_park_tooltip
+		} else_if = {
+			limit = {
+				owner = { 
+					OR = { 
+						is_hive_empire = yes
+						has_civic = civic_machine_servitor
+					}
+				}
+			}
+			add_deposit = d_eco_park_hive
+			custom_tooltip = eco_park_hive_tooltip
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Close National Park
+eco_decision_close_national_park = {
+	owned_planets_only = yes
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_deposit = d_eco_park
+			has_deposit = d_eco_park_hive
+		}
+		NOR = {
+			has_deposit = d_eco_preserve
+			has_deposit = d_eco_preserve_hive
+		}
+	}
+	
+	effect = {
+		remove_planet_flag = eco_park_decision
+		if = {
+			limit = { owner = { is_regular_empire = yes } }
+			remove_deposit = d_eco_park
+			custom_tooltip = eco_park_tooltip
+		} else_if = {
+			limit = {
+				owner = { 
+					OR = { 
+						is_hive_empire = yes
+						has_civic = civic_machine_servitor
+					}
+				}
+			}
+			remove_deposit = d_eco_park_hive
+			custom_tooltip = eco_park_hive_tooltip
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Wildlife Preserve
+eco_decision_wildlife_preserve = {
+	owned_planets_only = yes
+	
+	enactment_time = 180
+	prerequisites = {
+		"eco_tech_waste_processing_2"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 75
+		}
+	}
+	
+	potential = {
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_relic }
+		NOT = { is_planet_class = pc_nuked }
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_gas_giant }
+		NOT = { is_planet_class = pc_asteroid }
+		NOT = { is_planet_class = pc_ice_asteroid }
+		NOT = { is_planet_class = pc_rare_crystal_asteroid }
+		NOT = { is_planet_class = pc_molten }
+		NOT = { is_planet_class = pc_barren }
+		NOT = { is_planet_class = pc_barren_cold }
+		NOT = { is_planet_class = pc_toxic }
+		NOT = { is_planet_class = pc_frozen }
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_cybrex }
+		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { has_planet_flag = eco_no_pollution }
+		NOT = { has_modifier = eco_trash_colony }
+		owner = {
+			OR = {
+				NOT = { has_authority = auth_machine_intelligence }
+				has_civic = civic_machine_servitor
+			}
+		}
+		NOT = { has_deposit = d_eco_preserve }
+		NOT = { has_deposit = d_eco_preserve_hive }
+		OR = {
+			has_deposit = d_eco_park
+			has_deposit = d_eco_park_hive
+		}
+	}
+	
+	allow = {
+		NOR ={
+			has_modifier = eco_heavy
+			has_modifier = eco_extreme
+			has_modifier = eco_catastrophic
+			has_modifier = eco_species_poor
+		}
+		free_district_slots > 0
+	}
+	
+	effect = {
+		set_planet_flag = ecology_preserve_decision
+		if = {
+			limit = { 
+				owner = { is_regular_empire = yes }
+			}
+			add_deposit = d_eco_preserve
+			custom_tooltip = eco_preserve_tooltip
+		} else_if = {
+			limit = {
+				OR = {
+					owner = { is_hive_empire = yes }
+					owner = { has_civic = civic_machine_servitor }
+				}
+			}
+			add_deposit = d_eco_preserve_hive
+			custom_tooltip = eco_preserve_hive_tooltip
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# Close Wildlife Preserve
+eco_decision_close_wildlife_preserve = {
+	owned_planets_only = yes
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = { 
+		OR = {
+			has_deposit = d_eco_preserve
+			has_deposit = d_eco_preserve_hive
+		}
+	}
+	
+	effect = { 
+		remove_planet_flag = ecology_preserve_decision
+		if = {
+			limit = { 
+				owner = { 
+					OR = { 
+						is_regular_empire = yes
+						has_civic = civic_machine_servitor
+					}
+				}
+			}
+			remove_deposit = d_eco_preserve
+			custom_tooltip = eco_preserve_tooltip
+		} else_if = {
+			limit = { owner = { is_hive_empire = yes } }
+			remove_deposit = d_eco_preserve_hive
+			custom_tooltip = eco_preserve_hive_tooltip
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Wildlife Habitat
+eco_decision_wildlife_habitat = {
+	owned_planets_only = yes
+	
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_ringworld_habitable
+		}
+		owner = {
+			OR = { 
+				NOT = { has_authority = auth_machine_intelligence }
+				has_civic = civic_machine_servitor
+			}
+		}
+		NOT = { has_deposit = d_eco_wildlife_habitat }
+		NOt = { has_deposit = d_eco_wildlife_habitat_hive }
+	}
+	
+	allow = {
+		NOR ={
+			has_modifier = eco_waste_mod
+			has_modifier = eco_waste_high
+		}
+		free_district_slots > 0
+	}
+	
+	effect = {
+		set_planet_flag = eco_city_park_decision
+		if = {
+			limit = { owner = { is_regular_empire = yes } }
+			add_deposit = d_eco_wildlife_habitat
+			custom_tooltip = eco_wildlife_habitat_tooltip
+		} else_if = {
+			limit = {
+				owner = { 
+					OR = { 
+						is_hive_empire = yes
+						has_civic = civic_machine_servitor
+					}
+				}
+			}
+			add_deposit = d_eco_wildlife_habitat_hive
+			custom_tooltip = eco_wildlife_habitat_hive_tooltip
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Close Wildlife Habitat
+eco_decision_close_wildlife_habitat = {
+	owned_planets_only = yes
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_deposit = d_eco_wildlife_habitat
+			has_deposit = d_eco_wildlife_habitat_hive
+		}
+	}
+	
+	effect = {
+		remove_planet_flag = eco_city_park_decision
+		if = {
+			limit = { owner = { is_regular_empire = yes } }
+			remove_deposit = d_eco_wildlife_habitat
+			custom_tooltip = eco_wildlife_habitat_tooltip
+		} else_if = {
+			limit = {
+				owner = { 
+					OR = { 
+						is_hive_empire = yes
+						has_civic = civic_machine_servitor
+					}
+				}
+			}
+			remove_deposit = d_eco_wildlife_habitat_hive
+			custom_tooltip = eco_wildlife_habitat_hive_tooltip
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Overconsumption
+eco_decision_overconsumption = {
+	owned_planets_only = yes
+	
+	resources = {
+		category = decisions
+		cost = {
+			food = 100
+			consumer_goods = 50
+		}
+	}
+	
+	potential = {
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = eco_overconsumption }
+	}
+	
+	effect = {
+		add_modifier = { modifier = eco_overconsumption days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops > 19
+		}
+	}
+}
+
+# Stop Overconsumption
+eco_decision_stop_overconsumption = {
+	owned_planets_only = yes
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 10
+		}
+	}
+	
+	potential = {
+		has_modifier = eco_overconsumption
+	}
+	
+	effect = {
+		remove_modifier = eco_overconsumption
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 10
+			has_modifier = eco_overpopulated
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops < 19
+		}
+	}
+}
+
+# Suburbanization
+eco_decision_suburbanization = {
+	owned_planets_only = yes
+	
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 100
+			energy = 100
+		}
+	}
+	
+	potential = {
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = eco_suburbanization }
+	}
+	
+	effect = {
+		add_modifier = { modifier = eco_suburbanization days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_housing < 5
+		}
+		modifier = {
+			factor = 0
+			num_pops > 29
+		}
+	}
+}
+
+# Stop Suburbanization
+eco_decision_stop_suburbanization = {
+	owned_planets_only = yes
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 10
+		}
+	}
+	
+	potential = {
+		has_modifier = eco_suburbanization
+	}
+	
+	effect = {
+		remove_modifier = eco_suburbanization
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 5
+			has_modifier = eco_overpopulated
+		}
+		modifier = {
+			factor = 5
+			free_housing < 1
+		}
+		modifier = {
+			factor = 0
+			free_housing > 0
+		}
+		modifier = {
+			factor = 0
+			num_pops < 30
+		}
+	}
+}
+
+# Land Ethic
+eco_decision_land_ethic = {
+	owned_planets_only = yes
+	
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+	
+	potential = {
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_relic }
+		NOT = { is_planet_class = pc_nuked }
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_gas_giant }
+		NOT = { is_planet_class = pc_asteroid }
+		NOT = { is_planet_class = pc_ice_asteroid }
+		NOT = { is_planet_class = pc_rare_crystal_asteroid }
+		NOT = { is_planet_class = pc_molten }
+		NOT = { is_planet_class = pc_barren }
+		NOT = { is_planet_class = pc_barren_cold }
+		NOT = { is_planet_class = pc_toxic }
+		NOT = { is_planet_class = pc_frozen }
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_cybrex }
+		NOT = { is_planet_class = pc_ringworld_habitable }
+		NOT = { has_planet_flag = eco_no_pollution }
+		OR = { 
+			has_modifier = eco_fragile_ecosystem
+			NOT = { has_modifier = eco_resilient_ecosystem }
+		}
+		OR = { 
+			owner = { has_ascension_perk = eco_ap_land_ethic }
+			owner = { has_ascension_perk = eco_ap_land_ethic_gestalt }
+		}
+	}
+	
+	effect = {
+		custom_tooltip = eco_decision_land_ethic_tooltip
+		if = {
+			limit = { has_modifier = eco_fragile_ecosystem }
+			remove_modifier = eco_fragile_ecosystem
+		} else_if = {
+			limit = { NOT = { has_modifier = eco_resilient_ecosystem } }
+			add_modifier = { modifier = eco_resilient_ecosystem }
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}

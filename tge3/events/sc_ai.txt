@@ -1,0 +1,48 @@
+namespace = sc_ai_events
+
+### Start AI Proposal Chain
+country_event = {
+	id = sc_ai_events.1
+	hide_window = yes
+	
+	trigger = {
+		is_ai = yes
+		has_federation = yes
+		NOR = {
+			has_country_flag = sc_proposal_ongoing
+			has_country_flag = sc_proposal_made_timer
+		}
+		OR = {
+			is_federation_leader = yes
+			NOT = {
+				has_policy_flag = sc_federal_discretionary
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 2
+	}
+
+	immediate = {
+		### Make Sure the Triggers Still Apply
+		if = {
+			limit = {
+				is_ai = yes
+				has_federation = yes
+				NOR = {
+					has_country_flag = sc_proposal_ongoing
+					has_country_flag = sc_proposal_made_timer
+				}
+				OR = {
+					is_federation_leader = yes
+					NOT = {
+						has_policy_flag = sc_federal_discretionary
+					}
+				}		
+			}
+			country_event = { id = sc_legislation.1 }
+		}	
+	}
+}
+

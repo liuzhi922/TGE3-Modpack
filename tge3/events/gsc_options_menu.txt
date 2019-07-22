@@ -1,0 +1,527 @@
+namespace = gsc_start_menu
+
+
+country_event = {
+	id = gsc_start_menu.1
+	title = gsc_start_menu.1.name
+	desc = gsc_start_menu.1.desc
+	picture = GFX_evt_gsc_guillis_ship_components
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		not = { has_global_flag = guillis_planet_modifiers_active }
+	}
+	
+	immediate = {
+	}
+
+	# options menu
+	option = {
+		name = gsc_start_menu.1.options_weapons
+		custom_tooltip = gsc_start_menu.1.options_weaponsTT
+		hidden_effect = {
+			country_event = { id = gsc_start_menu.2  }
+		}
+	}
+	option = {
+		name = gsc_start_menu.1.options_components
+		custom_tooltip = gsc_start_menu.1.options_componentsTT
+		hidden_effect = {
+			country_event = { id = gsc_start_menu.3  }
+		}
+	}
+	# start
+	option = {
+		name = gsc_start_menu.2.start
+		custom_tooltip = gsc_start_menu.2.startTT
+	}
+}
+
+# weapon component options
+country_event = {
+	id = gsc_start_menu.2
+	title = gsc_start_menu.2.name
+	desc = gsc_start_menu.2.desc
+	picture = GFX_evt_gsc_guillis_ship_components
+	
+	is_triggered_only = yes
+	
+	
+	trigger = {
+		is_multiplayer = no 
+	}
+	
+	
+	immediate = {
+
+	}
+
+	# Disable lasers
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_lasers } }
+		name = gsc_start_menu.2.disable_lasers
+		custom_tooltip = gsc_start_menu.2.disable_lasersTT
+		set_global_flag = gsc_disable_lasers
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable lasers
+	option = {
+		trigger = { has_global_flag = gsc_disable_lasers }
+		name = gsc_start_menu.2.enable_lasers
+		custom_tooltip = gsc_start_menu.2.enable_lasersTT
+		remove_global_flag = gsc_disable_lasers
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable mass_drivers
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_mass_drivers } }
+		name = gsc_start_menu.2.disable_mass_drivers
+		custom_tooltip = gsc_start_menu.2.disable_mass_driversTT
+		set_global_flag = gsc_disable_mass_drivers
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable mass_drivers
+	option = {
+		trigger = { has_global_flag = gsc_disable_mass_drivers }
+		name = gsc_start_menu.2.enable_mass_drivers
+		custom_tooltip = gsc_start_menu.2.enable_mass_driversTT
+		remove_global_flag = gsc_disable_mass_drivers
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable missiles
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_missiles } }
+		name = gsc_start_menu.2.disable_missiles
+		custom_tooltip = gsc_start_menu.2.disable_missilesTT
+		set_global_flag = gsc_disable_missiles
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable missiles
+	option = {
+		trigger = { has_global_flag = gsc_disable_missiles }
+		name = gsc_start_menu.2.enable_missiles
+		custom_tooltip = gsc_start_menu.2.enable_missilesTT
+		remove_global_flag = gsc_disable_missiles
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable plasma
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_plasma } }
+		name = gsc_start_menu.2.disable_plasma
+		custom_tooltip = gsc_start_menu.2.disable_plasmaTT
+		set_global_flag = gsc_disable_plasma
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable plasma
+	option = {
+		trigger = { has_global_flag = gsc_disable_plasma }
+		name = gsc_start_menu.2.enable_plasma
+		custom_tooltip = gsc_start_menu.2.enable_plasmaTT
+		remove_global_flag = gsc_disable_plasma
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable autocannnons
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_autocannnons } }
+		name = gsc_start_menu.2.disable_autocannnons
+		custom_tooltip = gsc_start_menu.2.disable_autocannnonsTT
+		set_global_flag = gsc_disable_autocannnons
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable autocannnons
+	option = {
+		trigger = { has_global_flag = gsc_disable_autocannnons }
+		name = gsc_start_menu.2.enable_autocannnons
+		custom_tooltip = gsc_start_menu.2.enable_autocannnonsTT
+		remove_global_flag = gsc_disable_autocannnons
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable swarm_missiles
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_swarm_missiles } }
+		name = gsc_start_menu.2.disable_swarm_missiles
+		custom_tooltip = gsc_start_menu.2.disable_swarm_missilesTT
+		set_global_flag = gsc_disable_swarm_missiles
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable swarm_missiles
+	option = {
+		trigger = { has_global_flag = gsc_disable_swarm_missiles }
+		name = gsc_start_menu.2.enable_swarm_missiles
+		custom_tooltip = gsc_start_menu.2.enable_swarm_missilesTT
+		remove_global_flag = gsc_disable_swarm_missiles
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable torpedos
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_torpedos } }
+		name = gsc_start_menu.2.disable_torpedos
+		custom_tooltip = gsc_start_menu.2.disable_torpedosTT
+		set_global_flag = gsc_disable_torpedos
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable torpedos
+	option = {
+		trigger = { has_global_flag = gsc_disable_torpedos }
+		name = gsc_start_menu.2.enable_torpedos
+		custom_tooltip = gsc_start_menu.2.enable_torpedosTT
+		remove_global_flag = gsc_disable_torpedos
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable energy_lance
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_energy_lance } }
+		name = gsc_start_menu.2.disable_energy_lance
+		custom_tooltip = gsc_start_menu.2.disable_energy_lanceTT
+		set_global_flag = gsc_disable_energy_lance
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable energy_lance
+	option = {
+		trigger = { has_global_flag = gsc_disable_energy_lance }
+		name = gsc_start_menu.2.enable_energy_lance
+		custom_tooltip = gsc_start_menu.2.enable_energy_lanceTT
+		remove_global_flag = gsc_disable_energy_lance
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable kinetic_cannon
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_kinetic_cannon } }
+		name = gsc_start_menu.2.disable_kinetic_cannon
+		custom_tooltip = gsc_start_menu.2.disable_kinetic_cannonTT
+		set_global_flag = gsc_disable_kinetic_cannon
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable kinetic_cannon
+	option = {
+		trigger = { has_global_flag = gsc_disable_kinetic_cannon }
+		name = gsc_start_menu.2.enable_kinetic_cannon
+		custom_tooltip = gsc_start_menu.2.enable_kinetic_cannonTT
+		remove_global_flag = gsc_disable_kinetic_cannon
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable kinetic_battery
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_kinetic_battery } }
+		name = gsc_start_menu.2.disable_kinetic_battery
+		custom_tooltip = gsc_start_menu.2.disable_kinetic_batteryTT
+		set_global_flag = gsc_disable_kinetic_battery
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable kinetic_battery
+	option = {
+		trigger = { has_global_flag = gsc_disable_kinetic_battery }
+		name = gsc_start_menu.2.enable_kinetic_battery
+		custom_tooltip = gsc_start_menu.2.enable_kinetic_batteryTT
+		remove_global_flag = gsc_disable_kinetic_battery
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable perdition_beam
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_perdition_beam } }
+		name = gsc_start_menu.2.disable_perdition_beam
+		custom_tooltip = gsc_start_menu.2.disable_perdition_beamTT
+		set_global_flag = gsc_disable_perdition_beam
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable perdition_beam
+	option = {
+		trigger = { has_global_flag = gsc_disable_perdition_beam }
+		name = gsc_start_menu.2.enable_perdition_beam
+		custom_tooltip = gsc_start_menu.2.enable_perdition_beamTT
+		remove_global_flag = gsc_disable_perdition_beam
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable strike_craft
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_strike_craft } }
+		name = gsc_start_menu.2.disable_strike_craft
+		custom_tooltip = gsc_start_menu.2.disable_strike_craftTT
+		set_global_flag = gsc_disable_strike_craft
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable strike_craft
+	option = {
+		trigger = { has_global_flag = gsc_disable_strike_craft }
+		name = gsc_start_menu.2.enable_strike_craft
+		custom_tooltip = gsc_start_menu.2.enable_strike_craftTT
+		remove_global_flag = gsc_disable_strike_craft
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# Disable point_defenses
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_point_defenses } }
+		name = gsc_start_menu.2.disable_point_defenses
+		custom_tooltip = gsc_start_menu.2.disable_point_defensesTT
+		set_global_flag = gsc_disable_point_defenses
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable point_defenses
+	option = {
+		trigger = { has_global_flag = gsc_disable_point_defenses }
+		name = gsc_start_menu.2.enable_point_defenses
+		custom_tooltip = gsc_start_menu.2.enable_point_defensesTT
+		remove_global_flag = gsc_disable_point_defenses
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	
+	# Disable disruptors
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_disruptors } }
+		name = gsc_start_menu.2.disable_disruptors
+		custom_tooltip = gsc_start_menu.2.disable_disruptorsTT
+		set_global_flag = gsc_disable_disruptors
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable disruptors
+	option = {
+		trigger = { has_global_flag = gsc_disable_disruptors }
+		name = gsc_start_menu.2.enable_disruptors
+		custom_tooltip = gsc_start_menu.2.enable_disruptorsTT
+		remove_global_flag = gsc_disable_disruptors
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	
+	# Disable arc_emitter
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_arc_emitter } }
+		name = gsc_start_menu.2.disable_arc_emitter
+		custom_tooltip = gsc_start_menu.2.disable_arc_emitterTT
+		set_global_flag = gsc_disable_arc_emitter
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+	# Enable arc_emitter
+	option = {
+		trigger = { has_global_flag = gsc_disable_arc_emitter }
+		name = gsc_start_menu.2.enable_arc_emitter
+		custom_tooltip = gsc_start_menu.2.enable_arc_emitterTT
+		remove_global_flag = gsc_disable_arc_emitter
+		hidden_effect = { country_event = { id = gsc_start_menu.2 } }
+	}
+
+	# back button 
+	option = {
+		trigger = { not = { has_global_flag = guillis_planet_modifiers_active }	}
+		name = gsc_start_menu.2.back
+		custom_tooltip = gsc_start_menu.2.backTT
+		hidden_effect = {
+			country_event = { id = gsc_start_menu.1  }
+		}
+	}
+	
+	# back button GPM
+	option = {
+		trigger = { has_global_flag = guillis_planet_modifiers_active }
+		name = gsc_start_menu.2.back
+		custom_tooltip = gsc_start_menu.2.backTT
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+}
+
+# non-weapon component options
+country_event = {
+	id = gsc_start_menu.3
+	title = gsc_start_menu.3.name
+	desc = gsc_start_menu.3.desc
+	picture = GFX_evt_gsc_guillis_ship_components
+	
+	is_triggered_only = yes
+	
+	
+	trigger = {
+		is_multiplayer = no 
+	}
+	
+	
+	immediate = {
+
+	}
+
+	# Disable Reactors
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_reactors } }
+		name = gsc_start_menu.3.disable_reactors
+		custom_tooltip = gsc_start_menu.3.disable_reactorsTT
+		set_global_flag = gsc_disable_reactors
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	# Enable Reactors
+	option = {
+		trigger = { has_global_flag = gsc_disable_reactors }
+		name = gsc_start_menu.3.enable_reactors
+		custom_tooltip = gsc_start_menu.3.enable_reactorsTT
+		remove_global_flag = gsc_disable_reactors
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+
+	# Disable hangars
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_hangars } }
+		name = gsc_start_menu.3.disable_hangars
+		custom_tooltip = gsc_start_menu.3.disable_hangarsTT
+		set_global_flag = gsc_disable_hangars
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	# Enable hangars
+	option = {
+		trigger = { has_global_flag = gsc_disable_hangars }
+		name = gsc_start_menu.3.enable_hangars
+		custom_tooltip = gsc_start_menu.3.enable_hangarsTT
+		remove_global_flag = gsc_disable_hangars
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	
+	# Disable targeting_matrix
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_targeting_matrix } }
+		name = gsc_start_menu.3.disable_targeting_matrix
+		custom_tooltip = gsc_start_menu.3.disable_targeting_matrixTT
+		set_global_flag = gsc_disable_targeting_matrix
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	# Enable targeting_matrix
+	option = {
+		trigger = { has_global_flag = gsc_disable_targeting_matrix }
+		name = gsc_start_menu.3.enable_targeting_matrix
+		custom_tooltip = gsc_start_menu.3.enable_targeting_matrixTT
+		remove_global_flag = gsc_disable_targeting_matrix
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	
+	# Disable armor
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_armor } }
+		name = gsc_start_menu.3.disable_armor
+		custom_tooltip = gsc_start_menu.3.disable_armorTT
+		set_global_flag = gsc_disable_armor
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	# Enable armor
+	option = {
+		trigger = { has_global_flag = gsc_disable_armor }
+		name = gsc_start_menu.3.enable_armor
+		custom_tooltip = gsc_start_menu.3.enable_armorTT
+		remove_global_flag = gsc_disable_armor
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	
+	# Disable shields
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_shields } }
+		name = gsc_start_menu.3.disable_shields
+		custom_tooltip = gsc_start_menu.3.disable_shieldsTT
+		set_global_flag = gsc_disable_shields
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	# Enable shields
+	option = {
+		trigger = { has_global_flag = gsc_disable_shields }
+		name = gsc_start_menu.3.enable_shields
+		custom_tooltip = gsc_start_menu.3.enable_shieldsTT
+		remove_global_flag = gsc_disable_shields
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	
+	# Disable plating
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_plating } }
+		name = gsc_start_menu.3.disable_plating
+		custom_tooltip = gsc_start_menu.3.disable_platingTT
+		set_global_flag = gsc_disable_plating
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	# Enable plating
+	option = {
+		trigger = { has_global_flag = gsc_disable_plating }
+		name = gsc_start_menu.3.enable_plating
+		custom_tooltip = gsc_start_menu.3.enable_platingTT
+		remove_global_flag = gsc_disable_plating
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	
+	# Disable hull_regen
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_hull_regen } }
+		name = gsc_start_menu.3.disable_hull_regen
+		custom_tooltip = gsc_start_menu.3.disable_hull_regenTT
+		set_global_flag = gsc_disable_hull_regen
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	# Enable hull_regen
+	option = {
+		trigger = { has_global_flag = gsc_disable_hull_regen }
+		name = gsc_start_menu.3.enable_hull_regen
+		custom_tooltip = gsc_start_menu.3.enable_hull_regenTT
+		remove_global_flag = gsc_disable_hull_regen
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	
+	# Disable sensors
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_sensors } }
+		name = gsc_start_menu.3.disable_sensors
+		custom_tooltip = gsc_start_menu.3.disable_sensorsTT
+		set_global_flag = gsc_disable_sensors
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	# Enable sensors
+	option = {
+		trigger = { has_global_flag = gsc_disable_sensors }
+		name = gsc_start_menu.3.enable_sensors
+		custom_tooltip = gsc_start_menu.3.enable_sensorsTT
+		remove_global_flag = gsc_disable_sensors
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	
+	# Disable thrusters
+	option = {
+		trigger = {	NOT = { has_global_flag = gsc_disable_thrusters } }
+		name = gsc_start_menu.3.disable_thrusters
+		custom_tooltip = gsc_start_menu.3.disable_thrustersTT
+		set_global_flag = gsc_disable_thrusters
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+	# Enable thrusters
+	option = {
+		trigger = { has_global_flag = gsc_disable_thrusters }
+		name = gsc_start_menu.3.enable_thrusters
+		custom_tooltip = gsc_start_menu.3.enable_thrustersTT
+		remove_global_flag = gsc_disable_thrusters
+		hidden_effect = { country_event = { id = gsc_start_menu.3 } }
+	}
+
+	# back button 
+	option = {
+		trigger = { not = { has_global_flag = guillis_planet_modifiers_active }	}
+		name = gsc_start_menu.2.back
+		custom_tooltip = gsc_start_menu.2.backTT
+		hidden_effect = {
+			country_event = { id = gsc_start_menu.1  }
+		}
+	}
+	
+	# back button GPM
+	option = {
+		trigger = { has_global_flag = guillis_planet_modifiers_active }
+		name = gsc_start_menu.2.back
+		custom_tooltip = gsc_start_menu.2.backTT
+		hidden_effect = {
+			country_event = { id = gpm_start_menu.1  }
+		}
+	}
+}

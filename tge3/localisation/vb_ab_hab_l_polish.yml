@@ -1,0 +1,8 @@
+﻿#Abandoned Habitat
+#By ViolentBeetle
+
+l_polish: 
+
+ #Blockers
+ d_ab_hab_ruined_section:0 "Ruined Section"
+ d_ab_hab_ruined_section_desc:0 "This habitat section has given in to the ravages of time and random asteroid impacts. Extensive repairs and clean-up is required to make it habitable again."

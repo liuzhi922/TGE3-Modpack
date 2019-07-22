@@ -1,0 +1,23 @@
+fed_prop_button_effect = {
+	potential = { 
+		has_federation = yes 
+		OR = {
+			is_federation_leader = yes
+			NOT = {
+				has_policy_flag = sc_federal_discretionary
+			}
+		}
+	}
+	allow = { 
+		hidden_trigger = {
+			NOR = {
+				has_country_flag = sc_proposal_ongoing
+				has_country_flag = sc_proposal_made_timer
+			}
+		}
+	}
+	effect = { 
+		custom_tooltip = "fed_proposal.effect"
+		hidden_effect = { country_event = { id = sc_legislation.1 } } 
+	}
+}

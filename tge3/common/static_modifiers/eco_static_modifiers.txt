@@ -1,0 +1,474 @@
+eco_pristine = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_pristine.dds"
+	icon_frame = 1
+	planet_stability_add = 10
+	pop_growth_speed = 0.10
+}
+
+eco_clean = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_clean.dds"
+	icon_frame = 1
+	planet_stability_add = 5
+	pop_growth_speed = 0.05
+}
+
+eco_minimal = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_pollution_minimal.dds"
+	icon_frame = 1
+}
+
+eco_moderate = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_pollution_moderate.dds"
+	icon_frame = 2
+	planet_stability_add = -5
+	pop_growth_speed = -0.05
+}
+
+eco_heavy = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_pollution_heavy.dds"
+	icon_frame = 2
+	planet_stability_add = -10
+	pop_growth_speed = -0.10
+}
+
+eco_extreme = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_pollution_extreme.dds"
+	icon_frame = 3
+	planet_stability_add = -15
+	pop_growth_speed = -0.15
+}
+
+eco_catastrophic = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_pollution_catastrophic.dds"
+	icon_frame = 3
+	planet_stability_add = -20
+	pop_growth_speed = -0.20
+}
+
+eco_waste_clean = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_waste_clean.dds"
+	icon_frame = 1
+	pop_environment_tolerance = 0.10
+}
+
+eco_waste_low = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_waste_low.dds"
+	icon_frame = 1
+}
+
+eco_waste_mod = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_waste_mod.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.10
+}
+
+eco_waste_high = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_waste_high.dds"
+	icon_frame = 3
+	pop_environment_tolerance = -0.20
+}
+
+eco_visual = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_visual.dds"
+	icon_frame = 2
+	planet_jobs_unity_produces_mult = -0.15
+	pop_government_ethic_attraction = -0.15
+}
+
+eco_visual_success = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_visual_success.dds"
+	icon_frame = 1
+	planet_jobs_unity_produces_mult = 0.10
+	pop_government_ethic_attraction = 0.10
+}
+
+eco_visual_fail = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_visual.dds"
+	icon_frame = 1
+	planet_jobs_unity_produces_mult = -0.15
+	pop_government_ethic_attraction = -0.15
+}
+
+eco_noise = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_noise.dds"
+	icon_frame = 2
+	pop_happiness = -0.15
+	planet_immigration_pull_mult = -0.15
+}
+
+eco_noise_success = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_noise_success.dds"
+	icon_frame = 1
+	pop_happiness = 0.10
+	planet_immigration_pull_mult = 0.10
+}
+
+eco_noise_fail = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_noise.dds"
+	icon_frame = 3
+	pop_happiness = -0.15
+	planet_immigration_pull_mult = -0.15
+}
+
+eco_light = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_light.dds"
+	icon_frame = 2
+	planet_jobs_physics_research_produces_mult = -0.15
+	planet_researchers_upkeep_mult = 0.15
+}
+
+eco_light_success = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_light_success.dds"
+	icon_frame = 1
+	planet_jobs_physics_research_produces_mult = 0.10
+	planet_researchers_upkeep_mult = -0.10
+}
+
+eco_light_fail = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_light.dds"
+	icon_frame = 3
+	planet_jobs_physics_research_produces_mult = -0.15
+	planet_researchers_upkeep_mult = 0.15
+	
+}
+
+eco_air = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_air.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.20
+}
+
+eco_air_success = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_air_success.dds"
+	icon_frame = 1
+	pop_environment_tolerance = 0.1
+}
+
+eco_air_fail = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_air.dds"
+	icon_frame = 3
+	pop_environment_tolerance = -0.20
+}
+
+eco_soil = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_soil.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.10
+	planet_jobs_food_produces_mult = -0.20
+}
+
+eco_soil_success = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_soil_success.dds"
+	icon_frame = 1
+	planet_jobs_food_produces_mult = 0.10
+}
+
+eco_soil_fail = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_soil.dds"
+	icon_frame = 3
+	pop_environment_tolerance = -0.10
+	planet_jobs_food_produces_mult = -0.20
+}
+
+eco_water = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_water.dds"
+	icon_frame = 2
+	pop_environment_tolerance = -0.10
+	pop_growth_speed = -0.20
+}
+
+eco_water_success = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_water_success.dds"
+	icon_frame = 1
+	pop_growth_speed = 0.10
+}
+
+eco_water_fail = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_water.dds"
+	icon_frame = 3
+	pop_environment_tolerance = -0.10
+	pop_growth_speed = -0.20
+}
+
+eco_climate_change = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_climate_change.dds"
+	icon_frame = 3
+	planet_stability_add = -5
+	custom_tooltip = eco_climate_change_tooltip
+	pop_environment_tolerance = -0.20
+}
+
+eco_collapse = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_collapse.dds"
+	icon_frame = 3
+	planet_stability_add = -10
+}
+
+eco_ozone = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_ozone.dds"
+	icon_frame = 3
+	pop_growth_speed = -0.15
+	planet_jobs_food_produces_mult = -0.15
+}
+
+eco_trash_colony = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_trash_colony.dds"
+	icon_frame = 2
+	custom_tooltip = eco_trash_colony_empire_effects
+	show_only_custom_tooltip = no
+	# This only works on timed planet modifiers!
+	apply_modifier_to_other_planets = eco_trash_colony_other_planets
+}
+
+eco_trash_colony_other_planets = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_pristine.dds"
+	custom_tooltip = eco_trash_colony_other_planets_tooltip
+	icon_frame = 1
+}
+
+eco_displaced_wildlife = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_dangerous_wildlife.dds"
+	icon_frame = 2
+	planet_structures_upkeep_mult = 0.15
+	planet_amenities_mult = -0.15
+}
+
+eco_displaced_wildlife_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_dangerous_wildlife.dds"
+	icon_frame = 3
+	planet_structures_upkeep_mult = 0.15
+	planet_amenities_mult = -0.25
+	pop_growth_speed = -0.25
+}
+
+eco_displaced_wildlife_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_titanic_life.dds"
+	icon_frame = 3
+	planet_structures_upkeep_mult = 0.25
+	planet_amenities_mult = -0.15
+	pop_growth_speed = -0.25
+}
+
+eco_species_rich = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_species_rich.dds"
+	icon_frame = 1
+	pop_environment_tolerance = 0.10
+}
+
+eco_species_poor = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_species_poor.dds"
+	icon_frame = 3
+	pop_environment_tolerance = -0.10
+}
+
+eco_resilient_ecosystem = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_resilient_ecosystem.dds"
+	icon_frame = 1
+	planet_stability_add = 5
+	custom_tooltip = eco_resilient_ecosystem_effect
+}
+
+eco_fragile_ecosystem = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_fragile_ecosystem.dds"
+	icon_frame = 3
+	planet_stability_add = -5
+	custom_tooltip = eco_fragile_ecosystem_effect
+}
+
+eco_drought = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_drought.dds"
+	icon_frame = 3
+	planet_jobs_food_produces_mult = -0.90
+}
+
+eco_flooding = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_flooding.dds"
+	icon_frame = 3
+	pop_housing_usage_mult = 0.25
+}
+
+eco_heat_wave = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_heat_wave.dds"
+	icon_frame = 3
+	pop_environment_tolerance = -0.10
+	custom_tooltip = eco_heat_wave_effect
+}
+
+eco_outbreak = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_outbreak.dds"
+	icon_frame = 3
+	pop_growth_speed = -0.50
+}
+
+eco_contamination = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_contamination.dds"
+	icon_frame = 3
+	pop_environment_tolerance = -0.10
+}
+
+eco_smugglers = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_smugglers.dds"
+	icon_frame = 3
+	planet_crime_add = 15
+	job_criminal_add = 1
+	job_criminal_per_crime = 0.03
+}
+
+eco_overconsumption = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources.dds"
+	icon_frame = 1
+	planet_pops_organics_food_upkeep_mult = 0.25
+	planet_pops_consumer_goods_upkeep_mult = 0.25
+	pop_amenities_usage_mult = -0.25
+	pop_growth_speed = 0.25
+}
+
+eco_suburbanization = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_suburbanization.dds"
+	icon_frame = 1
+	pop_housing_usage_mult = 0.25
+	pop_government_ethic_attraction = 0.25
+	planet_immigration_pull_mult = 0.5
+}
+
+eco_overpopulated = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_overpopulated.dds"
+	icon_frame = 3
+	pop_growth_speed = -0.50
+	planet_emigration_push_add = 50
+}
+
+# Terraforming Effects
+eco_artificial_1a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_1.dds"
+	icon_frame = 3
+	pop_environment_tolerance = -0.10
+}
+
+eco_artificial_1b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_1.dds"
+	icon_frame = 3
+	planet_max_districts_add = -1
+}
+
+eco_artificial_1c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_1.dds"
+	icon_frame = 3
+	planet_stability_add = -5
+}
+
+eco_artificial_1d = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_1.dds"
+	icon_frame = 3
+	district_generator_max = -1
+	district_mining_max = -1
+	district_farming_max = -1
+}
+
+eco_artificial_2a = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_2.dds"
+	icon_frame = 1
+	pop_environment_tolerance = 0.10
+}
+
+eco_artificial_2b = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_2.dds"
+	icon_frame = 1
+	planet_max_districts_add = 1
+}
+
+eco_artificial_2c = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_2.dds"
+	icon_frame = 1
+	planet_stability_add = 5
+}
+
+eco_artificial_2d = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_2.dds"
+	icon_frame = 1
+	district_generator_max = 1
+	district_mining_max = 1
+	district_farming_max = 1
+}
+
+eco_artificial_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_3.dds"
+	icon_frame = 1
+	planet_waste_produces_mult = 0.5
+	planet_ranger_produces_mult = 0.5
+}
+
+eco_artificial_4 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_eco_artificial_4.dds"
+	icon_frame = 1
+	planet_structures_upkeep_mult = -0.10
+	planet_pops_upkeep_mult = -0.1
+	planet_jobs_upkeep_mult = -0.1
+}
+
+# Environmental Ethics
+eco_authoritarian_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_authoritarian_environmentalism_tooltip
+	# Enforcer -20, Telepath -20, Noble -20
+}
+
+eco_egalitarian_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_egalitarian_environmentalism_tooltip
+	# Pops -1 with Decent Conditions, -2 with Social Welfare, -3 with Utopian Abundance
+}
+
+eco_xenophobe_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_xenophobe_environmentalism_tooltip
+	# Empire Species -2, Xeno Free +4 / Xeno Slave -4
+}
+
+eco_xenophile_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_xenophile_environmentalism_tooltip
+	# Xeno -4
+}
+
+eco_militarist_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_militarist_environmentalism_tooltip
+	# Defensive Army -10
+}
+
+eco_pacifist_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_pacifist_environmentalism_tooltip
+	# Park Ranger -10, Waste Handler -10, Waste Manager -20
+}
+
+eco_materialist_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_materialist_environmentalism_tooltip
+	# Researcher -20, Head Researcher -20
+}
+
+eco_spiritualist_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_spiritualist_environmentalism_tooltip
+	# Priests -20, High Priest -20, Prosperity Preachers -10
+}
+
+eco_corporate_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_corporate_environmentalism_tooltip
+	# Manager -10, Merchant -10, Executive -20
+}
+
+eco_hive_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_hive_environmentalism_tooltip
+	# Maintenance Drone -10
+}
+
+eco_machine_environmentalism = {
+	icon = "gfx/interface/icons/modifiers/mod_country_environmentalism.dds"
+	custom_tooltip = eco_machine_environmentalism_tooltip
+	# Maintenance Drone -10
+}

@@ -1,0 +1,176 @@
+﻿l_russian:
+ 
+ # ###################################
+ # Decisions
+ # ###################################
+ 
+ decision_O_LOSBSP:0 "[О] Низкоорбитальная солнечная электростанция"
+ decision_O_LOSBSP_desc:0 " §Энергокредиты§! £energy£ §G+32§! \n §YТехник§! §G+2§! \n §RУвеличивает§! урон от орбитальной бомбардировки \n"
+ decision_O_LOU:0 "[O] Низкоорбитальная урбанизация"
+ decision_O_LOU_desc:0 " Миксимум §Yрайонов§! £district£ §G+1§! \n §YЖильё§! £housing£ §G+4§! \n §RУвеличивает§! урон от орбитальной бомбардировки \n §GУвеличивает§! £happiness£ счастье \n §GУвеличивает§! £trade_value£ §YТорговую ценность§! \n §YТорговец§! §G+1§!, §YРаботник культуры§! §G+1§!, §YКлерк§! §G+1§!"
+ decision_U_SU:0 "[П] Подземная урбанизация"
+ decision_U_SU_desc:0 " Миксимум §Yрайонов§! £district£ §G+2§! \n §YЖильё§! £housing£ §G+24§! \n §YПриспособленность§! §G+5%§! \n §GУменьшает§! урон от орбитальной бомбардировки \n §RУвеличивает§! £crime£ §YПреступность§! \n §RУменьшает§! £happiness£ счастье \n §YКлерк§! §G+4§!"
+ decision_H_E:0 "[С] Расширение среды обитания"
+ decision_H_E_desc:0 " §YРайоны§! £district£  §G+1§!"
+ decision_R_E:0 "[К] Расширение мира-кольца"
+ decision_R_E_desc:0 " §YРайоны§! £district£  §G+5§!"
+ decision_Sv_VFD:0 "[З] Вертикальные сельскохозяйственные районы"
+ decision_Sv_VFD_desc:0 " Миксимум §Yрайонов§! £district£ §G-1§! \n §YФермер§! §G+12§!"
+ decision_O_LOSBF:0 "[О] Низкоорбитальное фермерство"
+ decision_O_LOSBF_desc:0 " §YПища§! £food£ §G+24§! \n §YФермер§! §G+6§!, §YНаучный сотрудник§! §G+1§! \n §RУвеличивает§! урон от орбитальной бомбардировки \n"
+ decision_H_SBSP:0 "[С] Солнечная электростанция"
+ decision_H_SBSP_desc:0 " §Энергокредиты§! £energy£ §G+32§! \n §YТехник§! §G+2§!"
+ decision_H_SBF:0 "[С] Космическое фермерство"
+ decision_H_SBF_desc:0 " §YПища§! £food£ §G+24§! \n §YФермер§! §G+6§!, §YНаучный сотрудник§! §G+1§!"
+ decision_H_ACMH:0 "[С] Астеройдный горнодобывающий хаб"
+ decision_H_ACMH_desc:0 " Миксимум §Yрайонов§! £district£ §G-1§! \n §YАдминистратор§! §G+1§!, §YНаучный сотрудник§! §G+1§!, §YШахтер§! §G+3§!, §YИзыскатель астеройдов§! §G+2§! \n §RУвеличивает§! £crime£ §YПреступность§!"  
+ decision_HR_LSDI:0 "[СК] Многопрофильная стыковочная инфраструктура"
+ decision_HR_LSDI_desc:0 " Миксимум §Yрайонов§! £district£ §G-1§! \n §YКосмо-механик§! §G+4§!, §YКлерк§! §G+2§! \n §YЖильё§! £housing£ §G+6§! \n §GУвеличивает§! £trade_value£ §YТорговую ценность§!"
+ decision_R_RTPAF:0 "[К] Геолого-разведка и фильтрация мира-кольца"
+ decision_R_RTPAF_desc:0 " §YАдминистратор§! §G+1§!, §YНаучный сотрудник§! §G+1§!, §YШахтер§! §G+3§!, §YИзыскатель Мира-кольца§! §G+2§! \n §RУменьшает§! £happiness£ счастье"
+ decision_U_SCI:0 "[П] Индустриальный город под землей" 
+ decision_U_SCI_desc:0 " §YШахтер§! §G+10§!, §YМеталлург§! §G+2§!, §YАртист§! §G+2§!, §YКлерк§! §G+3§! \n §YЖильё§! £housing£ §G+13§! \n §RУменьшает§! урон от орбитальной бомбардировки \n §RУвеличивает§! £crime£ §YПреступность§! \n §RУменьшает§! £happiness£ счастье"
+ decision_U_SER:0 "[П] Подземный город добычи и очистки"
+ decision_U_SER_desc:0 " §YШахтер§! §G+10§!, §YПодземный изыскатель§! §G+4§!, §YКлерк§! §G+3§! \n §YЖильё§! £housing£ §G+13§! \n §RУменьшает§! урон от орбитальной бомбардировки \n §RУвеличивает§! £crime£ §YПреступность§! \n §RУменьшает§! £happiness£ счастье"
+ decision_O_LSLODI:0 "[О] Многопрофильная низкоорбитальная стыковочная инфраструктура"
+ decision_O_LSLODI_desc:0 " §YКосмо-механик§! §G+4§!, §YКлекр§! §G+2§! \n §YЖильё§! £housing£ §G+6§! \n §RУвеличивает§! урон от орбитальной бомбардировки \n §GУвеличивает§! £trade_value£ §YТорговую ценность§!"
+ decision_U_DPBN:0 "[П] Планетарная сеть бункеров"
+ decision_U_DPBN_desc:0 " §YСолдат§! §G+12§! , §YСиловик§! §G+1§!, §YКлекр§! §G+2§! \n §YЖильё§! £housing£ §G+15§! \n §RУменьшает§! урон от орбитальной бомбардировки \n Подавитель ССД не включен"
+ decision_SaHR_ATN:0 "[ЗСК] Автономная транспортная сеть"
+ decision_SaHR_ATN_desc:0 " §YРайоны§! £district£  §G+1/2§! \n §YАдминистратор§! §G+1§!, §YКлерк§! §G+1§! \n §GУменьшает§! потребление населением £consumer_goods£ §YТоваров массового спроса§!"
+ decision_U_SC:0 "[П] Подземный собор"
+ decision_U_SC_desc:0 " §RУменьшает§! урон от орбитальной бомбардировки \n §GУменьшает§! £crime£ §YПреступность§! \n §GУвеличивает§! £happiness£ счастье \n §YЖильё§! £housing£ §G+13§! \n §YПервосвященник§! §G+1§!, §YСвященник§! §G+10§!, §YКлерк§! §G+2§!"
+ decision_U_USC:0 "[П] Подземный наукоград"
+ decision_U_USC_desc:0 " §YЖильё§! £housing£ §G+2§!, §YПередовой ученый§! §G+1§!, §YНаучный сотрудник§! §G+15§!, §YКлерк§! §G+2§! для империй без §HГештальт-сознания§! \n §YЖильё§! £housing£ §G+12§!, §YНаучный сотрудник§! §G+10§!, §YДрон-техник§! §G+2§! для империй с §HГештальт-сознанием§! \n §RУменьшает§! урон от орбитальной бомбардировки \n"
+ decision_0_show_hide_MoD:0 "[!] §YОтобразить/скрыть решения категории Совершенное районирование§!"
+ decision_0_show_hide_MoD_desc:0 ""
+
+ # §G§! £housing£ §YHousing§! # §Y$PLANET_HOUSING_TITLE$§!
+ # Provides §G§! extra £district£ §Ydistrict§! # Max £district£ §Ydistricts§!: §R-1§!
+ # Provides §G§! §YFarmer§! Jobs
+ # §HGestalts§!
+ 
+ # £stability£ §YStability§!
+ # £happiness£ §YPop Approval Rating§!
+ # £amenities£
+ # £crime£ §YCrime§!
+ # §GIncreased§! £trade_value£ §YTrade Value§!
+ # £energy£ §HEnergy Credits§!
+ # £food£ §HFood§!
+ # red §R orange §H yellow §Y green §G blue? §E | §!
+ 
+ 
+ # ###################################
+ # Modifiers
+ # ###################################
+ 
+ modifier_O_max:0 "Широко развитая низкоорбитальная среда"
+ modifier_O_max_desc:0 ""
+ modifier_O_max_AP:0 "Предельно развитая низкоорбитальная среда"
+ modifier_O_max_AP_desc:0 ""
+ modifier_U_max:0 "Широко развитая подземная среда"
+ modifier_U_max_desc:0 ""
+ modifier_U_max_AP:0 "Предельно развитая подземная среда"
+ modifier_U_max_AP_desc:0 ""
+ 
+ # ###################################
+ # Deposits
+ # ###################################
+
+ d_O_LOSBSP_deposit:0 "[О] Низкоорбитальная солнечная электростанция"
+ d_O_LOSBSP_deposit_desc:0 ""
+ d_HR_SBSP_deposit:0 "[С] Солнечная электростанция"
+ d_HR_SBSP_deposit_desc:0 ""
+ d_O_LOU_deposit:0 "[О] Низкоорбитальная урбанизация"
+ d_O_LOU_deposit_desc:0 ""
+ d_U_SU_deposit:0 "[П] Подземная урбанизация"
+ d_U_SU_deposit_desc:0 ""
+ d_H_E_deposit:0 "[С] Расширение среды обитания"
+ d_H_E_deposit_desc:0 ""
+ d_R_E_deposit:0 "[К] Расширение мира-кольца"
+ d_R_E_deposit_desc:0 ""
+ d_Sv_VFD_deposit:0 "[З] Вертикальные сельскохозяйственные районы"
+ d_Sv_VFD_deposit_desc:0 "Земная поверхность горизонтальная и скучна - пустая поверхность рядом с сияющими небоскребами. Мы давно мечтали организовать сельскохозяйственные угодья в полу-искусственную среду, сохраняя при этом урожайность."
+ d_O_LOSBF_deposit:0 "[О] Низкоорбитальное фермерство"
+ d_O_LOSBF_deposit_desc:0 "То же сельское хозяйство, но под небесами."
+ d_H_SBF_deposit:0 "[C] Космическое фермерство"
+ d_H_SBF_deposit_desc:0 ""
+ d_U_SCI_deposit:0 "[П] Индустриальный город под землей" 
+ d_U_SCI_deposit_desc:0 "Территории размером с целый город, предназначенные для добычи и переработки сырья, резмещенные под землей и функционирующие эффективнее чем их аналоги на поверхности."
+ d_U_SER_deposit:0 "[П] Подземный город добычи и очистки"
+ d_U_SER_deposit_desc:0 "Территории размером с целый город, предназначенные для добычи и переработки сырья в редкие ресурсы, более недоступные на поверхности."
+ d_R_RTPAF_deposit:0 "[К] Геолого-разведка и фильтрация мира-кольца"
+ d_R_RTPAF_deposit_desc:0 "Почти все полезные материалы в этой системе были использованы для создания мира-кольца. Однако, производственные излишки были просто возвращены в почву местных секторов. Приложив значительные усилия эти ресурсы могут быть выделены и обработаны."
+ d_H_ACMH_deposit:0 "[С] Астеройдный горнодобывающий хаб"
+ d_H_ACMH_deposit_desc:0 "Не все астеройды и кометы в округе были захвачены и обработаны. С помощью нового хаба можно попытаться устранить этот недочет."
+ d_O_LSLODI_deposit:0 "[О] Многопрофильная низкоорбитальная стыковочная инфраструктура"
+ d_O_LSLODI_deposit_desc:0 "Техническое обслуживание, заправка, утилизация, переоснащение, погрузка-выгрузка, частных и государственных, военных и торговых судов. Больше не нужно возвращаться на базу или приземляться на поверхности, все необходимое можно получить здесь."
+ d_HR_LSDI_deposit:0 "[СК] Многопрофильная стыковочная инфраструктура"
+ d_HR_LSDI_deposit_desc:0 "Техническое обслуживание, заправка, утилизация, переоснащение, погрузка-выгрузка, частных и государственных, военных и торговых судов. Больше не нужно возвращаться на базу или приземляться на поверхности, все необходимое можно получить здесь."
+ d_U_DPBN_deposit:0 "[П] Планетарная сеть бункеров"
+ d_U_DPBN_deposit_desc:0 "Наиболее укрепленные бункеры. Сама земля - им броня. В отличие от традиционных средств защиты, для их уничтожения требуется Колосс. Воистину, глубокая защита."
+ d_SaHR_ATN_deposit:0 "[ЗСК] Автономная транспортная сеть"
+ d_SaHR_ATN_deposit_desc:0 ""
+ d_U_SC_deposit:0 "[П] Подземный собор"
+ d_U_SC_deposit_desc:0 "Величественный собор, окруженный монастырским комплексом, размером с город. Самые большие неф, бема и галереи, которые вы когда-либо видели, и самые длинные скамьи, на которых вы когда-либо молились. Короеды довольны!"
+ d_U_USC_deposit:0 "[П] Подземный наукоград"
+ d_U_USC_deposit_desc:0 ""
+ 
+ # ###################################
+ # Jobs
+ # ###################################
+ 
+ #job_foundry:0 "Metallurgist"
+ #job_foundry_plural:0 "Metallurgists"
+ #job_foundry_desc:0 "Highly trained workers are needed to turn raw minerals into the durable alloys that are used in a wide variety of advanced construction."
+ #job_foundry_effect_desc:0 "£job_foundry£ $job_foundry_plural$ turn £minerals£ §Y$minerals$§! into £alloys£ §Y$alloys$§!"
+ #mod_job_foundry_add:0 "$job_foundry$ Jobs"
+ #mod_job_foundry_per_pop:0 "§G+1§! $job_foundry$ Job per $VALUE$ Pops"
+ #mod_job_foundry_per_pop_short:0 "\n§G+1§! £mod_job_foundry_add£ per $VALUE$ £pop£"
+ 
+ job_spaceship_mechanic:0 "Космо-механик"
+ job_spaceship_mechanic_plural:0 "Космо-механики"
+ job_spaceship_mechanic_desc:0 "Космо-механик"
+ mod_job_spaceship_mechanic_add:0 "$job_spaceship_mechanic$"
+ job_spaceship_mechanic_gestalt:0 "Обслуживающий дрон"
+ job_spaceship_mechanic_gestalt_plural:0 "Обслуживающие дроны"
+ job_spaceship_mechanic_gestalt_desc:0 "Обслуживающий дрон"
+ mod_job_spaceship_mechanic_gestalt_add:0 "$job_spaceship_mechanic_gestalt$"
+ job_subterranean_prospector:0 "Подземный изыскатель"
+ job_subterranean_prospector_plural:0 "Подземные изыскатели"
+ job_subterranean_prospector_desc:0 "Подземные изыскатель"
+ mod_job_subterranean_prospector_add:0 "$job_subterranean_prospector$"
+ job_subterranean_prospector_gestalt:0 "Подземный дрон-изыскатель"
+ job_subterranean_prospector_gestalt_plural:0 "Подземные дроны-изыскатели"
+ job_subterranean_prospector_gestalt_desc:0 "Подземный дрон-изыскатель"
+ mod_job_subterranean_prospector_gestalt_add:0 "$job_subterranean_prospector_gestalt$"
+ job_ringworld_prospector:0 "Изыскатель Мира-кольца"
+ job_ringworld_prospector_plural:0 "Изыскатели Мира-кольца"
+ job_ringworld_prospector_desc:0 "Изыскатель Мира-кольца"
+ mod_job_ringworld_prospector_add:0 "$job_ringworld_prospector$"
+ job_ringworld_prospector_gestalt:0 "Дрон-изыскатель Мира-кольца"
+ job_ringworld_prospector_gestalt_plural:0 "Дроны-изыскатели Мира-кольца"
+ job_ringworld_prospector_gestalt_desc:0 "Дрон-изыскатель Мира-кольца"
+ mod_job_ringworld_prospector_gestalt_add:0 "$job_ringworld_prospector_gestalt$"
+ job_asteroid_prospector:0 "Изыскатель астеройдов"
+ job_asteroid_prospector_plural:0 "Изыскатели астеройдов"
+ job_asteroid_prospector_desc:0 "Изыскатель астеройдов"
+ mod_job_asteroid_prospector_add:0 "$job_asteroid_prospector$"
+ job_asteroid_prospector_gestalt:0 "Дрон-изыскатель астеройдов"  
+ job_asteroid_prospector_gestalt_plural:0 "Дроны-изыскатели астеройдов"  
+ job_asteroid_prospector_gestalt_desc:0 "Дрон-изыскатель астеройдов"
+ mod_job_asteroid_prospector_gestalt_add:0 "$job_asteroid_prospector_gestalt$"  
+ 
+ # ###################################
+ # Tech
+ # ###################################
+ 
+ tech_MoD_S:0 "Планетарные проекты"
+ tech_MoD_S_desc:0 ""
+ tech_MoD_O:0 "Орбитальная застройка"
+ tech_MoD_O_desc:0 ""
+ tech_MoD_U:0 "Подземные разработки"
+ tech_MoD_U_desc:0 ""
+ 
+ 
+

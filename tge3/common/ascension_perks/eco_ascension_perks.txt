@@ -1,0 +1,95 @@
+eco_ap_land_ethic = {
+	potential = {
+		is_regular_empire = yes
+		NOT = {
+			has_ascension_perk = eco_ap_land_ethic
+		}
+	}
+	
+	on_enabled = {
+		custom_tooltip = "eco_land_ethic_tooltip"
+		if = {
+			limit = { 
+				NOT = { has_technology = eco_tech_waste_recycling_3 }
+			}
+		}	
+	}
+	
+	modifier = {
+		planet_ranger_produces_mult = 1
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+eco_ap_land_ethic_gestalt = {
+	potential = {
+		is_regular_empire = no
+		NOT = {
+			has_ascension_perk = eco_ap_land_ethic_gestalt
+		}
+	}
+	
+	on_enabled = {
+		custom_tooltip = "eco_land_ethic_tooltip"
+		if = {
+			limit = { 
+				NOT = { has_technology = eco_tech_waste_recycling_3 }
+			}
+		}	
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			has_civic = civic_machine_terminator
+		}
+		modifier = {
+			factor = 0
+			has_civic = civic_machine_assimilator
+		}
+		modifier = {
+			factor = 5
+			has_civic = eco_civic_caretaker
+		}
+		modifier = {
+			factor = 2
+			has_civic = eco_civic_world_mind
+		}
+	}
+}

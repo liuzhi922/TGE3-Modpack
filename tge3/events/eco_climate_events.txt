@@ -1,0 +1,1027 @@
+namespace = climate
+
+# Biome is Changing
+planet_event = {
+	id = climate.100	
+	title = climate.100.name
+
+	desc = {
+		trigger = { is_planet_class = pc_arctic }
+		text = climate.100.desc.arctic
+	}
+	desc = {
+		trigger = { is_planet_class = pc_arid }
+		text = climate.100.desc.arid
+	}
+	desc = {
+		trigger = { is_planet_class = pc_continental }
+		text = climate.100.desc.cont
+	}
+	desc = {
+		trigger = { is_planet_class = pc_ocean }
+		text = climate.100.desc.ocean
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tropical }
+		text = climate.100.desc.trop
+	}
+	desc = {
+		trigger = { is_planet_class = pc_alpine }
+		text = climate.100.desc.alpine
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tundra }
+		text = climate.100.desc.tundra
+	}
+	desc = {
+		trigger = { is_planet_class = pc_desert }
+		text = climate.100.desc.desert
+	}
+	desc = {
+		trigger = { is_planet_class = pc_savannah }
+		text = climate.100.desc.savannah
+	}
+	desc = {
+		trigger = { is_planet_class = pc_gaia }
+		text = climate.100.desc.gaia
+	}
+	
+	picture = GFX_evt_alien_nature
+	show_sound = event_air_raid_siren
+	location = from
+	trackable = yes
+
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		NOT  = { is_planet_class = pc_city }
+		NOT  = { is_planet_class = pc_nuked }
+		NOT  = { is_planet_class = pc_relic }
+		owner = {
+			is_ai = no
+		}
+		num_pops > 29
+		years_passed > 99
+	}
+	
+	immediate = {
+		switch = {
+			trigger = is_planet_class
+			pc_arctic = { set_planet_flag = ecology_climate_arctic_event }
+			pc_arid = { set_planet_flag = ecology_climate_arid_event }
+			pc_continental = { set_planet_flag = ecology_climate_continental_event }
+			pc_ocean = { set_planet_flag = ecology_climate_ocean_event }
+			pc_tropical = { set_planet_flag = ecology_climate_tropical_event }
+			pc_alpine = { set_planet_flag = ecology_climate_alpine_event }
+			pc_tundra = { set_planet_flag = ecology_climate_tundra_event }
+			pc_desert = { set_planet_flag = ecology_climate_desert_event }
+			pc_savannah = { set_planet_flag = ecology_climate_savannah_event }
+			pc_gaia = { set_planet_flag = ecology_climate_gaia_event }
+		}
+		set_planet_flag = ecology_max_event
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = climate.100.a
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_arctic_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Arctic -> Ocean
+	}
+	
+	option = {
+		name = climate.100.b
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_arid_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Arid -> Alpine
+	}
+	
+	option = {
+		name = climate.100.c
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_continental_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Continental -> Arid
+	}
+	
+	option = {
+		name = climate.100.d
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_ocean_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Ocean -> Desert
+	}
+	
+	option = {
+		name = climate.100.e
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_tropical_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Tropical -> Savanna
+	}
+	
+	option = {
+		name = climate.100.f
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_alpine_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Alpine -> Continental
+	}
+	
+	option = {
+		name = climate.100.g
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_tundra_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Tundra -> Tropical
+	}
+	
+	option = {
+		name = climate.100.h
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_desert_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Desert -> Arctic
+	}
+	
+	option = {
+		name = climate.100.i
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_savannah_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Savannah -> Tundra
+	}
+	
+	option = {
+		name = climate.100.j
+		custom_tooltip = climate.100.correct.tooltip
+		trigger = { has_planet_flag = ecology_climate_gaia_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_CORRECT_PROJECT"
+			location = this
+			owner = root
+		}
+		# Gaia -> Continental
+	}
+	
+	option = {
+		name = climate.100.l
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_arctic_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Arctic -> Ocean
+	}
+	
+	option = {
+		name = climate.100.m
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_arid_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Arid -> Alpine
+	}
+	
+	option = {
+		name = climate.100.n
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_continental_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Continental -> Arid
+	}
+	
+	option = {
+		name = climate.100.0
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_ocean_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Ocean -> Desert
+	}
+	
+	option = {
+		name = climate.100.p
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_tropical_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Tropical -> Savanna
+	}
+	
+	option = {
+		name = climate.100.q
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_alpine_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Alpine -> Continental
+	}
+	
+	option = {
+		name = climate.100.r
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_tundra_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Tundra -> Tropical
+	}
+	
+	option = {
+		name = climate.100.s
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_desert_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Desert -> Arctic
+	}
+	
+	option = {
+		name = climate.100.t
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_savannah_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Savannah -> Tundra
+	}
+	
+	option = {
+		name = climate.100.u
+		custom_tooltip = climate.100.engine.tooltip
+		trigger = { has_planet_flag = ecology_climate_gaia_event }
+		enable_special_project = {
+			name = "ECO_CLIMATE_ENGINEER_PROJECT"
+			location = this
+			owner = root
+		}
+		# Gaia -> Continental
+	}
+	
+	option = {
+		name = climate.100.k
+		custom_tooltip = climate.100.ignore.tooltip
+		planet_event = { id = climate.101 days = 480 }
+	}
+}
+
+# Change Minimized
+planet_event = {
+	id = climate.101
+	title = climate.101.name
+	
+	desc = {
+		trigger = { is_planet_class = pc_arctic }
+		text = climate.101.desc.arctic
+	}
+	desc = {
+		trigger = { is_planet_class = pc_arid }
+		text = climate.101.desc.arid
+	}
+	desc = {
+		trigger = { is_planet_class = pc_continental }
+		text = climate.101.desc.cont
+	}
+	desc = {
+		trigger = { is_planet_class = pc_ocean }
+		text = climate.101.desc.ocean
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tropical }
+		text = climate.101.desc.trop
+	}
+	desc = {
+		trigger = { is_planet_class = pc_alpine }
+		text = climate.101.desc.alpine
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tundra }
+		text = climate.101.desc.tundra
+	}
+	desc = {
+		trigger = { is_planet_class = pc_desert }
+		text = climate.101.desc.desert
+	}
+	desc = {
+		trigger = { is_planet_class = pc_savannah }
+		text = climate.101.desc.savannah
+	}
+	desc = {
+		trigger = { is_planet_class = pc_gaia }
+		text = climate.101.desc.gaia
+	}
+	
+	picture = GFX_evt_alien_nature
+	show_sound = event_alien_nature
+	location = from
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_planet_flag = ecology_max_event
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_arctic_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_arid_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_continental_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_ocean_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_tropical_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_alpine_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_tundra_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_desert_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_savannah_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_gaia_event }
+		name = GOOD
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_planet_devastation = 10
+	}
+}
+
+# Collapse
+planet_event = {
+	id = climate.102
+	title = climate.102.name
+	
+	desc = {
+		trigger = { is_planet_class = pc_arctic }
+		text = climate.102.desc.arctic
+	}
+	desc = {
+		trigger = { is_planet_class = pc_arid }
+		text = climate.102.desc.arid
+	}
+	desc = {
+		trigger = { is_planet_class = pc_continental }
+		text = climate.102.desc.cont
+	}
+	desc = {
+		trigger = { is_planet_class = pc_ocean }
+		text = climate.102.desc.ocean
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tropical }
+		text = climate.102.desc.trop
+	}
+	desc = {
+		trigger = { is_planet_class = pc_alpine }
+		text = climate.102.desc.alpine
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tundra }
+		text = climate.102.desc.tundra
+	}
+	desc = {
+		trigger = { is_planet_class = pc_desert }
+		text = climate.102.desc.desert
+	}
+	desc = {
+		trigger = { is_planet_class = pc_savannah }
+		text = climate.102.desc.savannah
+	}
+	desc = {
+		trigger = { is_planet_class = pc_gaia }
+		text = climate.102.desc.gaia
+	}
+	
+	picture = GFX_evt_alien_planet
+	show_sound = event_air_raid_siren
+	location = from
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_modifier = { modifier = "eco_collapse" days = -1 }
+		remove_planet_flag = ecology_max_event
+		set_planet_flag = ecology_collapse_event
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_planet_flag = ecology_climate_arctic_event }
+		change_pc = "pc_ocean"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_arctic_event
+		# Arctic -> Ocean
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_planet_flag = ecology_climate_arid_event }
+		change_pc = "pc_alpine"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_aird_event
+		# Arid -> Alpine
+	}
+	
+	option = {
+		name = WORRYING
+		trigger = { has_planet_flag = ecology_climate_continental_event }
+		change_pc = "pc_arid"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_continental_event
+		# Continental -> Arid
+	}
+	
+	option = {
+		name = GODDAMNIT
+		trigger = { has_planet_flag = ecology_climate_ocean_event }
+		change_pc = "pc_desert"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_ocean_event
+		# Ocean -> Desert
+	}
+	
+	option = {
+		name = GODDAMNIT
+		trigger = { has_planet_flag = ecology_climate_tropical_event }
+		change_pc = "pc_savannah"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_tropical_event
+		# Tropical -> Savannah
+	}
+	
+	option = {
+		name = GODDAMNIT
+		trigger = { has_planet_flag = ecology_climate_alpine_event }
+		change_pc = "pc_continental"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_alpine_event
+		# Alpine -> Continental
+	}
+	
+	option = {
+		name = GODDAMNIT
+		trigger = { has_planet_flag = ecology_climate_tundra_event }
+		change_pc = "pc_tropical"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_tundra_event
+		# Tundra -> Tropical
+	}
+	
+	option = {
+		name = GODDAMNIT
+		trigger = { has_planet_flag = ecology_climate_desert_event }
+		change_pc = "pc_arctic"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_desert_event
+		# Desert -> Arctic
+	}
+	
+	option = {
+		name = GODDAMNIT
+		trigger = { has_planet_flag = ecology_climate_savannah_event }
+		change_pc = "pc_tundra"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_savannah_event
+		# Savannah -> Tundra
+	}
+	
+	option = {
+		name = GODDAMNIT
+		trigger = { has_planet_flag = ecology_climate_gaia_event }
+		change_pc = "pc_continental"
+		add_planet_devastation = 20
+		remove_planet_flag = ecology_climate_gaia_event
+		# Gaia -> Continental
+	}
+}
+
+# Change Partially Averted
+planet_event = {
+	id = climate.103
+	title = climate.103.name
+	
+	desc = {
+		trigger = { is_planet_class = pc_arctic }
+		text = climate.103.desc.arctic
+	}
+	desc = {
+		trigger = { is_planet_class = pc_arid }
+		text = climate.103.desc.arid
+	}
+	desc = {
+		trigger = { is_planet_class = pc_continental }
+		text = climate.103.desc.cont
+	}
+	desc = {
+		trigger = { is_planet_class = pc_ocean }
+		text = climate.103.desc.ocean
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tropical }
+		text = climate.103.desc.trop
+	}
+	desc = {
+		trigger = { is_planet_class = pc_alpine }
+		text = climate.103.desc.alpine
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tundra }
+		text = climate.103.desc.tundra
+	}
+	desc = {
+		trigger = { is_planet_class = pc_desert }
+		text = climate.103.desc.desert
+	}
+	desc = {
+		trigger = { is_planet_class = pc_savannah }
+		text = climate.103.desc.savannah
+	}
+	desc = {
+		trigger = { is_planet_class = pc_gaia }
+		text = climate.103.desc.gaia
+	}
+	
+	picture = GFX_evt_alien_planet
+	show_sound = event_air_raid_siren
+	location = from
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_arctic_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_arid_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_continental_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_ocean_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_tropical_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_alpine_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_tundra_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_desert_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_savannah_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_gaia_event }
+		name = WORRYING
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				90 = { remove_planet_flag = ecology_max_event }
+				10 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+}
+
+# Change Unavoided
+planet_event = {
+	id = climate.104
+	title = climate.104.name
+	
+	desc = {
+		trigger = { is_planet_class = pc_arctic }
+		text = climate.104.desc.arctic
+	}
+	desc = {
+		trigger = { is_planet_class = pc_arid }
+		text = climate.104.desc.arid
+	}
+	desc = {
+		trigger = { is_planet_class = pc_continental }
+		text = climate.104.desc.cont
+	}
+	desc = {
+		trigger = { is_planet_class = pc_ocean }
+		text = climate.104.desc.ocean
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tropical }
+		text = climate.104.desc.trop
+	}
+	desc = {
+		trigger = { is_planet_class = pc_alpine }
+		text = climate.104.desc.alpine
+	}
+	desc = {
+		trigger = { is_planet_class = pc_tundra }
+		text = climate.104.desc.tundra
+	}
+	desc = {
+		trigger = { is_planet_class = pc_desert }
+		text = climate.104.desc.desert
+	}
+	desc = {
+		trigger = { is_planet_class = pc_savannah }
+		text = climate.104.desc.savannah
+	}
+	desc = {
+		trigger = { is_planet_class = pc_gaia }
+		text = climate.104.desc.gaia
+	}
+	
+	picture = GFX_evt_alien_planet
+	show_sound = event_air_raid_siren
+	location = from
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_arctic_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		enable_special_project = {
+			name = "ECO_COLLAPSE_MINIMIZE_PROJECT"
+			location = this
+			owner = root
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_arid_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				50 = { remove_planet_flag = ecology_max_event }
+				50 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_continental_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				50 = { remove_planet_flag = ecology_max_event }
+				50 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_ocean_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				50 = { remove_planet_flag = ecology_max_event }
+				50 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_tropical_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				50 = { remove_planet_flag = ecology_max_event }
+				50 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_alpine_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				50 = { remove_planet_flag = ecology_max_event }
+				50 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_tundra_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				50 = { remove_planet_flag = ecology_max_event }
+				50 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_desert_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				50 = { remove_planet_flag = ecology_max_event }
+				50 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_savannah_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				50 = { remove_planet_flag = ecology_max_event }
+				50 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+	
+	option = {
+		trigger = { has_planet_flag = ecology_climate_gaia_event }
+		name = CURSES
+		
+		add_modifier = { modifier = eco_climate_change days = 360}
+		add_deposit = d_eco_unstable_climate
+		add_planet_devastation = 10
+		hidden_effect = { 
+			random_list = {
+				50 = { remove_planet_flag = ecology_max_event }
+				50 = { planet_event = { id = climate.102 } }
+			}
+		}
+	}
+}

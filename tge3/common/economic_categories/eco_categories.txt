@@ -1,0 +1,13 @@
+planet_waste = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+}
+
+planet_ranger = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+}

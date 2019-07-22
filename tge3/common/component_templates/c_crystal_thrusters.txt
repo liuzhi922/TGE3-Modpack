@@ -1,0 +1,1808 @@
+# Icons set here are the ones show in the actual slot.
+
+@cost1 = 3
+@cost2 = 6
+@cost3 = 9
+@cost4 = 12
+@cost5 = 15
+
+@power_1 = -10
+@power_2 = -15
+@power_3 = -20
+@power_4 = -25
+@power_5 = -30
+
+@destroyer_power_1 = -20
+@destroyer_power_2 = -30
+@destroyer_power_3 = -40
+@destroyer_power_4 = -50
+@destroyer_power_5 = -60
+
+@cruiser_power_1 = -40
+@cruiser_power_2 = -60
+@cruiser_power_3 = -80
+@cruiser_power_4 = -100
+@cruiser_power_5 = -120
+
+@battleship_power_1 = -80
+@battleship_power_2 = -120
+@battleship_power_3 = -160
+@battleship_power_4 = -200
+@battleship_power_5 = -240
+
+@titan_power_1 = -160
+@titan_power_2 = -240
+@titan_power_3 = -320
+@titan_power_4 = -400
+@titan_power_5 = -480
+
+@colossus_power_1 = -200
+@colossus_power_2 = -300
+@colossus_power_3 = -400
+@colossus_power_4 = -500
+@colossus_power_5 = -600
+
+@destroyer_cost1 = 6
+@destroyer_cost2 = 12
+@destroyer_cost3 = 18
+@destroyer_cost4 = 24
+@destroyer_cost5 = 30
+
+@cruiser_cost1 = 12
+@cruiser_cost2 = 24
+@cruiser_cost3 = 36
+@cruiser_cost4 = 48
+@cruiser_cost5 = 60
+
+@battleship_cost1 = 24
+@battleship_cost2 = 48
+@battleship_cost3 = 72
+@battleship_cost4 = 96
+@battleship_cost5 = 120
+
+@titan_cost1 = 48
+@titan_cost2 = 96
+@titan_cost3 = 144
+@titan_cost4 = 192
+@titan_cost5 = 240
+
+@colossus_cost1 = 60
+@colossus_cost2 = 120
+@colossus_cost3 = 180
+@colossus_cost4 = 240
+@colossus_cost5 = 300
+
+
+@armor_1 = 50
+@armor_2 = 75
+@armor_3 = 125
+@armor_4 = 225
+
+@destroyer_armor_1 = 100
+@destroyer_armor_2 = 150
+@destroyer_armor_3 = 250
+@destroyer_armor_4 = 450
+
+@cruiser_armor_1 = 150
+@cruiser_armor_2 = 225
+@cruiser_armor_3 = 375
+@cruiser_armor_4 = 675
+
+@battleship_armor_1 = 200
+@battleship_armor_2 = 300
+@battleship_armor_3 = 500
+@battleship_armor_4 = 900
+
+@titan_armor_1 = 300
+@titan_armor_2 = 450
+@titan_armor_3 = 750
+@titan_armor_4 = 1350
+
+@colossus_armor_1 = 400
+@colossus_armor_2 = 600
+@colossus_armor_3 = 1000
+@colossus_armor_4 = 1800
+
+
+@shield_1 = 50
+@shield_2 = 75
+@shield_3 = 125
+@shield_4 = 225
+
+@destroyer_shield_1 = 100
+@destroyer_shield_2 = 150
+@destroyer_shield_3 = 250
+@destroyer_shield_4 = 450
+
+@cruiser_shield_1 = 150
+@cruiser_shield_2 = 225
+@cruiser_shield_3 = 375
+@cruiser_shield_4 = 675
+
+@battleship_shield_1 = 200
+@battleship_shield_2 = 300
+@battleship_shield_3 = 500
+@battleship_shield_4 = 900
+
+@titan_shield_1 = 300
+@titan_shield_2 = 450
+@titan_shield_3 = 750
+@titan_shield_4 = 1350
+
+@colossus_shield_1 = 400
+@colossus_shield_2 = 600
+@colossus_shield_3 = 1000
+@colossus_shield_4 = 1800
+
+
+#############
+# THRUSTERS #
+#############
+
+# Heavy Armoured Thrusters
+
+# TIER 1
+utility_component_template = {
+	key = "C_SHIP_THRUSTER_ARMOR_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_1"
+	icon_frame = 1
+	power = @power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost1
+			rare_crystals = 1
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = @armor_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_1" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SHIP_THRUSTER_ARMOR_2"
+}
+
+# DESTROYER
+utility_component_template = {
+	key = "C_DESTROYER_SHIP_THRUSTER_ARMOR_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_1"
+	icon_frame = 1
+	power = @destroyer_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost1
+			rare_crystals = 2
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = @destroyer_armor_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_1" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_DESTROYER_SHIP_THRUSTER_ARMOR_2"
+}
+
+# CRUISER
+utility_component_template = {
+	key = "C_CRUISER_SHIP_THRUSTER_ARMOR_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_1"
+	icon_frame = 1
+	power = @cruiser_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost1
+			rare_crystals = 3
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = @cruiser_armor_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_1" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_CRUISER_SHIP_THRUSTER_ARMOR_2"
+}
+
+# BATTLESHIP
+utility_component_template = {
+	key = "C_BATTLESHIP_SHIP_THRUSTER_ARMOR_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_1"
+	icon_frame = 1
+	power = @battleship_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost1
+			rare_crystals = 4
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = @battleship_armor_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_1" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_BATTLESHIP_SHIP_THRUSTER_ARMOR_2"
+}
+
+# TITAN
+utility_component_template = {
+	key = "C_TITAN_SHIP_THRUSTER_ARMOR_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_1"
+	icon_frame = 1
+	power = @titan_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost1
+			rare_crystals = 5
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = @titan_armor_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_1" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_TITAN_SHIP_THRUSTER_ARMOR_2"
+}
+
+# COLOSSUS
+utility_component_template = {
+	key = "C_COLOSSUS_SHIP_THRUSTER_ARMOR_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_1"
+	icon_frame = 1
+	power = @colossus_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @colossus_cost1
+			rare_crystals = 10
+		}
+	}
+	
+	modifier = {
+		ship_armor_add = @colossus_armor_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_1" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_COLOSSUS_SHIP_THRUSTER_ARMOR_2"
+}
+
+
+# TIER 2
+utility_component_template = {
+	key = "C_SHIP_THRUSTER_ARMOR_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_2"
+	icon_frame = 1
+	power = @power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost2
+			rare_crystals = 2
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_armor_add = @armor_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_2" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SHIP_THRUSTER_ARMOR_3"
+}
+
+# DESTROYER
+utility_component_template = {
+	key = "C_DESTROYER_SHIP_THRUSTER_ARMOR_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_2"
+	icon_frame = 1
+	power = @destroyer_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost2
+			rare_crystals = 3
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_armor_add = @destroyer_armor_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_2" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_DESTROYER_SHIP_THRUSTER_ARMOR_3"
+}
+
+# CRUISER
+utility_component_template = {
+	key = "C_CRUISER_SHIP_THRUSTER_ARMOR_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_2"
+	icon_frame = 1
+	power = @cruiser_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost2
+			rare_crystals = 4
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_armor_add = @cruiser_armor_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_2" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_CRUISER_SHIP_THRUSTER_ARMOR_3"
+}
+
+# BATTLESHIP
+utility_component_template = {
+	key = "C_BATTLESHIP_SHIP_THRUSTER_ARMOR_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_2"
+	icon_frame = 1
+	power = @battleship_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost2
+			rare_crystals = 5
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_armor_add = @battleship_armor_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_2" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_BATTLESHIP_SHIP_THRUSTER_ARMOR_3"
+}
+
+# TITAN
+utility_component_template = {
+	key = "C_TITAN_SHIP_THRUSTER_ARMOR_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_2"
+	icon_frame = 1
+	power = @titan_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost2
+			rare_crystals = 6
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_armor_add = @titan_armor_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_2" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_TITAN_SHIP_THRUSTER_ARMOR_3"
+}
+
+# COLOSSUS
+utility_component_template = {
+	key = "C_COLOSSUS_SHIP_THRUSTER_ARMOR_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_2"
+	icon_frame = 1
+	power = @colossus_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @colossus_cost2
+			rare_crystals = 12
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_armor_add = @colossus_armor_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_2" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_COLOSSUS_SHIP_THRUSTER_ARMOR_3"
+}
+
+
+# TIER 3
+utility_component_template = {
+	key = "C_SHIP_THRUSTER_ARMOR_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_3"
+	icon_frame = 1
+	power = @power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost3
+			rare_crystals = 3
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_armor_add = @armor_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_3" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SHIP_THRUSTER_ARMOR_4"
+}
+
+# DESTROYER
+utility_component_template = {
+	key = "C_DESTROYER_SHIP_THRUSTER_ARMOR_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_3"
+	icon_frame = 1
+	power = @destroyer_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost3
+			rare_crystals = 4
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_armor_add = @destroyer_armor_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_3" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_DESTROYER_SHIP_THRUSTER_ARMOR_4"
+}
+
+# CRUISER
+utility_component_template = {
+	key = "C_CRUISER_SHIP_THRUSTER_ARMOR_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_3"
+	icon_frame = 1
+	power = @cruiser_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost3
+			rare_crystals = 5
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_armor_add = @cruiser_armor_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_3" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_CRUISER_SHIP_THRUSTER_ARMOR_4"
+}
+
+# BATTLESHIP
+utility_component_template = {
+	key = "C_BATTLESHIP_SHIP_THRUSTER_ARMOR_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_3"
+	icon_frame = 1
+	power = @battleship_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost3
+			rare_crystals = 6
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_armor_add = @battleship_armor_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_3" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_BATTLESHIP_SHIP_THRUSTER_ARMOR_4"
+}
+
+# TITAN
+utility_component_template = {
+	key = "C_TITAN_SHIP_THRUSTER_ARMOR_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_3"
+	icon_frame = 1
+	power = @titan_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost3
+			rare_crystals = 7
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_armor_add = @titan_armor_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_3" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_TITAN_SHIP_THRUSTER_ARMOR_4"
+}
+
+# COLOSSUS
+utility_component_template = {
+	key = "C_COLOSSUS_SHIP_THRUSTER_ARMOR_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_3"
+	icon_frame = 1
+	power = @colossus_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @colossus_cost3
+			rare_crystals = 14
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_armor_add = @colossus_armor_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_3" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_COLOSSUS_SHIP_THRUSTER_ARMOR_4"
+}
+
+
+# TIER 4
+utility_component_template = {
+	key = "C_SHIP_THRUSTER_ARMOR_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_4"
+	icon_frame = 1
+	power = @power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost4
+			rare_crystals = 4
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_armor_add = @armor_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_4" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+}
+
+# DESTROYER
+utility_component_template = {
+	key = "C_DESTROYER_SHIP_THRUSTER_ARMOR_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_4"
+	icon_frame = 1
+	power = @destroyer_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost4
+			rare_crystals = 5
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_armor_add = @destroyer_armor_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_4" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+}
+
+# CRUISER
+utility_component_template = {
+	key = "C_CRUISER_SHIP_THRUSTER_ARMOR_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_4"
+	icon_frame = 1
+	power = @cruiser_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost4
+			rare_crystals = 6
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_armor_add = @cruiser_armor_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_4" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+}
+
+# BATTLESHIP
+utility_component_template = {
+	key = "C_BATTLESHIP_SHIP_THRUSTER_ARMOR_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_4"
+	icon_frame = 1
+	power = @battleship_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost4
+			rare_crystals = 7
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_armor_add = @battleship_armor_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_4" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+}
+
+# TITAN
+utility_component_template = {
+	key = "C_TITAN_SHIP_THRUSTER_ARMOR_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_4"
+	icon_frame = 1
+	power = @titan_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost4
+			rare_crystals = 8
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_armor_add = @titan_armor_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_4" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+}
+
+# COLOSSUS
+utility_component_template = {
+	key = "C_COLOSSUS_SHIP_THRUSTER_ARMOR_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_armor_4"
+	icon_frame = 1
+	power = @colossus_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @colossus_cost4
+			rare_crystals = 16
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_armor_add = @colossus_armor_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_armor_4" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+}
+
+
+
+# Psionic Thrusters
+
+# TIER 1
+utility_component_template = {
+	key = "C_SHIP_THRUSTER_PSI_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_1"
+	icon_frame = 1
+	power = @power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost1
+			sr_zro = 1
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = @shield_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_1" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SHIP_THRUSTER_PSI_2"
+}
+
+# DESTROYER
+utility_component_template = {
+	key = "C_DESTROYER_SHIP_THRUSTER_PSI_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_1"
+	icon_frame = 1
+	power = @destroyer_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost1
+			sr_zro = 2
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = @destroyer_shield_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_1" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_DESTROYER_SHIP_THRUSTER_PSI_2"
+}
+
+# CRUISER
+utility_component_template = {
+	key = "C_CRUISER_SHIP_THRUSTER_PSI_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_1"
+	icon_frame = 1
+	power = @cruiser_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost1
+			sr_zro = 3
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = @cruiser_shield_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_1" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_CRUISER_SHIP_THRUSTER_PSI_2"
+}
+
+# BATTLESHIP
+utility_component_template = {
+	key = "C_BATTLESHIP_SHIP_THRUSTER_PSI_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_1"
+	icon_frame = 1
+	power = @battleship_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost1
+			sr_zro = 4
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = @battleship_shield_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_1" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_BATTLESHIP_SHIP_THRUSTER_PSI_2"
+}
+
+# TITAN
+utility_component_template = {
+	key = "C_TITAN_SHIP_THRUSTER_PSI_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_1"
+	icon_frame = 1
+	power = @titan_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost1
+			sr_zro = 5
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = @titan_shield_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_1" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_TITAN_SHIP_THRUSTER_PSI_2"
+}
+
+# COLOSSUS
+utility_component_template = {
+	key = "C_COLOSSUS_SHIP_THRUSTER_PSI_1"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_1"
+	icon_frame = 1
+	power = @colossus_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @colossus_cost1
+			sr_zro = 10
+		}
+	}
+	
+	modifier = {
+		ship_shield_add = @colossus_shield_1
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_1" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_COLOSSUS_SHIP_THRUSTER_PSI_2"
+}
+
+
+# TIER 2
+utility_component_template = {
+	key = "C_SHIP_THRUSTER_PSI_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_2"
+	icon_frame = 1
+	power = @power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost2
+			sr_zro = 2
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_shield_add = @shield_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_2" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SHIP_THRUSTER_PSI_3"
+}
+
+# DESTROYER
+utility_component_template = {
+	key = "C_DESTROYER_SHIP_THRUSTER_PSI_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_2"
+	icon_frame = 1
+	power = @destroyer_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost2
+			sr_zro = 3
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_shield_add = @destroyer_shield_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_2" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_DESTROYER_SHIP_THRUSTER_PSI_3"
+}
+
+# CRUISER
+utility_component_template = {
+	key = "C_CRUISER_SHIP_THRUSTER_PSI_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_2"
+	icon_frame = 1
+	power = @cruiser_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost2
+			sr_zro = 4
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_shield_add = @cruiser_shield_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_2" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_CRUISER_SHIP_THRUSTER_PSI_3"
+}
+
+# BATTLESHIP
+utility_component_template = {
+	key = "C_BATTLESHIP_SHIP_THRUSTER_PSI_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_2"
+	icon_frame = 1
+	power = @battleship_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost2
+			sr_zro = 5
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_shield_add = @battleship_shield_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_2" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_BATTLESHIP_SHIP_THRUSTER_PSI_3"
+}
+
+# TITAN
+utility_component_template = {
+	key = "C_TITAN_SHIP_THRUSTER_PSI_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_2"
+	icon_frame = 1
+	power = @titan_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost2
+			sr_zro = 6
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_shield_add = @titan_shield_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_2" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_TITAN_SHIP_THRUSTER_PSI_3"
+}
+
+# COLOSSUS
+utility_component_template = {
+	key = "C_COLOSSUS_SHIP_THRUSTER_PSI_2"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_2"
+	icon_frame = 1
+	power = @colossus_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @colossus_cost2
+			sr_zro = 12
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_shield_add = @colossus_shield_2
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_2" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_COLOSSUS_SHIP_THRUSTER_PSI_3"
+}
+
+
+# TIER 3
+utility_component_template = {
+	key = "C_SHIP_THRUSTER_PSI_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_3"
+	icon_frame = 1
+	power = @power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost3
+			sr_zro = 3
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_shield_add = @shield_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_3" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SHIP_THRUSTER_PSI_4"
+}
+
+# DESTROYER
+utility_component_template = {
+	key = "C_DESTROYER_SHIP_THRUSTER_PSI_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_3"
+	icon_frame = 1
+	power = @destroyer_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost3
+			sr_zro = 4
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_shield_add = @destroyer_shield_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_3" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_DESTROYER_SHIP_THRUSTER_PSI_4"
+}
+
+# CRUISER
+utility_component_template = {
+	key = "C_CRUISER_SHIP_THRUSTER_PSI_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_3"
+	icon_frame = 1
+	power = @cruiser_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost3
+			sr_zro = 5
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_shield_add = @cruiser_shield_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_3" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_CRUISER_SHIP_THRUSTER_PSI_4"
+}
+
+# BATTLESHIP
+utility_component_template = {
+	key = "C_BATTLESHIP_SHIP_THRUSTER_PSI_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_3"
+	icon_frame = 1
+	power = @battleship_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost3
+			sr_zro = 6
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_shield_add = @battleship_shield_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_3" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_BATTLESHIP_SHIP_THRUSTER_PSI_4"
+}
+
+# TITAN
+utility_component_template = {
+	key = "C_TITAN_SHIP_THRUSTER_PSI_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_3"
+	icon_frame = 1
+	power = @titan_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost3
+			sr_zro = 7
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_shield_add = @titan_shield_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_3" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_TITAN_SHIP_THRUSTER_PSI_4"
+}
+
+# COLOSSUS
+utility_component_template = {
+	key = "C_COLOSSUS_SHIP_THRUSTER_PSI_3"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_3"
+	icon_frame = 1
+	power = @colossus_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @colossus_cost3
+			sr_zro = 14
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_shield_add = @colossus_shield_3
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_3" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_COLOSSUS_SHIP_THRUSTER_PSI_4"
+}
+
+
+# TIER 4
+utility_component_template = {
+	key = "C_SHIP_THRUSTER_PSI_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_4"
+	icon_frame = 1
+	power = @power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost4
+			sr_zro = 4
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_shield_add = @shield_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_4" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer constructor science transport }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+}
+
+# DESTROYER
+utility_component_template = {
+	key = "C_DESTROYER_SHIP_THRUSTER_PSI_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_4"
+	icon_frame = 1
+	power = @destroyer_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost4
+			sr_zro = 5
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_shield_add = @destroyer_shield_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_4" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+}
+
+# CRUISER
+utility_component_template = {
+	key = "C_CRUISER_SHIP_THRUSTER_PSI_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_4"
+	icon_frame = 1
+	power = @cruiser_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost4
+			sr_zro = 6
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_shield_add = @cruiser_shield_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_4" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+}
+
+# BATTLESHIP
+utility_component_template = {
+	key = "C_BATTLESHIP_SHIP_THRUSTER_PSI_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_4"
+	icon_frame = 1
+	power = @battleship_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost4
+			sr_zro = 7
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_shield_add = @battleship_shield_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_4" }
+	component_set = "thruster_components"
+	size_restriction = { battleship }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+}
+
+# TITAN
+utility_component_template = {
+	key = "C_TITAN_SHIP_THRUSTER_PSI_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_4"
+	icon_frame = 1
+	power = @titan_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost4
+			sr_zro = 8
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_shield_add = @titan_shield_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_4" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+}
+
+# COLOSSUS
+utility_component_template = {
+	key = "C_COLOSSUS_SHIP_THRUSTER_PSI_4"
+	size = small
+	icon = "GFX_C_ship_part_thruster_psi_4"
+	icon_frame = 1
+	power = @colossus_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @colossus_cost4
+			sr_zro = 16
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_shield_add = @colossus_shield_4
+	}
+		
+	prerequisites = { "tech_c_thrusters_psi_4" }
+	component_set = "thruster_components"
+	size_restriction = { colossus }
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+	
+}

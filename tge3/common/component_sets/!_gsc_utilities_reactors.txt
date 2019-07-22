@@ -1,0 +1,321 @@
+# Icons set here are the ones shown in compnent editor list.
+
+component_set = {
+	key = "FISSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "FUSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "COLD_FUSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ANTIMATTER_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "ZERO_POINT_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "DARK_MATTER_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_ZERO_POINT_REACTOR_6"
+	
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_ZERO_POINT_REACTOR_7"
+	
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_ZERO_POINT_REACTOR_8"
+	
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_ZERO_POINT_REACTOR_9"
+	
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_ZERO_POINT_REACTOR_10"
+	
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1	
+}
+
+######################
+##### Platforms ######
+######################
+
+component_set = {
+	key = "PLATFORM_FISSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_FUSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "PLATFORM_COLD_FUSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_ANTIMATTER_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_ZERO_POINT_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "DARK_MATTER_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_6"
+	
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_7"
+	
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_8"
+	
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_9"
+	
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_SMALL_ZERO_POINT_REACTOR_10"
+	
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1	
+}
+
+######################
+##### Stations ######
+######################
+
+component_set = {
+	key = "PLATFORM_MEDIUM_FISSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_MEDIUM_FUSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "PLATFORM_MEDIUM_COLD_FUSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_MEDIUM_ANTIMATTER_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_MEDIUM_ZERO_POINT_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_MEDIUM_DARK_MATTER_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_6"
+	
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_7"
+	
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_8"
+	
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_9"
+	
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_MEDIUM_ZERO_POINT_REACTOR_10"
+	
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1	
+}
+
+######################
+##### Fortress ######
+######################
+
+component_set = {
+	key = "PLATFORM_LARGE_FISSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_LARGE_FUSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "PLATFORM_LARGE_COLD_FUSION_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_LARGE_ANTIMATTER_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_LARGE_ZERO_POINT_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "PLATFORM_LARGE_DARK_MATTER_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_6"
+	
+	icon = "GFX_C_ship_part_reactor_6"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_7"
+	
+	icon = "GFX_C_ship_part_reactor_7"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_8"
+	
+	icon = "GFX_C_ship_part_reactor_8"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_9"
+	
+	icon = "GFX_C_ship_part_reactor_9"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "C_PLATFORM_LARGE_ZERO_POINT_REACTOR_10"
+	
+	icon = "GFX_C_ship_part_reactor_10"
+	icon_frame = 1	
+}

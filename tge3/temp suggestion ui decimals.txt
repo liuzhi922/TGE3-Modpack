@@ -1,0 +1,19 @@
+[ui] Decimals, modules and ship designer
+
+Hello
+
+This suggestion probably applies to spaceports as well.
+
+I have found several stats/modifiers that do not show a decimal and instead round up/down. This makes is pretty hard to balance for mods that use these moddifiers. Especially on modules where a small decimal value needs to be used if you want to use small/med/large modules.
+
+This happens non-decimal display is apparent on:
+ship modules
+ship designer
+ship inspecting (space)
+spaceports
+
+The game registers and uses decimals, but the ui rounds up/down. Would it be possible to make it universally follow the same rules as some other stats? If round number, show round number (eg: 2), if number has decimal value, show decimal value (eg: 2.5, or 2.25). 
+
+Some of the modifiers that round up/down:
+ship_accuracy_add
+

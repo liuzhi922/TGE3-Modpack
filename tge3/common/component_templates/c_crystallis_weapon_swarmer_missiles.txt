@@ -1,0 +1,117 @@
+###################
+# COST
+###################
+@cost4s = 81
+
+@cost5s = 102
+
+###################
+# POWER
+###################
+@power4s = -33
+
+@power5s = -41
+
+# ####################
+#  	Swarmer Missiles
+# ####################
+
+### Swarmer Missile Launcher
+weapon_component_template = {
+	key = "C_SWARMER_MISSILE_3"
+	size = torpedo
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_C_ship_part_swarmer_missile_3"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+	
+	damage = { min = 41 max = 60 }
+	windup = { min = 1 max = 15 }
+	total_fire_time = 25
+	range = 100.0
+	accuracy = 1.00
+	tracking = 0.30
+	missile_speed = 18
+	missile_health = 60.00
+	shield_penetration = 1.00
+	missile_retarget_range = 100
+	
+	power = @power4s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t7_cost
+			volatile_motes = @m_t7_rare
+		}		
+		upkeep = {
+			energy = @m_t7_upkeep_energy
+			alloys = @m_t7_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_swarmer_missiles_3" }
+	component_set = "C_SWARMER_MISSILE_3"
+	projectile_gfx = "swarmer_missiles"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+	
+	upgrades_to = "C_SWARMER_MISSILE_4"
+}
+
+### Advanced Swarmer Missile Launcher
+weapon_component_template = {
+	key = "C_SWARMER_MISSILE_4"
+	size = torpedo
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_C_ship_part_swarmer_missile_4"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+	
+	damage = { min = 52 max = 75 }
+	windup = { min = 1 max = 15 }
+	total_fire_time = 25
+	range = 100.0
+	accuracy = 1.00
+	tracking = 0.30
+	missile_speed = 18
+	missile_health = 60.00
+	shield_penetration = 1.00
+	missile_retarget_range = 100
+	
+	power = @power5s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t10_cost
+			volatile_motes = @m_t10_rare
+		}		
+		upkeep = {
+			energy = @m_t10_upkeep_energy
+			alloys = @m_t10_upkeep_alloys
+		}
+	}
+	
+	prerequisites = { "tech_c_swarmer_missiles_4" }
+	component_set = "C_SWARMER_MISSILE_4"
+	projectile_gfx = "swarmer_missiles_02"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = volatile_motes value <= 0 }
+		}
+	}
+}

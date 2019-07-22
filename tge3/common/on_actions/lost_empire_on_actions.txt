@@ -1,0 +1,10 @@
+on_game_start = {
+	events = {
+		zofe_action.7
+	}
+}
+on_yearly_pulse = {
+	events = {
+		lost_empire.18
+	}
+}

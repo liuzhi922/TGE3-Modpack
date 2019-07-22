@@ -1,0 +1,31 @@
+namespace = eco_capital
+
+planet_event = {
+	id = eco_capital.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_deposit = d_failing_infrastructure }
+			remove_deposit = d_failing_infrastructure
+			
+			if = {
+				limit = { has_deposit = d_failing_infrastructure }				
+				if = {
+					limit = { NOT = { owner = { has_civic = civic_environmentalist } } }
+					add_deposit = d_eco_urban_waste
+				}
+			} else = {
+				add_deposit = d_failing_infrastructure
+			}
+		}
+		if = {
+			limit = {
+				has_deposit = d_great_pacific_garbage_patch
+				owner = { has_civic = civic_environmentalist }
+			}
+			remove_deposit = d_great_pacific_garbage_patch
+		}
+	}
+}

@@ -1,0 +1,169 @@
+eac_tech_engineering_reshuffle_1 = {
+    area = engineering
+	cost = @rerollTechCost1
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_1_desc"
+			desc = ""
+		}
+	}
+}		
+
+eac_tech_engineering_reshuffle_2 = {
+    area = engineering
+	cost = @rerollTechCost2
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_2_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_engineering_reshuffle_3 = {
+    area = engineering
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_3_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_engineering_reshuffle_4 = {
+    area = engineering
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_4_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_engineering_reshuffle_5 = {
+    area = engineering
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_5_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_engineering_reshuffle_6 = {
+    area = engineering
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_6_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_engineering_reshuffle_7 = {
+    area = engineering
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_7_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_engineering_reshuffle_8 = {
+    area = engineering
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_8_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_engineering_reshuffle_9 = {
+    area = engineering
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_9_desc"
+			desc = ""
+		}
+	}
+}
+
+eac_tech_engineering_reshuffle_10 = {
+    area = engineering
+	cost = @rerollTechCost3
+	tier = 0
+	category = { eac_category_reshuffle }
+	weight = 0
+	weight_modifier = { factor = 0 }
+	ai_weight = { factor = 0 }
+	
+	prereqfor_desc = {
+		custom = {
+			title = "eac_tech_engineering_reshuffle_10_desc"
+			desc = ""
+		}
+	}
+}

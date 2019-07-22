@@ -1,0 +1,670 @@
+###Level 1 - Independent Laws###
+
+sc_federal_leadership = {
+
+	potential = {
+		has_federation = yes
+	}
+
+	allow = {
+		always = no
+	}
+	
+	option = {
+		name = "sc_federal_election"
+		
+		policy_flags = {
+			sc_federal_election
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				OR = {
+					has_policy_flag = sc_federal_election
+					NOT = {
+						OR = {
+							has_policy_flag = sc_federal_election
+							has_policy_flag = sc_federal_representation
+							has_policy_flag = sc_federal_might
+							has_policy_flag = sc_federal_permanent
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_representation"
+		
+		policy_flags = {
+			sc_federal_representation
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_representation	
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_might"
+		
+		policy_flags = {
+			sc_federal_might
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_might	
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_permanent"
+		
+		policy_flags = {
+			sc_federal_permanent
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_permanent
+			}
+		}
+	}
+	
+}
+
+sc_federal_legislation = {
+
+	potential = {
+		has_federation = yes
+	}
+
+	allow = {
+		always = no
+	}
+	
+	option = {
+		name = "sc_federal_autonomous_laws"
+		
+		policy_flags = {
+			sc_federal_autonomous_laws
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				OR = {
+					has_policy_flag = sc_federal_autonomous_laws
+					NOT = {
+						OR = {
+							has_policy_flag = sc_federal_autonomous_laws
+							has_policy_flag = sc_federal_federal_laws
+							has_policy_flag = sc_federal_unified_laws
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_federal_laws"
+		
+		policy_flags = {
+			sc_federal_federal_laws
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_federal_laws	
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_unified_laws"
+		
+		policy_flags = {
+			sc_federal_unified_laws
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_unified_laws
+			}
+		}
+	}
+	
+}
+
+sc_federal_legislative_process = {
+
+	potential = {
+		has_federation = yes
+	}
+
+	allow = {
+		always = no
+	}
+	
+	option = {
+		name = "sc_federal_consensus"
+		
+		policy_flags = {
+			sc_federal_consensus
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				OR = {
+					has_policy_flag = sc_federal_consensus
+					NOT = {
+						OR = {
+							has_policy_flag = sc_federal_consensus
+							has_policy_flag = sc_federal_majority
+							has_policy_flag = sc_federal_discretionary
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_majority"
+		
+		policy_flags = {
+			sc_federal_majority
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_majority	
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_discretionary"
+		
+		policy_flags = {
+			sc_federal_discretionary
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_discretionary
+			}
+		}
+	}
+	
+}
+
+###Level 2 - Federal Laws###
+
+sc_federal_budget = {
+
+	potential = {
+		has_federation = yes
+		OR = {
+			has_policy_flag = sc_federal_federal_laws
+			has_policy_flag = sc_federal_unified_laws
+		}
+	}
+
+	allow = {
+		always = no
+	}
+	
+	option = {
+		name = "sc_federal_budget_none"
+		
+		policy_flags = {
+			sc_federal_budget_none
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				OR = {
+					has_policy_flag = sc_federal_budget_none
+					NOT = {
+						OR = {
+							has_policy_flag = sc_federal_budget_none
+							has_policy_flag = sc_federal_budget_minimal
+							has_policy_flag = sc_federal_budget_low
+							has_policy_flag = sc_federal_budget_acceptable
+							has_policy_flag = sc_federal_budget_high
+							has_policy_flag = sc_federal_budget_extreme
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_budget_minimal"
+		
+		policy_flags = {
+			sc_federal_budget_minimal
+		}
+		
+		modifier = {
+			federation_naval_cap_contribution_mult = -0.20
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_budget_minimal	
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_budget_low"
+		
+		policy_flags = {
+			sc_federal_budget_low
+		}
+		
+		modifier = {
+			federation_naval_cap_contribution_mult = -0.10
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_budget_low
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_budget_acceptable"
+		
+		policy_flags = {
+			sc_federal_budget_acceptable
+		}
+		
+		modifier = {
+			
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_budget_acceptable
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_budget_high"
+		
+		policy_flags = {
+			sc_federal_budget_high
+		}
+		
+		modifier = {
+			federation_naval_cap_contribution_mult = 0.10
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_budget_high
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_budget_extreme"
+		
+		policy_flags = {
+			sc_federal_budget_extreme
+		}
+		
+		modifier = {
+			federation_naval_cap_contribution_mult = 0.20
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_budget_extreme
+			}
+		}
+	}
+	
+}
+
+sc_federal_research = {
+
+	potential = {
+		has_federation = yes
+		OR = {
+			has_policy_flag = sc_federal_federal_laws
+			has_policy_flag = sc_federal_unified_laws
+		}
+	}
+
+	allow = {
+		always = no
+	}
+	
+	option = {
+		name = "sc_federal_research_none"
+		
+		policy_flags = {
+			sc_federal_research_none
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				OR = {
+					has_policy_flag = sc_federal_research_none
+					NOT = {
+						OR = {
+							has_policy_flag = sc_federal_research_none
+							has_policy_flag = sc_federal_research_low
+							has_policy_flag = sc_federal_research_high
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_research_low"
+		
+		policy_flags = {
+			sc_federal_research_low
+		}
+		
+		modifier = {
+			all_technology_research_speed = 0.05
+			country_energy_produces_mult = -0.05
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_research_low
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_research_high"
+		
+		policy_flags = {
+			sc_federal_research_high
+		}
+		
+		modifier = {
+			all_technology_research_speed = 0.1
+			country_energy_produces_mult = -0.10
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_research_high
+			}
+		}
+	}
+}
+
+sc_federal_health = {
+
+	potential = {
+		has_federation = yes
+		OR = {
+			has_policy_flag = sc_federal_federal_laws
+			has_policy_flag = sc_federal_unified_laws
+		}
+	}
+
+	allow = {
+		always = no
+	}
+	
+	option = {
+		name = "sc_federal_health_none"
+		
+		policy_flags = {
+			sc_federal_health_none
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				OR = {
+					has_policy_flag = sc_federal_health_none
+					NOT = {
+						OR = {
+							has_policy_flag = sc_federal_health_none
+							has_policy_flag = sc_federal_health_low
+							has_policy_flag = sc_federal_health_high
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_health_low"
+		
+		policy_flags = {
+			sc_federal_health_low
+		}
+		
+		modifier = {
+			pop_environment_tolerance = 0.05
+			pop_growth_speed = 0.05
+			country_energy_produces_mult = -0.025
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_health_low
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_health_high"
+		
+		policy_flags = {
+			sc_federal_health_high
+		}
+		
+		modifier = {
+			pop_environment_tolerance = 0.1
+			pop_growth_speed = 0.1
+			country_energy_produces_mult = -0.05
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_health_high
+			}
+		}
+	}
+}
+
+###Level 3 - Unified Laws###
+
+sc_federal_open = {
+
+	potential = {
+		has_federation = yes
+		has_policy_flag = sc_federal_unified_laws
+	}
+
+	allow = {
+		always = no
+	}
+	
+	option = {
+		name = "sc_federal_open_none"
+		
+		policy_flags = {
+			sc_federal_open_none
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				OR = {
+					has_policy_flag = sc_federal_open_none
+					NOT = {
+						OR = {
+							has_policy_flag = sc_federal_open_none
+							has_policy_flag = sc_federal_open_low
+							has_policy_flag = sc_federal_open_high
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_open_low"
+		
+		policy_flags = {
+			sc_federal_open_low
+		}
+		
+		modifier = {
+			country_trust_growth = 0.25
+			pop_government_ethic_attraction = -0.05
+			country_unity_produces_mult = 0.025
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_open_low
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_open_high"
+		
+		policy_flags = {
+			sc_federal_open_high
+		}
+		
+		modifier = {
+			country_trust_growth = 0.5
+			pop_government_ethic_attraction = -0.1
+			country_unity_produces_mult = 0.05
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_open_high
+			}
+		}
+	}
+}
+
+sc_federal_rights = {
+
+	potential = {
+		has_federation = yes
+		has_policy_flag = sc_federal_unified_laws
+	}
+
+	allow = {
+		always = no
+	}
+	
+	option = {
+		name = "sc_federal_rights_none"
+		
+		policy_flags = {
+			sc_federal_rights_none
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				OR = {
+					has_policy_flag = sc_federal_rights_none
+					NOT = {
+						OR = {
+							has_policy_flag = sc_federal_rights_none
+							has_policy_flag = sc_federal_rights_low
+							has_policy_flag = sc_federal_rights_high
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_rights_low"
+		
+		policy_flags = {
+			sc_federal_rights_low
+		}
+		
+		modifier = {
+			pop_happiness = 0.05
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_rights_low
+			}
+		}
+	}
+	
+	option = {
+		name = "sc_federal_rights_high"
+		
+		policy_flags = {
+			sc_federal_rights_high
+		}
+		
+		modifier = {
+			pop_happiness = 0.1
+			country_unity_produces_mult = 0.05
+		}
+		
+		valid = {
+			custom_tooltip = {
+				text = "SC_MUST_BE_VOTED_ON"
+				has_policy_flag = sc_federal_rights_high
+			}
+		}
+	}
+}

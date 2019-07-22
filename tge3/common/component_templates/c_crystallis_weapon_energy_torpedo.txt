@@ -1,0 +1,112 @@
+###################
+# COST
+###################
+@cost3s = 194
+
+@cost4s = 242
+
+###################
+# POWER
+###################
+@power3s = -113
+
+@power4s = -141
+
+# ####################
+#  Energy Torpedoes
+# ####################
+
+# ## Energy Torpedoes
+weapon_component_template = {
+	key = "C_TORP_ENERGY_TORPEDO_3"
+	size = large
+	entity = "turret_energy_torpedo_entity"
+	type = instant
+	
+	icon = "GFX_C_ship_part_energy_torpedo_3"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_energy_torpedoes_3" }
+	component_set = "C_ENERGY_TORPEDO_3"
+	projectile_gfx = "proton_torpedoes"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "C_TORP_ENERGY_TORPEDO_4"
+	
+	damage = { min = 585 max = 1300 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 150
+	range = 130.0
+	accuracy = 0.90
+	tracking = 0.05
+	hull_damage = 1.75
+	shield_damage = 0.50
+	armor_damage = 1.50
+	power = @power3s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t8_cost
+			exotic_gases = @l_t8_rare
+		}		
+		upkeep = {
+			energy = @l_t8_upkeep_energy
+			alloys = @l_t8_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+	upgrades_to = "C_TORP_ENERGY_TORPEDO_4"
+}
+
+weapon_component_template = {
+	key = "C_TORP_ENERGY_TORPEDO_4"
+	size = large
+	entity = "turret_energy_torpedo_entity"
+	type = instant
+	
+	icon = "GFX_C_ship_part_energy_torpedo_4"
+	icon_frame = 1
+	
+	prerequisites = { "tech_c_energy_torpedoes_4" }
+	component_set = "C_ENERGY_TORPEDO_4"
+	projectile_gfx = "neutron_torpedoes"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	
+	damage = { min = 731 max = 1625 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 150
+	range = 130.0
+	accuracy = 0.90
+	tracking = 0.05
+	hull_damage = 1.75
+	shield_damage = 0.50
+	armor_damage = 1.50
+	power = @power4s
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t10_cost
+			exotic_gases = @l_t10_rare
+		}		
+		upkeep = {
+			energy = @l_t10_upkeep_energy
+			alloys = @l_t10_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}

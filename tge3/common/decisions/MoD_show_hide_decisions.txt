@@ -1,0 +1,26 @@
+decision_0_show_hide_MoD = {
+	owned_planets_only = yes
+	prerequisites = { "tech_MoD_S" } 
+	enactment_time = 0 
+	icon = default
+
+	effect = {
+		if = {
+			limit = { NOT = { owner = { has_country_flag = cf_hide_mod } } }
+			owner = { set_country_flag = cf_hide_mod }
+			break = yes
+		}
+		else_if = {
+			limit = { owner = { has_country_flag = cf_hide_mod } }
+			owner = { remove_country_flag = cf_hide_mod }
+			break = yes
+		}
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 9999
+			owner = { has_country_flag = cf_hide_mod }
+		}
+	}
+}

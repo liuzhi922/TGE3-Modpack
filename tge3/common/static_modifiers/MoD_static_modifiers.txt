@@ -1,0 +1,18 @@
+
+modifier_O_max = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_low_orbit_urbanisation.dds"
+	icon_frame = 2
+}
+modifier_O_max_AP = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_low_orbit_urbanisation.dds"
+	icon_frame = 1
+}
+modifier_U_max = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_subterranean_urbanisation.dds"
+	icon_frame = 2
+}
+modifier_U_max_AP = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_subterranean_urbanisation.dds"
+	icon_frame = 1
+}
+
