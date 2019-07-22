@@ -1,0 +1,25 @@
+# File for all notification pop-ups
+
+namespace = kiyo_event_notification
+
+# Notification for spy out of cooldown
+country_event = {
+	id = kiyo_event_notification.0
+	title = kiyo_event_notification.title
+	desc = kiyo_event_notification.0.desc
+	picture = GFX_evt_board_meeting
+	is_triggered_only = yes
+	
+	option = { name = GOOD }
+}
+
+# Notification for counterespionage out of cooldown
+country_event = {
+	id = kiyo_event_notification.1
+	title = kiyo_event_notification.title
+	desc = kiyo_event_notification.1.desc
+	picture = GFX_evt_board_meeting
+	is_triggered_only = yes
+	
+	option = { name = GOOD }
+}

@@ -1,0 +1,41 @@
+# Triggers country_event for the defender upon defeat
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_lose = {
+	events = {
+	}
+}
+
+# Triggers country_event for the attacker upon victory
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_win = {
+	events = {
+		raidresource.10
+		raidresource.13
+	}
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
+	events = {
+#		raidresource.20
+#		raidresource.21
+#		raidresource.22
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+#		raidresource.23
+	}
+}

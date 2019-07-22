@@ -1,0 +1,1232 @@
+#Variable Localization#
+
+defined_text = {
+	name = GetTradePolicy
+	text = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_policy_flag = trade_conversion_consumer_goods
+				has_policy_flag = trade_conversion_unity
+			}
+		}
+		localization_key = trade_policy_default
+	}
+	text = {
+		trigger = { has_policy_flag = trade_conversion_consumer_goods }
+		localization_key = trade_policy_consumer_goods
+	}
+	text = {
+		trigger = { has_policy_flag = trade_conversion_unity }
+		localization_key = trade_policy_unity
+	}
+}
+
+defined_text = {
+	name = GetTradePolicyA
+	text = {
+		trigger = {
+			OR = {
+				has_policy_flag = trade_conversion_consumer_goods
+				has_policy_flag = trade_conversion_unity
+			}
+		}
+		localization_key = trade_policy_default
+	}
+	text = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_policy_flag = trade_conversion_consumer_goods
+				has_policy_flag = trade_conversion_unity
+			}
+		}
+		localization_key = trade_policy_consumer_goods
+	}
+}
+
+defined_text = {
+	name = GetTradePolicyB
+	text = {
+		trigger = { has_policy_flag = trade_conversion_unity }
+		localization_key = trade_policy_consumer_goods
+	}
+	text = {
+		trigger = {
+			OR = {
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					has_policy_flag = trade_conversion_consumer_goods
+					has_policy_flag = trade_conversion_unity
+				}
+				has_policy_flag = trade_conversion_consumer_goods
+			}
+		}
+		localization_key = trade_policy_unity
+	}
+}
+
+defined_text = {
+	name = GetLeaderType
+	text = {
+		trigger = { leader_class = ruler }
+		localization_key = kiyo_ruler
+	}
+	text = {
+		trigger = { leader_class = governor }
+		localization_key = kiyo_governors
+	}
+	text = {
+		trigger = { leader_class = scientist }
+		localization_key = kiyo_scientists
+	}
+	text = {
+		trigger = { leader_class = admiral }
+		localization_key = kiyo_admirals
+	}
+	text = {
+		trigger = { leader_class = general }
+		localization_key = kiyo_generals
+	}
+}
+
+defined_text = {
+	name = GetOverNavyCap
+	text = {
+		trigger = {
+			event_target:spyObserved = { used_naval_capacity_percent > 1 }
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue1 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_overcap
+	}
+	text = {
+		trigger = {
+			NOT = {
+				event_target:spyObserved = { used_naval_capacity_percent > 1 }
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue1 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetStarving
+	text = {
+		trigger = {
+			event_target:spyObserved = {
+				resource_stockpile_compare = { resource = food value = 0 }
+				has_monthly_income = { resource = food value < 0 }
+			}
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue1 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_starving
+	}
+	text = {
+		trigger = {
+			NOT = {
+				event_target:spyObserved = {
+					resource_stockpile_compare = { resource = food value = 0 }
+					has_monthly_income = { resource = food value < 0 }
+				}
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue1 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetMineralDeficit
+	text = {
+		trigger = {
+			event_target:spyObserved = {
+				resource_stockpile_compare = { resource = minerals value = 0 }
+				has_monthly_income = { resource = minerals value < 0 }
+			}
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_mineraldeficit
+	}
+	text = {
+		trigger = {
+			NOT = {
+				event_target:spyObserved = {
+					resource_stockpile_compare = { resource = minerals value = 0 }
+					has_monthly_income = { resource = minerals value < 0 }
+				}
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetAlloyDeficit
+	text = {
+		trigger = {
+			event_target:spyObserved = {
+				resource_stockpile_compare = { resource = alloys value = 0 }
+				has_monthly_income = { resource = alloys value < 0 }
+			}
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_alloydeficit
+	}
+	text = {
+		trigger = {
+			NOT = {
+				event_target:spyObserved = {
+					resource_stockpile_compare = { resource = alloys value = 0 }
+					has_monthly_income = { resource = alloys value < 0 }
+				}
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetConsumerGoodsDeficit
+	text = {
+		trigger = {
+			event_target:spyObserved = {
+				resource_stockpile_compare = { resource = consumer_goods value = 0 }
+				has_monthly_income = { resource = consumer_goods value < 0 }
+			}
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_consumerdeficit
+	}
+	text = {
+		trigger = {
+			NOT = {
+				event_target:spyObserved = {
+					resource_stockpile_compare = { resource = consumer_goods value = 0 }
+					has_monthly_income = { resource = consumer_goods value < 0 }
+				}
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetStrategicDeficit
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = {
+				OR = {
+					AND = {
+						resource_stockpile_compare = { resource = volatile_motes value = 0 }
+						has_monthly_income = { resource = volatile_motes value < 0 }
+					}
+					AND = {
+						resource_stockpile_compare = { resource = exotic_gases value = 0 }
+						has_monthly_income = { resource = exotic_gases value < 0 }
+					}
+					AND = {
+						resource_stockpile_compare = { resource = rare_crystals value = 0 }
+						has_monthly_income = { resource = rare_crystals value < 0 }
+					}
+					AND = {
+						resource_stockpile_compare = { resource = sr_living_metal value = 0 }
+						has_monthly_income = { resource = sr_living_metal value < 0 }
+					}
+					AND = {
+						resource_stockpile_compare = { resource = sr_zro value = 0 }
+						has_monthly_income = { resource = sr_zro value < 0 }
+					}
+					AND = {
+						resource_stockpile_compare = { resource = sr_dark_matter value = 0 }
+						has_monthly_income = { resource = sr_dark_matter value < 0 }
+					}
+					AND = {
+						resource_stockpile_compare = { resource = nanites value = 0 }
+						has_monthly_income = { resource = nanites value < 0 }
+					}
+				}
+			}
+		}
+		localization_key = kiyo_spy_strategicdeficit
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = {
+					OR = {
+						AND = {
+							resource_stockpile_compare = { resource = volatile_motes value = 0 }
+							has_monthly_income = { resource = volatile_motes value < 0 }
+						}
+						AND = {
+							resource_stockpile_compare = { resource = exotic_gases value = 0 }
+							has_monthly_income = { resource = exotic_gases value < 0 }
+						}
+						AND = {
+							resource_stockpile_compare = { resource = rare_crystals value = 0 }
+							has_monthly_income = { resource = rare_crystals value < 0 }
+						}
+						AND = {
+							resource_stockpile_compare = { resource = sr_living_metal value = 0 }
+							has_monthly_income = { resource = sr_living_metal value < 0 }
+						}
+						AND = {
+							resource_stockpile_compare = { resource = sr_zro value = 0 }
+							has_monthly_income = { resource = sr_zro value < 0 }
+						}
+						AND = {
+							resource_stockpile_compare = { resource = sr_dark_matter value = 0 }
+							has_monthly_income = { resource = sr_dark_matter value < 0 }
+						}
+						AND = {
+							resource_stockpile_compare = { resource = nanites value = 0 }
+							has_monthly_income = { resource = nanites value < 0 }
+						}
+					}
+				}
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetEnergyDeficit
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = {
+				resource_stockpile_compare = { resource = energy value = 0 }
+				has_monthly_income = { resource = energy value < 0 }
+			}
+		}
+		localization_key = kiyo_spy_energydeficit
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = {
+					resource_stockpile_compare = { resource = energy value = 0 }
+					has_monthly_income = { resource = energy value < 0 }
+				}
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic1
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_dragon_trophy }
+		}
+		localization_key = kiyo_spy_r_dragon_trophy
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_dragon_trophy }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic2
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_khans_throne }
+		}
+		localization_key = kiyo_spy_r_khans_throne
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_khans_throne }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic3
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_worm_scales }
+		}
+		localization_key = kiyo_spy_r_worm_scales
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_worm_scales }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic4
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_rubricator }
+		}
+		localization_key = kiyo_spy_r_rubricator
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_rubricator }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic5
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_galaxy }
+		}
+		localization_key = kiyo_spy_r_galaxy
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_galaxy }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic6
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_omnicodex }
+		}
+		localization_key = kiyo_spy_r_omnicodex
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_omnicodex }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic7
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_surveyor }
+		}
+		localization_key = kiyo_spy_r_surveyor
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_surveyor }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic8
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_galatron }
+		}
+		localization_key = kiyo_spy_r_galatron
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_galatron }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic9
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_ancient_sword }
+		}
+		localization_key = kiyo_spy_r_ancient_sword
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_ancient_sword }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic10
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_severed_head }
+		}
+		localization_key = kiyo_spy_r_severed_head
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_severed_head }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic11
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_prethoryn_queen }
+		}
+		localization_key = kiyo_spy_r_prethoryn_queen
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_prethoryn_queen }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic12
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_unbidden_warlock }
+		}
+		localization_key = kiyo_spy_r_unbidden_warlock
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_unbidden_warlock }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic13
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_contingency_core }
+		}
+		localization_key = kiyo_spy_r_contingency_core
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_contingency_core }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic14
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_zro_crystal }
+		}
+		localization_key = kiyo_spy_r_zro_crystal
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_zro_crystal }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic15
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_the_last_baol }
+		}
+		localization_key = kiyo_spy_r_the_last_baol
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_the_last_baol }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic16
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_the_defragmentor }
+		}
+		localization_key = kiyo_spy_r_the_defragmentor
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_the_defragmentor }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic17
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_reality_perforator }
+		}
+		localization_key = kiyo_spy_r_reality_perforator
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_reality_perforator }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic18
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_pox_sample }
+		}
+		localization_key = kiyo_spy_r_pox_sample
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_pox_sample }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic19
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_cryo_core }
+		}
+		localization_key = kiyo_spy_r_cryo_core
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_cryo_core }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetHasRelic20
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { has_relic = r_war_forge }
+		}
+		localization_key = kiyo_spy_r_war_forge
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+					has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+				}
+				event_target:spyObserved = { has_relic = r_war_forge }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetIntrigue0
+	text = {
+		trigger = {
+			NOR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue1 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_zero
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue1 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetAlloys0
+	text = {
+		trigger = { NOT = { has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 } } }
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = { has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetConsumerGoods0
+	text = {
+		trigger = { NOT = { has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 } } }
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = { has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 } }
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetMinerals0
+	text = {
+		trigger = {
+			NOR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetFood0
+	text = {
+		trigger = {
+			NOR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetEnergy0
+	text = {
+		trigger = {
+			NOR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetPhysics0
+	text = {
+		trigger = {
+			NOR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetSociety0
+	text = {
+		trigger = {
+			NOR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetEngineering0
+	text = {
+		trigger = {
+			NOR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetAscension0
+	text = {
+		trigger = {
+			NOR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue1 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue1 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { num_ascension_perk_slots = 0 }
+		}
+		localization_key = kiyo_spy_zero
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue1 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue2 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue3 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+			event_target:spyObserved = { num_ascension_perk_slots > 0 }
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+defined_text = {
+	name = GetFleet0
+	text = {
+		trigger = {
+			NOR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_unknown
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue4 }
+				has_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_intrigue5 }
+			}
+		}
+		localization_key = kiyo_spy_noinfo
+	}
+}
+
+#Non-variable Localization#
+
+defined_text = {
+	name = GetFoodPower
+	text = {
+		trigger = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				has_country_flag = synthetic_empire
+			}
+			#has_ethic = ethic_gestalt_consciousness
+		}
+		localization_key = kiyo_spy_toxic_food
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_country_flag = synthetic_empire
+			}
+		}
+		localization_key = kiyo_spy_toxic_power
+	}
+}

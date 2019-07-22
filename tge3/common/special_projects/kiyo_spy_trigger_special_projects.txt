@@ -1,0 +1,77 @@
+#General Espionage Trigger
+special_project = {
+	key = "KIYO_SPY_TRIGGER_GENERAL"
+	days_to_research = 180
+	timelimit = 120
+	picture = GFX_evt_arguing_senate
+	icon = "gfx/interface/icons/situation_log/situation_log_kiyo_spy.dds"
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_transport = 20
+		leader = general
+	}
+	
+	on_success = {
+		save_event_target_as = kiyo_spy_fleet_spy
+		if = { limit = { exists = leader } leader = { save_event_target_as = kiyo_spy_leader_spy } }
+		owner = { country_event = { id = kiyo_event_trigger.1 } }
+	}
+	
+	on_fail = {
+		abort_special_project = { type = KIYO_SPY_TRIGGER_GENERAL location = event_target:kiyo_spy_star_spy }
+		set_timed_relation_flag = { flag = kiyo_spy_spying_cooldown_denied who = event_target:spyVictim days = 360 }
+		country_event = { id = kiyo_event_notification.0 days = 361 }
+	}
+}
+
+#Scientist Espionage Trigger
+special_project = {
+	key = "KIYO_SPY_TRIGGER_SCIENTIST"
+	days_to_research = 180
+	timelimit = 120
+	picture = GFX_evt_arguing_senate
+	icon = "gfx/interface/icons/situation_log/situation_log_kiyo_spy.dds"
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill >= 4
+	}
+	
+	on_success = {
+		save_event_target_as = kiyo_spy_fleet_spy
+		if = { limit = { exists = leader } leader = { save_event_target_as = kiyo_spy_leader_spy } }
+		owner = { country_event = { id = kiyo_event_trigger.2 } }
+	}
+	
+	on_fail = {
+		abort_special_project = { type = KIYO_SPY_TRIGGER_SCIENTIST location = event_target:kiyo_spy_star_spy }
+		set_timed_relation_flag = { flag = kiyo_spy_spying_cooldown_denied who = event_target:spyVictim days = 360 }
+		country_event = { id = kiyo_event_notification.0 days = 361 }
+	}
+}
+
+#Check Info Espionage Trigger
+special_project = {
+	key = "KIYO_SPY_TRIGGER_CHECK"
+	days_to_research = 180
+	picture = GFX_evt_arguing_senate
+	icon = "gfx/interface/icons/situation_log/situation_log_kiyo_spy.dds"
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill >= 4
+	}
+	
+	on_success = {
+		save_event_target_as = kiyo_spy_fleet_spy
+		owner = { country_event = { id = kiyo_event_spy_menu.1 } }
+	}
+}

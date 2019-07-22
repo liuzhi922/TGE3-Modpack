@@ -1,0 +1,48 @@
+
+# SPY COOLDOWN MAP MODE
+kiyo_spy_cooldown_map_mode = {
+	icon = "GFX_kiyo_spy_cooldown"
+	can_change_point_of_view = no
+	enable_terra_incognita = yes
+
+	# OBSERVER MODE
+	color = {
+		value = hsv { 0.0 0.0 0.8 0.7 }
+		custom_tooltip = "MAP_MODE_OBSERVER"
+		condition = { NOT = { exists = FROM } }
+	}
+
+	# YOU
+	color = {
+        value = hsv { 0.580 1.0 0.8 1.0 }
+        custom_tooltip = "DIPLOMATIC_MAP_MODE_SAME_EMPIRE"
+        condition = { is_same_empire = from }
+    }
+	
+	# NOT IN COOLDOWN
+	color = {
+        value = hsv { 0.0 0.0 0.8 0.7 }
+        custom_tooltip = "MAP_MODE_KIYO_SPY_NOT_COOLDOWN"
+        condition = {
+			is_country_type = default
+			NOT = { reverse_has_relation_flag = { who = from flag = kiyo_spy_spying_cooldown } }
+		}
+    }
+	
+	# IN COOLDOWN
+	color = {
+		value = hsv { 0.167 1.0 0.8 1.0 }
+        custom_tooltip = "MAP_MODE_KIYO_SPY_COOLDOWN"
+        condition = {
+			is_country_type = default
+			reverse_has_relation_flag = { who = from flag = kiyo_spy_spying_cooldown }
+		}
+	}
+	
+	# CANNOT SPY ON
+	color = {
+		value = hsv { 0.0 1.0 0.8 1.0 }
+        custom_tooltip = "MAP_MODE_KIYO_SPY_INVALID"
+        condition = { NOT = { is_country_type = default } }
+	}
+}

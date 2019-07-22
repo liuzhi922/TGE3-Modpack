@@ -1,0 +1,107 @@
+#Check if current scope country has comms with any other regular empire
+kiyo_spy_any_regular_comms = {
+	is_country_type = default
+	any_country = {
+		is_country_type = default
+		NOT = { is_country = prev }
+		prev = { has_communications = prev }
+	}
+}
+
+#Check if current scope country is not able to use espionage
+kiyo_spy_disabled_espionage = {
+	OR = {
+		has_valid_civic = civic_fanatic_purifiers
+		has_valid_civic = civic_hive_devouring_swarm
+		has_valid_civic = civic_machine_assimilator
+		has_valid_civic = civic_machine_terminator
+		AND = {
+			has_technology = "tech_colossus"
+			has_policy_flag = unrestricted_wars
+			any_owned_ship = { is_ship_size = colossus }
+		}
+	}
+}
+
+#Checks if current scope fleet doesn't have these fleet orders
+kiyo_spy_fleet_order_valid = {
+	if = { limit = { owner = { is_ai = yes } } has_fleet_flag = kiyo_spy_ai_spying }
+	else = { any_owned_ship = { exists = leader leader = { has_leader_flag = kiyo_spy_trigger_spy } } }
+	#NOR = {
+	#	has_fleet_order = survey_planet_order
+	#	has_fleet_order = research_anomaly_order
+	#	has_fleet_order = research_discovery_order
+	#	has_fleet_order = analyze_ftl_trail_order
+	#	has_fleet_order = auto_explore_order
+	#	has_fleet_order = assist_research_order
+	#	#has_fleet_order = excavate_site_order (TODO find actual fleet order for this)
+	#	if = { limit = { exists = orbit }
+	#		orbit = {
+	#			if = { limit = { exists = archaeological_site }
+	#				archaeological_site = {
+	#					is_site_under_excavation = yes
+	#					is_current_excavator_fleet = prevprev
+	#				}
+	#			}
+	#			else = { always = no }
+	#		}
+	#	}
+	#	has_fleet_order = collect_data_fleet_order
+	#	has_fleet_order = evade_hostiles_order
+	#	has_fleet_order = return_fleet_order
+	#	has_fleet_order = merge_fleet_order
+	#	has_fleet_order = repair_ship_fleet_order
+	#	has_fleet_order = land_armies_order
+	#}
+}
+
+#Checks for valid fleet at location for espionage targets
+kiyo_spy_valid_fleet_at_location = {
+	root = {
+		any_owned_ship = {
+			if = {
+				limit = {
+					exists = fleet
+					exists = leader
+				}
+				fleet = {
+					if = { limit = { exists = orbit }
+						orbit = { is_primary_star = yes }
+					}
+					else = { always = no }
+					kiyo_spy_fleet_order_valid = yes
+					prev = {
+						OR = {
+							AND = {
+								is_ship_class = shipclass_transport
+								fleet = { num_ships >= 20 }
+								leader = {
+									leader_class = general
+									is_event_leader = no
+									has_leader_flag = kiyo_spy_trigger_spy
+								}
+							}
+							AND = {
+								is_ship_class = shipclass_science_ship
+								leader = {
+									leader_class = scientist
+									is_event_leader = no
+									has_leader_flag = kiyo_spy_trigger_spy
+									has_skill >= 4
+								}
+							}
+						}
+					}
+				}
+			}
+			else = { always = no }
+			prevprev = {
+				any_system_within_border = {
+					prevprev = {
+						distance = { source = prev type = hyperlane use_bypasses = no min_jumps = 0 max_jumps = 3 }
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+raidresource_planet_get_raided = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_raidresource_planet_get_raided.dds"
+	icon_frame = 3
+}
+
+raidresource_planet_get_raided_restored = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_raidresource_planet_get_raided_restored.dds"
+	icon_frame = 1
+}
+
+raidresource_planet_get_raided_honor = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_raidresource_planet_get_raided_restored.dds"
+	icon_frame = 2
+}
+
+raidresource_planet_get_raided_heavy = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_raidresource_planet_get_raided.dds"
+	icon_frame = 3
+}

@@ -1,0 +1,170 @@
+check_raided_planet_buildings = {
+	if = {
+		limit = {
+			has_building = building_akx_worm_3
+			
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_phy_research" value = 500 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 250 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 1
+				min = 500
+				max = 500
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_building = building_affluence_center
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = consumer_goods amount > 500 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_goods" value = 500 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 1000 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				consumer_goods = 500
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { 
+				consumer_goods = -500
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_building = building_nourishment_center
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = food amount > 900 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_food" value = 900 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 900 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				food = 900
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { 
+				food = -500
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_building = building_dimensional_fabricator
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = minerals amount > 900 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 900 }
+			change_variable = { which = "raidresource_raid_mulitifier_volatile_motes" value = 25 }
+			change_variable = { which = "raidresource_raid_mulitifier_rare_crystals" value = 25 }
+			change_variable = { which = "raidresource_raid_mulitifier_exotic_gases" value = 25 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 1050 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				minerals = 900
+				volatile_motes = 25
+				rare_crystals = 25
+				exotic_gases = 25
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { 
+				minerals = -500
+				volatile_motes = -25
+				rare_crystals = -25
+				exotic_gases = -25
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_building = building_class_4_singularity
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = energy amount > 2000 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_energy" value = 2000 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 2000 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				energy = 2000
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { 
+				energy = -2000
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_building = building_nano_forge
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = alloys amount > 200 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_alloys" value = 200 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 500 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				alloys = 200
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { 
+				alloys = -200
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_building = building_master_archive
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_phy_research" value = 1500 }
+			change_variable = { which = "raidresource_raid_mulitifier_soc_research" value = 1500 }
+			change_variable = { which = "raidresource_raid_mulitifier_eng_research" value = 1500 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 2250 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 1
+				min = 1500
+				max = 1500
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 1
+				min = 1500
+				max = 1500
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 1
+				min = 1500
+				max = 1500
+			}
+		}
+	}
+}

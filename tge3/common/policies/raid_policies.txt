@@ -1,0 +1,168 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+policy_raidresource = {
+
+	potential = {
+		OR = {
+			is_country_type = default
+			is_country_type = awakened_fallen_empire
+			is_country_type = fallen_empire
+		}	
+	}
+
+
+	option = {
+		name = "policy_raidresource_light"
+		
+		policy_flags = {
+			policy_raidresource_light
+		}
+		
+		valid = {
+		}
+		
+		AI_weight = {
+			factor = 100
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+#					has_ethic = "ethic_militarist"
+#					has_ethic = "ethic_fanatic_militarist"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "policy_raidresource_heavy"
+		
+		policy_flags = {
+			policy_raidresource_heavy
+		}
+		
+		valid = {
+			OR = {
+				has_ethic = "ethic_gestalt_consciousness"
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+			NOR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+		
+		AI_weight = {
+			factor = 100
+			modifier = {
+				factor = 10
+				OR = {
+					has_valid_civic = "civic_hive_devouring_swarm"
+					has_valid_civic = "civic_machine_terminator"
+					has_valid_civic = "civic_fanatic_purifiers"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+			}
+			modifier = {
+				factor = 0
+				is_ai = no
+			}
+		}
+	}
+	
+	option = {
+		name = "policy_raidresource_honor"
+		
+		policy_flags = {
+			policy_raidresource_honor
+		}
+		
+		valid = {
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				
+			}
+			NOR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+		
+		AI_weight = {
+			factor = 100
+			modifier = {
+				factor = 10
+				OR = {
+					has_valid_civic = "civic_warrior_culture"
+					has_ai_personality = honorbound_warriors
+				}
+			}
+			modifier = {
+				factor = 0
+				is_ai = no
+			}
+		}
+	}
+	
+	option = {
+		name = "policy_raidresource_outlaw"
+		
+		policy_flags = {
+			policy_raidresource_outlaw
+		}
+#28		
+		valid = {
+			NOR = {
+				has_valid_civic = "civic_hive_devouring_swarm"
+				has_valid_civic = "civic_machine_terminator"
+				has_valid_civic = "civic_fanatic_purifiers"
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_ai = no
+			}
+		}
+	}
+}

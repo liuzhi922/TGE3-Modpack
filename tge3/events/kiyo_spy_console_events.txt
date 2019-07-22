@@ -1,0 +1,29 @@
+namespace = kiyo_event_spy_console
+
+#Get max intrigue on everyone else
+country_event = {
+	id = kiyo_event_spy_console.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = { NOT = { is_country = root } }
+			root = { set_relation_flag = { who = prev flag = kiyo_spy_intrigue5 } }
+		}
+	}
+}
+
+#Clear max intrigue on everyone else
+country_event = {
+	id = kiyo_event_spy_console.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = { NOT = { is_country = root } }
+			root = { remove_relation_flag = { who = prev flag = kiyo_spy_intrigue5 } }
+		}
+	}
+}

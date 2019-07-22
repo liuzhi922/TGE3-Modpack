@@ -1,0 +1,215 @@
+namespace = kiyo_event_ai
+
+#Make when AI want to spy on someone and make a valid fleet do things
+event = {
+	id = kiyo_event_ai.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			is_country_type = default
+			kiyo_spy_disabled_espionage = no
+			is_ai = yes
+			is_at_war = no
+			any_playable_country = {
+				is_country_type = default
+				NOT = { is_country = prev }
+				is_neighbor_of = prev
+				has_communications = prev
+				NOR = {
+					reverse_has_relation_flag = { who = prev flag = kiyo_spy_spying_cooldown }
+					reverse_has_relation_flag = { who = prev flag = kiyo_spy_spying_on }
+				}
+				OR = {
+					relative_power = { who = prev category = all value >= equivalent }
+					OR = {
+						relative_power = { who = prev category = fleet value >= superior }
+						relative_power = { who = prev category = capacity value >= superior }
+						relative_power = { who = prev category = technology value >= superior }
+					}
+				}
+				any_system_within_border = {
+					prevprev = {
+						any_system_within_border = {
+							prevprev = {
+								distance = { source = prev type = hyperlane use_bypasses = no min_jumps = 0 max_jumps = 3 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				kiyo_spy_disabled_espionage = no
+				is_ai = yes
+				is_at_war = no
+				any_playable_country = {
+					is_country_type = default
+					NOT = { is_country = prev }
+					is_neighbor_of = prev
+					has_communications = prev
+					NOR = {
+						reverse_has_relation_flag = { who = prev flag = kiyo_spy_spying_cooldown }
+						reverse_has_relation_flag = { who = prev flag = kiyo_spy_spying_on }
+					}
+					OR = {
+						relative_power = { who = prev category = all value >= equivalent }
+						OR = {
+							relative_power = { who = prev category = fleet value >= superior }
+							relative_power = { who = prev category = capacity value >= superior }
+							relative_power = { who = prev category = technology value >= superior }
+						}
+					}
+					any_system_within_border = {
+						prevprev = {
+							any_system_within_border = {
+								prevprev = {
+									distance = { source = prev type = hyperlane use_bypasses = no min_jumps = 0 max_jumps = 3 }
+								}
+							}
+						}
+					}
+				}
+			}
+			country_event = { id = kiyo_event_ai.1 days = 1 random = 120 }
+		}
+	}
+}
+
+#Make when AI want to spy on someone and make a valid fleet do things
+country_event = {
+	id = kiyo_event_ai.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_playable_country = {
+			limit = {
+				is_country_type = default
+				NOT = { is_country = root }
+				is_neighbor_of = root
+				has_communications = root
+				NOR = {
+					reverse_has_relation_flag = { who = root flag = kiyo_spy_spying_cooldown }
+					reverse_has_relation_flag = { who = root flag = kiyo_spy_spying_on }
+				}
+				OR = {
+					relative_power = { who = root category = all value >= equivalent }
+					OR = {
+						relative_power = { who = root category = fleet value >= superior }
+						relative_power = { who = root category = capacity value >= superior }
+						relative_power = { who = root category = technology value >= superior }
+					}
+				}
+				any_system_within_border = {
+					prevprev = {
+						any_system_within_border = {
+							prevprev = {
+								distance = { source = prev type = hyperlane use_bypasses = no min_jumps = 0 max_jumps = 3 }
+							}
+						}
+					}
+				}
+			}
+			random_system_within_border = {
+				limit = {
+					prevprev = {
+						any_system_within_border = {
+							prevprev = {
+								distance = { source = prev type = hyperlane use_bypasses = no min_jumps = 0 max_jumps = 3 }
+							}
+						}
+					}
+				}
+				root = {
+					random_system_within_border = {
+						limit = {
+							any_system_planet = {
+								is_primary_star = yes
+								distance = { source = prevprevprev type = hyperlane use_bypasses = no min_jumps = 0 max_jumps = 3 }
+							}
+						}
+						weights = {
+							base = 1
+							modifier = {
+								mult = 10
+								any_system_planet = {
+									is_primary_star = yes
+									distance = { source = prevprevprev type = hyperlane use_bypasses = no min_jumps = 2 max_jumps = 3 }
+								}
+							}
+							modifier = {
+								mult = 100
+								any_system_planet = {
+									is_primary_star = yes
+									distance = { source = prevprevprev type = hyperlane use_bypasses = no min_jumps = 3 max_jumps = 3 }
+								}
+							}
+						}
+						random_system_planet = {
+							limit = {
+								is_primary_star = yes
+								distance = { source = prevprevprev type = hyperlane use_bypasses = no min_jumps = 0 max_jumps = 3 }
+							}
+							save_event_target_as = kiyo_spy_star_spy
+						}
+					}
+					if = { limit = { exists = event_target:kiyo_spy_star_spy }
+						log = "[Root.GetName] is trying to find willing spies to [kiyo_spy_star_spy.GetName]"
+						random_owned_ship = {
+							limit = {
+								if = {
+									limit = {
+										exists = fleet
+										exists = leader
+									}
+									fleet = {
+										OR = {
+											kiyo_spy_fleet_order_valid = yes
+											has_fleet_order = assist_research_order
+										}
+										prev = {
+											OR = {
+												AND = {
+													is_ship_class = shipclass_transport
+													fleet = {
+														num_ships >= 20
+													}
+													leader = {
+														leader_class = general
+														is_event_leader = no
+													}
+												}
+												AND = {
+													is_ship_class = shipclass_science_ship
+													leader = {
+														leader_class = scientist
+														is_event_leader = no
+														has_skill >= 4
+													}
+												}
+											}
+										}
+									}
+								}
+								else = { always = no }
+							}
+							fleet = {
+								clear_orders = yes
+								auto_move_to_planet = { target = event_target:kiyo_spy_star_spy clear_auto_move_on_arrival = yes }
+								set_fleet_flag = kiyo_spy_ai_spying
+							}
+						}
+					}
+					else = { log = "[Root.GetName], where's the star?! (kiyo_event_ai.1) Report this to the Intelligence and Espionage mod workshop page" }
+				}
+			}
+		}
+	}
+}

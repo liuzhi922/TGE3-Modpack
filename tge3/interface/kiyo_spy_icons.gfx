@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_kiyo_spy_cooldown"
+        texturefile = "gfx/interface/icons/kiyo_spy_cooldown.dds"
+        noOfFrames = 2
+    }
+}

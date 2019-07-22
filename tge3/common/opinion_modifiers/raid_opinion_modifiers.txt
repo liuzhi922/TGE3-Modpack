@@ -1,0 +1,65 @@
+###RAID OUR RESOURCES###
+
+
+opinion_raidresources_3 = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -1
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+			is_country_type = default
+		}	
+		modifier = {
+			add = -2
+			NOR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+			is_country_type = default
+		}		
+		modifier = {
+			add = -3
+			has_ethic = "ethic_pacifist"
+			is_country_type = default 
+		}
+		modifier = {
+			add = -4
+			has_ethic = "ethic_fanatic_pacifist"
+			is_country_type = default
+		}				
+	}
+	
+	min = -100
+	
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}
+
+opinion_raidresources_2 = {
+	opinion = {
+		base = 0	
+		modifier = {
+			add = -5
+			FROM = { has_policy_flag = "policy_raidresource_light" }
+		}
+		modifier = {
+			add = -10
+			FROM = { has_policy_flag = "policy_raidresource_heavy" }
+		}
+	}
+	
+	min = -100	
+	accumulative = yes
+
+	decay = {
+		base = 2
+	}
+}

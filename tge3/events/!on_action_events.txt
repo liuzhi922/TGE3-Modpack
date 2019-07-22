@@ -1,21 +1,9 @@
 
 ###################################################
-# Overwritten on_action_events for Superior Species
+# Overwritten on_action_events for Genetic Experiments
 ###################################################
 
 namespace = action
-
-# Assimilate Pops on Yearly Pulse
-event = {
-	id = action.64
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = { always = no }
-
-	immediate = {
-    }
-}
 
 # Assimilate Pops
 planet_event = {
@@ -23,8 +11,61 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = { always = no	}
+	trigger = {
+		any_owned_pop = {
+			has_citizenship_type = {
+				type = citizenship_assimilation
+				country = root.owner
+			}
+		}
+	}
 
 	immediate = {
+		random_list = {
+			1 = { # 1 pop
+				while = {
+					count = 1
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_assimilation
+								country = root.owner
+							}
+						} 
+					}
+					assimilate_random_pop = yes
+				}
+			}
+
+			1 = { # 2 pops
+				while = {
+					count = 2
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_assimilation
+								country = root.owner
+							}
+						} 
+					}
+					assimilate_random_pop = yes
+				}
+			}
+
+			1 = { # 4 pops
+				while = {
+					count = 4
+					limit = {
+						any_owned_pop = {
+							has_citizenship_type = {
+								type = citizenship_assimilation
+								country = root.owner
+							}
+						} 
+					}
+					assimilate_random_pop = yes
+				}
+			}
+		}
 	}
 }

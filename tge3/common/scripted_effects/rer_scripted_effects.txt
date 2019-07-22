@@ -1,0 +1,1343 @@
+check_raided_planet_fe_jobs = {
+	if = {
+		limit = {
+			OR = {
+				has_job = fe_sky_cardinal
+				has_job = fe_overseer
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 750 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 325 }
+		}
+		event_target:raidresource_raid_empire_attacker = { add_resource = { unity = 750 } }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_job = fe_protector
+				has_job = fe_guardian_bot
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 250 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 125 }
+		}
+		event_target:raidresource_raid_empire_attacker = { add_resource = { unity = 250 } }
+	}
+	if = {
+		limit = {
+			has_job = fe_archivist
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 1
+				min = 150
+				max = 150
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 1
+				min = 150
+				max = 150
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 1
+				min = 150
+				max = 150
+			}
+		}
+		
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_phy_research" value = 150 }
+			change_variable = { which = "raidresource_raid_mulitifier_soc_research" value = 150 }
+			change_variable = { which = "raidresource_raid_mulitifier_eng_research" value = 150 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 225 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = fe_acolyte_farm
+		}
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = food amount > 75 }
+				}
+				event_target:raidresource_raid_empire_attacker = {
+					OR = {
+						NOT = {
+							has_authority = auth_machine_intelligence
+						}
+						AND = {
+							has_authority = auth_machine_intelligence
+							OR = {
+								has_civic = civic_machine_assimilator
+								has_civic = civic_machine_servitor
+							}
+						}
+					}
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { food = 75 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_food" value = 75 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 75 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { food = -75 } }
+		}
+		else_if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = energy amount > 59 }
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { 
+					energy = 60
+				}
+			}
+			event_target:raidresource_raid_empire_get_raideder = {
+				add_resource = { 
+					energy = -60
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_energy" value = 60 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 60 }
+			}
+		}
+		
+	}
+	if = {
+		limit = {
+			has_job = fe_acolyte_mine
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = minerals amount > 75 }
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				minerals = 75
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { 
+				minerals = -75
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 75 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 75 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = fe_acolyte_generator
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = energy amount > 75 }
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				energy = 75
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { 
+				energy = -75
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_energy" value = 75 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 75 }
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_job = fe_xeno_keeper
+				has_job = fe_augur
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				unity = 50
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 50 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 25 }
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_job = fe_hedonist
+				has_job = fe_xeno_ward
+				has_job = fe_acolyte_artisan
+				has_job = fe_maintenance_bot
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				unity = 20
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 20 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 10 }
+		}
+	}
+}
+check_raided_planet_gestalt_jobs = {
+	if = {
+		limit = {
+			has_job = spawning_drone
+		}
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = food amount > 25 }
+				}
+				event_target:raidresource_raid_empire_attacker = {
+					OR = {
+						NOT = {
+							has_authority = auth_machine_intelligence
+						}
+						AND = {
+							has_authority = auth_machine_intelligence
+							OR = {
+								has_civic = civic_machine_assimilator
+								has_civic = civic_machine_servitor
+							}
+						}
+					}
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { food = 25 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_food" value = 25 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 25 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { food = -25 } }
+		}
+		else_if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = energy amount > 10 }
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { energy = 10 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_energy" value = 10 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 10 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { energy = -10 } }
+		}
+	}
+	if = {
+		limit = {
+			has_job = replicator
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = minerals amount > 59 }
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { minerals = 60 }
+		}
+		
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 60 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 60 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -60 } }
+	}
+	if = {
+		limit = {
+			has_job = coordinator
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = energy amount > 14 }
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				energy = 15
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 1
+				min = 50
+				max = 50
+			}
+		}
+		
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_energy" value = 15 }
+			change_variable = { which = "raidresource_raid_mulitifier_eng_research" value = 50 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 40 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { energy = -15 } }
+	}
+	if = {
+		limit = {
+			has_job = synapse_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = energy amount > 14 }
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				energy = 15
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 1
+				min = 50
+				max = 50
+			}
+		}
+		
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_energy" value = 15 }
+			change_variable = { which = "raidresource_raid_mulitifier_soc_research" value = 50 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 40 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { energy = -15 } }
+	}
+	if = {
+		limit = {
+			has_job = brain_drone
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				minerals = 40
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 1
+				min = 33
+				max = 33
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 1
+				min = 33
+				max = 33
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 1
+				min = 33
+				max = 33
+			}
+		}
+		
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 40 }
+			change_variable = { which = "raidresource_raid_mulitifier_phy_research" value = 33 }
+			change_variable = { which = "raidresource_raid_mulitifier_soc_research" value = 33 }
+			change_variable = { which = "raidresource_raid_mulitifier_eng_research" value = 33 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 90 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -40 } }
+	}
+	if = {
+		limit = {
+			has_job = calculator
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { 
+				minerals = 50
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 1
+				min = 50
+				max = 50
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 1
+				min = 50
+				max = 50
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 1
+				min = 50
+				max = 50
+			}
+		}
+		
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 50 }
+			change_variable = { which = "raidresource_raid_mulitifier_phy_research" value = 50 }
+			change_variable = { which = "raidresource_raid_mulitifier_soc_research" value = 50 }
+			change_variable = { which = "raidresource_raid_mulitifier_eng_research" value = 50 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 125 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -50 } }
+	}
+	if = {
+		limit = {
+			has_job = artisan_drone
+			
+		}
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = consumer_goods amount > 19 }
+				}
+				event_target:raidresource_raid_empire_attacker = {
+					OR = {
+						NOT = {
+							has_ethic = ethic_gestalt_consciousness
+						}
+						AND = {
+							has_authority = auth_machine_intelligence
+							has_civic = civic_machine_servitor
+						}
+					}
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { consumer_goods = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_goods" value = 20 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 40 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { consumer_goods = -20 } }
+		}
+		else_if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = minerals amount > 25 }
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { 
+					minerals = 25
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 25 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 25 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -25 } }
+		}
+	}
+	if = {
+		limit = {
+			has_job = fabricator
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = alloys amount > 19 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_alloys" value = 20 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 50 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { alloys = 20 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { alloys = -20 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = alloy_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = alloys amount > 19 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_alloys" value = 20 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 50 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { alloys = 20 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { alloys = -20 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = chemist_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = volatile_motes amount > 1 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_volatile_motes" value = 10 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { add_resource = { volatile_motes = 3 } }
+				1 = { add_resource = { volatile_motes = 6 } }
+				1 = { add_resource = { volatile_motes = 9 } }
+				1 = { add_resource = { volatile_motes = 12 } }
+				1 = { add_resource = { volatile_motes = 15 } }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { volatile_motes = -10 } }
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = minerals amount > 15 }
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 15 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 15 }
+			}
+			event_target:raidresource_raid_empire_attacker = { add_resource = { minerals = 15 } }
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -15 } }
+		}
+	}
+	if = {
+		limit = {
+			has_job = translucer_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = rare_crystals amount > 1 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_rare_crystals" value = 10 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { add_resource = { rare_crystals = 3 } }
+				1 = { add_resource = { rare_crystals = 6 } }
+				1 = { add_resource = { rare_crystals = 9 } }
+				1 = { add_resource = { rare_crystals = 12 } }
+				1 = { add_resource = { rare_crystals = 15 } }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { rare_crystals = -10 } }
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = minerals amount > 15 }
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 15 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 15 }
+			}
+			event_target:raidresource_raid_empire_attacker = { add_resource = { minerals = 15 } }
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -15 } }
+		}
+	}
+	if = {
+		limit = {
+			has_job = gas_refiner_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = exotic_gases amount > 1 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_exotic_gases" value = 10 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { add_resource = { exotic_gases = 3 } }
+				1 = { add_resource = { exotic_gases = 6 } }
+				1 = { add_resource = { exotic_gases = 9 } }
+				1 = { add_resource = { exotic_gases = 12 } }
+				1 = { add_resource = { exotic_gases = 15 } }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { exotic_gases = -10 } }
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = minerals amount > 15 }
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 15 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 15 }
+			}
+			event_target:raidresource_raid_empire_attacker = { add_resource = { minerals = 15 } }
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -15 } }
+		}
+	}
+	if = {
+		limit = {
+			has_job = patrol_drone
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 50 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 25 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { unity = 50 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = crystal_mining_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = rare_crystals amount > 1 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_rare_crystals" value = 25 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 50 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { add_resource = { rare_crystals = 5 } }
+				1 = { add_resource = { rare_crystals = 10 } }
+				1 = { add_resource = { rare_crystals = 15 } }
+				1 = { add_resource = { rare_crystals = 20 } }
+				1 = { add_resource = { rare_crystals = 25 } }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { rare_crystals = -25 } }
+	}
+	if = {
+		limit = {
+			has_job = gas_extraction_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = exotic_gases amount > 1 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_exotic_gases" value = 25 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 50 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { add_resource = { exotic_gases = 5 } }
+				1 = { add_resource = { exotic_gases = 10 } }
+				1 = { add_resource = { exotic_gases = 15 } }
+				1 = { add_resource = { exotic_gases = 20 } }
+				1 = { add_resource = { exotic_gases = 25 } }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { exotic_gases = -25 } }
+	}
+	if = {
+		limit = {
+			has_job = mote_harvesting_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = volatile_motes amount > 1 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_volatile_motes" value = 25 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 50 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { add_resource = { volatile_motes = 5 } }
+				1 = { add_resource = { volatile_motes = 10 } }
+				1 = { add_resource = { volatile_motes = 15 } }
+				1 = { add_resource = { volatile_motes = 20 } }
+				1 = { add_resource = { volatile_motes = 25 } }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { volatile_motes = -25 } }
+	}
+	if = {
+		limit = {
+			has_job = mining_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = minerals amount > 24 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 25 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 25 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { minerals = 25 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { minerals = -25 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = technician_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = energy amount > 24 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_energy" value = 25 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 25 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { energy = 25 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { energy = -25 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = agri_drone
+			
+		}
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = food amount > 25 }
+				}
+				event_target:raidresource_raid_empire_attacker = {
+					OR = {
+						NOT = {
+							has_authority = auth_machine_intelligence
+						}
+						AND = {
+							has_authority = auth_machine_intelligence
+							OR = {
+								has_civic = civic_machine_assimilator
+								has_civic = civic_machine_servitor
+							}
+						}
+					}
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { food = 25 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_food" value = 25 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 25 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { food = -25 } }
+		}
+		else_if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = energy amount > 20 }
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_energy" value = 20 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { energy = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = {
+				add_resource = { energy = -20 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_job = warrior_drone
+				has_job = maintenance_drone
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 15 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 7 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { unity = 15 }
+		}
+	}
+}
+
+
+check_raided_planet_other_jobs = {
+	if = {
+		limit = {
+			OR = {
+				has_job = servant
+				has_job = slave_overseer
+				has_job = slave_toiler
+				has_job = bio_trophy
+				has_job = purge
+				has_job = criminal
+				has_job = deviant_drone
+				has_job = corrupt_drone
+			}
+			
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { unity = 20 }
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 20 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 10 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = scavenger_drone
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = minerals amount > 9 }
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { minerals = 10 }
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 10 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 10 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -10 } }
+	}
+	if = {
+		limit = {
+			has_job = organic_battery
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = energy amount > 14 }
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { energy = 15 }
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_energy" value = 15 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 15 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { energy = -15 } }
+	}
+	if = {
+		limit = {
+			has_job = livestock
+			
+		}
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = food amount > 19 }
+				}
+				event_target:raidresource_raid_empire_attacker = {
+					OR = {
+						NOT = {
+							has_authority = auth_machine_intelligence
+						}
+						AND = {
+							has_authority = auth_machine_intelligence
+							OR = {
+								has_civic = civic_machine_assimilator
+								has_civic = civic_machine_servitor
+							}
+						}
+					}
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { food = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_food" value = 20 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { food = -20 } }
+		}
+		else_if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = energy amount > 19 }
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { energy = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_energy" value = 20 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = {
+				add_resource = { energy = -20 }
+			}
+		}
+		
+	}
+}
+
+
+check_raided_planet_ruler_jobs = {
+	if = {
+		limit = {
+			has_job = head_researcher
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 1
+				min = 250
+				max = 250
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 1
+				min = 250
+				max = 250
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 1
+				min = 250
+				max = 250
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_phy_research" value = 250 }
+			change_variable = { which = "raidresource_raid_mulitifier_soc_research" value = 250 }
+			change_variable = { which = "raidresource_raid_mulitifier_eng_research" value = 250 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 375 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = high_priest
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { unity = 375 }
+		}
+		
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 375 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 185 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = administrator
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { unity = 100 }
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 100 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 50 }
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_job = noble
+				has_job = executive
+			}
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { unity = 60 }
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 60 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 30 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = merchant
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { unity = 35 }
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_unity" value = 35 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 15 }
+		}
+	}
+}
+
+
+check_raided_planet_specialist_jobs = {
+	if = {
+		limit = {
+			has_job = colonist
+			
+		}
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = food amount > 19 }
+				}
+				event_target:raidresource_raid_empire_attacker = {
+					OR = {
+						NOT = {
+							has_authority = auth_machine_intelligence
+						}
+						AND = {
+							has_authority = auth_machine_intelligence
+							OR = {
+								has_civic = civic_machine_assimilator
+								has_civic = civic_machine_servitor
+							}
+						}
+					}
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { food = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_food" value = 20 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { food = -20 } }
+		}
+		else_if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = energy amount > 19 }
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { energy = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_energy" value = 20 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = {
+				add_resource = { energy = -20 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_job = researcher
+		}
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_attacker = {
+					OR = {
+						NOT = {
+							has_authority = auth_machine_intelligence
+						}
+						AND = {
+							has_authority = auth_machine_intelligence
+							has_civic = civic_machine_servitor
+						}
+					}
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { consumer_goods = 5 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_goods" value = 5 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 10 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { consumer_goods = -5 } }
+		}
+		else = {
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 10 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 10 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = {
+				add_resource = { minerals = -10 }
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { minerals = 10 }
+			}
+		}
+		
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { 
+					add_monthly_resource_mult = {
+						resource = physics_research
+						value = 1
+						min = 125
+						max = 125
+					}
+					event_target:raidresource_raid_empire_get_raided_planet = {
+						change_variable = { which = "raidresource_raid_mulitifier_phy_research" value = 125 }
+						change_variable = { which = "raidresource_raid_mulitifier_value" value = 60 }
+					}
+				}
+				1 = { 
+					add_monthly_resource_mult = {
+						resource = society_research
+						value = 1
+						min = 125
+						max = 125
+					}
+					event_target:raidresource_raid_empire_get_raided_planet = {
+						change_variable = { which = "raidresource_raid_mulitifier_soc_research" value = 125 }
+						change_variable = { which = "raidresource_raid_mulitifier_value" value = 60 }
+					}
+				}
+				1 = { 
+					add_monthly_resource_mult = {
+						resource = engineering_research
+						value = 1
+						min = 125
+						max = 125
+					}
+					event_target:raidresource_raid_empire_get_raided_planet = {
+						change_variable = { which = "raidresource_raid_mulitifier_eng_research" value = 125 }
+						change_variable = { which = "raidresource_raid_mulitifier_value" value = 60 }
+					}
+				}
+			}
+		}
+		
+	}
+	if = {
+		limit = {
+			OR = {
+				has_job = priest
+				has_job = enforcer
+				has_job = telepath
+				has_job = entertainer
+                has_job = duelist
+				has_job = culture_worker
+				has_job = healthcare
+				has_job = manager
+			}
+		}
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = consumer_goods amount > 7 }
+				}
+				event_target:raidresource_raid_empire_attacker = {
+					OR = {
+						NOT = {
+							has_authority = auth_machine_intelligence
+						}
+						AND = {
+							has_authority = auth_machine_intelligence
+							has_civic = civic_machine_servitor
+						}
+					}
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { consumer_goods = 8 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_goods" value = 8 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 16 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { consumer_goods = -8 } }
+		}
+		else_if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = minerals amount > 10 }
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 10 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 10 }
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { minerals = 10 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = {
+				add_resource = { minerals = -10 }
+			}
+		}	
+	}
+	if = {
+		limit = {
+			has_job = foundry
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = alloys amount > 19 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_alloys" value = 20 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 50 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { alloys = 20 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { alloys = -20 }
+		}
+	}
+	if = {
+		limit = {
+			has_job = artisan
+		}
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = consumer_goods amount > 14 }
+				}
+				event_target:raidresource_raid_empire_attacker = {
+					OR = {
+						NOT = {
+							has_authority = auth_machine_intelligence
+						}
+						AND = {
+							has_authority = auth_machine_intelligence
+							has_civic = civic_machine_servitor
+						}
+					}
+				}
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { consumer_goods = 15 }
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_goods" value = 15 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 30 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { consumer_goods = -15 } }
+		}
+		else_if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = minerals amount > 19 }
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 20 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+			}
+			event_target:raidresource_raid_empire_attacker = {
+				add_resource = { minerals = 20 }
+			}
+			event_target:raidresource_raid_empire_get_raideder = {
+				add_resource = { minerals = -20 }
+			}
+		}	
+	}
+	if = {
+		limit = {
+			has_job = chemist
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = volatile_motes amount > 1 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_volatile_motes" value = 10 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { add_resource = { volatile_motes = 3 } }
+				1 = { add_resource = { volatile_motes = 6 } }
+				1 = { add_resource = { volatile_motes = 9 } }
+				1 = { add_resource = { volatile_motes = 12 } }
+				1 = { add_resource = { volatile_motes = 15 } }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { volatile_motes = -10 } }
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = minerals amount > 15 }
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 15 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 15 }
+			}
+			event_target:raidresource_raid_empire_attacker = { add_resource = { minerals = 15 } }
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -15 } }
+		}
+	}
+	if = {
+		limit = {
+			has_job = translucer
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = rare_crystals amount > 1 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_rare_crystals" value = 10 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { add_resource = { rare_crystals = 3 } }
+				1 = { add_resource = { rare_crystals = 6 } }
+				1 = { add_resource = { rare_crystals = 9 } }
+				1 = { add_resource = { rare_crystals = 12 } }
+				1 = { add_resource = { rare_crystals = 15 } }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { rare_crystals = -10 } }
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = minerals amount > 15 }
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 15 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 15 }
+			}
+			event_target:raidresource_raid_empire_attacker = { add_resource = { minerals = 15 } }
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -15 } }
+		}
+	}
+	if = {
+		limit = {
+			has_job = gas_refiner
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = exotic_gases amount > 1 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_exotic_gases" value = 10 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 20 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			random_list = {
+				1 = { add_resource = { exotic_gases = 3 } }
+				1 = { add_resource = { exotic_gases = 6 } }
+				1 = { add_resource = { exotic_gases = 9 } }
+				1 = { add_resource = { exotic_gases = 12 } }
+				1 = { add_resource = { exotic_gases = 15 } }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raideder = { add_resource = { exotic_gases = -10 } }
+		if = {
+			limit = {
+				event_target:raidresource_raid_empire_get_raideder = {
+					has_country_resource = { type = minerals amount > 15 }
+				}
+			}
+			event_target:raidresource_raid_empire_get_raided_planet = {
+				change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 15 }
+				change_variable = { which = "raidresource_raid_mulitifier_value" value = 15 }
+			}
+			event_target:raidresource_raid_empire_attacker = { add_resource = { minerals = 15 } }
+			event_target:raidresource_raid_empire_get_raideder = { add_resource = { minerals = -15 } }
+		}
+	}
+	if = {
+		limit = {
+			has_job = roboticist
+			event_target:raidresource_raid_empire_get_raideder = {
+				has_country_resource = { type = minerals amount > 59 }
+			}
+		}
+		event_target:raidresource_raid_empire_get_raided_planet = {
+			change_variable = { which = "raidresource_raid_mulitifier_minerals" value = 60 }
+			change_variable = { which = "raidresource_raid_mulitifier_value" value = 60 }
+		}
+		event_target:raidresource_raid_empire_attacker = {
+			add_resource = { minerals = 60 }
+		}
+		event_target:raidresource_raid_empire_get_raideder = {
+			add_resource = { minerals = -60 }
+		}
+	}
+}

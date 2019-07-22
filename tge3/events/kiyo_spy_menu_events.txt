@@ -1,0 +1,74 @@
+namespace = kiyo_event_spy_menu
+
+#How to use this Mod (Window for players)
+country_event = {
+	id = kiyo_event_spy_menu.0
+	title = kiyo_event_spy_menu.0.title
+	desc = kiyo_event_spy_menu.0.desc
+	custom_gui = "enclave_caravaneer_window"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = { room = no_video_feed_room }
+	
+	option = {
+		name = kiyo_event_spy_menu.0.a
+		response_text = kiyo_event_spy_menu.0.a.response
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_event_spy_menu.0.b
+		response_text = kiyo_event_spy_menu.0.b.response
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_event_spy_menu.0.c
+		response_text = kiyo_event_spy_menu.0.c.response
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_event_spy_menu.0.d
+		response_text = kiyo_event_spy_menu.0.d.response
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_event_spy_menu.0.e
+		response_text = kiyo_event_spy_menu.0.e.response
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_event_spy_menu.0.f
+		response_text = kiyo_event_spy_menu.0.f.response
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_event_spy_menu.exit
+
+		remove_country_flag = kiyo_spy_window
+	}
+}
+
+#Spy Target View
+country_event = {
+	id = kiyo_event_spy_menu.1
+	title = kiyo_event_spy_menu.1.title
+	desc = kiyo_event_spy_menu.1.desc
+	picture = GFX_evt_board_meeting
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:spyObserved = { kiyo_spy_calculate_stats = yes }
+		set_timed_relation_flag = { who = event_target:spyObserved flag = kiyo_spy_spying_cooldown days = 900 }
+		country_event = { id = kiyo_event_notification.0 days = 901 }
+	}
+	
+	option = {
+		name = kiyo_event_spy_menu.exit
+		ai_chance = { factor = 100 }
+	}
+}

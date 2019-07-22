@@ -1,0 +1,11 @@
+on_bi_yearly_pulse = {
+	events = {
+		kiyo_event_ai.0
+	}
+}
+
+on_five_year_pulse = {
+	events = {
+		kiyo_event_spy_passive.1
+	}
+}
