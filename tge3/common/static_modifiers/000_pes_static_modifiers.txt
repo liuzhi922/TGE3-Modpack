@@ -3,8 +3,9 @@ empire_size_over_cap = {
 	campaigns_cost_mult = 0.01
 	leader_upkeep_empire_size_mult = 0.01
 	leader_cost_empire_size_mult = 0.01
-	pop_government_ethic_attraction = -0.005
-	planet_crime_add = +0.1
+	pop_government_ethic_attraction = -0.004
+	planet_crime_add = +0.15
+	planet_jobs_produces_mult = -0.0001
 }
 
 criminal_underworld = {

@@ -7,6 +7,10 @@ gpm_has_required_terraform_modifier = {
 		OR = {
 			has_modifier = terraforming_candidate_precursor 
 			has_modifier = terraforming_candidate 
+			has_modifier = subterranean_icy_candidate
+			has_modifier = subterranean_rocky_candidate
+			has_modifier = defrost_candidate
+			has_modifier = detox_candidate
 		}
 	}
 }
@@ -21,9 +25,7 @@ gpm_is_planet_water = {
 		is_planet_class = pc_superhabitable
 		is_planet_class = pc_biolumen
 		is_planet_class = pc_mushroom
-		is_planet_class = pc_marginal 				# Star Trek New Worlds -contintental
-		is_planet_class = pc_retinal 				# Star Trek New Worlds -continental
-		is_planet_class = pc_lush 					# Star Trek New Worlds -gaia 
+		is_planet_class = pc_retinal
 		is_planet_class = pc_m1_class 				# Star Trek New Horizons (marsh)
 		is_planet_class = pc_l2_class  				# Star Trek New Horizons (rocky)
 		is_planet_class = pc_g_class  				# Star Trek New Horizons (primal)
@@ -44,7 +46,6 @@ gpm_is_planet_cold = {
 		is_planet_class = pc_tundra
 		is_planet_class = pc_glacial
 		is_planet_class = pc_antarctic
-		is_planet_class = pc_geocrystalline 		# Star Trek New Worlds -tundra
 		is_planet_class = pc_f_class				# Star Trek New Horizons (Geocrystalline)
 	}
 }
@@ -59,7 +60,8 @@ gpm_is_planet_dry = {
 		is_planet_class = pc_mesa
 		is_planet_class = pc_sandsea
 		is_planet_class = pc_frozen_desert
-		is_planet_class = pc_marginal_dry 			# Star Trek New Worlds -arid
+		is_planet_class = pc_irradiated_marginal
+		is_planet_class = pc_primordial
 	}
 }
 
@@ -71,7 +73,8 @@ gpm_is_planet_life = {
 		is_planet_class = pc_oasis
 		is_planet_class = pc_hajungle
 		is_planet_class = pc_geothermal
-		is_planet_class = pc_marginal_cold 			# Star Trek New Worlds -alpine
+		is_planet_class = pc_marginal_cold
+		is_planet_class = pc_marginal_warm
 		is_planet_class = pc_class_q_geo 			# Star Trek New Horizons (Geothermal)
 	}
 }

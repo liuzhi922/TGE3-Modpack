@@ -241,116 +241,37 @@ planet_event = {
 		custom_tooltip = abandoned_terraforming_completed
 		hidden_effect = {
 			remove_modifier = "abandoned_terraforming"
-			switch = {
-				trigger = is_planet_class
-				pc_desert = {
-					random_list = {
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_arid = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_savannah = {
-					random_list = {
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_desert }
-					}
-				}
-				pc_tropical = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_ocean = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_continental = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_tundra = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_arctic = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_alpine = {
-					random_list = {
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_savannah }
-					}
-				}
+			random_list = {
+				4 = { change_pc = pc_mangrove }
+				4 = { change_pc = pc_desertislands }
+				4 = { change_pc = pc_hajungle }
+				4 = { change_pc = pc_cascadian }
+				4 = { change_pc = pc_swamp }
+				4 = { change_pc = pc_subarctic }
+				4 = { change_pc = pc_glacial }
+				4 = { change_pc = pc_sandsea }
+				4 = { change_pc = pc_mesa }
+				4 = { change_pc = pc_oasis }
+				4 = { change_pc = pc_hadesert }
+				4 = { change_pc = pc_steppe }
+				4 = { change_pc = pc_frozen_desert }
+				4 = { change_pc = pc_boreal }
+				4 = { change_pc = pc_desert }
+				4 = { change_pc = pc_tropical }
+				4 = { change_pc = pc_arid }
+				4 = { change_pc = pc_continental }
+				4 = { change_pc = pc_ocean }
+				4 = { change_pc = pc_tundra }
+				4 = { change_pc = pc_arctic }
+				4 = { change_pc = pc_alpine }
+				4 = { change_pc = pc_savannah }	
+				4 = { change_pc = pc_mushroom }
+				4 = { change_pc = pc_antarctic  }
+				4 = { change_pc = pc_retinal  }
+				4 = { change_pc = pc_prairie }
+				4 = { change_pc = pc_forest }
+				4 = { change_pc = pc_med }
+				4 = { change_pc = pc_snow }
 			}
 			if = {									# -guilli
 				limit = {
@@ -381,116 +302,37 @@ planet_event = {
 	
 	immediate = {
 		hidden_effect = {
-			switch = {
-				trigger = is_planet_class
-				pc_desert = {
-					random_list = {
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_arid = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_savannah = {
-					random_list = {
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_desert }
-					}
-				}
-				pc_tropical = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_ocean = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_continental = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_tundra = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_arctic = {
-					random_list = {
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_alpine }
-						15 = { change_pc = pc_savannah }
-					}
-				}
-				pc_alpine = {
-					random_list = {
-						15 = { change_pc = pc_tropical }
-						15 = { change_pc = pc_arid }
-						15 = { change_pc = pc_continental }
-						15 = { change_pc = pc_ocean }
-						15 = { change_pc = pc_tundra }
-						15 = { change_pc = pc_arctic }
-						15 = { change_pc = pc_desert }
-						15 = { change_pc = pc_savannah }
-					}
-				}
+			random_list = {
+				4 = { change_pc = pc_mangrove }
+				4 = { change_pc = pc_desertislands }
+				4 = { change_pc = pc_hajungle }
+				4 = { change_pc = pc_cascadian }
+				4 = { change_pc = pc_swamp }
+				4 = { change_pc = pc_subarctic }
+				4 = { change_pc = pc_glacial }
+				4 = { change_pc = pc_sandsea }
+				4 = { change_pc = pc_mesa }
+				4 = { change_pc = pc_oasis }
+				4 = { change_pc = pc_hadesert }
+				4 = { change_pc = pc_steppe }
+				4 = { change_pc = pc_frozen_desert }
+				4 = { change_pc = pc_boreal }
+				4 = { change_pc = pc_desert }
+				4 = { change_pc = pc_tropical }
+				4 = { change_pc = pc_arid }
+				4 = { change_pc = pc_continental }
+				4 = { change_pc = pc_ocean }
+				4 = { change_pc = pc_tundra }
+				4 = { change_pc = pc_arctic }
+				4 = { change_pc = pc_alpine }
+				4 = { change_pc = pc_savannah }	
+				4 = { change_pc = pc_mushroom }
+				4 = { change_pc = pc_antarctic  }
+				4 = { change_pc = pc_retinal  }
+				4 = { change_pc = pc_prairie }
+				4 = { change_pc = pc_forest }
+				4 = { change_pc = pc_med }
+				4 = { change_pc = pc_snow }
 			}
 			remove_modifier = "abandoned_terraforming"
 			owner = { set_country_flag = terraforming_mutants_invade_country }

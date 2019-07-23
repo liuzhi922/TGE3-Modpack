@@ -37,7 +37,7 @@ country_event = {
 							is_asteroid = no
 							is_star = no
 							# has_modifier = terraforming_candidate 
-							is_planet_class = pc_barren
+							is_planet_class = pc_desolate
 							is_moon = no
 						}
 						add_modifier = { modifier = gpm_oppertunity days = -1 }
@@ -49,7 +49,12 @@ country_event = {
 			if = {
 				limit = {
 					solar_system = { 
-						NOT = { has_star_flag = gpm_guardians_ego_system }
+						NOR = {
+							has_star_flag = gpm_guardians_ego_system
+							has_star_flag = sol_system
+							has_star_flag = sol
+							has_star_flag = primitive_sol
+						}
 					}
 				}
 
@@ -1237,6 +1242,16 @@ country_event = {
 								is_planet_class = pc_tundra
 								is_planet_class = pc_nuked
 								is_planet_class = pc_machine
+								is_planet_class = pc_archive
+								is_planet_class = pc_ecocity
+								is_planet_class = pc_primordial
+								is_planet_class = pc_irradiated_marginal
+								is_planet_class = pc_marginal_cold
+								is_planet_class = pc_marginal_warm
+								is_planet_class = pc_desolate
+								is_planet_class = pc_hothouse
+								is_planet_class = pc_methane
+								is_planet_class = pc_ammonia
 							}
 							is_colony = no
 							is_capital = no
@@ -1271,6 +1286,16 @@ country_event = {
 								is_planet_class = pc_tundra
 								is_planet_class = pc_nuked
 								is_planet_class = pc_machine
+								is_planet_class = pc_archive
+								is_planet_class = pc_ecocity
+								is_planet_class = pc_primordial
+								is_planet_class = pc_irradiated_marginal
+								is_planet_class = pc_marginal_cold
+								is_planet_class = pc_marginal_warm
+								is_planet_class = pc_desolate
+								is_planet_class = pc_hothouse
+								is_planet_class = pc_methane
+								is_planet_class = pc_ammonia
 							}
 							is_colony = no
 							is_capital = no
@@ -1305,6 +1330,16 @@ country_event = {
 								is_planet_class = pc_tundra
 								is_planet_class = pc_nuked
 								is_planet_class = pc_machine
+								is_planet_class = pc_archive
+								is_planet_class = pc_ecocity
+								is_planet_class = pc_primordial
+								is_planet_class = pc_irradiated_marginal
+								is_planet_class = pc_marginal_cold
+								is_planet_class = pc_marginal_warm
+								is_planet_class = pc_desolate
+								is_planet_class = pc_hothouse
+								is_planet_class = pc_methane
+								is_planet_class = pc_ammonia
 							}
 							is_colony = no
 							is_capital = no
@@ -1339,6 +1374,16 @@ country_event = {
 								is_planet_class = pc_tundra
 								is_planet_class = pc_nuked
 								is_planet_class = pc_machine
+								is_planet_class = pc_archive
+								is_planet_class = pc_ecocity
+								is_planet_class = pc_primordial
+								is_planet_class = pc_irradiated_marginal
+								is_planet_class = pc_marginal_cold
+								is_planet_class = pc_marginal_warm
+								is_planet_class = pc_desolate
+								is_planet_class = pc_hothouse
+								is_planet_class = pc_methane
+								is_planet_class = pc_ammonia
 							}
 							is_colony = no
 							is_capital = no
