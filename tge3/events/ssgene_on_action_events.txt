@@ -21,18 +21,18 @@ country_event = {
 			}
 			if = {
 				limit = {
-					has_building = building_synthetic_megaplex
+					has_building = building_robot_assembly_plant_2
 					has_ascension_perk = ap_evolutionary_mastery
 				}
-				remove_building = building_synthetic_megaplex
+				remove_building = building_robot_assembly_plant_2
 				add_building = building_genetic_development_facility
 			}
 			if = {
 				limit = {
-					has_building = building_synthetic_megaplex
+					has_building = building_robot_assembly_plant_2
 					NOT = { has_ascension_perk = ap_evolutionary_mastery }
 				}
-				remove_building = building_synthetic_megaplex
+				remove_building = building_robot_assembly_plant_2
 				add_building = building_clone_vats
 			}
 			set_planet_flag = ss_cloning_flag
@@ -68,16 +68,16 @@ country_event = {
 				limit = {
 					has_building = building_genetic_development_facility
 					has_global_flag = mmplus_enabled_flag
-					has_technology = tech_synthetic_workers
+					has_technology = tech_robot_assembly_plant_2
 				}
 				remove_building = building_genetic_development_facility
-				add_building = building_synthetic_megaplex
+				add_building = building_robot_assembly_plant_2
 			}
 			if = {
 				limit = {
 					has_building = building_genetic_development_facility
 					has_global_flag = mmplus_enabled_flag
-					NOT = { has_technology = tech_synthetic_workers }
+					NOT = { has_technology = tech_robot_assembly_plant_2 }
 				}
 				remove_building = building_genetic_development_facility
 				add_building = building_robot_assembly_plant

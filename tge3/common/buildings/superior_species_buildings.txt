@@ -153,7 +153,7 @@ building_robot_assembly_plant = {
 	}
 	
 	planet_modifier = {
-		job_roboticist_add = 1
+		job_roboticist_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -182,7 +182,7 @@ building_robot_assembly_plant = {
 	}
 	
 	upgrades = {
-		building_synthetic_megaplex
+		building_robot_assembly_plant_2
 	}
 	
 	ai_weight = {

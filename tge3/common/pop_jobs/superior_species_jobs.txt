@@ -16,7 +16,7 @@ life_crafter = {
 	resources = {
 		category = planet_pop_assemblers
 		upkeep = {
-			food = 6
+			food = 10
 		}
 	}
 
@@ -47,7 +47,7 @@ life_weaver = {
 	resources = {
 		category = planet_pop_assemblers
 		upkeep = {
-			food = 6
+			food = 10
 		}
 	}
 

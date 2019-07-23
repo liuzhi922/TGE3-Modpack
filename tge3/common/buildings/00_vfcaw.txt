@@ -375,7 +375,9 @@ building_vfcaw_refinerystation = {
 			has_building = building_vfcaw_refinerystation
 		}
 		owner = { 
-			has_technology = tech_planetary_government
+			has_technology = tech_volatile_motes
+			has_technology = tech_exotic_gases
+			has_technology = tech_rare_crystals
 			is_regular_empire = yes
 			is_machine_empire = no
 			is_hive_empire = no
@@ -391,6 +393,7 @@ building_vfcaw_refinerystation = {
 			has_modifier = resort_colony
 		}
 	}
+	
 	
 	triggered_planet_modifier = {
 		potential = { 

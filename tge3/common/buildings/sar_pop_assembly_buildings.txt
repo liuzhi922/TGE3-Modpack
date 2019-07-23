@@ -10,7 +10,8 @@ building_robot_assembly_plant_2 = {
 	
 	potential = {
 		owner = { 
-			is_regular_empire = yes 
+			is_regular_empire = yes
+			has_policy_flag = assembly_robotic
 			NOT = { has_policy_flag = robots_outlawed }
 		}
 		NOT = { has_modifier = slave_colony }
