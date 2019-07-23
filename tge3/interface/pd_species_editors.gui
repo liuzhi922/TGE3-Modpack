@@ -579,48 +579,6 @@ guiTypes = {
 				clicksound = "select_click"
 			}
 			buttonType = {
-				name = "pc_geothermal"
-				position = { x = @planet_col7 y = @planet_row1 }
-				spriteType = "GFX_dummy_3d_home_world_new"
-				size = { x = 75 y = 75 }
-				clicksound = "select_click"
-			}
-			buttonType = {
-				name = "pc_superhabitable"
-				position = { x = @planet_col7 y = @planet_row2 }
-				spriteType = "GFX_dummy_3d_home_world_new"
-				size = { x = 75 y = 75 }
-				clicksound = "select_click"
-			}
-			buttonType = {
-				name = "pc_tidallylocked"
-				position = { x = @planet_col7 y = @planet_row3 }
-				spriteType = "GFX_dummy_3d_home_world_new"
-				size = { x = 75 y = 75 }
-				clicksound = "select_click"
-			}
-			buttonType = {
-				name = "pc_biolumen"
-				position = { x = @planet_col7 y = @planet_row4 }
-				spriteType = "GFX_dummy_3d_home_world_new"
-				size = { x = 75 y = 75 }
-				clicksound = "select_click"
-			}
-			buttonType = {
-				name = "pc_irradiated"
-				position = { x = @planet_col8 y = @planet_row1 }
-				spriteType = "GFX_dummy_3d_home_world_new"
-				size = { x = 75 y = 75 }
-				clicksound = "select_click"
-			}
-			buttonType = {
-				name = "pc_karst"
-				position = { x = @planet_col7 y = @planet_row5 }
-				spriteType = "GFX_dummy_3d_home_world_new"
-				size = { x = 75 y = 75 }
-				clicksound = "select_click"
-			}
-			buttonType = {
 				name = "pc_ammonia"
 				position = { x = @exotic_col1 y = @exotic_row1 }
 				spriteType = "GFX_dummy_3d_home_world_new"
@@ -630,13 +588,6 @@ guiTypes = {
 			buttonType = {
 				name = "pc_methane"
 				position = { x = @exotic_col2 y = @exotic_row1 }
-				spriteType = "GFX_dummy_3d_home_world_new"
-				size = { x = 75 y = 75 }
-				clicksound = "select_click"
-			}
-			buttonType = {
-				name = "pc_nuked"
-				position = { x = @exotic_col3 y = @exotic_row1 }
 				spriteType = "GFX_dummy_3d_home_world_new"
 				size = { x = 75 y = 75 }
 				clicksound = "select_click"
