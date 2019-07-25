@@ -49,7 +49,7 @@ building_robot_assembly_plant = {
 	}
 	
 	planet_modifier = {
-		job_roboticist_add = 1
+		job_roboticist_add = 2
 	}
 	
 	resources = {
