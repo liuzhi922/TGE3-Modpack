@@ -1320,134 +1320,134 @@ planet_edict = {
 }
 
 # Consume Planet
-planet_edict = {
-	name = "esap_hive_consume_planet"
-	influence_cost = 0
-	length = 0
-	
-	effect = {
-		owner = {
-			add_influence = -100			
-		}
-		every_tile = {
-			root.owner = {
-				if = {
-					limit = {
-						root = {
-							Not = {
-								has_planet_flag = esap_planet_consumed
-							}
-						}
-					}
-					add_monthly_resource_mult = {
-						resource = food
-						value = 2
-						min = 5
-						max = 250
-					}
-					add_monthly_resource_mult = {
-						resource = minerals
-						value = 2
-						min = 5
-						max = 1500
-					}	
-					add_monthly_resource_mult = {
-						resource = energy
-						value = 2
-						min = 5
-						max = 250
-					}
-					else = {
-						add_monthly_resource_mult = {
-							resource = food
-							value = 1
-							min = 3
-							max = 50
-						}
-						add_monthly_resource_mult = {
-							resource = minerals
-							value = 1
-							min = 3
-							max = 50
-						}	
-						add_monthly_resource_mult = {
-							resource = energy
-							value = 1
-							min = 3
-							max = 50
-						}					
-					}
-				}	
-			}		
-		}
-		hidden_effect = {
-			clear_planet_modifiers = yes
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					Not = {
-						has_planet_flag = esap_planet_consumed
-					}
-				}
-				set_planet_flag = esap_planet_consumed
-			}
-			if = {
-				limit = {
-					Not = {
-						has_modifier = mod_esap_planet_consumed
-					}
-				}
-				add_modifier = {
-					modifier = "mod_esap_planet_consumed"
-					days = -1
-				}
-			}
-			add_modifier = {
-				modifier = "terraforming_candidate"
-				days = -1
-			}
-			switch = {
-				trigger = has_modifier 
-				
-				hazardous_weather = {remove_modifier = "hazardous_weather" }
-				dangerous_wildlife = {remove_modifier = "dangerous_wildlife" }
-				unstable_tectonics = {remove_modifier = "unstable_tectonics" }
-				asteroid_impacts = {remove_modifier = "asteroid_impacts" }
-				wild_storms = {remove_modifier = "wild_storms" }
-				atmospheric_aphrodisiac = {remove_modifier = "atmospheric_aphrodisiac" }
-			
-				weak_magnetic_field = {remove_modifier = "weak_magnetic_field" }
-				tidal_locked = {remove_modifier = "tidal_locked" }
-				mineral_poor = {remove_modifier = "mineral_poor" }
-				bleak_planet = {remove_modifier = "bleak_planet" }
-				irradiated_planet = {remove_modifier = "irradiated_planet" }
-				high_gravity = {remove_modifier = "high_gravity" }
-			}
-		}
-		change_pc = pc_barren
-	}
-	
-	potential = {
-		owner = {
-			has_ascension_perk = ap_esap_hive_consume_planet
-		}
-		NOT = { 
-			has_planet_flag = esap_planet_consumed
-		}
-		is_capital = no
-	}
-	
-	allow = {
-		owner = {
-			influence > 99
-		}		
-	}
-	
-	ai_weight = {
-		weight = 0
-	}
-}
+#planet_edict = {
+#	name = "esap_hive_consume_planet"
+#	influence_cost = 0
+#	length = 0
+#	
+#	effect = {
+#		owner = {
+#			add_influence = -100			
+#		}
+#		every_tile = {
+#			root.owner = {
+#				if = {
+#					limit = {
+#						root = {
+#							Not = {
+#								has_planet_flag = esap_planet_consumed
+#							}
+#						}
+#					}
+#					add_monthly_resource_mult = {
+#						resource = food
+#						value = 2
+#						min = 5
+#						max = 250
+#					}
+#					add_monthly_resource_mult = {
+#						resource = minerals
+#						value = 2
+#						min = 5
+#						max = 1500
+#					}	
+#					add_monthly_resource_mult = {
+#						resource = energy
+#						value = 2
+#						min = 5
+#						max = 250
+#					}
+#					else = {
+#						add_monthly_resource_mult = {
+#							resource = food
+#							value = 1
+#							min = 3
+#							max = 50
+#						}
+#						add_monthly_resource_mult = {
+#							resource = minerals
+#							value = 1
+#							min = 3
+#							max = 50
+#						}	
+#						add_monthly_resource_mult = {
+#							resource = energy
+#							value = 1
+#							min = 3
+#							max = 50
+#						}					
+#					}
+#				}	
+#			}		
+#		}
+#		hidden_effect = {
+#			clear_planet_modifiers = yes
+#		}
+#		hidden_effect = {
+#			if = {
+#				limit = {
+#					Not = {
+#						has_planet_flag = esap_planet_consumed
+#					}
+#				}
+#				set_planet_flag = esap_planet_consumed
+#			}
+#			if = {
+#				limit = {
+#					Not = {
+#						has_modifier = mod_esap_planet_consumed
+#					}
+#				}
+#				add_modifier = {
+#					modifier = "mod_esap_planet_consumed"
+#					days = -1
+#				}
+#			}
+#			add_modifier = {
+#				modifier = "terraforming_candidate"
+#				days = -1
+#			}
+#			switch = {
+#				trigger = has_modifier 
+#				
+#				hazardous_weather = {remove_modifier = "hazardous_weather" }
+#				dangerous_wildlife = {remove_modifier = "dangerous_wildlife" }
+#				unstable_tectonics = {remove_modifier = "unstable_tectonics" }
+#				asteroid_impacts = {remove_modifier = "asteroid_impacts" }
+#				wild_storms = {remove_modifier = "wild_storms" }
+#				atmospheric_aphrodisiac = {remove_modifier = "atmospheric_aphrodisiac" }
+#			
+#				weak_magnetic_field = {remove_modifier = "weak_magnetic_field" }
+#				tidal_locked = {remove_modifier = "tidal_locked" }
+#				mineral_poor = {remove_modifier = "mineral_poor" }
+#				bleak_planet = {remove_modifier = "bleak_planet" }
+#				irradiated_planet = {remove_modifier = "irradiated_planet" }
+#				high_gravity = {remove_modifier = "high_gravity" }
+#			}
+#		}
+#		change_pc = pc_barren
+#	}
+#	
+#	potential = {
+#		owner = {
+#			has_ascension_perk = ap_esap_hive_consume_planet
+#		}
+#		NOT = { 
+#			has_planet_flag = esap_planet_consumed
+#		}
+#		is_capital = no
+#	}
+#	
+#	allow = {
+#		owner = {
+#			influence > 99
+#		}		
+#	}
+#	
+#	ai_weight = {
+#		weight = 0
+#	}
+#}
 
 # Converts pops to spiritualist
 planet_edict = {

@@ -3,7 +3,7 @@
 #############
 building_robot_assembly_plant = {
 	base_buildtime = 360
-	base_cap_amount = 1
+	base_cap_amount = 2
 
 	category = pop_assembly
 	

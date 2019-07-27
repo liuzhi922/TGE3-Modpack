@@ -1,0 +1,24 @@
+namespace = tactics
+
+country_event = {
+	id = tactics.30
+	title = "tactics.30.name"
+	desc = "tactics.30.desc"
+	picture = GFX_evt_fleet_good
+	is_triggered_only = yes
+	option = {
+		name = tactics.31.name
+		hidden_effect = {
+			remove_country_flag = flag_modified_event
+		}
+	}
+	option = {
+		name = tactics.32.name
+		hidden_effect = {
+			set_country_flag = flag_modified_event
+		}
+	}
+	option = {
+		name = tactics.cancel
+	}
+}

@@ -1,0 +1,1782 @@
+namespace = tactics
+#GUI Event (Lets you select your tactic for each fleet)
+fleet_event = {
+	id = tactics.0
+	title = "tactics.0.name"
+	desc = "tactics.0.desc"
+	picture = GFX_evt_fleet_good
+	is_triggered_only = yes
+	option = {
+		name = tactics.11.name #Balanced Operations
+		custom_tooltip = tactics.11.tooltip
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				owner = { has_technology = tech_genetic_resequencing }
+			}
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_balanced_operations
+		}
+	}
+	option = {
+		name = tactics.17.name #Erudite Operations
+		custom_tooltip = tactics.17.tooltip
+		trigger = { owner = {
+			has_technology = tech_genetic_resequencing
+		}}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				owner = { has_technology = tech_enigmatic_decoder }
+			}
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_erudite
+		}
+	}
+	option = {
+		name = tactics.18.name #Enigmatic Operations
+		custom_tooltip = tactics.18.tooltip
+		trigger = { owner = {
+			has_technology = tech_enigmatic_decoder
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_enigmatic_operations
+		}
+	}
+	option = {
+		name = tactics.19.name #Synthetic Balanced
+		custom_tooltip = tactics.19.tooltip
+		trigger = { owner = {
+			has_ascension_perk = ap_synthetic_evolution
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				owner = { has_technology = tech_enigmatic_decoder }
+			}
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_synthetic_balanced
+		}
+	}
+	option = {
+		name = tactics.12.name #Aggressive Assault
+		custom_tooltip = tactics.12.tooltip
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				owner = { has_technology = tech_doctrine_navy_size_2 }
+			}
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_aggressive_assault
+		}
+	}
+	option = {
+		name = tactics.20.name #Synthetic Attack
+		custom_tooltip = tactics.20.tooltip
+		trigger = { owner = {
+			has_ascension_perk = ap_synthetic_evolution
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_synthetic_attack
+		}
+	}
+	option = {
+		name = tactics.21.name #Psionic Attack
+		custom_tooltip = tactics.21.tooltip
+		trigger = { owner = {
+			has_ascension_perk = ap_transcendence
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_psionic_attack
+		}
+	}
+	option = {
+		name = tactics.13.name #Cautious Defense
+		custom_tooltip = tactics.13.tooltip
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				owner = { has_technology = tech_doctrine_fleet_size_2 }
+			}
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_cautious
+		}
+	}
+	option = {
+		name = tactics.14.name #Killbox
+		custom_tooltip = tactics.14.tooltip
+		trigger = { owner = {
+			has_technology = tech_doctrine_fleet_size_2 }
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_killbox
+		}
+	}
+	option = {
+		name = tactics.22.name #Synthetic Defense
+		custom_tooltip = tactics.22.tooltip
+		trigger = { owner = { OR = {
+			has_ascension_perk = ap_synthetic_evolution 
+			has_ascension_perk = ap_synthetic_age
+			}}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_synthetic_defense
+		}
+	}
+	option = {
+		name = tactics.23.name #Psionic Defense
+		custom_tooltip = tactics.23.tooltip
+		trigger = { owner = {
+			has_ascension_perk = ap_transcendence }
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_psionic_defense
+		}
+	}
+	option = {
+		name = tactics.15.name #Spearhead
+		custom_tooltip = tactics.15.tooltip
+		trigger = { owner = {
+			has_technology = tech_doctrine_navy_size_2 }
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_spearhead
+		}
+	}
+	option = {
+		name = tactics.16.name #Unceasing Attack
+		custom_tooltip = tactics.16.tooltip
+		trigger = { owner = {
+				OR = {
+					has_civic = civic_fanatical_purifier
+					has_civic = civic_devouring_swarm
+					has_civic = civic_determined_exterminators
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+		hidden_effect = {
+			remove_fleet_flag = flag_balanced_operations
+			remove_fleet_flag = flag_aggressive_assault
+			remove_fleet_flag = flag_cautious
+			remove_fleet_flag = flag_dimensional_stutter
+			remove_fleet_flag = flag_enigmatic_operations
+			remove_fleet_flag = flag_marauding_horde
+			remove_fleet_flag = flag_organized_marauders
+			remove_fleet_flag = flag_unceasing_attack
+			remove_fleet_flag = flag_erudite
+			remove_fleet_flag = flag_synthetic_defense
+			remove_fleet_flag = flag_killbox
+			remove_fleet_flag = flag_spearhead
+			remove_fleet_flag = flag_synthetic_balanced
+			remove_fleet_flag = flag_synthetic_attack
+			remove_fleet_flag = flag_psionic_defense
+			remove_fleet_flag = flag_psionic_attack
+			set_fleet_flag = flag_unceasing_attack
+		}
+	}
+	option = {
+		name = "tactics.cancel"
+		shortcut = "ESCAPE"
+		ai_chance = {
+			factor = 0 #just in case
+		}
+	}
+}
+#Intermediate event that separates the non military fleets from any other ship so no event spam happens.
+country_event = {
+	id = tactics.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_fleet = { 
+			limit = {
+				AND = {
+					num_ships > 1 
+					OR = {
+						is_ship_class = corvette
+						is_ship_class = destroyer
+						is_ship_class = frigate
+						is_ship_class = cruiser
+						is_ship_class = heavy_cruiser
+						is_ship_class = battlecruiser
+						is_ship_class = battleship
+						is_ship_class = titan
+						is_ship_class = flagship
+						is_ship_class = carrier #Tried to add support for NSC and Gigastructures ships, not sure about their IDs
+						is_ship_class = dreadnought
+						is_ship_class = fleet_support_ship
+						is_ship_class = attack_moon
+						is_ship_class = planetcraft
+					}
+					if = {
+						limit = { owner = {
+							has_country_flag = flag_modified_event
+						}	}
+						has_fleet_order = aggressive_stance_fleet_order
+					}
+				}
+			}
+			fleet_event = { id = tactics.0 }
+		}
+	}
+}
+#Buff management events for each tactic | NOT USED
+fleet_event = {
+	id = tactics.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_fleet_flag = flag_balanced_operations
+	}
+}
+#Remove the modifier_applied flag
+fleet_event = {
+	id = tactics.3
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = no
+			fleet = {
+				has_fleet_flag = modifier_applied
+			}
+		}
+	}
+	immediate = {
+		remove_fleet_flag = modifier_applied
+	}
+}
+#fleet_event = {
+#	id = tactics.3524
+#	hide_window = yes
+#	trigger = {
+#		any_combatant_fleet = {
+#			has_fleet_flag = flag_aggressive_assault
+#		}
+#	}
+#	immediate = {
+#		add_modifier = { modifier = tactic_balanced_operations_countered }
+#	}
+#}
+country_event = {
+	id = tactics.5
+	hide_window = yes
+	trigger = {
+		is_ai = yes
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+					is_country_type = sentinels
+					is_country_type = cybrex_empire
+					is_country_type = ai_empire
+			}
+			}
+		every_owned_fleet = { set_fleet_flag = flag_enigmatic_operations }
+		}
+		if = {
+			limit = {
+				OR = {
+					is_country_type = dormant_marauders
+					is_country_type = raiders
+				}
+			}
+		every_owned_fleet = { set_fleet_flag = flag_marauding_horde }
+		}
+		if = {
+			limit = {
+				is_country_type = awakened_marauders
+			}
+		every_owned_fleet = { set_fleet_flag = flag_organized_marauders }
+		}
+		if = {
+			limit = {
+				OR = {
+					is_country_type = enclave
+					is_country_type = caravaneer_home
+					is_country_type = caravaneer_fleet
+				}
+			}
+		every_owned_fleet = { set_fleet_flag = flag_balanced_operations }
+		}
+		if = {
+			limit = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = feral_prethoryn
+				}
+			}
+		every_owned_fleet = { set_fleet_flag = flag_unceasing_attack }
+		}
+		if = {
+			limit = {
+				OR = {
+					is_country_type = extradimensional
+					is_country_type = portal_holder
+					is_country_type = extradimensional_2
+					is_country_type = extradimensional_3
+				}
+			}
+		every_owned_fleet = { set_fleet_flag = flag_dimensional_stutter }
+		}
+		if = {
+			limit = {
+				is_country_type = default
+			}
+			country_event = { id = tactics.1 }
+		}
+	}
+}
+#Balanced Operations
+ship_event = {
+	id = tactics.10
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_balanced_operations
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_aggressive_assault
+								has_fleet_flag = flag_spearhead
+								has_fleet_flag = flag_synthetic_attack
+								has_fleet_flag = flag_unceasing_attack
+								has_fleet_flag = flag_psionic_attack
+								has_fleet_flag = flag_marauding_horde
+								has_fleet_flag = flag_organized_marauders
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_balanced_operations_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_dimensional_stutter
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_balanced_operations_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_balanced_operations_neutral days = 30 }
+		}
+	}
+}
+#Aggressive Assault
+ship_event = {
+	id = tactics.11
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_aggressive_assault
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_aggressive_assault_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_aggressive_assault_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_aggressive_assault_neutral days = 30 }
+		}
+	}
+}
+#Cautious Defense
+ship_event = {
+	id = tactics.12
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_cautious
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+								has_fleet_flag = flag_dimensional_stutter
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_cautious_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_aggressive_assault
+								has_fleet_flag = flag_spearhead
+								has_fleet_flag = flag_synthetic_attack
+								has_fleet_flag = flag_unceasing_attack
+								has_fleet_flag = flag_psionic_attack
+								has_fleet_flag = flag_marauding_horde
+								has_fleet_flag = flag_organized_marauders
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_cautious_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_cautious_neutral days = 30 }
+		}
+	}
+}
+
+#Killbox
+ship_event = {
+	id = tactics.13
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_killbox
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+								has_fleet_flag = flag_dimensional_stutter
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_killbox_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_aggressive_assault
+								has_fleet_flag = flag_spearhead
+								has_fleet_flag = flag_unceasing_attack
+								has_fleet_flag = flag_synthetic_attack
+								has_fleet_flag = flag_psionic_attack
+								has_fleet_flag = flag_marauding_horde
+								has_fleet_flag = flag_organized_marauders
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_killbox_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_killbox_neutral days = 30 }
+		}
+	}
+}
+#Spearhead
+ship_event = {
+	id = tactics.14
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_spearhead
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_spearhead_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_spearhead_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_spearhead_neutral days = 30 }
+		}
+	}
+}
+#Unceasing Attack
+ship_event = {
+	id = tactics.15
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_unceasing_attack
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_unceasing_attack_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_psionic_attack
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_unceasing_attack_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_unceasing_attack_neutral days = 30 }
+		}
+	}
+}
+#Erudite Operations
+ship_event = {
+	id = tactics.16
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_erudite
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_aggressive_assault
+								has_fleet_flag = flag_spearhead
+								has_fleet_flag = flag_synthetic_attack
+								has_fleet_flag = flag_unceasing_attack
+								has_fleet_flag = flag_psionic_attack
+								has_fleet_flag = flag_marauding_horde
+								has_fleet_flag = flag_organized_marauders
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_erudite_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_dimensional_stutter
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_erudite_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_erudite_neutral days = 30 }
+		}
+	}
+}
+#Enigmatic Operations
+ship_event = {
+	id = tactics.17
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_enigmatic_operations
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_aggressive_assault
+								has_fleet_flag = flag_spearhead
+								has_fleet_flag = flag_synthetic_attack
+								has_fleet_flag = flag_unceasing_attack
+								has_fleet_flag = flag_psionic_attack
+								has_fleet_flag = flag_marauding_horde
+								has_fleet_flag = flag_organized_marauders
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_enigmatic_operations_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_dimensional_stutter
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_enigmatic_operations_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_enigmatic_operations_neutral days = 30 }
+		}
+	}
+}
+#Synthetic Probability based fleet formations ( Balanced )
+ship_event = {
+	id = tactics.25
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_synthetic_balanced
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_aggressive_assault
+								has_fleet_flag = flag_spearhead
+								has_fleet_flag = flag_synthetic_attack
+								has_fleet_flag = flag_unceasing_attack
+								has_fleet_flag = flag_psionic_attack
+								has_fleet_flag = flag_marauding_horde
+								has_fleet_flag = flag_organized_marauders
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_synthetic_balanced_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_dimensional_stutter
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_synthetic_balanced_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_synthetic_balanced_neutral days = 30 }
+		}
+	}
+}
+#Synthetic (Perfect) Attack
+ship_event = {
+	id = tactics.18
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_synthetic_attack
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_synthetic_attack_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_synthetic_attack_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_synthetic_attack_neutral days = 30 }
+		}
+	}
+}
+#Psychic Lightning Offensive
+ship_event = {
+	id = tactics.19
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_psionic_attack
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_psionic_attack_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_psionic_attack_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_psionic_attack_neutral days = 30 }
+		}
+	}
+}
+#Marauding Horde
+ship_event = {
+	id = tactics.20
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_marauding_horde
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_marauding_horde_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_marauding_horde_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_marauding_horde_neutral days = 30 }
+		}
+	}
+}
+#Organized Marauders
+ship_event = {
+	id = tactics.21
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_organized_marauders
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_organized_marauders_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_organized_marauders_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_organized_marauders_neutral days = 30 }
+		}
+	}
+}
+#Dimensional Stutter
+ship_event = {
+	id = tactics.22
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_dimensional_stutter
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_dimensional_stutter_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_cautious
+								has_fleet_flag = flag_killbox
+								has_fleet_flag = flag_synthetic_defense
+								has_fleet_flag = flag_psionic_defense
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_dimensional_stutter_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_dimensional_stutter_neutral days = 30 }
+		}
+	}
+}
+#Synthetic Defense Matrix
+ship_event = {
+	id = tactics.23
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_synthetic_defense
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+								has_fleet_flag = flag_dimensional_stutter
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_synthetic_defense_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_aggressive_assault
+								has_fleet_flag = flag_spearhead
+								has_fleet_flag = flag_synthetic_attack
+								has_fleet_flag = flag_unceasing_attack
+								has_fleet_flag = flag_psionic_attack
+								has_fleet_flag = flag_marauding_horde
+								has_fleet_flag = flag_organized_marauders
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_synthetic_defense_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_synthetic_defense_neutral days = 30 }
+		}
+	}
+}
+#Psionic Reinforcement
+ship_event = {
+	id = tactics.24
+	hide_window = yes
+	trigger = {
+		AND = {
+			is_in_combat = yes
+			fleet = {
+				has_fleet_flag = flag_psionic_defense
+			}
+			NOT = {
+				fleet = {
+					has_fleet_flag = modifier_applied
+				}
+			}
+		}
+	}
+	immediate = {
+		fleet = { set_fleet_flag = modifier_applied }
+		if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_balanced_operations
+								has_fleet_flag = flag_enigmatic_operations
+								has_fleet_flag = flag_synthetic_balanced
+								has_fleet_flag = flag_erudite
+								has_fleet_flag = flag_dimensional_stutter
+							}
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = tactic_psionic_defense_countered days = 30 }
+		}
+		else_if = {
+			limit = {
+				fleet = {
+					any_combatant_fleet = {
+						AND = {
+							OR = {
+								owner = { is_at_war_with = root.owner }
+								NOT = { 
+									is_country_type = default
+									is_country_type = fallen_empire
+									is_country_type = awakened_fallen_empire
+								}
+							}
+							OR = {
+								has_fleet_flag = flag_aggressive_assault
+								has_fleet_flag = flag_spearhead
+								has_fleet_flag = flag_synthetic_attack
+								has_fleet_flag = flag_unceasing_attack
+								has_fleet_flag = flag_psionic_attack
+								has_fleet_flag = flag_marauding_horde
+								has_fleet_flag = flag_organized_marauders
+							}
+						}
+					}
+				}
+			}
+		add_modifier = { modifier = tactic_psionic_defense_countering days = 30 }
+		}
+		Else = {
+			add_modifier = { modifier = tactic_psionic_defense_neutral days = 30 }
+		}
+	}
+}

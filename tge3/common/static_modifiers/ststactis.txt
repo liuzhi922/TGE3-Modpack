@@ -1,0 +1,293 @@
+#IMPORTANT
+# Neutral refers to if neither tactic interferes with another 
+# Countering refers to if this tactic is countering another
+# Countered refers to if this tactic is being countered
+
+	# DEFAULT TACTICS | AVAILABLE FOR EVERYONE #
+#Balanced Operations
+tactic_balanced_operations_neutral = {
+	ship_weapon_damage = 0.10
+	ship_hull_mult = 0.10
+}
+tactic_balanced_operations_countering = {
+	ship_weapon_damage = 0.25
+	ship_hull_mult = 0.10
+	ship_evasion_mult = 0.10
+}
+tactic_balanced_operations_countered = {
+	ship_weapon_damage = -0.10
+	ship_evasion_mult = -0.15
+	force_disparity_fire_rate_mult = -0.5
+}
+#Aggressive Assault
+tactic_aggressive_assault_neutral = {
+	ship_weapon_damage = 0.15
+	ship_evasion_mult = 0.15
+	ship_accuracy_mult = 0.10
+}
+tactic_aggressive_assault_countering = {
+	ship_weapon_damage = 0.35
+	ship_evasion_mult = 0.25
+	ship_accuracy_mult = 0.15
+}
+tactic_aggressive_assault_countered = {
+	ship_weapon_damage = -0.20
+	ship_evasion_mult = -0.15
+	ship_accuracy_mult = -0.20
+	ship_emergency_ftl_min_days_mult = 0.50
+}
+#Cautious Defense
+tactic_cautious_neutral = {
+	ship_weapon_damage = 0.05
+	ship_hull_mult = 0.15
+	ship_evasion_mult = 0.15
+	ship_weapon_range_mult = 0.20
+	ship_emergency_ftl_min_days_mult = -0.33
+}
+tactic_cautious_countering = {
+	ship_weapon_damage = 0.10
+	ship_hull_mult = 0.20
+	ship_evasion_mult = 0.25
+	ship_weapon_range_mult = 0.40
+	ship_emergency_ftl_min_days_mult = -0.5
+}
+tactic_cautious_countered = {
+	ship_weapon_damage = -0.15
+	ship_hull_mult = -0.10
+	ship_evasion_mult = -0.15
+	ship_emergency_ftl_min_days_mult = 0.33
+}
+	# ADVANCED TACTICS | CAN BE RESEARCHED, REVERSE ENGINEERED, OR GIVEN BY ASCENSION #
+#Enigmatic Operations | Used by fallen empires and contingency #
+# Can be reverse engineered with enigmatic decoder #
+tactic_enigmatic_neutral = {
+	ship_weapon_damage = 0.10
+	ship_fire_rate_mult = 0.25
+	ship_hull_mult = 0.15
+	ship_weapon_range_mult = 0.15
+}
+tactic_enigmatic_countering = {
+	ship_weapon_damage = 0.25
+	ship_fire_rate_mult = 0.4
+	ship_hull_mult = 0.25
+	ship_weapon_range_mult = 0.30
+}
+tactic_enigmatic_countered = {
+	ship_weapon_damage = -0.20
+	ship_fire_rate_mult = -0.25
+	ship_hull_mult = -0.20
+	ship_weapon_range_mult = -0.15
+}
+#Killbox Tactics
+tactic_killbox_neutral = {
+	ship_hull_mult = 0.15
+	ship_weapon_range_mult = 0.35
+}
+tactic_killbox_countering = {
+	ship_weapon_damage = 0.10
+	ship_hull_mult = 0.25
+	ship_weapon_range_mult = 0.6
+}
+tactic_killbox_countered = {
+	ship_weapon_damage = -0.15
+	ship_fire_rate_mult = -0.15
+	ship_weapon_range_mult = -0.2
+}
+#Spearhead Tactics
+tactic_spearhead_neutral = {
+	ship_fire_rate_mult = 0.10
+	ship_weapon_damage = 0.10
+	ship_evasion_mult = 0.10
+}
+tactic_spearhead_countering = {
+	ship_fire_rate_mult = 0.25
+	ship_weapon_damage = 0.25
+	ship_evasion_mult = 0.10
+}
+tactic_spearhead_countered = {
+	ship_fire_rate_mult = -0.15
+	ship_weapon_damage = -0.15
+}
+#Erudite Operations | Biological Ascendancy
+tactic_erudite_neutral = {
+	ship_accuracy_mult = 0.15
+	ship_fire_rate_mult = 0.05
+	ship_weapon_damage = 0.15
+	ship_hull_mult = 0.10
+}
+tactic_erudite_countering = {
+	ship_accuracy_mult = 0.20
+	ship_fire_rate_mult = 0.05
+	ship_weapon_damage = 0.3
+	ship_hull_mult = 0.2
+}
+tactic_erudite_countered = {
+	ship_weapon_damage = -0.15
+	ship_hull_mult = -0.05
+	ship_fire_rate_mult = -0.05
+}
+#Synthetic Defense Matrix | Synthetic Ascension 
+tactic_synthetic_defense_neutral = {
+	ship_hull_mult = 0.15
+	ship_armor_mult = 0.10
+	ship_shield_mult = 0.15
+}
+tactic_synthetic_defense_countering = {
+	ship_hull_mult = 0.30
+	ship_armor_mult = 0.25
+	ship_shield_mult = 0.35
+	ship_fire_rate_mult = 0.10
+}
+tactic_synthetic_defense_countered = {
+	ship_hull_mult = -0.10
+	ship_armor_mult = -0.05
+	ship_shield_mult = -0.10
+	ship_fire_rate_mult = -0.05
+	ship_weapon_damage = -0.05
+}
+#Synthetic Probability based fleet formations | Synthetic Ascension
+tactic_synthetic_balanced_neutral = {
+	ship_fire_rate_mult = 0.05
+	ship_weapon_damage = 0.10
+	ship_hull_mult = 0.08
+	ship_shield_mult = 0.10
+}
+tactic_synthetic_balanced_countering = {
+	ship_fire_rate_mult = 0.10
+	ship_weapon_damage = 0.15
+	ship_hull_mult = 0.12
+	ship_shield_mult = 0.20
+}
+tactic_synthetic_balanced_countered = {
+	ship_fire_rate_mult = -0.10
+	ship_weapon_damage = -0.05
+	ship_hull_mult = -0.05
+	ship_shield_mult = -0.05
+}
+#Perfect Attack | Synthetic Ascension
+tactic_synthetic_attack_neutral = {
+	ship_fire_rate_mult = 0.15
+	ship_weapon_damage = 0.05
+	ship_hull_mult = 0.05
+	ship_shield_mult = 0.15
+	ship_evasion_mult = 0.15
+}
+tactic_synthetic_attack_countering = {
+	ship_fire_rate_mult = 0.25
+	ship_weapon_damage = 0.15
+	ship_hull_mult = 0.05
+	ship_shield_mult = 0.20
+	ship_evasion_mult = 0.25
+}
+tactic_synthetic_attack_countered = {
+	ship_fire_rate_mult = -0.10
+	ship_weapon_damage = -0.10
+	ship_hull_mult = -0.05
+	ship_shield_mult = -0.15
+	ship_evasion_mult = -0.15
+	ship_emergency_ftl_min_days_mult = 0.66
+}
+#Psionic Blitzkrieg | Psionic Ascension
+tactic_psionic_attack_neutral = {
+	ship_fire_rate_mult = 0.15
+	ship_weapon_damage = 0.15
+	ship_evasion_mult = 0.10
+	ship_accuracy_mult = 0.10
+}
+tactic_psionic_attack_countering = {
+	ship_fire_rate_mult = 0.30
+	ship_weapon_damage = 0.25
+	ship_evasion_mult = 0.25
+	ship_accuracy_mult = 0.20
+}
+tactic_psionic_attack_countered = {
+	ship_fire_rate_mult = -0.15
+	ship_weapon_damage = -0.10
+	ship_evasion_mult = -0.20
+	ship_accuracy_mult = -0.05
+}
+#Psionic Reinforcement | Psionic Ascension
+tactic_psionic_defense_neutral = {
+	ship_hull_mult = 0.15
+	ship_weapon_range_mult = 0.20
+	ship_evasion_mult = 0.20
+}
+tactic_psionic_defense_countering = {
+	ship_hull_mult = 0.25
+	ship_armor_mult = 0.15
+	ship_shield_mult = 0.10
+	ship_weapon_range_mult = 0.50
+	ship_evasion_mult = 0.4
+}
+tactic_psionic_defense_countered = {
+	ship_hull_mult = 0.05
+	ship_weapon_damage = -0.15
+	ship_weapon_range_mult = -0.2
+	ship_accuracy_mult = -0.2
+	ship_evasion_mult = -0.33
+}
+
+	# SPECIAL TACTICS | USED BY THE AI OR CRISIS. CAN SOMETIMES BE REVERSE ENGINEERED #
+#Marauding Horde
+tactic_marauding_horde_neutral = {
+	ship_weapon_damage = 0.25
+	ship_fire_rate_mult = 0.15
+}
+tactic_marauding_horde_countering = {
+	ship_weapon_damage = 0.5
+	ship_fire_rate_mult = 0.25
+}
+tactic_marauding_horde_countered = {
+	ship_weapon_damage = -0.4
+	ship_fire_rate_mult = -0.25
+	ship_hull_mult = -0.5
+}
+#Organized Marauders
+tactic_organized_marauders_neutral = {
+	ship_weapon_damage = 0.25
+	ship_fire_rate_mult = 0.15
+	ship_hull_mult = 0.10
+}
+tactic_organized_marauders_countering = {
+	ship_weapon_damage = 0.5
+	ship_fire_rate_mult = 0.25
+	ship_hull_mult = 0.25
+}
+tactic_organized_marauders_countered = {
+	ship_weapon_damage = -0.4
+	ship_fire_rate_mult = -0.25
+	ship_hull_mult = -0.5
+}
+#Unceasing Attack
+tactic_unceasing_attack_neutral = {
+	ship_weapon_damage = 0.3
+	ship_hull_mult = -0.1
+}
+tactic_unceasing_attack_countering = {
+	ship_weapon_damage = 0.6
+	ship_fire_rate_mult = 0.25
+}
+tactic_unceasing_attack_countered = {
+	ship_weapon_damage = -0.5
+	ship_fire_rate_mult = -0.25
+	ship_hull_mult = -0.7
+}
+#Dimensional Stutter
+tactic_dimensional_stutter_neutral = {
+	ship_weapon_damage = 0.15
+	ship_fire_rate_mult = 0.15
+	ship_hull_mult = 0.2
+	ship_evasion_mult = 0.5
+}
+tactic_dimensional_stutter_countering = {
+	ship_weapon_damage = 0.35
+	ship_fire_rate_mult = 0.2
+	ship_hull_mult = 0.2
+	ship_evasion_mult = 0.85
+}
+tactic_dimensional_stutter_countered = {
+	ship_weapon_damage = -0.15
+	ship_fire_rate_mult = -0.1
+	ship_hull_mult = -0.1
+	ship_evasion_mult = -1
+}

@@ -1,0 +1,12 @@
+#Button effect thing for gui
+tactics_button_menu = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		country_event = { id = tactics.1 }
+	}
+}
