@@ -8,13 +8,9 @@ building_robot_assembly_plant = {
 	category = pop_assembly
 	
 	potential = {
-		exists = owner
-		OR = {
-			owner = { is_ai = no }
-			free_building_slots > 0
-		}
 		owner = { 
 			is_regular_empire = yes 
+			has_policy_flag = assembly_robotic
 			NOT = { has_policy_flag = robots_outlawed }
 		}
 		NOT = { has_modifier = slave_colony }
@@ -25,26 +21,10 @@ building_robot_assembly_plant = {
 	}
 	
 	destroy_trigger = {
-		exists = owner
-		OR = {
-			owner = {
-				OR = {
-					is_regular_empire = no 
-					has_policy_flag = robots_outlawed
-				}
-			}
-			has_modifier = slave_colony
-			AND = {
-				owner = { is_ai = yes }
-				free_jobs = 0
-				OR = {
-					num_buildings = {
-						type = any
-						value = 16
-					}
-					is_planet_class = pc_habitat
-				}
-			}
+		owner = {
+			is_regular_empire = no
+			is_machine_empire = no
+			is_mechanical_empire = no
 		}
 	}
 	
@@ -70,20 +50,31 @@ building_robot_assembly_plant = {
 		"tech_robotic_workers"
 	}
 	
+	upgrades = {
+		building_robot_assembly_plant_2
+	}
+	
 	ai_weight = {
-		weight = 50000
+		weight = 5
 		modifier = {
 			factor = 0
-			OR = {
-				is_planet_class = pc_habitat
-				is_planet_class = pc_city
-				num_buildings = { type = any value >= 14 }
-				owner = { 
-					has_monthly_income = {
-						resource = energy
-						value < 5
+			owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 5
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			count_owned_pops = { 
+				limit = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
 					}
 				}
+				count < 1
 			}
 		}
 	}
