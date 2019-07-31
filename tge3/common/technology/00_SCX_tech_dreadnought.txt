@@ -1,34 +1,202 @@
 # ##################
-# Placeholder Techs: breakthroughs in the fields of modding folk-lore and loadorderology have allowed us to reduce log spam by 99%
+# Ship Sizes
 # ##################
 tech_scx_dreadnought_1 = {
-	cost = 0
+	cost = @tier4cost2
 	area = engineering
-	tier = 0
+	tier = 4
 	category = { voidcraft }
-	weight = 0
+	prerequisites = { "tech_battleships" }
+	weight = @tier4weight2
+	
+	## unlock eve_dreadnoughts
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_SCX_DREADNOUGHT_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_SCX_DREADNOUGHT_CONSTRUCTION_DESC"
+		}
+	}
+
+	modifier = {
+		country_command_limit_add = 10
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 50 }
+		}	
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				has_technology = tech_scx_dreadnought_1
+			}
+		}
+		modifier = {
+			factor = 2
+			years_passed > 60
+		}
+		modifier = {
+			factor = 3
+			years_passed > 65
+		}
+		modifier = {
+			factor = 4
+			years_passed > 70
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech - Dreadnought
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
 }
 
+# ##################
+# Dreadnought upgrades
+# ##################
+
 tech_scx_dreadnought_build_speed = {
-	cost = 0
+	cost = @tier4cost3
 	area = engineering
-	tier = 0
+	tier = 4
 	category = { voidcraft }
-	weight = 0
+	prerequisites = { "tech_scx_dreadnought_1" }
+	weight = @tier4weight3
+			
+	modifier = {
+		shipsize_scx_dreadnought_build_speed_mult = 0.25
+		shipsize_scx_dreadnought_build_cost_mult = -0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
 }
 
 tech_scx_dreadnought_hull_1 = {
-	cost = 0
+	cost = @tier5cost1
 	area = engineering
-	tier = 0
+	tier = 4
 	category = { voidcraft }
-	weight = 0
+	prerequisites = { "tech_scx_dreadnought_1" }
+	weight = @tier5weight1
+	
+	modifier = {
+		shipsize_scx_dreadnought_hull_add = 1500
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 # ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
 }
 
 tech_scx_dreadnought_hull_2 = {
-	cost = 0
+	cost = @tier5cost2
 	area = engineering
-	tier = 0
+	tier = 5
+	is_rare = yes
 	category = { voidcraft }
-	weight = 0
+	prerequisites = { "tech_scx_dreadnought_hull_1" }
+	weight = @tier5weight2
+	
+	modifier = {
+		shipsize_scx_dreadnought_hull_add = 1500
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.25
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 # ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
 }
