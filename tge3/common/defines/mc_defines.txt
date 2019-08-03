@@ -1,0 +1,8 @@
+	NGameplay = {
+		POP_CRIME							= 2		# From each pop with happiness (scaled inversely to happiness)
+		MIN_PLANET_CRIME					= 0		# Minimum planetary crime
+		HIGH_PLANET_CRIME					= 50	# High planet crime
+		MAX_PLANET_CRIME					= 100	# Maximum planetary crime
+		CRIMINAL_SYNDICATE_HIGH_CRIME_MULT	= 0.5	# Applied to branch office value at max crime
+		CRIMINAL_SYNDICATE_LOW_CRIME_MULT	= -0.25	# Applied to branch office value at no crime	
+	}

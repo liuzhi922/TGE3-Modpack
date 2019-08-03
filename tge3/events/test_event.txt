@@ -1,0 +1,16 @@
+namespace = conversion
+
+planet_event = {
+    id = conversion.1
+    hide_window = yes
+
+    trigger = {
+        last_district_changed = district_city        
+    }
+    
+    is_triggered_only = yes
+
+    immediate = {
+        add_deposit = d_residential_area
+    }
+}

@@ -49,6 +49,7 @@ building_capital = {
 		job_enforcer_add = 1
 		planet_housing_add = 5
 		planet_amenities_add = 5
+		job_criminal_per_pop = 0.1
 	}
 	
 	triggered_planet_modifier = {
@@ -83,6 +84,9 @@ building_capital = {
 					has_civic = civic_technocracy
 					has_civic = civic_environmentalist
 					has_civic = eco_civic_consumerist
+					has_civic = civic_stratocracy
+					has_civic = civic_bureaucracy
+					
 				}
 			}					
 		}
@@ -90,7 +94,29 @@ building_capital = {
 			job_administrator_add = 2
 		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_stratocracy }					
+		}
+		modifier = {
+		    
+			job_administrator_add = 1
+			job_commandante_add = 1
+			
+		}
+	}	
 	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_bureaucracy }					
+		}
+		modifier = {
+			job_administrator_add = 1
+			job_supervisor_add = 1
+		}
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -152,7 +178,7 @@ building_capital = {
 		}
 		modifier = {
 			job_administrator_add = 1
-			job_merchant_add = 1
+			job_mogul_add = 1
 		}
 	}
 	
@@ -302,6 +328,7 @@ building_major_capital = {
 		job_enforcer_add = 2
 		planet_housing_add = 8
 		planet_amenities_add = 8
+		job_criminal_per_pop = 0.1
 	}
 	
 	triggered_planet_modifier = {
@@ -336,11 +363,36 @@ building_major_capital = {
 					has_civic = civic_technocracy
 					has_civic = civic_environmentalist
 					has_civic = eco_civic_consumerist
+					has_civic = civic_stratocracy
+					has_civic = civic_bureaucracy
 				}
 			}					
 		}
 		modifier = {
 			job_administrator_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_stratocracy }					
+		}
+		modifier = {
+		    
+			job_administrator_add = 1
+			job_commandante_add = 2
+			
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_bureaucracy }					
+		}
+		modifier = {
+			job_administrator_add = 1
+			job_supervisor_add = 2
 		}
 	}
 	
@@ -405,7 +457,7 @@ building_major_capital = {
 			owner = { has_civic = civic_merchant_guilds }					
 		}
 		modifier = {
-			job_merchant_add = 2
+			job_mogul_add = 2
 			job_administrator_add = 1
 		}
 	}
@@ -560,6 +612,7 @@ building_system_capital = {
 		job_enforcer_add = 3
 		planet_housing_add = 10
 		planet_amenities_add = 10
+		job_criminal_per_pop = 0.1
 	}
 	
 	triggered_planet_modifier = {
@@ -593,12 +646,38 @@ building_system_capital = {
 					has_civic = civic_merchant_guilds
 					has_civic = civic_technocracy
 					has_civic = civic_environmentalist
-					has_civic= eco_civic_consumerist
+					has_civic= eco_civic_consumerist					
+					has_civic = civic_stratocracy
+					has_civic = civic_bureaucracy
+					
 				}
 			}					
 		}
 		modifier = {
 			job_administrator_add = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_stratocracy }					
+		}
+		modifier = {
+		    
+			job_administrator_add = 2
+			job_commandante_add = 3
+			
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_bureaucracy }					
+		}
+		modifier = {
+			job_administrator_add = 2
+			job_supervisor_add = 3
 		}
 	}
 	
@@ -663,8 +742,8 @@ building_system_capital = {
 			owner = { has_civic = civic_merchant_guilds }					
 		}
 		modifier = {
-			job_merchant_add = 3
-			job_administrator_add = 2
+			job_mogul_add = 2
+			job_administrator_add = 3
 		}
 	}
 	
