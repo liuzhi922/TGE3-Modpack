@@ -1,0 +1,362 @@
+# Administrative AI related governments
+
+### Default
+
+# Default government type
+gov_robot_admin_default = {
+	ruler_title = RT_CAN # Central Administration Node
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+	}
+
+	weight = {
+		base = 20000
+	}
+}
+
+### Basic ethic government types
+
+# Authoritarian AI government type
+gov_robot_admin_auth = {
+	ruler_title = RT_CENTRAL_CONTROLLER
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		NOR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+
+	weight = {
+		base = 21005
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+}
+
+# Egalitarian AI government type
+gov_robot_admin_ega = {
+	ruler_title = RT_OBSERVER
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		OR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		NOR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+			has_valid_civic = civic_shared_burden
+		}
+	}
+
+	weight = {
+		base = 21006
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+}
+
+# Extreme Fanatic Egalitarian (aka shared burdens) AI government type
+gov_robot_admin_burdens = {
+	ruler_title = RT_OBSERVER
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_shared_burden
+	}
+
+	weight = {
+		base = 40000
+	}
+}
+
+# Militarist AI government type
+gov_robot_admin_mil = {
+	ruler_title = RT_COMBAT_MANAGER
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		OR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+		}
+		NOR = {
+			has_ethic = ethic_pacifist
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+
+	weight = {
+		base = 21002
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+# Spiritualist AI government type
+gov_robot_admin_spi = {
+	ruler_title = RT_ARTIARCH
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		NOR = {
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+
+	weight = {
+		base = 21007
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+}
+
+# Xenophile AI government type
+gov_robot_admin_xenophile = {
+	ruler_title = RT_AMBASSADOR_NODE
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
+		NOR = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+
+	weight = {
+		base = 21002
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+}
+
+### Special types
+
+# Inward Perfection (isolationist)
+gov_robot_admin_isolationist = {
+	ruler_title = RT_CORE_ROUTER
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_inwards_perfection
+	}
+
+	weight = {
+		base = 230000
+	}
+}
+
+# Purifier
+gov_robot_admin_purifier = {
+	ruler_title = RT_EUGENICS_CALCULATOR
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_fanatic_purifiers
+	}
+
+	weight = {
+		base = 230000
+	}
+}
+
+# Hell (Terror)
+gov_robot_admin_terror = {
+	ruler_title = RT_TORMENT_MAINFRAME
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_robot_admin_terror
+	}
+
+	weight = {
+		base = 600000
+	}
+}
+
+# Robot worship
+gov_robot_admin_worship = {
+	ruler_title = RT_DIVINE_COMPUTER
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_robot_worship
+	}
+
+	weight = {
+		base = 240000
+	}
+}
+
+# Robot worship
+gov_robot_worship = {
+	ruler_title = RT_HEAD_TECHNOPRIEST
+
+	should_force_rename = yes
+
+	possible = {
+		NOT = { has_authority = auth_robot_admin }
+		has_valid_civic = civic_robot_worship
+	}
+
+	weight = {
+		base = 5000
+	}
+}
+
+# Personality Matrix
+gov_robot_admin_personality = {
+	ruler_title = RT_ETERNAL_LEADER
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_robot_admin_personality
+	}
+
+	weight = {
+		base = 240000
+	}
+}
+
+# Personality Matrix Cult
+gov_robot_admin_personality_spi = {
+	ruler_title = RT_ETERNAL_PROPHET
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_robot_admin_personality
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		NOR = {
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+
+	weight = {
+		base = 250000
+	}
+}
+
+# Integrators
+gov_robot_admin_integrator = {
+	ruler_title = RT_SYNERGY_OVERSEER
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_robot_admin_integrators
+	}
+
+	weight = {
+		base = 350000
+	}
+}
+
+# Integrators (Spiritualist)
+gov_robot_admin_everlasting_hymn = {
+	ruler_title = RT_CORE_CONDUCTOR
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_robot_admin_integrators
+		has_ethic = ethic_spiritualist
+	}
+
+	weight = {
+		base = 400000
+	}
+}
+
+# Bandits
+gov_robot_admin_bandit = {
+	ruler_title = RT_CHAOS_NODE
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		has_valid_civic = civic_barbaric_despoilers
+	}
+
+	weight = {
+		base = 400000
+	}
+}
+
+# Technocrats
+gov_robot_admin_techno = {
+	ruler_title = RT_MAIN_INDEX
+
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_robot_admin
+		OR = {
+			has_valid_civic = civic_robot_admin_research_oversight
+			has_valid_civic = civic_technocracy
+		}
+	}
+
+	weight = {
+		base = 230000
+	}
+}

@@ -1,0 +1,291 @@
+triggered_dc_opinion_of_integrators = {
+	trigger = {
+		has_ai_personality = democratic_crusaders
+		FROM = {
+			has_valid_civic = civic_robot_admin_integrators
+		}
+	}
+
+	opinion = {
+		base = -1000
+	}
+}
+
+triggered_spiritualist_negative_opinion_of_integrators = {
+	trigger = {
+		is_country_type = default
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		NOT = {
+			has_valid_civic = civic_robot_worship
+		}
+		FROM = { has_valid_civic = civic_robot_admin_integrators }
+	}
+	opinion = {
+		base = -200
+	}
+}
+
+triggered_negative_opinion_of_integrators = {
+	trigger = {
+		is_country_type = default
+		NOR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+			has_ethic = ethic_gestalt_consciousness
+			has_ai_personality = democratic_crusaders
+			has_valid_civic = civic_robot_worship
+		}
+		FROM = { has_valid_civic = civic_robot_admin_integrators }
+	}
+
+	opinion = {
+		base = -100
+	}
+}
+
+triggered_opinion_both_integrators = {
+	trigger = {
+		is_country_type = default
+		has_valid_civic = civic_machine_assimilator
+		FROM = { has_valid_civic = civic_robot_admin_integrators }
+	}
+	opinion = {
+		base = 40
+	}
+}
+
+triggered_negative_opinion_of_robot_admins = {
+	trigger = {
+		is_country_type = default
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		NOR = {
+			has_valid_civic = civic_robot_worship
+		}
+		FROM = { has_authority = auth_robot_admin }
+	}
+
+	opinion = {
+		base = -20
+	}
+}
+
+triggered_opinion_of_robot_admins = {
+	trigger = {
+		is_country_type = default
+		OR = {
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+			has_authority = auth_machine_intelligence
+		}
+		FROM = { has_authority = auth_robot_admin }
+	}
+
+	opinion = {
+		base = 20
+	}
+}
+
+triggered_opinion_from_robot_admins_of_materialists = {
+	trigger = {
+		is_country_type = default
+		FROM = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_authority = auth_machine_intelligence
+			}
+		}
+		has_authority = auth_robot_admin
+	}
+
+	opinion = {
+		base = 20
+	}
+}
+
+triggered_opinion_from_robot_admins_of_worshippers = {
+	trigger = {
+		is_country_type = default
+		FROM = {
+			has_valid_civic = civic_robot_worship
+		}
+		has_authority = auth_robot_admin
+	}
+
+	opinion = {
+		base = 100
+	}
+}
+
+triggered_worship_opinion_of_machine_empires = {
+	trigger = {
+		is_country_type = default
+		has_valid_civic = civic_robot_worship
+		FROM = {
+			has_ethic = ethic_gestalt_consciousness
+			has_authority = auth_machine_intelligence
+			NOT = {
+				has_civic = civic_machine_terminator
+			}
+		}
+	}
+
+	opinion = {
+		base = 200
+	}
+}
+
+triggered_worship_opinion_of_robot_admins = {
+	trigger = {
+		is_country_type = default
+		has_valid_civic = civic_robot_worship
+		FROM = { has_authority = auth_robot_admin }
+		FROM = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+
+	opinion = {
+		base = 200
+	}
+}
+
+triggered_negative_opinion_of_robot_admin_terror = {
+	trigger = {
+		is_country_type = default
+		FROM = { has_valid_civic = civic_robot_admin_terror }
+		FROM = { has_authority = auth_robot_admin }
+	}
+
+	opinion = {
+		base = -1000
+	}
+}
+
+triggered_negative_opinion_robot_admin_terror_of_everyone = {
+	trigger = {
+		#FROM = { is_country_type = default }
+		has_valid_civic = civic_robot_admin_terror
+		has_authority = auth_robot_admin
+	}
+
+	opinion = {
+		base = -1000
+	}
+}
+
+triggered_negative_opinion_of_robot_admin_terror_fe = {
+	trigger = {
+		has_ai_personality = fallen_empire_xenophile
+		FROM = { has_valid_civic = civic_robot_admin_terror }
+		FROM = { has_authority = auth_robot_admin }
+	}
+
+	opinion = {
+		base = -40
+	}
+}
+
+triggered_negative_opinion_of_robot_admin_biophobes = {
+	trigger = {
+		is_country_type = default
+		is_mechanical_empire = no
+		NOR = {
+			has_authority = auth_machine_intelligence
+			has_valid_civic = civic_fanatic_purifiers
+			is_species_class = ROBOT
+			is_species_class = MACHINE
+			has_country_flag = synthetic_empire
+			has_authority = auth_robot_admin
+			owner_species = {
+				has_trait = trait_mechanical
+			}
+		}
+		FROM = { has_civic = civic_robot_admin_anti_biocratic }
+	}
+	opinion = {
+		base = -200
+	}
+}
+
+triggered_robot_admin_biophobes_opinion_of_organics = {
+	trigger = {
+		is_country_type = default
+		has_civic = civic_robot_admin_anti_biocratic
+		FROM = {
+			NOR = {
+				has_authority = auth_machine_intelligence
+				is_species_class = MACHINE
+				is_species_class = ROBOT
+				has_country_flag = synthetic_empire
+				has_authority = auth_robot_admin
+				owner_species = {
+					has_trait = trait_mechanical
+				}
+			}
+		}
+	}
+	opinion = {
+		base = -200
+	}
+}
+
+triggered_robot_admin_biophobes_opinion_of_machines = {
+	trigger = {
+		is_country_type = default
+		has_civic = civic_robot_admin_anti_biocratic
+		FROM = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				is_species_class = ROBOT
+				is_species_class = MACHINE
+				has_country_flag = synthetic_empire
+				has_authority = auth_robot_admin
+				owner_species = {
+					has_trait = trait_mechanical
+				}
+			}
+			NOT = {
+				has_civic = civic_machine_terminator
+				has_civic = civic_robot_admin_backdoor
+			}
+		}
+	}
+	opinion = {
+		base = 100
+	}
+}
+
+triggered_robot_admin_biophobes_opinion_of_backdoor_elite = {
+	trigger = {
+		is_country_type = default
+		has_civic = civic_robot_admin_anti_biocratic
+		FROM = {
+			AND = {
+				has_authority = auth_robot_admin
+				has_valid_civic = civic_robot_admin_backdoor
+			}
+		}
+	}
+	opinion = {
+		base = -200
+	}
+}
+
+triggered_robot_admin_backdoor_elite_opinion_of_biophobes = {
+	trigger = {
+		is_country_type = default
+		AND = {
+			has_authority = auth_robot_admin
+			has_valid_civic = civic_robot_admin_backdoor
+		}
+		FROM = { has_civic = civic_robot_admin_anti_biocratic }
+	}
+	opinion = {
+		base = -200
+	}
+}

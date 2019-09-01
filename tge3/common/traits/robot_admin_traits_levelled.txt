@@ -1,0 +1,1069 @@
+#
+# CONTAINS LEVELLED TRAITS FOR THE LEADERS THAT ARE SHARED WITH THE LEADER LEVEL
+#
+
+#
+# GOVERNOR LEVELLED TRAITS
+#
+
+leader_trait_robot_admin_lvl_governor_1 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.02
+        planet_crime_add = -3.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_governor_2 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.04
+        planet_crime_add = -6.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_governor_3 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.06
+        planet_crime_add = -9.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_governor_4 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.08
+        planet_crime_add = -12.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_governor_5 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.1
+        planet_crime_add = -15.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_governor_6 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.12
+        planet_crime_add = -18.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_governor_7 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.14
+        planet_crime_add = -21.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_governor_8 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.16
+        planet_crime_add = -24.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_governor_9 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.18
+        planet_crime_add = -27.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_governor_10 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { governor }
+	initial = no
+	randomized = no
+
+    modifier = {
+        planet_jobs_produces_mult = 0.2
+        planet_crime_add = -30.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+#
+# SCIENTIST LEVELLED TRAITS
+#
+
+
+leader_trait_robot_admin_lvl_scientist_1 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.02
+        science_ship_survey_speed = 0.1
+		ship_anomaly_research_speed_mult = 0.5
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_scientist_2 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.04
+        science_ship_survey_speed = 0.2
+		ship_anomaly_research_speed_mult = 1.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_scientist_3 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.06
+        science_ship_survey_speed = 0.3
+		ship_anomaly_research_speed_mult = 1.5
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_scientist_4 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.08
+        science_ship_survey_speed = 0.4
+		ship_anomaly_research_speed_mult = 2.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_scientist_5 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.1
+        science_ship_survey_speed = 0.5
+		ship_anomaly_research_speed_mult = 2.5
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_scientist_6 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.12
+        science_ship_survey_speed = 0.6
+		ship_anomaly_research_speed_mult = 3.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_scientist_7 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.14
+        science_ship_survey_speed = 0.7
+		ship_anomaly_research_speed_mult = 3.5
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_scientist_8 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.16
+        science_ship_survey_speed = 0.8
+		ship_anomaly_research_speed_mult = 4.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_scientist_9 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.18
+        science_ship_survey_speed = 0.9
+		ship_anomaly_research_speed_mult = 4.5
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_scientist_10 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+    modifier = {
+        all_technology_research_speed = 0.2
+        science_ship_survey_speed = 1.0
+		ship_anomaly_research_speed_mult = 5.0
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+
+#
+# ADMIRAL LEVELLED TRAITS
+#
+
+
+leader_trait_robot_admin_lvl_admiral_1 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.03
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_2 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.06
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_3 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.09
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_4 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.12
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_5 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.15
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_6 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.18
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_7 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.21
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_8 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.24
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_9 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.27
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_10 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.3
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+
+#
+# ADMIRAL LEVELLED TRAITS
+#
+
+
+leader_trait_robot_admin_lvl_admiral_1 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.03
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_2 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.06
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_3 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.09
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_4 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.12
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_5 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.15
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_6 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.18
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_7 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.21
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_8 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.24
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_9 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.27
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_admiral_10 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+
+    modifier = {
+        ship_fire_rate_mult = 0.3
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+#
+# GENERAL LEVELLED TRAITS
+#
+
+
+leader_trait_robot_admin_lvl_general_1 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.05
+        army_health = 0.05
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_general_2 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.1
+        army_health = 0.1
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_general_3 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.15
+        army_health = 0.15
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_general_4 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.2
+        army_health = 0.2
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_general_5 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.25
+        army_health = 0.25
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_general_6 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.3
+        army_health = 0.3
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_general_7 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.35
+        army_health = 0.35
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_general_8 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.4
+        army_health = 0.4
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_general_9 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.45
+        army_health = 0.45
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_lvl_general_10 = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+
+	leader_trait = all
+	leader_class = { general }
+	initial = no
+	randomized = no
+
+    modifier = {
+        army_damage_mult = 0.5
+        army_health = 0.5
+		leader_skill_levels = -12
+    }
+
+	ai_weight = {
+		weight = 100
+	}
+}

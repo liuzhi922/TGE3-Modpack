@@ -1,0 +1,84 @@
+cb_admin_integrate = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		has_valid_civic = civic_robot_admin_integrators
+	}
+	is_valid = {
+		has_total_war_cb = yes
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_admin_integrate_contain = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOT = { has_valid_civic = civic_robot_admin_integrators }
+	}
+	is_valid = {
+		has_total_war_cb = yes
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		NOT = { is_overlord_to = FROM }
+		from = {
+			has_valid_civic = civic_robot_admin_integrators
+		}
+	}
+}
+
+cb_admin_remove_biocracy = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		has_valid_civic = civic_robot_admin_anti_biocratic
+	}
+	is_valid = {
+		has_total_war_cb_robot_admin = yes
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_admin_terrorise = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		has_valid_civic = civic_robot_admin_terror
+	}
+	is_valid = {
+		has_total_war_cb_robot_admin = yes
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_admin_contain = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		is_country_type = default
+		NOT = { has_valid_civic = civic_robot_admin_terror }
+	}
+	is_valid = {
+		has_total_war_cb_robot_admin = yes
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		NOT = { is_overlord_to = FROM }
+	}
+}

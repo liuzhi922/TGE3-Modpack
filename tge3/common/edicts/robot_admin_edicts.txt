@@ -1,0 +1,49 @@
+# Integration
+#planet_edict = {
+#	name = "mass_integration"
+#	cost = { influence = 25 energy = 500 }
+#	length = 0
+#
+#	potential = {
+#		owner = {
+#			has_valid_civic = civic_robot_admin_integrators
+#		}
+#		NOT = { has_planet_flag = mass_integration_active }
+#	}
+#
+#	allow = {
+#		custom_tooltip = {
+#			fail_text = mass_integration_noone_to_integrate
+#			any_pop = {
+#                NOR = {
+#                    is_robot_pop = yes
+#                    is_same_species = owner.owner_species
+#                    has_trait = trait_robot_admin_integrated
+#                    has_modifier = robot_admin_integration_mod
+#                }
+#            }
+#		}
+#	}
+#
+#	effect = {
+#		while = {
+#            count = 4
+#            random_pop = {
+#                limit = {
+#                    NOR = {
+#                        is_robot_pop = yes
+#                        is_exact_same_species = owner.owner_species
+#                        has_trait = trait_robot_admin_integrated
+#                        has_modifier = robot_admin_integration_mod
+#                    }
+#                }
+#                add_modifier = { modifier = robot_admin_integration_mod days = 30}
+#            }
+#        }
+#		hidden_effect = { set_planet_flag = mass_integration_active }
+#	}
+#
+#	ai_weight = {
+#		weight = 100
+#	}
+#}

@@ -1,0 +1,266 @@
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_1"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 0
+	days_to_research = 360
+	tech_department = engineering_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_2"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 3000
+	tech_department = physics_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_3"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 3000
+	tech_department = society_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_4"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 3000
+	tech_department = engineering_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_5"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 6000
+	tech_department = physics_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_6"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 6000
+	tech_department = society_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_7"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 6000
+	tech_department = engineering_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_8"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 12000
+	tech_department = physics_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_9"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 12000
+	tech_department = society_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_10"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 12000
+	tech_department = engineering_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.11
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}
+
+
+special_project = {
+	key = "ROBOT_ADMIN_UPGRADE_PROJECT_11"
+    event_chain = "robot_admin_upgrade_chain"
+	cost = 32000
+	tech_department = engineering_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+            country_event = {
+                id = robotadmin.17
+            }
+        }
+	}
+
+	on_fail = {
+	}
+}

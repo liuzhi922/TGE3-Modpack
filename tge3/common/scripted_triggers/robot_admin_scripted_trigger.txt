@@ -1,0 +1,43 @@
+has_total_war_cb_robot_admin = {
+	OR = {
+		#attacker checks
+		AND = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_fallen_empire
+				is_country_type = fallen_empire
+			}
+			OR = {
+				has_valid_civic = civic_robot_admin_terror
+				AND = {
+					has_valid_civic = civic_robot_admin_anti_biocratic
+					from = {
+						NOR = {
+							has_country_flag = synthetic_empire
+							has_authority = auth_machine_intelligence
+                        	has_authority = auth_robot_admin
+						}
+					}
+				}
+			}
+		}
+		#end threat checks
+		AND = {
+			is_country_type = default
+			NOR = {
+				is_country_type = awakened_fallen_empire
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_machine_terminator
+                has_valid_civic = civic_robot_admin_terror
+			}
+			from = {
+				OR = {
+					has_valid_civic = civic_robot_admin_terror
+                    has_valid_civic = civic_robot_admin_anti_biocratic							
+				}
+			}
+		}
+	}
+}

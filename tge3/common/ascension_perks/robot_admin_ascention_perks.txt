@@ -1,0 +1,67 @@
+ap_robot_admin_civic_buff = {
+	possible = {
+		has_valid_civic = civic_robot_admin
+	}
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_robot_admin_civic_buff
+			has_authority = auth_machine_intelligence
+		}
+		has_valid_civic = civic_robot_admin
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+ap_robot_admin_ascension_protocols = {
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 2
+		}
+	}
+	modifier = {
+		description = ap_robot_admin_ascension_protocols_tooltip
+	}
+
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = robotadmin.696 }
+		}
+	}
+
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_robot_admin_ascension_protocols
+			has_authority = auth_machine_intelligence
+		}
+		has_valid_civic = civic_robot_admin
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 300
+			has_valid_civic = civic_fanatic_purifiers
+		}
+		modifier = {
+			factor = 300
+			has_valid_civic = civic_robot_admin_integrators
+		}
+		modifier = {
+			factor = 300
+			has_valid_civic = civic_barbaric_despoilers
+		}
+	}
+}

@@ -1,0 +1,22 @@
+pop_category_rulers = {
+	parent = planet_pops
+
+	generate_add_modifiers = {
+		produces
+	}
+}
+
+
+planet_administrators = {
+	parent = planet_jobs
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}

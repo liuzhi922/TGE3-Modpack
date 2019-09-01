@@ -1,0 +1,32 @@
+auth_robot_admin = {
+	has_heir = no
+	election_type = none
+
+	valid_for_released_vassal = yes
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+
+	random_weight = {
+		base = 0.5
+	}
+
+	country_modifier = {
+		planet_administrators_energy_upkeep_add = 1.0
+		planet_pop_assembly_add = 0.25
+	}
+
+	tags = {
+		AUTH_ROBOT_ADMIN_NO_ELECTIONS
+		AUTH_ROBOT_ADMIN_IMMORTAL_RULER
+		AUTH_ROBOT_ADMIN_IMMORTAL_LEADERS
+		AUTH_ROBOT_ADMIN_RULER_POPS_ROBOTS
+		AUTH_ROBOT_ADMIN_ONE_RULER_ONE_MIND
+		AUTH_ROBOT_ADMIN_LEADER_UPGRADES
+		AUTH_ROBOT_ADMIN_STARTING_TECH
+	}
+}

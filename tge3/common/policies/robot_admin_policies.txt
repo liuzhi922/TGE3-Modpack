@@ -1,0 +1,179 @@
+robot_admin_integration_level = {
+	potential = {
+		has_authority = auth_robot_admin
+	}
+
+	option = {
+		name = "robot_admin_integration_level_none"
+
+		valid = {
+			OR = {
+				NOR = {
+					has_valid_civic = civic_robot_admin_terror
+					has_valid_civic = civic_robot_admin_anti_biocratic
+				}
+				has_valid_civic = civic_robot_admin_backdoor
+			}
+		}
+
+		policy_flags = {
+			robot_admin_integration_level_none
+		}
+
+		modifier = {
+			ruler_skill_levels = -1
+			species_leader_exp_gain = -0.2
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				country_event = { id = robotadmin.2 }
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				country_event = { id = robotadmin.2 }
+			}
+		}
+
+		AI_weight = {
+			factor = 5
+			modifier = {
+				factor = 100
+				years_passed < 15 # Making sure AI still choses based on it's preferences, but lets players chose themselves at the start of the game hopefully.
+			}
+		}
+	}
+
+	option = {
+		name = "robot_admin_integration_level_scientists"
+
+		valid = {
+			OR = {
+				NOR = {
+					has_valid_civic = civic_robot_admin_terror
+					has_valid_civic = civic_robot_admin_anti_biocratic
+				}
+				has_valid_civic = civic_robot_admin_backdoor
+			}
+		}
+
+		policy_flags = {
+			robot_admin_integration_level_scientists
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				country_event = { id = robotadmin.2 }
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				country_event = { id = robotadmin.2 }
+			}
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "robot_admin_integration_level_military"
+
+		valid = {
+			OR = {
+				NOR = {
+					has_valid_civic = civic_robot_admin_terror
+					has_valid_civic = civic_robot_admin_anti_biocratic
+				}
+				has_valid_civic = civic_robot_admin_backdoor
+			}
+		}
+
+		policy_flags = {
+			robot_admin_integration_level_military
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				country_event = { id = robotadmin.2 }
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				country_event = { id = robotadmin.2 }
+			}
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "robot_admin_integration_level_full"
+
+		valid = {
+			NOT = {
+				has_valid_civic = civic_robot_admin_backdoor
+			}
+		}
+
+		policy_flags = {
+			robot_admin_integration_level_scientists
+			robot_admin_integration_level_military
+		}
+
+		modifier = {
+			ruler_skill_levels = 1
+			species_leader_exp_gain = 0.2
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				country_event = { id = robotadmin.2 }
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				country_event = { id = robotadmin.2 }
+			}
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 20
+				AND = {
+					OR = {
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+				}
+			}
+		}
+	}
+}

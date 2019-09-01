@@ -1,0 +1,208 @@
+buildable_robot_admin_default = {
+
+	cost = {
+		minerals = 100
+	}
+
+	potential_build = {
+		has_authority = auth_robot_admin
+		NOT = { has_global_flag = extended_synths_on }
+	}
+
+	allow = {
+		NOT = {
+			has_authority = auth_hive_mind
+		}
+	}
+
+	species = {
+		name = robot_admin_name_type
+		name_list = "AI"
+		class = "ROBOT"
+		#class = "EXTSYNTH"
+		portrait = "default_robot"
+		traits = {
+			trait = "trait_mechanical"
+			trait = "trait_robot_admin"
+		}
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 30.0
+		}
+		pops_auto_growth = 1.0
+
+		pops_can_be_colonizers = yes
+		pops_can_migrate = no
+		pops_can_reproduce = no
+		pops_can_join_factions = no
+		pop_maintenance = 1
+		pops_can_be_slaves = no
+		can_generate_leaders = yes
+		pops_have_happiness = no
+		consumer_goods = no
+		pop_ethics = no
+	}
+	portrait = {
+		sd_hum_robot = { use_robot_portrait_sd_hum_robot = yes }
+		sd_mam_robot = { use_robot_portrait_sd_mam_robot = yes }
+		sd_rep_robot = { use_robot_portrait_sd_rep_robot = yes }
+		sd_avi_robot = { use_robot_portrait_sd_avi_robot = yes }
+		sd_art_robot = { use_robot_portrait_sd_art_robot = yes }
+		sd_mol_robot = { use_robot_portrait_sd_mol_robot = yes }
+		sd_fun_robot = { use_robot_portrait_sd_fun_robot = yes }
+		sd_pla_robot = { use_robot_portrait_sd_pla_robot = yes }
+	}
+}
+
+buildable_robot_admin_aspr = {
+
+	cost = {
+		minerals = 100
+	}
+
+	potential_build = {
+		has_authority = auth_robot_admin
+		has_global_flag = extended_synths_on
+	}
+
+	allow = {
+		NOT = {
+			has_authority = auth_hive_mind
+		}
+	}
+
+	species = {
+		name = robot_admin_name_type
+		name_list = "AI"
+		class = "EXTSYNTH"
+		portrait = "default_robot"
+		traits = {
+			trait = "trait_mechanical"
+			trait = "trait_robot_admin"
+		}
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 30.0
+		}
+		pops_auto_growth = 1.0
+
+		pops_can_be_colonizers = yes
+		pops_can_migrate = no
+		pops_can_reproduce = no
+		pops_can_join_factions = no
+		pop_maintenance = 1
+		pops_can_be_slaves = no
+		can_generate_leaders = yes
+		pops_have_happiness = no
+		consumer_goods = no
+		pop_ethics = no
+	}
+	portrait = {
+		humansynth_machine = {
+			OR = {
+				is_humanoid_class_2 = yes
+				species_portrait = humansynth
+				species_portrait = sd_hum_robot
+			}
+		}
+		mammaliansynth_machine = {
+			OR = {
+				is_mammal_class = yes
+				species_portrait = mammaliansynth
+				species_portrait = sd_mam_robot
+			}
+		}
+		reptiliansynth_machine = {
+			OR = {
+				is_reptilian_class = yes
+				species_portrait = reptiliansynth
+				species_portrait = sd_rep_robot
+			}
+		}
+		aviansynth_machine = {
+			OR = {
+				is_avian_class = yes
+				species_portrait = aviansynth
+				species_portrait = sd_avi_robot
+			}
+		}
+		arthropoidsynth_machine = {
+			OR = {
+				is_arthropoid_class = yes
+				species_portrait = arthropoidsynth
+				species_portrait = sd_art_robot
+			}
+		}
+		molluscoidsynth = {
+			OR = {
+				is_molluscoid_class = yes
+				species_portrait = molluscoidsynth
+				species_portrait = sd_mol_robot
+			}
+		}
+		fungoidsynth = {
+			OR = {
+				is_fungoid_class = yes
+				species_portrait = fungoidsynth
+				species_portrait = sd_fun_robot
+			}
+		}
+		plantoidsynth = {
+			OR = {
+				is_plantoid_class = yes
+				species_portrait = plantoidsynth
+				species_portrait = sd_pla_robot
+			}
+		}
+		holofrixigram = {
+			OR = {
+				is_virtual_class = yes
+				species_portrait = holofrixigram
+			}
+		}
+		zeriphensynth_machine = {
+			OR = {
+				is_celestial_class = yes
+				species_portrait = zeriphensynth
+			}
+		}
+		robot2 = {
+			NOR = {
+				is_humanoid_class = yes
+				is_mammal_class = yes
+				is_reptilian_class = yes
+				is_avian_class = yes
+				is_arthropoid_class = yes
+				is_molluscoid_class = yes
+				is_fungoid_class = yes
+				is_plantoid_class = yes
+				is_celestial_class = yes
+				is_virtual_class = yes
+				# is_species_class = EXTSYNTH
+				# is_species_class = EXTSYNTH_BIO
+				# is_species_class = EXTSYNTH_DLC
+			}
+		}
+	}
+}
+
+buildable_robot_admin_modded = {
+
+	cost = {
+		minerals = 100
+	}
+
+	potential_build = {
+		has_authority = auth_robot_admin
+	}
+
+	allow = {
+		NOT = {
+			has_authority = auth_hive_mind
+		}
+	}
+
+	prerequisites = { "tech_robomodding" }
+
+	species_class = "EXTSYNTH"
+}

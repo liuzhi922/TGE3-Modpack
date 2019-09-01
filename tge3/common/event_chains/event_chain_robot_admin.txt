@@ -1,0 +1,12 @@
+robot_admin_upgrade_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_sapient_AI
+	counter = {
+		upgrades_available = {
+			max = 10
+		}
+		upgrades_finished = {
+			max = 10
+		}
+	}
+}

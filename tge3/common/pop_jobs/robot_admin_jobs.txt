@@ -1,0 +1,305 @@
+ra_subjugator = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_capital
+	clothes_texture_index = 1
+	icon = duelist
+
+	possible = {
+		#ruler_job_check_trigger = yes
+		has_trait = trait_mechanical
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+			unity = 3
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 25
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 1000
+			has_trait = trait_mechanical
+		}
+	}
+}
+
+ra_exploit_elite = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_luxury_residence
+	clothes_texture_index = 1
+	icon = fe_hedonist
+
+	possible = {
+    	hidden_trigger = {
+    		exists = owner
+    		is_enslaved = no
+    		is_being_purged = no
+    		is_being_assimilated = no
+    		NOT = { has_trait = trait_syncretic_proles }
+    		NOT = { has_trait = trait_nerve_stapled }
+    		OR = {
+    			NOT = { has_trait = trait_mechanical }
+    			AND = {
+    				owner = { has_technology = tech_synthetic_workers }
+    				owner = { has_policy_flag = ai_full_rights }
+    			}
+    		}
+    		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+    	}
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+			unity = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 5
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+	}
+}
+
+ra_post_scarce = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_robot_assembly_plant
+	clothes_texture_index = 1
+	icon = maintenance_drone
+
+	possible = {
+		#ruler_job_check_trigger = yes
+		has_trait = trait_mechanical
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+			engineering_research = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_pop_assembly_add = 2
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 1000
+			has_trait = trait_mechanical
+		}
+	}
+}
+
+ra_terraengineer = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_capital
+	clothes_texture_index = 1
+	icon = colonist
+
+	possible = {
+		#ruler_job_check_trigger = yes
+		has_trait = trait_mechanical
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+			society_research = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_building_build_speed_mult = 0.1
+        planet_buildings_energy_upkeep_mult = -0.1
+        planet_districts_energy_upkeep_mult = -0.1
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 1000
+			has_trait = trait_mechanical
+		}
+	}
+}
+
+ra_housing_manager = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_communal_housing
+	clothes_texture_index = 1
+	icon = technician
+
+	possible = {
+		#ruler_job_check_trigger = yes
+		has_trait = trait_mechanical
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+            unity = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 1000
+			has_trait = trait_mechanical
+		}
+	}
+}
+
+ra_research_oversight = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_institute
+	clothes_texture_index = 1
+	icon = researcher
+
+	possible = {
+		#ruler_job_check_trigger = yes
+		has_trait = trait_mechanical
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+			physics_research = 2
+			engineering_research = 2
+			society_research = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.05
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 1000
+			has_trait = trait_mechanical
+		}
+	}
+}
+
+ra_industry_oversight = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_production_center
+	clothes_texture_index = 1
+	icon = foundry
+
+	possible = {
+		#ruler_job_check_trigger = yes
+		has_trait = trait_mechanical
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+			engineering_research = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.05
+		planet_artisans_produces_mult = 0.05
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 1000
+			has_trait = trait_mechanical
+		}
+	}
+}
+
+ra_entertainment_admin = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_hyper_entertainment_forum
+	clothes_texture_index = 1
+	icon = entertainer
+
+	possible = {
+		#ruler_job_check_trigger = yes
+		has_trait = trait_mechanical
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+			unity = 5
+            society_research = 5
+		}
+	}
+
+	planet_modifier = {
+		pop_happiness = 0.1
+        planet_jobs_produces_mult = -0.025
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 1000
+			has_trait = trait_mechanical
+		}
+	}
+}
+
+ra_agri_manager = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_food_processing_facility
+	clothes_texture_index = 1
+	icon = healthcare
+
+	possible = {
+		#ruler_job_check_trigger = yes
+		has_trait = trait_mechanical
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+			society_research = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_farmers_food_produces_mult = 0.05
+		pop_growth_speed = 0.10
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 1000
+			has_trait = trait_mechanical
+		}
+	}
+}

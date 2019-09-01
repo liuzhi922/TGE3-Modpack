@@ -1,0 +1,165 @@
+trait_robot_admin = {
+	cost = 0
+	sorting_priority = 10
+
+	initial = no
+	randomized = no
+	modification = no
+	forced_happiness = yes
+	immortal_leaders = yes
+
+	allowed_archetypes = { ROBOT }
+
+	modifier = {
+		#tile_resource_engineering_research_mult = -0.4
+		#tile_resource_physics_research_mult = -0.4
+		#tile_resource_society_research_mult = 0.2
+		#tile_resource_unity_mult = 0.2
+		#tile_resource_minerals_mult = -0.4
+		leader_skill_levels = -12
+		ruler_skill_levels = 12
+	}
+
+	icon = "gfx/interface/icons/traits/trait_machine_unit.dds"
+}
+
+leader_trait_robot_admin_placeholder_1 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+	modifier = {
+	}
+	leader_trait = all
+	leader_class = { scientist ruler governor admiral general }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_placeholder_2 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+	modifier = {
+	}
+	leader_trait = all
+	leader_class = { scientist ruler governor admiral general }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_placeholder_3 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_nervous.dds"
+	modifier = {
+	}
+	leader_trait = all
+	leader_class = { scientist ruler governor admiral general }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+	#modifier = {
+	#	leader_skill_levels = -12
+	#	ruler_skill_levels = 12
+	#}
+	leader_trait = all
+	leader_class = { scientist ruler governor admiral general }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_robot_admin_avatar = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_synthetic.dds"
+	modifier = {
+		species_leader_exp_gain = -10
+	}
+	leader_trait = all
+	leader_class = { scientist ruler governor admiral general }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+trait_robot_admin_integrated = {
+	cost = 0
+	sorting_priority = 10
+
+	opposites = { "trait_latent_psionic" "trait_psionic" }
+	initial = no
+	randomized = no
+	modification = no
+	forced_happiness = yes
+	immortal_leaders = no
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		#pop_consumer_goods_mult = -0.5
+		pop_environment_tolerance = 0.20
+		army_damage_mult = 0.1
+		leader_age = 40
+	}
+
+	icon = "gfx/interface/icons/traits/trait_cybernetic.dds"
+}

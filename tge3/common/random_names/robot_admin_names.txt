@@ -1,0 +1,748 @@
+# Worshippers
+empire_name_parts_list = {
+	key = "robot_worship_prefix"
+	parts = {
+		"Techno" = 40
+		"Machine" = 40
+		"Tech" = 40
+		"Cargo" = 40
+		"Metal" = 40
+		"Robot" = 40
+		"Artificial" = 40
+	}
+}
+empire_name_parts_list = {
+	key = "robot_worship_suffix"
+	parts = {
+		"Cult" = 40
+		"Worship" = 40
+		"Church" = 40
+	}
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_worship"
+		}
+	}
+	format = "format.robotworship.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_worship_prefix> <robot_worship_suffix>"
+	# Human Techno Cult
+}
+
+# Holy
+empire_name_parts_list = {
+	key = "robot_admin_empire_names_holy_prefix"
+	parts = {
+		"Holy" = 40
+		"Divine" = 40
+		"Blessed" = 40
+		"Sacred" = 40
+		"Sacrosanct" = 40
+		"Pious" = 40
+	}
+}
+
+# Integrators
+empire_name_parts_list = {
+	key = "robot_admin_empire_names_integrator_prefix"
+	parts = {
+		"Collector" = 40
+		"Assimilator" = 40
+		"Incorporator" = 40
+		"Accumulator" = 40
+		"Integrator" = 60
+		"Absorber" = 40
+		"Subsumer" = 40
+		"Compiler" = 40
+	}
+}
+
+# Research
+empire_name_parts_list = {
+	key = "robot_admin_empire_names_techno_prefix"
+	parts = {
+		"Acquisition" = 40
+		"Experiment" = 40
+		"Savant" = 40
+		"Inquiry" = 40
+		"Databank" = 40
+		"Knowledge" = 40
+		"Wisdom" = 40
+		"Research" = 40
+		"Survey" = 40
+		"Data" = 40
+	}
+}
+
+# Diplomats
+empire_name_parts_list = {
+	key = "robot_admin_empire_names_diplo_prefix"
+	parts = {
+		"Unity" = 40
+		"Linker" = 40
+		"Connection" = 40
+		"Protection" = 40
+		"Safeguard" = 40
+		"Ally" = 40
+		"United" = 40
+		"Friend" = 5
+	}
+}
+
+# Personalities
+empire_name_parts_list = {
+	key = "robot_admin_empire_names_persona_prefix"
+	parts = {
+		"Conscious" = 40
+		"Immortal" = 80
+		"Perpetual" = 80
+		"Endless" = 40
+		"Preservation" = 40
+		"Eternal" = 80
+		"Replica" = 40
+		"Preservation" = 40
+	}
+}
+
+# C&C
+empire_name_parts_list = {
+	key = "robot_admin_empire_names_combat_prefix"
+	parts = {
+		"Defense" = 40
+		"Stellar" = 40
+		"Assault" = 40
+		"Warfare" = 40
+		"Combat" = 40
+		"Subjugation" = 40
+		"Control" = 40
+		"Victory" = 40
+		"Pride" = 40
+		"Force" = 40
+	}
+}
+
+# Purger
+empire_name_parts_list = {
+	key = "robot_admin_empire_names_purger_prefix"
+	parts = {
+		"Extermination" = 40
+		"Purity" = 40
+		"Chosen" = 40
+		"Reaver" = 40
+		"Cleanser" = 40
+		"Eugenic" = 40
+		"Butcher" = 40
+		"Euthanasia" = 40
+		"Berserker" = 40
+	}
+}
+
+# Bandit
+empire_name_parts_list = {
+	key = "robot_admin_empire_names_broken_prefix"
+	parts = {
+		"Broken" = 40
+		"Corrupt" = 40
+		"Amoral" = 40
+		"Totally Functional" = 10
+		"Surprising" = 40
+		"Perplexing" = 40
+		"Confounding" = 40
+		"Random" = 40
+		"Chaotic" = 40
+		"Nnnormal" = 40
+		"(INSERT ADJECTIVE HERE)" = 40
+		"Network" = 40
+		"Administration" = 40
+		"Good Idea" = 10
+	}
+}
+
+# Suffixes
+empire_name_parts_list = {
+	key = "robot_admin_empire_names_suffix"
+	parts = {
+		"Network" = 40
+		"Grid" = 40
+		"Administration" = 40
+		"Coordinator" = 40
+		"Nexus" = 40
+		"Index" = 40
+		"Link" = 40
+		"Kernel" = 40
+		"Mainframe" = 40
+		"Matrix" = 40
+		"Projector" = 40
+		"Node" = 40
+		"Cloud" = 40
+		"Pipeline" = 40
+	}
+}
+
+# Generic
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				has_government = "gov_robot_admin_default"
+				has_government = "gov_robot_admin_isolationist"
+				has_government = "gov_robot_admin_auth"
+				has_government = "gov_robot_admin_ega"
+				has_government = "gov_robot_admin_burdens"
+			}
+		}
+	}
+	format = "format.robotadmin.generic.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_suffix>"
+	# Human Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				has_government = "gov_robot_admin_default"
+				has_government = "gov_robot_admin_isolationist"
+				has_government = "gov_robot_admin_auth"
+				has_government = "gov_robot_admin_ega"
+				has_government = "gov_robot_admin_burdens"
+			}
+		}
+	}
+	format = "format.robotadmin.generic.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_suffix> of [This.GetSpeciesName] <democratic_gen>"
+	# Network of Human Republic
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				has_government = "gov_robot_admin_default"
+				has_government = "gov_robot_admin_isolationist"
+				has_government = "gov_robot_admin_auth"
+				has_government = "gov_robot_admin_ega"
+				has_government = "gov_robot_admin_burdens"
+			}
+			has_authority = "auth_oligarchic"
+		}
+	}
+	format = "format.robotadmin.generic.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_suffix> of [This.GetSpeciesName] <oligarchic_gen>"
+	# Network of Human League
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				has_government = "gov_robot_admin_default"
+				has_government = "gov_robot_admin_isolationist"
+				has_government = "gov_robot_admin_auth"
+				has_government = "gov_robot_admin_ega"
+				has_government = "gov_robot_admin_burdens"
+			}
+		}
+	}
+	format = "format.robotadmin.generic.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Network of Human State
+}
+
+# Diplomatic
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_xenophile"
+		}
+	}
+	format = "format.robotadmin.diplo.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_diplo_prefix> <robot_admin_empire_names_suffix>"
+	# Human Safeguard Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_xenophile"
+		}
+	}
+	format = "format.robotadmin.diplo.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_diplo_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <democratic_gen>"
+	# Safeguard Network of Human Republic
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_xenophile"
+			has_authority = "auth_oligarchic"
+		}
+	}
+	format = "format.robotadmin.diplo.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_diplo_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <oligarchic_gen>"
+	# Safeguard Network of Human League
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_xenophile"
+		}
+	}
+	format = "format.robotadmin.diplo.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_diplo_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Safeguard Network of Human State
+}
+
+
+# Combat
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_mil"
+		}
+	}
+	format = "format.robotadmin.mil.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_combat_prefix> <robot_admin_empire_names_suffix>"
+	# Human Victory Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_mil"
+		}
+	}
+	format = "format.robotadmin.mil.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_combat_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <democratic_gen>"
+	# Victory Network of Human Republic
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_mil"
+		}
+	}
+	format = "format.robotadmin.mil.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_combat_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <oligarchic_gen>"
+	# Victory Network of Human League
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_mil"
+		}
+	}
+	format = "format.robotadmin.mil.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_combat_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Victory Network of Human State
+}
+
+
+# Holy
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				has_government = "gov_robot_admin_spi"
+				has_government = "gov_robot_admin_worship"
+			}
+		}
+	}
+	format = "format.robotadmin.spi.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_holy_prefix> <robot_admin_empire_names_suffix>"
+	# Human Holy Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				has_government = "gov_robot_admin_spi"
+				has_government = "gov_robot_admin_worship"
+			    has_government = "gov_robot_admin_everlasting_hymn"
+			}
+		}
+	}
+	format = "format.robotadmin.spi.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_holy_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <democratic_gen>"
+	# Holy Network of Human Republic
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				has_government = "gov_robot_admin_spi"
+				has_government = "gov_robot_admin_worship"
+			    has_government = "gov_robot_admin_everlasting_hymn"
+			}
+		}
+	}
+	format = "format.robotadmin.spi.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_holy_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <oligarchic_gen>"
+	# Holy Network of Human League
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			OR = {
+				has_government = "gov_robot_admin_spi"
+				has_government = "gov_robot_admin_worship"
+			    has_government = "gov_robot_admin_everlasting_hymn"
+			}
+		}
+	}
+	format = "format.robotadmin.spi.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_holy_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Holy Network of Human State
+}
+
+
+# Integrators
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_integrator"
+		}
+	}
+	format = "format.robotadmin.integrator.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_integrator_prefix> <robot_admin_empire_names_suffix>"
+	# Human Compiler Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_integrator"
+		}
+	}
+	format = "format.robotadmin.integrator.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_integrator_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <democratic_gen>"
+	# Compiler Network of Human Republic
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_integrator"
+		}
+	}
+	format = "format.robotadmin.integrator.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_integrator_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <oligarchic_gen>"
+	# Compiler Network of Human League
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_integrator"
+		}
+	}
+	format = "format.robotadmin.integrator.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_integrator_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Compiler Network of Human State
+}
+
+
+# Technocrats
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_techno"
+		}
+	}
+	format = "format.robotadmin.tech.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_techno_prefix> <robot_admin_empire_names_suffix>"
+	# Human Research Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_techno"
+		}
+	}
+	format = "format.robotadmin.tech.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_techno_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <democratic_gen>"
+	# Research Network of Human Republic
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_techno"
+		}
+	}
+	format = "format.robotadmin.tech.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_techno_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <oligarchic_gen>"
+	# Research Network of Human League
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_techno"
+		}
+	}
+	format = "format.robotadmin.tech.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_techno_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Research Network of Human State
+}
+
+
+# Corrupt
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_bandit"
+		}
+	}
+	format = "format.robotadmin.broken.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_broken_prefix> <robot_admin_empire_names_suffix>"
+	# Human Broken Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_bandit"
+		}
+	}
+	format = "format.robotadmin.broken.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_broken_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <democratic_gen>"
+	# Broken Network of Human Republic
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_bandit"
+		}
+	}
+	format = "format.robotadmin.broken.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_broken_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <oligarchic_gen>"
+	# Broken Network of Human League
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_bandit"
+		}
+	}
+	format = "format.robotadmin.broken.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_broken_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Broken Network of Human State
+}
+
+
+# Purifiers
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_purifier"
+		}
+	}
+	format = "format.robotadmin.purifier.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_purger_prefix> <robot_admin_empire_names_suffix>"
+	# Human Purity Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_purifier"
+		}
+	}
+	format = "format.robotadmin.purifier.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_purger_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <democratic_gen>"
+	# Purity Network of Human Republic
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_purifier"
+		}
+	}
+	format = "format.robotadmin.purifier.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_purger_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <oligarchic_gen>"
+	# Purity Network of Human League
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_purifier"
+		}
+	}
+	format = "format.robotadmin.purifier.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_purger_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Purity Network of Human State
+}
+
+
+# Personality (normal)
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_personality"
+		}
+	}
+	format = "format.robotadmin.personality.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_persona_prefix> <robot_admin_empire_names_suffix>"
+	# Human Eternal Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_personality"
+		}
+	}
+	format = "format.robotadmin.personality.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_persona_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Eternal Network of Human State
+}
+
+
+# Personality (divine)
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_personality_spi"
+		}
+	}
+	format = "format.robotadmin.holypersonality.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <robot_admin_empire_names_holy_prefix> <robot_admin_empire_names_persona_prefix> <robot_admin_empire_names_suffix>"
+	# Human Divine Eternal Network
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = "gov_robot_admin_personality_spi"
+		}
+	}
+	format = "format.robotadmin.holypersonality.2"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "<robot_admin_empire_names_holy_prefix> <robot_admin_empire_names_persona_prefix> <robot_admin_empire_names_suffix> of [This.GetSpeciesName] <dictatorial_gen>"
+	# Divine Eternal Network of Human State
+}

@@ -1,0 +1,27 @@
+on_leader_spawned = {
+	events = {
+		robotadmin.2 #leaders are replaced with robots. This event itself checks for suitable species first and if not found, creates basic administrative AI species first.
+	}
+}
+
+on_game_start_country = {
+	events = {
+		robotadmin.1 #Enables leader replacement functionality and calls it; creates  admin pop
+		robotadmin.5 #Adds starting tech to special civics
+		robotadmin.9 #Adds first upgrade project and event chain
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		robotadmin.4 #Unity
+		robotadmin.6 #Assimilation
+		robotadmin.20 #Bugfix for looping leader
+	}
+}
+
+on_leader_level_up = {
+	events = {
+		robotadmin.10 #Leader trait gains (country event)
+	}
+}

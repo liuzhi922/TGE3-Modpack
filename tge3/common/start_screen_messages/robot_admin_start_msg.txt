@@ -1,0 +1,9 @@
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_ROBOT_ADMIN_DEFAULT"
+
+	trigger = {
+		#has_government = gov_robot_admin_default # TODO : Make more detailed message
+		has_authority = auth_robot_admin
+	}
+}

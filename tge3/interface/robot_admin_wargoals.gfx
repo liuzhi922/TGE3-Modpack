@@ -1,0 +1,39 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_wg_end_threat_admin_terror"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_wg_admin_terror"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}	
+    
+	spriteType = {
+		name = "GFX_wg_admin_terror_vs_fe"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}	
+
+	spriteType = {
+		name = "GFX_wg_end_threat_admin_biocratic_liberation"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_wg_admin_biocratic_liberation"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}	
+    
+	spriteType = {
+		name = "GFX_wg_admin_biocratic_liberation_vs_fe"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}	
+    
+}

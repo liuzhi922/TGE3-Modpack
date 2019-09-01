@@ -1,0 +1,447 @@
+# RULER TRAITS
+
+leader_trait_robot_admin_ruler_military_pioneer = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_military_pioneer.dds"
+	modifier = {
+		country_ship_upgrade_cost_mult = -0.1
+		starbase_shipyard_build_cost_mult = -0.1
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+leader_trait_robot_admin_ruler_world_shaper = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_world_shaper.dds"
+	modifier = {
+		terraform_speed_mult = 0.25
+		deposit_blockers_cost_mult = -0.15
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+leader_trait_robot_admin_ruler_industrialist = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_industrialist.dds"
+	modifier = {
+		country_minerals_produces_mult = 0.1
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+leader_trait_robot_admin_ruler_fertility_preacher = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_fertility_preacher.dds"
+	modifier = {
+		planet_jobs_food_produces_mult = 0.1
+		pop_growth_speed = 0.05
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+leader_trait_robot_admin_ruler_investor = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_investor.dds"
+	modifier = {
+		trade_value_mult = 0.10
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+leader_trait_robot_admin_ruler_charismatic = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_charismatic.dds"
+	modifier = {
+		edicts_cost_mult = -0.10
+		edict_length_mult = 0.20
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+leader_trait_robot_admin_ruler_champion_of_the_people = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_champion_of_the_people.dds"
+	modifier = {
+		pop_happiness = 0.05
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+leader_trait_robot_admin_ruler_reformer = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_reformer.dds"
+	modifier = {
+		country_unity_produces_mult = 0.10
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+# GOVERNOR TRAITS
+
+leader_trait_robot_admin_governor_army_veteran = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_army_veteran.dds"
+	modifier = {
+		planet_army_build_speed_mult = 0.2
+		armies_cost_mult = -0.2
+		army_defense_damage_mult = 0.2
+	}
+	leader_potential_add = {
+		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+	}
+	leader_trait = all
+	leader_class = { governor }
+}
+
+leader_trait_robot_admin_governor_retired_fleet_officer = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_retired_fleet_officer.dds"
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.20
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	leader_trait = all
+	leader_class = { governor }
+}
+
+leader_trait_robot_admin_governor_architectural_interest = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_architectural_interest.dds"
+	modifier = {
+		planet_buildings_cost_mult = -0.10
+		planet_districts_cost_mult = -0.10
+		planet_building_build_speed_mult = 0.10
+	}
+	leader_trait = all
+	leader_class = { governor }
+}
+
+leader_trait_robot_admin_governor_agrarian_upbringing = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_agrarian_upbringing.dds"
+	modifier = {
+		planet_jobs_food_produces_mult = 0.10
+	}
+	leader_trait = all
+	leader_class = { governor }
+}
+
+leader_trait_robot_admin_governor_intellectual = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.20
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+	leader_trait = all
+	initial = no
+	randomized = no
+	leader_class = { governor }
+}
+
+leader_trait_robot_admin_governor_engineer = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_hammer.dds"
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_minerals_produces_mult = 0.05
+	}
+	leader_trait = all
+	initial = no
+	randomized = no
+	leader_class = { governor }
+}
+
+leader_trait_robot_admin_governor_sociologist = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_champion_of_the_people.dds"
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.15
+        pop_happiness = 0.05
+	}
+	leader_trait = all
+	initial = no
+	randomized = no
+	leader_class = { governor }
+}
+
+# SCIENTISTS
+
+leader_trait_robot_admin_scientist_physicist = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_computing.dds"
+	modifier = {
+		category_computing_research_speed_mult = 0.15
+		category_field_manipulation_research_speed_mult = 0.15
+		category_particles_research_speed_mult = 0.15
+	}
+	leader_trait = all
+	leader_class = { scientist }
+}
+
+leader_trait_robot_admin_scientist_sociologist = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_statecraft.dds"
+	modifier = {
+		category_biology_research_speed_mult = 0.15
+		category_military_theory_research_speed_mult = 0.15
+		category_new_worlds_research_speed_mult = 0.15
+		category_statecraft_research_speed_mult = 0.15
+		category_psionics_research_speed_mult = 0.15
+	}
+	leader_trait = all
+	leader_class = { scientist }
+}
+
+leader_trait_robot_admin_scientist_engineer = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_industry.dds"
+	modifier = {
+		category_industry_research_speed_mult = 0.15
+		category_materials_research_speed_mult = 0.15
+		category_propulsion_research_speed_mult = 0.15
+		category_voidcraft_research_speed_mult = 0.15
+	}
+	leader_trait = all
+	leader_class = { scientist }
+}
+
+# ADMIRALS
+
+
+leader_trait_robot_admin_admiral_trickster = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_trickster.dds"
+	modifier = {
+		ship_emergency_ftl_mult = -0.15
+		ship_disengage_chance_mult = 0.25
+	}
+	leader_trait = all
+	leader_class = { admiral }
+}
+
+leader_trait_robot_admin_admiral_logistician = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_fleet_logistician.dds"
+	modifier = {
+		ships_upkeep_mult = -0.1
+	}
+	leader_trait = all
+	leader_class = { admiral }
+}
+
+leader_trait_robot_admin_admiral_engineer = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_engineer.dds"
+	modifier = {
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 0.5
+	}
+	leader_trait = all
+	leader_class = { admiral }
+}
+
+leader_trait_robot_admin_admiral_aggressive = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_aggressive.dds"
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_speed_mult = 0.1
+	}
+	leader_trait = all
+	leader_class = { admiral }
+}
+
+leader_trait_robot_admin_admiral_cautious = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_cautious.dds"
+	modifier = {
+		ship_weapon_range_mult = 0.20
+	}
+	leader_trait = all
+	leader_class = { admiral }
+}
+
+leader_trait_robot_admin_admiral_scout = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_scout.dds"
+	modifier = {
+		ship_sensor_range_add = 1
+		ship_hyperlane_range_add = 2
+		ship_speed_mult = 0.1
+	}
+	leader_trait = all
+	leader_class = { admiral }
+}
+
+# GENERAL
+
+leader_trait_robot_admin_general_restrained = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_restrained.dds"
+	modifier = {
+		army_disengage_chance_mult = 0.20
+		army_collateral_damage_mult = -0.33
+	}
+	leader_trait = all
+	leader_class = { general }
+}
+
+leader_trait_robot_admin_general_charismatic = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_charismatic.dds"
+	modifier = {
+		army_morale = 0.25
+	}
+	leader_trait = all
+	leader_class = { general }
+}
+
+leader_trait_robot_admin_general_butcher = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_butcher.dds"
+	modifier = {
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.3
+	}
+	leader_trait = all
+	leader_class = { general }
+}
+
+leader_trait_robot_admin_general_logistician = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_army_logistician.dds"
+	modifier = {
+		armies_upkeep_mult = -0.2
+	}
+	leader_trait = all
+	leader_class = { general }
+}
+
+# FINAL
+
+leader_trait_robot_admin_ruler_final_bio = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_eye_for_talent.dds"
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 3
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+leader_trait_robot_admin_ruler_final_robo = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_engineer.dds"
+	modifier = {
+		ROBOT_species_trait_points_add = 3
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}
+
+leader_trait_robot_admin_ruler_final_civic = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_engineer.dds"
+	modifier = {
+		ROBOT_species_trait_points_add = 3
+	}
+	leader_trait = all
+	leader_class = { ruler }
+}

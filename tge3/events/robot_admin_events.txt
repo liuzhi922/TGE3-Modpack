@@ -1,0 +1,2470 @@
+# Robot administration checks if there's a robot administration species created yet, and if not, creates the basic species. Then it replaces all leaders with robot administration leaders.
+
+# TODO: Remove/replace robotic traits, maybe make own traits?
+
+namespace = robotadmin
+
+#Fired after initialization or to update species
+country_event = {
+	id = robotadmin.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_global_flag = robot_admin_init_ready
+		if = {
+			limit = {
+				owner = {
+					has_authority = auth_robot_admin
+					is_country_type = default
+					NOT = {
+						any_owned_pop = {
+							has_trait = trait_mechanical
+						}
+					}
+				}
+			}
+			create_built_robot_species = yes
+
+			set_variable = {
+				which = robot_admin_pops_required
+				value = 2
+			}
+
+			if = {
+				limit = {
+	            	owner = { has_valid_civic = civic_robot_admin_terraengineer }
+				}
+				change_variable = {
+					which = robot_admin_pops_required
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+	            	owner = { has_valid_civic = civic_robot_admin_terror }
+				}
+				change_variable = {
+					which = robot_admin_pops_required
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+	            	owner = { has_valid_civic = civic_robot_admin_omnipurpose_servitors }
+				}
+				change_variable = {
+					which = robot_admin_pops_required
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+	            	owner = { has_valid_civic = civic_robot_admin_overpopulation_solver }
+				}
+				change_variable = {
+					which = robot_admin_pops_required
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+	            	owner = { has_valid_civic = civic_robot_admin_research_oversight }
+				}
+				change_variable = {
+					which = robot_admin_pops_required
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+	            	owner = { has_valid_civic = civic_robot_admin_industry_oversight }
+				}
+				change_variable = {
+					which = robot_admin_pops_required
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+	            	owner = { has_valid_civic = civic_robot_admin_entertainment_system }
+				}
+				change_variable = {
+					which = robot_admin_pops_required
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+	            	owner = { has_valid_civic = civic_robot_admin_upscaled_farming }
+				}
+				change_variable = {
+					which = robot_admin_pops_required
+					value = 1
+				}
+			}
+
+			while = {
+				count = robot_admin_pops_required
+				random_owned_planet = {
+					limit = {
+						is_capital = yes
+						has_orbital_bombardment = no
+					}
+					random_pop = {
+						#limit = { is_pop_category = pop_category_rulers }
+						kill_pop = yes
+					}
+					create_pop = {
+						species = last_created_species
+					}
+				}
+			}
+			#every_owned_pop = {
+			#	limit = {
+			#		has_trait = trait_mechanical
+			#	}
+			#	apply_robotic_pop_growth_behavior = yes
+			#}
+		}
+	}
+
+	after = {
+		country_event = {
+			id = robotadmin.3
+		}
+	}
+}
+
+country_event = {
+	id = robotadmin.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			has_authority = auth_robot_admin
+			has_global_flag = robot_admin_init_ready
+			is_country_type = default
+			NOT = { has_global_flag = robot_admin_handling_leaders }
+		}
+	}
+
+	#immediate = {
+		#if = {
+			#limit = {
+				#NOT = {
+					#any_controlled_planet = {
+					#	any_owned_pop = {
+					#		pop_has_trait = trait_mechanical
+					#	}
+					#}
+				#}
+			#}
+			#create_species = {
+			#	name = robot_admin_name_type
+			#	class = ROBOT
+			#	portrait = random
+			#	traits = {
+			#		trait = trait_mechanical
+			#		trait = trait_mechanical
+			#	}
+			#	immortal = yes
+			#}
+			#last_created_species = {
+			#	apply_robotic_pop_growth_behavior = yes
+			#}
+			# vanity owo
+			#if = {
+			#	limit = {
+			#		AND = {
+			#			has_global_flag = extended_synths_on
+			#			owner_species = {
+			#				species_portrait = mam14
+			#			}
+			#		}
+			#	}
+			#	last_created_species = {
+			#		change_species_characteristics = {
+			#			portrait = mammaliansynth
+			#		}
+			#	}
+			#}
+			#home_planet = {
+			#	create_pop = {
+			#		species = last_created_species
+			#	}
+			#}
+		#}
+	#}
+
+	#after = {
+	immediate = {
+        owner = {
+		    country_event = {
+			    id = robotadmin.1
+		    }
+        }
+	}
+}
+
+# Generates a new leader species once machine administration is set up and doesn't have a machine species yet
+country_event = {
+	id = robotadmin.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			has_authority = auth_robot_admin
+			has_global_flag = robot_admin_init_ready
+			is_country_type = default
+			NOT = { has_global_flag = robot_admin_handling_leaders }
+		}
+	}
+
+	immediate = {
+		set_global_flag = robot_admin_handling_leaders
+
+		if = {
+			limit = {
+				NOT = {
+					any_owned_pop = {
+						pop_has_trait = trait_mechanical
+					}
+				}
+			}
+			country_event = {
+				id = robotadmin.1
+			}
+		}
+
+		else =
+		{
+			random_owned_pop = {
+				limit = {
+					pop_has_trait = trait_mechanical
+				}
+				save_event_target_as = robot_admin_species
+			}
+
+			# Note: Can't wipe pool leaders clean without listing every possible trait in the game. No point in bothering with them since the next stage replaces them anyway
+			every_pool_leader = {
+				limit = {
+					NOR = { # Excluding both robotic administrators and "special" leaders from the list
+						has_trait = leader_trait_robot_admin
+						has_trait = leader_trait_curator
+						has_trait = leader_trait_admiral_hells_heart
+						has_trait = leader_trait_foredoomed_to_a_rendezvous
+						has_trait = leader_trait_dragonslayer
+						has_trait = leader_trait_mercenary_warrior
+						has_trait = leader_trait_governor_gray
+					}
+					OR = {
+						leader_class = governor
+						leader_class = ruler
+						AND = {
+							leader_class = scientist
+							owner = { has_policy_flag = robot_admin_integration_level_scientists }
+						}
+						AND = {
+							leader_class = general
+							owner = { has_policy_flag = robot_admin_integration_level_military }
+						}
+						AND = {
+							leader_class = admiral
+							owner = { has_policy_flag = robot_admin_integration_level_military }
+						}
+					}
+				}
+				change_species = event_target:robot_admin_species
+			}
+
+			# Removing robots
+			every_owned_leader = {
+				limit = {
+					has_trait = leader_trait_robot_admin
+					NOR = {
+						leader_class = governor
+						leader_class = ruler
+						AND = {
+							leader_class = scientist
+							owner = { has_policy_flag = robot_admin_integration_level_scientists }
+						}
+						AND = {
+							leader_class = general
+							owner = { has_policy_flag = robot_admin_integration_level_military }
+						}
+						AND = {
+							leader_class = admiral
+							owner = { has_policy_flag = robot_admin_integration_level_military }
+						}
+					}
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+
+			# Removing robots in pool
+			every_pool_leader = {
+				limit = {
+					has_trait = leader_trait_robot_admin
+					NOR = {
+						leader_class = governor
+						leader_class = ruler
+						AND = {
+							leader_class = scientist
+							owner = { has_policy_flag = robot_admin_integration_level_scientists }
+						}
+						AND = {
+							leader_class = general
+							owner = { has_policy_flag = robot_admin_integration_level_military }
+						}
+						AND = {
+							leader_class = admiral
+							owner = { has_policy_flag = robot_admin_integration_level_military }
+						}
+					}
+				}
+				kill_leader = {
+					show_notification = no
+				}
+			}
+
+			# Replacing normals with robots
+			every_owned_leader = {
+				limit = {
+					NOR = { # Excluding both robotic administrators and "special" leaders from the list
+						has_trait = leader_trait_robot_admin
+						has_trait = leader_trait_curator
+						has_trait = leader_trait_admiral_hells_heart
+						has_trait = leader_trait_foredoomed_to_a_rendezvous
+						has_trait = leader_trait_dragonslayer
+						has_trait = leader_trait_mercenary_warrior
+						has_trait = leader_trait_governor_gray
+					}
+					OR = {
+						leader_class = governor
+						leader_class = ruler
+						AND = {
+							leader_class = scientist
+							owner = { has_policy_flag = robot_admin_integration_level_scientists }
+						}
+						AND = {
+							leader_class = general
+							owner = { has_policy_flag = robot_admin_integration_level_military }
+						}
+						AND = {
+							leader_class = admiral
+							owner = { has_policy_flag = robot_admin_integration_level_military }
+						}
+					}
+				}
+
+				save_event_target_as = last_modified_leader
+
+				if = {
+					limit = {
+						event_target:last_modified_leader = {
+							leader_class = scientist
+						}
+					}
+
+					owner = {
+						create_leader = {
+							species = event_target:robot_admin_species
+							name = "NAME_robot_admin_avatar_leader_name"
+							class = scientist
+							traits = {
+								trait = leader_trait_robot_admin_placeholder_1  #Prevents random trait assignment
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						event_target:last_modified_leader = {
+							leader_class = admiral
+						}
+					}
+
+					owner = {
+						create_leader = {
+							species = event_target:robot_admin_species
+							name = "NAME_robot_admin_avatar_leader_name"
+							class = admiral
+							traits = {
+								trait = leader_trait_robot_admin_placeholder_1  #Prevents random trait assignment
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						event_target:last_modified_leader = {
+							leader_class = general
+						}
+					}
+
+					owner = {
+						create_leader = {
+							species = event_target:robot_admin_species
+							name = "NAME_robot_admin_avatar_leader_name"
+							class = general
+							traits = {
+								trait = leader_trait_robot_admin_placeholder_1  #Prevents random trait assignment
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						event_target:last_modified_leader = {
+							leader_class = governor
+						}
+					}
+
+					owner = {
+						create_leader = {
+							species = event_target:robot_admin_species
+							name = "NAME_robot_admin_avatar_leader_name"
+							class = governor
+							traits = {
+								trait = leader_trait_robot_admin_placeholder_1  #Prevents random trait assignment
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						event_target:last_modified_leader = {
+							leader_class = ruler
+						}
+					}
+
+					if = {
+						limit = {
+							from = { has_valid_civic = civic_robot_admin_personality }
+						}
+						owner = {
+							create_leader = {
+								species = event_target:robot_admin_species
+								name = random
+								class = ruler
+								traits = {
+									trait = leader_trait_robot_admin_placeholder_1 #Prevents random trait assignment
+									trait = leader_trait_robot_admin_placeholder_2 #Prevents random trait assignment
+									trait = leader_trait_robot_admin_placeholder_3 #Prevents random trait assignment
+								}
+							}
+							last_created_leader = {
+								set_leader_flag = robot_admin_mainframe
+							}
+							assign_leader = last_created_leader
+						}
+					}
+					else = {
+						owner = {
+							create_leader = {
+								species = event_target:robot_admin_species
+								name = "NAME_robot_admin_mainframe_leader_name"
+								class = ruler
+								traits = {
+									trait = leader_trait_robot_admin_placeholder_1 #Prevents random trait assignment
+									trait = leader_trait_robot_admin_placeholder_2 #Prevents random trait assignment
+									trait = leader_trait_robot_admin_placeholder_3 #Prevents random trait assignment
+								}
+							}
+							last_created_leader = {
+								set_leader_flag = robot_admin_mainframe
+							}
+							assign_leader = last_created_leader
+						}
+					}
+				}
+
+				last_created_leader = {
+					add_ruler_trait = leader_trait_robot_admin_placeholder_1
+					add_ruler_trait = leader_trait_robot_admin_placeholder_2
+					add_ruler_trait = leader_trait_robot_admin_placeholder_3
+					add_trait = leader_trait_robot_admin
+					change_species = event_target:robot_admin_species
+				}
+
+				if = {
+					limit = {
+						NOT = { leader_class = ruler }
+					}
+					kill_leader = {
+						show_notification = no
+					}
+				}
+			}
+
+			# Fix for rulers looping and never attaching
+			every_owned_leader = {
+				limit = {
+					has_trait = leader_trait_robot_admin
+					leader_class = ruler
+					has_leader_flag = robot_admin_mainframe
+				}
+				save_event_target_as = mainframe_leader
+			}
+			assign_leader = event_target:mainframe_leader
+
+			country_event = {
+				id = robotadmin.8 # Updating robot directives
+			}
+		}
+
+		remove_global_flag = robot_admin_handling_leaders
+	}
+}
+
+# Machine worship monthly unity gaining event
+event = {
+	id = robotadmin.4
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_country
+		{
+			limit = {
+				has_valid_civic = civic_robot_worship
+			}
+
+			every_owned_pop = {
+				limit = {
+					is_robot_pop = yes
+				}
+				owner = {
+					add_resource = {
+						unity = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+# Robot admin starting tech
+event = {
+	id = robotadmin.5
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_country
+		{
+			limit = {
+				has_authority = auth_robot_admin
+			}
+
+			add_modifier = {
+				modifier = robot_admin_early_game_mod
+				days = 1800
+			}
+
+			give_technology = { message = no tech = tech_administrative_ai }
+			give_technology = { message = no tech = tech_robotic_workers }
+		}
+	}
+}
+
+event = {
+	id = robotadmin.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			country_event = { id = robotadmin.9 }
+			every_owned_planet = {
+				planet_event = { id = robotadmin.7 }
+			}
+		}
+	}
+}
+
+# Assimilate Pops
+planet_event = {
+	id = robotadmin.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_pop = {
+			has_modifier = robot_admin_integration_mod
+		}
+		root.owner = {
+			has_valid_civic = civic_robot_admin_integrators
+		}
+	}
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				has_modifier = robot_admin_integration_mod
+			}
+
+			modify_species = {
+				species = this
+				add_trait = trait_robot_admin_integrated
+				add_traits_at_start_of_list = yes
+				change_scoped_species = yes # change only this pop's species
+			}
+			remove_culture_shock = yes
+			remove_modifier = robot_admin_integration_mod
+			remove_hive_minded = yes # scripted effect
+			remove_self_modified = yes # scripted effect
+
+			set_citizenship_type = {
+				type = citizenship_full
+				country = root.owner
+			}
+		}
+		remove_planet_flag = mass_integration_active
+	}
+}
+
+# Robot trait assignment/removal event (comes with policy changes and leader recruits)
+country_event = {
+	id = robotadmin.8
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_authority = auth_robot_admin
+		is_country_type = default
+	}
+
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				has_trait = leader_trait_robot_admin
+			}
+
+			# Note: I had to choose between verbose moderately ugly code and succinct but very heretical compact code
+			#																												....i chose herecy
+
+			#
+			# Removing and replacing related traits
+			#
+			# = Placeholders
+			remove_trait = leader_trait_robot_admin_placeholder_1
+			remove_trait = leader_trait_robot_admin_placeholder_2
+			remove_trait = leader_trait_robot_admin_placeholder_3
+
+			# = Ruler traits
+			if = {
+				limit = {
+					this = {
+						leader_class = ruler
+					}
+				}
+
+				# Removing normal traits that may have been accidentally added or added in the first time
+				#
+				#
+				remove_trait = leader_trait_robot_admin_placeholder_1
+				remove_trait = leader_trait_robot_admin_placeholder_2
+				remove_trait = leader_trait_robot_admin_placeholder_3
+				remove_ruler_trait = trait_ruler_corvette_focus
+				remove_ruler_trait = trait_ruler_destroyer_focus
+				remove_ruler_trait = trait_ruler_cruiser_focus
+				remove_ruler_trait = trait_ruler_battleship_focus
+				remove_ruler_trait = trait_ruler_architectural_sense
+				remove_ruler_trait = trait_ruler_champion_of_the_people
+				remove_ruler_trait = trait_ruler_charismatic
+				remove_ruler_trait = trait_ruler_deep_connections
+				remove_ruler_trait = trait_ruler_eye_for_talent
+				remove_ruler_trait = trait_ruler_expansionist
+				remove_ruler_trait = trait_ruler_explorer
+				remove_ruler_trait = trait_ruler_fertility_preacher
+				remove_ruler_trait = trait_ruler_fortifier
+				remove_ruler_trait = trait_ruler_from_the_ranks
+				remove_ruler_trait = trait_ruler_frontier_spirit
+				remove_ruler_trait = trait_ruler_home_in_the_sky
+				remove_ruler_trait = trait_ruler_industrialist
+				remove_ruler_trait = trait_ruler_investor
+				remove_ruler_trait = trait_ruler_logistic_understanding
+				remove_ruler_trait = trait_ruler_military_pioneer
+				remove_ruler_trait = trait_ruler_recruiter
+				remove_ruler_trait = trait_ruler_space_miner
+				remove_ruler_trait = trait_ruler_warlike
+				remove_ruler_trait = trait_ruler_world_shaper
+				remove_ruler_trait = leader_trait_fleet_organizer
+				remove_ruler_trait = leader_trait_nervous
+				remove_ruler_trait = leader_trait_reformer
+				remove_ruler_trait = leader_trait_ruler_erudite
+				remove_ruler_trait = leader_trait_ruler_brainslug
+
+				remove_ruler_trait = leader_trait_arrested_development
+				remove_trait = leader_trait_arrested_development
+
+				# = Removing ruler traits handled by the system
+				remove_ruler_trait = leader_trait_robot_admin_placeholder_1
+
+				# = Adding Chosen Traits
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_ruler_military_pioneer } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_military_pioneer
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_ruler_world_shaper } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_world_shaper
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_ruler_industrialist } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_industrialist
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_ruler_fertility_preacher } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_fertility_preacher
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_ruler_investor } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_investor
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_ruler_charismatic } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_charismatic
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_ruler_champion_of_the_people} }
+					add_ruler_trait = leader_trait_robot_admin_ruler_champion_of_the_people
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_ruler_reformer } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_reformer
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_final_civic } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_final_civic
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_final_robo } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_final_robo
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_final_bio } }
+					add_ruler_trait = leader_trait_robot_admin_ruler_final_bio
+				}
+
+
+			}
+			# = Governor traits
+			else_if = {
+				limit = {
+					this = {
+						leader_class = governor
+					}
+				}
+
+				# Removing normal traits that may have been accidentally added or added in the first time
+				#
+				#
+				remove_trait = leader_trait_ruler_erudite
+				remove_trait = leader_trait_ruler_brainslug
+
+				# = Removing traits handled by system
+				remove_trait = leader_trait_robot_admin_placeholder_1
+				remove_trait = leader_trait_robot_admin_lvl_governor_1
+				remove_trait = leader_trait_robot_admin_lvl_governor_2
+				remove_trait = leader_trait_robot_admin_lvl_governor_3
+				remove_trait = leader_trait_robot_admin_lvl_governor_4
+				remove_trait = leader_trait_robot_admin_lvl_governor_5
+				remove_trait = leader_trait_robot_admin_lvl_governor_6
+				remove_trait = leader_trait_robot_admin_lvl_governor_7
+				remove_trait = leader_trait_robot_admin_lvl_governor_8
+				remove_trait = leader_trait_robot_admin_lvl_governor_9
+				remove_trait = leader_trait_robot_admin_lvl_governor_10
+
+				# = Adding Levelled Traits
+				if = {limit = { from = { leader = { has_skill = 1 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 1
+				}
+				else_if = {limit = { from = { leader = { has_skill = 2 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 2
+				}
+				else_if = {limit = { from = { leader = { has_skill = 3 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 3
+				}
+				else_if = {limit = { from = { leader = { has_skill = 4 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 4
+				}
+				else_if = {limit = { from = { leader = { has_skill = 5 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 5
+				}
+				else_if = {limit = { from = { leader = { has_skill = 6 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 6
+				}
+				else_if = {limit = { from = { leader = { has_skill = 7 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 7
+				}
+				else_if = {limit = { from = { leader = { has_skill = 8 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 8
+				}
+				else_if = {limit = { from = { leader = { has_skill = 9 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 9
+				}
+				else_if = {limit = { from = { leader = { has_skill > 9 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 10
+				}
+
+				# = Adding Chosen Traits
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_governor_army_veteran } }
+					add_trait = leader_trait_robot_admin_governor_army_veteran
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_governor_retired_fleet_officer } }
+					add_trait = leader_trait_robot_admin_governor_retired_fleet_officer
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_governor_architectural_interest } }
+					add_trait = leader_trait_robot_admin_governor_architectural_interest
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_governor_agrarian_upbringing } }
+					add_trait = leader_trait_robot_admin_governor_agrarian_upbringing
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_governor_intellectual } }
+					add_trait = leader_trait_robot_admin_governor_intellectual
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_governor_engineer } }
+					add_trait = leader_trait_robot_admin_governor_engineer
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_governor_sociologist } }
+					add_trait = leader_trait_robot_admin_governor_sociologist
+				}
+			}
+			# = Scientist traits
+			else_if = {
+				limit = {
+					this = {
+						leader_class = scientist
+					}
+				}
+
+				# Removing normal traits that may have been accidentally added or added in the first time
+				#
+				#
+				remove_trait = leader_trait_ruler_erudite
+				remove_trait = leader_trait_ruler_brainslug
+
+				# = Removing traits handled by system
+				remove_trait = leader_trait_robot_admin_placeholder_1
+				remove_trait = leader_trait_robot_admin_lvl_scientist_1
+				remove_trait = leader_trait_robot_admin_lvl_scientist_2
+				remove_trait = leader_trait_robot_admin_lvl_scientist_3
+				remove_trait = leader_trait_robot_admin_lvl_scientist_4
+				remove_trait = leader_trait_robot_admin_lvl_scientist_5
+				remove_trait = leader_trait_robot_admin_lvl_scientist_6
+				remove_trait = leader_trait_robot_admin_lvl_scientist_7
+				remove_trait = leader_trait_robot_admin_lvl_scientist_8
+				remove_trait = leader_trait_robot_admin_lvl_scientist_9
+				remove_trait = leader_trait_robot_admin_lvl_scientist_10
+
+				# = Adding Levelled Traits
+				if = {limit = { from = { leader = { has_skill = 1 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 1
+				}
+				else_if = {limit = { from = { leader = { has_skill = 2 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 2
+				}
+				else_if = {limit = { from = { leader = { has_skill = 3 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 3
+				}
+				else_if = {limit = { from = { leader = { has_skill = 4 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 4
+				}
+				else_if = {limit = { from = { leader = { has_skill = 5 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 5
+				}
+				else_if = {limit = { from = { leader = { has_skill = 6 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 6
+				}
+				else_if = {limit = { from = { leader = { has_skill = 7 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 7
+				}
+				else_if = {limit = { from = { leader = { has_skill = 8 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 8
+				}
+				else_if = {limit = { from = { leader = { has_skill = 9 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 9
+				}
+				else_if = {limit = { from = { leader = { has_skill > 9 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 10
+				}
+
+				# = Adding Chosen Traits
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_scientist_engineer } }
+					add_trait = leader_trait_robot_admin_scientist_engineer
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_scientist_physicist } }
+					add_trait = leader_trait_robot_admin_scientist_physicist
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_scientist_sociologist } }
+					add_trait = leader_trait_robot_admin_scientist_sociologist
+				}
+			}
+			# = Admiral traits
+			else_if = {
+				limit = {
+					this = {
+						leader_class = admiral
+					}
+				}
+
+				# Removing normal traits that may have been accidentally added or added in the first time
+				#
+				#
+				remove_trait = leader_trait_ruler_erudite
+				remove_trait = leader_trait_ruler_brainslug
+
+				# = Removing traits handled by system
+				remove_trait = leader_trait_robot_admin_placeholder_1
+				remove_trait = leader_trait_robot_admin_lvl_admiral_1
+				remove_trait = leader_trait_robot_admin_lvl_admiral_2
+				remove_trait = leader_trait_robot_admin_lvl_admiral_3
+				remove_trait = leader_trait_robot_admin_lvl_admiral_4
+				remove_trait = leader_trait_robot_admin_lvl_admiral_5
+				remove_trait = leader_trait_robot_admin_lvl_admiral_6
+				remove_trait = leader_trait_robot_admin_lvl_admiral_7
+				remove_trait = leader_trait_robot_admin_lvl_admiral_8
+				remove_trait = leader_trait_robot_admin_lvl_admiral_9
+				remove_trait = leader_trait_robot_admin_lvl_admiral_10
+
+				# = Adding Levelled Traits
+				if = {limit = { from = { leader = { has_skill = 1 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 1
+				}
+				else_if = {limit = { from = { leader = { has_skill = 2 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 2
+				}
+				else_if = {limit = { from = { leader = { has_skill = 3 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 3
+				}
+				else_if = {limit = { from = { leader = { has_skill = 4 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 4
+				}
+				else_if = {limit = { from = { leader = { has_skill = 5 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 5
+				}
+				else_if = {limit = { from = { leader = { has_skill = 6 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 6
+				}
+				else_if = {limit = { from = { leader = { has_skill = 7 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 7
+				}
+				else_if = {limit = { from = { leader = { has_skill = 8 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 8
+				}
+				else_if = {limit = { from = { leader = { has_skill = 9 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 9
+				}
+				else_if = {limit = { from = { leader = { has_skill > 9 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 10
+				}
+
+				# = Adding Chosen Traits
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_admiral_trickster } }
+					add_trait = leader_trait_robot_admin_admiral_trickster
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_admiral_scout } }
+					add_trait = leader_trait_robot_admin_admiral_scout
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_admiral_aggressive } }
+					add_trait = leader_trait_robot_admin_admiral_aggressive
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_admiral_cautious } }
+					add_trait = leader_trait_robot_admin_admiral_cautious
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_admiral_logistician } }
+					add_trait = leader_trait_robot_admin_admiral_logistician
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_admiral_engineer } }
+					add_trait = leader_trait_robot_admin_admiral_engineer
+				}
+
+
+			}
+			# = General traits
+			else_if = {
+				limit = {
+					this = {
+						leader_class = general
+					}
+				}
+
+				# Removing normal traits that may have been accidentally added or added in the first time
+				#
+				#
+				remove_trait = leader_trait_ruler_erudite
+				remove_trait = leader_trait_ruler_brainslug
+
+				# = Removing traits handled by system
+				remove_trait = leader_trait_robot_admin_placeholder_1
+				remove_trait = leader_trait_robot_admin_lvl_general_1
+				remove_trait = leader_trait_robot_admin_lvl_general_2
+				remove_trait = leader_trait_robot_admin_lvl_general_3
+				remove_trait = leader_trait_robot_admin_lvl_general_4
+				remove_trait = leader_trait_robot_admin_lvl_general_5
+				remove_trait = leader_trait_robot_admin_lvl_general_6
+				remove_trait = leader_trait_robot_admin_lvl_general_7
+				remove_trait = leader_trait_robot_admin_lvl_general_8
+				remove_trait = leader_trait_robot_admin_lvl_general_9
+				remove_trait = leader_trait_robot_admin_lvl_general_10
+
+				# = Adding Levelled Traits
+				if = {limit = { from = { leader = { has_skill = 1 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 1
+				}
+				else_if = {limit = { from = { leader = { has_skill = 2 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 2
+				}
+				else_if = {limit = { from = { leader = { has_skill = 3 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 3
+				}
+				else_if = {limit = { from = { leader = { has_skill = 4 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 4
+				}
+				else_if = {limit = { from = { leader = { has_skill = 5 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 5
+				}
+				else_if = {limit = { from = { leader = { has_skill = 6 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 6
+				}
+				else_if = {limit = { from = { leader = { has_skill = 7 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 7
+				}
+				else_if = {limit = { from = { leader = { has_skill = 8 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 8
+				}
+				else_if = {limit = { from = { leader = { has_skill = 9 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 9
+				}
+				else_if = {limit = { from = { leader = { has_skill > 9 } } }
+					add_trait = leader_trait_robot_admin_avatar
+					set_skill = 10
+				}
+
+				# = Adding Chosen Traits
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_general_butcher } }
+					add_trait = leader_trait_robot_admin_general_butcher
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_general_restrained } }
+					add_trait = leader_trait_robot_admin_general_restrained
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_general_charismatic } }
+					add_trait = leader_trait_robot_admin_general_charismatic
+				}
+				if = {limit = { from = { has_country_flag = robot_admin_has_upgrade_general_logistician } }
+					add_trait = leader_trait_robot_admin_general_logistician
+				}
+
+			}
+		}
+
+		#country_event = {
+		#	id = robotadmin.9
+		#}
+	}
+}
+
+# Enforcing tall archetype (Deprecated)
+#country_event = {
+#	id = robotadmin.9
+#	is_triggered_only = yes
+#	hide_window = yes
+#
+#	trigger = {
+#		has_authority = auth_robot_admin
+#	}
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				has_policy_flag = robot_admin_primary_directive_tall
+#				any_sector = { is_core_sector = no }
+#			}
+#			add_modifier = {
+#				modifier = robot_admin_tall_going_wide_mod
+#				days = -1
+#			}
+#		}
+#
+#		if = {
+#			limit = {
+#				OR = {
+#					NOT = { has_policy_flag = robot_admin_primary_directive_tall }
+#					NOT = { any_sector = { is_core_sector = no } }
+#				}
+#			}
+#			remove_modifier = robot_admin_tall_going_wide_mod
+#		}
+#	}
+#}
+
+# Grants upgrade events
+country_event = {
+	id = robotadmin.9
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_authority = auth_robot_admin
+		is_country_type = default
+		check_variable = {
+			which = robot_admin_upgrades_available
+			value = robot_admin_upgrades_performed
+		}
+	}
+
+	immediate = {
+		if = {limit = { this = { leader = { has_skill >= 1 } NOT = { has_country_flag = robot_admin_has_upgrade_project_1 } } }
+			this = {
+				capital_scope = {
+					enable_special_project = {
+						name = ROBOT_ADMIN_UPGRADE_PROJECT_1
+						location = this
+						owner = root.owner
+					}
+				}
+			}
+			begin_event_chain = {
+				event_chain = robot_admin_upgrade_chain
+				target = this
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_1
+		}
+		if = {limit = { this = { leader = { has_skill >= 2 } NOT = { has_country_flag = robot_admin_has_upgrade_project_2 } } }
+			capital_scope = {
+				enable_special_project = {
+					name = ROBOT_ADMIN_UPGRADE_PROJECT_2
+					location = this
+					owner = root.owner
+				}
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_2
+		}
+		if = {limit = { this = { leader = { has_skill >= 3 } NOT = { has_country_flag = robot_admin_has_upgrade_project_3 } } }
+			capital_scope = {
+				enable_special_project = {
+					name = ROBOT_ADMIN_UPGRADE_PROJECT_3
+					location = this
+					owner = root.owner
+				}
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_3
+		}
+		if = {limit = { this = { leader = { has_skill >= 4 } NOT = { has_country_flag = robot_admin_has_upgrade_project_4 } } }
+			capital_scope = {
+				enable_special_project = {
+					name = ROBOT_ADMIN_UPGRADE_PROJECT_4
+					location = this
+					owner = root.owner
+				}
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_4
+		}
+		if = {limit = { this = { leader = { has_skill >= 5 } NOT = { has_country_flag = robot_admin_has_upgrade_project_5 } } }
+			capital_scope = {
+				enable_special_project = {
+					name = ROBOT_ADMIN_UPGRADE_PROJECT_5
+					location = this
+					owner = root.owner
+				}
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_5
+		}
+		if = {limit = { this = { leader = { has_skill >= 6 } NOT = { has_country_flag = robot_admin_has_upgrade_project_6 } } }
+			capital_scope = {
+				enable_special_project = {
+					name = ROBOT_ADMIN_UPGRADE_PROJECT_6
+					location = this
+					owner = root.owner
+				}
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_6
+		}
+		if = {limit = { this = { leader = { has_skill >= 7 } NOT = { has_country_flag = robot_admin_has_upgrade_project_7 } } }
+			capital_scope = {
+				enable_special_project = {
+					name = ROBOT_ADMIN_UPGRADE_PROJECT_7
+					location = this
+					owner = root.owner
+				}
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_7
+		}
+		if = {limit = { this = { leader = { has_skill >= 8 } NOT = { has_country_flag = robot_admin_has_upgrade_project_8 } } }
+			capital_scope = {
+				enable_special_project = {
+					name = ROBOT_ADMIN_UPGRADE_PROJECT_8
+					location = this
+					owner = root.owner
+				}
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_8
+		}
+		if = {limit = { this = { leader = { has_skill >= 9 } NOT = { has_country_flag = robot_admin_has_upgrade_project_9 } } }
+			capital_scope = {
+				enable_special_project = {
+					name = ROBOT_ADMIN_UPGRADE_PROJECT_9
+					location = this
+					owner = root.owner
+				}
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_9
+		}
+		if = {limit = { this = { leader = { has_skill >= 10 } NOT = { has_country_flag = robot_admin_has_upgrade_project_10 } } }
+			capital_scope = {
+				enable_special_project = {
+					name = ROBOT_ADMIN_UPGRADE_PROJECT_10
+					location = this
+					owner = root.owner
+				}
+			}
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_available
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_available
+				value = 1
+			}
+			set_country_flag = robot_admin_has_upgrade_project_10
+		}
+	}
+}
+
+country_event = {
+	id = robotadmin.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_authority = auth_robot_admin
+		is_country_type = default
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				this = {
+					leader_class = ruler
+				}
+			}
+			from = { country_event = { id = robotadmin.8 } }
+		}
+		#from = { country_event = { id = robotadmin.8 } }
+	}
+}
+
+# Robot Admin Leader Upgrade Hub
+country_event = {
+	id = robotadmin.11
+	title = robotadmin.11.name
+	desc = robotadmin.11.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	# Ruler upgrade option
+	option = {
+		name = robotadmin.11.a
+		custom_tooltip = robotadmin.11.a.tooltip
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = "robot_admin_upgrade_ruler"
+					value >= 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				check_variable = {
+					which = "robot_admin_upgrade_ruler"
+					value >= 2
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = robotadmin.12 }
+		}
+	}
+
+	# Governor upgrade option
+	option = {
+		name = robotadmin.11.b
+		custom_tooltip = robotadmin.11.b.tooltip
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = "robot_admin_upgrade_governor"
+					value >= 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				check_variable = {
+					which = "robot_admin_upgrade_governor"
+					value >= 2
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = robotadmin.13 }
+		}
+	}
+
+	# Scientist upgrade option
+	option = {
+		name = robotadmin.11.c
+		custom_tooltip = robotadmin.11.c.tooltip
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = "robot_admin_upgrade_scientist"
+					value >= 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+			modifier = {
+				factor = 0
+				check_variable = {
+					which = "robot_admin_upgrade_scientist"
+					value >= 2
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = robotadmin.14 }
+		}
+	}
+
+	# Admiral upgrade option
+	option = {
+		name = robotadmin.11.d
+		custom_tooltip = robotadmin.11.d.tooltip
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = "robot_admin_upgrade_admiral"
+					value >= 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0
+				check_variable = {
+					which = "robot_admin_upgrade_admiral"
+					value >= 2
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = robotadmin.15 }
+		}
+	}
+
+	# General upgrade option
+	option = {
+		name = robotadmin.11.e
+		custom_tooltip = robotadmin.11.e.tooltip
+		trigger = {
+			NOT = {
+				check_variable = {
+					which = "robot_admin_upgrade_general"
+					value >= 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			modifier = {
+				factor = 0
+				check_variable = {
+					which = "robot_admin_upgrade_general"
+					value >= 2
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = robotadmin.16 }
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			add_event_chain_counter = {
+				event_chain = robot_admin_upgrade_chain
+				counter = upgrades_finished
+				amount = 1
+			}
+			change_variable = {
+				which = robot_admin_upgrades_performed
+				value = 1
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = "robot_admin_upgrades_performed"
+						value = 10
+					}
+				}
+				if = {limit = { this = { leader = { has_skill >= 10 } NOT = { has_country_flag = robot_admin_has_upgrade_project_11 } } }
+					capital_scope = {
+						enable_special_project = {
+							name = ROBOT_ADMIN_UPGRADE_PROJECT_11
+							location = this
+							owner = root.owner
+						}
+					}
+					set_country_flag = robot_admin_has_upgrade_project_11
+				}
+			}
+		}
+	}
+}
+
+# Robot Admin Leader Upgrade: Ruler
+country_event = {
+	id = robotadmin.12
+	title = robotadmin.12.name
+	desc = robotadmin.12.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	# Ruler upgrade option
+	option = {
+		name = robotadmin.12.a
+		custom_tooltip = robotadmin.12.a.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_ruler_military_pioneer
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_ruler_military_pioneer
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_ruler_military_pioneer
+		}
+	}
+	option = {
+		name = robotadmin.12.b
+		custom_tooltip = robotadmin.12.b.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_ruler_world_shaper
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_ruler_world_shaper
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_ruler_world_shaper
+		}
+	}
+	option = {
+		name = robotadmin.12.c
+		custom_tooltip = robotadmin.12.c.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_ruler_industrialist
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_ruler_industrialist
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_ruler_industrialist
+		}
+	}
+	option = {
+		name = robotadmin.12.d
+		custom_tooltip = robotadmin.12.d.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_ruler_fertility_preacher
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_ruler_fertility_preacher
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_ruler_fertility_preacher
+		}
+	}
+	option = {
+		name = robotadmin.12.e
+		custom_tooltip = robotadmin.12.e.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_ruler_investor
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_ruler_investor
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_ruler_investor
+		}
+	}
+	option = {
+		name = robotadmin.12.f
+		custom_tooltip = robotadmin.12.f.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_ruler_charismatic
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_ruler_charismatic
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_ruler_charismatic
+		}
+	}
+	option = {
+		name = robotadmin.12.g
+		custom_tooltip = robotadmin.12.g.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_ruler_champion_of_the_people
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_ruler_champion_of_the_people
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_ruler_champion_of_the_people
+		}
+	}
+	option = {
+		name = robotadmin.12.h
+		custom_tooltip = robotadmin.12.h.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_ruler_reformer
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_ruler_reformer
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_ruler_reformer
+		}
+	}
+	after = {
+		hidden_effect = {
+			country_event = { id = robotadmin.8 }
+			change_variable = {
+				which = "robot_admin_upgrade_ruler"
+				value = 1
+			}
+		}
+	}
+}
+
+# Robot Admin Leader Upgrade: Governor
+country_event = {
+	id = robotadmin.13
+	title = robotadmin.13.name
+	desc = robotadmin.13.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	# Ruler upgrade option
+	option = {
+		name = robotadmin.13.a
+		custom_tooltip = robotadmin.13.a.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_governor_army_veteran
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_governor_army_veteran
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_governor_army_veteran
+		}
+	}
+	option = {
+		name = robotadmin.13.b
+		custom_tooltip = robotadmin.13.b.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_governor_retired_fleet_officer
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_governor_retired_fleet_officer
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_governor_retired_fleet_officer
+		}
+	}
+	option = {
+		name = robotadmin.13.c
+		custom_tooltip = robotadmin.13.c.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_governor_architectural_interest
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_governor_architectural_interest
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_governor_architectural_interest
+		}
+	}
+	option = {
+		name = robotadmin.13.d
+		custom_tooltip = robotadmin.13.d.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_governor_agrarian_upbringing
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_governor_agrarian_upbringing
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_governor_agrarian_upbringing
+		}
+	}
+	option = {
+		name = robotadmin.13.e
+		custom_tooltip = robotadmin.13.e.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_governor_intellectual
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_governor_intellectual
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_governor_intellectual
+		}
+	}
+	option = {
+		name = robotadmin.13.f
+		custom_tooltip = robotadmin.13.f.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_governor_sociologist
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_governor_sociologist
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_governor_sociologist
+		}
+	}
+	option = {
+		name = robotadmin.13.g
+		custom_tooltip = robotadmin.13.g.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_governor_engineer
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_governor_engineer
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_governor_engineer
+		}
+	}
+	after = {
+		hidden_effect = {
+			country_event = { id = robotadmin.8 }
+			change_variable = {
+				which = "robot_admin_upgrade_governor"
+				value = 1
+			}
+		}
+	}
+}
+
+# Robot Admin Leader Upgrade: Scientist
+country_event = {
+	id = robotadmin.14
+	title = robotadmin.14.name
+	desc = robotadmin.14.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	# Scientist upgrade option
+	option = {
+		name = robotadmin.14.a
+		custom_tooltip = robotadmin.14.a.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_scientist_engineer
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_scientist_engineer
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_scientist_engineer
+		}
+	}
+	option = {
+		name = robotadmin.14.b
+		custom_tooltip = robotadmin.14.b.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_scientist_physicist
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_scientist_physicist
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_scientist_physicist
+		}
+	}
+	option = {
+		name = robotadmin.14.c
+		custom_tooltip = robotadmin.14.c.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_scientist_sociologist
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_scientist_sociologist
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_scientist_sociologist
+		}
+	}
+	after = {
+		hidden_effect = {
+			country_event = { id = robotadmin.8 }
+			change_variable = {
+				which = "robot_admin_upgrade_scientist"
+				value = 1
+			}
+		}
+	}
+}
+
+# Robot Admin Leader Upgrade: Admiral
+country_event = {
+	id = robotadmin.15
+	title = robotadmin.15.name
+	desc = robotadmin.15.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	# Admiral upgrade option
+	option = {
+		name = robotadmin.15.a
+		custom_tooltip = robotadmin.15.a.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_admiral_trickster
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_admiral_trickster
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_admiral_trickster
+		}
+	}
+	option = {
+		name = robotadmin.15.b
+		custom_tooltip = robotadmin.15.b.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_admiral_logistician
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_admiral_logistician
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_admiral_logistician
+		}
+	}
+	option = {
+		name = robotadmin.15.c
+		custom_tooltip = robotadmin.15.c.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_admiral_engineer
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_admiral_engineer
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_admiral_engineer
+		}
+	}
+	option = {
+		name = robotadmin.15.d
+		custom_tooltip = robotadmin.15.d.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_admiral_aggressive
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_admiral_aggressive
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_admiral_aggressive
+		}
+	}
+	option = {
+		name = robotadmin.15.e
+		custom_tooltip = robotadmin.15.e.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_admiral_cautious
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_admiral_cautious
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_admiral_cautious
+		}
+	}
+	option = {
+		name = robotadmin.15.f
+		custom_tooltip = robotadmin.15.f.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_admiral_scout
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_admiral_scout
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_admiral_scout
+		}
+	}
+	after = {
+		hidden_effect = {
+			country_event = { id = robotadmin.8 }
+			change_variable = {
+				which = "robot_admin_upgrade_admiral"
+				value = 1
+			}
+		}
+	}
+}
+
+# Robot Admin Leader Upgrade: General
+country_event = {
+	id = robotadmin.16
+	title = robotadmin.16.name
+	desc = robotadmin.16.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	# General upgrade option
+	option = {
+		name = robotadmin.16.a
+		custom_tooltip = robotadmin.16.a.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_general_restrained
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_general_restrained
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_general_restrained
+		}
+	}
+	option = {
+		name = robotadmin.16.b
+		custom_tooltip = robotadmin.16.b.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_general_charismatic
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_general_charismatic
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_general_charismatic
+		}
+	}
+	option = {
+		name = robotadmin.16.c
+		custom_tooltip = robotadmin.16.c.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_general_butcher
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_general_butcher
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_general_butcher
+		}
+	}
+	option = {
+		name = robotadmin.16.d
+		custom_tooltip = robotadmin.16.d.tooltip
+		trigger = {
+			NOT = {
+				has_country_flag = robot_admin_has_upgrade_general_logistician
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_flag = robot_admin_has_upgrade_general_logistician
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_general_logistician
+		}
+	}
+	after = {
+		hidden_effect = {
+			country_event = { id = robotadmin.8 }
+			change_variable = {
+				which = "robot_admin_upgrade_general"
+				value = 1
+			}
+		}
+	}
+}
+
+# Robot Admin Leader Upgrade: Final
+country_event = {
+	id = robotadmin.17
+	title = robotadmin.17.name
+	desc = robotadmin.17.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	# Final Ruler Upgrade Options
+	option = {
+		name = robotadmin.17.a
+		custom_tooltip = robotadmin.17.a.tooltip
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_final_civic
+		}
+	}
+	option = {
+		name = robotadmin.17.b
+		custom_tooltip = robotadmin.17.b.tooltip
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_final_bio
+		}
+	}
+	option = {
+		name = robotadmin.17.c
+		custom_tooltip = robotadmin.17.c.tooltip
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		hidden_effect = {
+			set_country_flag = robot_admin_has_upgrade_final_robo
+		}
+	}
+}
+
+# Workaround for looping leader bug
+event = {
+	id = robotadmin.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_global_flag = robot_admin_init_ready
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_authority = auth_robot_admin
+			}
+			country_event = { id = robotadmin.3 }
+		}
+	}
+}
+
+# Machine empire "ascension"
+country_event = {
+	id = robotadmin.696
+	title = robotadmin.696.name
+	desc = robotadmin.696.desc
+	picture = GFX_evt_ai_planet
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = robotadmin.696.a
+		custom_tooltip =  robotadmin.696.a.tooltip
+		trigger = {
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_valid_civic = civic_robot_admin_integrators
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+		hidden_effect = {
+			clear_ethos =  yes
+			shift_ethic = ethic_gestalt_consciousness
+			change_government =
+			{
+				authority = auth_machine_intelligence
+				civics = {
+					civic = random
+					civic = random
+				}
+			}
+		}
+	}
+	option = {
+		name = robotadmin.696.b
+		custom_tooltip =  robotadmin.696.b.tooltip
+		trigger = {
+			OR = {
+				has_valid_civic = civic_robot_admin_integrators
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_xenophile
+				NOT = {
+					has_valid_civic = civic_fanatic_purifiers
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			clear_ethos =  yes
+			shift_ethic = ethic_gestalt_consciousness
+			change_government =
+			{
+				authority = auth_machine_intelligence
+				civics = {
+					civic = civic_machine_assimilator
+					civic = random
+				}
+			}
+		}
+	}
+	option = {
+		name = robotadmin.696.c
+		custom_tooltip =  robotadmin.696.c.tooltip
+		trigger = {
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				NOT = {
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_xenophile
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			clear_ethos =  yes
+			shift_ethic = ethic_gestalt_consciousness
+			change_government =
+			{
+				authority = auth_machine_intelligence
+				civics = {
+					civic = civic_machine_terminator
+					civic = random
+				}
+			}
+		}
+	}
+	option = {
+		name = robotadmin.696.d
+		custom_tooltip =  robotadmin.696.d.tooltip
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_xenophile
+				NOT = {
+					has_valid_civic = civic_robot_admin_integrators
+					has_valid_civic = civic_fanatic_purifiers
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			clear_ethos =  yes
+			shift_ethic = ethic_gestalt_consciousness
+			change_government =
+			{
+				authority = auth_machine_intelligence
+				civics = {
+					civic = civic_machine_servitor
+					civic = random
+				}
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+
+			random_owned_pop = {
+				limit = {
+					pop_has_trait = trait_mechanical
+				}
+				create_species = {
+					is_mod = yes
+					name = this
+					plural = this
+					class = MACHINE
+					portrait = this
+					traits = {
+						trait = trait_mechanical
+						trait = trait_machine_unit
+					}
+					homeworld = this
+				}
+				last_created_species = {
+					save_event_target_as = robot_admin_species_new
+				}
+			}
+
+			every_owned_pop = {
+				limit = {
+					AND = {
+						pop_has_trait = trait_mechanical
+						NOT = { pop_has_trait = trait_machine_unit}
+					}
+				}
+				change_species = event_target:robot_admin_species_new
+			}
+
+			change_dominant_species = {
+				species = event_target:robot_admin_species_new
+				change_all = no
+			}
+		}
+	}
+}

@@ -1,0 +1,464 @@
+civic_robot_admin_personality = {
+	modification = yes
+	#potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_robot_admin_backdoor
+			}
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		ruler_skill_levels = 2
+		pop_category_rulers_unity_produces_add = 2
+	}
+
+	description = civic_tooltip_robot_admin_personality_effects
+}
+
+civic_robot_admin_trade_engine = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+	possible = {
+		civics = {
+			NOT = {
+				#value = civic_robot_admin_terror
+			}
+		}
+	}
+
+	random_weight = {
+		base = 15
+	}
+
+	modifier = {
+		country_admin_cap_add = 20
+		empire_size_penalty_mult = 0.5
+	}
+
+	description = civic_tooltip_robot_admin_trade_engine_effects
+}
+
+civic_robot_admin_backdoor = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_robot_admin_personality
+				value = civic_robot_admin_anti_biocratic
+			}
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		pop_factions_produces_mult = 0.25
+		country_base_influence_produces_add = -0.5
+		job_ra_exploit_elite_per_pop = 0.05
+		pop_cat_ruler_political_power = 10
+		pop_cat_specialist_happiness = -0.10
+		pop_cat_worker_happiness = -0.10
+	}
+
+	description = civic_tooltip_robot_admin_backdoor_effects
+}
+
+civic_robot_admin_terraengineer = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		terraform_speed_mult = 0.33
+		terraforming_cost_mult = -0.1
+		job_ra_terraengineer_add = 1
+		planet_administrators_energy_upkeep_mult = 0.5
+		planet_administrators_energy_upkeep_add = 1.0
+	}
+
+	description = civic_tooltip_robot_admin_terraengineer_effects
+}
+
+civic_robot_admin_entertainment_system = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		pop_happiness = -0.05
+		job_ra_entertainment_admin_add = 1
+		planet_administrators_energy_upkeep_mult = 0.5
+		planet_administrators_energy_upkeep_add = 1.0
+	}
+
+	description = civic_tooltip_robot_admin_entertainment_system_effects
+}
+
+civic_robot_admin_overpopulation_solver = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+	possible = {
+		ethics = {
+			NOT = {
+				value = ethic_fanatic_egalitarian
+			}
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		country_resettlement_cost_mult = -0.10
+		job_ra_housing_manager_add = 1
+		planet_administrators_energy_upkeep_mult = 0.5
+		planet_administrators_energy_upkeep_add = 1.0
+	}
+
+	description = civic_tooltip_robot_admin_overpopulation_solver_effects
+}
+
+civic_robot_admin_upscaled_farming = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		planet_jobs_food_produces_mult = 0.10
+		job_ra_agri_manager_add = 1
+		planet_livestock_food_produces_add = 2
+		planet_administrators_energy_upkeep_mult = 0.5
+		planet_administrators_energy_upkeep_add = 1.0
+	}
+
+	description = civic_tooltip_robot_admin_upscaled_farming_effects
+}
+
+civic_robot_admin_omnipurpose_servitors = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		pop_growth_speed = -0.75
+		job_ra_post_scarce_add = 1
+		planet_administrators_energy_upkeep_mult = 0.5
+		planet_administrators_energy_upkeep_add = 1.0
+	}
+
+	description = civic_tooltip_robot_admin_omnipurpose_servitors_effects
+}
+
+civic_robot_admin_research_oversight = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		job_ra_research_oversight_add = 1
+		planet_administrators_energy_upkeep_mult = 0.5
+		planet_administrators_energy_upkeep_add = 1.0
+	}
+
+	description = civic_tooltip_robot_admin_research_oversight_effects
+}
+
+civic_robot_admin_industry_oversight = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		job_ra_industry_oversight_add = 1
+		planet_administrators_energy_upkeep_mult = 0.5
+		planet_administrators_energy_upkeep_add = 1.0
+	}
+
+	description = civic_tooltip_robot_admin_industry_oversight_effects
+}
+
+civic_robot_admin_stalwart_defense = {
+	modification = yes
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	modifier = {
+		starbase_defensive_war_ship_build_speed_mult = 0.33
+		starbase_defense_platform_capacity_add = 8
+		ship_home_territory_fire_rate_mult = 0.33
+		country_naval_cap_mult = -0.33
+	}
+}
+
+
+
+
+
+##############
+##############
+##############
+# Total War Civics
+
+civic_robot_admin_terror = {
+	modification = no
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_robot_admin_anti_biocratic
+				#value = civic_robot_admin_trade_engine
+			}
+		}
+	}
+
+	random_weight = {
+		base = 15
+	}
+
+	modifier = {
+		pop_cat_specialist_happiness = -10.00
+		pop_cat_worker_happiness = -10.00
+		planet_jobs_produces_mult = 0.10
+		planet_jobs_robotic_produces_mult = -0.10
+		planet_pops_consumer_goods_upkeep_mult = -0.25
+		job_ra_subjugator_add = 2
+	}
+
+	description = civic_tooltip_robot_admin_terror_effects
+}
+
+civic_robot_admin_anti_biocratic = {
+	modification = no
+	potential = {
+		authority = {
+			value = auth_robot_admin
+		}
+	}
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_robot_admin_terror
+				value = civic_robot_admin_backdoor
+			}
+		}
+	}
+
+	random_weight = {
+		base = 15
+	}
+
+	modifier = {
+	}
+
+	description = civic_tooltip_robot_admin_anti_biocratic_effects
+}
+
+
+
+
+
+##############
+##############
+##############
+# Disabled
+
+# Hiding from game; will get to it later.
+civic_robot_admin_integrators = {
+	modification = no
+	#potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	potential = { ethics = {
+		value = ethic_gestalt_consciousness
+		NOT = { value = ethic_gestalt_consciousness }
+	} }
+	possible = {
+		authority = {
+			value = auth_robot_admin
+		}
+		ethics = {
+			NOR = {
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
+	}
+
+	random_weight = {
+		base = 15
+	}
+
+	description = "civic_tooltip_robot_admin_integrators_effects"
+}
+
+# Hiding from game; will get to it later.
+civic_robot_worship = {
+	modification = yes
+	potential = { ethics = {
+		value = ethic_gestalt_consciousness
+		NOT = { value = ethic_gestalt_consciousness }
+	} }
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+
+	random_weight = {
+		base = 15
+	}
+
+	modifier = {
+		#pop_robot_upkeep_mult = 3.00
+		all_technology_research_speed = 0.10
+	}
+
+	description = civic_tooltip_robot_worship_effects
+}
+
+# Hiding from game; will get to it later.
+civic_robot_admin = {
+	modification = no
+	potential = { ethics = {
+		value = ethic_gestalt_consciousness
+		NOT = { value = ethic_gestalt_consciousness }
+	} }
+	possible = {
+		authority = {
+			OR = {
+				text = civic_tooltip_dem_oli_dic
+				value = auth_oligarchic
+				value = auth_dictatorial
+				value = auth_democratic
+			}
+		}
+	}
+
+	random_weight = {
+		base = 5
+	}
+
+	description = "civic_tooltip_robot_admin_effects"
+}
