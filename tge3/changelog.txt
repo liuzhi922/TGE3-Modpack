@@ -1,0 +1,619 @@
+2018-06-02
+- Updated if else syntax.
+- Recreated overwritten pirate events.
+- Uploaded to Steam.
+- Updated Steam description.
+
+2018-05-31
+- Increased version from 2.0.* to 2.1.*.
+- Updated distance triggers syntax.
+
+2018-05-02
+- Disabled the marauder ships until the midgame starts to avoid getting technologies too soon.
+- Uploaded to Steam.
+
+2018-04-20
+- Added an extra event for notification toggling: pirate_waves.51
+- Uploaded to Steam.
+
+2018-04-19
+- Modified a scripted trigger that checked the pirate station to check for military stations instead. Caused a bug which resulted in monthly spawned stations of the marauder type to not spawn an accompanying fleet.
+- Uploaded to Steam.
+
+2018-04-18
+- Uploaded to Steam.
+
+2018-04-17
+- Increased the rewards given for destroying the pirate ships.
+- Added marauder starbase to the scripted effects.
+- Added unity as reward for killing pirate ships and stations.
+- Added engineering research as reward.
+
+2018-04-16
+- Rebalanced the fleet composition concerning the marauders because I'm making a dependent mod. Lowered the marauder ship chance 10%.
+- If the fleet effect is called but not from the events of this mod it will spawn considerably more marauders. Actually, the chances are reversed.
+- Disabled prefixes for created pirate ships.
+- Added marauder countries to the ship kill counter. They will also give awards now. Weird how a marauder doesn't count as a pirate.
+
+2018-04-10
+- Added rewards for marauder ship sizes.
+- Added extra effect to the fleet orders to destroy pirates that are stuck.
+- Reverted the military station checking triggers.
+- Changed the localisation of the pirate cruiser to take over default cruiser names instead of custom.
+- Added extra flag randomization for the pirate countries.
+- Updated Steam description.
+- Added marauder ship types to the namelists.
+- Removed void dwelling from the mod as it appears as a 250k fleet power station later in the game, thanks to the modifiers.
+- Increased country choice balance modifiers from 2 to 10.
+- Removed the lifetime flag of fleets.
+- Removed destruction of fleets from the fleet orders.
+- Added new code based on marauders that destroys a pirate fleet after the leader has died.
+- Changed station lifetime back to 10 years.
+- Added extra check before adding a leader to a fleet.
+- Increased interval after which a pirate fleet is destroyed.
+- Added leader module to the pirate waves country.
+- Fleet creation: removed the superior modifier and rebalanced the rest.
+- Modified implementation for destruction of the fleet when a leader died.
+- Uploaded to Steam.
+
+2018-04-09
+- Added some restrictions to the policy use concerning multiplayer.
+- Simplified the station and target triggers.
+- Fixed mistake in determining if a fleet should spawn immediately.
+- Created trigger to determine planets suited as a base.
+- Included barren planets as suitable base planets.
+- Added trigger that determines whether a fleet build a station or it was spawned.
+- Added all habitable planets to the list of suitable base planets.
+- Modified the fleet creation effect with more variety and differences in approach.
+- Added an additional trigger that compares fleet power with the neirest country. If equivalent or higher the power of spawned fleets will drop 50%.
+- Restructured fleet orders.
+- Reduced fleet lifetime to around 30 years. 10000 days.
+- Increased station lifetime to around 14 years. 5000 days.
+- Created new effect for station creation.
+- Added marauders ship designs to the fleets when the host has the Apocalypse DLC.
+- Add marauder void dwelling as very low chance 1% during the endgame. Can probably get over 100k fleet power easily with this mod.
+
+2018-04-08
+- Added a statement to the event script that will block the Vanilla pirates from appearing.
+- Modified ship limits.
+- Added rewards for killing pirates. Minerals and energy in very low amounts.
+- Removed spawn bonus based on fleet power.
+- Removed the ship limit restriction for building pirate stations.
+- Removed special pirate admiral trait and used same leader parameters as Vanilla.
+- Changed the way admirals are assigned to a fleet.
+- Reduced aggro range.
+- Introduced a 50 years lasting life flag for the pirate fleets.
+- Integrated with script for destruction when leader dies.
+- Increased rewards based on the upkeep of the pirate ships.
+- Added notification for those countries that can view the spawn location.
+- Modified the station modifiers year to unlock.
+- Added orbit check to spawning fleets from stations.
+- Galleons are now endgame exclusive.
+- Removed attempts to influence Vanilla pirate script.
+- Added overwritten version of Vanilla pirate script.
+
+2018-04-07
+- Removed the fleet power based tier triggers.
+- Reduced base spawn chance during fleet creation.
+- Redeveloped the fleet creation effect.
+- Mod will now start 10 years after start of game.
+- Added fleet power triggers based on those of monster waves.
+- Added mod specific pirate country with scaled difficulty modifiers.
+- Modified the way the station modifiers are choosen.
+- Added five more pirate station modifiers and integrated them into the script.
+- Made applying modifiers to the pirate station a scripted effect.
+- Added random name format for new pirate country.
+- Increased maximum galleons from 4 to 5.
+- Reduced the maximum operation radius for random targets from 300 to 200.
+
+2018-03-22
+- Modified the country creation event to trigger more than once but only if one of the pirate waves countries doesn't exist.
+- Removed the country creation from the debug events.
+- Disbaled logging in the scripted effects.
+- Added the country creation to the manual spawn events.
+
+2018-03-22
+- Added setting of a star flag to provide some compatibility with Vanilla pirates. When a fleet or station is created the star will block pirates from appearing for 10 years. The Vanilla script does the same but only for 5 years.
+- Uploaded to Steam.
+
+2018-03-15
+- Fixed a bug concerning a piece of leftover code which threw errors in rare situations.
+- Uploaded to Steam.
+
+2018-03-14
+- Modified the periodic spawn event to only choose systems without pirates.
+- Uploaded to Steam.
+
+2018-03-12
+- Added new event that destroys all the pirate countries, including the Vanilla ones. pirate_waves.667
+
+2018-03-06
+- Doubled needed fleet power per difficulty level.
+- Uploaded to Steam.
+
+2018-03-04
+- Removed support for default pirate country.
+- Modified pirate stations to always be destroyed after 10 years. 
+- Updated the modifiers to be better because the station is weaker now.
+- Rewrote the ship limits to be dependent on the choosen difficulty.
+- Updated choosing of spawn location with starbase check. 
+- Modified the station creation to be more loose.
+- Simplified the station management.
+- Added shields to stations through a static modifier.
+- Made some light modification to the fleet orders.
+- Uploaded to Steam.
+- Updated description.
+- Updated logo.
+
+2018-03-03
+- Modified the fleet creation.
+- Made the pirate countries completely seperate from privateers.
+- Added flag randomizer.
+- Inverted one of the country's colors.
+- Fleet power required balancing act.
+- Added unlock limit to the galleon.
+- Updated logo.
+- Modified the triggers to be based on the fleet power of the nearest default country.
+- Added a modifier to the choosing of the pirate country at random based on amount of fleets.
+- Included default pirate country into the choosing when spawning monthly. But only if it still exists.
+- Made name lists mod countries exclusive.
+
+2018-03-02
+- Started development of version 3.
+- Removed enclave modifiers and script.
+- Updated the aura.
+- Removed edict.
+- Removed global ship designs. Going to use the updated Vanilla ones.
+- Removed component templates.
+- Updated policy settings with disabled.
+- Added script that prevent hostilities between pirate and enclave stations.
+- Removed section templates.
+- Removed ship sizes.
+- Updated the static modifiers.
+- Migrated the ship creation from the events to the effects.
+- Rewrote the creation of ships.
+- Updated admiral trait.
+- Updated localisations.
+
+2018-01-22
+- Reduced the life time of the pirate stations.
+- Changed the default spawn interval policy settings to once every 20 months.
+- Updated Steam description.
+- Uploaded to Steam.
+
+2018-01-09
+- Updated logo.
+- Uploaded to Steam.
+
+2018-01-08
+- Fleets will now disband after a leader dies. Both ship fleets and stations have leaders, though they're not visible through the interface for stations.
+- Stations will now create new fleets every five years. No longer dependent on difficulty level.
+- Updated localisations and steam description.
+- Added leaders to the pirate stations.
+- Pirate station leaders have their own traits that boosts the station defenses.
+- Added a fleet flag to the stations so vanilla stations don't spawn fleets.
+- Increased rest periods for pirate fleets.
+- Pirate leaders start without any experience.
+- Pirate station will start building fleets half a year after construction.
+- Increased the aggression range of the fleets.
+- Removed the leaders from the station as the game doesn't apply the proper methods to them.
+- Reduced build time for stations build by fleets.
+- Added a lifetime limit to the pirate stations based on the choosen difficulty.
+- Modified the stations to build a fleet every 10 years.
+- Modified stations not build by fleets to spawn a fleet immediately to prevent early wipe.
+- Modified the events so the bug doesn't happen anymore. Finally!
+- Uploaded to Steam.
+
+2018-01-07
+- Removed recursive call because the game seems unable to handle that in some circumstances.
+- Instead of endless a pirate station will now spawn new fleets for around 40 years.
+- Removed support for old 0.55 exponent mod that won't be updated.
+- Medium is now the default difficulty.
+- Still recursive because the fleets build stations which build fleets...
+- Removed automated fleet creation when stations are build.
+- Used a completely different way to implement the same functionality.
+- Added randomized names for the Pirate Stations.
+- Updated localisations and steam description with changes.
+- Reduced operation ranges for fleets from 500 to 300.
+
+2018-01-06
+- Updated Stellaris version.
+- Updated Steam description.
+- Uploaded to Steam.
+
+2017-06-26
+- Added a new admiral trait specific for pirate captains. Fixes compatibility issues with trait adding mods.
+- Uploaded to Steam.
+
+2017-06-25
+- Removed modified pirate country from the mod.
+
+2017-06-24
+- Increased the scaled difficulty modifier to 0.1 again.
+- Modified the default difficulty to be very easy.
+
+2017-06-18
+- Lowered the scaled difficulty multiplier from 0.1 to 0.05 for the pirate country.
+
+2017-06-17
+- Updated the fleet power checks.
+- Slightly (2%) increased the random chance the second pirate country is picked and decreased (2%) the chance the privateers are to compensate for their better starting strength and position.
+- Reduced the Stellaris version.
+- Uploaded to Steam.
+
+2017-06-15
+- Updated the fleet power checks.
+- Added an overwritten version of the pirate country with scaled modifiers at 10% and basic technology instead of all technology.
+
+2017-06-15
+- Updated Stellaris version.
+- Updated Steam description.
+- Uploaded to Steam.
+
+2017-06-14
+- Added the implementation for compatibility with the 0.55 Military Power Exponent mod.
+
+2017-06-09
+- Some small changes to the namelists.
+- Added a 1000 pirate station names to each of the pirate name lists.
+
+2017-06-08
+- Rabalanced the respawn intervals.
+- Readded the hostile pirate stations to raiding targets.
+- Slightly increase the maximum range for finding random raiding spots.
+- Reduced default armor for pirate stations.
+- Reduced weapon damage and fire rate bonuses for pirate stations.
+- Reorganized the fleet orders because pirates ruled the galaxy in the latest test. Pirates are now less efficient. First they will raid a random target, then build a station, raid a close by country solar system, build another station, repeat.
+- Removed threat again as that didn't help the AI at all.
+- Made the fleet orders better again as it's boring if they just commit suicide over and over.
+- Increased the maximum range for the raiding spot to 1000 from 100 to allow pirates to actually reach some countries they otherwise wouldn't come anymore.
+- Recalculated the fleet power of each of the pirate fleet tiers. Assumed maxmimum amount of ships and a +10% hitpoint bonus from the admiral.
+- Rebalanced the static modifiers for the pirate stations again because the higher tiers are now too weak. Added shield modifiers as well, altough they won't have much effect.
+- Extended the 2 pirate namelists with 1000 new pirate ship names, 1000 pirate fleet names and 1000 new admiral names each. All randomly generated but reasonably in theme.
+- Updated steam description.
+- Reduced the hitpoints of the pirate station from 5k to 3k.
+- Changed the communications a bit so that pirate country are aware of the other countries. For testing purposes.
+- Tweaked the fleet orders a bit. Maximum random range is 500 but used for choosing a station location and a raiding spot once each.
+- Modified the pirate ships to require twice as long hyper wind ups by giving them their own hyperdrive.
+- Created an event that should make an existing savegame ready for this mod. Use is "event pirate_waves.666" in the console.
+- Modified the effects that created the pirate countries to support recreating.
+
+2017-06-07
+- Finished implementening the difficulty levels in the triggers.
+- Implemented diffculty levels for the respawn time of pirate fleets from stations.
+- Monthly spawns now prefer unowned systems to settle in.
+- Lowered some of the modifiers for the pirate stations a bit.
+- Created a new Logo based on the old one.
+- Removed the hostile pirate station from the raiding targets.
+- Added another test event to spawn one pirate fleet immediately regardless of scope.
+- Added some ship names to the PRT2 name list.
+- Added another fleet order to prevent pirate fleets from not finding raiding spots.
+- Updated Steam description.
+- Added a seperate statistic for pirate on pirate kills.
+- Readded the added threat when you become a victim of the pirates.
+- Extended the tags that apply to this mod loosely.
+- Modified the triggers that checks if a planet has a pirate station to ignore who owns it as too many pirates were being fed into the pirate stations.
+
+2017-06-06
+- Created version 2 of the mod as it requires a new game to work.
+- Modified the test method with policy settings to be "event pirate_waves.1000". That way it's the same number for the monsters and the pirates.
+- Removed country requirements for the test events.
+- Added a complex trigger for automated testing.
+- Using the NAME_ prefix for global ship designs.
+- Removed the ship names from the fleet name lists.
+- Modified the static modifiers for the Enclave stations.
+- Added synced localisation where missing.
+- Modified the event script so that pirates can build multiple stations in a system. Limited by the amount of asteroids of course.
+- Simplified the event script a bit to avoid issues.
+- Increased the default healthpoints of the pirate station from 2k to 5k.
+- Redid the pirate station static modifiers. With regeneration bonuses.
+- Increased default spawn chance to once a year or 8%.
+- Removed the threat as the AI was way too efficient in cleaning the pirates up. Who would have guessed?
+- Added additional fleet power checks for 5 different difficulty levels.
+- Created a new policy setting for difficulty.
+- Added localisations for the new policy settings.
+- Got halfway through implementing difficulty in the triggers.
+
+2017-06-05
+- Added red as secondary color to the pirate country.
+- Reenabled trails.
+- Added a different flag background for both country types.
+- Added a new component template for the border extruder for the pirate stations.
+- Removed the borders for the pirates as it doesn't work.
+- Created another pirate country.
+- Fixed the bug that pirate stations created by fleets didn't spawn fleets.
+- Added communications between the pirate countries.
+- Added some more restrictions to the spawning of pirate stations without a fleet to build them.
+- Extended the pirate raiding targets to all planets that have stations that don't belong to the pirate country.
+- Removed establishing communications.
+- Fixed a bug that caused the pirate fleets to spawn belonging to non-pirate countries.
+- Fixed the ship count check for pirate countries.
+- Modified the periodical event script to only create new stations and fleets in systems with no owned ships.
+- Made the other flag/country color red as well, like the pirate countries that appear at the start of the game.
+- Added extra check when building pirate stations.
+- Randomized fleet names.
+- Added name lists for the pirates.
+- Extended the time the pirates use to repair at stations.
+- Made sure the pirates kill the other pirates stations.
+- Readded communications between pirates.
+- Decided to reuse the raiding distance parameter from the Vanilla pirate events.
+- Reduced/halved the allowed ship per pirate country as there are now two.
+- Added a check if the closest country has enough fleet power to warrant spawning a new fleet.
+- Also added the check to the station spawning.
+
+2017-06-04
+- Added a test event that spawns 10 pirate fleets based on the policy settings. Called through the console command "event pirate_waves.10".
+- Added a new effect for creating the pirate country with pirate flags. Main point is that this country is never automatically deleted.
+- Added an event to create the pirate country at the start of the game.
+- Several changes to create a proper base for the spawning of new fleets at existing pirate stations if left alone long enough.
+- Fleets will spawn every 4 years after a pirate station appeared for up to 5 times / 20 years.
+- Made sure the pirates leave their system to find other asteroids.
+- Pirate fleets will now build new pirate stations at asteroids nearby.
+- New pirate stations and fleets will no longer appear in system with already a pirate station.
+- Added 5 new tiers for both the fleets and the stations.
+- Changed the fleet orders around: New pirates will first establish another station nearby, after which they will attack a mining or research station. Then they will go home if the station they first appeared at still exists. Reset.
+- Pirates will destroy all mining and research stations in the target system.
+- Pirates will return to the closest pirate station after raiding.
+- Modified the respawn from pirate station to be recursive and increased the respawn interval to 5 years. Curious if it will work.
+- Modified the fleet orders to be simpler as they became too complex. Pirates will now longer returns to pirate stations; instead they will build a new one at the nearest spot suitable, even within the borders of a country.
+- Now takes a year for a fleet to build a station.
+- After every mining or research station destroyed the pirates will spend a couple of weeks relaxing.
+- Removed the forced communications as the country should always exist now so research should work. I hope.
+- Rebalanced needed fleet power for tiers. Calculation is based partly on observation and partly on pure math. Fleet power of a fleet and station of a tier times 2.5x is the needed fleet power to unlock.
+- Every pirate kill will now add threat to the owning country.
+- Enabled borders for the pirate country.
+
+2017-06-03
+- Reduced the distance pirate fleets move before resting.
+- Added overwritten ship sizes for the pirates to fix some little issues. Galleon is excluded for now as that one is in a seperate file with the other guardians.
+	- Pirates have less health.
+	- Pirates don't have maintenance.
+	- Pirates have more armor.
+	- Rebalanced evasion.
+	- Pirates are now galactic objects which means they no longer have (ugly white) trails.
+	- Fixed the military size differences including icons.
+
+2017-06-02
+- Removed spawn location restriction permanently.
+- The admiral species and fleet power requirements will always be based on the nearest country.
+- Also added the requirement that a player country has the needed fleet power per tier so a Fallen Empire does not spawn a pirate fleet the player can't defeat.
+- Updated Steam description.
+- Uploaded to Steam.
+
+2017-06-01
+- Restricted the spawn locations of pirates to asteroids within the borders of countries.
+- Made the admiral of the fleets of the same species as the owner of the solar system where they spawn if some country owns it, else it's from a random default country.
+- Temporarily disabled the restriction on spawn location while I think about it.
+
+2017-06-01
+- Modified the triggers to spawn pirate fleets based on the fleet power of the owner of the location. If no owner is found the player fleet power will be used.
+- Increased needed fleet power for every tier. It's now roughly 3x times the average pirate fleet power of that tier.
+- Modified the ships per tiers restriction. Less tier 10 ships, more tier 1 ships.
+- Added some additional checks to some specific triggers regarding the kill counters.
+- Updated Steam description.
+- Uploaded to Steam.
+
+2017-05-25
+- Added localisation for the event chains.
+- Added a test event like in monster waves that spawns 10 pirate fleets at once. Called through the console command "event pirate_waves.100".
+- Extended the kill counters.
+- Updated Steam description.
+- Uploaded to Steam
+
+2017-05-24
+- Readded the event chain to this mod.
+
+2017-05-23
+- Added an event chain with counters.
+- Added events to manage counters.
+- Integrated the event chain in the events.
+- Added localisation.
+- Decided that seperating all counters in another mod would be more efficient.
+- Removed all remnants.
+
+2017-05-20
+- Uploaded to Steam.
+
+2017-05-18
+- Added static modifier for enclave stations.
+- Added the script that adds the modifiers.
+
+2017-05-17
+- Updated description.
+- Uploaded to Steam.
+
+2017-05-16
+- Removed default country requirements from the policies.
+- Modified the edict related triggers.
+
+2017-05-11
+- Added the russian localisation [KaMyH?K?] ? Kpoxa supplied.
+- Uploaded to Steam.
+
+2017-05-09
+- Verified files for v1.6.
+- Updated descriptors and description.
+- Uploaded to Steam.
+
+2017-05-02
+- Added copies of localisation files for the other languages.
+- Uploaded to Steam.
+
+2017-05-01
+- Vanilla fleet power:
+	- Tier 10: 110k
+	- Tier 9: 80k
+	- Tier 8: 60k
+	- Tier 7: 50k
+	- Tier 6: 40k
+	- Tier 5: 25k
+	- Tier 4: 15k
+	- Tier 3: 10k
+	- Tier 2: 6k
+	- Tier 1: 2k
+- Rebalanced fleet power check based on Vanilla fleet power values.
+- Reduced the weapon damage and fire rate modifiers for the pirate stations.
+- Uploaded to Steam.
+
+2017-04-28
+- Modified the auxiliary slots for the new designs.
+- Reduced amount of hangar bays.
+- Modified the fleet power check to once again only check player countries.
+- Added alternative localised English name for pirate cruiser.
+- Uploaded to Steam.
+
+2017-04-27
+- Added new section template for the revenge cruiser.
+- Added hangar bays to the section templates of the pirate station, cruiser and galleon.
+- Added scouts to the new hangar bays in global ship designs.
+- Renamed flying dutchman section template to contain the mod name.
+- Corrected the utility slots so the designs are valid concerning power.
+- Replaced the auxiliary slots of the revenge and flying dutchman with auto repair and shield recharger. Makes more sense than afterburners.
+- Decided to include overwritten global ship designs for the pirates because I wish to add combat computers to all of the pirates.
+- Added combat computers to everything.
+- Removed some designs as they seemed redundant or irrelevant.
+- Integrated new designs in event script and cleaned it up because now I can remove the FTL designs statements.
+- Added a fourth corvette design because it balances out better.
+- Added the fourth corvette to the event script.
+
+2017-04-27
+- Updated Steam description.
+- Uploaded to Steam.
+
+2017-04-26
+- Reduced ship count for tiers.
+- Modified the wait parts in the fleet orders so the pirate fleets wait a bit before attacking after spawning.
+
+2017-04-25
+- Removed extra large weapons from pirate station as it wouldn't work properly when not using Novio Magnum or another mod that allows the extra large weapons to be used on stations.
+- Reduced the number of allowed fleets per tier.
+- Increased the needed fleet power to increase in tier.
+- Removed the shield hitpoints modifier for the pirate station.
+- Increased the armor modifier for the pirate station.
+- Modified the fleet count limits to be a ship limit instead. That way the station don't have such a big impact.
+- Reduced waiting time for pirate fleets.
+- Created a new nanobot cloud aura and added it to the pirate station.
+- Created a new minefield aura and added it to the pirate station.
+- Added localisation for the new auras.
+- Added a check to see if the pirate station is still there. The pirate fleet will not return anymore when the station was destroyed.
+- Modified the fleet power checks to not only check player controlled countries, but all default countries.
+
+2017-04-24
+- Created variables for the fleet power and number of fleet checks.
+- Created triggers for the tier checks.
+- Created new modifiers for the pirate stations.
+- Integrated the modifiers in the event script.
+- Reduced the random choice for the pirate station to the most powerful one only as the models are the same.
+- Increased the number of fleets allowed greatly as pirate stations last much longer now and they are considered fleets.
+- Created new global ship design for the pirate station.
+- Created new section template for the pirate station.
+- Added an extra large weapon slot to the flying dutchman.
+- Inegrated the new pirate station in the event script.
+- Reworked fleet orders to include returning to the pirate station, resting at an asteroid and actively attacking research and mining stations around the pirate station where they spawn.
+
+2017-04-23
+- Modified some of the event triggers to allow for more smaller sized fleets even when in the late game.
+- Integrated triggers in the event script.
+- Increased time pirate fleets rest at asteroids.
+- Added a leader to the pirate fleets.
+- Now using new naming standard.
+- Uploaded to Steam.
+
+2017-04-21
+- Removed the fleet count restrictions.
+- Updated Steam description.
+
+2017-04-20
+- Updated Stellaris version in Steam description.
+
+2017-04-19
+- Fixed the fleet count check.
+
+2017-04-19
+- Removed the default country requirement from triggers.
+- Fixed some kind of weird bug that seemed to exist since the last update.
+- Uploaded to Steam.
+
+2017-04-10
+- Increased policy settings for the mod with higher spawn chances.
+- Updated description.
+- Uploaded to Steam.
+
+2017-04-06
+- Updated for game v1.5.
+- No changes.
+- Uploaded to Steam.
+
+2017-03-18
+- Uploaded to Steam.
+
+2017-03-16
+- Removed formation scale.
+
+2017-03-15
+- Fixed a potential issue in the conditions.
+
+2017-03-03
+- Changed default spawn chance and updated the steam description.
+- Uploaded to Steam
+
+2017-03-02
+- Added a formation scale of 2.0 to the pirate fleets.
+
+2017-02-26
+- Added a plasma cannon to the Flying Dutchman.
+- Released the new version on Steam.
+
+2017-02-25
+- Added a new ship design for the Black Earl because the original design is incomplete. 
+	- Named it "Revenge".
+	- Added a swarmer missile and autocannon.
+	- Gave it better reactors.
+- Increased the utility slots of the new Galleon secton template to balance the pirate ships out.
+- Lowered the chance that the new Galleon will spawn.
+- Changed the formation scale modification to only apply when a Galleon is added to the fleet.
+- Added increasingly longer aggro ranges to the fleet tiers.
+- Used fibonacci for the fleet power of the tier triggers.
+- Decided to modifty the fleet scale modifier to what it used to be in the commented out part of the paradox script.
+- Removed the fleet scale modifier because of bad results.
+
+2017-02-24
+- Changed the FTL type of all the pirate ships to hyperdrive. Found out that the Pirate Galleon can't be modified through the script to have hyperdrives. :(
+- Added new global ship design for the galleon with a hyperdrive called the Flying Dutchman. 
+	- Modified the correct slots so the PD weapons use the PD slots.
+	- Added mass drivers to the weapons of the new galleon to give it more varied weapons. Also balanced them out a bit.
+	- Added utilities as it had none for some reason. Now has armor, shield, afterburners and reactors.
+	- Added a swarmer missile, autocannon and kinetic artillery to the new ship. 
+- Integrated the new galleon sized ship "Flying Dutchman" in the script.
+- Added spawning pirate stations to the script every time a pirate fleet spawns. You don't get a reward for destroying them though.
+- Found one pirate ship design which was not yet in the script. Added.
+
+2017-02-24
+- Added more spawn chances.
+- Improved the descriptions for spawn chances.
+
+2017-02-23
+- Added policy settings to set the spawn chance.
+- Rewrote the event script to support those settings.
+- Changed the player country check.
+- Pirate Fleets now spawn during a month and not only at the start of one.
+- Optimized a couple of triggers. 
+- Added AI weights for debugging.
+- Added more logging.
+
+2017-02-21
+- Added communications to the pirates so the enemy does not have to research them to identify them.
+
+2017-02-19
+- Added pirate power modifier to the pirate country.
+
+2017-02-19
+- Added a country event to disable the waves.
+- Increased the fleet power needed to increase the tier of the pirate fleets.
+
+2017-02-18
+- Fixed the fleet limit logic.
+
+2017-02-17
+- Started development of seperate mod for Pirate events.
+- Rewrote the way the event works for the most part.

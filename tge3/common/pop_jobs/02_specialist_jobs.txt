@@ -880,7 +880,7 @@ artisan = {
 	
 	possible = {
 		or = {
-			has_job = artisian
+			has_job = artisan
 			dpcb_trigger_job = yes
 		}
 		specialist_job_check_trigger = yes

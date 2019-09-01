@@ -1,0 +1,60 @@
+Stellaris version supported: v2.1.*
+
+[h1]Pirate Waves 3[/h1]
+This mod spawns pirate fleets continuously and endlessly. Every once in a while a pirate station and fleet will appear at an asteroid, barren or habitable planet, usually in some part of the galaxy that's not owned by any country. The pirate fleet will venture out into the galaxy, raiding solar systems belonging to countries and setting up new pirate stations. Each pirate station will produce a new pirate fleet and self destruct 10 years after being build.
+
+How strong the fleets are depends on the difficulty level choosen and the time that has passed in the game. The pirates will start to appear 10 years into the game. If the fleet power of the country closest to where the pirates appear is inadequate compared to the pirates the power of the fleets spawned will drop.
+
+You can set the difficulty of this mod as well as the interval at which a new pirate station and fleet appear using the policy settings. With it you can also disable the creation of new pirate stations and fleets.
+
+Includes a pirate kill counter event in your situation log containing an overview of the interaction with the pirates. This will appear after encountering them for the first time.
+
+[h1]Settings[/h1]
+You can use the "Pirate Waves" policy settings to set the chance they will appear. The minimum chance is 1% (averaging 1 pirate fleet every 100 months) but you can increase this to up to 100% (averaging 1 pirate fleet every month). Default chance is 5% (averaging 1 pirate fleet every 20 months).
+
+You can use the "Pirate Waves Difficulty" policy settings to set the difficulty level of the fleets. This will also limit the maximum amount of ships the pirate countries can manage.
+
+[b]Multiplayer[/b]
+In a multiplayer game the spawn policy settings of a random player who has not disabled spawning will be used. If all players except one disable the mod only the policy settings of that player will be used. From the difficulty policy settings the lowest will be used.
+
+[b]Disabling[/b]
+You can disable the Pirates Waves with the policy settings which will stop them from spawning while active. 
+
+If you decide to disable this mod in the game loader or unsubscribe from the mod some existing pirates spawned with this mod will no longer move. Your situation log will also contain a corrupt entry where the kill counter was.
+
+[h1]Compatibility[/h1]
+Compatible with existing savegames.
+
+Should be compatible with all other mods except the previous Pirate Waves mod. Some mods might influence the gameplay if they modify the pirate ships.
+
+[h1]Notes[/h1]
+[list]
+[*]You will be notified if a pirate station has been build in a system of which you have a high intel level.
+[*]Overwrites the Vanilla pirate events to disable the predictable spawning of pirates in systems adjacent to the border. Only the Birth of Piracy event is still active. 
+[*]There are two pirate countries and they are not on good terms with each other. There's an individual statistic about pirates killing pirates in the situation log.
+[*]If you own and activated the Apocalypse DLC raiders will be mixed in with the pirates. Ratio is 80% pirate and 20% marauder ships.
+[*]Pirates will often take breaks to split their loot and fix up their ships and need a year to build a new pirate station.
+[*]Pirate stations, ships and fleets have random names from extended pirate name lists.
+[*]Killing pirates and marauders will provide a small amount of minerals and energy depending on the type of pirate ship. Defeating pirates will also provide a very small amount of unity and engineering research.
+[*]If you ignore the pirate stations for too long you'll regret it as they will send endless waves of pirate fleets. They really like the part of the galaxy that no one looks at and they will grow and expand until they have enough fleets to destroy your outposts. Some AI countries may become infested with pirates if there's a lot of unowned space around them. You can help them by destroying the pirate stations in unowned space or exploit this by declaring war on them. Changing the settings of the mod will also help them or destroy them depending on how it's used.
+[*]FTL inhibitors work really well against pirates.
+[*]Updated of [url=http://steamcommunity.com/sharedfiles/filedetails/?id=943051739]Pirates Waves 2[/url] for Stellaris 2.0.
+[*]There's also the mod [url=http://steamcommunity.com/sharedfiles/filedetails/?id=1317326847]Monster Waves 4[/url] which introduces waves of monsters.
+[*]For more defence I recommend [url=http://steamcommunity.com/sharedfiles/filedetails/?id=1371360025]Starbase Defenses Extended 2[/url] and [url=http://steamcommunity.com/sharedfiles/filedetails/?id=1318299775]Military Station Fortifier 2[/url].
+[*][url=http://steamcommunity.com/sharedfiles/filedetails/?id=1365414074]Pirate Waves 3: Marauders[/url] will modify the Marauders from the Apocalypse DLC with features from this mod.
+[*][url=http://steamcommunity.com/sharedfiles/filedetails/?id=1376086969]Pirate Ships Extended[/url] will allow you to design and build your own versions of the pirate ships that this mod spawns.
+[/list]
+
+[b]Testing[/b]
+If you wish to create pirates manually use one of these commands in the console:
+[code]event pirate_waves.1[/code] will execute the event that uses the policy settings. This is called monthly by default.
+[code]event pirate_waves.11[/code] will spawn 1 pirate station and fleet immediately.
+[code]event pirate_waves.10[/code] will spawn 10 pirate stations and fleets immediately.
+[code]event pirate_waves.100[/code] will spawn 100 pirate stations and fleets immediately.
+[code]event pirate_waves.1000[/code] will spawn 1000 pirate stations and fleets immediately.
+
+[b]Notifications[/b]
+[code]event pirate_waves.51[/code] will toggle the notifications on and off.
+
+[b]Bug?![/b]
+You can use [code]event pirate_waves.666[/code] in the console which will immediately remove all pirate stations and fleets from the galaxy and recycle the pirate countries after which the mod should work. Useful if for instance you've had it with the pirates or you realize you can't defeat them after you chose the insane difficulty.
