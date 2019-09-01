@@ -485,9 +485,9 @@ criminal = {
 	}
 
 	planet_modifier = {
-		planet_stability_add = -2
-		planet_amenities_add = -4
-		planet_crime_add = 4
+		planet_stability_add = -1
+		planet_amenities_add = -5
+		planet_crime_add = 3
 	}
 	
 	resources = {
