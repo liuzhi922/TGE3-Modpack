@@ -1,0 +1,81 @@
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 5 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_ship = yes / no				# default: no
+#	traits = { trait = ... }					# default: empty; trait set to enforce on the primary species. They cannot be removed, but more can be added if points/picks permit
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#}
+
+
+
+civic_technical_institute = {
+	potential = { authority = { value = auth_corporate } }
+	random_weight = { base = 5 }
+	description = "civic_tooltip_technical_institute_effects"
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+	}
+	modifier = {
+		pop_ethic_materialist_attraction_mult = 0.5
+		planet_researchers_unity_produces_add = 1
+	}
+}
+
+civic_entertainment_empire = {
+	potential = { authority = { value = auth_corporate } }
+	random_weight = { base = 5 }
+	description = "civic_tooltip_entertainment_empire_effects"
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	modifier = {
+		planet_entertainers_unity_produces_add = 2
+		planet_entertainers_energy_produces_add = 2
+	}
+}
+
+civic_consumer_goods = {
+	potential = { authority = { value = auth_corporate } }
+	random_weight = { base = 5 }
+	description = "civic_tooltip_consumer_goods_effects"
+
+	modifier = {
+		planet_artisans_consumer_goods_produces_add = 2
+	}
+}
+
+civic_spaceship_guild = {
+	potential = { authority = { value = auth_corporate } }
+	random_weight = { base = 5 }
+	description = "civic_tooltip_spaceship_guild_effects"
+
+	modifier = {
+		category_voidcraft_research_speed_mult = 0.20
+		category_propulsion_research_speed_mult = 0.20
+		category_materials_research_speed_mult = 0.20
+		category_particles_research_speed_mult = 0.20
+	}
+}
+
+

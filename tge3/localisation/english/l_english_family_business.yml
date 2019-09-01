@@ -1,0 +1,15 @@
+﻿l_english:
+
+ civic_family_business:0 "Family Business"
+ civic_family_business_desc:0 "This company's ownership and management is dominated by a single, very large group of individuals who share kinship."
+ civic_tooltip_family_business_effects:1 "£building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_neptocrat£ §Y$job_neptocrat_plural$§!\nCan construct £building£ §Y$building_family_estates$§! buildings that add additional £job_neptocrat£ §Y$job_neptocrat$§! Jobs\n§Y$MOD_LEADER_GOVERNOR_SKILL_LEVELS$§! increased by §G+1§!"
+ 
+ building_family_estates:0 "Family Estates"
+ building_family_estates_desc:1 "Luxurious employer-provided residences are a key incentive for the company's relatives--I mean executives."
+
+
+ job_neptocrat:0 "Neptocrat"
+ job_neptocrat_plural:0 "Neptocrats"
+ job_neptocrat_desc:1 "Whether by birthright, adoption, or mating ritual, neptocrats nobly bear the burden of continuing their family's commercial legacy, no matter how many vacations it requires."
+ mod_job_neptocrat_add:0 "Neptocrat Jobs"
+ job_neptocrat_effect_desc:0 "£job_neptocrat£ §Y$job_neptocrat_plural$§! produce £stability£ §YStability§! and £trade_value£ §YTrade Value§!"
