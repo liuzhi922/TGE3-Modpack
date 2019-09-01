@@ -8,6 +8,10 @@ gpm_bunker_drone = {
 	building_icon = gpm_building_stronghold
 
 	possible = {
+		or = {
+			has_job = gpm_bunker_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -100,6 +104,10 @@ gpm_bunker_army = {
 	}
 	
 	possible = {
+		or = {
+			has_job = gpm_bunker_army
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 		owner = { is_gestalt = no }
@@ -150,6 +158,10 @@ gpm_moon_miner = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_moon_miner
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 	}
@@ -228,6 +240,10 @@ gpm_moon_miner_drone = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_moon_miner_drone
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 	}
@@ -306,6 +322,10 @@ gpm_asteroid_miner = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_asteroid_miner
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 	}
@@ -383,6 +403,10 @@ gpm_asteroid_miner_drone = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_asteroid_miner_drone
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 	}
@@ -460,6 +484,10 @@ gpm_orbital_researcher = {
 	clothes_texture_index = 3
 
 	possible = {
+		or = {
+			has_job = gpm_orbital_researcher
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -523,6 +551,10 @@ gpm_orbital_researcher_drone = {
 	clothes_texture_index = 3
 
 	possible = {
+		or = {
+			has_job = gpm_orbital_researcher_drone
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -586,6 +618,10 @@ gpm_orbital_alloy_miner = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_orbital_alloy_miner
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		complex_specialist_job_check_trigger = yes
 	}
@@ -663,6 +699,10 @@ gpm_orbital_alloy_miner_drone = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_orbital_alloy_miner_drone
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		complex_specialist_job_check_trigger = yes
 	}
@@ -740,6 +780,10 @@ gpm_orbital_mineral_miner = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_orbital_mineral_miner
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 	}
@@ -817,6 +861,10 @@ gpm_orbital_mineral_miner_drone = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_orbital_mineral_miner_drone
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 	}
@@ -894,6 +942,10 @@ gpm_orbital_particle_collector = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_orbital_particle_collector
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 	}
@@ -968,6 +1020,10 @@ gpm_orbital_particle_collector_drone = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_particle_collector_drone
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 	}
@@ -1042,6 +1098,10 @@ gpm_orbital_spicer = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = hgpm_orbital_spicer
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		complex_specialist_job_check_trigger = yes
 	}
@@ -1116,6 +1176,10 @@ gpm_orbital_spicer_drone = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_orbital_spicer_drone
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		complex_specialist_job_check_trigger = yes
 	}
@@ -1190,6 +1254,10 @@ gpm_android_entertainer = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = gpm_android_entertainer
+			dpcb_trigger_job = yes
+		}
 		complex_worker_job_check_trigger = yes
 	}
 

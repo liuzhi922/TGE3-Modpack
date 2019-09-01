@@ -14,6 +14,10 @@ spawning_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = spawning_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -86,6 +90,10 @@ replicator = {
 	}
 
 	possible = {
+		or = {
+			has_job = replicator
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -148,6 +156,10 @@ coordinator = {
 	}
 
 	possible = {
+		or = {
+			has_job = coordinator
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}	
 	
@@ -203,6 +215,10 @@ synapse_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = synapse_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -253,6 +269,10 @@ brain_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = brain_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -325,6 +345,10 @@ calculator = {
 	}
 
 	possible = {
+		or = {
+			has_job = calculator
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -378,6 +402,10 @@ artisan_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = artisian
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -420,6 +448,10 @@ fabricator = {
 	}
 
 	possible = {
+		or = {
+			has_job = fabricator
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -462,6 +494,10 @@ alloy_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = alloy_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -497,6 +533,10 @@ chemist_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = chemist_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -535,6 +575,10 @@ translucer_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = translucer_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -573,6 +617,10 @@ gas_refiner_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = gas_refiner_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -611,6 +659,10 @@ patrol_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = patrol_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -651,6 +703,10 @@ crystal_mining_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = crystal_mining_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -689,6 +745,10 @@ mote_harvesting_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = mote_harvesting_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -727,6 +787,10 @@ gas_extraction_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = gas_extraction_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -765,6 +829,10 @@ mining_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = mining_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -821,6 +889,10 @@ agri_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = agri_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -891,6 +963,10 @@ technician_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = technician_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -955,6 +1031,10 @@ maintenance_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = maintenance_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -1071,6 +1151,10 @@ warrior_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = warrior_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	

@@ -6,6 +6,10 @@ life_crafter = {
 	clothes_texture_index = 3
 		
 	possible = {
+		or = {
+			has_job = life_crafter
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 	
@@ -37,6 +41,10 @@ life_weaver = {
 	clothes_texture_index = 3
 		
 	possible = {
+		or = {
+			has_job = life_weaver
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 	

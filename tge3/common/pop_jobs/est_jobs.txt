@@ -10,6 +10,10 @@ est_inquisitor = {
 	clothes_texture_index = 3
 
 	possible = {
+		or = {
+			has_job = est_inquisitor
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -71,6 +75,10 @@ est_engineer = {
 	clothes_texture_index = 3
 
 	possible = {
+		or = {
+			has_job = est_engineer
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -149,6 +157,10 @@ est_shadow_administrator = {
 	clothes_texture_index = 1
 	
 	possible = {
+		or = {
+			has_job = est_shadow_administrator
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 

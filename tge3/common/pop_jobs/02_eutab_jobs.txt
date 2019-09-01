@@ -15,6 +15,10 @@ eutab_master_bio = {
 	}
 
 	possible = {
+		or = {
+			has_job = eutab_master_bio
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -130,6 +134,10 @@ eutab_minor_noble = {
 	}
 
 	possible = {
+		or = {
+			has_job = eutab_minor_moble
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -255,6 +263,10 @@ eutab_gladiator = {
 	}
 
 	possible = {
+		or = {
+			has_job = eutab_gladiator
+			dpcb_trigger_job = yes
+		}
 		battle_thrall_job_check_trigger = yes
 	}
 	
@@ -381,6 +393,10 @@ eutab_politician = {
 	}
 
 	possible = {
+		or = {
+			has_job = eutab_politician
+			dpcb_trigger_job = yes
+		}
 		entertainer_job_check_trigger = yes
 	}
 	
@@ -500,6 +516,10 @@ eutab_anthro = {
 	}
 
 	possible = {
+		or = {
+			has_job = eutab_anthro
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 
@@ -653,6 +673,10 @@ eutab_ranger = {
 	}
 
 	possible = {
+		or = {
+			has_job = eutab_ranger
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 
@@ -974,6 +998,10 @@ eutab_siphon = {
 	}
 
 	possible = {
+		or = {
+			has_job = eutab_siphon
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -1015,6 +1043,10 @@ eutab_caretaker = {
 	}
 
 	possible = {
+		or = {
+			has_job = eutab_caretaker
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}	
 	

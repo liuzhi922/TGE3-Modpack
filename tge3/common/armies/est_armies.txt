@@ -22,7 +22,8 @@ est_titan_army = {
 			energy = 100
 		}
 		upkeep = {
-			energy = 6.0
+			energy = 2
+			minerals = 10
 		}
 	}
 
@@ -50,7 +51,8 @@ est_mechanical_knights_army = {
 			energy = 50
 		}	
 		upkeep = {
-			energy = 3.0
+			energy = 1
+			minerals = 4
 		}
 	}
 	

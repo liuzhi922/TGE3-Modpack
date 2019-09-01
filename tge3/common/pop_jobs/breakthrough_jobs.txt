@@ -13,6 +13,10 @@ psychohistorian = {
 	}
 
 	possible = {
+		or = {
+			has_job = psychohistorian
+			dpcb_trigger_job = yes
+		}
         ruler_job_check_trigger = yes
 	}
 	
@@ -89,6 +93,10 @@ psychohistorian_gestalt = {
 	}
 
 	possible = {
+		or = {
+			has_job = psychohistorian_gestalt
+			dpcb_trigger_job = yes
+		}
         drone_job_check_trigger = yes
 	}
 	

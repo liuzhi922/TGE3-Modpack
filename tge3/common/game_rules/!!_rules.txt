@@ -7,3 +7,17 @@ can_spawn_debris = {
 	exists = owner
 	owner = { NOT = { has_ascension_perk = ap_enigmatic_engineering } }
 }
+
+# Sensor Disruption is handled by the same gamerule that allows/disallows sensors through nebulas and such
+# this = system
+# root = country
+system_blocks_sensors = {
+	OR = {
+		is_inside_nebula = yes
+		has_star_flag = lcluster
+		has_star_flag = sealed_system
+		any_ship_in_system = {
+			has_component = STARBASE_AURA_COMMUNICATIONS_JAMMER
+		}
+	}
+}

@@ -17,6 +17,10 @@ druid = {
 	}
 	
 	possible = {
+		or = {
+			has_job = druid
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		complex_worker_job_check_trigger = yes
 	}
@@ -129,6 +133,10 @@ geoengineer = {
 	}
 	
 	possible = {
+		or = {
+			has_job = geoengineer
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -213,6 +221,10 @@ xenobiologist  = {
 	}
 	
 	possible = {
+		or = {
+			has_job = xenobiologist
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -294,6 +306,10 @@ commandante = {
 	}
 	
 	possible = {
+		or = {
+			has_job = commandante
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 	
@@ -364,6 +380,10 @@ supervisor = {
 	}
 	
 	possible = {
+		or = {
+			has_job = supervisor
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 	
@@ -435,6 +455,10 @@ mining_engineer = {
 	}
 	
 	possible = {
+		or = {
+			has_job = mining_engineer
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 	
@@ -523,6 +547,10 @@ mogul = {
 	}
 	
 	possible = {
+		or = {
+			has_job = mogul
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 	
@@ -605,6 +633,10 @@ techno_priest = {
 	}
 	
 	possible = {
+		or = {
+			has_job = techno_priest
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	

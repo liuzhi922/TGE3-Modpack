@@ -6,6 +6,10 @@ ae_xeno_keeper = {
 	clothes_texture_index = 2
 		
 	possible = {
+		or = {
+			has_job = ae_xeno_keeper
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		owner = { 	
 			OR = {
@@ -36,6 +40,10 @@ ae_xeno_ward = {
 	clothes_texture_index = 2
 		
 	possible = {
+		or = {
+			has_job = ae_xeno_ward
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		owner = { 
 			OR = {
@@ -71,6 +79,10 @@ ae_hedonist = {
 	clothes_texture_index = 2
 		
 	possible = {
+		or = {
+			has_job = ae_hedonist
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		owner = { 	
 			OR = {

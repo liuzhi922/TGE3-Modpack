@@ -1,0 +1,26 @@
+#
+
+dpcb_trigger_is_ai_owner = {
+	exists = owner
+	owner = {
+		is_ai = yes
+	}
+}
+
+dpcb_trigger_job = {
+	# exists = planet
+	# planet = {
+		# free_jobs > 0
+	# }
+	or = {
+		has_job = no
+		has_job = servant
+		has_job = slave_toiler
+		has_job = assimilation
+		hfe_trigger_uncapped_job_mod = yes
+	}
+}
+
+hfe_trigger_uncapped_job_mod = {
+	always = no
+}

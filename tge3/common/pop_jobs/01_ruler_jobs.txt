@@ -15,7 +15,12 @@ head_researcher = {
 		is_being_assimilated = no
 	}
 	
+	
 	possible = {
+		or = {
+			has_job = head_researcher
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 	
@@ -138,6 +143,10 @@ high_priest = {
 	}
 	
 	possible = {
+		or = {
+			has_job = high_priest
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 		NOT = { has_ethic = ethic_materialist }
 	}
@@ -272,6 +281,10 @@ administrator = {
 	}
 	
 	possible = {
+	or = {
+			has_job = administrator
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 
@@ -390,6 +403,10 @@ noble = {
 	}
 	
 	possible = {
+	or = {
+			has_job = noble
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 	
@@ -483,6 +500,10 @@ merchant = {
 	}
 	
 	possible = {
+	or = {
+			has_job = merchant
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -607,6 +628,10 @@ executive = {
 	}
 	
 	possible = {
+	or = {
+			has_job = executive
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 	

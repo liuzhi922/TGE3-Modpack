@@ -2,7 +2,10 @@ can_crossbreed_species = {
 	OR = {
 		AND = {
 			is_species_class = HUM
-			root = { is_species_class = HUM }
+			OR = {
+				root = { is_species_class = HUM }
+				root = { is_species_class = MAM }
+			}
 			is_crossbreeding_possible = yes
 			root = { is_crossbreeding_possible = yes }
 		}
@@ -14,7 +17,10 @@ can_crossbreed_species = {
 		}
 		AND = {
 			is_species_class = MAM
-			root = { is_species_class = MAM }
+			OR = {
+				root = { is_species_class = HUM }
+				root = { is_species_class = MAM }
+			}
 			is_crossbreeding_possible = yes
 			root = { is_crossbreeding_possible = yes }
 		}

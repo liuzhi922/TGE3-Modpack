@@ -6,6 +6,10 @@ spaceship_mechanic = {
 	clothes_texture_index = 3
 
 	possible = {
+		or = {
+			has_job = spaceship_mechanic
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -73,6 +77,10 @@ spaceship_mechanic_gestalt = {
 	building_icon = building_monolith #placeholder
 	
 	possible = {
+		or = {
+			has_job = spaceship_mechanic_gestalt
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 

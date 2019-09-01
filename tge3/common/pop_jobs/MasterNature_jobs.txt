@@ -11,6 +11,10 @@ sky_clerk = {
 	}
 
 	possible = {
+		or = {
+			has_job = sky_clerk
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger  = yes
 	}
 	
@@ -112,6 +116,10 @@ subterranean_refiner = {
 	}
 
 	possible = {
+		or = {
+			has_job = sky_clerk
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 	
@@ -159,6 +167,10 @@ subterranean_refiner_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = subterranean_refiner_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -200,6 +212,10 @@ subterranean_foundry = {
 	}
 
 	possible = {
+		or = {
+			has_job = subterranean_foundry
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 	
@@ -245,6 +261,10 @@ subterranean_foundry_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = subterranean_foundry_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -326,6 +346,10 @@ subterranean_soldier = {
 	}
 	
 	possible = {
+		or = {
+			has_job = subterranean_soldier
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 		owner = { is_gestalt = no }
@@ -383,6 +407,10 @@ subterranean_warrior_drone = {
 	}
 
 	possible = {
+		or = {
+			has_job = subterranean_warrior_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -481,6 +509,10 @@ subterranean_researcher = {
 	}
 
 	possible = {
+		or = {
+			has_job = subterranean_researcher
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -563,6 +595,10 @@ subterranean_researcher_drone = {
 	}
 	
 	possible = {
+		or = {
+			has_job = subterranean_researcher_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -625,6 +661,10 @@ sky_spawning_drone = {
 	}
 		
 	possible = {
+		or = {
+			has_job = sky_spawning_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -690,6 +730,10 @@ sky_replicator = {
 	}
 	
 	possible = {
+		or = {
+			has_job = sky_replicator
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -754,6 +798,10 @@ sky_roboticist = {
 	}
 		
 	possible = {
+		or = {
+			has_job = sky_roboticist
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 	
@@ -816,6 +864,10 @@ sky_ranger = {
 	}
 
 	possible = {
+		or = {
+			has_job = sky_ranger
+			dpcb_trigger_job = yes
+		}
 		entertainer_job_check_trigger = yes
 	}
 	
@@ -910,6 +962,10 @@ sky_maintenance = {
 	}
 	
 	possible = {
+		or = {
+			has_job = sky_maintenance
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -988,6 +1044,10 @@ sky_noble = {
 	}
 
 	possible = {
+		or = {
+			has_job = sky_noble
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 

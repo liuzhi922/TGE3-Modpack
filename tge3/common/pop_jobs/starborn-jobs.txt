@@ -11,6 +11,10 @@ starborn_tombworld_scavenger = {
 	}
 	
 	possible = {
+		or = {
+			has_job = starborn_tombworld_scavenger
+			dpcb_trigger_job = yes
+		}
 		worker_job_check_trigger = yes
 	}
 	
@@ -104,6 +108,10 @@ starborn_preserve_ranger = {
 	}
 
 	possible = {
+		or = {
+			has_job = starborn_preserve_ranger
+			dpcb_trigger_job = yes
+		}
 		worker_job_check_trigger = yes
 	}
 	
@@ -193,6 +201,10 @@ starborn_solar_technician = {
 	}
 
 	possible = {
+		or = {
+			has_job = starborn_solar_technician
+			dpcb_trigger_job = yes
+		}
 		hidden_trigger = { exists = owner }
 		worker_job_check_trigger = yes
 		owner = { 
@@ -274,6 +286,10 @@ starborn_alloy_extractor = {
 	}
 	
 	possible = {
+		or = {
+			has_job = starborn_alloy_extractor
+			dpcb_trigger_job = yes
+		}
 		worker_job_check_trigger = yes
 	}
 	
@@ -334,6 +350,10 @@ starborn_dark_matter_extractor = {
 	}
 
 	possible = {
+		or = {
+			has_job = starborn_dark_matter_extractor
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -426,6 +446,10 @@ starborn_living_metal_extractor = {
 	}
 
 	possible = {
+		or = {
+			has_job = starborn_living_metal_extractor
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -518,6 +542,10 @@ starborn_zro_extractor = {
 	}
 
 	possible = {
+		or = {
+			has_job = starborn_zro_extractor
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	

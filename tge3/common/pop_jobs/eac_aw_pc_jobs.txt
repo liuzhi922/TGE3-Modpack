@@ -9,6 +9,10 @@ eac_military_technician_energy = {
 	clothes_texture_index = 4
 	
 	possible = {
+		or = {
+			has_job = eac_military_technician_energy
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 
@@ -77,6 +81,10 @@ eac_military_technician_kinetic = {
 	clothes_texture_index = 4
 	
 	possible = {
+		or = {
+			has_job = eac_military_technician_kinetic
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes
 	}
 
@@ -145,6 +153,10 @@ eac_military_drone_energy = {
 	clothes_texture_index = 4
 	
 	possible = {
+		or = {
+			has_job = eac_military_drone_energy
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -213,6 +225,10 @@ eac_military_drone_kinetic = {
 	clothes_texture_index = 4
 	
 	possible = {
+		or = {
+			has_job = eac_military_drone_kinetic
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 

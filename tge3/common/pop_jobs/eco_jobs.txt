@@ -8,6 +8,10 @@ waste_handler = {
 	clothes_texture_index = 2
 
 	possible = {
+		or = {
+			has_job = waste_handler
+			dpcb_trigger_job = yes
+		}
 		worker_job_check_trigger = yes
 		owner = { is_fallen_empire = no }
 	}
@@ -152,6 +156,10 @@ waste_drone = {
 	building_icon = eco_building_waste_recovery
 	
 	possible = {
+		or = {
+			has_job = waste_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -300,6 +308,10 @@ waste_manager = {
 	clothes_texture_index = 3
 
 	possible = {
+		or = {
+			has_job = waste_manager
+			dpcb_trigger_job = yes
+		}
 		ruler_job_check_trigger = yes
 	}
 
@@ -363,6 +375,10 @@ waste_overseer = {
 	building_icon = eco_building_waste_recovery
 	
 	possible = {
+		or = {
+			has_job = waste_overseer
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	
@@ -473,6 +489,10 @@ park_ranger = {
 	clothes_texture_index = 3
 	
 	possible = {
+		or = {
+			has_job = park_ranger
+			dpcb_trigger_job = yes
+		}
 		specialist_job_check_trigger = yes		
 	}
 	
@@ -525,6 +545,10 @@ ranger_drone = {
 	building_icon = building_executive_retreat
 	
 	possible = {
+		or = {
+			has_job = ranger_drone
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 	

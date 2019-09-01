@@ -47,7 +47,7 @@ eutab_terror_drones = {
 	damage = 1.2
 	health = 2.5
 	has_morale = no
-	morale_damage = 2.5
+	morale_damage = 10.0
 	collateral_damage = 3.5
 	war_exhaustion = 0.3
 	time = 70
@@ -59,6 +59,7 @@ eutab_terror_drones = {
 		category = armies
 		cost = {
 			minerals = 150
+			influence = 25
 		}
 
 		upkeep = {
@@ -163,10 +164,12 @@ eutab_janissary_army = {
 		category = armies
 		cost = {
 			minerals = 90
+			food = 90
 		}
 
 		upkeep = {
 			energy = 0.9
+			food = 0.9
 		}
 	}
 	prerequisites = { "tech_eutab_xeno_janis" }

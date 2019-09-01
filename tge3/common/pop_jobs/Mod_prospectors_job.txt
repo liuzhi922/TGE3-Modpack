@@ -6,6 +6,10 @@ subterranean_prospector = {
 	clothes_texture_index = 3
 
 	possible = {
+		or = {
+			has_job = subterranean_prospector
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -60,6 +64,10 @@ subterranean_prospector_gestalt = {
 	building_icon = building_monolith #placeholder
 	
 	possible = {
+		or = {
+			has_job = subterranean_prospector_gestalt
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -91,6 +99,10 @@ ringworld_prospector = {
 	clothes_texture_index = 3
 
 	possible = {
+		or = {
+			has_job = ringworld_prospector
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -146,6 +158,10 @@ ringworld_prospector_gestalt = {
 	building_icon = building_monolith #placeholder
 	
 	possible = {
+		or = {
+			has_job = ringworld_prospector_gestalt
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
@@ -181,6 +197,10 @@ asteroid_prospector = {
 	clothes_texture_index = 3
 
 	possible = {
+		or = {
+			has_job = asteroid_prospector
+			dpcb_trigger_job = yes
+		}
 		complex_specialist_job_check_trigger = yes
 	}
 	
@@ -236,6 +256,10 @@ asteroid_prospector_gestalt = {
 	building_icon = building_monolith #placeholder
 	
 	possible = {
+		or = {
+			has_job = asteroid_prospector_gestalt
+			dpcb_trigger_job = yes
+		}
 		drone_job_check_trigger = yes
 	}
 
