@@ -160,7 +160,6 @@ civic_indentured_assets = {
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.10
 		slave_market_cost_mult = -0.25
-		country_pop_enslaved_mult = 0.40
 	}
 }
 

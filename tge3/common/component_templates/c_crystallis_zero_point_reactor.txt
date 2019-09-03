@@ -47,6 +47,17 @@
 @battleship_power_9 = 2530
 @battleship_power_10 = 2780
 
+@battleship_power_1 = 825
+@battleship_power_2 = 1080
+@battleship_power_3 = 1450
+@battleship_power_4 = 1875
+@battleship_power_5 = 2325
+@battleship_power_6 = 2655
+@battleship_power_7 = 3030
+@battleship_power_8 = 3405
+@battleship_power_9 = 3795
+@battleship_power_10 = 4170
+
 @titan_power_1 = 1100
 @titan_power_2 = 1450
 @titan_power_3 = 1900
@@ -319,7 +330,7 @@ utility_component_template = {
 	
 	prerequisites = { "tech_c_reactor_6" }
 	component_set = "power_core"
-	size_restriction = { battleship }
+	size_restriction = { battleship SCX_Carrier SCX_Dreadnought }
 	
 	upgrades_to = "C_BATTLESHIP_ZERO_POINT_REACTOR_7"
 	
@@ -327,6 +338,7 @@ utility_component_template = {
 		weight = 60
 	}
 }
+
 
 utility_component_template = {
 	key = "C_TITAN_ZERO_POINT_REACTOR_6"
@@ -465,7 +477,7 @@ utility_component_template = {
 	
 	prerequisites = { "tech_c_reactor_7" }
 	component_set = "power_core"
-	size_restriction = { battleship }
+	size_restriction = { battleship SCX_Carrier SCX_Dreadnought }
 	
 	upgrades_to = "C_BATTLESHIP_ZERO_POINT_REACTOR_8"
 	
@@ -611,7 +623,7 @@ utility_component_template = {
 	
 	prerequisites = { "tech_c_reactor_8" }
 	component_set = "power_core"
-	size_restriction = { battleship }
+	size_restriction = { battleship SCX_Carrier SCX_Dreadnought }
 	
 	upgrades_to = "C_BATTLESHIP_ZERO_POINT_REACTOR_9"
 	
@@ -757,7 +769,7 @@ utility_component_template = {
 	
 	prerequisites = { "tech_c_reactor_9" }
 	component_set = "power_core"
-	size_restriction = { battleship }
+	size_restriction = { battleship SCX_Carrier SCX_Dreadnought }
 	
 	upgrades_to = "C_BATTLESHIP_ZERO_POINT_REACTOR_10"
 	
@@ -896,7 +908,7 @@ utility_component_template = {
 	
 	prerequisites = { "tech_c_reactor_10" }
 	component_set = "power_core"
-	size_restriction = { battleship }
+	size_restriction = { battleship SCX_Carrier SCX_Dreadnought }
 	
 	ai_weight = {
 		weight = 100

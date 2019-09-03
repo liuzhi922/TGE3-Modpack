@@ -52,6 +52,7 @@ SCX_Carrier = {
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
+	required_component_set = "c_ship_crew"
 	
 	resources = {
 		category = ships

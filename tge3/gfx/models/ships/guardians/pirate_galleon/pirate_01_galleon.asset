@@ -23,7 +23,7 @@ entity = {
 entity = {
 	name = "pirate_01_galleon_hull_entity"
 	pdxmesh = "pirate_01_galleon_mesh"
-	scale = 0.25 #dss 1.2
+	scale = 0.6 #dss 1.2
 	
 	default_state = "idle"
 	state = { name = "idle" animation = "idle"

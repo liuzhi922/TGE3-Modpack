@@ -63,19 +63,19 @@ ship_design = {
 		}
 		component = {
 			slot = "STRIKE_CRAFT_01"
-			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+			template = "AI_STRIKE_CRAFT"	
 		}
 		component = {
 			slot = "STRIKE_CRAFT_02"
-			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+			template = "AI_STRIKE_CRAFT"	
 		}	
 		component = {
 			slot = "STRIKE_CRAFT_03"
-			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+			template = "AI_STRIKE_CRAFT"	
 		}	
 		component = {
 			slot = "STRIKE_CRAFT_04"
-			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+			template = "AI_STRIKE_CRAFT"	
 		}			
 		component = {
 			slot = "LARGE_GUN_01"
@@ -244,11 +244,11 @@ ship_design = {
 	
 		component = {
 			slot = "STRIKE_CRAFT_01"
-			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+			template = "AI_STRIKE_CRAFT"	
 		}		
 		component = {
 			slot = "STRIKE_CRAFT_02"
-			template = "C_LARGE_BOMBERS_HANGAR_DIM"	
+			template = "AI_STRIKE_CRAFT"	
 		}	
 		component = {
 			slot = "EXTRA_LARGE_01"
