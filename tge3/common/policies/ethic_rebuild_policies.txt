@@ -366,10 +366,7 @@ enslavement_rate = {
 		modifier = {
 			country_pop_enslaved_mult = 0.1
 		}
-		
-		valid = {
-			has_valid_civic = civic_reeducated_labor		
-		}			
+			
 		
 		AI_weight = {
 		}
@@ -387,10 +384,6 @@ enslavement_rate = {
 		modifier = {
 			country_pop_enslaved_mult = 0.15
 		}
-		
-		valid = {
-			has_valid_civic = civic_reeducated_labor		
-		}			
 		
 		AI_weight = {
 		  modifier = {
@@ -412,11 +405,7 @@ enslavement_rate = {
             planet_stability_add = 5
 			planet_jobs_energy_produces_mult = -0.05
             			
-		}
-		
-		valid = {
-			has_valid_civic = civic_reeducated_labor						
-		}			
+		}		
 		
 		AI_weight = {
 		      modifier = {
@@ -441,9 +430,6 @@ enslavement_rate = {
 			country_pop_enslaved_mult = 0.25				
 		}
 		
-		valid = {
-			has_valid_civic = civic_slaver_guilds						
-		}			
 		
 		AI_weight = {
 
@@ -460,11 +446,7 @@ enslavement_rate = {
 		
 		modifier = {
 			country_pop_enslaved_mult = 0.33				
-		}
-		
-		valid = {
-			has_valid_civic = civic_slaver_guilds					
-		}			
+		}		
 		
 		AI_weight = {
 		   modifier = {
@@ -485,11 +467,7 @@ enslavement_rate = {
 			country_pop_enslaved_mult = 0.4
 			slave_market_cost_mult = -0.2
 			country_unity_produces_mult = -0.05
-		}
-		
-		valid = {
-			has_valid_civic = civic_slaver_guilds						
-		}			
+		}		
 		
 		AI_weight = {
 		    modifier = {
