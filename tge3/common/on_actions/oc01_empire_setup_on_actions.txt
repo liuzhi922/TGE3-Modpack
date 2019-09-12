@@ -1,0 +1,34 @@
+# Triggers when the game starts
+on_game_start_country = {
+	events = {
+		#origins_civics_empire_setup.1 # civic galaxy setup
+		#origins_civics_empire_setup.2 # civic cluster setup
+		#origins_civics_empire_setup.3 # civic solar system setup
+		#origins_civics_empire_setup.4 # civic colony setup
+		origins_civics_empire_setup.5 # civic species setup
+		#origins_civics_empire_setup.7 # civic secondary planets pop setup 
+		#origins_civics_empire_setup.8 # civic leader setup
+		#origins_civics_empire_setup.9 # civic ships setup
+		origins_civics_empire_setup.11 #civic flags and country modifiers setup
+	}
+}
+
+# Called during empire initialization when starting a new game if has_secondary_species game rule is true.
+# Called before empire_init_create_capital_pops.
+# scope: planet
+# from: founder species
+# fromfrom: secondary species (if exists)
+empire_init_capital_planet = {
+	events = {
+		origins_civics_empire_setup.6 # civic homeworld & pops setup
+		# at this point the species might have changed (because we added traits), so FROMFROM might not be the secondary species anymore
+	}
+}
+
+# called during empire initialization when starting a new game
+# scope: country
+empire_init_add_technologies = {
+	events = {
+		origins_civics_empire_setup.10 # civic technology setup
+	}
+}

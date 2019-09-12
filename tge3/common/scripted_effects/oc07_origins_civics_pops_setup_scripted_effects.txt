@@ -1,0 +1,129 @@
+oc_generate_start_pops = {	
+	if = { 
+		limit = { 
+			owner = {
+				oc_has_secondary_species_civics = yes
+			}
+		}
+
+		if = { limit = { last_created_species = { is_species_class = MACHINE } }
+			modify_species = {
+				species = last_created_species
+				add_trait = trait_machine_unit
+				add_traits_at_start_of_list = yes
+			}
+			last_created_species = { save_event_target_as = last_created_species }
+		}
+
+		last_created_species = {
+			set_citizenship_type = {
+				country = root.owner
+				type = citizenship_slavery
+			}
+		}
+		if = {
+			limit = { owner = { oc_has_robot_pops_on_start_civics = yes } }
+			while = {
+				count = 8
+				# replace pops instead of create new pops
+				random_pop = {
+					limit = { NOT = { is_same_species = last_created_species } }
+					change_species = last_created
+				}
+				#create_pop = {
+				#	species = last_created_species
+				#	ethos = random
+				#}
+			}
+		}
+		else = {
+			while = {
+				count = 12
+				# replace pops instead of create new pops
+				random_pop = {
+					limit = { NOT = { is_same_species = last_created_species } }
+					change_species = last_created
+				}
+				#create_pop = {
+				#	species = last_created_species
+				#	ethos = random
+				#}
+			}
+		}
+	}
+	
+	if = { 
+		limit = { owner = { oc_has_robot_pops_on_start_civics = yes } }
+		owner = { create_built_robot_species = yes }
+		while = {
+			count = 8
+			# replace pops instead of create new pops
+			random_pop = {
+				limit = { NOT = { is_same_species = last_created_species } }
+				change_species = last_created
+			}
+			#create_pop = {
+			#	species = last_created_species
+			#}
+		}
+		if = { 
+			limit = { owner = { is_megacorp = yes} }
+			while = {
+				limit = { num_pops < 28 }
+				create_pop = {
+					species = owner_main_species
+					ethos = random
+				}
+			}
+
+		}
+		else = {
+			while = {
+				limit = { num_pops < 27 }
+				create_pop = {
+					species = owner_main_species
+					ethos = random
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { owner = { is_hive_empire = yes } }
+		while = {
+			limit = { num_pops < 34 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+	else_if = {
+		limit = { owner = { is_machine_empire = yes} }
+		while = {
+			limit = { num_pops < 26 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}				
+	}
+	else_if = {
+		limit = { owner = { is_megacorp = yes} }
+		while = {
+			limit = { num_pops < 28 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}				
+	}	
+	else = {
+		while = {
+			limit = { num_pops < 24 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}		
+	}	
+}

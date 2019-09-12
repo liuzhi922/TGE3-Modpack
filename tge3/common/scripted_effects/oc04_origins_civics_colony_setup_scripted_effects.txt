@@ -1,0 +1,362 @@
+# Origins Civics Planet Setup Scripted Effects
+# by cbshing
+#	Example:
+#
+#	example_effect = { 
+#		add_energy = -100
+#	}
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+
+# ###########################
+# #     Colony Effects      #
+# ###########################
+
+# For every possible homeworld, create a unique homeworld flag and add planet homeworld flag
+# Scope: Country
+oc_set_colony_homeworld_flag = {
+	if = { limit = { any_owned_planet = { has_planet_flag = planet_earth } NOT = { any_country = { has_country_flag =  oc_colony_empire_earth } } }
+		set_country_flag = oc_colony_empire_earth
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_earth
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_01 } } }
+		set_country_flag = oc_colony_empire_01
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_01
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_02 } } }
+		set_country_flag = oc_colony_empire_02
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_02
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_03 } } }
+		set_country_flag = oc_colony_empire_03
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_03
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_04 } } }
+		set_country_flag = oc_colony_empire_04
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_04
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_05 } } }
+		set_country_flag = oc_colony_empire_05
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_05
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_06 } } }
+		set_country_flag = oc_colony_empire_06
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_06
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_07 } } }
+		set_country_flag = oc_colony_empire_07
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_07
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_08 } } }
+		set_country_flag = oc_colony_empire_08
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_08
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_09 } } }
+		set_country_flag = oc_colony_empire_09
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_09
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_10 } } }
+		set_country_flag = oc_colony_empire_10
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_10
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_11 } } }
+		set_country_flag = oc_colony_empire_11
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_11
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_12 } } }
+		set_country_flag = oc_colony_empire_12
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_12
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_13 } } }
+		set_country_flag = oc_colony_empire_13
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_13
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_14 } } }
+		set_country_flag = oc_colony_empire_14
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_14
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_15 } } }
+		set_country_flag = oc_colony_empire_15
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_15
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_16 } } }
+		set_country_flag = oc_colony_empire_16
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_16
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_17 } } }
+		set_country_flag = oc_colony_empire_17
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_17
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_18 } } }
+		set_country_flag = oc_colony_empire_18
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_18
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_19 } } }
+		set_country_flag = oc_colony_empire_19
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_19
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_20 } } }
+		set_country_flag = oc_colony_empire_20
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_20
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_21 } } }
+		set_country_flag = oc_colony_empire_21
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_21
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_22 } } }
+		set_country_flag = oc_colony_empire_22
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_22
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_23 } } }
+		set_country_flag = oc_colony_empire_23
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_23
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_24 } } }
+		set_country_flag = oc_colony_empire_24
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_24
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_25 } } }
+		set_country_flag = oc_colony_empire_25
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_25
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_26 } } }
+		set_country_flag = oc_colony_empire_26
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_26
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_27 } } }
+		set_country_flag = oc_colony_empire_27
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_27
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_28 } } }
+		set_country_flag = oc_colony_empire_28
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_28
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_29 } } }
+		set_country_flag = oc_colony_empire_29
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_29
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_30 } } }
+		set_country_flag = oc_colony_empire_30
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_30
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_31 } } }
+		set_country_flag = oc_colony_empire_31
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_31
+		}
+	}
+	else_if = { limit = { NOT = { any_country = { has_country_flag =  oc_colony_empire_32 } } }
+		set_country_flag = oc_colony_empire_32
+		random_owned_planet = { limit = { is_capital = yes } 
+			set_planet_flag = colony_homeworld_32
+		}
+	}
+	else = {
+		set_country_flag = oc_exceeds_colony_empire_limit
+	}
+}
+
+# For every possible colony, find a unique homeworld
+# Scope: Country
+oc_set_colony_flag = {
+	if = { limit = { prev = { has_country_flag = oc_colony_empire_earth } }
+		set_country_flag = oc_colony_empire_earth
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_01 } }
+		set_country_flag = oc_colony_empire_01
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_02 } }
+		set_country_flag = oc_colony_empire_02
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_03 } }
+		set_country_flag = oc_colony_empire_03
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_04 } }
+		set_country_flag = oc_colony_empire_04
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_05 } }
+		set_country_flag = oc_colony_empire_05
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_06 } }
+		set_country_flag = oc_colony_empire_06
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_07 } }
+		set_country_flag = oc_colony_empire_07
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_08 } }
+		set_country_flag = oc_colony_empire_08
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_09 } }
+		set_country_flag = oc_colony_empire_09
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_10 } }
+		set_country_flag = oc_colony_empire_10
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_11 } }
+		set_country_flag = oc_colony_empire_11
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_12 } }
+		set_country_flag = oc_colony_empire_12
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_13 } }
+		set_country_flag = oc_colony_empire_13
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_14 } }
+		set_country_flag = oc_colony_empire_14
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_15 } }
+		set_country_flag = oc_colony_empire_15
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_16 } }
+		set_country_flag = oc_colony_empire_16
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_17 } }
+		set_country_flag = oc_colony_empire_17
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_18 } }
+		set_country_flag = oc_colony_empire_18
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_19 } }
+		set_country_flag = oc_colony_empire_19
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_20 } }
+		set_country_flag = oc_colony_empire_20
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_21 } }
+		set_country_flag = oc_colony_empire_21
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_22 } }
+		set_country_flag = oc_colony_empire_22
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_23 } }
+		set_country_flag = oc_colony_empire_23
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_24 } }
+		set_country_flag = oc_colony_empire_24
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_25 } }
+		set_country_flag = oc_colony_empire_25
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_26 } }
+		set_country_flag = oc_colony_empire_26
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_27 } }
+		set_country_flag = oc_colony_empire_27
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_28 } }
+		set_country_flag = oc_colony_empire_28
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_29 } }
+		set_country_flag = oc_colony_empire_29
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_30 } }
+		set_country_flag = oc_colony_empire_30
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_31 } }
+		set_country_flag = oc_colony_empire_31
+	}
+	else_if = { limit = { prev = { has_country_flag = oc_colony_empire_32 } }
+		set_country_flag = oc_colony_empire_32
+	}
+}
+
+# Create a new "homeworld" species
+# Scope: Country
+oc_create_colony_species = {
+	random_owned_pop = {
+		limit = { is_same_species = event_target:oc_colony_species }
+		create_species = {
+			is_mod = no
+			name = this
+			namelist = this
+			plural = this
+			class = this
+			portrait = this
+			traits = this
+			homeworld = owner.capital_scope
+		}
+	}
+}
+
+# For every possible colony, find a unique homeworld
+# Scope: Country
+oc_change_pops_and_leaders_to_last_created_species = {
+	every_owned_pop = {
+		limit = { is_same_species = event_target:oc_colony_species }
+		change_species = last_created
+	} 
+	every_owned_leader = {
+		limit = { is_same_species = event_target:oc_colony_species }
+		change_species = last_created
+	}
+	every_pool_leader = {
+		limit = { is_same_species = event_target:oc_colony_species }
+		change_species = last_created
+	}
+}

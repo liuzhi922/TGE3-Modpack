@@ -1,0 +1,40 @@
+﻿l_braz_por:
+
+ ####################################
+ # Origins Planet Events
+ ####################################
+ 
+ # Random Events
+ origins_civics_planet_random_events.1.name:0 "Mysterious Vault"
+ origins_civics_planet_random_events.1.desc.normal:0 ""
+ 
+ # Quest Events
+ # Homeworld Restoration
+ origins_civics_planet_quest_events.100.name:0 "[Root.GetName] is Restored"
+ origins_civics_planet_quest_events.100.desc.normal:0 "To much pomp and fanfare, [Root.Owner.GetRulerTitle] [Root.Owner.GetRulerName] toggled the ceremonial switch turning off the atmospheric scrubbers and thereby signaling the completion of the terraforming of [Root.GetName]. As the mechanical whir of the atmospheric scrubbers dropped down to a silent stop, crowds around the capital and on our colonies erupted into celebration. Home, our home, was finally restored. For the first time in generations we [Root.Owner.GetSpeciesName] no longer need to wear environmental suits outdoors or use rebreathers over our [Root.Owner.GetSpeciesMouthName]s to breath on our home world.\n\nThe euphoria following this event will surely reverberate throughout our empire for some time."
+ origins_civics_planet_quest_events.100.desc.city:0 "To much pomp and fanfare, [Root.Owner.GetRulerTitle] [Root.Owner.GetRulerName] cut the ceremonial ribbon opening the first Arcology and thereby signaling the completion of the encapsulation of [Root.GetName]. As the doors opened a rush of filtered, breathable air exited the Arcology. Home, our home is now made livable once again. For the first time in generations we [Root.Owner.GetSpeciesName] no longer need to wear environmental suits or use rebreathers over our [Root.Owner.GetSpeciesMouthName]s to breath on our home world.\n\nThe euphoria following this event will surely reverberate throughout our empire for some time."
+ origins_civics_planet_quest_events.100.desc.gaia:0 "To much pomp and fanfare, [Root.Owner.GetRulerTitle] [Root.Owner.GetRulerName] toggled the ceremonial switch turning off the atmospheric boosters and thereby signaling the completion of the terraforming of [Root.GetName]. As the mechanical whir of the terraforming machine dropped down to a silent stop, crowds around the capital and on our colonies marveled at the wonder. [Root.GetName] is a paradise. For the first time in generations we [Root.Owner.GetSpeciesName] no longer need to wear environmental suits or use rebreathers over our [Root.Owner.GetSpeciesMouthName]s to breath on our home world.\n\nThe euphoria following this event will surely reverberate throughout our empire for some time."
+ origins_civics_planet_quest_events.100.desc.hive:0 "[Root.Owner.GetRulerTitle] [Root.Owner.GetRulerName] marveled at the completion of the terraforming of [Root.GetName]. As the mechanical whir of the atmospheric scrubbers dropped down to a silent stop, [Root.Owner.GetRulerName] surveyed over the changed land. Home was finally restored. For the first time in several broods we [Root.Owner.GetSpeciesName] no longer need to wear environmental suits outdoors or use rebreathers over our [Root.Owner.GetSpeciesMouthName]s to breath on our home world.\n\nThe is a momentous occasion." 
+ origins_civics_planet_quest_events.100.a.regular:0 "Celebrations Abound!"
+ origins_civics_planet_quest_events.102.name:0 "Homeworld Climate Restoration"
+ origins_civics_planet_quest_events.102.desc.nuked:0 "For generations the climate of [Root.GetHomeWorldName] has been devastated by the nuclear war. Between the radioactive water and the winds filled with toxic dust, it is difficult for our species to envision this beautiful planet we evolved on. Now that we have the technology that can restore the climate of our home, many of the [This.GetSpeciesNamePlural] long for the return of our world to its original state."
+ origins_civics_planet_quest_events.102.desc.norm:0 "Generations ago the climate of [Root.GetHomeWorldName] changed. This climate shift has made it difficult for our species to envision this beautiful planet we evolved on. Now that we have the technology that can restore the climate of our home, many of the [This.GetSpeciesNamePlural] long for the return of our world to its original state."
+ origins_civics_planet_quest_events.102.a:0 "[Root.GetHomeWorldName] will be restored."
+
+ ####################################
+ # Origins Event Chains Projects
+ ####################################
+ oc_planet_quest_restore_homeworld_chain_title:0 "Homeworld Climate Restoration"
+ oc_planet_quest_restore_homeworld_chain_desc:0 "Our species long for the restoration of [Root.GetHomeWorldName] to its original climate. If we terraform our world back to our species' ideal planet preference, it will bring several benefits to our country." 
+ 
+ ####################################
+ # Origins Points of Interest
+ ####################################
+ oc_restore_home_event_chain_poi:0 "[Root.GetHomeWorldName]"
+ oc_restore_home_event_chain_poi_desc:0 "Terraform [Root.GetHomeWorldName] to primary species' ideal planet preference to complete the $oc_planet_quest_restore_homeworld_chain_title$ event chain."
+ 
+ ####################################
+ # Origins Static Modifiers
+ ####################################
+ oc_restored_homeworld:0 "Homeworld Restored"
+ oc_restored_homeworld_hive:0 "$oc_restored_homeworld$"

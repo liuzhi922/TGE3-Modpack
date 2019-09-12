@@ -1,0 +1,8 @@
+# Planet has been terraformed
+# This = Planet
+# From = Terraformer
+on_terraforming_complete = {
+	events = {
+		origins_civics_planet_quest_events.100
+	}
+}

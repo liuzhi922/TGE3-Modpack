@@ -1,0 +1,1036 @@
+# Origins Civics Requires Country Setup Triggers
+# by cbshing
+#
+# These triggers are referenced in the 01_origins_civics_empire_setup.txt
+# These triggers are used to setup the galaxy.
+#
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+### setup country triggers
+
+# scope: country 
+oc_requires_secondary_pops_setup = {
+	OR = {
+		oc_has_secondary_species_civics = yes
+		oc_has_robot_pops_on_start_civics = yes
+		oc_requires_special_building_setup = yes
+	}
+}
+
+# scope: country 
+oc_requires_galaxy_setup = {
+	# None at the moment
+}
+
+# scope: country 
+oc_requires_cluster_setup = {
+	OR = {
+		oc_requires_isolate_cluster = yes
+		oc_requires_advanced_start = yes
+		oc_requires_hostile_neighbors = yes
+	}
+}
+
+# scope: country 
+oc_requires_solar_system_setup = {
+	OR = {
+		oc_requires_isolate_star = yes
+		oc_requires_megastruture_dyson_sphere = yes
+		oc_requires_megastruture_habitat = yes
+		oc_requires_megastruture_gateway = yes
+		oc_requires_megastruture_l_gate = yes
+		oc_requires_megastruture_sentry_array = yes
+		oc_requires_megastruture_science_nexus = yes
+		oc_requires_natural_wormhole = yes
+		oc_requires_star_class_to_change = yes
+		oc_requires_second_habitable_planet = yes
+	}
+}
+
+# scope: country 
+oc_requires_colony_setup = {
+	OR = {
+		has_oc_lost_colony_civic = yes
+		has_oc_exiled_colony_civic = yes
+		has_oc_sublight_empire_civic = yes
+		has_oc_sublight_conquerer_civic = yes
+		has_oc_refugee_saviour_civic = yes
+		has_oc_fallen_colony_civic = yes
+		has_oc_fallen_enclave_civic = yes
+		oc_is_ulysses_initiative_country = yes
+		has_country_flag = starts_as_a_colony
+	}
+}
+
+# scope: country 
+oc_requires_species_setup = {
+	OR = {
+		oc_requires_homeworld_preference_to_change = yes
+		oc_requires_secondary_species_preference_change = yes
+		oc_requires_species_have_new_trait = yes
+		oc_is_from_earth = yes
+	}
+}
+# scope: country 
+oc_requires_planet_setup = {
+	OR = {
+		oc_requires_homeworld_size_change = yes
+		oc_requires_homeworld_class_to_change = yes
+		oc_requires_reset_capital_setup = yes
+		oc_requires_reset_capital_special_setup = yes
+		oc_requires_reset_capital_habitat_setup = yes
+		oc_requires_special_deposit_setup = yes
+		oc_requires_special_building_setup = yes
+		oc_requires_lonely_capital = yes
+	}
+}
+
+# scope: country 
+oc_requires_pops_setup = {
+	has_country_flag = invalid_oc_country
+}
+
+
+# scope: country 
+oc_requires_leader_setup = {
+	OR = {
+		oc_requires_leader_ruler_traits = yes
+		oc_requires_all_leader_traits = yes
+	}
+}
+
+# scope: country 
+oc_requires_technologies_setup = {
+	OR = {
+		oc_has_robot_pops_on_start_civics = yes
+		oc_requires_random_tier2_ship_tech = yes
+	}
+}
+
+# scope: country 
+oc_requires_country_flags_setup = {
+	OR = {
+		oc_has_restore_homeworld_quest_hidden_civics = yes
+		oc_requires_megastruture_habitat = yes
+	}
+}
+
+# scope: country 
+oc_requires_npc_sol = {
+	OR = {
+		oc_requires_default_npc_sol = yes
+		oc_requires_primitive_early_space_age_sol = yes
+		oc_requires_nuked_sol = yes
+	}
+}
+
+### setup archetypes triggers
+
+# scope: country 
+oc_requires_megastruture_habitat = {
+	OR = {
+		oc_is_habitat_country = yes
+		has_country_flag = starts_on_habitat
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_habitat_over_homeworld = {
+	OR = {
+		oc_is_habitat_country = yes
+		has_country_flag = starts_on_habitat
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_dyson_sphere = {
+	OR = {
+		oc_requires_megastruture_dyson_sphere_tier2 = yes
+		oc_requires_megastruture_dyson_sphere_tier5 = yes
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_gateway = {
+	OR = {
+		oc_requires_megastruture_gateway_ruined = yes
+		oc_requires_megastruture_gateway_construction = yes
+		oc_requires_megastruture_gateway_complete = yes
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_sentry_array = {
+	OR = {
+		oc_requires_megastruture_sentry_array_tier2 = yes
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_science_nexus = {
+	OR = {
+		oc_requires_megastruture_science_nexus_tier2 = yes
+	}
+}
+
+# scope: country 
+oc_requires_star_class_to_change = {
+	OR = {
+		oc_requires_star_class_change_to_blackhole = yes
+		has_country_flag = starts_with_blackhole_star
+	}
+}
+
+# scope: country 
+oc_requires_all_planets_habitable = {
+	OR = {
+		oc_requires_all_planets_class_to_change_to_nuked = yes
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_preference_to_change = {
+	OR = {
+		oc_requires_habitat_preference = yes
+		oc_requires_gaia_preference = yes
+		oc_requires_nuked_preference = yes
+		oc_requires_continental_preference = yes
+	}
+}
+
+# scope: country 
+oc_requires_species_have_new_trait = {
+	OR = {
+		oc_has_survivor_species_trait = yes
+		oc_has_cybernetic_species_trait = yes
+		oc_has_latent_psionic_species_trait = yes
+		oc_has_synthetic_species_trait = yes
+		oc_has_psionic_species_trait = yes
+		oc_has_brain_slug_species_trait = yes
+	}
+}
+
+# scope: country 
+oc_requires_new_homeworld = {
+	OR = {
+		oc_requires_new_homeworld_is_secondary_planet = yes
+		oc_requires_new_homeworld_is_habitat = yes
+		oc_is_from_earth = yes
+	}
+}
+
+# scope: country
+oc_requires_homeworld_size_change = {
+	OR = {
+		oc_requires_homeworld_size_change_to_25 = yes
+		oc_requires_homeworld_size_change_to_12 = yes
+		oc_requires_homeworld_size_change_to_8 = yes
+		oc_requires_homeworld_size_change_to_6 = yes
+		oc_requires_homeworld_size_change_to_4 = yes
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change = {
+	OR = {
+		oc_requires_homeworld_class_to_change_to_random_habitable = yes
+		oc_requires_homeworld_class_to_change_to_random_habitable_tier1 = yes
+		oc_requires_homeworld_class_to_change_to_random_habitable_tier2 = yes
+		oc_requires_homeworld_class_to_change_to_random_uninhabitable = yes
+		oc_requires_homeworld_class_to_change_to_nuked = yes
+		oc_requires_homeworld_class_to_change_to_gaia = yes
+		oc_requires_homeworld_class_to_change_to_machine = yes 
+		oc_requires_homeworld_class_to_change_to_city = yes
+		oc_requires_homeworld_class_to_change_to_hive = yes
+		oc_requires_homeworld_class_to_change_to_arid = yes
+		oc_requires_homeworld_class_to_change_to_desert = yes
+		oc_requires_homeworld_class_to_change_to_savannah = yes
+		oc_requires_homeworld_class_to_change_to_sandsea = yes
+		oc_requires_homeworld_class_to_change_to_mesa = yes
+		oc_requires_homeworld_class_to_change_to_oasis = yes
+		oc_requires_homeworld_class_to_change_to_geocrystalline = yes
+		oc_requires_homeworld_class_to_change_to_continental = yes
+		oc_requires_homeworld_class_to_change_to_ocean = yes
+		oc_requires_homeworld_class_to_change_to_tropical = yes
+		oc_requires_homeworld_class_to_change_to_mangrove = yes
+		oc_requires_homeworld_class_to_change_to_hajungle = yes
+		oc_requires_homeworld_class_to_change_to_desertislands = yes
+		oc_requires_homeworld_class_to_change_to_lush = yes
+		oc_requires_homeworld_class_to_change_to_marginal = yes
+		oc_requires_homeworld_class_to_change_to_tundra = yes
+		oc_requires_homeworld_class_to_change_to_alpine = yes
+		oc_requires_homeworld_class_to_change_to_arctic = yes
+		oc_requires_homeworld_class_to_change_to_frozen_desert = yes
+		oc_requires_homeworld_class_to_change_to_steppe = yes
+		oc_requires_homeworld_class_to_change_to_hadesert = yes
+		oc_requires_homeworld_class_to_change_to_antarctic = yes
+	}
+}
+
+# scope: country 
+oc_requires_reset_capital_setup = {
+	OR = {
+		oc_requires_homeworld_class_to_change_to_random_habitable = yes
+		oc_requires_homeworld_class_to_change_to_random_habitable_tier1 = yes
+		oc_requires_homeworld_class_to_change_to_random_habitable_tier2 = yes
+		oc_requires_homeworld_class_to_change_to_arid = yes
+		oc_requires_homeworld_class_to_change_to_desert = yes
+		oc_requires_homeworld_class_to_change_to_savannah = yes
+		oc_requires_homeworld_class_to_change_to_sandsea = yes
+		oc_requires_homeworld_class_to_change_to_mesa = yes
+		oc_requires_homeworld_class_to_change_to_oasis = yes
+		oc_requires_homeworld_class_to_change_to_geocrystalline = yes
+		oc_requires_homeworld_class_to_change_to_continental = yes
+		oc_requires_homeworld_class_to_change_to_ocean = yes
+		oc_requires_homeworld_class_to_change_to_tropical = yes
+		oc_requires_homeworld_class_to_change_to_mangrove = yes
+		oc_requires_homeworld_class_to_change_to_hajungle = yes
+		oc_requires_homeworld_class_to_change_to_desertislands = yes
+		oc_requires_homeworld_class_to_change_to_lush = yes
+		oc_requires_homeworld_class_to_change_to_marginal = yes
+		oc_requires_homeworld_class_to_change_to_tundra = yes
+		oc_requires_homeworld_class_to_change_to_alpine = yes
+		oc_requires_homeworld_class_to_change_to_arctic = yes
+		oc_requires_homeworld_class_to_change_to_frozen_desert = yes
+		oc_requires_homeworld_class_to_change_to_steppe = yes
+		oc_requires_homeworld_class_to_change_to_hadesert = yes
+		oc_requires_homeworld_class_to_change_to_antarctic = yes
+	}
+}
+
+# scope: country 
+oc_requires_reset_capital_special_setup = {
+	OR = {
+		oc_requires_homeworld_class_to_change_to_nuked = yes
+		oc_requires_homeworld_class_to_change_to_gaia = yes
+		oc_requires_homeworld_class_to_change_to_machine = yes 
+		oc_requires_homeworld_class_to_change_to_city = yes
+		oc_requires_homeworld_class_to_change_to_hive = yes
+	}
+}
+
+# scope: country 
+oc_requires_reset_capital_habitat_setup = {
+	OR = {
+		oc_requires_habitat_setup = yes
+		oc_requires_ringworld_setup = yes
+	}
+}
+
+# Used for fixing bug with civics homeworld = code resetting all jobs on planet
+# scope: country 
+oc_requires_reset_buildings_and_districts = {
+	OR = {
+		has_oc_hive_life_seeded_civic = yes
+		has_oc_corp_life_seeded_civic = yes
+		oc_is_nuked_preference_country = yes
+		has_oc_robo_nuked_start_civic = yes
+	}
+}
+
+# scope: country 
+oc_requires_special_deposit_setup = {
+	OR = {
+		oc_requires_vault_building_setup = yes
+	}
+}
+
+# scope: country 
+oc_requires_special_building_setup = {
+	OR = {
+		oc_requires_robot_factory_building_setup = yes
+		oc_requires_vault_building_setup = yes
+	}
+}
+
+# scope: country
+oc_requires_capital_modifiers = {
+	OR = {
+		oc_requires_capital_orbital_debris_setup = yes
+		oc_requires_secondary_planet_orbital_debris_setup = yes
+		oc_requires_capital_titanic_life_modifier_setup = yes
+		oc_requires_capital_ecological_disaster_modifier_setup = yes
+	}
+}
+
+# scope: country
+oc_requires_leader_ruler_traits = {
+	OR = {
+		oc_requires_eternal_leader_ruler_trait = yes
+		oc_requires_digitally_eternal_ruler_trait = yes
+	}
+}
+
+# scope: country
+oc_requires_all_leader_traits = {
+	OR = {
+		oc_requires_clinically_eternal_leader_trait = yes
+	}
+}
+
+
+### individual civics triggers
+
+# scope: country 
+oc_requires_advanced_start = {
+	OR = {
+		has_oc_sublight_empire_civic = yes
+		has_oc_sublight_conquerer_civic = yes
+		has_country_flag = starts_with_colonies
+	}
+}
+
+# scope: country 
+oc_has_nearby_systems_surveyed_country = {
+	OR = {
+		oc_requires_advanced_start = yes
+		oc_is_fallen_colonies_country = yes
+		has_country_flag = starts_with_systems_surveyed
+	}
+}
+
+# scope: country 
+oc_requires_isolate_cluster = {
+	OR = {
+		has_oc_n_cluster_civic = yes
+		has_country_flag = starts_in_isolated_cluster
+	}
+}
+
+# scope: country 
+oc_requires_hostile_neighbors = {
+	OR = {
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_isolate_star = {
+	OR = {
+		has_oc_dyson_engineers_civic = yes
+		has_country_flag = starts_in_isolated_system
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_dyson_sphere_tier2 = {
+	OR = {
+		has_oc_dyson_engineers_civic = yes
+		has_country_flag = starts_with_dyson_sphere_tier2
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_dyson_sphere_tier5 = {
+	OR = {
+		has_country_flag = starts_with_dyson_sphere_tier5
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_gateway_ruined = {
+	OR = {
+		has_country_flag = starts_with_ruined_gateway
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_gateway_construction = {
+	OR = {
+		has_oc_dyson_engineers_civic = yes
+		has_country_flag = starts_with_gateway_under_construction
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_gateway_complete = {
+	OR = {
+		has_country_flag = starts_with_active_gateway
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_l_gate = {
+	OR = {
+		has_country_flag = starts_with_l_gate
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_sentry_array_tier2 = {
+	OR = {
+		has_country_flag = starts_with_sentry_array_tier2
+	}
+}
+
+# scope: country 
+oc_requires_megastruture_science_nexus_tier2 = {
+	OR = {
+		has_country_flag = starts_with_science_nexus_tier2
+	}
+}
+
+# scope: country 
+oc_requires_natural_wormhole = {
+	OR = {
+		has_oc_wormhole_travelers_civic = yes
+		has_country_flag = starts_with_wormhole
+	}
+}
+
+# scope: country 
+oc_requires_star_class_change_to_blackhole = {
+	OR = {
+		has_oc_worm_loved_civic = yes
+		has_country_flag = starts_with_blackhole
+	}
+}
+
+# scope: country 
+oc_requires_secondary_species_colony_setup = {
+	OR = {
+		has_oc_refugee_saviour_civic = yes
+		has_country_flag = starts_with_secondary_species_are_aliens
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_random_habitable = {
+	OR = {
+		has_country_flag = starts_with_random_habitable_homeworld
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_random_habitable_tier1 = {
+	OR = {
+		has_country_flag = human_3
+		has_country_flag = starts_with_random_tier1_habitable_homeworld
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_random_habitable_tier2 = {
+	OR = {
+		has_oc_climate_shift_civic = yes
+		has_oc_corp_climate_shift_civic = yes
+		has_country_flag = starts_with_random_tier2_habitable_homeworld
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_random_uninhabitable = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_habitat_life_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_oc_hive_habitat_life_civic = yes
+		has_oc_robo_voidborne_mechanisms_civic = yes
+		has_country_flag = starts_with_uninhabitable_homeworld
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_nuked = {
+	NOR = { 
+		has_valid_civic = civic_post_apocalyptic
+		has_valid_civic = civic_machine_terminator 
+	}
+	OR = {
+		oc_is_nuked_country = yes
+		has_country_flag = starts_on_nuked_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_gaia = {
+	NOT = { has_valid_civic = civic_life_seeded }
+	OR = {
+		oc_is_gaia_country = yes
+		has_country_flag = starts_on_gaia_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_machine = {
+	OR = {
+		oc_is_machine_world_country = yes
+		has_country_flag = starts_on_machine_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_hive = {
+	OR = {
+		oc_is_hive_world_country = yes
+		has_country_flag = starts_on_hive_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_city = {
+	OR = {
+		#oc_is_city_world_country = yes
+		has_country_flag = starts_on_city_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_arid = {
+	OR = {
+		has_country_flag = starts_on_arid_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_desert = {
+	OR = {
+		has_country_flag = starts_on_desert_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_savannah = {
+	OR = {
+		has_country_flag = starts_on_savannah_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_sandsea = {
+	OR = {
+		has_country_flag = starts_on_sandsea_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_mesa = {
+	OR = {
+		has_country_flag = starts_on_mesa_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_oasis = {
+	OR = {
+		has_country_flag = starts_on_oasis_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_geocrystalline = {
+	OR = {
+		has_country_flag = starts_on_geocrystalline_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_continental = {
+	OR = {
+		has_country_flag = starts_on_continental_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_ocean = {
+	OR = {
+		has_country_flag = starts_on_ocean_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_tropical = {
+	OR = {
+		has_country_flag = starts_on_tropical_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_mangrove = {
+	OR = {
+		has_country_flag = starts_on_mangrove_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_hajungle = {
+	OR = {
+		has_country_flag = starts_on_hajungle_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_desertislands = {
+	OR = {
+		has_country_flag = starts_on_desertislands_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_lush = {
+	OR = {
+		has_country_flag = starts_on_lush_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_marginal = {
+	OR = {
+		has_country_flag = starts_on_marginal_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_tundra = {
+	OR = {
+		has_country_flag = starts_on_tundra_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_alpine = {
+	OR = {
+		has_country_flag = starts_on_alpine_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_arctic = {
+	OR = {
+		has_country_flag = starts_on_arctic_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_frozen_desert = {
+	OR = {
+		has_country_flag = starts_on_frozen_desert_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_steppe = {
+	OR = {
+		has_country_flag = starts_on_steppe_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_hadesert = {
+	OR = {
+		has_country_flag = starts_on_hadesert_world
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_class_to_change_to_antarctic = {
+	OR = {
+		has_country_flag = starts_on_antarctic_world
+	}
+}
+
+# scope: country 
+oc_requires_habitat_setup = {
+	OR = {
+		oc_is_habitat_country = yes
+		has_country_flag = starts_on_habitat
+	}
+}
+
+# scope: country 
+oc_requires_ringworld_setup = {
+	OR = {
+		oc_is_ringworld_country = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_second_habitable_planet = {
+	OR = {
+		has_oc_post_war_of_worlds_civic = yes
+		has_country_flag = starts_with_two_habitable_worlds
+	}
+}
+
+# scope: country 
+oc_requires_all_planets_class_to_change_to_nuked = {
+	OR = {
+		has_oc_worm_loved_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_requires_habitat_preference = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_country_flag = starts_with_habitat_preference
+	}
+}
+
+# scope: country 
+oc_requires_gaia_preference = {
+	OR = {
+		has_oc_hive_life_seeded_civic = yes
+		has_country_flag = starts_with_gaia_preference
+	}
+}
+
+# scope: country 
+oc_requires_nuked_preference = {
+	OR = {
+		has_oc_nuclear_mutation_civic = yes
+		has_oc_worm_loved_civic = yes
+		has_oc_hive_nuclear_mutation_civic = yes
+		has_country_flag = starts_with_nuked_preference
+	}
+}
+
+# scope: country 
+oc_requires_continental_preference = {
+	OR = {
+		has_oc_colony_of_man_civic = yes
+		has_country_flag = starts_with_continental_preference
+	}
+}
+
+# scope: country 
+oc_requires_ringworld_preference = {
+	OR = {
+		has_oc_ringborne_civic = yes
+		has_country_flag = starts_with_ringworld_preference
+	}
+}
+# scope: country 
+oc_requires_secondary_species_preference_change = {
+	OR = {
+		has_syncretic_evolution_civic = yes
+		has_oc_corp_syncretic_evolution_civic = yes
+		has_machine_assimilator_civic = yes
+		has_machine_servitor_civic = yes
+		has_country_flag = starts_with_two_species
+	}
+}
+
+# scope: country 
+oc_requires_new_homeworld_is_habitat = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_country_flag = starts_with_habitat_as_home
+	}
+	NOT = { has_country_flag = oc_homeworld_set }
+}
+
+# scope: country 
+oc_requires_new_homeworld_is_secondary_planet = {
+	OR = {
+		has_oc_post_war_of_worlds_civic = yes
+		has_country_flag = starts_with_second_world_as_home
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_size_change_to_25 = {
+	OR = {
+		has_oc_hive_life_seeded_civic = yes
+		has_oc_corp_life_seeded_civic = yes
+		has_country_flag = starts_with_size25_planet
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_size_change_to_12 = {
+	OR = {
+		has_oc_robo_machine_world_civic = yes
+		has_oc_hive_hive_world_civic = yes
+		has_country_flag = starts_with_size12_planet
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_size_change_to_8 = {
+	OR = {
+		has_country_flag = starts_with_size8_planet
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_size_change_to_6 = {
+	OR = {
+		has_country_flag = starts_with_size6_planet
+	}
+}
+
+# scope: country 
+oc_requires_homeworld_size_change_to_4 = {
+	OR = {
+		has_country_flag = starts_with_size4_planet
+	}
+}
+
+# scope: country 
+oc_requires_vault_building_setup = {
+	OR = {
+		has_oc_nuclear_vault_civic = yes
+		has_oc_hive_nuclear_vault_civic = yes
+		has_oc_corp_nuclear_vault_civic = yes
+		has_country_flag = starts_with_vault_deposit
+	}
+}
+
+oc_requires_robot_factory_building_setup = {
+	OR = {
+		oc_has_robot_pops_on_start_civics = yes
+		oc_has_synthetic_species_trait = yes
+		has_country_flag = starts_with_robot_factory
+	}
+}
+
+# scope: country
+oc_requires_capital_orbital_debris_setup = {
+	OR = {
+		has_oc_alien_invaded_civic = yes
+		has_oc_post_war_of_worlds_civic = yes
+		has_country_flag = starts_with_orbital_debris
+	}
+}
+
+# scope: country
+oc_requires_secondary_planet_orbital_debris_setup = {
+	OR = {
+		has_oc_post_war_of_worlds_civic = yes
+		has_country_flag = starts_with_secondary_orbital_debris
+	}
+}
+
+# scope: country
+oc_requires_capital_titanic_life_modifier_setup = {
+	OR = {
+		
+		has_country_flag = starts_with_titanic_life_modifier
+	}
+}
+
+# scope: country
+oc_requires_capital_ecological_disaster_modifier_setup = {
+	OR = {
+		
+		has_country_flag = starts_with_ecological_disaster_modifier
+	}
+}
+
+# scope: country 
+oc_requires_lonely_capital = {
+	OR = {
+		has_oc_voidborne_civic = yes
+		has_oc_hive_voidborne_civic = yes
+		has_oc_hive_life_seeded_civic = yes
+		has_country_flag = starts_with_no_colonies
+	}
+}
+
+# scope: country 
+oc_requires_eternal_leader_ruler_trait = {
+	OR = {
+		has_oc_eternal_leader_civic = yes
+		has_country_flag = starts_with_eternal_leader
+	}
+}
+
+# scope: country 
+oc_requires_digitally_eternal_ruler_trait = {
+	OR = {
+		has_oc_digitally_eternal_civic = yes
+		has_country_flag = starts_with_digitally_eternal_leader
+	}
+}
+
+# scope: country 
+oc_requires_clinically_eternal_leader_trait = {
+	OR = {
+		has_oc_clinically_eternal_civic = yes
+		has_country_flag = starts_with_clinically_eternal_leaders
+	}
+}
+
+# scope: country 
+oc_requires_ascension_theory_tech = {
+	OR = {
+		has_country_flag = starts_with_ascension_theory_tech
+	}
+}
+
+# scope: country 
+oc_requires_hydroponics_technology = {
+	OR = {
+		oc_requires_vault_building_setup = yes
+		oc_requires_habitat_preference = yes
+	}
+}
+
+# scope: country 
+oc_requires_megastructure_tech = {
+	OR = {
+		oc_requires_megastruture_dyson_sphere = yes
+		oc_requires_megastruture_sentry_array = yes
+		oc_requires_megastruture_science_nexus = yes
+		oc_requires_megastruture_gateway_construction = yes
+		oc_requires_megastruture_gateway_complete = yes
+		has_country_flag = starts_with_megastructure_tech
+	}
+}
+
+# scope: country 
+oc_requires_random_tier2_ship_tech = {
+	OR = {
+		has_oc_alien_invaded_civic = yes
+		has_country_flag = starts_with_extra_military_tech
+	}
+}
+
+# scope: country 
+oc_requires_default_npc_sol = {
+	OR = {
+		has_country_flag = human_2
+		has_country_flag = human_3
+		has_country_flag = human_4
+		has_country_flag = human_5
+		has_country_flag = human_6
+		has_country_flag = human_7
+		has_country_flag = starts_with_npc_sol
+	}
+}
+
+# scope: country 
+oc_requires_primitive_early_space_age_sol = {
+	OR = {
+		AND = {
+			has_oc_alien_message_civic = yes
+			species_portrait = fun12
+		}
+		has_country_flag = starts_with_space_age_sol
+	}
+}
+
+# scope: country 
+oc_requires_nuked_sol = {
+	OR = {
+		has_country_flag = starts_with_nuked_sol
+	}
+}

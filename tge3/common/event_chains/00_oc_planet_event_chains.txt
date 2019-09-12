@@ -1,0 +1,5 @@
+# Planet related event chains.
+oc_planet_quest_restore_homeworld_chain = {
+	picture = GFX_evt_dead_city
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+}

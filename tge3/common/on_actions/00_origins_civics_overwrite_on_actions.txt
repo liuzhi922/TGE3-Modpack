@@ -1,0 +1,7 @@
+# Triggers when the planet is terraformed
+# Scope: Country
+on_terraforming_complete = {
+	events = {
+		origins_civics_terraforming_events.1
+	}
+}

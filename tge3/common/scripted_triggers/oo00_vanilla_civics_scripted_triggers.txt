@@ -1,0 +1,55 @@
+# Vanilla Civics Scripted Triggers
+#
+# Each of these triggers refers to a single civic.
+# Each Civic can be disabled by commenting out the related "has_valid_civic" line in this code
+# And adding an invalid check (such as has_country_flag = invalid_oc_country).
+# This would allow for the code to remain the same, but only alter the lines here.
+#
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+### default empires
+
+# scope: country 
+has_syncretic_evolution_civic = {
+	OR = {
+		has_valid_civic = civic_syncretic_evolution
+		has_country_flag = invalid_country
+	}
+}
+
+# scope: country 
+has_post_apocalyptic_civic = {
+	OR = {
+		has_valid_civic = civic_post_apocalyptic
+		has_country_flag = invalid_country
+	}
+}
+
+# scope: country 
+has_machine_assimilator_civic = {
+	OR = {
+		has_valid_civic = civic_machine_assimilator
+		has_country_flag = invalid_country
+	}
+}
+
+# scope: country 
+has_machine_servitor_civic = {
+	OR = {
+		has_valid_civic = civic_machine_servitor
+		has_country_flag = invalid_country
+	}
+}

@@ -1,0 +1,141 @@
+# 47_origins_corporate_secondary_species_civics.txt
+# Civics that add a secondary starting species
+
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 1 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_military_station = yes / no	# default: no
+#	can_build_ruler_ship = yes / no				# default: no
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#}
+
+civic_oc_corp_syncretic_evolution = {
+	icon = "gfx/interface/icons/governments/civics/civic_syncretic_evolution.dds"
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	potential = { authority = { value = auth_corporate } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_corp_mechanists
+				value = civic_oc_corp_post_apocalyptic
+				value = civic_oc_corp_life_seeded
+				value = civic_oc_corp_codominant_evolution
+			}
+		}
+	}
+	random_weight = {
+		base = 1 # Should be fairly rare
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+
+	description = civic_tooltip_syncretic_evolution_effects
+	has_secondary_species = {	# see game_start.11
+		title = civic_syncretic_evolution_secondary_species
+		traits = {
+			trait = trait_syncretic_proles
+		}
+	}
+}
+
+civic_oc_corp_mechanists = {
+	icon = "gfx/interface/icons/governments/civics/civic_mechanists.dds"
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	potential = { authority = { value = auth_corporate } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_oc_corp_syncretic_evolution
+				value = civic_oc_corp_post_apocalyptic
+				value = civic_oc_corp_life_seeded
+				value = civic_oc_corp_codominant_evolution
+			}
+		}
+	}
+	random_weight = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { planet_pops_robotics_upkeep_mult = -0.05 }
+
+	description = "civic_tooltip_mechanists_effects"
+	#used when starting a new game to give robots (see game_start.11) and techs (see game_start.8)
+}
+
+civic_oc_corp_codominant_evolution = {
+	icon = "gfx/interface/icons/governments/civics/civic_oc_codominant_evolution.dds"
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	potential = { authority = { value = auth_corporate } }
+	possible = {	
+		civics = {
+			NOR = {
+				value = civic_oc_corp_syncretic_evolution  # base OC
+				value = civic_oc_corp_mechanists # base OC
+				value = civic_oc_corp_post_apocalyptic  # base OC
+				value = civic_oc_corp_life_seeded  # base OC
+				
+				#value = civic_oc_corp_alien_message # base OC
+				#value = civic_oc_corp_alien_invaded # base OC
+				#value = civic_oc_corp_ecological_disaster # base OC
+				#value = civic_oc_corp__voidborne # base OC
+				
+				# value = civic_cbshing_syncretic_mechanists # OC Untested Addon
+				# value = civic_cbshing_codominant_mechanists # OC Untested Addon
+			}
+		}
+	}
+	random_weight = {
+		base = 0.5
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { 
+
+	}
+
+	description = civic_tooltip_oc_codominant_evolution_effects
+	has_secondary_species = {	# see 02_origins_civics_empire_setup.0
+		title = civic_oc_codominant_evolution_secondary_species
+	}
+}

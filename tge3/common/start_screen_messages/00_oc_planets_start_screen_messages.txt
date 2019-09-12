@@ -1,0 +1,57 @@
+# Start Screen Messages
+# Parameters:
+#   trigger, a trigger with country which decides if this is a valid part. Empty will be treated as always=yes.
+#   localization, a key to a localized string.
+#	location, decides where this chunk of text is located in the description, cannot be negative.
+
+
+### FIRST PARTS
+
+# Nuclear Mutation
+part = {
+	location = 0
+	localization = "START_SCREEN_PART_ONE_NUCLEAR_MUTATION"
+	
+	trigger = {
+		oc_is_nuked_preference_country = yes
+		NOT = { has_country_flag = custom_start_screen }
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+}
+
+# Voidborne
+part = {
+	location = 0
+	localization = "START_SCREEN_PART_ONE_VOIDBORNE"
+	
+	trigger = {
+		oc_is_habitat_preference_country = yes
+		NOT = { has_country_flag = custom_start_screen }
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+}
+
+### SECOND PARTS
+
+# Climate Shift
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_CLIMATE_SHIFT"
+	
+	trigger = {
+		oc_has_restore_homeworld_climate_shift_quest_hidden_civics = yes
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}
+
+# Nuclear Vault
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_NUCLEAR_VAULT"
+	
+	trigger = {
+		oc_requires_vault_building_setup = yes
+		NOT = { has_country_flag = custom_start_screen }
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+}

@@ -1,0 +1,218 @@
+# 46_origins_corporate_planet_civics.txt
+# Civics that modify the empire's homeworld class
+
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 1 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_military_station = yes / no	# default: no
+#	can_build_ruler_ship = yes / no				# default: no
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#}
+
+civic_oc_corp_post_apocalyptic = {
+	icon = "gfx/interface/icons/governments/civics/civic_post_apocalyptic.dds"
+	playable = { host_has_dlc = "Apocalypse" }
+	homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	potential = { authority = { value = auth_corporate } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_corp_mechanists # base OC
+				value = civic_oc_corp_syncretic_evolution # base OC
+				value = civic_oc_corp_life_seeded # base OC
+				value = civic_oc_corp_climate_shift # base OC
+				value = civic_oc_corp_nuclear_vault # base OC
+				value = civic_oc_corp_nuclear_mutation # base OC
+				#value = civic_oc_corp_voidborne # base OC
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 1 # Should be fairly rare
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_post_apocalyptic_effects"
+
+	traits = {
+		trait = trait_survivor
+	}
+}
+
+civic_oc_corp_life_seeded = {
+	playable = { host_has_dlc = "Apocalypse" }
+	homeworld = pc_gaia # Changes homeworld class regardless of what is picked for empire
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_life_seeded.dds"
+	potential = { authority = { value = auth_corporate } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_corp_post_apocalyptic # base OC
+				value = civic_oc_corp_climate_shift # base OC
+				value = civic_oc_corp_nuclear_vault # base OC
+				value = civic_oc_corp_nuclear_mutation # base OC
+				#value = civic_oc_corp_voidborne # base OC
+			}
+		}
+	}
+	random_weight = {
+		base = 0.8
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_life_seeded_effects"
+	#used when starting a new game to modify species
+	#see 01_origins_civics_empire_setup.5
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.7
+}
+
+civic_oc_corp_climate_shift = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_climate_shift.dds"
+	potential = { authority = { value = auth_corporate } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_corp_post_apocalyptic
+				value = civic_oc_corp_life_seeded
+				
+				value = civic_oc_corp_nuclear_vault # base OC
+				value = civic_oc_corp_nuclear_mutation # base OC
+				#value = civic_oc_corp_voidborne # base OC
+				
+				# value = civic_oc_worm_loved # OC Ancients Addon
+				# value = civic_cbshing_habitat_life # OC Ancients Addon
+				# value = civic_cbshing_gaia_world  # OC Ancients Addon
+				# value = civic_oc_ringborne # OC Ancients Addon, does not actually change start planet
+			}
+		}
+	}
+	random_weight = {
+		base = 0.2
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { 
+		pop_amenities_usage_mult = -0.1
+		#edict_length_mult = 0.05
+	}
+	
+	#description = "civic_tooltip_oc_climate_shift_effects"
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.7
+}
+
+civic_oc_corp_nuclear_vault = {
+	playable = { host_has_dlc = "Apocalypse" }
+	#homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_vault.dds"
+	potential = { authority = { value = auth_corporate } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_corp_post_apocalyptic
+				value = civic_oc_corp_life_seeded
+				
+				value = civic_oc_corp_climate_shift # base OC
+				value = civic_oc_corp_nuclear_mutation # base OC
+				#value = civic_cbshing_voidborne # base OC
+				
+				# value = civic_oc_worm_loved # OC Ancients Addon
+				# value = civic_cbshing_habitat_life # OC Ancients Addon
+				# value = civic_cbshing_gaia_world  # OC Ancients Addon
+				# value = civic_oc_ringborne # OC Ancients Addon, does not actually change start planet
+			}
+		}
+	}
+	random_weight = {
+		base = 0.2
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	
+	modifier = { 
+		pop_housing_usage_mult = -0.10
+	}
+
+	description = "civic_tooltip_oc_nuclear_vault_effects"
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.7
+}
+
+civic_oc_corp_nuclear_mutation = {
+	playable = { host_has_dlc = "Apocalypse" }
+	homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_oc_nuclear_mutation.dds"
+	potential = { authority = { value = auth_corporate } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_oc_corp_post_apocalyptic
+				value = civic_oc_corp_life_seeded
+				
+				value = civic_oc_corp_climate_shift # base OC
+				value = civic_oc_corp_nuclear_vault # base OC
+				#value = civic_cbshing_voidborne # base OC
+				
+				# value = civic_oc_worm_loved # OC Ancients Addon
+				# value = civic_cbshing_habitat_life # OC Ancients Addon
+				# value = civic_cbshing_gaia_world  # OC Ancients Addon
+				# value = civic_oc_ringborne # OC Ancients Addon, does not actually change start planet
+			}
+		}
+	}
+	random_weight = {
+		base = 0.8
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = "civic_tooltip_oc_nuclear_mutation_effects"
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.4
+	#see 01_origins_civics_empire_setup.7
+}

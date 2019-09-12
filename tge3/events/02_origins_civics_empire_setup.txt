@@ -1,0 +1,600 @@
+namespace = origins_civics_empire_setup
+# by cbshing
+
+### Hidden Game Start Event
+# Handles setup of civics
+# Handles setup of each civic in various subsections
+# Handles by galaxy changes, cluster changes, system changes, colony setup, pop setup, planet setup, technology setup, etc
+
+# Handles setup of civics that require modifications of the species
+# -Requires species have a new homeworld type
+# ->Voidborne
+# ->Nuclear Mutation
+# ->Colonies of Man
+# -Requires species to have a special trait
+# ->Cybernetic
+# ->Latent Psionic
+# ->Synthetic
+# ->Psionic
+# ->Brain Slug
+# -Requires species to have a different homeworld
+# ->Colonies of Earth
+# ->Colonies of Man
+country_event = {
+	id = origins_civics_empire_setup.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_species_setup = yes
+	}
+	
+	immediate = {	
+		# change primary species homeworld type
+		if = { limit = { oc_requires_homeworld_preference_to_change = yes } 
+			if = { limit = { oc_requires_habitat_preference = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
+				make_species_habitat_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
+			}
+			if = { limit = { oc_requires_gaia_preference = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
+				make_species_gaia_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
+			}
+			if = { limit = { oc_requires_nuked_preference = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
+				make_species_nuked_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
+			}
+			if = { limit = { oc_requires_continental_preference = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
+				make_species_continental_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
+				
+			}
+			if = { 
+				limit = { 
+					oc_requires_ringworld_preference = yes 
+					any_owned_planet = { is_capital = yes is_planet_class = pc_ringworld_habitable }
+				} 
+				owner_species = { save_event_target_as = species_to_modify }
+				make_species_ringworld_preference = yes
+				change_dominant_species = { species = last_created change_all = yes }
+			}
+		}
+		# change secondary species homeworld type
+		if = { 
+			limit = { 
+				oc_requires_secondary_species_preference_change = yes 
+				OR = {
+					oc_is_habitat_country = yes
+					oc_is_gaia_country = yes
+					oc_is_nuked_country = yes
+					oc_is_ringworld_country = yes
+					has_authority = auth_machine_intelligence
+				}
+			} 
+			if = { limit = { oc_is_habitat_country = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				make_species_habitat_preference = yes
+				set_capital_as_homeworld = yes
+			}
+			if = { limit = { oc_is_gaia_country = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				make_species_gaia_preference = yes
+			}
+			if = { limit = { oc_is_nuked_country = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				make_species_nuked_preference = yes
+			}
+			if = { 
+				limit = { 
+					oc_is_ringworld_country = yes 
+					any_owned_planet = { is_capital = yes is_planet_class = pc_ringworld_habitable }
+				} 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				make_species_ringworld_preference = yes
+			}
+		}
+		
+		# add new trait to species
+		if = { limit = { oc_requires_species_have_new_trait = yes } 
+			if = { limit = { oc_has_survivor_species_trait = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_survivor = yes
+			}
+			if = { limit = { oc_has_cybernetic_species_trait = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_cybernetic = yes
+			}
+			if = { limit = { oc_has_latent_psionic_species_trait = yes } 
+				# only impacts leaders, so see origins_civics_empire_setup.8
+			}
+			if = { limit = { oc_has_synthetic_species_trait = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_synthetic = yes
+			}
+			if = { limit = { oc_has_psionic_species_trait = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_psionic = yes
+			}
+			if = { limit = { oc_has_brain_slug_species_trait = yes } 
+				random_owned_pop = { 
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				mod_species_brain_slug = yes
+			}
+		}
+		
+		# change species homeworld location
+		if = { limit = { oc_requires_new_homeworld = yes }
+			if = { limit = { oc_requires_new_homeworld_is_habitat = yes }
+				owner_species = { save_event_target_as = species_to_modify }
+				set_capital_as_homeworld = yes
+			}
+			
+			if = { limit = { oc_requires_new_homeworld_is_secondary_planet = yes } 
+				capital_scope.solar_system = { # scope to capital system
+					random_system_planet = {
+						limit = { has_planet_flag = oc_second_homeworld_planet }
+						this = { save_event_target_as = new_homeworld }
+					}
+				}
+				random_owned_pop = { # only for secondary pop
+					limit = { NOT = { is_same_species = owner_species } }
+					this = { save_event_target_as = species_to_modify }
+				}
+				set_new_planet_as_homeworld = yes
+			}
+			if = { limit = { oc_is_from_earth = yes } # only for owner species
+				capital_scope.solar_system = { # scope to capital system
+					random_system_planet = {
+						limit = { has_planet_flag = planet_earth }
+						this = { save_event_target_as = new_homeworld }
+					}
+				}
+				owner_species = { save_event_target_as = species_to_modify }
+				set_new_planet_as_homeworld = yes
+			}
+			if = { limit = { oc_is_same_species_as_earth = yes } 
+				owner_species = { save_event_target_as = species_to_modify }
+				make_same_species_as_earth = yes
+				set_country_flag = oc_homeworld_set
+				oc_set_colony_flag = yes
+			}
+		}
+	}
+}
+
+# Capital Planet
+# -Requires Homeworld Class Modification
+# ->Climate Shift
+# ->Nuclear Vault
+# ->Nuclear Mutation
+# ->Robo Nuclear Start
+# ->Machine World
+# ->Hive World
+# -Resets Buildings and Deposits on Planets
+# ->Generic Empire
+# ->Hive Empire
+# ->Machine Empire
+# -Adds Special Buildings and Deposits to Planets
+# ->Nuclear Vault
+# -Adds Primary and Secondary Pops to Planet
+# ->Syncretic Evolution
+# ->Mechanist
+# ->Codominant
+planet_event = {
+	id = origins_civics_empire_setup.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			owner = { oc_requires_planet_setup = yes }
+			owner = { oc_requires_secondary_pops_setup = yes }
+		}
+	}
+	
+	immediate = {
+		#Special handling for habitats. Habitats are on a different planet, so will need to do a different setup
+		if = { limit = { owner = { oc_requires_reset_capital_habitat_setup = yes } }
+			owner = {
+				random_owned_planet = {
+					limit = { is_capital = yes is_planet_class = pc_habitat }
+					#reset_start_buildings_and_blockers_habitat = yes
+					#add_pops_on_planet = yes
+				}
+			}
+		}
+	
+	
+		# Change homeworld to new planet size. Can add other sizes
+		if = { limit = { owner = { oc_requires_homeworld_size_change = yes } }
+			if = { limit = { oc_requires_homeworld_size_change_to_25 = yes }
+				set_planet_size = 25
+			}
+			if = { limit = { owner = { oc_requires_homeworld_size_change_to_12 = yes } }
+				set_planet_size = 12
+			}
+			if = { limit = { owner = { oc_requires_homeworld_size_change_to_8 = yes } }
+				set_planet_size = 8
+			}
+			if = { limit = { owner = { oc_requires_homeworld_size_change_to_6 = yes } }
+				set_planet_size = 6
+			}
+			if = { limit = { owner = { oc_requires_homeworld_size_change_to_4 = yes } }
+				set_planet_size = 4
+			}
+		}		
+		
+		# Change homeworld to new planet class
+		if = { limit = { owner = { oc_requires_homeworld_class_to_change = yes } }
+			# Change homeworld to a random planet class
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_random_habitable = yes } }			
+				change_to_pc_random_habitable = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_random_habitable_tier1 = yes } }
+				change_to_pc_random_habitable_tier1 = yes
+			}
+			
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_random_habitable_tier2 = yes } }
+				change_to_pc_random_habitable_tier2 = yes
+			}
+			# Change to a special planet type
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_nuked = yes } }
+				change_to_pc_nuked = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_gaia = yes } }
+				change_to_pc_gaia = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_machine = yes } }
+				change_to_pc_machine = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_hive = yes } }
+				change_to_pc_hive = yes
+			}			
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_city = yes } }
+				change_to_pc_city = yes
+			}
+			# Change for normal planet types. Probably unused, but give as scripting choices anyway
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_arid = yes } }
+				change_to_pc_arid = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_desert = yes } }
+				change_to_pc_desert = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_savannah = yes } }
+				change_to_pc_savannah = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_sandsea = yes } }
+				change_to_pc_sandsea = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_mesa = yes } }
+				change_to_pc_mesa = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_oasis = yes } }
+				change_to_pc_oasis = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_geocrystalline = yes } }
+				change_to_pc_geocrystalline = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_continental = yes } }
+				change_to_pc_continental = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_ocean = yes } }
+				change_to_pc_ocean = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_tropical = yes } }
+				change_to_pc_tropical = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_mangrove = yes } }
+				change_to_pc_mangrove = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_hajungle = yes } }
+				change_to_pc_hajungle = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_desertislands = yes } }
+				change_to_pc_desertislands = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_lush = yes } }
+				change_to_pc_lush = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_marginal = yes } }
+				change_to_pc_marginal = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_tundra = yes } }
+				change_to_pc_tundra = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_alpine = yes } }
+				change_to_pc_alpine = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_arctic = yes } }
+				change_to_pc_arctic = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_frozen_desert = yes } }
+				change_to_pc_frozen_desert = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_steppe = yes } }
+				change_to_pc_steppe = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_hadesert = yes } }
+				change_to_pc_pc_hadesert = yes
+			}
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_antarctic = yes } }
+				change_to_pc_antarctic = yes
+			}
+			
+			#Change to a random uninhabitable type
+			if = { limit = { owner = { oc_requires_homeworld_class_to_change_to_random_uninhabitable = yes } }
+				owner = {
+					random_owned_planet = {
+						limit = { has_planet_flag = oc_old_homeworld }
+						remove_planet_flag = oc_old_homeworld
+						if = { limit = { owner = { has_country_flag = aavardwerk_empire } } # special setting for aavardwerk empire
+							change_pc = pc_shattered
+						}
+						else = {
+							change_to_pc_random_uninhabitable = yes
+						}
+					}
+				}
+			}
+			
+		}	
+		
+		#Reset deposits on normal planets
+		if = { limit = { owner = { oc_requires_reset_capital_setup = yes } }
+			generate_start_deposits_and_blockers = yes
+		}
+		
+		#Reset deposits on special planets (Gaia, Tomb, Etc)
+		if = { limit = { owner = { oc_requires_reset_capital_special_setup = yes } }
+			oc_generate_special_planet_start_deposits_and_blockers = yes
+		}
+		
+		if = { limit = { owner = { oc_requires_reset_buildings_and_districts = yes } }
+			oc_generate_start_districts = yes
+		}
+		
+		#Add special/unique deposits
+		if = { limit = { owner = { oc_requires_special_deposit_setup = yes } }
+			# Add special Vault Complex Building
+			if = { limit = { owner = { oc_requires_vault_building_setup = yes } }
+				add_vault_complex_deposit = yes
+			}
+		}
+		
+		#Add special/unique buildings
+		if = { limit = { owner = { oc_requires_special_building_setup = yes } }
+			# Add setup for Nuclear Vault
+			if = { limit = { owner = { oc_requires_vault_building_setup = yes } }
+				remove_building = building_research_lab_1 
+				add_building = building_hydroponics_farm 
+			}
+			# Add setup for Mechanist Start
+			if = { limit = { owner = {  oc_requires_robot_factory_building_setup = yes } }
+				if = {
+					limit = { owner = { is_megacorp = yes } }
+					remove_building = building_commercial_zone	
+					#remove_district = district_city
+					add_district = district_generator
+				}
+				add_building = building_robot_assembly_plant		
+				add_district = district_generator
+			}
+		}
+		
+		# Add planet modifiers
+		if = { limit = { owner = { oc_requires_capital_modifiers = yes } }
+			# Create orbital debris & modifier
+			if = { limit = { owner = { oc_requires_capital_orbital_debris_setup = yes } }
+				#add_orbital_debris_modifier = yes
+				#spawn_medium_orbital_debris = yes
+			}
+			if = { limit = { owner = { oc_requires_secondary_planet_orbital_debris_setup = yes } }
+				owner = {
+					random_owned_planet = {
+						limit = { has_planet_flag = oc_second_homeworld_planet }
+						#add_orbital_debris_modifier = yes
+						#spawn_medium_orbital_debris = yes
+					}
+				}
+			}
+			# Add Titan modifier
+			if = { limit = { owner = { oc_requires_capital_titanic_life_modifier_setup = yes } }
+				#add_titan_modifier = yes
+			}
+			# Add Ecological Disaster modifier
+			if = { limit = { owner = { oc_requires_capital_ecological_disaster_modifier_setup = yes } }
+				#add_ecological_disaster_modifier = yes
+			}
+		}
+		
+		#Create pops
+		oc_generate_start_pops = yes
+		
+		# Destroy every colony except capital
+		if = { limit = { owner = { oc_requires_lonely_capital = yes } }
+			owner = { 
+				every_owned_planet = {
+					limit = { is_capital = no }
+					cleanse_planet = yes
+				}
+			}
+		}
+	}
+}
+
+# Pop
+# -Remove Pops
+# ->Alien Invaded
+# ->Post War of the Worlds
+# -Move Pops to Secondary Location
+# ->Post War of the Worlds
+country_event = {
+	id = origins_civics_empire_setup.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_pops_setup = yes
+	}
+	
+	immediate = {
+		#
+	}
+}
+
+# Technologies
+# -Requires Country to have more technologies
+# -Requires Country to have Robot Tech
+# ->Mechanists
+# ->Syncretic Mechanists
+# ->Codominant Mechanists
+# -Requires Country to have Gateway Tech
+# ->Dyson Engineers
+# -Requires Country to have Wormhole Tech
+# ->Wormhole Travelers
+# -Requires Country to have Megastructure Tech
+# ->TBD
+# -Requires Country to have Random Military Tech
+# ->Alien Invaded
+country_event = {
+	id = origins_civics_empire_setup.10
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_technologies_setup = yes
+	}
+	
+	immediate = {
+		# starts with robot pops
+		if = { 
+			limit = { 
+				oc_has_robot_pops_on_start_civics = yes
+			} 
+			allow_country_to_make_robots = yes
+		}
+		
+		if = { 
+			limit = { 
+				oc_has_synthetic_species_trait = yes
+			} 
+			allow_country_to_make_synths = yes
+		}
+		
+		# starts with robot pops
+		if = { 
+			limit = { 
+				oc_requires_hydroponics_technology = yes
+			} 
+			give_hydroponics_technology = yes
+		}
+		
+		# can build gateways
+		if = { 
+			limit = { 
+				oc_requires_megastruture_gateway_construction = yes
+				oc_requires_megastruture_gateway_complete = yes
+			} 
+			allow_country_to_build_gateways = yes
+			allow_country_to_activate_gateway = yes
+		}
+		
+		# can travel wormholes
+		if = { 
+			limit = { 
+				oc_requires_natural_wormhole = yes
+			} 
+			allow_country_to_travel_wormhole = yes
+		}
+		
+		# is a worm-in-waiting country
+		if = { 
+			limit = { 
+				has_oc_worm_loved_civic = yes
+			} 
+			give_worm_technologies = yes
+		}
+		
+		
+		# has ascension theory
+		if = { 
+			limit = { 
+				oc_requires_ascension_theory_tech = yes
+			} 
+			give_ascension_theory_technology = yes
+		}
+		
+		# has megaengineering
+		if = { 
+			limit = { 
+				oc_requires_megastructure_tech = yes
+			} 
+			give_megaengineering_technology = yes
+		}
+		
+		# has random tier2 tech
+		if = { 
+			limit = { 
+				oc_requires_random_tier2_ship_tech = yes
+			} 
+			give_random_tier2_military_ship_tech = yes
+		}
+	}
+}
+
+# Flags & Country Modifiers
+country_event = {
+	id = origins_civics_empire_setup.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		oc_requires_country_flags_setup = yes
+	}
+	
+	immediate = {
+		#Override Life Discovery Story Flags
+		#Override Worm in Waiting Flags
+		#Enables Homeworld Restoration Quest
+		if = { limit = { oc_has_restore_homeworld_quest_hidden_civics = yes }
+			set_country_flag = origins_restore_homeworld_needed
+		}
+		
+		#Sets has constructed habitat flag
+		if = { limit = { oc_requires_megastruture_habitat = yes }
+			set_country_flag = already_built_habitat
+		}
+	}
+}
+
+# Advanced Colonies

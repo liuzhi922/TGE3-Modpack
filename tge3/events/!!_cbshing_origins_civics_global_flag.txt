@@ -1,0 +1,20 @@
+namespace = cbshing_origins_civics_global_flag
+# by cbshing
+
+### Hidden Game Start Event
+country_event = {
+	id = cbshing_origins_civics_global_flag.1
+	hide_window = yes
+	fire_only_once = yes
+	#is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = has_cbshing_origins_civics_enabled }
+		is_ai = no
+	}
+
+	immediate = {
+		set_global_flag = has_cbshing_origins_civics_enabled
+		set_country_flag = origins_civics_game_host
+	}
+}

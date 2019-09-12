@@ -1,0 +1,95 @@
+# 36_origins_syn_dawn_planet_civics.txt
+# File contains machine empire civics that modify planet type
+# Separated to make compatches with other "planet" civic mods.
+
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 1 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_military_station = yes / no	# default: no
+#	can_build_ruler_ship = yes / no				# default: no
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#}
+
+civic_cbshing_robo_nuked_start = {
+	icon = "gfx/interface/icons/governments/civics/civic_post_apocalyptic.dds"
+	playable = { 
+		host_has_dlc = "Apocalypse" 
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	homeworld = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	modification = no
+	potential = { authority = { value = auth_machine_intelligence } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_machine_terminator
+				
+				value = civic_cbshing_machine_world
+			}
+		}
+	}
+	random_weight = {
+		base = 0.3
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Apocalypse" }
+		}
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	modifier = { planet_pops_robotics_upkeep_mult = -0.10 }
+
+	description = "civic_tooltip_oc_robo_nuked_start_effects"
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.7
+}
+
+civic_cbshing_machine_world = {
+	playable = { host_has_dlc = "Synthetic Dawn Story Pack" }
+	homeworld = pc_machine # Changes homeworld class regardless of what is picked for empire
+	icon = "gfx/interface/icons/governments/civics/civic_oc_robo_machine_world.dds"
+	potential = { authority = { value = auth_machine_intelligence } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_machine_servitor
+				value = civic_machine_assimilator
+				
+				value = civic_cbshing_robo_nuked_start
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 0.1
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	
+	description = "civic_tooltip_oc_robo_machine_world_effects"
+	#used when starting a new game to initialize home planet
+	#see 01_origins_civics_empire_setup.7
+}

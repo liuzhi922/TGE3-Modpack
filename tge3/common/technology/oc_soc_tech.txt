@@ -1,0 +1,58 @@
+# ##################
+# Terraformation
+# ##################
+
+#Nuclear Terraforming
+tech_oc_tomb_creation = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	is_rare = yes
+	category = { new_worlds }
+	prerequisites = { "tech_terrestrial_sculpting" "tech_fusion_power" }
+	weight = @tier3weight2
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_TERRAFORMING_NUKED_CREATION_CHANGE_TITLE"
+			desc = "TECH_UNLOCK_TERRAFORMING_NUKED_CREATION_CHANGE_DESC"
+		}
+	}
+	
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 0.1
+			NOR = {
+				has_tradition = tr_expansion_adopt
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_new_worlds"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			has_trait = "trait_survivor"
+		}
+		modifier = {
+			factor = 5
+			has_trait = "trait_pc_nuked_preference"
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = society
+				has_trait = "trait_pc_nuked_preference"
+			}
+		}
+	}	
+}

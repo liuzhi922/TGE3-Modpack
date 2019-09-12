@@ -1,0 +1,164 @@
+# Origins Civics Has Country Type Triggers
+# by cbshing
+#
+# Each of these triggers represents various civic archetypes that may trigger varying gameplay elements
+# This is used for story quests
+# Each Civic can be disabled by commenting out the related "has_valid_civic" line in this code
+# And adding an invalid check (such as has_country_flag = invalid_oc_country).
+# This would allow for the code to remain the same, but only alter the lines here.
+#
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+# has type of country
+
+# scope: country 
+oc_has_survivor_species_trait = {
+	OR = {
+		has_valid_civic = civic_post_apocalyptic
+		has_oc_hive_post_apocalyptic_civic = yes
+		has_oc_corp_post_apocalyptic_civic = yes
+		has_country_flag = survivor_trait_country
+	}
+}
+
+# scope: country 
+oc_has_cybernetic_species_trait = {
+	OR = {
+		has_oc_cybernetic_civic = yes
+		has_country_flag = cybernetic_trait_country
+	}
+}
+
+# scope: country 
+oc_has_latent_psionic_species_trait = {
+	OR = {
+		has_oc_latent_psionic_civic = yes
+		has_country_flag = latent_psionic_trait_country
+	}
+}
+
+# scope: country 
+oc_has_synthetic_species_trait = {
+	OR = {
+		has_oc_synthetics_civic = yes
+		has_country_flag = oc_synthetic_country
+	}
+}
+
+# scope: country 
+oc_has_psionic_species_trait = {
+	OR = {
+		has_oc_psionics_civic = yes
+		has_country_flag = psionic_trait_country
+	}
+}
+
+# scope: country 
+oc_has_brain_slug_species_trait = {
+	OR = {
+		has_oc_symbiotic_evolution_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_has_secondary_species_civics = {
+	OR = {
+		has_oc_codominant_evolution_civic = yes
+		has_oc_syncretic_mechanists_civic = yes
+		has_oc_codominant_mechanists_civic = yes
+		has_oc_sublight_conquerer_civic = yes
+		has_oc_refugee_saviour_civic = yes
+		has_oc_post_war_of_worlds_civic = yes
+		
+		has_oc_corp_syncretic_evolution_civic = yes
+		has_oc_corp_post_war_of_worlds_civic = yes
+		has_oc_corp_codominant_evolution_civic = yes
+		has_country_flag = has_two_species_country
+	}
+}
+
+# scope: country 
+oc_has_robot_pops_on_start_civics = {
+	OR = {
+		has_oc_syncretic_mechanists_civic = yes
+		has_oc_codominant_mechanists_civic = yes
+		has_oc_corp_mechanists_civic = yes
+		has_country_flag = has_robots_on_start_country
+	}
+}
+
+# scope: country 
+oc_has_encountered_other_species = {
+	OR = {
+		has_oc_alien_message_civic = yes
+		has_oc_alien_invaded_civic = yes
+		oc_has_secondary_species_civics = yes
+		oc_is_fallen_colonies_country = yes
+		has_oc_fallen_tributary_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_has_search_quest_on_start_civics = {
+	OR = {
+		has_oc_alien_message_civic = yes
+		has_oc_alien_invaded_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_has_search_quest_hidden_civics = {
+	OR = {
+		has_oc_paradise_life_civic = yes
+		has_oc_hive_paradise_life_civic = yes
+		has_oc_corp_life_seeded_civic = yes
+		has_country_flag = invalid_oc_country
+	}
+}
+
+# scope: country 
+oc_has_restore_homeworld_quest_hidden_civics = {
+	OR = {
+		oc_has_restore_homeworld_nuked_quest_hidden_civics = yes
+		oc_has_restore_homeworld_climate_shift_quest_hidden_civics = yes
+		has_country_flag = homeworld_restoration_quest_needed
+	}
+}
+
+# scope: country 
+oc_has_restore_homeworld_nuked_quest_hidden_civics = {
+	OR = {
+		has_post_apocalyptic_civic = yes
+		has_oc_nuclear_vault_civic = yes
+		has_oc_hive_nuclear_vault_civic = yes
+		has_oc_hive_post_apocalyptic_civic = yes
+		has_oc_corp_post_apocalyptic_civic = yes
+		has_oc_corp_nuclear_vault_civic = yes
+		has_country_flag = nuked_homeworld_restoration_quest_needed
+	}
+}
+
+# scope: country 
+oc_has_restore_homeworld_climate_shift_quest_hidden_civics = {
+	OR = {
+		has_oc_climate_shift_civic = yes
+		has_oc_corp_climate_shift_civic = yes
+		has_country_flag = tier2_homeworld_restoration_quest_needed
+	}
+}

@@ -1,0 +1,1042 @@
+# Origins Civics Planet Setup Scripted Effects
+# by cbshing
+#	Example:
+#
+#	example_effect = { 
+#		add_energy = -100
+#	}
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+
+### Designed on Planetary Diversity ###
+# Code will need to be modified to be compatible with PD
+
+# ########################
+# #    Planet Effects    #
+# ########################
+
+### Special Planets ###
+# change to planet type nuked
+# Scope: Planet
+change_to_pc_nuked = {
+	change_pc = pc_nuked
+}
+
+# change to planet type gaia
+# Scope: Planet
+change_to_pc_gaia = {
+	change_pc = pc_gaia
+}
+
+# change to planet type machine
+# Scope: Planet
+change_to_pc_machine = {
+	change_pc = pc_machine
+}
+
+# change to planet type hive
+# Scope: Planet
+change_to_pc_hive = {
+	change_pc = pc_hive
+}
+
+# change to planet type city
+# Scope: Planet
+change_to_pc_city = {
+	change_pc = pc_city
+}
+
+### Normal Planets ###
+
+# Hot & Dry
+# change to planet type arid
+# Scope: Planet
+change_to_pc_arid = {
+	change_pc = pc_arid
+	set_entity_arid = yes
+}
+
+# change to planet type desert
+# Scope: Planet
+change_to_pc_desert = {
+	change_pc = pc_desert
+	set_entity_desert = yes
+}
+
+# change to planet type savannah
+# Scope: Planet
+change_to_pc_savannah = {
+	change_pc = pc_savannah
+	set_entity_savannah = yes
+}
+
+# change to planet type sandsea (PD)
+# Scope: Planet
+change_to_pc_sandsea = {
+#	change_pc = pc_sandsea
+#	set_entity_sandsea = yes
+}
+
+# change to planet type mesa (PD)
+# Scope: Planet
+change_to_pc_mesa = {
+#	change_pc = pc_mesa
+#	set_entity_mesa = yes
+}
+
+# change to planet type oasis (PD)
+# Scope: Planet
+change_to_pc_oasis = {
+#	change_pc = pc_oasis
+#	set_entity_oasis = yes
+}
+
+# change to planet type geocrystalline (PD)
+# Scope: Planet
+change_to_pc_geocrystalline = {
+#	change_pc = pc_geocrystalline
+#	set_entity_geocrystalline = yes
+}
+
+# Hot & Wet
+# change to planet type continental
+# Scope: Planet
+change_to_pc_continental = {
+	change_pc = pc_continental
+	set_entity_continental = yes
+}
+
+# change to planet type ocean
+# Scope: Planet
+change_to_pc_ocean = {
+	change_pc = pc_ocean
+	set_entity_ocean = yes
+}
+
+# change to planet type tropical
+# Scope: Planet
+change_to_pc_tropical = {
+	change_pc = pc_tropical
+	set_entity_tropical = yes
+}
+
+# change to planet type mangrove (PD)
+# Scope: Planet
+change_to_pc_mangrove = {
+#	change_pc = pc_mangrove
+#	set_entity_mangrove = yes
+}
+
+# change to planet type hajungle (PD)
+# Scope: Planet
+change_to_pc_hajungle = {
+#	change_pc = pc_hajungle
+#	set_entity_hajungle = yes
+}
+
+# change to planet type desertislands (PD)
+# Scope: Planet
+change_to_pc_desertislands = {
+#	change_pc = pc_desertislands
+#	set_entity_desertislands = yes
+}
+
+# change to planet type lush (PD)
+# Scope: Planet
+change_to_pc_lush = {
+#	change_pc = pc_lush
+#	set_entity_lush = yes
+}
+
+# change to planet type marginal (PD)
+# Scope: Planet
+change_to_pc_marginal = {
+#	change_pc = pc_marginal
+#	set_entity_marginal = yes
+}
+
+# Cold & Dry
+# change to planet type tundra
+# Scope: Planet
+change_to_pc_tundra = {
+	change_pc = pc_tundra 
+	set_entity_tundra = yes
+}
+
+# change to planet type alpine
+# Scope: Planet
+change_to_pc_alpine = {
+	change_pc = pc_alpine
+	set_entity_alpine = yes
+}
+
+# change to planet type arctic
+# Scope: Planet
+change_to_pc_arctic = {
+	change_pc = pc_arctic
+	set_entity_arctic = yes
+}
+
+# change to planet type frozen_desert
+# Scope: Planet
+change_to_pc_frozen_desert = {
+#	change_pc = pc_frozen_desert
+#	set_entity_frozen_desert = yes
+}
+
+# change to planet type steppe
+# Scope: Planet
+change_to_pc_steppe = {
+#	change_pc = pc_steppe
+#	set_entity_steppe = yes
+}
+
+# change to planet type hadesert
+# Scope: Planet
+change_to_pc_pc_hadesert = {
+#	change_pc = pc_hadesert
+#	set_entity_hadesert = yes
+}
+
+# change to planet type antarctic
+# Scope: Planet
+change_to_pc_antarctic = {
+#	change_pc = pc_antarctic
+#	set_entity_antarctic = yes
+}
+
+# ########################
+# #   Random Habitable   #
+# ########################
+
+# change to planet type random habitable
+# Scope: Planet
+change_to_pc_random_habitable = {
+	if = { limit = { is_hot_dry_category_planet = yes }
+		random_list = {
+			15 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			35 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+			}
+			25 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			15 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_colder 
+						has_planet_flag = make_planet_wetter 
+					} 
+				} 
+				modifier = { factor = 0 planetary_diversity_enabled = no } # there are no cold wet planets without planetary diversity enabled
+			}
+		}
+	}
+	else_if = { limit = { is_hot_wet_category_planet = yes }
+		random_list = {
+			35 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			15 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+			}
+			15 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_colder 
+						has_planet_flag = make_planet_dryer
+					} 
+				}
+				modifier = { factor = 5 is_planet_class = pc_continental has_planet_flag = planet_earth } # we want Earth to change into an artic world
+			}
+			25 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+				modifier = { factor = 0 planetary_diversity_enabled = no } # there are no cold wet planets without planetary diversity enabled
+			}
+		}
+	}
+	else_if = { limit = { is_cold_dry_category_planet = yes }
+		random_list = {
+			25 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter }
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			15 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_hotter 
+						has_planet_flag = make_planet_wetter 
+					} 
+				}
+			}
+			15 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			35 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+				modifier = { factor = 0 planetary_diversity_enabled = no } # there are no cold wet planets without planetary diversity enabled
+			}
+		}
+	}
+	else_if = { limit = { is_cold_wet_category_planet = yes }
+		random_list = {
+			15 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_hotter 
+						has_planet_flag = make_planet_dryer 
+					} 
+				}
+			}
+			25 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+			}
+			35 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			15 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+				modifier = { factor = 0 planetary_diversity_enabled = no } # there are no cold wet planets without planetary diversity enabled
+			}
+		}
+	}
+	else = {
+		#do nothing
+	}
+}
+
+# change to planet type random habitable tier 1
+# Scope: Planet
+change_to_pc_random_habitable_tier1 = {
+	if = { limit = { is_hot_dry_category_planet = yes }
+		change_to_pc_random_hot_dry_planet = yes 
+	}
+	else_if = { limit = { is_hot_wet_category_planet = yes }
+		change_to_pc_random_hot_wet_planet = yes
+	}
+	else_if = { limit = { is_cold_dry_category_planet = yes }
+		change_to_pc_random_cold_dry_planet = yes 
+	}
+	else_if = { limit = { is_cold_wet_category_planet = yes }
+		change_to_pc_random_cold_wet_planet = yes 
+	}
+	else = {
+		#do nothing
+	}
+}
+
+# change to planet type random habitable
+# Scope: Planet
+change_to_pc_random_habitable_tier2 = {
+	if = { limit = { is_hot_dry_category_planet = yes }
+		random_list = {
+			35 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+			}
+			35 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			30 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_colder 
+						has_planet_flag = make_planet_wetter 
+					} 
+				} 
+				modifier = { factor = 0 planetary_diversity_enabled = no } # there are no cold wet planets without planetary diversity enabled
+			}
+		}
+	}
+	else_if = { limit = { is_hot_wet_category_planet = yes }
+		random_list = {
+			35 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			30 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_colder 
+						has_planet_flag = make_planet_dryer
+					} 
+				}
+				modifier = { factor = 5 is_planet_class = pc_continental has_planet_flag = planet_earth } # we want Earth to change into an artic world
+			}
+			35 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+				modifier = { factor = 0 planetary_diversity_enabled = no } # there are no cold wet planets without planetary diversity enabled
+			}
+		}
+	}
+	else_if = { limit = { is_cold_dry_category_planet = yes }
+		random_list = {
+			35 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter }
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+			30 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_hotter 
+						has_planet_flag = make_planet_wetter 
+					} 
+				}
+			}
+			35 = { 
+				change_to_pc_random_cold_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+				modifier = { factor = 0 planetary_diversity_enabled = no } # there are no cold wet planets without planetary diversity enabled
+			}
+		}
+	}
+	else_if = { limit = { is_cold_wet_category_planet = yes }
+		random_list = {
+			30 = { 
+				change_to_pc_random_hot_dry_planet = yes 
+				modifier = { 
+					factor = 100 
+					AND = { 
+						has_planet_flag = make_planet_hotter 
+						has_planet_flag = make_planet_dryer 
+					} 
+				}
+			}
+			35 = { 
+				change_to_pc_random_hot_wet_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_hotter } 
+				modifier = { factor = 100 has_planet_flag = make_planet_wetter } 
+			}
+			35 = { 
+				change_to_pc_random_cold_dry_planet = yes 
+				modifier = { factor = 100 has_planet_flag = make_planet_colder } 
+				modifier = { factor = 100 has_planet_flag = make_planet_dryer } 
+			}
+		}
+	}
+	else = {
+		#do nothing
+	}
+}
+
+change_to_pc_random_uninhabitable = {
+	cleanse_planet = yes
+	if = {
+		limit = { is_planet_class = pc_ringworld_habitable }
+		change_pc = pc_ringworld_habitable_damaged 
+	}
+	else = {
+		random_list = {
+			14 = {
+				change_pc = pc_frozen  
+			}
+			14 = {
+				change_pc = pc_toxic  
+			}
+			14 = {
+				change_pc = pc_barren_cold  
+			}
+			14 = {
+				change_pc = pc_barren  
+			}
+			14 = {
+				change_pc = pc_molten  
+			}
+			10 = {
+				change_pc = pc_broken  
+			}
+			10 = {
+				change_pc = pc_shattered   
+			}
+			7 = {
+				change_pc = pc_shrouded 
+			}
+			1 = {
+				change_pc = pc_infested  
+			}
+			1 = {
+				change_pc = pc_shielded  
+			}
+		}
+	}
+}
+
+# ########################
+# #    Random Climate    #
+# ########################
+
+# changes planet class to a random "hot & dry" planet class based on the PD table
+change_to_pc_random_hot_dry_planet = {
+	random_list = {
+		12 = { 
+			change_to_pc_arid = yes
+			modifier = { factor = 0 is_planet_class = pc_arid } # do not change to the same planet type
+		}
+		12 = { 
+			change_to_pc_desert = yes
+			modifier = { factor = 0 is_planet_class = pc_desert } # do not change to the same planet type
+		}
+		12 = { 
+			change_to_pc_savannah = yes
+			modifier = { factor = 0 is_planet_class = pc_savannah } # do not change to the same planet type
+		}
+		#12 = { 
+		#	change_to_pc_sandsea = yes
+		#	modifier = { factor = 0 is_planet_class_pc_sandsea = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_mesa = yes
+		#	modifier = { factor = 0 is_planet_class_pc_mesa = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_oasis = yes
+		#	modifier = { factor = 0 is_planet_class_pc_oasis = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_geocrystalline = yes
+		#	modifier = { factor = 0 is_planet_class_pc_geocrystalline = yes } # do not change to the same planet type
+		#}
+	}
+	set_planet_flag = hot_dry_planet
+}
+
+# changes planet class to a random "hot & wet" planet class based on the PD table
+change_to_pc_random_hot_wet_planet = {
+	random_list = {
+		12 = { 
+			change_to_pc_continental = yes
+			modifier = { factor = 0 is_planet_class = pc_continental } # do not change to the same planet type
+		}
+		12 = { 
+			change_to_pc_ocean = yes
+			modifier = { factor = 0 is_planet_class = pc_ocean } # do not change to the same planet type
+		}
+		12 = { 
+			change_to_pc_tropical = yes
+			modifier = { factor = 0 is_planet_class = pc_tropical } # do not change to the same planet type
+		}
+		#12 = { 
+		#	change_to_pc_mangrove = yes
+		#	modifier = { factor = 0 is_planet_class_pc_mangrove = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_hajungle = yes
+		#	modifier = { factor = 0 is_planet_class_pc_hajungle = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_desertislands = yes
+		#	modifier = { factor = 0 is_planet_class_pc_desertislands = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_lush = yes
+		#	modifier = { factor = 0 is_planet_class_pc_lush = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_marginal = yes
+		#	modifier = { factor = 0 is_planet_class_pc_marginal = yes } # do not change to the same planet type
+		#}
+	}
+	set_planet_flag = hot_wet_planet
+}
+
+# changes planet class to a random "cold & dry" planet class based on the PD table
+change_to_pc_random_cold_dry_planet = {
+	random_list = {
+		12 = { 
+			change_to_pc_tundra = yes
+			modifier = { factor = 0 is_planet_class = pc_tundra } # do not change to the same planet type
+		}
+		12 = { 
+			change_to_pc_alpine = yes
+			modifier = { factor = 0 is_planet_class = pc_alpine } # do not change to the same planet type
+		}
+		12 = { 
+			change_to_pc_arctic = yes
+			modifier = { factor = 0 is_planet_class = pc_arctic } # do not change to the same planet type
+			modifier = { factor = 5 is_planet_class = pc_continental has_planet_flag = planet_earth } # try and force Earth to be artic class
+		}
+		#12 = { 
+		#	change_to_pc_frozen_desert = yes
+		#	modifier = { factor = 0 is_planet_class_pc_frozen_desert = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_steppe = yes
+		#	modifier = { factor = 0 is_planet_class_pc_steppe = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_pc_hadesert = yes
+		#	modifier = { factor = 0 is_planet_class_pc_hadesert = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_to_pc_antarctic = yes
+		#	modifier = { factor = 0 is_planet_class_pc_antarctic = yes } # do not change to the same planet type
+		#}
+	}
+	set_planet_flag = cold_dry_planet
+}
+
+# changes planet class to a random "cold & wet" planet class based on the PD table
+change_to_pc_random_cold_wet_planet = {
+	random_list = {
+		#12 = { 
+		#	change_pc = pc_swamp
+		#	set_entity_swamp = yes
+		#	modifier = { factor = 0 is_planet_class_pc_swamp = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_pc = pc_cascadian
+		#	set_entity_cascadian = yes
+		#	modifier = { factor = 0 is_planet_class_pc_cascadian = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_pc = pc_geothermal
+		#	set_entity_geothermal = yes
+		#	modifier = { factor = 0 is_planet_class_pc_geothermal = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_pc = pc_glacial
+		#	set_entity_glacial = yes
+		#	modifier = { factor = 0 is_planet_class_pc_glacial = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_pc = pc_subarctic 
+		#	set_entity_subartic = yes
+		#	modifier = { factor = 0 is_planet_class_pc_subarctic  = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_pc = pc_marginal_cold
+		#	set_entity_marginal_cold = yes
+		#	modifier = { factor = 0 is_planet_class_pc_marginal_cold  = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_pc = pc_retinal
+		#	set_entity_retinal = yes
+		#	modifier = { factor = 0 is_planet_class_pc_retinal = yes } # do not change to the same planet type
+		#}
+		#12 = { 
+		#	change_pc = pc_boreal
+		#	set_entity_boreal = yes
+		#	modifier = { factor = 0 is_planet_class_pc_boreal = yes } # do not change to the same planet type
+		#}
+	}
+	set_planet_flag = cold_wet_planet
+}
+
+# change to planet class that is the same as the owner preference
+# Scope: Planet
+change_to_pc_owner_class = {
+	if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_arid_preference } 
+		}
+		change_to_pc_arid = yes
+	}
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_desert_preference }
+		}
+		change_to_pc_desert = yes
+	}
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_savannah_preference }
+		}
+		change_to_pc_savannah = yes
+	}
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_continental_preference }
+		}
+		change_pc = pc_continental
+	}
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_tropical_preference }
+		}
+		change_pc = pc_tropical
+	}
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_ocean_preference }
+		}
+		change_pc = pc_ocean
+	}
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_arctic_preference }
+		}
+		change_pc = pc_arctic
+	}
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_tundra_preference }
+		}
+		change_pc = pc_tundra
+	}
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_alpine_preference }
+		}
+		change_pc = pc_alpine
+	}	
+	
+	# special planet types
+	
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_nuked_preference }
+		}
+		change_pc = pc_nuked
+	}
+	else_if = {
+		limit = {
+			owner_species = { has_trait = trait_pc_gaia_preference }
+		}
+		change_pc = pc_gaia
+	}
+	else = { }
+}
+
+# From PD, change owner species to match planet preference
+# Scope: Planet
+# Prev: Planet
+change_owner_species_to_this_planet_preference = {
+    every_owned_pop = {
+        limit = { is_exact_same_species = prev.owner }
+        modify_species = {
+            species = this
+            ideal_planet_class = prev                            
+            base = none # makes this replace parent species
+        }
+    }
+    owner = { change_dominant_species = { species = last_created change_all = yes } }
+}
+
+
+# Destroys planet, removing all buildings
+cleanse_planet = {
+	remove_all_buildings = yes
+	destroy_colony = yes
+}
+
+### Deposits ###
+oc_generate_special_planet_start_deposits_and_blockers = {
+	clear_deposits = yes
+	
+	# blockers
+	if = {
+		limit = {
+			owner = {		
+				oc_requires_homeworld_class_to_change_to_nuked = yes
+			}
+		}
+		add_deposit = d_tomb_world_ruins
+		add_deposit = d_tomb_world_wasteland
+	}
+	else_if = {
+		limit = {
+			owner = {		
+				has_civic = civic_machine_terminator
+				oc_is_machine_world_country = no
+			}
+		}
+	
+		add_deposit = d_exterminators_ruins
+		add_deposit = d_former_battlefield
+	}
+	else_if = {
+		limit = {
+			owner = {		
+				has_civic = civic_machine_servitor
+				oc_requires_homeworld_class_to_change_to_nuked = no
+			}
+		}
+	
+		add_deposit = d_strip_mine
+		add_deposit = d_unsupervised_settlement			
+	}
+	else_if = {
+		limit = {
+			owner = {		
+				has_civic = civic_machine_assimilator
+				oc_requires_homeworld_class_to_change_to_nuked = no
+			}
+		}
+	
+		add_deposit = d_strip_mine
+		add_deposit = d_assimilators_ruins			
+	}
+	else_if = {
+		limit = {
+			owner = {		
+				has_authority = auth_machine_intelligence
+				oc_requires_homeworld_class_to_change_to_nuked = no
+				oc_is_machine_world_country = no
+			}
+		}
+	
+		add_deposit = d_strip_mine
+		add_deposit = d_machine_empire_ruins			
+	}
+	else_if = {
+		limit = {
+			owner = {		
+				has_authority = auth_machine_intelligence
+				oc_is_machine_world_country = yes
+			}
+		}
+		add_deposit = d_oc_failing_infrastructure
+		add_deposit = d_oc_failing_infrastructure	
+	}
+	else_if = {
+		limit = {
+			owner = {		
+				has_authority = auth_hive_mind
+				oc_requires_homeworld_class_to_change_to_nuked = no
+				oc_is_hive_world_country = no
+			}
+		}
+	
+		add_deposit = d_collapsed_burrows
+		add_deposit = d_failing_infrastructure
+		add_deposit = d_failing_infrastructure
+	}	
+	else_if = {
+		limit = {
+			owner = {		
+				has_authority = auth_hive_mind
+				oc_is_hive_world_country = yes
+			}
+		}
+	
+		add_deposit = d_collapsed_burrows
+		add_deposit = d_collapsed_burrows
+		add_deposit = d_oc_failing_infrastructure
+	}
+	else = {
+		add_deposit = d_decrepit_dwellings
+		add_deposit = d_failing_infrastructure
+		add_deposit = d_failing_infrastructure
+	}
+
+	if = {
+		limit = {
+			owner = {		
+				oc_requires_homeworld_class_to_change_to_nuked = yes
+			}
+		}	
+		
+		# 3 + 3 energy		
+		add_deposit = d_hot_springs		
+		add_deposit = d_searing_desert
+		add_deposit = d_underwater_vent	
+		
+		# 3 + 4 mining
+		add_deposit = d_veiny_cliffs		
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_submerged_ore_veins
+		
+		# 3 + 2 farming
+		add_deposit = d_lichen_fields	
+		add_deposit = d_fungal_caves 	
+		add_deposit = d_fungal_forest	
+	}
+
+	if = {
+		limit = {
+			owner = {
+				oc_requires_homeworld_class_to_change_to_gaia = yes
+			}
+		}
+		
+		# 5 + 3 energy		
+		add_deposit = d_searing_desert			
+		add_deposit = d_underwater_vent
+		add_deposit = d_tempestous_mountain			
+		
+		# 5 + 3 mining
+		add_deposit = d_ore_rich_caverns 		
+		add_deposit = d_prosperous_mesa
+		add_deposit = d_submerged_ore_veins
+		
+		# 5 + 3 farming
+		add_deposit = d_lush_jungle	
+		add_deposit = d_teeming_reef		
+		add_deposit = d_black_soil		
+		
+		# 1 random medium deposit
+		random_list = {
+			33 = { add_deposit = d_frozen_gas_lake }
+			33 = { add_deposit = d_prosperous_mesa }
+			33 = { add_deposit = d_fertile_lands }
+		}	
+		
+		if = {
+			limit = { 
+				owner = { 
+					oc_is_gaia_preference_country = yes 
+				}
+			}
+			add_deposit = d_dust_caverns
+			add_deposit = d_bubbling_swamp
+			add_deposit = d_crystalline_caverns
+		}
+	}
+}
+
+add_vault_complex_deposit = {
+	add_deposit = d_oc_vault_complex 
+}
+
+### Buildings ###
+oc_generate_start_districts = {
+	if = {
+		limit = { owner = { is_regular_empire = yes } }
+		
+		# total - 24 jobs
+		
+		# 3 jobs
+		add_district = district_city
+		
+		if = {
+			limit = {
+				owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
+			}
+			add_district = district_city
+			add_district = district_city			
+		}	
+		else = {
+			add_district = district_farming
+		}
+				
+		# 4 jobs
+		add_district = district_farming
+		add_district = district_farming
+		
+		# 4 jobs
+		add_district = district_mining
+		add_district = district_mining
+		
+		# 2 jobs
+		add_district = district_generator
+		
+		# 2 jobs
+		if = {
+			limit = { owner = { is_megacorp = no } }
+			add_district = district_generator	
+		}	
+	}
+	
+	if = {
+		limit = { owner = { is_hive_empire = yes } }
+		
+		# total - 34 jobs
+		
+		# 0 jobs
+		add_district = district_hive
+		add_district = district_hive
+		add_district = district_hive
+		
+		# 6 jobs
+		add_district = district_farming
+		add_district = district_farming
+		
+		# 6 jobs
+		add_district = district_mining
+		add_district = district_mining
+		
+		# 6 jobs
+		add_district = district_generator
+		add_district = district_generator		
+	}
+	
+	# Replace capital building for machine empires
+	if = {
+		limit = { owner = { is_machine_empire = yes } }
+		
+		# total - 27 jobs
+		
+		# 0 jobs
+		add_district = district_nexus
+		add_district = district_nexus
+		add_district = district_nexus
+		
+		# 4 jobs
+		add_district = district_mining
+		add_district = district_mining
+		
+		# 10 jobs
+		add_district = district_generator
+		add_district = district_generator
+		add_district = district_generator
+		add_district = district_generator
+		add_district = district_generator
+		
+		#Assimilators
+		if = {
+			limit = { owner = { has_civic = civic_machine_assimilator } }
+			remove_district = district_generator
+			add_district = district_farming
+		}
+		#Servitors
+		if = {
+			limit = { owner = { has_civic = civic_machine_servitor } }
+			add_district = district_farming	
+			add_district = district_generator
+			add_district = district_generator
+			remove_district = district_nexus
+			remove_district = district_nexus
+		}
+	}
+}

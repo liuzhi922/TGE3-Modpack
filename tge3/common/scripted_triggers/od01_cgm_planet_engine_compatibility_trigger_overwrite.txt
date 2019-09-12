@@ -1,0 +1,71 @@
+#copies from cgm / planetary diversity mod
+
+is_hot_dry_category_planet = {
+	OR = {
+		is_planet_class = pc_arid
+		is_planet_class = pc_desert
+		is_planet_class = pc_savannah
+		#is_planet_class_pc_sandsea = yes
+		#is_planet_class_pc_mesa = yes
+		#is_planet_class_pc_oasis = yes
+		#is_planet_class_pc_geocrystalline = yes
+		has_planet_flag = oc_fake_planet			
+	}	
+}	
+
+is_hot_wet_category_planet = {
+	OR = {
+		is_planet_class = pc_continental
+		is_planet_class = pc_ocean
+		is_planet_class = pc_tropical	
+		#is_planet_class_pc_mangrove = yes
+		#is_planet_class_pc_hajungle = yes	
+		#is_planet_class_pc_desertislands = yes
+		#is_planet_class_pc_lush = yes
+		#is_planet_class_pc_marginal = yes
+		has_planet_flag = oc_fake_planet
+	}	
+}
+
+is_cold_dry_category_planet = {	
+	OR = {
+		is_planet_class = pc_tundra 
+		is_planet_class = pc_alpine
+		is_planet_class = pc_arctic
+		#is_planet_class_pc_frozen_desert = yes
+		#is_planet_class_pc_steppe = yes
+		#is_planet_class_pc_hadesert = yes
+		#is_planet_class_pc_antarctic = yes
+		has_planet_flag = oc_fake_planet
+	}
+}	
+
+is_cold_wet_category_planet = {				
+	OR = {
+		#is_planet_class_pc_swamp = yes
+		#is_planet_class_pc_cascadian = yes
+		#is_planet_class_pc_geothermal = yes
+		#is_planet_class_pc_glacial = yes
+		#is_planet_class_pc_subarctic = yes				
+		#is_planet_class_pc_marginal_cold = yes			
+		#is_planet_class_pc_retinal = yes
+		#is_planet_class_pc_boreal = yes
+		has_planet_flag = oc_fake_planet
+	}	
+}	
+
+is_special_planet = { 
+	OR = { 
+		is_planet_class = pc_gaia
+		is_planet_class = pc_machine
+		#is_planet_class_pc_crystal = yes
+		#is_planet_class_pc_floating = yes
+		#is_planet_class_pc_graveyard = yes
+		#is_planet_class_pc_mushroom = yes
+		#is_planet_class_pc_city = yes
+		#is_planet_class_pc_archive = yes
+		#is_planet_class_pc_biolumen = yes
+		#is_planet_class_pc_technoorganic = yes
+		has_planet_flag = oc_fake_planet
+	}
+}

@@ -1,0 +1,20 @@
+﻿l_simp_chinese:
+
+ ####################################
+ # Origins Deposits
+ ####################################
+ 
+ d_oc_failing_infrastructure:0 "$d_failing_infrastructure$"
+ d_oc_failing_infrastructure_desc:0 "$d_failing_infrastructure_desc$"
+ 
+ d_oc_vault_complex:0 "Vault Complex"
+ d_oc_vault_complex_desc:0 "A massive underground vault complex with a vast labyrinth of laboratories, habitation modules, and recreational facilities that sheltered our species from the bombs. While most of us now occupy the surface, the complex's advanced facilities are still actively used."
+
+ ####################################
+ # Origins Buildings
+ ####################################
+ 
+ building_oc_eternal_mausoleum:0 "Mausoleum of the Eternal"
+ building_oc_eternal_mausoleum_desc:0 "A massive complex enshrining the Eternal and all the principles the fallen leader stood for."
+ building_oc_eternal_mausoleum_proper:0 "[GetRulerName]'s Grand Mausoleum"
+ building_oc_eternal_mausoleum_desc_proper:0 "The sacred mausoleum of the revered [GetRulerName]."

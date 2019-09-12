@@ -1,0 +1,74 @@
+﻿l_braz_por:
+
+ ####################################
+ # Origins Civics - Planet Civics
+ ####################################
+ 
+ #Regular Empire
+ civic_cbshing_eco_shift:0 "Climate Shift"
+ civic_cbshing_eco_shift_desc:0 "This society developed during an favorable climate period on their planet. As the climate shifted they had to learn to adapt to their harsh new world."
+ civic_tooltip_oc_climate_shift_effects:1 "$MOD_POP_AMENITIES_USAGE_MULT$: §G-10%§!\nHomeworld starts as a non preferential climate for your species."
+ 
+ civic_cbshing_nuclear_vault:0 "Nuclear Vault"
+ civic_cbshing_nuclear_vault_desc:0 "Protected by a large underground vault, this society was spared the horrors of nuclear war. Cramped together they succeed to preserve their society, but they were unprepared for the harsh reality of surface life."
+ civic_tooltip_oc_nuclear_vault_effects:1 "$MOD_POP_HOUSING_USAGE_MULT$: §G-10%§!\nCapital starts as a §Y$pc_nuked$§! with a unique §Y$d_oc_vault_complex$§! deposit, which gives several §Yresearch§! and §Yamenities§! bonuses to the capital planet."
+ 
+ civic_cbshing_nuclear_mutation:0 "Nuclear Mutation"
+ civic_cbshing_nuclear_mutation_desc:0 "This species was the product of a radiation induced mutation. Having evolved on the desolated surface of their homeworld, they are more hardy to alien environments."
+ civic_tooltip_oc_nuclear_mutation_effects:1 "Homeworld is a §Y$pc_nuked$§!\nHabitability preference is set to §Y$trait_pc_nuked_preference$§!."
+ 
+ civic_cbshing_voidborne:0 "Voidborne"
+ civic_cbshing_voidborne_desc:0 "This society has long lived in the void of space. Prolonged low gravity living has made it impossible for them to live on any planet."
+ civic_tooltip_oc_voidborne_effects:1 "$mod_planet_jobs_specialist_produces_mult$: §G+15%§!\n$mod_station_gatherers_produces_mult$: §G+5%§!\n$mod_station_researchers_produces_mult$: §G+5%§!\n§Y$MOD_ARMY_DAMAGE_MULT$§! reduced by §R-20%§!\nHomeworld is a §Y$pc_habitat$§! (Size: £planetsize  §Y6§!). Habitability preference is set to §Y$trait_pc_habitat_preference$§!, making other types of planets undesirable."
+ 
+ #Hive Empire
+ civic_oc_hive_post_apocalyptic:0 "$civic_post_apocalyptic$"
+ civic_oc_hive_post_apocalyptic_desc:0 "Baptized by nuclear fire, this Hive has faced total annihilation - and survived. Devastated yet unbroken, they have rebuilt their Hive from the ashes of the old world."
+ 
+ civic_oc_hive_life_seeded:0 "$civic_life_seeded$"
+ civic_oc_hive_life_seeded_desc:0 "This Hive has evolved in a paradise, possibly designed just for them."
+
+ civic_oc_hive_nuclear_vault:0 "Nuclear Vault"
+ civic_oc_hive_nuclear_vault_desc:0 "Protected by a large underground vault, this Hive was spared the annihilation by nuclear war. While gestating underground, they were unprepared for the harsh reality of surface life."
+
+ civic_oc_hive_nuclear_mutation:0 "Nuclear Mutation"
+ civic_oc_hive_nuclear_mutation_desc:0 "This species was the product of a radiation induced mutation. Having evolved on the desolated surface of their homeworld, they are more hardy to alien environments."
+
+ civic_oc_hive_hive_world:0 "Hive World"
+ civic_oc_hive_hive_world_desc:0 "Having reached a certain mass on its small world, this Hive integrated itself with the terrain. Now any beings not part of the Hive that set foot here will be attacked by the very terrain itself."
+ civic_tooltip_oc_hive_world_effects:1 "Homeworld is a §Y$pc_hive$§! (Size: £planetsize£ §Y12§!)."
+
+ #Machine Empire
+ civic_cbshing_robo_nuked_start:0 "Nuclear Start"
+ civic_cbshing_robo_nuked_start_desc:0 "Upon rebooting its primary processor, this Machine Intelligence awoke to discover the world was destroyed."
+ civic_tooltip_oc_robo_nuked_start_effects:1 "Capital starts as a §Y$pc_nuked$§!. Any §Y$SECONDARY_SPECIES$§! begins with §Y$trait_pc_nuked_preference$§! habitability preference."
+ 
+ civic_cbshing_machine_world:0 "Machine World"
+ civic_cbshing_machine_world_desc:0 "To maximize their efficiency, the Machine Intelligence transformed their small planet into a §YMachine World§!. The thin atmosphere consists mostly of industrial pollutants and is not capable of supporting biological life."
+ civic_tooltip_oc_machine_world_effects:1 "Homeworld is a §Y$pc_machine$§! (Size: £planetsize£ §Y12§!)."
+ 
+ #Corporate Empire
+ civic_oc_corp_post_apocalyptic:0 "$civic_post_apocalyptic$"
+ civic_oc_corp_post_apocalyptic_desc:0 "$civic_post_apocalyptic_desc$"
+ 
+ civic_oc_corp_life_seeded:0 "$civic_life_seeded$"
+ civic_oc_corp_life_seeded_desc:0 "$civic_life_seeded_desc$"
+ 
+ civic_oc_corp_climate_shift:0 "$civic_cbshing_eco_shift$"
+ civic_oc_corp_climate_shift_desc:0 "$civic_cbshing_eco_shift_desc$"
+ 
+ civic_oc_corp_nuclear_vault:0 "$civic_cbshing_nuclear_vault$"
+ civic_oc_corp_nuclear_vault_desc:0 "$civic_cbshing_nuclear_vault_desc$"
+ 
+ civic_oc_corp_nuclear_mutation:0 "$civic_cbshing_nuclear_mutation$"
+ civic_oc_corp_nuclear_mutation_desc:0 "$civic_cbshing_nuclear_mutation_desc$"
+ 
+ ####################################
+ # Origins Start Messages
+ ####################################
+ 
+ START_SCREEN_PART_ONE_NUCLEAR_MUTATION:0 "In the eons since the first primitive [GetSpeciesName] communities took shape on the great wasteland of [GetHomeWorldName], our civilization spread and prospered."
+ START_SCREEN_PART_ONE_VOIDBORNE:0 "Eons ago the first primitive [GetSpeciesNamePlural] escaped our doomed home of [GetHomeWorldName], building a civilization that lived in the void."
+ 
+ START_SCREEN_PART_TWO_CLIMATE_SHIFT:0 "As our scientific knowledge increased so did our understanding of our environment and the realization that the climate of our world was changing.  This profound knowledge unified the various nation states with a common goal: to ensure the survival of our species in our harsh new world."
+ START_SCREEN_PART_TWO_NUCLEAR_VAULT:0 "The early period of our history where many nation states vied for power culminated in a great tragedy during our atomic age. The detonation of hundreds of nuclear warheads left our world in ruins. If not for the great underground vaults and the leaders who lead them, our species would not have been able to survive and rebuild our world to what it is today."

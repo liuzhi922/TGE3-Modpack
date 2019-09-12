@@ -1,0 +1,83 @@
+# Origins Civics Fallen Dreams Addon Civics Triggers
+# by cbshing
+#
+# Each of these triggers refers to a single civic.
+# Each Civic can be disabled by commenting out the related "has_valid_civic" line in this code
+# And adding an invalid check (such as has_country_flag = invalid_oc_country).
+# This would allow for the code to remain the same, but only alter the lines here.
+#
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+### default empires
+
+# scope: country 
+has_oc_worm_loved_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_worm_loved
+		has_country_flag = worm_loved_country
+	}
+}
+
+# scope: country 
+has_oc_fallen_colony_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_fallen_colony
+		has_country_flag = fallen_colony_country
+	}
+}
+
+# scope: country 
+has_oc_fallen_tributary_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_fallen_tributary
+		has_country_flag = fallen_tributary_country
+	}
+}
+
+# scope: country 
+has_oc_fallen_enclave_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_fallen_enclave
+		has_country_flag = fallen_enclave_country
+	}
+}
+
+
+# scope: country 
+has_oc_n_cluster_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_n_cluster
+		has_country_flag = n_cluster_country
+	}
+}
+
+# scope: country 
+has_oc_synthetics_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_synthetics
+		has_country_flag = synthetics_country
+	}
+}
+
+# scope: country 
+has_oc_psionics_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_psionics
+		has_country_flag = psionics_country
+	}
+}

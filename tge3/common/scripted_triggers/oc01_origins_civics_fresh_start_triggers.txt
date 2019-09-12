@@ -1,0 +1,152 @@
+# Origins Civics Fresh Start Addon Civics Triggers
+# by cbshing
+#
+# Each of these triggers refers to a single civic.
+# Each Civic can be disabled by commenting out the related "has_valid_civic" line in this code
+# And adding an invalid check (such as has_country_flag = invalid_oc_country).
+# This would allow for the code to remain the same, but only alter the lines here.
+#
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+### default empires
+
+# scope: country 
+has_oc_syncretic_mechanists_civic = {
+	OR = {
+		#has_valid_civic = civic_cbshing_syncretic_mechanists
+		has_country_flag = syncretic_mechanists_country
+	}
+}
+
+# scope: country 
+has_oc_codominant_mechanists_civic = {
+	OR = {
+		#has_valid_civic = civic_cbshing_codominant_mechanists
+		has_country_flag = codominant_mechanists_country
+	}
+}
+
+# scope: country 
+has_oc_habitat_life_civic = {
+	OR = {
+		#has_valid_civic = civic_cbshing_habitat_life
+		has_country_flag = habitat_life_country
+	}
+}
+
+# scope: country 
+has_oc_paradise_life_civic = {
+	OR = {
+		#has_valid_civic = civic_cbshing_gaia_world
+		has_country_flag = gaia_life_country
+	}
+}
+
+# scope: country 
+has_oc_ringborne_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_ringborne
+		has_country_flag = ringborne_country
+	}
+}
+
+# scope: country 
+has_oc_dyson_engineers_civic = {
+	OR = {
+		#has_valid_civic = civic_cbshing_dyson_sphere
+		has_country_flag = dyson_engineers_country
+	}
+}
+
+# scope: country 
+has_oc_wormhole_travelers_civic = {
+	OR = {
+		#has_valid_civic = civic_cbshing_wormhole
+		has_country_flag = wormhole_travelers_country
+	}
+}
+
+# scope: country 
+has_oc_cybernetic_civic = {
+	OR = {
+		#has_valid_civic = civic_cbshing_cybernetic
+		has_country_flag = cybernetic_country
+	}
+}
+
+# scope: country 
+has_oc_latent_psionic_civic = {
+	OR = {
+		#has_valid_civic = civic_cbshing_latent_psionic
+		has_country_flag = latent_psionic_country
+	}
+}
+
+# scope: country 
+has_oc_symbiotic_evolution_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_symbiotic_evolution
+		has_country_flag = brain_slug_country
+	}
+}
+
+### hive empires
+
+# scope: country 
+has_oc_hive_habitat_life_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_hive_habitat_life
+		has_country_flag = hive_habitat_life_country
+	}
+}
+
+# scope: country 
+has_oc_hive_paradise_life_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_hive_paradise_life
+		has_country_flag = hive_gaia_life_country
+	}
+}
+
+# scope: country 
+has_oc_hive_dyson_builders_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_hive_dyson_builders
+		has_country_flag = hive_dyson_builders_country
+	}
+}
+
+
+### robot empires
+
+# scope: country 
+has_oc_robo_voidborne_mechanisms_civic = {
+	OR = {
+		#has_valid_civic = civic_oc_robo_voidborne_mechanisms
+		has_country_flag = robo_voidborne_country
+	}
+}
+# scope: country 
+has_oc_robo_dyson_builders_civic = {
+	OR = {
+
+		#has_valid_civic = civic_oc_robo_dyson_builders
+		has_country_flag = robo_dyson_builders_country
+	}
+}
+

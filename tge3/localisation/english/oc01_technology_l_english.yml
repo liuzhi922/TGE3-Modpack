@@ -1,0 +1,9 @@
+﻿l_english:
+
+ ####################################
+ # Origins Technologies
+ ####################################
+ tech_oc_tomb_creation:0 "Tomb World Creation"
+ tech_oc_tomb_creation_desc:0 "Having thrived in an environment considered most inhospitable, we are inclined to recreate these ecologically devasted worlds to live on."
+ TECH_UNLOCK_TERRAFORMING_NUKED_CREATION_CHANGE_TITLE:0 "§HUnlocks Feature:§! Tomb World Creation"
+ TECH_UNLOCK_TERRAFORMING_NUKED_CREATION_CHANGE_DESC:1 "§HTomb World Creation§!\nAllows us to transform planets into ecologically devastated tomb worlds."

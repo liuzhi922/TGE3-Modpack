@@ -1,0 +1,47 @@
+namespace = origins_civics_ai_planet_events
+# by cbshing
+
+### AI Planet Quest Events
+
+### Planet_Restoration
+#Restore Homeworld to Owner Climate if Has Right Technology
+planet_event = {
+    id = origins_civics_ai_planet_events.100
+    hide_window = yes
+    is_triggered_only = yes
+
+	trigger = {
+		has_owner = yes
+		original_owner = yes
+		is_homeworld = yes
+		owner = { is_ai = yes }
+		has_ground_combat = no #don't want you to be at war to start event chain
+		is_occupied_flag = no #don't want your homeworld occupied to start event chain
+		num_pops > 0 #must have pops living on homeworld to start event chain
+		owner = { has_country_flag = "origins_restore_homeworld_needed" }
+		OR = {
+			AND = { 
+				owner = { has_technology = tech_climate_restoration	} 
+				is_planet_class = pc_nuked 
+			}
+			AND = { 
+				owner = { has_technology = tech_terrestrial_sculpting }
+				NOT = { is_planet_class = pc_nuked } 
+			}
+		}
+		NOT ={ 
+			owner = { has_country_flag = restore_homeworld_country_true }
+			owner = { has_country_flag = restore_homeworld_country_events_chain_initiated }
+		}
+		NOR = {
+			is_planet_class = pc_gaia # this is added if someone has terraformed their homeworld to gaia instead.
+			is_planet_class = pc_hive # this is added if someone has terraformed their homeworld to hive instead.
+			is_ideal_planet_class = { who = owner status = yes }
+		}
+	}
+	mean_time_to_happen  { years = 25 }
+	
+	immediate = {
+		change_to_pc_owner_class = yes
+	}
+}

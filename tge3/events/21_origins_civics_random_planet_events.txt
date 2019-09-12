@@ -1,0 +1,18 @@
+namespace = origins_civics_random_planet_events
+# by cbshing
+
+### Random Planet Events 
+
+event = {
+	id = origins_civics_random_planet_events.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		
+	}
+}

@@ -1,0 +1,12 @@
+is_uninhabitable_planet = {
+	OR = {
+		is_planet_class = pc_shrouded
+		is_planet_class = pc_broken
+		is_planet_class = pc_shattered
+		is_planet_class = pc_frozen 
+		is_planet_class = pc_toxic 
+		is_planet_class = pc_barren_cold  
+		is_planet_class = pc_barren  
+		is_planet_class = pc_molten   
+	}	
+}

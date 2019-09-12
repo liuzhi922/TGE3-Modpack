@@ -1,0 +1,25 @@
+namespace = origins_civics_terraforming_events
+# by cbshing
+
+### Terraforming Events
+
+### Used to add unique entities for Earth when it is terraformed
+
+# When Earth is terraformed it will retain its unique entity texture
+planet_event = {
+    id = origins_civics_terraforming_events.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+		if = {
+			limit = { has_planet_flag = planet_earth }
+			if = {
+				limit = {
+					is_planet_class = pc_continental
+				}
+				set_planet_entity = { entity = "continental_planet_earth_entity" }
+			}
+		}
+    }
+}
