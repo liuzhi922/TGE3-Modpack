@@ -3065,15 +3065,14 @@ steed_cluster_08 = {
 
 # kharak_system
 atronach_cluster_01 = {
-  name = "Sajuuk"
+  name = "Axhaius Alpha"
   class = sc_m_giant
   usage = misc_system_init
   usage_odds = 0
-  flags = { extragalactic_cluster atronach_cluster_01 kharak_system primitive_system atronach_cluster }
-
+  flags = { extragalactic_cluster atronach_cluster_01 kharak_system primitive_system atronach_cluster alpha_cluster_tinusa alpha_cluster_nexus alpha_cluster empire_home_system}
   # star
   planet = {
-    name = "Sajuuk"
+    name = "Axhaius Alpha"
     class = pc_m_giant_star
 		orbit_distance = 0
 		orbit_angle = 1
@@ -3115,214 +3114,20 @@ atronach_cluster_01 = {
   }
   # Kharak, desert
   planet = {
-    name = "Kharak"
-    class = pc_desert
+    name = "Lezallia"
+    class = pc_desertislands
     orbit_distance = 20
     orbit_angle = { min = 120 max = 200 }
     size = 23
     has_ring = no
-    # United Kiiths of Kharak
-    init_effect = {
-      create_species = {
-        name = "Kushan"
-        plural = "Kushans"
-        adjective = "Kushani"
-        class = "HUM"
-        portrait = "human"
-        homeworld = THIS
-        traits = {
-          trait = "trait_adaptive"
-          trait = "trait_nomadic"
-          trait = "trait_natural_engineers"
-      		trait = "trait_rapid_breeders"
-      		trait = "trait_quick_learners"
-        }
-      }
-      create_country = {
-        name = "United Kiith of Kharak"
-        adjective = "Kharakan"
-        authority = "auth_democratic"
-        day_zero_contact = no
-        civics = {
-          civic = civic_increasing_urbanization
-          civic = civic_atmospheric_pollution
-        }
-        species = last_created
-        ethos = {
-          ethic = "ethic_egalitarian"
-        	ethic = "ethic_militarist"
-        	ethic = "ethic_spiritualist"
-        }
-        flag = {
-          icon={
-      			category="domination"
-      			file="domination_2.dds"
-      		}
-      		background={
-      			category="backgrounds"
-      			file="horizontal.dds"
-      		}
-      		colors={
-      			"blue"
-      			"black"
-      			"null"
-      			"null"
-      		}
-        }
-        type = primitive
-      }
-      last_created_country = {
-        set_graphical_culture = industrial_01
-        set_country_flag = early_space_age
-        set_primitive_age = early_space_age
-      }
-      set_owner = last_created_country
-      create_primitive_blockers = yes
-
-
-      create_army = {
-        name = "Kiith S'jet Garrison"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "1st Kiith Soban Warriors"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "2nd Kiith Soban Warriors"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "1st Kiith Naabal Guardians"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "2nd Kiith Naabal Guardians"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Manaan Nomads"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Somtaaw Garrison"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith LiirHra Engineer Corp"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Gaalsien Fanatics"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Gaalsien Fanatics"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Tambuur Garrison"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Jaraci Garrison"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Sagald Soldiers"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Magann Protectors"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Kaalel Garrison"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Paktu Guardians"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_army = {
-        name = "Kiith Siidim Traitors"
-        owner = last_created
-        species = last_created
-        type = "postatomic_army"
-      }
-      create_fleet = {
-        name = "Mothership Scaffold"
-        effect = {
-          set_owner = last_created_country
-          create_ship = {
-            name = "Mothership Scaffold"
-            design = "NAME_Space_Station"
-          }
-          set_location = PREV
-        }
-      }
-      while = {
-        count = 40
-        create_pop = {
-          species = last_created
-        }
-      }
-      add_deposit = d_arid_highlands
-      add_deposit = d_searing_desert
-      add_deposit = d_marvelous_oasis
-      add_deposit = d_dust_desert
-      add_deposit = d_crystalline_caverns
-      add_deposit = d_betharian_deposit
-      add_deposit = d_irradiated_valley
-      add_deposit = d_hyperfertile_valley
-      add_deposit = d_ancient_bombardment_craters
-      add_deposit = d_ancient_battlefield
-      add_deposit = d_unsupervised_settlement
-      add_deposit = d_former_battlefield
-      add_deposit = d_tomb_world_ruins
-
-      add_building = building_primitive_farm
-      add_building = building_primitive_factory
-      add_building = building_primitive_mine
-      add_building = building_primitive_power_plant
-      add_building = building_primitive_capital
-      add_building = building_urban_dwellings
-      last_created_country = {
-        capital_scope = { set_name = "Kharak" }
-      }
-    }
+	flags = { planet_tinusa }
+	init_effect = {
+		prevent_anomaly = yes
+	}
+	init_effect = {
+		generate_start_buildings_and_blockers = yes			
+	}
+	
   }
 
   #asteroids

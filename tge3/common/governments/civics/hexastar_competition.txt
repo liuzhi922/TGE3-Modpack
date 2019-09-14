@@ -1,0 +1,44 @@
+#Custom starting civic for Bloom
+
+civic_hexastar_competition = {
+	icon = "gfx/interface/icons/governments/civics/civic_mining_guilds.dds"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	possible = {
+		ethics =
+		{
+			value = ethic_authoritarian
+			OR = {
+				text = civic_tooltip_authoritarian
+				value = ethic_authoritarian
+				value = ethic_authoritarian
+			}
+			NOR = {
+				value = ethic_xenophile
+
+			}
+		}
+		civics = {
+			NOR = {
+			}
+		}
+	}
+	random_weight = {
+		base = 1
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	
+	modifier = { 
+		country_leader_cap = 3
+		species_leader_exp_gain = 0.25
+		country_resource_unity_mult = -0.05
+		pop_resource_output = -0.05
+	}
+
+	description = "civic_tooltip_hexastar_competition_effects"
+}

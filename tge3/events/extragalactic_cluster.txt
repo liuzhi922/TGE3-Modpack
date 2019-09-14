@@ -22,12 +22,8 @@ country_event = {
 			1 = { country_event = { id = extragalactic_cluster.1 } }
 			# Steed Cluster; 8 systems
 			3 = { country_event = { id = extragalactic_cluster.2 } }
-			# Atronach Cluster; 10 systems
-			3 = { country_event = { id = extragalactic_cluster.3 } }
 			# Apprentice Cluster; 11 systems
 			3 = { country_event = { id = extragalactic_cluster.4 } }
-			# Big Dipper Cluster; 7 systems
-			0 = { country_event = { id = extragalactic_cluster.5 } }
     }
 	}
 }
