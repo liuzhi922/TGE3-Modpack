@@ -49,7 +49,13 @@ ship_section_template = {
 		slot_type = strike_craft
 		rotation = -45
 		locatorname = "xl_gun_01"
-	}	
+	}
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}		
 
 	large_utility_slots = 6
 	
@@ -136,6 +142,12 @@ ship_section_template = {
 		slot_size = point_defence
 		slot_type = weapon
 		locatorname = "large_gun_04"
+	}
+	component_slot = {
+		name = "PD_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "large_gun_01"
 	}	
 	
 	large_utility_slots = 6

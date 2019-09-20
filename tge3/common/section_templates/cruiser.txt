@@ -142,6 +142,12 @@ ship_section_template = {
 		locatorname = "small_gun_02"
 	}
 	component_slot = {
+		name = "PD_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
 		name = "STRIKE_CRAFT_01"
 		slot_size = large
 		slot_type = strike_craft

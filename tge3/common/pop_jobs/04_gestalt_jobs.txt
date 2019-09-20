@@ -843,6 +843,10 @@ mining_drone = {
 		}	
 	}
 	
+	planet_modifier = {
+        planet_jobs_minerals_upkeep_mult = -0.01
+    }
+	
 	weight = {
 		weight = @simple_drone_job_weight
 		modifier = {
@@ -895,6 +899,10 @@ agri_drone = {
 		}
 		drone_job_check_trigger = yes
 	}
+	
+	planet_modifier = {
+        planet_pops_food_upkeep_mult = -0.01
+    }
 
 	resources = {
 		category = planet_farmers
@@ -969,6 +977,11 @@ technician_drone = {
 		}
 		drone_job_check_trigger = yes
 	}
+	
+	planet_modifier = {
+        planet_buildings_energy_upkeep_mult = -0.01
+        planet_pops_robotics_upkeep_mult = -0.01
+    }	
 
 	resources = {
 		category = planet_technician

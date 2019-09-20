@@ -131,8 +131,8 @@ subterranean_refiner = {
 			exotic_gases = 1
 		}
 		upkeep = {
-			minerals = 6
-			energy = 6
+			minerals = 12
+			energy = 12
 		}
 	}	
 	
@@ -182,8 +182,8 @@ subterranean_refiner_drone = {
 			exotic_gases = 1
 		}
 		upkeep = {
-			minerals = 6
-			energy = 6
+			minerals = 12
+			energy = 12
 		}
 	}	
 	
@@ -225,7 +225,7 @@ subterranean_foundry = {
 			alloys = 5
 		}
 		upkeep = {
-			minerals = 8
+			minerals = 10
 			volatile_motes = 0.2
 		}
 	}	
@@ -274,7 +274,7 @@ subterranean_foundry_drone = {
 			alloys = 5
 		}
 		upkeep = {
-			minerals = 8
+			minerals = 10
 			volatile_motes = 0.2
 		}
 	}
@@ -304,7 +304,7 @@ subterranean_soldier = {
 	}
 	
 	country_modifier = {
-		country_naval_cap_add = 4
+		country_naval_cap_add = 10
 		leaders_upkeep_mult = -0.01
 	}
 	
@@ -316,7 +316,7 @@ subterranean_soldier = {
 			}
 		}
 		modifier = {
-			country_naval_cap_add = 2
+			country_naval_cap_add = 10
 		}
 	}	
 	
@@ -415,7 +415,7 @@ subterranean_warrior_drone = {
 	}
 	
 	country_modifier = {
-		country_naval_cap_add = 4
+		country_naval_cap_add = 10
 		leaders_upkeep_mult = -0.01
 	}
 	
@@ -427,7 +427,7 @@ subterranean_warrior_drone = {
 			}
 		}
 		modifier = {
-			country_naval_cap_add = 2
+			country_naval_cap_add = 10
 		}
 	}	
 	
@@ -530,7 +530,7 @@ subterranean_researcher = {
 			unity = 1.5
 		}
 		upkeep = {
-			consumer_goods = 4
+			consumer_goods = 6
 		}		
 	}
 	
@@ -610,7 +610,7 @@ subterranean_researcher_drone = {
 			society_research = 2
 		}
 		upkeep = {
-			minerals = 10
+			minerals = 12
 		}		
 	}
 	
@@ -738,9 +738,8 @@ sky_replicator = {
 	}
 	
 	planet_modifier = {
-		planet_pop_assembly_add = 0.5
 		planet_amenities_no_happiness_add = 5
-		planet_jobs_robotic_produces_mult = 0.01
+		planet_jobs_robotic_produces_mult = 0.2
 	} 
 
 	resources = {
@@ -806,8 +805,7 @@ sky_roboticist = {
 	}
 	
 	planet_modifier = {
-		planet_pop_assembly_add = 0.5
-		planet_jobs_robotic_produces_mult = 0.01
+		planet_jobs_robotic_produces_mult = 0.2
 	}
 
 	resources = {

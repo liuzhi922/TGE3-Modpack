@@ -1,7 +1,7 @@
 guiTypes = {
 	containerWindowType = {
 		name = "war_goals_view"
-		size = { width = 960 height = 865 }
+		size = { width = 960 height = 640 }
 		orientation = center
 		origo = center
 		moveable = yes
@@ -10,7 +10,7 @@ guiTypes = {
 			name = "background"
 			spriteType = "GFX_tile_large_bg"
 		}
-
+		
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
@@ -104,7 +104,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "participants"
 				position = { x = 0 y = 45 }
-				size = { width = 305 height = 425 }
+				size = { width = 305 height = 200 }
 
 				background = {
 					name = "background"
@@ -132,7 +132,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "bottom_list"
-				position = { x = 0 y = 475 }
+				position = { x = 0 y = 250 }
 				size = { width = 305 height = 305 }
 
 				background = {
@@ -188,7 +188,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "participants"
 				position = { x = 0 y = 45 }
-				size = { width = 305 height = 425 }
+				size = { width = 305 height = 200 }
 
 				background = {
 					name = "background"
@@ -207,7 +207,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "bottom_list"
-				position = { x = 0 y = 475 }
+				position = { x = 0 y = 250 }
 				size = { width = 305 height = 305 }
 
 				background = {
@@ -241,8 +241,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "tooltip_box"
-
-			position = { x = 0 y = 512 }
+			
+			position = { x = 0 y = 287 }
 			size = { width = 320 height = 305 }
 			moveable = no
 			orientation = center_up
@@ -431,35 +431,6 @@ guiTypes = {
 					}
 				}
 
-				# power
-				containerWindowType = {
-					name = "power"
-					position = { x = 103 y = 33 }
-					size = { width = 154 height = 30 }
-
-					background = {
-						name = "background"
-						spriteType = "GFX_info_background_125"
-					}
-
-					iconType = {
-						name = "icon"
-						spriteType = "GFX_relative_power_icon"
-						position = { x = 3 y = 3 }
-						alwaysTransparent = yes
-					}
-
-					instantTextBoxType = {
-						name = "label"
-						font = "cg_16b"
-						maxWidth = 100
-						maxHeight = 20
-						position = { x = 20 y = 7 }
-						format = right
-						alwaysTransparent = yes
-					}
-				}
-
 				# attitude
 				containerWindowType = {
 					name = "attitude"
@@ -500,7 +471,7 @@ guiTypes = {
 			font = "cg_16b"
 		}
 	}
-
+	
 	containerWindowType = {
 		name = "war_goals_view_invite_attacker_entry"
 		size = { width = 295 height = 50 }
@@ -510,14 +481,14 @@ guiTypes = {
 			spriteType = "GFX_tiles_frame_light"
 			clicksound = "select_click"
 		}
-
+		
 		buttonType = {
 			name = "flag"
 			quadTextureSprite = "GFX_empire_flag_32"
-			position = { x = 6 y = 9  }
+			position = { x= 6 y = 9  }
 		}
 
-		instantTextBoxType = {
+		instantTextBoxType={
 			name = "country_name"
 			position = { x = 41 y = 0 }
 			font = "cg_16b"
@@ -549,7 +520,7 @@ guiTypes = {
 			}
 		}
 	}
-
+	
 	containerWindowType = {
 		name = "war_goals_view_war_goal_entry"
 		size = { width = 295 height = 50 }
@@ -561,7 +532,7 @@ guiTypes = {
 			clicksound = "select_click"
 		}
 
-		instantTextBoxType = {
+		instantTextBoxType={
 			name = "header"
 			position = { x = 47 y = 0 }
 			maxWidth = 237

@@ -125,6 +125,7 @@ cruiser = {
 	modifier = {
 		ship_evasion_add = @cruiser_evasion
 		ship_piracy_suppression_add = 6
+		ship_weapon_damage = 1.5
 	}
 	size_multiplier = 4
 	fleet_slot_size = 3
@@ -174,6 +175,7 @@ battleship = {
 	modifier = {
 		ship_evasion_add = @battleship_evasion
 		ship_piracy_suppression_add = 4
+		ship_weapon_damage = 2
 	}
 	size_multiplier = 8
 	fleet_slot_size = 4
@@ -222,6 +224,7 @@ titan = {
 	max_hitpoints = @titan_hp
 	modifier = {
 		ship_evasion_add = @titan_evasion
+		ship_weapon_damage = 2.5
 	}
 	size_multiplier = 16
 	fleet_slot_size = 8
@@ -525,7 +528,7 @@ military_station_small = {
 	max_speed = 6
 	rotation_speed = 10
 	acceleration = 10
-	max_hitpoints = 1000
+	max_hitpoints = 5000
 	modifier = {
 		ship_evasion_mult = -1
 		ships_upkeep_mult = -0.25
@@ -570,7 +573,7 @@ military_station_medium = {
 	ship_modifier = {
 		ship_weapon_range_mult = 1.00
 	}
-	max_hitpoints = 2000
+	max_hitpoints = 10000
 	size_multiplier = 2
 	fleet_slot_size = 4
 	section_slots = { 
@@ -614,7 +617,7 @@ military_station_large = {
 	ship_modifier = {
 		ship_weapon_range_mult = 2.00	
 	}
-	max_hitpoints = 4000
+	max_hitpoints = 20000
 	size_multiplier = 4
 	fleet_slot_size = 8
 	section_slots = { 
@@ -639,6 +642,7 @@ military_station_large = {
 	required_component_set = "power_core"
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
+	required_component_set = "ship_aura_components"
 	
 	build_block_radius = @build_block_radius_military
 	

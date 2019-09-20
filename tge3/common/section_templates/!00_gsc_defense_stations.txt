@@ -2,7 +2,7 @@
 # Defensive Station
 ##################
 
-@section_cost = 30
+@section_cost = 0
 
 ship_section_template = {
 	key = "LIGHT_MILITARY_STATION_SECTION"

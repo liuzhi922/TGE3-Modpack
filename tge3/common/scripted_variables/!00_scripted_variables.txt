@@ -25,3 +25,20 @@
 # Vanilla
 @distance = 50
 @base_moon_distance = 10
+
+# SHIP MODIFIERS
+@build_block_radius_none = 0
+@build_block_radius_civilian = 20
+@build_block_radius_military = 200
+
+@speed_very_slow = 40
+@speed_slow = 50
+@speed_default = 120
+@speed_fast = 140
+@speed_very_fast = 160
+
+@corvette_hp = 300
+@destroyer_hp = 1200
+@cruiser_hp = 2400
+@battleship_hp = 4800
+@titan_hp = 18000

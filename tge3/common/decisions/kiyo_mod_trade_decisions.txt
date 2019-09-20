@@ -23,6 +23,7 @@ decision_kiyo_mod_trade_setup_trade_route = {
 			energy = 250
 			alloys = 150
 			consumer_goods = 600
+			influence = 50
 		}
 	}
 	
@@ -191,6 +192,7 @@ decision_kiyo_mod_trade_add_ships_to_trade_route = {
 			energy = 250
 			alloys = 150
 			consumer_goods = 600
+			influence = 50
 		}
 	}
 	

@@ -135,11 +135,16 @@ technician = {
 			is_fallen_empire_spiritualist = no
 		}
 	}
+	
+	planet_modifier = {
+        planet_buildings_energy_upkeep_mult = -0.01
+        planet_pops_robotics_upkeep_mult = -0.01
+    }	
 
 	resources = {
 		category = planet_technician
 		produces = {
-			energy = 4
+			energy = 5
 		}
 		produces = {
 			trigger = { 
@@ -280,7 +285,9 @@ miner = {
 			minerals = 4
 		}
 	}	
-	
+	planet_modifier = {
+        planet_jobs_minerals_upkeep_mult = -0.01
+    }
 	weight = {
 		weight = @worker_job_weight
 		modifier = {
@@ -681,7 +688,11 @@ farmer = {
 			}
 			food = -1
 		}
-	}	
+	}
+
+	planet_modifier = {
+        planet_pops_food_upkeep_mult = -0.01
+    }	
 	
 	triggered_planet_modifier = {
 		potential = {
