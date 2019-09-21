@@ -1,0 +1,90 @@
+namespace = silicoids
+# Hidden setup event for silicoid species
+event = {
+	id = silicoids.1 
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = { is_species_class = SLCOD }
+			country_event = { id = silicoids.2 }
+		}
+	}
+}
+
+country_event = {
+	id = silicoids.2 
+	hide_window = yes
+	is_triggered_only = yes
+
+	#trigger = { is_species_class = SLCOD }
+
+	immediate = {
+		create_species = {
+			name = this
+			namelist = this
+			plural = this
+			class = this
+			portrait = this
+			traits = this	
+			pop_maintenance = 0.01	
+			traits = { trait = trait_silicoid }
+			homeworld = this
+      			new_pop_resource_requirement = { type = robot_food value = 30.0  }
+		}
+		every_owned_pop = {
+			limit = { is_species_class = SLCOD }
+			change_species = last_created
+			#change_dominant_species = last_created
+			#	modify_species = {
+			#			species = this
+			#			add_trait = trait_silicoid
+			#			add_traits_at_start_of_list = yes
+			#		}
+			#		remove_culture_shock = yes
+    			#change_species_characteristics = { 
+      			#	  			new_pop_resource_requirement = { type = robot_food value = 30.0  }
+			#				}
+				}
+
+		every_owned_leader = { change_species = last_created }
+		every_pool_leader = { change_species = last_created }
+		change_dominant_species = { species = last_created }
+		#every_pool_leader = { add_trait = trait_silicoid }
+
+		#check special civic
+		if = { limit = { has_valid_civic = civic_terraformers }
+            		give_technology = { tech = tech_terrestrial_sculpting }
+            		give_technology = { tech = tech_atmospheric_manipulation }
+			 }
+		every_owned_pop = { limit = { is_species_class = SLCOD }
+			tile = {
+				if = {
+					limit = { has_building = building_basic_farm }
+					set_building = building_basic_mine 
+				}
+				if = {
+					limit = { has_building = building_hydroponics_farm_1 }
+					set_building = building_mining_network_1 
+				}
+				if = {
+					limit = { has_building = building_hydroponics_farm_2 }
+					set_building = building_mining_network_2 
+				}
+				if = {
+					limit = { has_building = building_hydroponics_farm_3 }
+					set_building = building_mining_network_3 
+				}
+				if = {
+					limit = { has_building = building_hydroponics_farm_4 }
+					set_building = building_mining_network_4 
+				}		
+				if = {
+					limit = { has_building = building_hydroponics_farm_5 }
+					set_building = building_mining_network_5 
+					}
+				}
+			}
+		} #closes immediate
+}

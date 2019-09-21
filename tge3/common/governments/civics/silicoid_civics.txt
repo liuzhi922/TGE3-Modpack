@@ -1,0 +1,20 @@
+
+civic_living_world = {
+	potential = { owner_species = { is_species_archetype = SLCOIDSC } }  #potential = { owner_species = { is_species_archetype = SLCOIDSC } }
+	#random_weight = { base = 0 }
+	modifier = {
+	pop_happiness = 0.2
+	country_admin_cap_add = 10
+	planet_jobs_unity_produces_mult = 0.15
+	}
+}
+
+civic_terraformers = {
+	potential = { is_species_archetype = SLCOIDSC }		#is_species_class = SLCOD
+#	random_weight = { base = 0 }
+	modification = no
+	modifier = {
+		terraforming_cost_mult = -0.05
+	}
+}
+
