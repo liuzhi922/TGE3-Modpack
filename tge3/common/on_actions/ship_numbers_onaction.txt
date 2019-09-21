@@ -1,0 +1,14 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		rebalance.1
+		rebalance.3
+	}
+}
+
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		rebalance.2
+	}
+}

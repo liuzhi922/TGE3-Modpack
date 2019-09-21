@@ -1,0 +1,7 @@
+WRAITH = {
+	randomized = no
+    portraits = {
+    }   
+    graphical_culture = wraith_01
+    move_pop_sound_effect = "moving_pop_confirmation"
+}

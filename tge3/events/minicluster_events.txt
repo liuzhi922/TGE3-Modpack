@@ -1,0 +1,14 @@
+namespace = rebalance
+event = {
+	id = rebalance.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { has_civic = civic_mini_cluster	}
+			give_technology = { tech = "tech_hyperlane_generation" message = no }
+			
+		}
+	}
+}

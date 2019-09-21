@@ -1,0 +1,553 @@
+objectTypes = {
+	pdxmesh = {
+		name = "wraith_01_corvette_frame_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_corvette_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_corvette_hull"
+			index = 0
+			texture_diffuse = "wraith_01_corvette_diffuse.dds"
+			texture_normal = "wraith_01_corvette_normal.dds"
+			texture_specular = "wraith_01_corvette_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}	
+	pdxmesh = {
+		name = "wraith_01_corvette_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_corvette_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_corvette_hull"
+			index = 0
+			texture_diffuse = "wraith_01_corvette_diffuse.dds"
+			texture_normal = "wraith_01_corvette_normal.dds"
+			texture_specular = "wraith_01_corvette_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_destroyer_frame_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_destroyer_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_destroyer_hull"
+			index = 0
+			texture_diffuse = "wraith_01_destroyer_diffuse.dds"
+			texture_normal = "wraith_01_destroyer_normal.dds"
+			texture_specular = "wraith_01_destroyer_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_destroyer_bow_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_destroyer_bow.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_destroyer_hull"
+			index = 0
+			texture_diffuse = "wraith_01_destroyer_diffuse.dds"
+			texture_normal = "wraith_01_destroyer_normal.dds"
+			texture_specular = "wraith_01_destroyer_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_destroyer_stern_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_destroyer_stern.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_destroyer_hull"
+			index = 0
+			texture_diffuse = "wraith_01_destroyer_diffuse.dds"
+			texture_normal = "wraith_01_destroyer_normal.dds"
+			texture_specular = "wraith_01_destroyer_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_frigate_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_frigate_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_destroyer_hull"
+			index = 0
+			texture_diffuse = "wraith_01_destroyer_diffuse.dds"
+			texture_normal = "wraith_01_destroyer_normal.dds"
+			texture_specular = "wraith_01_destroyer_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_cruiser_frame_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_cruiser_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_cruiser_hull"
+			index = 0
+			texture_diffuse = "wraith_01_cruiser_diffuse.dds"
+			texture_normal = "wraith_01_cruiser_normal.dds"
+			texture_specular = "wraith_01_cruiser_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_cruiser_bow_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_cruiser_bow.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_cruiser_hull"
+			index = 0
+			texture_diffuse = "wraith_01_cruiser_diffuse.dds"
+			texture_normal = "wraith_01_cruiser_normal.dds"
+			texture_specular = "wraith_01_cruiser_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_cruiser_mid_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_cruiser_mid.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_cruiser_hull"
+			index = 0
+			texture_diffuse = "wraith_01_cruiser_diffuse.dds"
+			texture_normal = "wraith_01_cruiser_normal.dds"
+			texture_specular = "wraith_01_cruiser_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_cruiser_stern_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_cruiser_stern.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_cruiser_hull"
+			index = 0
+			texture_diffuse = "wraith_01_cruiser_diffuse.dds"
+			texture_normal = "wraith_01_cruiser_normal.dds"
+			texture_specular = "wraith_01_cruiser_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_strikecruiser_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_strikecruiser_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_cruiser_hull"
+			index = 0
+			texture_diffuse = "wraith_01_cruiser_diffuse.dds"
+			texture_normal = "wraith_01_cruiser_normal.dds"
+			texture_specular = "wraith_01_cruiser_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_lightcarrier_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_lightcarrier_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_cruiser_hull"
+			index = 0
+			texture_diffuse = "wraith_01_cruiser_diffuse.dds"
+			texture_normal = "wraith_01_cruiser_normal.dds"
+			texture_specular = "wraith_01_cruiser_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_battleship_frame_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_battleship_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_battleship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_battleship_diffuse.dds"
+			texture_normal = "wraith_01_battleship_normal.dds"
+			texture_specular = "wraith_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_battleship_bow_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_battleship_bow.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_battleship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_battleship_diffuse.dds"
+			texture_normal = "wraith_01_battleship_normal.dds"
+			texture_specular = "wraith_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_battleship_mid_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_battleship_mid.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_battleship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_battleship_diffuse.dds"
+			texture_normal = "wraith_01_battleship_normal.dds"
+			texture_specular = "wraith_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_battleship_stern_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_battleship_stern.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_battleship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_battleship_diffuse.dds"
+			texture_normal = "wraith_01_battleship_normal.dds"
+			texture_specular = "wraith_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_battlecruiser_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_battlecruiser_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_battleship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_battleship_diffuse.dds"
+			texture_normal = "wraith_01_battleship_normal.dds"
+			texture_specular = "wraith_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_carrier_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_carrier_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_battleship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_battleship_diffuse.dds"
+			texture_normal = "wraith_01_battleship_normal.dds"
+			texture_specular = "wraith_01_battleship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_dreadnought_frame_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_dreadnought_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_dreadnought_hull"
+			index = 0
+			texture_diffuse = "wraith_01_dreadnought_diffuse.dds"
+			texture_normal = "wraith_01_dreadnought_normal.dds"
+			texture_specular = "wraith_01_dreadnought_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_dreadnought_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_dreadnought_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_dreadnought_hull"
+			index = 0
+			texture_diffuse = "wraith_01_dreadnought_diffuse.dds"
+			texture_normal = "wraith_01_dreadnought_normal.dds"
+			texture_specular = "wraith_01_dreadnought_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_superdreadnought_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_superdreadnought_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_dreadnought_hull"
+			index = 0
+			texture_diffuse = "wraith_01_dreadnought_diffuse.dds"
+			texture_normal = "wraith_01_dreadnought_normal.dds"
+			texture_specular = "wraith_01_dreadnought_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_flagship_frame_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_flagship_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_flagship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_flagship_diffuse.dds"
+			texture_normal = "wraith_01_flagship_normal.dds"
+			texture_specular = "wraith_01_flagship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_flagship_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_flagship_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_flagship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_flagship_diffuse.dds"
+			texture_normal = "wraith_01_flagship_normal.dds"
+			texture_specular = "wraith_01_flagship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "wraith_01_titan_bow_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_titan_bow.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_flagship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_flagship_diffuse.dds"
+			texture_normal = "wraith_01_flagship_normal.dds"
+			texture_specular = "wraith_01_flagship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_titan_mid_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_titan_mid.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_flagship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_flagship_diffuse.dds"
+			texture_normal = "wraith_01_flagship_normal.dds"
+			texture_specular = "wraith_01_flagship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_titan_stern_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_titan_stern.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_flagship_hull"
+			index = 0
+			texture_diffuse = "wraith_01_flagship_diffuse.dds"
+			texture_normal = "wraith_01_flagship_normal.dds"
+			texture_specular = "wraith_01_flagship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_leviathan_bow_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_leviathan_bow.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_dreadnought_hull"
+			index = 0
+			texture_diffuse = "wraith_01_dreadnought_diffuse.dds"
+			texture_normal = "wraith_01_dreadnought_normal.dds"
+			texture_specular = "wraith_01_dreadnought_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_leviathan_mid_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_leviathan_mid.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_dreadnought_hull"
+			index = 0
+			texture_diffuse = "wraith_01_dreadnought_diffuse.dds"
+			texture_normal = "wraith_01_dreadnought_normal.dds"
+			texture_specular = "wraith_01_dreadnought_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_leviathan_stern_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_leviathan_stern.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_dreadnought_hull"
+			index = 0
+			texture_diffuse = "wraith_01_dreadnought_diffuse.dds"
+			texture_normal = "wraith_01_dreadnought_normal.dds"
+			texture_specular = "wraith_01_dreadnought_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_dart_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_dart_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_dart_hull"
+			index = 0
+			texture_diffuse = "wraith_01_dart_diffuse.dds"
+			texture_normal = "wraith_01_dart_normal.dds"
+			texture_specular = "wraith_01_dart_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_science_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_science_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_science_hull"
+			index = 0
+			texture_diffuse = "wraith_01_science_diffuse.dds"
+			texture_normal = "wraith_01_science_normal.dds"
+			texture_specular = "wraith_01_science_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_colony_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_colony_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_colony_hull"
+			index = 0
+			texture_diffuse = "wraith_01_colony_diffuse.dds"
+			texture_normal = "wraith_01_colony_normal.dds"
+			texture_specular = "wraith_01_colony_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_station_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_station_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_station_hull"
+			index = 0
+			texture_diffuse = "wraith_01_station_diffuse.dds"
+			texture_normal = "wraith_01_station_normal.dds"
+			texture_specular = "wraith_01_station_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_station_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_station_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_station_hull"
+			index = 0
+			texture_diffuse = "wraith_01_station_diffuse.dds"
+			texture_normal = "wraith_01_station_normal.dds"
+			texture_specular = "wraith_01_station_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_noncombatstation_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_noncombatstation_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_noncombatstation_hull"
+			index = 0
+			texture_diffuse = "wraith_01_station_diffuse.dds"
+			texture_normal = "wraith_01_station_normal.dds"
+			texture_specular = "wraith_01_station_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_noncombatstation_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_noncombatstation_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_noncombatstation_hull"
+			index = 0
+			texture_diffuse = "wraith_01_station_diffuse.dds"
+			texture_normal = "wraith_01_station_normal.dds"
+			texture_specular = "wraith_01_station_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "wraith_01_headquarters_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_headquarters_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_headquarters_hull"
+			index = 0
+			texture_diffuse = "wraith_01_headquarters_diffuse.dds"
+			texture_normal = "wraith_01_headquarters_normal.dds"
+			texture_specular = "wraith_01_headquarters_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "wraith_01_headquarters_allinone_mesh"
+		file = "gfx/models/ships/wraith_01/wraith_01_headquarters_allinone.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "wraith_01_headquarters_hull"
+			index = 0
+			texture_diffuse = "wraith_01_headquarters_diffuse.dds"
+			texture_normal = "wraith_01_headquarters_normal.dds"
+			texture_specular = "wraith_01_headquarters_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

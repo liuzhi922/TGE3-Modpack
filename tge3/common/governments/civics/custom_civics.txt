@@ -1,21 +1,21 @@
-#civic_mini_cluster = {
-#	playable = { host_has_dlc = "Distant Stars Story Pack" }
-#	potential = { 
-#		ethics = { NOT = { value = ethic_gestalt_consciousness } } 	
-#	}
-#	possible = {
-#		civics = {
-#			NOR = {
-#				value = civic_mechanists
-#				value = civic_syncretic_evolution
-#				value = civic_post_apocalyptic
-#               value = civic_life_seeded
-#			}
-#		}
-#	}
-#	modification = no
-#	random_weight = {
-#		base = 0
-#	}
-#	description = "civic_tooltip_mini_cluster"
-#}
+civic_mini_cluster = {
+	playable = { host_has_dlc = "Distant Stars Story Pack" }
+	potential = { 
+		ethics = { NOT = { value = ethic_gestalt_consciousness } } 	
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_mechanists
+				value = civic_syncretic_evolution
+				value = civic_post_apocalyptic
+                value = civic_life_seeded
+			}
+		}
+	}
+	modification = no
+	random_weight = {
+		base = 0
+	}
+	description = "civic_tooltip_mini_cluster"
+}
