@@ -1,0 +1,780 @@
+namespace = kiyo_trade_triggered_event
+
+# (ON GAME START) Trigger set max trade routes
+event = {
+	id = kiyo_trade_triggered_event.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			is_country_type = default
+			is_gestalt = no
+			NAND = {
+				has_country_flag = kiyo_trade_has_base_values
+				has_country_flag = kiyo_trade_has_max_trade_routes_tech_1
+				has_country_flag = kiyo_trade_has_max_trade_routes_tech_2
+				has_country_flag = kiyo_trade_has_max_trade_routes_tech_3
+				has_country_flag = kiyo_trade_has_max_trade_routes_tech_4
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				is_gestalt = no
+				NAND = {
+					has_country_flag = kiyo_trade_has_base_values
+					has_country_flag = kiyo_trade_has_max_trade_routes_tech_1
+					has_country_flag = kiyo_trade_has_max_trade_routes_tech_2
+					has_country_flag = kiyo_trade_has_max_trade_routes_tech_3
+					has_country_flag = kiyo_trade_has_max_trade_routes_tech_4
+				}
+			}
+			country_event = { id = kiyo_trade_triggered_event.11 }
+		}
+	}
+}
+
+# (ON TECH GET) Trigger set max trade routes
+country_event = {
+	id = kiyo_trade_triggered_event.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		is_gestalt = no
+		NAND = {
+			has_country_flag = kiyo_trade_has_base_values
+			has_country_flag = kiyo_trade_has_max_trade_routes_tech_1
+			has_country_flag = kiyo_trade_has_max_trade_routes_tech_2
+			has_country_flag = kiyo_trade_has_max_trade_routes_tech_3
+			has_country_flag = kiyo_trade_has_max_trade_routes_tech_4
+		}
+	}
+	
+	immediate = {
+		if = { limit = { NOT = { has_country_flag = kiyo_trade_has_base_values } }
+			set_variable = { which = kiyo_trade_max_trade_routes value = 4 }
+			set_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 4 }
+			set_country_flag = kiyo_trade_has_base_values
+		}
+		if = { limit = { has_technology = tech_luxuries_1 NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_1 } }
+			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
+			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
+			set_country_flag = kiyo_trade_has_max_trade_routes_tech_1
+		}
+		if = { limit = { has_technology = tech_luxuries_2 NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_2 } }
+			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
+			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
+			set_country_flag = kiyo_trade_has_max_trade_routes_tech_2
+		}
+		if = { limit = { has_technology = tech_interstellar_economics NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_3 } }
+			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
+			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
+			set_country_flag = kiyo_trade_has_max_trade_routes_tech_3
+		}
+		if = { limit = { has_technology = tech_galactic_markets NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_4 } }
+			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
+			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 3 }
+			set_country_flag = kiyo_trade_has_max_trade_routes_tech_4
+		}
+	}
+}
+
+# (ON MONTHLY PULSE, if able to do on ship disband, use that instead) If someone disbands a cargo fleet's final cargo ship, make it so that its fleet does not count as a trade route
+event = {
+	id = kiyo_trade_triggered_event.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			any_owned_fleet = {
+				num_ships < 1
+				prev = { any_planet = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } }
+			}
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				any_owned_fleet = {
+					num_ships < 1
+					prev = { any_planet = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } }
+				}
+			}
+			every_owned_fleet = {
+				limit = {
+					num_ships < 1
+					prev = { any_owned_planet = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } }
+				}
+				set_fleet_flag = kiyo_event_trade_deleted_cargo 
+				delete_fleet = this
+				random_planet = { limit = { prev = { has_fleet_flag = kiyo_trade_end@PREV } }
+					owner = {
+						remove_opinion_modifier = { modifier = opinion_kiyo_mod_trade_trade_routes who = root }
+						root = {
+							every_owned_fleet = {
+								limit = { kiyo_mod_trade_opinion_modifier_valid = yes }
+								
+								set_variable = { which = kiyo_trade_max_cargo_ships_per_fleet_looper value = kiyo_trade_max_cargo_ships_per_fleet }
+								
+								while = { limit = { check_variable = { which = kiyo_trade_max_cargo_ships_per_fleet_looper value > 0 } }
+								
+									prevprev = { add_opinion_modifier = { who = root.owner modifier = opinion_kiyo_mod_trade_trade_routes } }
+									subtract_variable = { which = kiyo_trade_max_cargo_ships_per_fleet_looper value = 1 }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# (ON ENTERING BATTLE) Trade Fleet with trade route being attacked will queue orders to orbit the planets again
+country_event = {
+	id = kiyo_trade_triggered_event.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { root.fromfrom = { has_fleet_flag = kiyo_trade_has_trade_route } }
+	
+	immediate = {
+		fromfrom = {
+			clear_orders = yes
+	
+			switch = { trigger = has_fleet_flag
+				kiyo_trade_starting = {
+					random_planet = { limit = { root.fromfrom = { has_fleet_flag = kiyo_trade_end@PREV } } save_event_target_as = kiyo_trade_end }
+					queue_actions = { orbit_planet = event_target:kiyo_trade_end }
+				}
+				kiyo_trade_ending = {
+					random_owned_planet = { limit = { root.fromfrom = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start }
+					queue_actions = { orbit_planet = event_target:kiyo_trade_start }
+				}
+				default = { log = "HOW DID THIS HAPPEN?! (kiyo_trade_triggered_event.3)" }
+			}
+		}
+	}
+
+}
+
+# (ON FLEET DESTROYED VICTIM) Trade Fleet with trade route fleet destroyed will lose trade route along with planets involved losing resources being traded
+country_event = {
+	id = kiyo_trade_triggered_event.31
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { root.fromfrom = { has_fleet_flag = kiyo_trade_has_trade_route } } 
+	
+	immediate = {
+		random_owned_planet = { limit = { root.fromfrom = { has_fleet_flag = kiyo_trade_start@PREV } }
+			kiyo_mod_trade_clear_trade_modifiers = yes
+			
+			if = { limit = { root = { NOT = { has_fleet_flag = kiyo_trade_start_expired } } }
+				set_variable = { which = kiyo_trade_minerals_start value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_energy_start value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_food_start value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_unity_start value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_consumer_goods_start value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_alloys_start value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_physics_research_start value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_society_research_start value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_engineering_research_start value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_other_start value = prev.fromfrom }
+				
+				subtract_variable = { which = kiyo_trade_minerals value = kiyo_trade_minerals_start }
+				subtract_variable = { which = kiyo_trade_energy value = kiyo_trade_energy_start }
+				subtract_variable = { which = kiyo_trade_food value = kiyo_trade_food_start }
+				subtract_variable = { which = kiyo_trade_unity value = kiyo_trade_unity_start }
+				subtract_variable = { which = kiyo_trade_consumer_goods value = kiyo_trade_consumer_goods_start }
+				subtract_variable = { which = kiyo_trade_alloys value = kiyo_trade_alloys_start }
+				subtract_variable = { which = kiyo_trade_physics_research value = kiyo_trade_physics_research_start }
+				subtract_variable = { which = kiyo_trade_society_research value = kiyo_trade_society_research_start }
+				subtract_variable = { which = kiyo_trade_engineering_research value = kiyo_trade_engineering_research_start }
+				subtract_variable = { which = kiyo_trade_other value = kiyo_trade_other_start }
+			}
+			
+			kiyo_mod_trade_set_resource_modifiers = yes
+			
+			root.fromfrom = { remove_fleet_flag = kiyo_trade_start@PREV }
+			kiyo_mod_trade_check_trade_route_exist = yes
+		}
+		random_planet = { limit = { root.fromfrom = { has_fleet_flag = kiyo_trade_end@PREV } }
+			kiyo_mod_trade_clear_trade_modifiers = yes
+			
+			if = { limit = { root = { NOT = { has_fleet_flag = kiyo_trade_end_expired } } }
+				set_variable = { which = kiyo_trade_minerals_end value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_energy_end value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_food_end value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_unity_end value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_consumer_goods_end value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_alloys_end value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_physics_research_end value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_society_research_end value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_engineering_research_end value = prev.fromfrom }
+				set_variable = { which = kiyo_trade_other_end value = prev.fromfrom }
+				
+				subtract_variable = { which = kiyo_trade_minerals value = kiyo_trade_minerals_end }
+				subtract_variable = { which = kiyo_trade_energy value = kiyo_trade_energy_end }
+				subtract_variable = { which = kiyo_trade_food value = kiyo_trade_food_end }
+				subtract_variable = { which = kiyo_trade_unity value = kiyo_trade_unity_end }
+				subtract_variable = { which = kiyo_trade_consumer_goods value = kiyo_trade_consumer_goods_end }
+				subtract_variable = { which = kiyo_trade_alloys value = kiyo_trade_alloys_end }
+				subtract_variable = { which = kiyo_trade_physics_research value = kiyo_trade_physics_research_end }
+				subtract_variable = { which = kiyo_trade_society_research value = kiyo_trade_society_research_end }
+				subtract_variable = { which = kiyo_trade_engineering_research value = kiyo_trade_engineering_research_end }
+				subtract_variable = { which = kiyo_trade_other value = kiyo_trade_other_end }
+			}
+			
+			kiyo_mod_trade_set_resource_modifiers = yes
+			root.fromfrom = { remove_fleet_flag = kiyo_trade_end@PREV }
+			kiyo_mod_trade_check_trade_route_exist = yes
+		}
+		
+		fromfrom = {
+			set_variable = { which = kiyo_trade_minerals value = 0 }
+			set_variable = { which = kiyo_trade_energy value = 0 }
+			set_variable = { which = kiyo_trade_food value = 0 }
+			set_variable = { which = kiyo_trade_unity value = 0 }
+			set_variable = { which = kiyo_trade_consumer_goods value = 0 }
+			set_variable = { which = kiyo_trade_alloys value = 0 }
+			set_variable = { which = kiyo_trade_physics_research value = 0 }
+			set_variable = { which = kiyo_trade_society_research value = 0 }
+			set_variable = { which = kiyo_trade_engineering_research value = 0 }
+			set_variable = { which = kiyo_trade_other value = 0 }
+			set_variable = { which = kiyo_trade_minerals_start value = 0 }
+			set_variable = { which = kiyo_trade_energy_start value = 0 }
+			set_variable = { which = kiyo_trade_food_start value = 0 }
+			set_variable = { which = kiyo_trade_unity_start value = 0 }
+			set_variable = { which = kiyo_trade_consumer_goods_start value = 0 }
+			set_variable = { which = kiyo_trade_alloys_start value = 0 }
+			set_variable = { which = kiyo_trade_physics_research_start value = 0 }
+			set_variable = { which = kiyo_trade_society_research_start value = 0 }
+			set_variable = { which = kiyo_trade_engineering_research_start value = 0 }
+			set_variable = { which = kiyo_trade_other_start value = 0 }
+			set_variable = { which = kiyo_trade_minerals_end value = 0 }
+			set_variable = { which = kiyo_trade_energy_end value = 0 }
+			set_variable = { which = kiyo_trade_food_end value = 0 }
+			set_variable = { which = kiyo_trade_unity_end value = 0 }
+			set_variable = { which = kiyo_trade_consumer_goods_end value = 0 }
+			set_variable = { which = kiyo_trade_alloys_end value = 0 }
+			set_variable = { which = kiyo_trade_physics_research_end value = 0 }
+			set_variable = { which = kiyo_trade_society_research_end value = 0 }
+			set_variable = { which = kiyo_trade_engineering_research_end value = 0 }
+			set_variable = { which = kiyo_trade_other_end value = 0 }
+			
+			remove_fleet_flag = kiyo_trade_starting
+			remove_fleet_flag = kiyo_trade_ending
+			remove_fleet_flag = kiyo_trade_has_trade_route
+			
+			clear_orders = yes
+			
+			delete_fleet = this
+		}
+		
+		kiyo_mod_trade_set_num_trade_routes = yes
+	}
+
+}
+
+
+# (ON SHIP DESTROYED VICTIM) Trade Fleet with trade route ship destroyed will subtract fleet's variable for max cargo ship per fleet
+country_event = {
+	id = kiyo_trade_triggered_event.32
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { root.fromfrom = { fleet = { has_fleet_flag = kiyo_trade_has_trade_route } } }
+	
+	immediate = {
+		fromfrom = {
+			fleet = {
+				owner = { random_owned_planet = { limit = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start } }
+				random_planet = { limit = { prev = { has_fleet_flag = kiyo_trade_end@PREV } } save_event_target_as = kiyo_trade_end }
+				
+				subtract_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+		}
+		random_planet = {
+			limit = { prev = { fleet = { has_fleet_flag = kiyo_trade_end@PREVPREV } } }
+			owner = {
+				remove_opinion_modifier = { modifier = opinion_kiyo_mod_trade_trade_routes who = root }
+				root = {
+					every_owned_fleet = {
+						limit = { kiyo_mod_trade_opinion_modifier_valid = yes }
+						
+						set_variable = { which = kiyo_trade_max_cargo_ships_per_fleet_looper value = kiyo_trade_max_cargo_ships_per_fleet }
+						
+						while = { limit = { check_variable = { which = kiyo_trade_max_cargo_ships_per_fleet_looper value > 0 } }
+						
+							prevprev = { add_opinion_modifier = { who = root.owner modifier = opinion_kiyo_mod_trade_trade_routes } }
+							subtract_variable = { which = kiyo_trade_max_cargo_ships_per_fleet_looper value = 1 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+# (ON DISBAND) Trade Fleet with trade route being disbanded will lose trade route along with planets involved losing monthly resources being traded
+country_event = {
+	id = kiyo_trade_triggered_event.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { from = { has_fleet_flag = kiyo_trade_has_trade_route NOT = { has_fleet_flag = kiyo_event_trade_deleted_cargo } } }
+	
+	immediate = {
+		random_owned_planet = { limit = { root.from = { has_fleet_flag = kiyo_trade_start@PREV } }
+			kiyo_mod_trade_clear_trade_modifiers = yes
+			
+			if = { limit = { root.from = { NOT = { has_fleet_flag = kiyo_trade_start_expired } } }
+				set_variable = { which = kiyo_trade_minerals_start value = prev.from }
+				set_variable = { which = kiyo_trade_energy_start value = prev.from }
+				set_variable = { which = kiyo_trade_food_start value = prev.from }
+				set_variable = { which = kiyo_trade_unity_start value = prev.from }
+				set_variable = { which = kiyo_trade_consumer_goods_start value = prev.from }
+				set_variable = { which = kiyo_trade_alloys_start value = prev.from }
+				set_variable = { which = kiyo_trade_physics_research_start value = prev.from }
+				set_variable = { which = kiyo_trade_society_research_start value = prev.from }
+				set_variable = { which = kiyo_trade_engineering_research_start value = prev.from }
+				set_variable = { which = kiyo_trade_other_start value = prev.from }
+				
+				subtract_variable = { which = kiyo_trade_minerals value = kiyo_trade_minerals_start }
+				subtract_variable = { which = kiyo_trade_energy value = kiyo_trade_energy_start }
+				subtract_variable = { which = kiyo_trade_food value = kiyo_trade_food_start }
+				subtract_variable = { which = kiyo_trade_unity value = kiyo_trade_unity_start }
+				subtract_variable = { which = kiyo_trade_consumer_goods value = kiyo_trade_consumer_goods_start }
+				subtract_variable = { which = kiyo_trade_alloys value = kiyo_trade_alloys_start }
+				subtract_variable = { which = kiyo_trade_physics_research value = kiyo_trade_physics_research_start }
+				subtract_variable = { which = kiyo_trade_society_research value = kiyo_trade_society_research_start }
+				subtract_variable = { which = kiyo_trade_engineering_research value = kiyo_trade_engineering_research_start }
+				subtract_variable = { which = kiyo_trade_other value = kiyo_trade_other_start }
+			}
+			
+			kiyo_mod_trade_set_resource_modifiers = yes
+			save_event_target_as = kiyo_trade_start
+			kiyo_mod_trade_check_trade_route_exist = yes
+		}
+		random_planet = { limit = { root.from = { has_fleet_flag = kiyo_trade_end@PREV } }
+			kiyo_mod_trade_clear_trade_modifiers = yes
+			
+			if = { limit = { root.from = { NOT = { has_fleet_flag = kiyo_trade_end_expired } } }
+				set_variable = { which = kiyo_trade_minerals_end value = prev.from }
+				set_variable = { which = kiyo_trade_energy_end value = prev.from }
+				set_variable = { which = kiyo_trade_food_end value = prev.from }
+				set_variable = { which = kiyo_trade_unity_end value = prev.from }
+				set_variable = { which = kiyo_trade_consumer_goods_end value = prev.from }
+				set_variable = { which = kiyo_trade_alloys_end value = prev.from }
+				set_variable = { which = kiyo_trade_physics_research_end value = prev.from }
+				set_variable = { which = kiyo_trade_society_research_end value = prev.from }
+				set_variable = { which = kiyo_trade_engineering_research_end value = prev.from }
+				set_variable = { which = kiyo_trade_other_end value = prev.from }
+				
+				subtract_variable = { which = kiyo_trade_minerals value = kiyo_trade_minerals_end }
+				subtract_variable = { which = kiyo_trade_energy value = kiyo_trade_energy_end }
+				subtract_variable = { which = kiyo_trade_food value = kiyo_trade_food_end }
+				subtract_variable = { which = kiyo_trade_unity value = kiyo_trade_unity_end }
+				subtract_variable = { which = kiyo_trade_consumer_goods value = kiyo_trade_consumer_goods_end }
+				subtract_variable = { which = kiyo_trade_alloys value = kiyo_trade_alloys_end }
+				subtract_variable = { which = kiyo_trade_physics_research value = kiyo_trade_physics_research_end }
+				subtract_variable = { which = kiyo_trade_society_research value = kiyo_trade_society_research_end }
+				subtract_variable = { which = kiyo_trade_engineering_research value = kiyo_trade_engineering_research_end }
+				subtract_variable = { which = kiyo_trade_other value = kiyo_trade_other_end }
+			}
+			
+			kiyo_mod_trade_set_resource_modifiers = yes
+			kiyo_mod_trade_check_trade_route_exist = yes
+		}
+		
+		from = {
+			set_variable = { which = kiyo_trade_minerals value = 0 }
+			set_variable = { which = kiyo_trade_energy value = 0 }
+			set_variable = { which = kiyo_trade_food value = 0 }
+			set_variable = { which = kiyo_trade_unity value = 0 }
+			set_variable = { which = kiyo_trade_consumer_goods value = 0 }
+			set_variable = { which = kiyo_trade_alloys value = 0 }
+			set_variable = { which = kiyo_trade_physics_research value = 0 }
+			set_variable = { which = kiyo_trade_society_research value = 0 }
+			set_variable = { which = kiyo_trade_engineering_research value = 0 }
+			set_variable = { which = kiyo_trade_other value = 0 }
+			set_variable = { which = kiyo_trade_minerals_start value = 0 }
+			set_variable = { which = kiyo_trade_energy_start value = 0 }
+			set_variable = { which = kiyo_trade_food_start value = 0 }
+			set_variable = { which = kiyo_trade_unity_start value = 0 }
+			set_variable = { which = kiyo_trade_consumer_goods_start value = 0 }
+			set_variable = { which = kiyo_trade_alloys_start value = 0 }
+			set_variable = { which = kiyo_trade_physics_research_start value = 0 }
+			set_variable = { which = kiyo_trade_society_research_start value = 0 }
+			set_variable = { which = kiyo_trade_engineering_research_start value = 0 }
+			set_variable = { which = kiyo_trade_other_start value = 0 }
+			set_variable = { which = kiyo_trade_minerals_end value = 0 }
+			set_variable = { which = kiyo_trade_energy_end value = 0 }
+			set_variable = { which = kiyo_trade_food_end value = 0 }
+			set_variable = { which = kiyo_trade_unity_end value = 0 }
+			set_variable = { which = kiyo_trade_consumer_goods_end value = 0 }
+			set_variable = { which = kiyo_trade_alloys_end value = 0 }
+			set_variable = { which = kiyo_trade_physics_research_end value = 0 }
+			set_variable = { which = kiyo_trade_society_research_end value = 0 }
+			set_variable = { which = kiyo_trade_engineering_research_end value = 0 }
+			set_variable = { which = kiyo_trade_other_end value = 0 }
+			
+			remove_fleet_flag = kiyo_trade_starting
+			remove_fleet_flag = kiyo_trade_ending
+			remove_fleet_flag = kiyo_trade_has_trade_route
+			set_fleet_flag = kiyo_event_trade_deleted_cargo
+			
+			clear_orders = yes
+			
+			create_fleet = {
+				name = "Cargo from [kiyo_trade_start.GetName] (Cargo Size: 1)"
+				effect = {
+					set_owner = root
+					set_location = {
+						target = prev
+						distance = 5
+						angle = random
+					}
+					set_fleet_stance = passive
+					
+					owner = {
+						every_owned_ship = {
+							limit = {
+								is_ship_size = kiyo_trade
+								fleet = { is_same_value = prevprevprevprev }
+							}
+							prevprev = {
+								create_ship = {
+									name = "Cargo Ship"
+									random_existing_design = kiyo_trade
+									prefix = yes
+									upgradable = yes
+								}
+							}
+						}
+					}
+					
+					set_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = prev }
+					set_name = "Cargo from [kiyo_trade_start.GetName] (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet])"
+					owner = { event_target:kiyo_trade_start = { prevprev = { set_fleet_flag = kiyo_trade_start@PREV } } }
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = yes
+					can_change_composition = no
+					can_change_leader = no
+					spawn_debris = yes
+				}
+			}
+		}
+		
+		random_planet = { limit = { root.from = { has_fleet_flag = kiyo_trade_end@PREV } }
+			root.from = { remove_fleet_flag = kiyo_trade_end@PREV }
+			owner = {
+				remove_opinion_modifier = { modifier = opinion_kiyo_mod_trade_trade_routes who = root }
+				root = {
+					every_owned_fleet = {
+						limit = { kiyo_mod_trade_opinion_modifier_valid = yes }
+						
+						set_variable = { which = kiyo_trade_max_cargo_ships_per_fleet_looper value = kiyo_trade_max_cargo_ships_per_fleet }
+						
+						while = { limit = { check_variable = { which = kiyo_trade_max_cargo_ships_per_fleet_looper value > 0 } }
+						
+							prevprev = { add_opinion_modifier = { who = root.owner modifier = opinion_kiyo_mod_trade_trade_routes } }
+							subtract_variable = { which = kiyo_trade_max_cargo_ships_per_fleet_looper value = 1 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+# (ON DISBAND) Trade Fleet with trade route (set-up phase) being disbanded will lose trade route
+country_event = {
+	id = kiyo_trade_triggered_event.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { any_owned_planet = { root.from = { has_fleet_flag = kiyo_trade_start@PREV } } from = { NOT = { has_fleet_flag = kiyo_event_trade_deleted_cargo has_fleet_flag = kiyo_trade_has_trade_route } } }
+	
+	immediate = {
+		random_owned_planet = { limit = { root.from = { has_fleet_flag = kiyo_trade_start@PREV } }
+			root.from = { remove_fleet_flag = kiyo_trade_start@PREV  }
+			kiyo_mod_trade_check_trade_route_exist = yes
+		}
+		
+		every_owned_ship = {
+			limit = {
+				is_ship_size = kiyo_trade
+				fleet = { is_same_value = prev.from }
+			}
+			prev = {
+				add_resource = {
+					energy = 400
+					consumer_goods = 400
+				}
+			}
+		}
+		from = { set_fleet_flag = kiyo_event_trade_deleted_cargo }
+		
+		kiyo_mod_trade_set_num_trade_routes = yes
+	}
+
+}
+
+# (ON BUILDING COMPLETE) Replace my AI-fix consumer goods building with vanilla building
+planet_event = {
+	id = kiyo_trade_triggered_event.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		OR = {
+			last_building_changed = kiyo_building_factory_1
+			AND = {
+				free_jobs >= 5
+				has_building = building_commercial_zone
+			}
+		}
+	}
+	
+	immediate = {
+		if = { limit = { last_building_changed = kiyo_building_factory_1 }
+			remove_building = kiyo_building_factory_1
+			add_building = building_factory_1
+		}
+		if = { limit = { free_jobs >= 5 has_building = building_commercial_zone }
+			remove_building = building_commercial_zone
+		}
+	}
+}
+
+# (ON DISTRICT COMPLETE) Replace AI's unnecessary mining districts with generator districts
+planet_event = {
+	id = kiyo_trade_triggered_event.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		# OR block for future (when you need to do something else with the AI and district building)
+		OR = {
+			AND = {
+				last_district_changed = district_mining
+				districts_good_minerals = no
+				if = { limit = { any_pop = { is_shackled_robot = yes } }
+					NOT = { any_pop = { is_shackled_robot = yes is_unemployed = yes } }
+				}
+				OR = {
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 60
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 0
+						}
+						years_passed < 15
+					}
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 100
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 15
+						}
+						years_passed < 50
+					}
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 150
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 50
+						}
+						years_passed >= 50
+					}
+				}
+				num_free_districts = { type = district_generator value >= 1 }
+			}
+			AND = {
+				if = { limit = { owner = { has_authority = auth_machine_intelligence } }
+					OR = {
+						owner = {
+							has_civic = civic_machine_servitor
+							has_civic = civic_machine_assimilator
+						}
+					}
+				}
+				last_district_changed = district_mining
+				districts_good_minerals = no
+				OR = {
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 60
+						}
+						has_monthly_income = {
+							resource = food
+							value < 0
+						}
+						years_passed < 15
+					}
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 100
+						}
+						has_monthly_income = {
+							resource = food
+							value < 10
+						}
+						years_passed < 50
+					}
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 150
+						}
+						has_monthly_income = {
+							resource = food
+							value < 25
+						}
+						years_passed >= 50
+					}
+				}
+				num_free_districts = { type = district_farming value >= 1 }
+			}
+			AND = {
+				free_jobs >= 5
+				has_building = building_commercial_zone
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				if = { limit = { owner = { has_authority = auth_machine_intelligence } }
+					OR = {
+						owner = {
+							has_civic = civic_machine_servitor
+							has_civic = civic_machine_assimilator
+						}
+					}
+				}
+				last_district_changed = district_mining
+				districts_good_minerals = no
+				OR = {
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 60
+						}
+						has_monthly_income = {
+							resource = food
+							value < 0
+						}
+						years_passed < 15
+					}
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 100
+						}
+						has_monthly_income = {
+							resource = food
+							value < 10
+						}
+						years_passed < 50
+					}
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 150
+						}
+						has_monthly_income = {
+							resource = food
+							value < 25
+						}
+						years_passed >= 50
+					}
+				}
+				num_free_districts = { type = district_farming value >= 1 }
+			}
+			remove_district = district_mining
+			add_district = district_farming
+		}
+		else_if = {
+			limit = {
+				last_district_changed = district_mining
+				districts_good_minerals = no
+				if = { limit = { any_pop = { is_shackled_robot = yes } }
+					NOT = { any_pop = { is_shackled_robot = yes is_unemployed = yes } }
+				}
+				OR = {
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 60
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 0
+						}
+						years_passed < 15
+					}
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 100
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 15
+						}
+						years_passed < 50
+					}
+					owner = {
+						has_monthly_income = {
+							resource = minerals
+							value > 150
+						}
+						has_monthly_income = {
+							resource = energy
+							value < 50
+						}
+						years_passed >= 50
+					}
+				}
+				num_free_districts = { type = district_generator value >= 1 }
+			}
+			remove_district = district_mining
+			add_district = district_generator
+		}
+		if = { limit = { free_jobs >= 5 has_building = building_commercial_zone }
+			remove_building = building_commercial_zone
+		}
+	}
+}

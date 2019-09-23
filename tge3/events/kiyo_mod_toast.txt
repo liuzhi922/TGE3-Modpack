@@ -1,0 +1,17 @@
+namespace = kiyo_toast
+
+event = {
+	id = kiyo_toast.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				check_variable = { which = kiyo_trade_num_trade_routes value > 0 }
+			}
+			log = "[This.GetName] \"has\" [This.kiyo_trade_num_trade_routes]"
+		}
+	}
+}

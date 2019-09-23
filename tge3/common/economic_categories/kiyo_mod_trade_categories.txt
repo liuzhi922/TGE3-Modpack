@@ -1,1 +1,6 @@
 planet_kiyo_mod_trader = { }
+
+campaign_kiyo_mod_trade = {
+	use_for_ai_budget = yes
+	parent = campaigns
+}

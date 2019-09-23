@@ -1,0 +1,508 @@
+namespace = kiyo_trade_manual_event
+
+# Adding a Trade Route
+fleet_event = {
+	id = kiyo_trade_manual_event.0
+	title = kiyo_trade_manual_event.0.title
+	desc = kiyo_trade_manual_event.0.desc
+	picture = GFX_evt_galactic_market
+	location = root
+	is_triggered_only = yes
+	
+	option = { name = GOOD }
+}
+
+# Gateway event to event below this one
+planet_event = {
+	id = kiyo_trade_manual_event.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# SET ALL TRADE ROUTE FLEETS FROM THIS PLANET AS OPTIONS
+		owner = {
+			every_owned_fleet = {
+				limit = {
+					has_fleet_flag = kiyo_trade_start@PREVPREV
+					has_fleet_flag = kiyo_trade_has_trade_route
+					if = { limit = { exists = event_target:kiyo_trade_cargo_fleet_1 } NOT = { is_same_value = event_target:kiyo_trade_cargo_fleet_1 } }
+					if = { limit = { exists = event_target:kiyo_trade_cargo_fleet_2 } NOT = { is_same_value = event_target:kiyo_trade_cargo_fleet_2 } }
+					if = { limit = { exists = event_target:kiyo_trade_cargo_fleet_3 } NOT = { is_same_value = event_target:kiyo_trade_cargo_fleet_3 } }
+					if = { limit = { exists = event_target:kiyo_trade_cargo_fleet_4 } NOT = { is_same_value = event_target:kiyo_trade_cargo_fleet_4 } }
+					if = { limit = { exists = event_target:kiyo_trade_cargo_fleet_5 } NOT = { is_same_value = event_target:kiyo_trade_cargo_fleet_5 } }
+					if = { limit = { exists = event_target:kiyo_trade_cargo_fleet_6 } NOT = { is_same_value = event_target:kiyo_trade_cargo_fleet_6 } }
+					if = { limit = { exists = event_target:kiyo_trade_cargo_fleet_7 } NOT = { is_same_value = event_target:kiyo_trade_cargo_fleet_7 } }
+					if = { limit = { exists = event_target:kiyo_trade_cargo_fleet_8 } NOT = { is_same_value = event_target:kiyo_trade_cargo_fleet_8 } }
+					if = { limit = { exists = event_target:kiyo_trade_cargo_fleet_9 } NOT = { is_same_value = event_target:kiyo_trade_cargo_fleet_9 } }
+				}
+				
+				if = { limit = { check_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value < prev } }
+					if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_1 } } save_event_target_as = kiyo_trade_cargo_fleet_1 }
+					else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_2 } } save_event_target_as = kiyo_trade_cargo_fleet_2 }
+					else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_3 } } save_event_target_as = kiyo_trade_cargo_fleet_3 }
+					else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_4 } } save_event_target_as = kiyo_trade_cargo_fleet_4 }
+					else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_5 } } save_event_target_as = kiyo_trade_cargo_fleet_5 }
+					else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_6 } } save_event_target_as = kiyo_trade_cargo_fleet_6 }
+					else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_7 } } save_event_target_as = kiyo_trade_cargo_fleet_7 }
+					else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_8 } } save_event_target_as = kiyo_trade_cargo_fleet_8 }
+					else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_9 } } save_event_target_as = kiyo_trade_cargo_fleet_9 }
+					else = { log = "[PrevPrev.GetName] has too many cargo fleets with non-maxed cargo ship numbers or there is a problem." }
+				}
+			}
+		}
+		
+		planet_event = { id = kiyo_trade_manual_event.11 }
+	}
+	
+}
+
+# Choose which trade route to increase number of cargo ships by 1
+planet_event = {
+	id = kiyo_trade_manual_event.11
+	title = kiyo_trade_manual_event.11.title
+	desc = kiyo_trade_manual_event.11.desc
+	picture = GFX_evt_galactic_market
+	location = root
+	is_triggered_only = yes
+	
+	option = {
+		name = kiyo_trade_manual_event.11.a
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_1 }
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			event_target:kiyo_trade_cargo_fleet_1 = {
+				kiyo_trade_manual_event_11 = yes
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+			owner = { remove_country_flag = kiyo_trade_add_cargo_window }
+		}
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.11.b
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_2 }
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			event_target:kiyo_trade_cargo_fleet_2 = {
+				kiyo_trade_manual_event_11 = yes
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+			owner = { remove_country_flag = kiyo_trade_add_cargo_window }
+		}
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.11.c
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_3 }
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			event_target:kiyo_trade_cargo_fleet_3 = {
+				kiyo_trade_manual_event_11 = yes
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+			owner = { remove_country_flag = kiyo_trade_add_cargo_window }
+		}
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.11.d
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_4 }
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			event_target:kiyo_trade_cargo_fleet_4 = {
+				kiyo_trade_manual_event_11 = yes
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+			owner = { remove_country_flag = kiyo_trade_add_cargo_window }
+		}
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.11.e
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_5 }
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			event_target:kiyo_trade_cargo_fleet_5 = {
+				kiyo_trade_manual_event_11 = yes
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+			owner = { remove_country_flag = kiyo_trade_add_cargo_window }
+		}
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.11.f
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_6 }
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			event_target:kiyo_trade_cargo_fleet_6 = {
+				kiyo_trade_manual_event_11 = yes
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+			owner = { remove_country_flag = kiyo_trade_add_cargo_window }
+		}
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.11.g
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_7 }
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			event_target:kiyo_trade_cargo_fleet_7 = {
+				kiyo_trade_manual_event_11 = yes
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+			owner = { remove_country_flag = kiyo_trade_add_cargo_window }
+		}
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.11.h
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_8 }
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			event_target:kiyo_trade_cargo_fleet_8 = {
+				kiyo_trade_manual_event_11 = yes
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+			owner = { remove_country_flag = kiyo_trade_add_cargo_window }
+		}
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.11.i
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_9 }
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			event_target:kiyo_trade_cargo_fleet_9 = {
+				kiyo_trade_manual_event_11 = yes
+				set_name = "[kiyo_trade_start.GetName] - [kiyo_trade_end.GetName] Cargo (To [kiyo_trade_start.GetName]) (Cargo Size: [This.kiyo_trade_max_cargo_ships_per_fleet]/[This.Owner.kiyo_trade_max_cargo_ships_per_fleet])"
+			}
+			owner = { remove_country_flag = kiyo_trade_add_cargo_window }
+		}
+	}
+	
+	option = {
+		name = NOTIME
+		ai_chance = { factor = 0 }
+		
+		owner = {
+			add_resource = {
+				energy = 600
+				consumer_goods = 600
+			}
+			remove_country_flag = kiyo_trade_add_cargo_window
+		}
+	}
+	
+}
+
+# Check Trade Route values
+country_event = {
+	id = kiyo_trade_manual_event.2
+	title = kiyo_trade_manual_event.2.title
+	desc = kiyo_trade_manual_event.2.desc
+	custom_gui = "enclave_caravaneer_window"
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = { room = no_video_feed_room }
+	
+	immediate = {
+	
+		# Reset vars
+		set_variable = { which = kiyo_trade_minerals value = 0 }
+		set_variable = { which = kiyo_trade_energy value = 0 }
+		set_variable = { which = kiyo_trade_food value = 0 }
+		set_variable = { which = kiyo_trade_unity value = 0 }
+		set_variable = { which = kiyo_trade_consumer_goods value = 0 }
+		set_variable = { which = kiyo_trade_alloys value = 0 }
+		set_variable = { which = kiyo_trade_physics_research value = 0 }
+		set_variable = { which = kiyo_trade_society_research value = 0 }
+		set_variable = { which = kiyo_trade_engineering_research value = 0 }
+		set_variable = { which = kiyo_trade_other value = 0 }
+	
+		set_variable = { which = kiyo_trade_minerals_start value = 0 }
+		set_variable = { which = kiyo_trade_energy_start value = 0 }
+		set_variable = { which = kiyo_trade_food_start value = 0 }
+		set_variable = { which = kiyo_trade_unity_start value = 0 }
+		set_variable = { which = kiyo_trade_consumer_goods_start value = 0 }
+		set_variable = { which = kiyo_trade_alloys_start value = 0 }
+		set_variable = { which = kiyo_trade_physics_research_start value = 0 }
+		set_variable = { which = kiyo_trade_society_research_start value = 0 }
+		set_variable = { which = kiyo_trade_engineering_research_start value = 0 }
+		set_variable = { which = kiyo_trade_other_start value = 0 }
+		
+		every_owned_fleet = { limit = { NOT = { has_fleet_flag = kiyo_event_trade_deleted_cargo } has_fleet_flag = kiyo_trade_has_trade_route }
+			if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_1 } } save_event_target_as = kiyo_trade_cargo_fleet_1 }
+			else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_2 } } save_event_target_as = kiyo_trade_cargo_fleet_2 }
+			else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_3 } } save_event_target_as = kiyo_trade_cargo_fleet_3 }
+			else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_4 } } save_event_target_as = kiyo_trade_cargo_fleet_4 }
+			else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_5 } } save_event_target_as = kiyo_trade_cargo_fleet_5 }
+			else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_6 } } save_event_target_as = kiyo_trade_cargo_fleet_6 }
+			else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_7 } } save_event_target_as = kiyo_trade_cargo_fleet_7 }
+			else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_8 } } save_event_target_as = kiyo_trade_cargo_fleet_8 }
+			else_if = { limit = { NOT = { exists = event_target:kiyo_trade_cargo_fleet_9 } } save_event_target_as = kiyo_trade_cargo_fleet_9 }
+			else = { log = "[PrevPrev.GetName] has too many cargo fleets with non-maxed cargo ship numbers or there is a problem." }
+			
+			# Add all values of benefits from your own trade routes
+			root = {
+				change_variable = { which = kiyo_trade_minerals_start value = prev }
+				change_variable = { which = kiyo_trade_energy_start value = prev }
+				change_variable = { which = kiyo_trade_food_start value = prev }
+				change_variable = { which = kiyo_trade_unity_start value = prev }
+				change_variable = { which = kiyo_trade_consumer_goods_start value = prev }
+				change_variable = { which = kiyo_trade_alloys_start value = prev }
+				change_variable = { which = kiyo_trade_physics_research_start value = prev }
+				change_variable = { which = kiyo_trade_society_research_start value = prev }
+				change_variable = { which = kiyo_trade_engineering_research_start value = prev }
+				change_variable = { which = kiyo_trade_other_start value = prev }
+			}
+		}
+		
+		# Add all values of benefits from your own trade hubs (also counts your own trade routes)
+		every_owned_planet = {
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_1 } root = { change_variable = { which = kiyo_trade_minerals value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_1 } root = { change_variable = { which = kiyo_trade_energy value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_1 } root = { change_variable = { which = kiyo_trade_food value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_1 } root = { change_variable = { which = kiyo_trade_unity value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_1 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_1 } root = { change_variable = { which = kiyo_trade_alloys value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_1 } root = { change_variable = { which = kiyo_trade_physics_research value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_1 } root = { change_variable = { which = kiyo_trade_society_research value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_1 } root = { change_variable = { which = kiyo_trade_engineering_research value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_1 } root = { change_variable = { which = kiyo_trade_other value = 1 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_2 } root = { change_variable = { which = kiyo_trade_minerals value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_2 } root = { change_variable = { which = kiyo_trade_energy value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_2 } root = { change_variable = { which = kiyo_trade_food value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_2 } root = { change_variable = { which = kiyo_trade_unity value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_2 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_2 } root = { change_variable = { which = kiyo_trade_alloys value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_2 } root = { change_variable = { which = kiyo_trade_physics_research value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_2 } root = { change_variable = { which = kiyo_trade_society_research value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_2 } root = { change_variable = { which = kiyo_trade_engineering_research value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_2 } root = { change_variable = { which = kiyo_trade_other value = 2 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_4 } root = { change_variable = { which = kiyo_trade_minerals value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_4 } root = { change_variable = { which = kiyo_trade_energy value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_4 } root = { change_variable = { which = kiyo_trade_food value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_4 } root = { change_variable = { which = kiyo_trade_unity value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_4 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_4 } root = { change_variable = { which = kiyo_trade_alloys value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_4 } root = { change_variable = { which = kiyo_trade_physics_research value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_4 } root = { change_variable = { which = kiyo_trade_society_research value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_4 } root = { change_variable = { which = kiyo_trade_engineering_research value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_4 } root = { change_variable = { which = kiyo_trade_other value = 4 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_8 } root = { change_variable = { which = kiyo_trade_minerals value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_8 } root = { change_variable = { which = kiyo_trade_energy value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_8 } root = { change_variable = { which = kiyo_trade_food value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_8 } root = { change_variable = { which = kiyo_trade_unity value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_8 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_8 } root = { change_variable = { which = kiyo_trade_alloys value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_8 } root = { change_variable = { which = kiyo_trade_physics_research value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_8 } root = { change_variable = { which = kiyo_trade_society_research value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_8 } root = { change_variable = { which = kiyo_trade_engineering_research value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_8 } root = { change_variable = { which = kiyo_trade_other value = 8 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_16 } root = { change_variable = { which = kiyo_trade_minerals value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_16 } root = { change_variable = { which = kiyo_trade_energy value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_16 } root = { change_variable = { which = kiyo_trade_food value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_16 } root = { change_variable = { which = kiyo_trade_unity value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_16 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_16 } root = { change_variable = { which = kiyo_trade_alloys value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_16 } root = { change_variable = { which = kiyo_trade_physics_research value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_16 } root = { change_variable = { which = kiyo_trade_society_research value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_16 } root = { change_variable = { which = kiyo_trade_engineering_research value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_16 } root = { change_variable = { which = kiyo_trade_other value = 16 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_32 } root = { change_variable = { which = kiyo_trade_minerals value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_32 } root = { change_variable = { which = kiyo_trade_energy value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_32 } root = { change_variable = { which = kiyo_trade_food value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_32 } root = { change_variable = { which = kiyo_trade_unity value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_32 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_32 } root = { change_variable = { which = kiyo_trade_alloys value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_32 } root = { change_variable = { which = kiyo_trade_physics_research value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_32 } root = { change_variable = { which = kiyo_trade_society_research value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_32 } root = { change_variable = { which = kiyo_trade_engineering_research value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_32 } root = { change_variable = { which = kiyo_trade_other value = 32 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_64 } root = { change_variable = { which = kiyo_trade_minerals value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_64 } root = { change_variable = { which = kiyo_trade_energy value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_64 } root = { change_variable = { which = kiyo_trade_food value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_64 } root = { change_variable = { which = kiyo_trade_unity value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_64 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_64 } root = { change_variable = { which = kiyo_trade_alloys value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_64 } root = { change_variable = { which = kiyo_trade_physics_research value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_64 } root = { change_variable = { which = kiyo_trade_society_research value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_64 } root = { change_variable = { which = kiyo_trade_engineering_research value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_64 } root = { change_variable = { which = kiyo_trade_other value = 64 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_128 } root = { change_variable = { which = kiyo_trade_minerals value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_128 } root = { change_variable = { which = kiyo_trade_energy value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_128 } root = { change_variable = { which = kiyo_trade_food value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_128 } root = { change_variable = { which = kiyo_trade_unity value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_128 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_128 } root = { change_variable = { which = kiyo_trade_alloys value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_128 } root = { change_variable = { which = kiyo_trade_physics_research value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_128 } root = { change_variable = { which = kiyo_trade_society_research value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_128 } root = { change_variable = { which = kiyo_trade_engineering_research value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_128 } root = { change_variable = { which = kiyo_trade_other value = 128 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_256 } root = { change_variable = { which = kiyo_trade_minerals value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_256 } root = { change_variable = { which = kiyo_trade_energy value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_256 } root = { change_variable = { which = kiyo_trade_food value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_256 } root = { change_variable = { which = kiyo_trade_unity value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_256 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_256 } root = { change_variable = { which = kiyo_trade_alloys value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_256 } root = { change_variable = { which = kiyo_trade_physics_research value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_256 } root = { change_variable = { which = kiyo_trade_society_research value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_256 } root = { change_variable = { which = kiyo_trade_engineering_research value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_256 } root = { change_variable = { which = kiyo_trade_other value = 256 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_512 } root = { change_variable = { which = kiyo_trade_minerals value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_512 } root = { change_variable = { which = kiyo_trade_energy value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_512 } root = { change_variable = { which = kiyo_trade_food value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_512 } root = { change_variable = { which = kiyo_trade_unity value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_512 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_512 } root = { change_variable = { which = kiyo_trade_alloys value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_512 } root = { change_variable = { which = kiyo_trade_physics_research value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_512 } root = { change_variable = { which = kiyo_trade_society_research value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_512 } root = { change_variable = { which = kiyo_trade_engineering_research value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_512 } root = { change_variable = { which = kiyo_trade_other value = 512 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_1024 } root = { change_variable = { which = kiyo_trade_minerals value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_1024 } root = { change_variable = { which = kiyo_trade_energy value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_1024 } root = { change_variable = { which = kiyo_trade_food value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_1024 } root = { change_variable = { which = kiyo_trade_unity value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_1024 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_1024 } root = { change_variable = { which = kiyo_trade_alloys value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_1024 } root = { change_variable = { which = kiyo_trade_physics_research value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_1024 } root = { change_variable = { which = kiyo_trade_society_research value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_1024 } root = { change_variable = { which = kiyo_trade_engineering_research value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_1024 } root = { change_variable = { which = kiyo_trade_other value = 1024 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_2048 } root = { change_variable = { which = kiyo_trade_minerals value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_2048 } root = { change_variable = { which = kiyo_trade_energy value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_2048 } root = { change_variable = { which = kiyo_trade_food value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_2048 } root = { change_variable = { which = kiyo_trade_unity value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_2048 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_2048 } root = { change_variable = { which = kiyo_trade_alloys value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_2048 } root = { change_variable = { which = kiyo_trade_physics_research value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_2048 } root = { change_variable = { which = kiyo_trade_society_research value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_2048 } root = { change_variable = { which = kiyo_trade_engineering_research value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_2048 } root = { change_variable = { which = kiyo_trade_other value = 2048 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_4096 } root = { change_variable = { which = kiyo_trade_minerals value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_4096 } root = { change_variable = { which = kiyo_trade_energy value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_4096 } root = { change_variable = { which = kiyo_trade_food value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_4096 } root = { change_variable = { which = kiyo_trade_unity value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_4096 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_4096 } root = { change_variable = { which = kiyo_trade_alloys value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_4096 } root = { change_variable = { which = kiyo_trade_physics_research value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_4096 } root = { change_variable = { which = kiyo_trade_society_research value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_4096 } root = { change_variable = { which = kiyo_trade_engineering_research value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_4096 } root = { change_variable = { which = kiyo_trade_other value = 4096 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_minerals_8192 } root = { change_variable = { which = kiyo_trade_minerals value = 8192 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_energy_8192 } root = { change_variable = { which = kiyo_trade_energy value = 8192 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_food_8192 } root = { change_variable = { which = kiyo_trade_food value = 8192 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_unity_8192 } root = { change_variable = { which = kiyo_trade_unity value = 8192 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_consumer_goods_8192 } root = { change_variable = { which = kiyo_trade_consumer_goods value = 8192 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_alloys_8192 } root = { change_variable = { which = kiyo_trade_alloys value = 8192 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_physics_research_8192 } root = { change_variable = { which = kiyo_trade_physics_research value = 8192 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_society_research_8192 } root = { change_variable = { which = kiyo_trade_society_research value = 8192 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_engineering_research_8192 } root = { change_variable = { which = kiyo_trade_engineering_research value = 8192 } } }
+			if = { limit = { has_planet_flag = kiyo_trade_other_8192 } root = { change_variable = { which = kiyo_trade_other value = 8192 } } }
+		}
+		
+		# Set values for imported resources (owned trade hub total - owned trade route total) 
+		set_variable = { which = kiyo_trade_minerals_import value = kiyo_trade_minerals }
+		set_variable = { which = kiyo_trade_energy_import value = kiyo_trade_energy }
+		set_variable = { which = kiyo_trade_food_import value = kiyo_trade_food }
+		set_variable = { which = kiyo_trade_unity_import value = kiyo_trade_unity }
+		set_variable = { which = kiyo_trade_consumer_goods_import value = kiyo_trade_consumer_goods }
+		set_variable = { which = kiyo_trade_alloys_import value = kiyo_trade_alloys }
+		set_variable = { which = kiyo_trade_physics_research_import value = kiyo_trade_physics_research }
+		set_variable = { which = kiyo_trade_society_research_import value = kiyo_trade_society_research }
+		set_variable = { which = kiyo_trade_engineering_research_import value = kiyo_trade_engineering_research }
+		set_variable = { which = kiyo_trade_other_import value = kiyo_trade_other }
+		
+		subtract_variable = { which = kiyo_trade_minerals_import value = kiyo_trade_minerals_start }
+		subtract_variable = { which = kiyo_trade_energy_import value = kiyo_trade_energy_start }
+		subtract_variable = { which = kiyo_trade_food_import value = kiyo_trade_food_start }
+		subtract_variable = { which = kiyo_trade_unity_import value = kiyo_trade_unity_start }
+		subtract_variable = { which = kiyo_trade_consumer_goods_import value = kiyo_trade_consumer_goods_start }
+		subtract_variable = { which = kiyo_trade_alloys_import value = kiyo_trade_alloys_start }
+		subtract_variable = { which = kiyo_trade_physics_research_import value = kiyo_trade_physics_research_start }
+		subtract_variable = { which = kiyo_trade_society_research_import value = kiyo_trade_society_research_start }
+		subtract_variable = { which = kiyo_trade_engineering_research_import value = kiyo_trade_engineering_research_start }
+		subtract_variable = { which = kiyo_trade_other_import value = kiyo_trade_other_start }
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.a
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_1 }
+		response_text = kiyo_trade_manual_event.2.a.info
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.b
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_2 }
+		response_text = kiyo_trade_manual_event.2.b.info
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.c
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_3 }
+		response_text = kiyo_trade_manual_event.2.c.info
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.d
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_4 }
+		response_text = kiyo_trade_manual_event.2.d.info
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.e
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_5 }
+		response_text = kiyo_trade_manual_event.2.e.info
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.f
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_6 }
+		response_text = kiyo_trade_manual_event.2.f.info
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.g
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_7 }
+		response_text = kiyo_trade_manual_event.2.g.info
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.h
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_8 }
+		response_text = kiyo_trade_manual_event.2.h.info
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.i
+		trigger = { exists = event_target:kiyo_trade_cargo_fleet_9 }
+		response_text = kiyo_trade_manual_event.2.i.info
+		is_dialog_only = yes
+	}
+	
+	option = {
+		name = kiyo_trade_manual_event.2.cancel
+
+		remove_country_flag = kiyo_trade_check_window
+	}
+	
+}

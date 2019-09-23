@@ -31,16 +31,16 @@ event = {
 		random_country = {
 			limit = {
 				is_pirate_waves_player = yes
-			}	# Lets just make the spawn completley random, but at least one a year	
+			}	
 			country_event = { 
 				id = pirate_waves.4
-				days = 30
-				random = 150
-			}
+				days = 1
+				random = 29
+			}	
+			# log = "Attempt to spawn a new Pirate Station started (100% chance)..."
 		}
 	}
 }
-
 
 # Create a new Pirate Fleet at this station (HIDDEN)
 # Called by pirate_waves.3 and pirate_waves.6
@@ -458,6 +458,78 @@ fleet_event = {
 	}
 }
 
+fleet_event = {
+	id = pirate_waves.69
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_pirate_waves_active = yes
+		exists = event_target:pirate_waves_country
+		exists = event_target:pirate_waves_2_country
+	}
+	
+	immediate = {
+		# Save this military station as our place of origin. Used in triggers.
+		save_event_target_as = spawn_location
+		
+		# log = "Spawn location: [This.GetName]..."
+		
+		# Use the scope from the owner of the station to create the new fleet
+		owner = {
+			save_event_target_as = current_pirate_country 
+		}
+		create_fleet = {
+			name = "Pirate Raiders"
+			effect = {
+				save_event_target_as = pirate_waves_fleet
+				# Owner is set before the ships are created so that random naming works
+				set_owner = event_target:current_pirate_country
+
+				# Create ships
+				create_pirate_waves_fleet = yes
+		
+				# Fleet settings
+				set_location = ROOT
+				set_fleet_stance = aggressive
+				set_aggro_range_measure_from = self
+				set_aggro_range = 150
+				
+				queue_actions = {
+					repeat = {
+						find_closest_system = {
+							trigger = {
+								id = pirate_waves.69.a
+								any_system_planet = {
+									is_colony = yes
+								}
+							}
+							found_system = {
+								move_to = this
+								find_closest_planet = {
+									trigger = {
+										id = pirate.69.b
+										any_system_planet = {
+											is_colony = yes
+										}		
+									}
+									found_planet = {
+										move_to = this
+									}
+								}
+							}
+						}
+						wait = {
+							duration = 10
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
 # Create a new Pirate Station at this planet (HIDDEN)
 # Called by pirate_waves.2 and pirate_waves.4
 planet_event = {
@@ -566,7 +638,7 @@ planet_event = {
 					
 					set_location = ROOT
 				}
-			}	
+			}
 			
 			# Set a timed flag to disallow building new fleets
 			last_created_fleet = {
@@ -589,36 +661,37 @@ planet_event = {
 						always = yes
 					}
 					
-					# Spawn fleet immediately
+					# Spawn a few fleets immediately
 					fleet_event = {
 						id = pirate_waves.2
 					}
-				}
-
-				# Now we make a fleet to defend the station
-				create_fleet = {
-					name = "NAME_Pirate_Fleet"
-					effect = {
-						save_event_target_as = pirate_waves_fleet
-						# Owner is set before the ships are created so that random naming works
-						set_owner = event_target:current_pirate_country
-						
-						# Create ships
-						create_pirate_waves_fleet = yes
-						
-						# Fleet settings
-						set_location = ROOT
-						set_fleet_stance = aggressive
-						set_aggro_range_measure_from = self
-						set_aggro_range = 5000
+					fleet_event = {
+						id = pirate_waves.69
 					}
-				}				
+					# Spawn a defense fleet
+					create_fleet = {
+						name = "Outlaw Defenders"
+						effect = {
+							save_event_target_as = pirate_waves_fleet
+							# Owner is set before the ships are created so that random naming works
+							set_owner = event_target:current_pirate_country
+
+							# Create ships
+							create_pirate_waves_fleet = yes
+		
+							# Fleet settings
+							set_location = ROOT
+							set_fleet_stance = aggressive
+							set_aggro_range_measure_from = self
+							set_aggro_range = 1500
+						}
+					}
+				}
 				
 				# log = "Pirate Station '[This.GetName]' created..."
 			}
 		}
 		
-		# Hiding this code because Skrafin bitched about the event spam lol
 		#solar_system = {		
 		#	# Notify all countries that have enough intel on this location
 		#	every_country = {
@@ -777,6 +850,9 @@ country_event = {
 			# Spawn a new fleet from this station immediately
 			fleet_event = {
 				id = pirate_waves.2
+			}
+			fleet_event = {
+				id = pirate_waves.69
 			}
 			
 			# Destroy the station
@@ -1105,6 +1181,16 @@ event = {
 				country_event = { id = pirate_waves.4 }
 			}
 		}
+	}
+}
+
+event = {
+	id = pirate_waves.71
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		event = { id = pirate_waves.10 }
 	}
 }
 

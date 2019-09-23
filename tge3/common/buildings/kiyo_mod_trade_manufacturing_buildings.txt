@@ -1,0 +1,185 @@
+kiyo_building_factory_1 = {
+	base_buildtime = 360
+
+	category = manufacturing
+	icon = building_factory_1
+	
+	potential = {
+		exists = owner
+		owner = {
+			is_ai = yes
+			OR = {
+				is_gestalt = no
+				has_valid_civic = civic_machine_servitor
+			}
+		}		
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+	allow = {
+		has_building = building_factory_1
+		buildings_simple_allow = no
+		jobs_work_minerals_goods = no
+		years_passed >= 15
+		NOR = {
+			has_building_construction = kiyo_building_factory_1
+			has_building_construction = building_factory_1
+		}
+		OR = {
+			AND = {
+				owner = {
+					NOT = {
+						any_owned_planet = {
+							has_building_construction = kiyo_building_factory_1
+							has_building_construction = building_factory_1
+						}
+					}
+					has_monthly_income = {
+						resource = consumer_goods
+						value < 8
+					}
+				}
+			}
+			AND = {
+				owner = {
+					any_system_within_border = {
+						count_planets = {
+							limit = {
+								exists = owner
+								owner = { is_same_value = prevprevprev }
+								OR = {
+									has_building_construction = kiyo_building_factory_1
+									has_building_construction = building_factory_1
+								}
+							}
+							count < 3
+						}
+					}
+					has_monthly_income = {
+						resource = consumer_goods
+						value < -5
+					}
+				}
+			}
+		}
+	}
+	
+	destroy_trigger = { # destroys if true
+		OR = {
+			planet = {
+				exists = owner
+				owner = {
+					is_gestalt = yes
+					NOT = { has_valid_civic = civic_machine_servitor }
+				}
+			}
+			has_modifier = resort_colony
+			has_modifier = slave_colony 
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_artisan_add = 2
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_artisan_drone_add = 2
+		}
+	}		
+	
+	convert_to = { building_factory_1 }
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}	
+		upkeep = {
+			energy = 4
+		}
+	}	
+	
+	prerequisites = {
+		tech_basic_industry
+	}
+	
+	upgrades = {
+		building_factory_2
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_artisan_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_artisan_drone_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 2500
+			NOR = {
+				has_building = building_factory_1
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+			owner = {
+				OR = {
+					is_gestalt = no
+					has_valid_civic = civic_machine_servitor
+				}
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 10
+				}
+			}
+		}
+		modifier = {
+			weight = 2500
+			num_buildings = { type = building_factory_1 value < 3 }
+			owner = {
+				OR = {
+					is_gestalt = no
+					has_valid_civic = civic_machine_servitor
+				}
+			}
+			NOR = {
+				has_building = building_factory_2
+				has_building = building_factory_3
+			}
+			owner = { 
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 10
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods = 1
+		trigger = {
+			always = yes
+		}
+	}
+}

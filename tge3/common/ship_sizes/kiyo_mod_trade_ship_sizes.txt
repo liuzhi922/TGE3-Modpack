@@ -22,31 +22,35 @@ kiyo_trade = {
 
 	default_behavior = kiyo_mod_trade_evade
 	
-	prerequisites = { "tech_space_trading" }
+	prerequisites = { "tech_colonial_centralization" }
 	
 	combat_disengage_chance = 2.0
 
+	is_civilian = yes
 	is_designable = no
 	components_add_to_cost = no
-	class = shipclass_military
+	class = shipclass_constructor
 	required_component_set = "power_core"
 	required_component_set = "ftl_components"
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
 	valid_target_aggressive_stance = no
+	auto_upgrade = yes
 	
 	resources = {
 		category = campaigns
 		cost = {
-			energy = 250
-			alloys = 250
-			consumer_goods = 600
+			energy = 750
+			consumer_goods = 750
 		}
 		upkeep = {
+			energy = 1
+		}
+		upkeep = {
+			trigger = { from = { is_ai = yes } }
 			energy = 2
-			alloys = 0.2
+			consumer_goods = 2
 		}
 	}
-	auto_upgrade = yes
 }

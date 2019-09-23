@@ -1,0 +1,27 @@
+# THIS = FLEET
+# PREV = FLEET OWNER
+# PREVPREV = OWNER OF PLANET BENEFITING FROM PREV'S CARGO FLEET
+kiyo_mod_trade_opinion_modifier_valid = {
+	NOT = {
+		has_fleet_flag = kiyo_trade_start_expired
+		has_fleet_flag = kiyo_event_trade_expired_cargo
+		has_fleet_flag = kiyo_event_trade_deleted_cargo
+	}
+	prevprev = {
+		any_owned_planet = {
+			prevprev = {
+				has_fleet_flag = kiyo_trade_end@PREV
+			}
+		}
+	}
+}
+
+kiyo_mod_trade_has_valid_trade_job = {
+	is_unemployed = no
+	is_sapient = yes
+	NOT = {
+		has_job = criminal
+		has_job = deviant_drone
+		has_job = corrupt_drone
+	}
+}

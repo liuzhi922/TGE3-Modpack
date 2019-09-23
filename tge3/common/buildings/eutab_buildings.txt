@@ -449,7 +449,7 @@ building_eutab_hydroponics_tower = {
 #Foundation Institute (B) (U)
 building_eutab_foundation_institute = {
 	base_buildtime = 720
-	
+	base_cap_amount = 1
 	category = research
 	
 	potential = {

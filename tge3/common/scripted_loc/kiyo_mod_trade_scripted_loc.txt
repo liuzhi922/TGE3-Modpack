@@ -11,3 +11,39 @@ defined_text = {
 		localization_key = kiyo_mod_trade_noinfo
 	}
 }
+
+defined_text = {
+	name = GetExpiredRoute
+	text = {
+		trigger = { has_fleet_flag = kiyo_event_trade_expired_cargo }
+		localization_key = kiyo_mod_trade_expired_route
+	}
+	text = {
+		trigger = { NOT = {has_fleet_flag = kiyo_event_trade_expired_cargo } }
+		localization_key = kiyo_mod_trade_noinfo
+	}
+}
+
+defined_text = {
+	name = GetExpiredImport
+	text = {
+		trigger = { has_fleet_flag = kiyo_trade_start_expired }
+		localization_key = kiyo_mod_trade_expired_import
+	}
+	text = {
+		trigger = { NOT = { has_fleet_flag = kiyo_trade_start_expired } }
+		localization_key = kiyo_mod_trade_noinfo
+	}
+}
+
+defined_text = {
+	name = GetExpiredExport
+	text = {
+		trigger = { has_fleet_flag = kiyo_trade_end_expired }
+		localization_key = kiyo_mod_trade_expired_export
+	}
+	text = {
+		trigger = { NOT = { has_fleet_flag = kiyo_trade_end_expired } }
+		localization_key = kiyo_mod_trade_noinfo
+	}
+}

@@ -22,9 +22,9 @@
 # Checks if the mod should spawn pirates
 is_pirate_waves_active = {
 	years_passed >= 10
-	any_country = {
-		is_pirate_waves_player = yes
-	}
+	#any_country = {
+	#	is_pirate_waves_player = yes
+	#}
 }
 
 # Checks for difficulty
@@ -36,7 +36,7 @@ is_pirate_waves_easy = {
 	always = no
 }
 
-is_pirate_waves_medium= {
+is_pirate_waves_medium = {
 	any_country = {
 		is_pirate_waves_player = yes
 	}
