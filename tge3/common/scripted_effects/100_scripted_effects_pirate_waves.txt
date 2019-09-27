@@ -2015,7 +2015,7 @@ add_pirate_waves_kill_reward = {
 		}
 		
 		FROM = {
-			add_minerals = 250
+			add_resource = { alloys = 250 }
 			add_energy = 250
 			add_engineering_research = 100
 			add_unity = 50
@@ -2035,7 +2035,7 @@ add_pirate_waves_kill_reward = {
 		}
 		
 		FROM = {
-			add_minerals = 200
+			add_resource = { alloys = 200 }
 			add_energy = 200
 			add_engineering_research = 80
 			add_unity = 40
@@ -2053,7 +2053,7 @@ add_pirate_waves_kill_reward = {
 		}
 		
 		FROM = {
-			add_minerals = 20
+			add_resource = { alloys = 20 }
 			add_energy = 20
 			add_engineering_research = 8
 			add_unity = 4
@@ -2071,7 +2071,7 @@ add_pirate_waves_kill_reward = {
 		}
 		
 		FROM = {
-			add_minerals = 10
+			add_resource = { alloys = 10 }
 			add_energy = 10
 			add_engineering_research = 4
 			add_unity = 2
@@ -2089,7 +2089,7 @@ add_pirate_waves_kill_reward = {
 		}
 		
 		FROM = {
-			add_minerals = 5
+			add_resource = { alloys = 5 }
 			add_energy = 5
 			add_engineering_research = 2
 			add_unity = 1
