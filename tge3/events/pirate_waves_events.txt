@@ -162,6 +162,11 @@ fleet_event = {
 								find_closest_system = {
 									trigger = {
 										id = pirate_waves.2.a
+										NOR = {
+											space_owner = exists
+											has_star_flag = sanctuary_system
+											has_star_flag = hostile_system
+										}										
 										any_system_planet = {
 											is_pirate_waves_base_planet = yes
 										}
@@ -310,8 +315,12 @@ fleet_event = {
 								}
 								AND = {
 									NOR = {
-									has_star_flag = sanctuary_system
-									has_star_flag = hostile_system
+										space_owner = {
+											is_country_type = fallen_empire
+											is_country_type = awakened_fallen_empire
+										}
+										has_star_flag = sanctuary_system
+										has_star_flag = hostile_system
 									}
 									any_system_planet = {
 										is_colony = yes
@@ -335,6 +344,12 @@ fleet_event = {
 						# Add this as a fallback in case out pirate friends cant find anyone because of range and/or FTL inhibitors
 						find_closest_system = {
 							trigger = {
+								space_owner = {
+									NOR = {
+										is_country_type = fallen_empire
+										is_country_type = awakened_fallen_empire
+									}
+								}							
 								id = pirate_waves.69.a
 								any_system_planet = {
 									is_colony = yes
@@ -535,8 +550,12 @@ fleet_event = {
 								}
 								AND = {
 									NOR = {
-									has_star_flag = sanctuary_system
-									has_star_flag = hostile_system
+										space_owner = {
+											is_country_type = fallen_empire
+											is_country_type = awakened_fallen_empire
+										}
+										has_star_flag = sanctuary_system
+										has_star_flag = hostile_system
 									}
 									any_system_planet = {
 										is_colony = yes
@@ -560,6 +579,12 @@ fleet_event = {
 						# Add this as a fallback in case out pirate friends cant find anyone because of range and/or FTL inhibitors
 						find_closest_system = {
 							trigger = {
+								space_owner = {
+									NOR = {
+										is_country_type = fallen_empire
+										is_country_type = awakened_fallen_empire
+									}
+								}
 								id = pirate_waves.71.a
 								any_system_planet = {
 									is_colony = yes

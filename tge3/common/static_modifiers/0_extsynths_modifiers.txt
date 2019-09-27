@@ -1,3 +1,16 @@
+# dont mind me just gonna dump a random modifier here
+anti_piracy_initiative = {
+    name = "Anti-Piracy Initiative"
+    icon = "gfx/interface/icons/modifiers/mod_country_insult_efficiency.dds"    
+        starbase_shipyard_build_speed_mult = 0.25
+        starbase_shipyard_build_cost_mult = -0.25
+        starbase_upgrade_cost_mult = -0.25
+        starbase_modules_cost_mult = -0.25
+        category_voidcraft_research_speed_mult = 0.5
+        
+}
+
+
 extsynths_modifier = {
 	planet_pop_assembly_mult = 0.33
 	planet_pops_robotics_upkeep_mult = -0.1
