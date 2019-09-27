@@ -11,6 +11,12 @@
 # 8 = Machine Worlds(Orange)
 # 9 = Fallen Empires (Pink-Purple)
 
+# Quickly hijacking to fix this modifier
+pirate_power = {
+	ship_hull_regen_add_perc = 0.5
+	ship_armor_regen_add_perc = 0.5
+}
+
 terraforming_candidate = {
 	show_only_custom_tooltip = yes
 	custom_tooltip = gpm_terraforming_candidate_precursorTT

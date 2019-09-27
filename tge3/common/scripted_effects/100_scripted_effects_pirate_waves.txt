@@ -41,7 +41,7 @@ create_pirate_waves_country_1 = {
 			save_global_event_target_as = pirate_waves_country
 			
 			# Randomize the name and the flag
-			set_name = random
+			set_name = "Blood Stalkers"
 			randomize_flag_symbol = "pirate"
 			
 			# Add the pirate power
@@ -92,7 +92,7 @@ create_pirate_waves_country_2 = {
 			save_global_event_target_as = pirate_waves_2_country
 			
 			# Randomize the name and the flag
-			set_name = random
+			set_name = "Raiders of the Black Flag"
 			randomize_flag_symbol = "pirate"
 			
 			# Add the pirate power
@@ -175,7 +175,25 @@ add_pirate_waves_pirate_event_chain = {
 
 # Creates a pirate waves fleet of ships
 create_pirate_waves_fleet = {
-
+	create_ship = {
+		name = random
+		design = "NAME_Lancer"
+		prefix = no
+		graphical_culture = "pirate_01"
+	}	
+	create_ship = {
+		name = random
+		design = "NAME_Skull"
+		prefix = no
+		graphical_culture = "pirate_01"
+	}
+	create_ship = {
+		name = random
+		design = "NAME_Skull"
+		prefix = no
+		graphical_culture = "pirate_01"
+	}
+	
 	# Corvettes: AVG 100 FP
 	while = {
 		count = 75	
@@ -200,28 +218,20 @@ create_pirate_waves_fleet = {
 				}
 				
 				# Pirates loose motivation when they gain power
-				modifier = {
-					factor = 0.1
-					is_pirate_waves_closest_country_pathetic = yes
-				}
-				modifier = {
-					factor = 0.25
-					is_pirate_waves_closest_country_inferior = yes
-				}
-				modifier = {
-					factor = 0.5
-					is_pirate_waves_closest_country_equivalent = yes
-				}
+				#modifier = {
+				#	factor = 0.3
+				#	is_pirate_waves_closest_country_pathetic = yes
+				#}
+				#modifier = {
+				#	factor = 0.4
+				#	is_pirate_waves_closest_country_inferior = yes
+				#}
+				#modifier = {
+				#	factor = 0.5
+				#	is_pirate_waves_closest_country_equivalent = yes
+				#}
 			
 				# Time passed based modifiers
-				modifier = {
-					factor = 1.5
-					years_passed >= 20
-				}
-				modifier = {
-					factor = 1.5
-					years_passed >= 30
-				}
 				modifier = {
 					factor = 1.5
 					years_passed >= 40
@@ -386,28 +396,20 @@ create_pirate_waves_fleet = {
 				}
 				
 				# Pirates loose motivation when they gain power
-				modifier = {
-					factor = 0.1
-					is_pirate_waves_closest_country_pathetic = yes
-				}
-				modifier = {
-					factor = 0.25
-					is_pirate_waves_closest_country_inferior = yes
-				}
-				modifier = {
-					factor = 0.5
-					is_pirate_waves_closest_country_equivalent = yes
-				}
+				#modifier = {
+				#	factor = 0.3
+				#	is_pirate_waves_closest_country_pathetic = yes
+				#}
+				#modifier = {
+				#	factor = 0.4
+				#	is_pirate_waves_closest_country_inferior = yes
+				#}
+				#modifier = {
+				#	factor = 0.5
+				#	is_pirate_waves_closest_country_equivalent = yes
+				#}
 			
 				# Time passed based modifiers
-				modifier = {
-					factor = 1.5
-					years_passed >= 20
-				}
-				modifier = {
-					factor = 1.5
-					years_passed >= 30
-				}
 				modifier = {
 					factor = 1.5
 					years_passed >= 40
@@ -572,28 +574,20 @@ create_pirate_waves_fleet = {
 				}
 				
 				# Pirates loose motivation when they gain power
-				modifier = {
-					factor = 0.1
-					is_pirate_waves_closest_country_pathetic = yes
-				}
-				modifier = {
-					factor = 0.25
-					is_pirate_waves_closest_country_inferior = yes
-				}
-				modifier = {
-					factor = 0.5
-					is_pirate_waves_closest_country_equivalent = yes
-				}
+				#modifier = {
+				#	factor = 0.3
+				#	is_pirate_waves_closest_country_pathetic = yes
+				#}
+				#modifier = {
+				#	factor = 0.4
+				#	is_pirate_waves_closest_country_inferior = yes
+				#}
+				#modifier = {
+				#	factor = 0.5
+				#	is_pirate_waves_closest_country_equivalent = yes
+				#}
 			
 				# Time passed based modifiers
-				modifier = {
-					factor = 1.5
-					years_passed >= 20
-				}
-				modifier = {
-					factor = 1.5
-					years_passed >= 30
-				}
 				modifier = {
 					factor = 1.5
 					years_passed >= 40
@@ -742,8 +736,8 @@ create_pirate_waves_fleet = {
 			1 = {
 				# Allow after 2220
 				modifier = {
-					factor = 0
-					years_passed < 20
+					factor = 0.1
+					years_passed < 30
 				}
 			
 				# Difficulty modifiers
@@ -765,18 +759,18 @@ create_pirate_waves_fleet = {
 				}
 				
 				# Pirates loose motivation when they gain power
-				modifier = {
-					factor = 0.1
-					is_pirate_waves_closest_country_pathetic = yes
-				}
-				modifier = {
-					factor = 0.25
-					is_pirate_waves_closest_country_inferior = yes
-				}
-				modifier = {
-					factor = 0.5
-					is_pirate_waves_closest_country_equivalent = yes
-				}
+				#modifier = {
+				#	factor = 0.3
+				#	is_pirate_waves_closest_country_pathetic = yes
+				#}
+				#modifier = {
+				#	factor = 0.4
+				#	is_pirate_waves_closest_country_inferior = yes
+				#}
+				#modifier = {
+				#	factor = 0.5
+				#	is_pirate_waves_closest_country_equivalent = yes
+				#}
 			
 				# Time passed based modifiers
 				modifier = {
@@ -917,18 +911,18 @@ create_pirate_waves_fleet = {
 				}
 				
 				# Pirates loose motivation when they gain power
-				modifier = {
-					factor = 0.1
-					is_pirate_waves_closest_country_pathetic = yes
-				}
-				modifier = {
-					factor = 0.25
-					is_pirate_waves_closest_country_inferior = yes
-				}
-				modifier = {
-					factor = 0.5
-					is_pirate_waves_closest_country_equivalent = yes
-				}
+				#modifier = {
+				#	factor = 0.3
+				#	is_pirate_waves_closest_country_pathetic = yes
+				#}
+				#modifier = {
+				#	factor = 0.4
+				#	is_pirate_waves_closest_country_inferior = yes
+				#}
+				#modifier = {
+				#	factor = 0.5
+				#	is_pirate_waves_closest_country_equivalent = yes
+				#}
 			
 				# Time passed based modifiers
 				modifier = {
@@ -1045,9 +1039,9 @@ create_pirate_waves_fleet = {
 		count = 75
 		random_list = {
 			1 = {
-				# Allow after 2250
+				# Allow after 2250, but allow a very slim chance of spawning anyways
 				modifier = {
-					factor = 0
+					factor = 0.05
 					years_passed < 50
 				}
 				
@@ -1070,18 +1064,18 @@ create_pirate_waves_fleet = {
 				}
 				
 				# Pirates loose motivation when they gain power
-				modifier = {
-					factor = 0.1
-					is_pirate_waves_closest_country_pathetic = yes
-				}
-				modifier = {
-					factor = 0.25
-					is_pirate_waves_closest_country_inferior = yes
-				}
-				modifier = {
-					factor = 0.5
-					is_pirate_waves_closest_country_equivalent = yes
-				}
+				#modifier = {
+				#	factor = 0.3
+				#	is_pirate_waves_closest_country_pathetic = yes
+				#}
+				#modifier = {
+				#	factor = 0.4
+				#	is_pirate_waves_closest_country_inferior = yes
+				#}
+				#modifier = {
+				#	factor = 0.5
+				#	is_pirate_waves_closest_country_equivalent = yes
+				#}
 			
 				# Time passed based modifiers
 				modifier = {
@@ -1178,9 +1172,9 @@ create_pirate_waves_fleet = {
 		count = 5
 		random_list = {
 			1 = {
-				# Allow after 2275
+				# Allow after 2275, but allow extremely slim chance of spawning anyways
 				modifier = {
-					factor = 0
+					factor = 0.01
 					years_passed < 75
 				}
 				
@@ -1203,18 +1197,18 @@ create_pirate_waves_fleet = {
 				}
 				
 				# Pirates loose motivation when they gain power
-				modifier = {
-					factor = 0.1
-					is_pirate_waves_closest_country_pathetic = yes
-				}
-				modifier = {
-					factor = 0.25
-					is_pirate_waves_closest_country_inferior = yes
-				}
-				modifier = {
-					factor = 0.5
-					is_pirate_waves_closest_country_equivalent = yes
-				}
+				#modifier = {
+				#	factor = 0.3
+				#	is_pirate_waves_closest_country_pathetic = yes
+				#}
+				#modifier = {
+				#	factor = 0.4
+				#	is_pirate_waves_closest_country_inferior = yes
+				#}
+				#modifier = {
+				#	factor = 0.5
+				#	is_pirate_waves_closest_country_equivalent = yes
+				#}
 			
 				# Time passed based modifiers
 				modifier = {
@@ -1305,8 +1299,8 @@ create_pirate_waves_station = {
 	random_list = {
 		80 = {
 			create_ship = {
-				name = random
-				design = "NAME_Pirate_Nest"
+				name = "Pirate Haven"
+				design = "NAME_Pirate_Den"
 				prefix = no
 				graphical_culture = "pirate_01"
 			}
@@ -1335,8 +1329,8 @@ create_pirate_waves_station = {
 			}
 			
 			create_ship = {
-				name = random
-				design = "NAME_Warrior_Freehold"
+				name = "Pirate Haven"
+				design = "NAME_Pirate_Den"
 				prefix = no
 				graphical_culture = "pirate_01"
 			}
@@ -1347,6 +1341,357 @@ create_pirate_waves_station = {
 	add_modifier = {
 		modifier = pirate_waves_station
 		days = -1
+	}
+	
+	# Add modifiers 10 years after started
+	if = {
+		limit = {
+			years_passed >= 30
+		}
+			
+		random_list = {
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 25
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 75
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_1
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 40
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 90
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_2
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 55
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 105
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_3
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 70
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 120
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_4
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 85
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 135
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_5
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 100
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 150
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_6
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 115
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 165
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_7
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 130
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 180
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_8
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 145
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 195
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_9
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 160
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 210
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_10
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 175
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 225
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_11
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 190
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 240
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_12
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 205
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 255
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_13
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 220
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 270
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_14
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 235
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 285
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_15
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 250
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 300
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_16
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 265
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 315
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_17
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 280
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 330
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_18
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 295
+				}
+				modifier = {
+					factor = 0
+					years_passed >= 345
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_19
+					days = -1
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					years_passed < 310
+				}
+				
+				add_modifier = {
+					modifier = pirate_station_level_20
+					days = -1
+				}
+			}
+		}
+	}
+}
+
+# Create pirate station and adds modifiers
+create_pirate_waves_freehold = {
+	# Create the station
+	random_list = {
+		80 = {
+			create_ship = {
+				name = "Pirate Freehold"
+				design = "NAME_Pirate_Freehold"
+				prefix = no
+				graphical_culture = "pirate_01"
+			}
+		}
+		20 = {
+			modifier = {
+				factor = 0
+				NOT = {
+					host_has_dlc = "Apocalypse"
+				}
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					exists = event_target:current_pirate_country
+					NOT = {
+						mid_game_years_passed >= 0
+					}
+				}
+			}
+			modifier = {
+				factor = 12
+				NOT = {
+					exists = event_target:current_pirate_country
+				}
+			}
+			
+			create_ship = {
+				name = "Pirate Freehold"
+				design = "NAME_Pirate_Freehold"
+				prefix = no
+				graphical_culture = "pirate_01"
+			}
+		}
 	}
 	
 	# Add modifiers 10 years after started
