@@ -32,7 +32,7 @@ entity = {
 	#attach = { part2 = "avian_01_titan_mid_entity" }
 	#attach = { part3 = "avian_01_titan_stern_entity" }
 	
-	scale = 0.5 #dss 1.25
+	scale = 1.0 #dss 1.25
 }
 
 entity = {

@@ -1008,7 +1008,7 @@ entity = {
 		event = { time = 0	id = "beam_start" }	
 	}
 	
-	scale = 0.48 #0.75 #DSS 1.0
+	scale = 0.96 #0.75 #DSS 1.0
 	
 	game_data = {
 		size = @battleship_scale

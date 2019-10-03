@@ -7,7 +7,7 @@
 namespace = pirate_waves
 
 # Variables
-@pirate_waves_station_life_days = 7200 # Stations lives for 100 years before spawning fleet and it gets destroyed
+@pirate_waves_station_life_days = 7200 # Stations lives for 20 years before spawning fleet and it gets destroyed
 
 #################################################
 #	Pirates										#
@@ -34,7 +34,7 @@ event = {
 			}	
 			country_event = { 
 				id = pirate_waves.4
-				days = 1
+				days = 360
 				random = 3600
 			}	
 			# log = "Spawning a Pirate fleet"
@@ -104,8 +104,70 @@ fleet_event = {
 										id = pirate_waves.2.trigger.1
 										distance = {
 											source = PREV
-											max_jumps <= 2
+											max_jumps <= 5
 											min_jumps >= 1
+										}
+										AND ={
+											NOR = {
+												has_star_flag = sanctuary_system
+												has_star_flag = hostile_system
+											}
+											any_planet = {
+												is_pirate_waves_base_planet = yes
+											}
+											any_ship_in_system = {
+												is_ship_class = shipclass_starbase
+												is_disabled = yes
+											}
+										}
+									}
+									found_system = {
+										move_to = THIS
+									}
+								}
+								# Make the Station
+								find_random_planet = {
+									trigger = {
+										id = pirate_waves.2.trigger.2
+										exists = yes
+									}
+									
+									found_planet = {
+										orbit_planet = THIS
+										
+										wait = {
+											duration = 360
+										}
+										
+										orbit_planet = THIS
+										
+										effect = {
+											id = pirate_waves.2.effect.1
+											
+											# Check if there's not already a station here because of multiple fleets
+											if = {
+												limit = {
+													has_military_station = no
+												}
+												
+												# Create a new pirate station
+												planet_event = { id = pirate_waves.3 }
+												
+												event_target:pirate_waves_fleet = {
+													destroy_fleet = this
+												}
+											}
+										}
+									}
+								}
+								# If we can't find any disabled starbases, then just set up somewhere nearby
+								find_random_system = {
+									trigger = {
+										id = pirate_waves.2.trigger.1
+										distance = {
+											source = PREV
+											max_jumps <= 10
+											min_jumps >= 3
 										}
 										AND ={
 											NOR = {
@@ -126,15 +188,15 @@ fleet_event = {
 								find_random_planet = {
 									trigger = {
 										id = pirate_waves.2.trigger.2
-										is_pirate_waves_base_planet = yes
+										exists = yes
 									}
 									
 									found_planet = {
 										orbit_planet = THIS
 										
+										# If were setting up somewhere randomly, then lets make this spawn a little slower
 										wait = {
-											duration = 180
-											random = 360
+											duration = 360
 										}
 										
 										orbit_planet = THIS
@@ -150,10 +212,14 @@ fleet_event = {
 												
 												# Create a new pirate station
 												planet_event = { id = pirate_waves.3 }
+												event_target:pirate_waves_fleet = {
+													destroy_fleet = this
+												}
 											}
+											
 										}
 									}
-								}
+								}								
 								wait = {
 									duration = 10
 									random = 20
@@ -186,9 +252,8 @@ fleet_event = {
 										orbit_planet = THIS
 										
 										wait = {
-											duration = 180
-											random = 360
-										}
+											duration = 360
+										}				
 										
 										orbit_planet = THIS
 										
@@ -203,7 +268,11 @@ fleet_event = {
 												
 												# Create a new pirate station
 												planet_event = { id = pirate_waves.3 }
+												event_target:pirate_waves_fleet = {
+													destroy_fleet = this
+												}	
 											}
+
 										}
 									}
 								}
@@ -258,8 +327,8 @@ fleet_event = {
 		
 		fleet_event = { 
 			id = pirate_waves.2
-			days = 30
-			random = 1080
+			days = 480
+			random = 3600
 		}	
 	}
 }
@@ -310,20 +379,19 @@ fleet_event = {
 								id = pirate_waves.2.trigger.5
 								distance = {
 									source = PREV
-									max_jumps <= 12
+									max_jumps <= 6
 									min_jumps >= 1
 								}
 								AND = {
+									space_owner = {
+										is_country_type = default
+									}	
 									NOR = {
-										space_owner = {
-											is_country_type = fallen_empire
-											is_country_type = awakened_fallen_empire
-										}
 										has_star_flag = sanctuary_system
 										has_star_flag = hostile_system
 									}
 									any_system_planet = {
-										is_colony = yes
+										is_pirate_waves_raiding_planet = yes
 									}
 								}
 							}
@@ -332,7 +400,7 @@ fleet_event = {
 								find_closest_planet = {
 									trigger = {
 										any_system_planet = {
-											is_colony = yes
+											is_pirate_waves_raiding_planet = yes
 										}		
 									}
 									found_planet = {
@@ -345,23 +413,44 @@ fleet_event = {
 						find_closest_system = {
 							trigger = {
 								space_owner = {
+									is_country_type = default
+								}
+								any_ship_in_system = {
+									is_ship_class = shipclass_starbase
+									is_disabled = no
+								}
+							}
+							found_system = {
+								move_to = this
+							}
+						}
+						find_random_system = {
+							trigger = {
+								id = pirate_waves.2.trigger.5
+								distance = {
+									source = PREV
+									max_jumps <= 12
+									min_jumps >= 1
+								}
+								AND = {
+									space_owner = {
+										is_country_type = default
+									}	
 									NOR = {
-										is_country_type = fallen_empire
-										is_country_type = awakened_fallen_empire
+										has_star_flag = sanctuary_system
+										has_star_flag = hostile_system
 									}
-								}							
-								id = pirate_waves.69.a
-								any_system_planet = {
-									is_colony = yes
+									any_system_planet = {
+										is_pirate_waves_raiding_planet = yes
+									}
 								}
 							}
 							found_system = {
 								move_to = this
 								find_closest_planet = {
 									trigger = {
-										id = pirate.69.b
 										any_system_planet = {
-											is_colony = yes
+											is_pirate_waves_raiding_planet = yes
 										}		
 									}
 									found_planet = {
@@ -370,6 +459,70 @@ fleet_event = {
 								}
 							}
 						}
+						# Loop this so we can deal with multi-inhibitor chokepoints.
+						repeat = {
+							find_closest_system = {
+								trigger = {
+									AND = {
+										distance = {
+											source = PREV
+											min_jumps >= 1
+										}
+										any_ship_in_system = {
+											is_ship_class = shipclass_starbase
+											is_disabled = no
+										}
+									}
+								}
+								found_system = {
+									move_to = this
+								}
+							}
+							find_random_system = {
+								trigger = {
+									distance = {
+										source = PREV
+										min_jumps >= 1
+									}
+									AND = {
+										space_owner = {
+											is_country_type = default
+										}	
+										NOR = {
+											has_star_flag = sanctuary_system
+											has_star_flag = hostile_system
+										}
+										any_system_planet = {
+											is_pirate_waves_raiding_planet = yes
+										}
+									}
+								}
+								found_system = {
+									move_to = this
+									find_closest_planet = {
+										trigger = {
+											any_system_planet = {
+												is_pirate_waves_raiding_planet = yes
+											}		
+										}
+										found_planet = {
+											move_to = this
+										}
+									}
+								}
+							}
+							find_closest_system = {
+								trigger = {
+									any_ship_in_system = {
+										is_ship_size = pirate_station
+									}
+								}
+								found_system = {
+									move_to = this
+									break = yes
+								}
+							}							
+						}						
 						wait = {
 							duration = 30
 						}
@@ -420,8 +573,8 @@ fleet_event = {
 		}		
 		fleet_event = {
 			id = pirate_waves.69
-			days = 30
-			random = 720
+			days = 480
+			random = 3600
 		}
 	}
 }
@@ -454,10 +607,9 @@ fleet_event = {
 				save_event_target_as = pirate_waves_fleet
 				# Owner is set before the ships are created so that random naming works
 				set_owner = event_target:current_pirate_country
-
 				create_ship = {
 					name = random
-					design = "NAME_Pirate_Galleon"
+					design = "NAME_Black_Earl"
 					prefix = no
 					graphical_culture = "pirate_01"
 				}						
@@ -545,20 +697,19 @@ fleet_event = {
 								id = pirate_waves.2.trigger.5
 								distance = {
 									source = PREV
-									max_jumps <= 12
+									max_jumps <= 6
 									min_jumps >= 1
 								}
 								AND = {
+									space_owner = {
+										is_country_type = default
+									}	
 									NOR = {
-										space_owner = {
-											is_country_type = fallen_empire
-											is_country_type = awakened_fallen_empire
-										}
 										has_star_flag = sanctuary_system
 										has_star_flag = hostile_system
 									}
 									any_system_planet = {
-										is_colony = yes
+										is_pirate_waves_raiding_planet = yes
 									}
 								}
 							}
@@ -567,7 +718,7 @@ fleet_event = {
 								find_closest_planet = {
 									trigger = {
 										any_system_planet = {
-											is_colony = yes
+											is_pirate_waves_raiding_planet = yes
 										}		
 									}
 									found_planet = {
@@ -580,23 +731,44 @@ fleet_event = {
 						find_closest_system = {
 							trigger = {
 								space_owner = {
-									NOR = {
-										is_country_type = fallen_empire
-										is_country_type = awakened_fallen_empire
-									}
+									is_country_type = default
 								}
-								id = pirate_waves.71.a
-								any_system_planet = {
-									is_colony = yes
+								any_ship_in_system = {
+										is_ship_class = shipclass_starbase
+										is_disabled = no
+								}
+							}
+							found_system = {
+								move_to = this
+							}
+						}
+						find_random_system = {
+							trigger = {
+								id = pirate_waves.2.trigger.5
+								distance = {
+									source = PREV
+									max_jumps <= 12
+									min_jumps >= 1
+								}
+								AND = {
+									space_owner = {
+										is_country_type = default
+									}	
+									NOR = {
+										has_star_flag = sanctuary_system
+										has_star_flag = hostile_system
+									}
+									any_system_planet = {
+										is_pirate_waves_raiding_planet = yes
+									}
 								}
 							}
 							found_system = {
 								move_to = this
 								find_closest_planet = {
 									trigger = {
-										id = pirate.71.b
 										any_system_planet = {
-											is_colony = yes
+											is_pirate_waves_raiding_planet = yes
 										}		
 									}
 									found_planet = {
@@ -605,6 +777,70 @@ fleet_event = {
 								}
 							}
 						}
+						# Loop this so we can deal with multi-inhibitor chokepoints.
+						repeat = {
+							find_closest_system = {
+								trigger = {
+									AND = {
+										distance = {
+											source = PREV
+											min_jumps >= 1
+										}
+										any_ship_in_system = {
+											is_ship_class = shipclass_starbase
+											is_disabled = no
+										}
+									}
+								}
+								found_system = {
+									move_to = this
+								}
+							}
+							find_random_system = {
+								trigger = {
+									distance = {
+										source = PREV
+										min_jumps >= 1
+									}
+									AND = {
+										space_owner = {
+											is_country_type = default
+										}	
+										NOR = {
+											has_star_flag = sanctuary_system
+											has_star_flag = hostile_system
+										}
+										any_system_planet = {
+											is_pirate_waves_raiding_planet = yes
+										}
+									}
+								}
+								found_system = {
+									move_to = this
+									find_closest_planet = {
+										trigger = {
+											any_system_planet = {
+												is_pirate_waves_raiding_planet = yes
+											}		
+										}
+										found_planet = {
+											move_to = this
+										}
+									}
+								}
+							}
+							find_closest_system = {
+								trigger = {
+									any_ship_in_system = {
+										is_ship_size = pirate_station
+									}
+								}
+								found_system = {
+									move_to = this
+									break = yes
+								}
+							}							
+						}						
 						wait = {
 							duration = 30
 						}
@@ -656,8 +892,8 @@ fleet_event = {
 		}		
 		fleet_event = {
 			id = pirate_waves.71
-			days = 3600
-			random = 3600
+			days = 1800
+			random = 5400
 		}
 	}
 }
@@ -820,11 +1056,13 @@ planet_event = {
 	
 					fleet_event = {
 						id = pirate_waves.2
-						days = 5
+						days = 360
+						random = 1800
 					}
 					fleet_event = {
 						id = pirate_waves.69
-						days = 10
+						days = 30
+						random = 90
 					}
 				}
 				# log = "Pirate Station '[This.GetName]' created..."
@@ -1075,22 +1313,41 @@ planet_event = {
 							set_aggro_range = 1500
 						}
 					}
-	
 					fleet_event = {
 						id = pirate_waves.2
-						days = 5
+						days = 10
+					}	
+					fleet_event = {
+						id = pirate_waves.2
+						days = 20
+					}
+					fleet_event = {
+						id = pirate_waves.2
+						days = 30
+					}
+					fleet_event = {
+						id = pirate_waves.2
+						days = 40
+					}
+					fleet_event = {
+						id = pirate_waves.2
+						days = 50
 					}
 					fleet_event = {
 						id = pirate_waves.69
-						days = 10
+						days = 60
+					}					
+					fleet_event = {
+						id = pirate_waves.69
+						days = 70
 					}
 					fleet_event = {
-						id = pirate_waves.2
-						days = 15
-					}
+						id = pirate_waves.69
+						days = 80
+					}					
 					fleet_event = {
 						id = pirate_waves.71
-						days = 20
+						days = 1800
 					}					
 				}
 				# log = "Pirate Station '[This.GetName]' created..."
@@ -1253,9 +1510,12 @@ country_event = {
 			}
 			
 			# Spawn a new fleet from this station immediately
-			#fleet_event = {
-			#	id = pirate_waves.2
-			#}
+			fleet_event = {
+				id = pirate_waves.2
+			}
+			fleet_event = {
+				id = pirate_waves.2
+			}
 			#fleet_event = {
 			#	id = pirate_waves.69
 			#}
@@ -1645,7 +1905,7 @@ event = {
 			}
 			
 			while = {
-				count = 1000
+				count = 13
 				
 				country_event = { id = pirate_waves.4 }
 			}

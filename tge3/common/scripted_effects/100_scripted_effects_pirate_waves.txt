@@ -41,7 +41,7 @@ create_pirate_waves_country_1 = {
 			save_global_event_target_as = pirate_waves_country
 			
 			# Randomize the name and the flag
-			set_name = "Blood Stalkers"
+			set_name = "Blood Skulkers"
 			randomize_flag_symbol = "pirate"
 			
 			# Add the pirate power
@@ -92,7 +92,7 @@ create_pirate_waves_country_2 = {
 			save_global_event_target_as = pirate_waves_2_country
 			
 			# Randomize the name and the flag
-			set_name = "Raiders of the Black Flag"
+			set_name = "Black Admiralty"
 			randomize_flag_symbol = "pirate"
 			
 			# Add the pirate power
@@ -113,8 +113,12 @@ create_pirate_waves_countries = {
 	
 	# Disable attacking enclave stations
 	every_country = {
-		limit = { 
-			is_country_type = enclave 
+		limit = {
+			OR = {
+				is_country_type = dormant_marauders
+				is_country_type = enclave
+				is_country_type = neutral_zone
+			}
 		}
 		every_country = {
 			limit = {
@@ -177,7 +181,7 @@ add_pirate_waves_pirate_event_chain = {
 create_pirate_waves_fleet = {
 	create_ship = {
 		name = random
-		design = "NAME_Lancer"
+		design = "NAME_Marauder"
 		prefix = no
 		graphical_culture = "pirate_01"
 	}	

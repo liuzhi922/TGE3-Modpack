@@ -975,7 +975,7 @@ entity = {
 		event = { time = 16.5 node = "ship_main" particle = "large_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
 	
-	scale = 0.45 #DSS 1.0
+	scale = 0.9 #DSS 1.0
 	
 	game_data = {
 		size = @battleship_scale
